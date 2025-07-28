@@ -141,35 +141,66 @@ def index():
 
 @app.route('/universities')
 def universities():
-    """Universities listing page"""
+    """Universities listing page with enhanced filtering and sorting"""
     search = request.args.get('search', '')
     country = request.args.get('country', '')
     province = request.args.get('province', '')
+    uni_type = request.args.get('type', '')
+    language = request.args.get('language', '')
+    sort_by = request.args.get('sort', 'faculty_count')  # Default to faculty count
     
-    universities_data = search_universities(search, country, province)
+    university_list = search_universities(search, country, province, uni_type, language, sort_by)
+    all_universities = get_all_universities()
+    
+    # Get available filter options for dropdowns
+    available_countries = list(set([u['country'] for u in all_universities if u.get('country')]))
+    available_provinces = list(set([u['province_state'] for u in all_universities if u.get('province_state')]))
+    available_types = list(set([u['university_type'] for u in all_universities if u.get('university_type')]))
+    available_languages = list(set([lang.strip() for u in all_universities if u.get('languages') for lang in u['languages'].split(';') if lang.strip()]))
     
     return render_template('universities.html', 
-                         universities=universities_data,
+                         universities=university_list,
+                         all_universities=all_universities,
                          search=search,
                          country=country,
-                         province=province)
+                         province=province,
+                         uni_type=uni_type,
+                         language=language,
+                         sort_by=sort_by,
+                         available_countries=sorted(available_countries),
+                         available_provinces=sorted(available_provinces),
+                         available_types=sorted(available_types),
+                         available_languages=sorted(available_languages))
 
 @app.route('/faculties')
 def faculties():
-    """Faculty listing page"""
+    """Faculties listing page with enhanced filtering and sorting"""
     search = request.args.get('search', '')
     university = request.args.get('university', '')
-    research_area = request.args.get('research_area', '')
     department = request.args.get('department', '')
+    research_area = request.args.get('research_area', '')
+    degree = request.args.get('degree', '')
+    sort_by = request.args.get('sort', 'publication_count')  # Default to publication count
     
-    faculty_data = search_faculty(search, university, research_area, department)
+    faculty_list = search_faculty(search, university, department, research_area, degree, sort_by)
+    available_degrees = get_available_degrees()
+    
+    # Get available filter options
+    all_faculty = search_faculty()  # Get all faculty for filter options
+    available_universities = list(set([f['university_name'] for f in all_faculty if f.get('university_name')]))
+    available_departments = list(set([f['department'] for f in all_faculty if f.get('department')]))
     
     return render_template('faculties.html',
-                         faculty=faculty_data,
+                         faculties=faculty_list,
                          search=search,
                          university=university,
+                         department=department,
                          research_area=research_area,
-                         department=department)
+                         degree=degree,
+                         sort_by=sort_by,
+                         available_degrees=available_degrees,
+                         available_universities=sorted(available_universities),
+                         available_departments=sorted(available_departments))
 
 @app.route('/professor/<int:professor_id>')
 def professor_profile(professor_id):
@@ -588,8 +619,8 @@ def get_top_universities():
         logger.error(f"Error getting top universities: {e}")
         return []
 
-def search_universities(search='', country='', province='', uni_type='', language=''):
-    """Search and filter universities with enhanced filters"""
+def search_universities(search='', country='', province='', uni_type='', language='', sort_by='faculty_count'):
+    """Search and filter universities with enhanced filters and sorting"""
     db = DatabaseManager()
     try:
         conditions = []
@@ -622,45 +653,101 @@ def search_universities(search='', country='', province='', uni_type='', languag
             params.append(f"%{language}%")
         
         where_clause = " WHERE " + " AND ".join(conditions) if conditions else ""
-        query = base_query + where_clause + " GROUP BY u.id ORDER BY u.name"
+        group_clause = " GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address, u.university_type, u.languages, u.year_established"
+        
+        # Determine sort order
+        if sort_by == 'faculty_count':
+            order_clause = " ORDER BY professor_count DESC, u.name ASC"
+        elif sort_by == 'department_count':
+            order_clause = " ORDER BY department_count DESC, u.name ASC"
+        elif sort_by == 'name':
+            order_clause = " ORDER BY u.name ASC"
+        elif sort_by == 'year_established':
+            order_clause = " ORDER BY u.year_established DESC, u.name ASC"
+        elif sort_by == 'location':
+            order_clause = " ORDER BY u.province_state ASC, u.city ASC, u.name ASC"
+        else:
+            order_clause = " ORDER BY professor_count DESC, u.name ASC"  # Default
+        
+        query = base_query + where_clause + group_clause + order_clause
         
         return db.execute_query(query, params) or []
     except Exception as e:
         logger.error(f"Error searching universities: {e}")
         return []
 
-def search_faculty(search='', university='', research_area='', department='', limit=50, offset=0):
-    """Search and filter faculty"""
+def search_faculty(search='', university='', department='', research_area='', degree='', sort_by='publication_count'):
+    """Search and filter faculty members with sorting options"""
+    db = DatabaseManager()
     try:
         conditions = []
         params = []
         
         base_query = """
-        SELECT p.*, u.name as university_name, u.city, u.province_state
+        SELECT p.*, u.name as university_name, COUNT(pub.pmid) as publication_count,
+               COALESCE(pm_summary.total_citations, 0) as total_citations,
+               COALESCE(pm_summary.h_index, 0) as h_index
         FROM professors p
         LEFT JOIN universities u ON p.university_id = u.id
+        LEFT JOIN author_publications ap ON p.id = ap.professor_id
+        LEFT JOIN publications pub ON ap.publication_pmid = pub.pmid
+        LEFT JOIN (
+            SELECT ap2.professor_id,
+                   SUM(COALESCE(pm.total_citations, 0)) as total_citations,
+                   COUNT(CASE WHEN pm.total_citations >= 1 THEN 1 END) as h_index
+            FROM author_publications ap2
+            LEFT JOIN publication_metrics pm ON ap2.publication_pmid = pm.pmid
+            GROUP BY ap2.professor_id
+        ) pm_summary ON p.id = pm_summary.professor_id
         """
         
         if search:
-            conditions.append("(p.name LIKE ? OR p.first_name LIKE ? OR p.last_name LIKE ? OR p.research_areas LIKE ?)")
-            search_param = f"%{search}%"
-            params.extend([search_param, search_param, search_param, search_param])
+            conditions.append("(p.name LIKE ? OR p.research_areas LIKE ?)")
+            params.extend([f"%{search}%", f"%{search}%"])
         
         if university:
             conditions.append("u.name LIKE ?")
             params.append(f"%{university}%")
         
-        if research_area:
-            conditions.append("p.research_areas LIKE ?")
-            params.append(f"%{research_area}%")
-        
         if department:
             conditions.append("p.department LIKE ?")
             params.append(f"%{department}%")
         
+        if research_area:
+            conditions.append("p.research_areas LIKE ?")
+            params.append(f"%{research_area}%")
+        
+        if degree:
+            conditions.append("""
+                p.id IN (
+                    SELECT DISTINCT pd.professor_id 
+                    FROM professor_degrees pd 
+                    JOIN degrees d ON pd.degree_id = d.id 
+                    WHERE d.degree_type = ?
+                )
+            """)
+            params.append(degree)
+        
         where_clause = " WHERE " + " AND ".join(conditions) if conditions else ""
-        query = base_query + where_clause + " ORDER BY p.name LIMIT ? OFFSET ?"
-        params.extend([limit, offset])
+        group_clause = " GROUP BY p.id, u.name, pm_summary.total_citations, pm_summary.h_index"
+        
+        # Determine sort order
+        if sort_by == 'publication_count':
+            order_clause = " ORDER BY publication_count DESC, p.name ASC"
+        elif sort_by == 'citations':
+            order_clause = " ORDER BY total_citations DESC, p.name ASC"
+        elif sort_by == 'h_index':
+            order_clause = " ORDER BY h_index DESC, p.name ASC"
+        elif sort_by == 'name':
+            order_clause = " ORDER BY p.name ASC"
+        elif sort_by == 'university':
+            order_clause = " ORDER BY u.name ASC, p.name ASC"
+        elif sort_by == 'department':
+            order_clause = " ORDER BY p.department ASC, p.name ASC"
+        else:
+            order_clause = " ORDER BY publication_count DESC, p.name ASC"  # Default
+        
+        query = base_query + where_clause + group_clause + order_clause
         
         return db.execute_query(query, params) or []
     except Exception as e:
