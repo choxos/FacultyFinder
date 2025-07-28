@@ -19,4 +19,12 @@ certifi==2025.7.14
 psutil==7.0.0
 Flask-Login==0.6.3
 bcrypt==4.0.1
-email-validator==2.0.0 
+email-validator==2.0.0
+
+# Cryptocurrency Payment Dependencies
+cryptography==42.0.8
+pycryptodome==3.19.0
+hmac==20101005
+hashlib==20081119
+websocket-client==1.6.4
+qrcode[pil]==7.4.2 

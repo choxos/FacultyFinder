@@ -1506,6 +1506,284 @@ def profile():
     
     return render_template('user/profile.html')
 
+# =====================================================
+# CRYPTOCURRENCY PAYMENT ROUTES
+# =====================================================
+
+# Import crypto payment system
+try:
+    from crypto_payments import get_crypto_payment_manager, CryptoPaymentError, PaymentProviderError
+    CRYPTO_PAYMENTS_AVAILABLE = True
+except ImportError:
+    CRYPTO_PAYMENTS_AVAILABLE = False
+    logger.warning("Crypto payments module not available")
+
+@app.route('/api/crypto/currencies')
+def get_crypto_currencies():
+    """Get supported cryptocurrencies"""
+    try:
+        if not CRYPTO_PAYMENTS_AVAILABLE:
+            return jsonify({'error': 'Crypto payments not available'}), 503
+        
+        conn = get_db_connection()
+        if not conn:
+            return jsonify({'error': 'Database connection failed'}), 500
+        
+        crypto_manager = get_crypto_payment_manager(conn)
+        currencies = crypto_manager.get_supported_currencies()
+        
+        return jsonify({'currencies': currencies})
+        
+    except Exception as e:
+        logger.error(f"Error getting crypto currencies: {e}")
+        return jsonify({'error': 'Failed to fetch currencies'}), 500
+
+@app.route('/api/crypto/exchange-rate/<crypto_symbol>')
+def get_crypto_exchange_rate(crypto_symbol):
+    """Get current exchange rate for cryptocurrency"""
+    try:
+        if not CRYPTO_PAYMENTS_AVAILABLE:
+            return jsonify({'error': 'Crypto payments not available'}), 503
+        
+        fiat_currency = request.args.get('fiat', 'CAD')
+        
+        conn = get_db_connection()
+        crypto_manager = get_crypto_payment_manager(conn)
+        
+        rate = crypto_manager.get_exchange_rate(crypto_symbol.upper(), fiat_currency.upper())
+        
+        return jsonify({
+            'crypto_symbol': crypto_symbol.upper(),
+            'fiat_currency': fiat_currency.upper(),
+            'rate': float(rate),
+            'timestamp': int(time.time())
+        })
+        
+    except Exception as e:
+        logger.error(f"Error getting exchange rate: {e}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/crypto/create-payment', methods=['POST'])
+def create_crypto_payment():
+    """Create a new cryptocurrency payment"""
+    try:
+        if not CRYPTO_PAYMENTS_AVAILABLE:
+            return jsonify({'error': 'Crypto payments not available'}), 503
+        
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+        
+        # Validate required fields
+        required_fields = ['amount_cad', 'service_type', 'currency', 'provider']
+        for field in required_fields:
+            if field not in data:
+                return jsonify({'error': f'Missing field: {field}'}), 400
+        
+        # Get user ID (if logged in)
+        user_id = current_user.id if current_user.is_authenticated else None
+        
+        # For guest users, we need contact info
+        if not user_id:
+            guest_fields = ['guest_name', 'guest_email']
+            for field in guest_fields:
+                if field not in data:
+                    return jsonify({'error': f'Guest users must provide {field}'}), 400
+        
+        conn = get_db_connection()
+        if not conn:
+            return jsonify({'error': 'Database connection failed'}), 500
+        
+        crypto_manager = get_crypto_payment_manager(conn)
+        
+        # Create payment
+        payment_result = crypto_manager.create_payment(
+            user_id=user_id,
+            amount_cad=int(data['amount_cad']),
+            service_type=data['service_type'],
+            currency_symbol=data['currency'].upper(),
+            provider_name=data['provider'],
+            service_details={
+                'guest_name': data.get('guest_name'),
+                'guest_email': data.get('guest_email'),
+                'analysis_option': data.get('analysis_option'),
+                'ai_service': data.get('ai_service')
+            }
+        )
+        
+        return jsonify({
+            'success': True,
+            'payment': payment_result
+        })
+        
+    except (CryptoPaymentError, PaymentProviderError) as e:
+        logger.error(f"Crypto payment error: {e}")
+        return jsonify({'error': str(e)}), 400
+    except Exception as e:
+        logger.error(f"Error creating crypto payment: {e}")
+        return jsonify({'error': 'Payment creation failed'}), 500
+
+@app.route('/api/crypto/payment-status/<payment_id>')
+def get_crypto_payment_status(payment_id):
+    """Get status of a cryptocurrency payment"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return jsonify({'error': 'Database connection failed'}), 500
+        
+        cursor = conn.execute("""
+            SELECT cp.*, cc.symbol, cc.name as currency_name, cpp.display_name as provider_name
+            FROM crypto_payments cp
+            JOIN crypto_currencies cc ON cc.id = cp.currency_id
+            JOIN crypto_payment_providers cpp ON cpp.id = cp.provider_id
+            WHERE cp.payment_id = ?
+        """, (payment_id,))
+        
+        payment = cursor.fetchone()
+        if not payment:
+            return jsonify({'error': 'Payment not found'}), 404
+        
+        # Check if user has access to this payment
+        if payment['user_id'] and current_user.is_authenticated:
+            if payment['user_id'] != current_user.id and not current_user.is_admin():
+                return jsonify({'error': 'Access denied'}), 403
+        
+        return jsonify({
+            'payment_id': payment['payment_id'],
+            'status': payment['status'],
+            'amount_requested': float(payment['amount_requested']),
+            'amount_received': float(payment['amount_received'] or 0),
+            'currency': payment['symbol'],
+            'currency_name': payment['currency_name'],
+            'provider': payment['provider_name'],
+            'fiat_amount': payment['fiat_amount'],
+            'fiat_currency': payment['fiat_currency'],
+            'exchange_rate': float(payment['exchange_rate']),
+            'transaction_hash': payment['transaction_hash'],
+            'confirmations': payment['confirmations'],
+            'required_confirmations': payment['required_confirmations'],
+            'payment_address': payment['payment_address'],
+            'expires_at': payment['expires_at'],
+            'created_at': payment['created_at'],
+            'completed_at': payment['completed_at']
+        })
+        
+    except Exception as e:
+        logger.error(f"Error getting payment status: {e}")
+        return jsonify({'error': 'Failed to fetch payment status'}), 500
+
+@app.route('/crypto-payment/<payment_id>')
+def crypto_payment_page(payment_id):
+    """Cryptocurrency payment page"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return render_template('error.html', error="Database connection failed"), 500
+        
+        cursor = conn.execute("""
+            SELECT cp.*, cc.symbol, cc.name as currency_name, cc.logo_url,
+                   cpp.display_name as provider_name
+            FROM crypto_payments cp
+            JOIN crypto_currencies cc ON cc.id = cp.currency_id
+            JOIN crypto_payment_providers cpp ON cpp.id = cp.provider_id
+            WHERE cp.payment_id = ?
+        """, (payment_id,))
+        
+        payment = cursor.fetchone()
+        if not payment:
+            return render_template('error.html', error="Payment not found"), 404
+        
+        # Check if payment has expired
+        is_expired = False
+        if payment['expires_at']:
+            expires_at = datetime.fromisoformat(payment['expires_at'])
+            is_expired = datetime.now() > expires_at
+        
+        return render_template('crypto/payment.html',
+                             payment=payment,
+                             is_expired=is_expired)
+        
+    except Exception as e:
+        logger.error(f"Error loading crypto payment page: {e}")
+        return render_template('error.html', error="Failed to load payment"), 500
+
+@app.route('/webhooks/crypto/<provider_name>', methods=['POST'])
+def crypto_webhook(provider_name):
+    """Handle cryptocurrency payment webhooks"""
+    try:
+        if not CRYPTO_PAYMENTS_AVAILABLE:
+            return '', 503
+        
+        payload = request.get_data(as_text=True)
+        signature = request.headers.get('X-CC-Webhook-Signature') or request.headers.get('X-Signature')
+        
+        conn = get_db_connection()
+        if not conn:
+            return '', 500
+        
+        crypto_manager = get_crypto_payment_manager(conn)
+        
+        # Verify webhook signature
+        if not crypto_manager.verify_webhook(provider_name, payload, signature, request.headers):
+            logger.warning(f"Invalid webhook signature from {provider_name}")
+            return '', 403
+        
+        # Process webhook
+        event_data = request.get_json()
+        if crypto_manager.process_webhook(provider_name, event_data):
+            return '', 200
+        else:
+            return '', 400
+        
+    except Exception as e:
+        logger.error(f"Error processing {provider_name} webhook: {e}")
+        return '', 500
+
+@app.route('/user/crypto-payments')
+@login_required
+def user_crypto_payments():
+    """User's cryptocurrency payment history"""
+    try:
+        page = int(request.args.get('page', 1))
+        per_page = 20
+        offset = (page - 1) * per_page
+        
+        conn = get_db_connection()
+        if not conn:
+            return render_template('user/crypto_payments.html', error="Database connection failed")
+        
+        # Get total count
+        cursor = conn.execute(
+            "SELECT COUNT(*) as total FROM crypto_payments WHERE user_id = ?",
+            (current_user.id,)
+        )
+        total = cursor.fetchone()['total']
+        
+        # Get payments
+        cursor = conn.execute("""
+            SELECT cp.*, cc.symbol, cc.name as currency_name, cc.logo_url,
+                   cpp.display_name as provider_name
+            FROM crypto_payments cp
+            JOIN crypto_currencies cc ON cc.id = cp.currency_id
+            JOIN crypto_payment_providers cpp ON cpp.id = cp.provider_id
+            WHERE cp.user_id = ?
+            ORDER BY cp.created_at DESC
+            LIMIT ? OFFSET ?
+        """, (current_user.id, per_page, offset))
+        
+        payments = cursor.fetchall()
+        
+        return render_template('user/crypto_payments.html',
+                             payments=payments,
+                             total=total,
+                             page=page,
+                             per_page=per_page,
+                             has_more=offset + per_page < total)
+        
+    except Exception as e:
+        logger.error(f"Error loading user crypto payments: {e}")
+        return render_template('user/crypto_payments.html', error="Failed to load payments")
+
 if __name__ == '__main__':
     # Warm cache on startup
     warm_cache()

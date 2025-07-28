@@ -73,6 +73,9 @@
                                 <li><a class="dropdown-item" href="{{ url_for('profile') }}">
                                     <i class="fas fa-user-edit me-2"></i>Profile
                                 </a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('user_crypto_payments') }}">
+                                    <i class="fab fa-bitcoin me-2"></i>Crypto Payments
+                                </a></li>
                                 {% if current_user.is_admin() %}
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="/admin/dashboard">

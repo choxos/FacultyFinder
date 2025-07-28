@@ -53,6 +53,7 @@
 .ai-service-card:hover {
     border-color: #007bff;
     transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .ai-service-card.selected {
@@ -86,6 +87,38 @@
     border-radius: 8px;
     padding: 20px;
     margin-top: 20px;
+}
+
+.payment-method-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.payment-method-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.payment-method-card.selected {
+    border-color: var(--ff-primary-color) !important;
+    background-color: rgba(var(--ff-primary-rgb), 0.05);
+}
+
+.crypto-currency-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.crypto-currency-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-currency-card.selected {
+    border-color: var(--ff-primary-color) !important;
+    background-color: rgba(var(--ff-primary-rgb), 0.05);
 }
 </style>
 {% endblock %}
@@ -660,6 +693,93 @@
                     </div>
                     
                     <input type="hidden" id="selectedAnalysisOption" value="triple_pack">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Method Selection -->
+    <div class="row mb-4" id="paymentMethodSection" style="display: none;">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-wallet me-2"></i>Payment Method
+                    </h5>
+                    <p class="text-muted mb-0 small">Choose your preferred payment method for secure and fast transactions</p>
+                </div>
+                <div class="card-body">
+                    <!-- Payment Method Options -->
+                    <div class="row g-3">
+                        <!-- Credit Card Payment -->
+                        <div class="col-md-6">
+                            <div class="card payment-method-card h-100" onclick="selectPaymentMethod('credit_card')">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-credit-card fa-2x text-primary mb-3"></i>
+                                    <h6>Credit Card</h6>
+                                    <p class="text-muted small mb-3">Visa, MasterCard, Amex</p>
+                                    <div class="payment-features">
+                                        <div class="badge bg-success mb-2">INSTANT</div>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-1"></i> Immediate access</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Secure SSL encryption</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Auto-refund protection</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Receipt via email</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cryptocurrency Payment -->
+                        <div class="col-md-6">
+                            <div class="card payment-method-card h-100" onclick="selectPaymentMethod('cryptocurrency')">
+                                <div class="card-body text-center">
+                                    <i class="fab fa-bitcoin fa-2x text-warning mb-3"></i>
+                                    <h6>Cryptocurrency</h6>
+                                    <p class="text-muted small mb-3">Bitcoin, Ethereum, USDC & more</p>
+                                    <div class="payment-features">
+                                        <div class="badge bg-warning text-dark mb-2">PRIVATE</div>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-1"></i> Anonymous payments</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> No personal info needed</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Lower fees (0.5-1%)</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Global accessibility</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cryptocurrency Selection (Hidden initially) -->
+                    <div id="cryptoSelection" class="mt-4" style="display: none;">
+                        <h6 class="text-primary mb-3"><i class="fab fa-bitcoin me-2"></i>Select Cryptocurrency</h6>
+                        <div class="row g-2" id="cryptoCurrencies">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="form-label small">Payment Provider</label>
+                                <select class="form-select" id="cryptoProvider">
+                                    <option value="coinbase_commerce">Coinbase Commerce (Recommended)</option>
+                                    <option value="nowpayments">NOWPayments</option>
+                                    <option value="coingate">CoinGate</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small">Estimated Total</label>
+                                <div class="form-control-plaintext">
+                                    <span id="cryptoAmount">Loading...</span>
+                                    <small class="text-muted d-block">Exchange rate updates every 5 minutes</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="selectedPaymentMethod" value="">
+                    <input type="hidden" id="selectedCryptoCurrency" value="">
                 </div>
             </div>
         </div>
@@ -1298,6 +1418,184 @@ document.addEventListener('DOMContentLoaded', function() {
             const event = { target: { files: files } };
             handleFileSelect(event);
         }
+    }
+
+    // Payment Method Functions
+    function selectPaymentMethod(method) {
+        // Remove previous selections
+        document.querySelectorAll('.payment-method-card').forEach(card => {
+            card.classList.remove('border-primary', 'selected');
+        });
+        
+        // Select the clicked method
+        event.target.closest('.payment-method-card').classList.add('border-primary', 'selected');
+        document.getElementById('selectedPaymentMethod').value = method;
+        
+        if (method === 'cryptocurrency') {
+            document.getElementById('cryptoSelection').style.display = 'block';
+            loadCryptocurrencies();
+        } else {
+            document.getElementById('cryptoSelection').style.display = 'none';
+        }
+    }
+
+    function loadCryptocurrencies() {
+        fetch('/api/crypto/currencies')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('cryptoCurrencies');
+                container.innerHTML = '';
+                
+                if (data.currencies) {
+                    data.currencies.forEach(currency => {
+                        const cryptoCard = document.createElement('div');
+                        cryptoCard.className = 'col-lg-2 col-md-3 col-sm-4 col-6';
+                        cryptoCard.innerHTML = `
+                            <div class="card crypto-currency-card h-100" onclick="selectCryptoCurrency('${currency.symbol}')">
+                                <div class="card-body text-center p-2">
+                                    <img src="${currency.logo_url}" alt="${currency.symbol}" 
+                                         style="width: 32px; height: 32px;" class="mb-2">
+                                    <h6 class="mb-1">${currency.symbol}</h6>
+                                    <small class="text-muted">${currency.name}</small>
+                                    ${currency.is_stablecoin ? '<div class="badge bg-success mt-1 small">Stable</div>' : ''}
+                                </div>
+                            </div>
+                        `;
+                        container.appendChild(cryptoCard);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error loading cryptocurrencies:', error);
+                document.getElementById('cryptoCurrencies').innerHTML = 
+                    '<div class="col-12"><div class="alert alert-warning">Failed to load cryptocurrencies</div></div>';
+            });
+    }
+
+    function selectCryptoCurrency(symbol) {
+        // Remove previous selections
+        document.querySelectorAll('.crypto-currency-card').forEach(card => {
+            card.classList.remove('border-primary', 'selected');
+        });
+        
+        // Select the clicked currency
+        event.target.closest('.crypto-currency-card').classList.add('border-primary', 'selected');
+        document.getElementById('selectedCryptoCurrency').value = symbol;
+        
+        // Update amount display
+        updateCryptoAmount(symbol);
+    }
+
+    function updateCryptoAmount(symbol) {
+        const selectedOption = document.getElementById('selectedAnalysisOption').value;
+        const priceMap = {
+            'single_analysis': 400,  // $4.00 in cents
+            'triple_pack': 1000,     // $10.00 in cents
+            'five_pack': 1500,       // $15.00 in cents
+            'monthly_unlimited': 1900, // $19.00 in cents
+            'expert_basic': 2900,    // $29.00 in cents
+            'expert_premium': 4900,  // $49.00 in cents
+            'expert_vip': 9900       // $99.00 in cents
+        };
+        
+        const amountCAD = priceMap[selectedOption] || 1000;
+        
+        fetch(`/api/crypto/exchange-rate/${symbol}?fiat=CAD`)
+            .then(response => response.json())
+            .then(data => {
+                const cryptoAmount = (amountCAD / 100) / data.rate;
+                document.getElementById('cryptoAmount').innerHTML = `
+                    <strong>${cryptoAmount.toFixed(8)} ${symbol}</strong>
+                    <br><small class="text-muted">≈ $${(amountCAD / 100).toFixed(2)} CAD</small>
+                `;
+            })
+            .catch(error => {
+                console.error('Error getting exchange rate:', error);
+                document.getElementById('cryptoAmount').innerHTML = 
+                    '<span class="text-danger">Rate unavailable</span>';
+            });
+    }
+
+    // Update the selectAnalysisOption function to show payment methods for paid options
+    function selectAnalysisOption(option) {
+        // Remove previous selections
+        document.querySelectorAll('.ai-service-card').forEach(card => {
+            card.classList.remove('border-primary', 'selected');
+        });
+        
+        // Select the clicked option
+        event.target.closest('.ai-service-card').classList.add('border-primary', 'selected');
+        document.getElementById('selectedAnalysisOption').value = option;
+        
+        // Show/hide payment method selection
+        const paymentSection = document.getElementById('paymentMethodSection');
+        if (option === 'api_key') {
+            paymentSection.style.display = 'none';
+            document.getElementById('apiKeyInput').style.display = 'block';
+        } else {
+            paymentSection.style.display = 'block';
+            document.getElementById('apiKeyInput').style.display = 'none';
+            
+            // Update crypto amount if crypto is selected
+            const selectedCrypto = document.getElementById('selectedCryptoCurrency').value;
+            if (selectedCrypto) {
+                updateCryptoAmount(selectedCrypto);
+            }
+        }
+    }
+
+    // Cryptocurrency Payment Processing
+    function processCryptoPayment() {
+        const formData = {
+            amount_cad: getAnalysisPrice(),
+            service_type: 'ai_analysis',
+            currency: document.getElementById('selectedCryptoCurrency').value,
+            provider: document.getElementById('cryptoProvider').value,
+            analysis_option: document.getElementById('selectedAnalysisOption').value,
+            ai_service: document.querySelector('input[name="aiService"]:checked').value
+        };
+        
+        // Add user data
+        var isAuthenticated = {% if current_user.is_authenticated %}true{% else %}false{% endif %};
+        if (!isAuthenticated) {
+            formData.guest_name = document.getElementById('guestName').value;
+            formData.guest_email = document.getElementById('guestEmail').value;
+        }
+        
+        fetch('/api/crypto/create-payment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Redirect to payment page
+                window.location.href = `/crypto-payment/${data.payment.payment_id}`;
+            } else {
+                alert('Payment creation failed: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error creating crypto payment:', error);
+            alert('Payment creation failed. Please try again.');
+        });
+    }
+
+    function getAnalysisPrice() {
+        const selectedOption = document.getElementById('selectedAnalysisOption').value;
+        const priceMap = {
+            'single_analysis': 400,
+            'triple_pack': 1000,
+            'five_pack': 1500,
+            'monthly_unlimited': 1900,
+            'expert_basic': 2900,
+            'expert_premium': 4900,
+            'expert_vip': 9900
+        };
+        return priceMap[selectedOption] || 1000;
     }
 });
 </script>

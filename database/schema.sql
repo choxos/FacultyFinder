@@ -317,6 +317,129 @@ CREATE TABLE user_payments (
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL
 );
 
+-- Cryptocurrency Payment Tables
+-- =================================
+
+-- Supported cryptocurrencies
+CREATE TABLE crypto_currencies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    symbol VARCHAR(10) NOT NULL UNIQUE,  -- BTC, ETH, LTC, etc.
+    name VARCHAR(50) NOT NULL,           -- Bitcoin, Ethereum, etc.
+    network VARCHAR(50) NOT NULL,        -- mainnet, polygon, bsc, etc.
+    decimals INTEGER DEFAULT 8,
+    is_active BOOLEAN DEFAULT TRUE,
+    is_stablecoin BOOLEAN DEFAULT FALSE,
+    logo_url TEXT,
+    explorer_url TEXT,                   -- blockchain explorer base URL
+    min_payment_amount DECIMAL(20,8),    -- minimum payment amount
+    max_payment_amount DECIMAL(20,8),    -- maximum payment amount
+    confirmation_blocks INTEGER DEFAULT 6,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Crypto payment providers (Coinbase Commerce, BitPay, etc.)
+CREATE TABLE crypto_payment_providers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(50) NOT NULL UNIQUE,    -- 'coinbase_commerce', 'bitpay', 'nowpayments'
+    display_name VARCHAR(100) NOT NULL,  -- 'Coinbase Commerce', 'BitPay'
+    api_endpoint TEXT NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    supported_currencies TEXT,           -- JSON array of supported crypto symbols
+    webhook_secret VARCHAR(255),
+    api_key_encrypted TEXT,             -- encrypted API key
+    fee_percentage DECIMAL(5,4) DEFAULT 0.0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Crypto payment transactions
+CREATE TABLE crypto_payments (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    payment_id VARCHAR(255) UNIQUE NOT NULL,  -- from crypto provider
+    provider_id INTEGER NOT NULL,
+    currency_id INTEGER NOT NULL,
+    
+    -- Payment details
+    amount_requested DECIMAL(20,8) NOT NULL,  -- amount in crypto
+    amount_received DECIMAL(20,8),           -- actual amount received
+    fiat_amount INTEGER NOT NULL,            -- amount in cents (CAD)
+    fiat_currency VARCHAR(3) DEFAULT 'CAD',
+    exchange_rate DECIMAL(15,8),             -- crypto to fiat rate at time of payment
+    
+    -- Service details
+    service_type VARCHAR(50) NOT NULL,       -- 'ai_analysis', 'manual_review', etc.
+    service_details TEXT,                    -- JSON with service-specific data
+    
+    -- Payment status and tracking
+    status VARCHAR(20) DEFAULT 'pending',    -- 'pending', 'confirming', 'completed', 'failed', 'expired', 'overpaid', 'underpaid'
+    payment_address VARCHAR(255),           -- wallet address for payment
+    transaction_hash VARCHAR(255),          -- blockchain transaction hash
+    confirmations INTEGER DEFAULT 0,
+    required_confirmations INTEGER DEFAULT 6,
+    
+    -- Provider data
+    provider_charge_id VARCHAR(255),        -- charge ID from provider
+    provider_checkout_url TEXT,             -- payment URL from provider
+    provider_hosted_url TEXT,               -- hosted payment page URL
+    provider_data TEXT,                     -- JSON with provider-specific data
+    
+    -- Timing
+    expires_at TIMESTAMP,
+    confirmed_at TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    completed_at TIMESTAMP,
+    
+    -- Relationships
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL,
+    FOREIGN KEY (provider_id) REFERENCES crypto_payment_providers (id),
+    FOREIGN KEY (currency_id) REFERENCES crypto_currencies (id)
+);
+
+-- Crypto payment events/webhooks log
+CREATE TABLE crypto_payment_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    crypto_payment_id INTEGER NOT NULL,
+    event_type VARCHAR(50) NOT NULL,         -- 'charge:created', 'charge:confirmed', 'charge:completed', etc.
+    event_data TEXT,                         -- JSON with full event data
+    provider_event_id VARCHAR(255),          -- event ID from provider
+    processed BOOLEAN DEFAULT FALSE,
+    ip_address VARCHAR(45),
+    user_agent TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    processed_at TIMESTAMP,
+    
+    FOREIGN KEY (crypto_payment_id) REFERENCES crypto_payments (id) ON DELETE CASCADE
+);
+
+-- Crypto exchange rates cache
+CREATE TABLE crypto_exchange_rates (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    currency_id INTEGER NOT NULL,
+    fiat_currency VARCHAR(3) NOT NULL,
+    rate DECIMAL(15,8) NOT NULL,
+    source VARCHAR(50) NOT NULL,            -- 'coinbase', 'coingecko', etc.
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (currency_id) REFERENCES crypto_currencies (id),
+    UNIQUE(currency_id, fiat_currency, source)
+);
+
+-- User crypto payment preferences
+CREATE TABLE user_crypto_preferences (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    preferred_currencies TEXT,              -- JSON array of preferred crypto symbols
+    auto_convert_small_amounts BOOLEAN DEFAULT TRUE,
+    notification_preferences TEXT,          -- JSON with notification settings
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+    UNIQUE(user_id)
+);
+
 -- User saved searches
 CREATE TABLE user_saved_searches (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -497,4 +620,24 @@ CREATE INDEX idx_author_publications_professor_enhanced ON author_publications(p
 
 -- Insert default admin user (password should be changed on first login)
 INSERT INTO users (username, email, password_hash, first_name, last_name, role, is_active, email_verified) 
-VALUES ('admin', 'admin@facultyfinder.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LeANI1.9M8B8H0K1.', 'Admin', 'User', 'admin', TRUE, TRUE); 
+VALUES ('admin', 'admin@facultyfinder.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LeANI1.9M8B8H0K1.', 'Admin', 'User', 'admin', TRUE, TRUE);
+
+-- Insert supported cryptocurrencies
+INSERT INTO crypto_currencies (symbol, name, network, decimals, is_active, is_stablecoin, logo_url, explorer_url, min_payment_amount, max_payment_amount, confirmation_blocks) VALUES
+('BTC', 'Bitcoin', 'mainnet', 8, TRUE, FALSE, 'https://cryptologos.cc/logos/bitcoin-btc-logo.png', 'https://blockstream.info/tx/', 0.00001000, 10.00000000, 3),
+('ETH', 'Ethereum', 'mainnet', 18, TRUE, FALSE, 'https://cryptologos.cc/logos/ethereum-eth-logo.png', 'https://etherscan.io/tx/', 0.00100000, 100.00000000, 12),
+('LTC', 'Litecoin', 'mainnet', 8, TRUE, FALSE, 'https://cryptologos.cc/logos/litecoin-ltc-logo.png', 'https://live.blockcypher.com/ltc/tx/', 0.00100000, 1000.00000000, 6),
+('BCH', 'Bitcoin Cash', 'mainnet', 8, TRUE, FALSE, 'https://cryptologos.cc/logos/bitcoin-cash-bch-logo.png', 'https://blockchair.com/bitcoin-cash/transaction/', 0.00010000, 100.00000000, 6),
+('USDC', 'USD Coin', 'ethereum', 6, TRUE, TRUE, 'https://cryptologos.cc/logos/usd-coin-usdc-logo.png', 'https://etherscan.io/tx/', 1.00000000, 10000.00000000, 12),
+('USDT', 'Tether', 'ethereum', 6, TRUE, TRUE, 'https://cryptologos.cc/logos/tether-usdt-logo.png', 'https://etherscan.io/tx/', 1.00000000, 10000.00000000, 12),
+('DAI', 'Dai Stablecoin', 'ethereum', 18, TRUE, TRUE, 'https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.png', 'https://etherscan.io/tx/', 1.00000000, 10000.00000000, 12),
+('MATIC', 'Polygon', 'polygon', 18, TRUE, FALSE, 'https://cryptologos.cc/logos/polygon-matic-logo.png', 'https://polygonscan.com/tx/', 1.00000000, 100000.00000000, 20),
+('BNB', 'Binance Coin', 'bsc', 18, TRUE, FALSE, 'https://cryptologos.cc/logos/bnb-bnb-logo.png', 'https://bscscan.com/tx/', 0.01000000, 1000.00000000, 15),
+('DOGE', 'Dogecoin', 'mainnet', 8, TRUE, FALSE, 'https://cryptologos.cc/logos/dogecoin-doge-logo.png', 'https://dogechain.info/tx/', 1.00000000, 1000000.00000000, 6);
+
+-- Insert crypto payment providers
+INSERT INTO crypto_payment_providers (name, display_name, api_endpoint, is_active, supported_currencies, fee_percentage) VALUES
+('coinbase_commerce', 'Coinbase Commerce', 'https://api.commerce.coinbase.com', TRUE, '["BTC", "ETH", "LTC", "BCH", "USDC", "DAI"]', 0.01),
+('nowpayments', 'NOWPayments', 'https://api.nowpayments.io/v1', TRUE, '["BTC", "ETH", "LTC", "BCH", "USDC", "USDT", "DAI", "MATIC", "BNB", "DOGE"]', 0.005),
+('coingate', 'CoinGate', 'https://api-sandbox.coingate.com/v2', TRUE, '["BTC", "ETH", "LTC", "BCH", "USDC", "USDT", "DOGE"]', 0.01),
+('bitpay', 'BitPay', 'https://bitpay.com/api', FALSE, '["BTC", "BCH", "ETH", "USDC", "DAI"]', 0.01); 
