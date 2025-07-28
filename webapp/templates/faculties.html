@@ -89,109 +89,118 @@
                 
                 <div id="faculty-grid" class="row">
                     {% for prof in faculty %}
-                    <div class="col-lg-6 col-xl-4 mb-4">
-                        <div class="professor-card facultyfinder-card p-4 h-100">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h5 class="mb-1">
-                                    <a href="/professor/{{ prof.id }}" class="text-decoration-none">
-                                        {{ prof.name }}
-                                    </a>
-                                </h5>
-                                {% if prof.position %}
-                                    <span class="position-badge {{ prof.position.lower().replace(' ', '-') }}">
-                                        {{ prof.position }}
-                                    </span>
-                                {% endif %}
-                            </div>
-                            
-                            <div class="mb-3">
-                                                                      <div class="text-muted mb-1">
-                                          <i class="fas fa-building me-2"></i>
-                                          {% if prof.department %}
-                                              <a href="/faculties?department={{ prof.department }}" 
-                                                 class="text-decoration-none department-link-card"
-                                                 title="Filter by {{ prof.department }}">
-                                                  <strong>{{ prof.department }}</strong>
-                                              </a>
-                                          {% else %}
-                                              <strong>Department not specified</strong>
-                                          {% endif %}
-                                      </div>
-                                      <div class="university-location">
-                                          <i class="fas fa-university me-2"></i>
-                                          <a href="/faculties?university={{ prof.university_name }}" 
-                                             class="text-decoration-none university-link-card"
-                                             title="Filter by {{ prof.university_name }}">
-                                              {{ prof.university_name }}
-                                          </a>
-                                          {% if prof.city and prof.province_state %}
-                                              <br><small class="ms-4">{{ prof.city }}, {{ prof.province_state }}</small>
-                                          {% endif %}
-                                      </div>
-                            </div>
-                            
-                                                                  {% if prof.degrees %}
-                                          <div class="mb-3">
-                                              <small class="text-muted d-block mb-2">Degrees:</small>
-                                              <div class="degrees-display">
-                                                  {% for degree_text in prof.degrees.split(';')[:2] %}
-                                                      {% set degree_type = degree_text.strip().split(' ')[0] %}
-                                                      <a href="/faculties?degree={{ degree_type }}" 
-                                                         class="badge bg-info text-decoration-none me-1 degree-filter-link"
-                                                         title="Filter by {{ degree_type }}">
-                                                          {{ degree_text.strip() }}
-                                                      </a>
-                                                  {% endfor %}
-                                                  {% if prof.degrees.split(';')|length > 2 %}
-                                                      <span class="badge bg-secondary">+{{ prof.degrees.split(';')|length - 2 }} more</span>
-                                                  {% endif %}
-                                              </div>
-                                          </div>
-                                      {% endif %}
-
-                                      {% if prof.research_areas %}
-                                          <div class="mb-3">
-                                              <small class="text-muted d-block mb-2">Research Areas:</small>
-                                              <div class="research-areas">
-                                                  {% for area in prof.research_areas.split(';')[:3] %}
-                                                      <span class="research-area-tag">{{ area.strip() }}</span>
-                                                  {% endfor %}
-                                                  {% if prof.research_areas.split(';')|length > 3 %}
-                                                      <span class="research-area-tag">+{{ prof.research_areas.split(';')|length - 3 }} more</span>
-                                                  {% endif %}
-                                              </div>
-                                          </div>
-                                      {% endif %}
-                            
-                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <div class="d-flex gap-2">
-                                    {% if prof.uni_email %}
-                                        <a href="mailto:{{ prof.uni_email }}" class="social-link" title="Email">
-                                            <i class="fas fa-envelope"></i>
-                                        </a>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="faculty-card card h-100 shadow-sm border-0">
+                                <div class="card-body p-4">
+                                    <!-- Professor Header -->
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">
+                                                <a href="/professor/{{ prof.id }}" class="text-decoration-none text-primary fw-bold">
+                                                    {{ prof.name }}
+                                                </a>
+                                            </h5>
+                                            {% if prof.position %}
+                                                <p class="text-muted small mb-0">{{ prof.position }}</p>
+                                            {% endif %}
+                                        </div>
+                                        <div class="profile-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
+                                             style="width: 50px; height: 50px; font-size: 1.25rem;">
+                                            {{ prof.name[0]|upper }}
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Department and University -->
+                                    <div class="mb-3">
+                                        {% if prof.department %}
+                                            <div class="mb-2">
+                                                <i class="fas fa-building text-muted me-2"></i>
+                                                <a href="/faculties?department={{ prof.department }}" 
+                                                   class="text-decoration-none department-link">
+                                                    <strong>{{ prof.department }}</strong>
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                        
+                                        {% if prof.university_name %}
+                                            <div class="mb-2">
+                                                <i class="fas fa-university text-muted me-2"></i>
+                                                <a href="/faculties?university={{ prof.university_name }}" 
+                                                   class="text-decoration-none university-link">
+                                                    {{ prof.university_name }}
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    
+                                    <!-- Research Areas -->
+                                    {% if prof.research_areas %}
+                                        <div class="mb-3">
+                                            <h6 class="text-muted mb-2">
+                                                <i class="fas fa-microscope me-1"></i>Research Areas
+                                            </h6>
+                                            <div class="research-areas">
+                                                {% set areas = prof.research_areas.split(';') %}
+                                                {% for area in areas[:3] %}
+                                                    {% if area.strip() %}
+                                                        <span class="badge bg-light text-dark border me-1 mb-1">
+                                                            {{ area.strip() }}
+                                                        </span>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                {% if areas|length > 3 %}
+                                                    <span class="badge bg-secondary">+{{ areas|length - 3 }} more</span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
                                     {% endif %}
-                                    {% if prof.website %}
-                                        <a href="{{ prof.website }}" target="_blank" class="social-link" title="Website">
-                                            <i class="fas fa-globe"></i>
-                                        </a>
-                                    {% endif %}
-                                    {% if prof.google_scholar %}
-                                        <a href="https://scholar.google.com/citations?user={{ prof.google_scholar }}" target="_blank" class="social-link" title="Google Scholar">
-                                            <i class="fas fa-graduation-cap"></i>
-                                        </a>
-                                    {% endif %}
-                                    {% if prof.orcid %}
-                                        <a href="https://orcid.org/{{ prof.orcid }}" target="_blank" class="social-link" title="ORCID">
-                                            <i class="fab fa-orcid"></i>
-                                        </a>
-                                    {% endif %}
+                                    
+                                    <!-- Contact Info -->
+                                    <div class="contact-info mt-auto">
+                                        {% if prof.email %}
+                                            <div class="mb-1">
+                                                <i class="fas fa-envelope text-muted me-2"></i>
+                                                <a href="mailto:{{ prof.email }}" class="text-decoration-none small">
+                                                    {{ prof.email }}
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                        
+                                        {% if prof.website %}
+                                            <div class="mb-1">
+                                                <i class="fas fa-globe text-muted me-2"></i>
+                                                <a href="{{ prof.website }}" target="_blank" class="text-decoration-none small">
+                                                    Website
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                    </div>
                                 </div>
-                                <a href="/professor/{{ prof.id }}" class="btn btn-sm btn-primary">
-                                    View Profile
-                                </a>
+                                
+                                <!-- Card Footer -->
+                                <div class="card-footer bg-transparent border-0 p-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="/professor/{{ prof.id }}" class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-user me-1"></i>View Profile
+                                        </a>
+                                        
+                                        <div class="d-flex gap-2">
+                                            {% if prof.email %}
+                                                <a href="mailto:{{ prof.email }}" class="btn btn-outline-secondary btn-sm" title="Send Email">
+                                                    <i class="fas fa-envelope"></i>
+                                                </a>
+                                            {% endif %}
+                                            
+                                            {% if prof.website %}
+                                                <a href="{{ prof.website }}" target="_blank" class="btn btn-outline-secondary btn-sm" title="Visit Website">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     {% endfor %}
                 </div>
                 

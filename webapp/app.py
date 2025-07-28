@@ -289,8 +289,75 @@ def faculties():
 
 @app.route('/universities')
 def universities():
-    """Universities listing page"""
-    return render_template('universities.html', universities=[])
+    """Universities listing page with actual data"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return render_template('universities.html', universities=[])
+        
+        # Get all universities with faculty
+        query = """
+        SELECT u.id, u.name, u.city, u.province_state, u.country, u.address,
+               u.university_type, u.languages, u.year_established,
+               COUNT(p.id) as professor_count
+        FROM universities u
+        INNER JOIN professors p ON u.id = p.university_id
+        GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address,
+                 u.university_type, u.languages, u.year_established
+        ORDER BY professor_count DESC
+        """
+        
+        cursor = conn.execute(query)
+        universities_data = [dict(row) for row in cursor.fetchall()]
+        conn.close()
+        
+        return render_template('universities.html', 
+                             universities=universities_data,
+                             search='', country='', province='', 
+                             uni_type='', language='', sort_by='faculty_count')
+    
+    except Exception as e:
+        logger.error(f"Error in universities route: {e}")
+        return render_template('universities.html', universities=[])
+
+@app.route('/professor/<int:professor_id>')
+def professor_profile(professor_id):
+    """Professor profile page"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return "Database connection error", 500
+        
+        # Get professor details
+        query = """
+        SELECT p.id, p.name, p.email, p.department, p.research_areas,
+               p.position, p.phone, p.office_location, p.website, p.bio,
+               u.name as university_name, u.city, u.province_state, u.country
+        FROM professors p
+        LEFT JOIN universities u ON p.university_id = u.id
+        WHERE p.id = ?
+        """
+        
+        cursor = conn.execute(query, (professor_id,))
+        professor = cursor.fetchone()
+        
+        if not professor:
+            return "Professor not found", 404
+        
+        professor = dict(professor)
+        conn.close()
+        
+        return render_template('professor_profile.html',
+                             professor=professor,
+                             publications=[],
+                             collaborators=[],
+                             citation_metrics={},
+                             top_cited_papers=[],
+                             collaboration_network={})
+    
+    except Exception as e:
+        logger.error(f"Error in professor profile route: {e}")
+        return f"Error loading professor profile: {str(e)}", 500
 
 @app.route('/ai-assistant')
 def ai_assistant():
