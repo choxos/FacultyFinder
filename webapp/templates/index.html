@@ -45,52 +45,84 @@
 </div>
 
 <!-- Platform Statistics -->
-<div class="container mb-5">
-    <div class="row">
-        <div class="col-12">
-            <div class="stats-dashboard">
-                <div class="row text-center">
-                    <div class="col-md-3 mb-4">
-                        <div class="stat-card h-100">
-                            <div class="stat-icon">
-                                <i class="fas fa-users"></i>
+<section class="stats-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-dark mb-3">Platform Statistics</h2>
+                    <p class="text-muted">Connecting researchers worldwide with comprehensive academic data</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card text-center h-100 bg-white rounded-3 shadow-sm p-4 border-0">
+                            <div class="stat-icon mb-3">
+                                <i class="fas fa-users fa-3x text-primary"></i>
                             </div>
-                            <div class="stat-number" id="stat-professors">{{ stats.total_professors or 0 }}</div>
-                            <div class="stat-label">Faculty Members</div>
+                            <div class="stat-number display-4 fw-bold text-primary mb-2" id="stat-professors">
+                                {{ stats.professors or 0 }}
+                            </div>
+                            <div class="stat-label fs-5 text-muted">Faculty Members</div>
+                            <small class="text-muted d-block mt-2">Across all universities</small>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="stat-card h-100">
-                            <div class="stat-icon">
-                                <i class="fas fa-university"></i>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card text-center h-100 bg-white rounded-3 shadow-sm p-4 border-0">
+                            <div class="stat-icon mb-3">
+                                <i class="fas fa-university fa-3x text-success"></i>
                             </div>
-                            <div class="stat-number" id="stat-universities">{{ stats.total_universities or 0 }}</div>
-                            <div class="stat-label">Universities</div>
+                            <div class="stat-number display-4 fw-bold text-success mb-2" id="stat-universities">
+                                {{ stats.universities or 0 }}
+                            </div>
+                            <div class="stat-label fs-5 text-muted">Universities</div>
+                            <small class="text-muted d-block mt-2">With active faculty</small>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="stat-card h-100">
-                            <div class="stat-icon">
-                                <i class="fas fa-book"></i>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card text-center h-100 bg-white rounded-3 shadow-sm p-4 border-0">
+                            <div class="stat-icon mb-3">
+                                <i class="fas fa-book fa-3x text-info"></i>
                             </div>
-                            <div class="stat-number" id="stat-publications">{{ stats.total_publications or 0 }}</div>
-                            <div class="stat-label">Publications</div>
+                            <div class="stat-number display-4 fw-bold text-info mb-2" id="stat-publications">
+                                {{ stats.publications or 0 }}
+                            </div>
+                            <div class="stat-label fs-5 text-muted">Publications</div>
+                            <small class="text-muted d-block mt-2">Research papers tracked</small>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="stat-card h-100">
-                            <div class="stat-icon">
-                                <i class="fas fa-globe"></i>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-card text-center h-100 bg-white rounded-3 shadow-sm p-4 border-0">
+                            <div class="stat-icon mb-3">
+                                <i class="fas fa-globe fa-3x text-warning"></i>
                             </div>
-                            <div class="stat-number" id="stat-countries">{{ stats.countries_covered or 0 }}</div>
-                            <div class="stat-label">Countries</div>
+                            <div class="stat-number display-4 fw-bold text-warning mb-2" id="stat-countries">
+                                {{ stats.countries or 0 }}
+                            </div>
+                            <div class="stat-label fs-5 text-muted">Countries</div>
+                            <small class="text-muted d-block mt-2">Global coverage</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Stats Row -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="stats-summary text-center p-4 bg-primary rounded-3 text-white">
+                            <h4 class="mb-3">🎯 Find Your Perfect Faculty Match</h4>
+                            <p class="mb-0 fs-5">
+                                Join thousands of researchers using AI-powered faculty matching to advance their careers
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Top Universities Section -->
 <div class="container mb-5">
