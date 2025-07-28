@@ -351,7 +351,7 @@ def get_summary_statistics():
         SELECT 
             (SELECT COUNT(*) FROM professors) as professors,
             (SELECT COUNT(DISTINCT id) FROM universities WHERE id IN (SELECT DISTINCT university_id FROM professors)) as universities,
-            (SELECT COUNT(*) FROM professors) as publications,
+            (SELECT COUNT(*) FROM publications) as publications,
             (SELECT COUNT(DISTINCT country) FROM universities WHERE id IN (SELECT DISTINCT university_id FROM professors)) as countries
         """
         
@@ -361,7 +361,7 @@ def get_summary_statistics():
         return {
             "professors": row['professors'],
             "universities": row['universities'], 
-            "publications": row['publications'],  # Placeholder - will be actual count when publications are added
+            "publications": row['publications'],
             "countries": row['countries']
         }
         
