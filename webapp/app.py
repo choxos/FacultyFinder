@@ -439,46 +439,83 @@ Sent at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         logger.error(f"Error sending support notification: {e}")
         return False
 
-@cached(timeout=300)  # Cache for 5 minutes (shorter than before)
+@cached(timeout=600)  # Cache for 10 minutes (longer timeout)
 @monitor_performance
 def get_summary_statistics():
-    """Get summary statistics for the homepage (cached)"""
+    """Get summary statistics for the homepage (cached with robust error handling)"""
     try:
         conn = get_db_connection()
         if not conn:
+            logger.error("Database connection failed in get_summary_statistics")
+            # Try to return cached stats even if expired
+            cache_key = f"get_summary_statistics:bcd8b0c2eb1fce714eab6cef0d771acc"
+            cached_stats = cache.cache.get(cache_key)
+            if cached_stats:
+                logger.info("Using expired cached stats due to DB connection failure")
+                return cached_stats
             return {"professors": 0, "universities": 0, "publications": 0, "countries": 0}
         
         # Use individual queries since they work correctly
         results = {}
         
         # Check professors
-        cursor = conn.execute('SELECT COUNT(*) as count FROM professors')
-        prof_result = cursor.fetchone()
-        results['professors'] = prof_result['count'] if prof_result else 0
+        try:
+            cursor = conn.execute('SELECT COUNT(*) as count FROM professors')
+            prof_result = cursor.fetchone()
+            results['professors'] = prof_result['count'] if prof_result else 0
+        except Exception as e:
+            logger.error(f"Error counting professors: {e}")
+            results['professors'] = 0
         
         # Check universities (only those with faculty)
-        cursor = conn.execute('SELECT COUNT(DISTINCT university_id) as count FROM professors WHERE university_id IS NOT NULL')
-        uni_result = cursor.fetchone()
-        results['universities'] = uni_result['count'] if uni_result else 0
+        try:
+            cursor = conn.execute('SELECT COUNT(DISTINCT university_id) as count FROM professors WHERE university_id IS NOT NULL')
+            uni_result = cursor.fetchone()
+            results['universities'] = uni_result['count'] if uni_result else 0
+        except Exception as e:
+            logger.error(f"Error counting universities: {e}")
+            results['universities'] = 0
         
         # Check publications
-        cursor = conn.execute('SELECT COUNT(*) as count FROM publications')
-        pub_result = cursor.fetchone()
-        results['publications'] = pub_result['count'] if pub_result else 0
+        try:
+            cursor = conn.execute('SELECT COUNT(*) as count FROM publications')
+            pub_result = cursor.fetchone()
+            results['publications'] = pub_result['count'] if pub_result else 0
+        except Exception as e:
+            logger.error(f"Error counting publications: {e}")
+            results['publications'] = 0
         
         # Check countries (only those with universities that have faculty)
-        cursor = conn.execute('''
-            SELECT COUNT(DISTINCT u.country) as count 
-            FROM universities u 
-            INNER JOIN professors p ON u.id = p.university_id
-        ''')
-        country_result = cursor.fetchone()
-        results['countries'] = country_result['count'] if country_result else 0
+        try:
+            cursor = conn.execute('''
+                SELECT COUNT(DISTINCT u.country) as count 
+                FROM universities u 
+                INNER JOIN professors p ON u.id = p.university_id
+            ''')
+            country_result = cursor.fetchone()
+            results['countries'] = country_result['count'] if country_result else 0
+        except Exception as e:
+            logger.error(f"Error counting countries: {e}")
+            results['countries'] = 0
         
+        # Close connection
+        try:
+            conn.close()
+        except:
+            pass
+        
+        # Log successful stats retrieval
+        logger.info(f"Successfully retrieved stats: {results}")
         return results
         
     except Exception as e:
-        logger.error(f"Error getting summary statistics: {e}")
+        logger.error(f"Fatal error getting summary statistics: {e}")
+        # Try to return previously cached stats
+        cache_key = f"get_summary_statistics:bcd8b0c2eb1fce714eab6cef0d771acc"
+        cached_stats = cache.cache.get(cache_key)
+        if cached_stats:
+            logger.info("Using cached stats due to error")
+            return cached_stats
         return {"professors": 0, "universities": 0, "publications": 0, "countries": 0}
 
 @cached(timeout=1800)  # Cache for 30 minutes
@@ -488,6 +525,7 @@ def get_top_universities():
     try:
         conn = get_db_connection()
         if not conn:
+            logger.error("Database connection failed in get_top_universities")
             return []
         
         # Optimized query with proper joins
@@ -504,7 +542,16 @@ def get_top_universities():
         """
         
         cursor = conn.execute(query)
-        return [dict(row) for row in cursor.fetchall()]
+        results = [dict(row) for row in cursor.fetchall()]
+        
+        # Close connection properly
+        try:
+            conn.close()
+        except:
+            pass
+            
+        logger.info(f"Successfully retrieved {len(results)} top universities")
+        return results
         
     except Exception as e:
         logger.error(f"Error getting top universities: {e}")
@@ -686,6 +733,11 @@ def index():
     """Homepage with summary statistics and top universities"""
     try:
         stats = get_summary_statistics()
+        
+        # Validate that we got real stats, not fallback zeros
+        if all(value == 0 for value in stats.values()):
+            logger.warning("Received zero stats - this might indicate a database issue")
+        
         top_universities = get_top_universities()
         
         return render_template('index.html', 
@@ -693,9 +745,20 @@ def index():
                              top_universities=top_universities)
     except Exception as e:
         logger.error(f"Error in index route: {e}")
-        return render_template('index.html', 
-                             stats={"professors": 0, "universities": 0, "publications": 0, "countries": 0},
-                             top_universities=[])
+        
+        # Try to get stats one more time before falling back
+        try:
+            stats = get_summary_statistics()
+            top_universities = []
+            logger.info("Recovered stats on retry")
+            return render_template('index.html', 
+                                 stats=stats,
+                                 top_universities=top_universities)
+        except:
+            logger.error("Failed to recover stats, using fallback")
+            return render_template('index.html', 
+                                 stats={"professors": 0, "universities": 0, "publications": 0, "countries": 0},
+                                 top_universities=[])
 
 @app.route('/universities')
 @monitor_performance
@@ -1399,694 +1462,7 @@ def internal_error(error):
     return "Internal server error", 500
 
 # Cache warming on startup
-def warm_cache():
-    """Warm up the cache with frequently accessed data"""
-    try:
-        logger.info("Warming up cache...")
-        get_summary_statistics()
-        get_top_universities()
-        get_available_university_filters()
-        logger.info("Cache warmed successfully")
-    except Exception as e:
-        logger.error(f"Error warming cache: {e}")
-
-# Performance monitoring middleware
-@app.before_request
-def before_request():
-    """Track request start time"""
-    g.start_time = time.time()
-
-@app.after_request
-def after_request(response):
-    """Log request performance and add headers"""
-    if hasattr(g, 'start_time'):
-        duration = (time.time() - g.start_time) * 1000
-        
-        # Log slow requests
-        if duration > 1000:  # > 1 second
-            logger.warning(f"Slow request: {request.endpoint} took {duration:.2f}ms")
-        
-        # Add performance header
-        response.headers['X-Response-Time'] = f"{duration:.2f}ms"
-    
-    return response
-
-# =====================================================
-# AUTHENTICATION ROUTES
-# =====================================================
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    """User registration"""
-    if request.method == 'POST':
-        try:
-            # Get form data
-            username = request.form.get('username', '').strip()
-            email = request.form.get('email', '').strip().lower()
-            password = request.form.get('password', '')
-            confirm_password = request.form.get('confirm_password', '')
-            first_name = request.form.get('first_name', '').strip()
-            last_name = request.form.get('last_name', '').strip()
-            institution = request.form.get('institution', '').strip()
-            field_of_study = request.form.get('field_of_study', '').strip()
-            academic_level = request.form.get('academic_level', '').strip()
-            bio = request.form.get('bio', '').strip()
-            website = request.form.get('website', '').strip()
-            orcid = request.form.get('orcid', '').strip()
-            
-            # Validation
-            errors = []
-            
-            if not username or len(username) < 3:
-                errors.append("Username must be at least 3 characters long")
-            
-            if not re.match(r'^[a-zA-Z0-9_]+$', username):
-                errors.append("Username can only contain letters, numbers, and underscores")
-            
-            try:
-                validate_email(email)
-            except EmailNotValidError:
-                errors.append("Invalid email address")
-            
-            if not password or len(password) < 6:
-                errors.append("Password must be at least 6 characters long")
-            
-            if password != confirm_password:
-                errors.append("Passwords do not match")
-            
-            if errors:
-                return render_template('auth/register.html', errors=errors, **request.form)
-            
-            # Check if username or email already exists
-            conn = get_db_connection()
-            if not conn:
-                return render_template('auth/register.html', 
-                                     errors=["Database connection error"], **request.form)
-            
-            cursor = conn.execute(
-                "SELECT id FROM users WHERE username = ? OR email = ?", 
-                (username, email)
-            )
-            
-            if cursor.fetchone():
-                return render_template('auth/register.html', 
-                                     errors=["Username or email already exists"], **request.form)
-            
-            # Hash password
-            password_hash = generate_password_hash(password)
-            
-            # Create user
-            cursor = conn.execute("""
-                INSERT INTO users (username, email, password_hash, first_name, last_name,
-                                 institution, field_of_study, academic_level, bio, website, orcid)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (username, email, password_hash, first_name, last_name,
-                  institution, field_of_study, academic_level, bio, website, orcid))
-            
-            user_id = cursor.lastrowid
-            conn.commit()
-            
-            # Log in the user
-            user = load_user(user_id)
-            login_user(user)
-            
-            logger.info(f"New user registered: {username} ({email})")
-            return redirect(url_for('dashboard'))
-            
-        except Exception as e:
-            logger.error(f"Registration error: {e}")
-            return render_template('auth/register.html', 
-                                 errors=["Registration failed. Please try again."], **request.form)
-    
-    return render_template('auth/register.html')
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    """User login"""
-    if request.method == 'POST':
-        try:
-            username_or_email = request.form.get('username_or_email', '').strip()
-            password = request.form.get('password', '')
-            remember = bool(request.form.get('remember'))
-            
-            if not username_or_email or not password:
-                return render_template('auth/login.html', 
-                                     error="Please provide both username/email and password",
-                                     username_or_email=username_or_email)
-            
-            # Find user by username or email
-            conn = get_db_connection()
-            if not conn:
-                return render_template('auth/login.html', 
-                                     error="Database connection error",
-                                     username_or_email=username_or_email)
-            
-            cursor = conn.execute("""
-                SELECT * FROM users 
-                WHERE (username = ? OR email = ?) AND is_active = 1
-            """, (username_or_email, username_or_email.lower()))
-            
-            user_data = cursor.fetchone()
-            
-            if not user_data or not check_password_hash(user_data['password_hash'], password):
-                return render_template('auth/login.html', 
-                                     error="Invalid username/email or password",
-                                     username_or_email=username_or_email)
-            
-            # Create user object and log in
-            user = User(
-                id=user_data['id'],
-                username=user_data['username'],
-                email=user_data['email'],
-                first_name=user_data['first_name'],
-                last_name=user_data['last_name'],
-                role=user_data['role'],
-                is_active=user_data['is_active'],
-                email_verified=user_data['email_verified'],
-                institution=user_data['institution'],
-                field_of_study=user_data['field_of_study'],
-                academic_level=user_data['academic_level'],
-                bio=user_data['bio'],
-                website=user_data['website'],
-                orcid=user_data['orcid']
-            )
-            
-            login_user(user, remember=remember)
-            
-            # Update login stats
-            conn.execute("""
-                UPDATE users 
-                SET last_login = CURRENT_TIMESTAMP, login_count = login_count + 1
-                WHERE id = ?
-            """, (user.id,))
-            conn.commit()
-            
-            logger.info(f"User logged in: {user.username}")
-            
-            # Redirect to next page or dashboard
-            next_page = request.args.get('next')
-            if next_page:
-                return redirect(next_page)
-            return redirect(url_for('dashboard'))
-            
-        except Exception as e:
-            logger.error(f"Login error: {e}")
-            return render_template('auth/login.html', 
-                                 error="Login failed. Please try again.",
-                                 username_or_email=username_or_email)
-    
-    return render_template('auth/login.html')
-
-@app.route('/logout')
-@login_required
-def logout():
-    """User logout"""
-    username = current_user.username
-    logout_user()
-    logger.info(f"User logged out: {username}")
-    return redirect(url_for('index'))
-
-@app.route('/auth/google')
-def google_login():
-    """Redirect to Google OAuth"""
-    redirect_uri = url_for('google_callback', _external=True)
-    return google.authorize_redirect(redirect_uri)
-
-@app.route('/auth/google/callback')
-def google_callback():
-    """Handle Google OAuth callback"""
-    try:
-        token = google.authorize_access_token()
-        user_info = token.get('userinfo')
-        
-        if user_info:
-            email = user_info.get('email')
-            name = user_info.get('name')
-            given_name = user_info.get('given_name', '')
-            family_name = user_info.get('family_name', '')
-            picture = user_info.get('picture', '')
-            
-            if not email:
-                flash('Unable to get email from Google. Please try again.', 'error')
-                return redirect(url_for('login'))
-            
-            conn = get_db_connection()
-            if not conn:
-                flash('Database connection failed. Please try again later.', 'error')
-                return redirect(url_for('login'))
-            
-            # Check if user already exists
-            cursor = conn.execute('SELECT * FROM users WHERE email = ?', (email,))
-            existing_user = cursor.fetchone()
-            
-            if existing_user:
-                # User exists, log them in
-                user = User(
-                    id=existing_user['id'],
-                    username=existing_user['username'],
-                    email=existing_user['email'],
-                    first_name=existing_user['first_name'],
-                    last_name=existing_user['last_name'],
-                    institution=existing_user['institution'],
-                    field_of_study=existing_user['field_of_study'],
-                    academic_level=existing_user['academic_level'],
-                    bio=existing_user['bio'],
-                    website=existing_user['website'],
-                    orcid=existing_user['orcid'],
-                    role=existing_user['role'],
-                    is_active=existing_user['is_active']
-                )
-                login_user(user, remember=True)
-                logger.info(f"User logged in via Google: {email}")
-                
-                # Update profile picture if provided
-                if picture and not existing_user['profile_picture']:
-                    conn.execute('UPDATE users SET profile_picture = ? WHERE id = ?', (picture, existing_user['id']))
-                    conn.commit()
-                
-                return redirect(url_for('dashboard'))
-            else:
-                # Create new user account
-                username = email.split('@')[0]  # Use email prefix as username
-                
-                # Make sure username is unique
-                counter = 1
-                original_username = username
-                while True:
-                    cursor = conn.execute('SELECT id FROM users WHERE username = ?', (username,))
-                    if not cursor.fetchone():
-                        break
-                    username = f"{original_username}{counter}"
-                    counter += 1
-                
-                # Insert new user
-                cursor = conn.execute('''
-                    INSERT INTO users (
-                        username, email, password_hash, first_name, last_name, 
-                        profile_picture, role, is_active, created_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ''', (
-                    username,
-                    email,
-                    '',  # No password for OAuth users
-                    given_name,
-                    family_name,
-                    picture,
-                    'user',
-                    True,
-                    datetime.utcnow()
-                ))
-                
-                user_id = cursor.lastrowid
-                conn.commit()
-                
-                # Create user object and log them in
-                user = User(
-                    id=user_id,
-                    username=username,
-                    email=email,
-                    first_name=given_name,
-                    last_name=family_name,
-                    role='user',
-                    is_active=True
-                )
-                login_user(user, remember=True)
-                logger.info(f"New user registered via Google: {email}")
-                flash('Welcome! Your account has been created successfully.', 'success')
-                
-                return redirect(url_for('profile'))  # Redirect to profile to complete setup
-        else:
-            flash('Unable to get user information from Google. Please try again.', 'error')
-            return redirect(url_for('login'))
-            
-    except Exception as e:
-        logger.error(f"Google OAuth error: {e}")
-        flash('Authentication failed. Please try again.', 'error')
-        return redirect(url_for('login'))
-
-@app.route('/dashboard')
-@login_required
-def dashboard():
-    """User dashboard"""
-    try:
-        conn = get_db_connection()
-        if not conn:
-            return render_template('user/dashboard.html', error="Database connection error")
-        
-        # Get user's saved items
-        cursor = conn.execute("""
-            SELECT item_type, item_id, saved_at
-            FROM user_saved_items 
-            WHERE user_id = ?
-            ORDER BY saved_at DESC
-        """, (current_user.id,))
-        saved_items = cursor.fetchall()
-        
-        # Get user's activity history  
-        cursor = conn.execute("""
-            SELECT activity_type, description, created_at
-            FROM user_activities 
-            WHERE user_id = ?
-            ORDER BY created_at DESC
-            LIMIT 10
-        """, (current_user.id,))
-        activities = cursor.fetchall()
-        
-        # Get payment history
-        cursor = conn.execute("""
-            SELECT amount, currency, payment_method, status, created_at, description
-            FROM payments 
-            WHERE user_id = ?
-            ORDER BY created_at DESC
-            LIMIT 10
-        """, (current_user.id,))
-        payments = cursor.fetchall()
-        
-        return render_template('user/dashboard.html', 
-                             saved_items=saved_items,
-                             activities=activities,
-                             payments=payments)
-                             
-    except Exception as e:
-        logger.error(f"Dashboard error for user {current_user.id}: {e}")
-        return render_template('user/dashboard.html', error="Error loading dashboard")
-
-@app.route('/profile', methods=['GET', 'POST'])
-@login_required
-def profile():
-    """User profile management"""
-    if request.method == 'POST':
-        try:
-            # Update profile
-            first_name = request.form.get('first_name', '').strip()
-            last_name = request.form.get('last_name', '').strip()
-            institution = request.form.get('institution', '').strip()
-            field_of_study = request.form.get('field_of_study', '').strip()
-            academic_level = request.form.get('academic_level', '').strip()
-            bio = request.form.get('bio', '').strip()
-            website = request.form.get('website', '').strip()
-            orcid = request.form.get('orcid', '').strip()
-            
-            conn = get_db_connection()
-            if conn:
-                conn.execute("""
-                    UPDATE users 
-                    SET first_name=?, last_name=?, institution=?, field_of_study=?,
-                        academic_level=?, bio=?, website=?, orcid=?, updated_at=CURRENT_TIMESTAMP
-                    WHERE id=?
-                """, (first_name, last_name, institution, field_of_study,
-                      academic_level, bio, website, orcid, current_user.id))
-                conn.commit()
-                
-                logger.info(f"Profile updated for user {current_user.username}")
-                return render_template('user/profile.html', success="Profile updated successfully")
-        
-        except Exception as e:
-            logger.error(f"Profile update error: {e}")
-            return render_template('user/profile.html', error="Failed to update profile")
-    
-    return render_template('user/profile.html')
-
-# =====================================================
-# CRYPTOCURRENCY PAYMENT ROUTES
-# =====================================================
-
-# Import crypto payment system
-try:
-    from crypto_payments import get_crypto_payment_manager, CryptoPaymentError, PaymentProviderError
-    CRYPTO_PAYMENTS_AVAILABLE = True
-except ImportError:
-    CRYPTO_PAYMENTS_AVAILABLE = False
-    logger.warning("Crypto payments module not available")
-
-@app.route('/api/crypto/currencies')
-def get_crypto_currencies():
-    """Get supported cryptocurrencies"""
-    try:
-        if not CRYPTO_PAYMENTS_AVAILABLE:
-            return jsonify({'error': 'Crypto payments not available'}), 503
-        
-        conn = get_db_connection()
-        if not conn:
-            return jsonify({'error': 'Database connection failed'}), 500
-        
-        crypto_manager = get_crypto_payment_manager(conn)
-        currencies = crypto_manager.get_supported_currencies()
-        
-        return jsonify({'currencies': currencies})
-        
-    except Exception as e:
-        logger.error(f"Error getting crypto currencies: {e}")
-        return jsonify({'error': 'Failed to fetch currencies'}), 500
-
-@app.route('/api/crypto/exchange-rate/<crypto_symbol>')
-def get_crypto_exchange_rate(crypto_symbol):
-    """Get current exchange rate for cryptocurrency"""
-    try:
-        if not CRYPTO_PAYMENTS_AVAILABLE:
-            return jsonify({'error': 'Crypto payments not available'}), 503
-        
-        fiat_currency = request.args.get('fiat', 'CAD')
-        
-        conn = get_db_connection()
-        crypto_manager = get_crypto_payment_manager(conn)
-        
-        rate = crypto_manager.get_exchange_rate(crypto_symbol.upper(), fiat_currency.upper())
-        
-        return jsonify({
-            'crypto_symbol': crypto_symbol.upper(),
-            'fiat_currency': fiat_currency.upper(),
-            'rate': float(rate),
-            'timestamp': int(time.time())
-        })
-        
-    except Exception as e:
-        logger.error(f"Error getting exchange rate: {e}")
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/crypto/create-payment', methods=['POST'])
-def create_crypto_payment():
-    """Create a new cryptocurrency payment"""
-    try:
-        if not CRYPTO_PAYMENTS_AVAILABLE:
-            return jsonify({'error': 'Crypto payments not available'}), 503
-        
-        data = request.get_json()
-        if not data:
-            return jsonify({'error': 'No data provided'}), 400
-        
-        # Validate required fields
-        required_fields = ['amount_cad', 'service_type', 'currency', 'provider']
-        for field in required_fields:
-            if field not in data:
-                return jsonify({'error': f'Missing field: {field}'}), 400
-        
-        # Get user ID (if logged in)
-        user_id = current_user.id if current_user.is_authenticated else None
-        
-        # For guest users, we need contact info
-        if not user_id:
-            guest_fields = ['guest_name', 'guest_email']
-            for field in guest_fields:
-                if field not in data:
-                    return jsonify({'error': f'Guest users must provide {field}'}), 400
-        
-        conn = get_db_connection()
-        if not conn:
-            return jsonify({'error': 'Database connection failed'}), 500
-        
-        crypto_manager = get_crypto_payment_manager(conn)
-        
-        # Create payment
-        payment_result = crypto_manager.create_payment(
-            user_id=user_id,
-            amount_cad=int(data['amount_cad']),
-            service_type=data['service_type'],
-            currency_symbol=data['currency'].upper(),
-            provider_name=data['provider'],
-            service_details={
-                'guest_name': data.get('guest_name'),
-                'guest_email': data.get('guest_email'),
-                'analysis_option': data.get('analysis_option'),
-                'ai_service': data.get('ai_service')
-            }
-        )
-        
-        return jsonify({
-            'success': True,
-            'payment': payment_result
-        })
-        
-    except (CryptoPaymentError, PaymentProviderError) as e:
-        logger.error(f"Crypto payment error: {e}")
-        return jsonify({'error': str(e)}), 400
-    except Exception as e:
-        logger.error(f"Error creating crypto payment: {e}")
-        return jsonify({'error': 'Payment creation failed'}), 500
-
-@app.route('/api/crypto/payment-status/<payment_id>')
-def get_crypto_payment_status(payment_id):
-    """Get status of a cryptocurrency payment"""
-    try:
-        conn = get_db_connection()
-        if not conn:
-            return jsonify({'error': 'Database connection failed'}), 500
-        
-        cursor = conn.execute("""
-            SELECT cp.*, cc.symbol, cc.name as currency_name, cpp.display_name as provider_name
-            FROM crypto_payments cp
-            JOIN crypto_currencies cc ON cc.id = cp.currency_id
-            JOIN crypto_payment_providers cpp ON cpp.id = cp.provider_id
-            WHERE cp.payment_id = ?
-        """, (payment_id,))
-        
-        payment = cursor.fetchone()
-        if not payment:
-            return jsonify({'error': 'Payment not found'}), 404
-        
-        # Check if user has access to this payment
-        if payment['user_id'] and current_user.is_authenticated:
-            if payment['user_id'] != current_user.id and not current_user.is_admin():
-                return jsonify({'error': 'Access denied'}), 403
-        
-        return jsonify({
-            'payment_id': payment['payment_id'],
-            'status': payment['status'],
-            'amount_requested': float(payment['amount_requested']),
-            'amount_received': float(payment['amount_received'] or 0),
-            'currency': payment['symbol'],
-            'currency_name': payment['currency_name'],
-            'provider': payment['provider_name'],
-            'fiat_amount': payment['fiat_amount'],
-            'fiat_currency': payment['fiat_currency'],
-            'exchange_rate': float(payment['exchange_rate']),
-            'transaction_hash': payment['transaction_hash'],
-            'confirmations': payment['confirmations'],
-            'required_confirmations': payment['required_confirmations'],
-            'payment_address': payment['payment_address'],
-            'expires_at': payment['expires_at'],
-            'created_at': payment['created_at'],
-            'completed_at': payment['completed_at']
-        })
-        
-    except Exception as e:
-        logger.error(f"Error getting payment status: {e}")
-        return jsonify({'error': 'Failed to fetch payment status'}), 500
-
-@app.route('/crypto-payment/<payment_id>')
-def crypto_payment_page(payment_id):
-    """Cryptocurrency payment page"""
-    try:
-        conn = get_db_connection()
-        if not conn:
-            return render_template('error.html', error="Database connection failed"), 500
-        
-        cursor = conn.execute("""
-            SELECT cp.*, cc.symbol, cc.name as currency_name, cc.logo_url,
-                   cpp.display_name as provider_name
-            FROM crypto_payments cp
-            JOIN crypto_currencies cc ON cc.id = cp.currency_id
-            JOIN crypto_payment_providers cpp ON cpp.id = cp.provider_id
-            WHERE cp.payment_id = ?
-        """, (payment_id,))
-        
-        payment = cursor.fetchone()
-        if not payment:
-            return render_template('error.html', error="Payment not found"), 404
-        
-        # Check if payment has expired
-        is_expired = False
-        if payment['expires_at']:
-            expires_at = datetime.fromisoformat(payment['expires_at'])
-            is_expired = datetime.now() > expires_at
-        
-        return render_template('crypto/payment.html',
-                             payment=payment,
-                             is_expired=is_expired)
-        
-    except Exception as e:
-        logger.error(f"Error loading crypto payment page: {e}")
-        return render_template('error.html', error="Failed to load payment"), 500
-
-@app.route('/webhooks/crypto/<provider_name>', methods=['POST'])
-def crypto_webhook(provider_name):
-    """Handle cryptocurrency payment webhooks"""
-    try:
-        if not CRYPTO_PAYMENTS_AVAILABLE:
-            return '', 503
-        
-        payload = request.get_data(as_text=True)
-        signature = request.headers.get('X-CC-Webhook-Signature') or request.headers.get('X-Signature')
-        
-        conn = get_db_connection()
-        if not conn:
-            return '', 500
-        
-        crypto_manager = get_crypto_payment_manager(conn)
-        
-        # Verify webhook signature
-        if not crypto_manager.verify_webhook(provider_name, payload, signature, request.headers):
-            logger.warning(f"Invalid webhook signature from {provider_name}")
-            return '', 403
-        
-        # Process webhook
-        event_data = request.get_json()
-        if crypto_manager.process_webhook(provider_name, event_data):
-            return '', 200
-        else:
-            return '', 400
-        
-    except Exception as e:
-        logger.error(f"Error processing {provider_name} webhook: {e}")
-        return '', 500
-
-@app.route('/user/crypto-payments')
-@login_required
-def user_crypto_payments():
-    """User's cryptocurrency payment history"""
-    try:
-        page = int(request.args.get('page', 1))
-        per_page = 20
-        offset = (page - 1) * per_page
-        
-        conn = get_db_connection()
-        if not conn:
-            return render_template('user/crypto_payments.html', error="Database connection failed")
-        
-        # Get total count
-        cursor = conn.execute(
-            "SELECT COUNT(*) as total FROM crypto_payments WHERE user_id = ?",
-            (current_user.id,)
-        )
-        total = cursor.fetchone()['total']
-        
-        # Get payments
-        cursor = conn.execute("""
-            SELECT cp.*, cc.symbol, cc.name as currency_name, cc.logo_url,
-                   cpp.display_name as provider_name
-            FROM crypto_payments cp
-            JOIN crypto_currencies cc ON cc.id = cp.currency_id
-            JOIN crypto_payment_providers cpp ON cpp.id = cp.provider_id
-            WHERE cp.user_id = ?
-            ORDER BY cp.created_at DESC
-            LIMIT ? OFFSET ?
-        """, (current_user.id, per_page, offset))
-        
-        payments = cursor.fetchall()
-        
-        return render_template('user/crypto_payments.html',
-                             payments=payments,
-                             total=total,
-                             page=page,
-                             per_page=per_page,
-                             has_more=offset + per_page < total)
-        
-    except Exception as e:
-        logger.error(f"Error loading user crypto payments: {e}")
-        return render_template('user/crypto_payments.html', error="Failed to load payments")
-
-@cached(timeout=300)  # Cache for 5 minutes
-@monitor_performance
+@cached(timeout=1800)  # Cache for 30 minutes
 def get_ai_usage_statistics():
     """Get AI assistant usage statistics (cached)"""
     try:
@@ -2164,9 +1540,62 @@ def api_load_more_faculty():
             'error': str(e)
         }), 500
 
+@app.route('/debug/stats-check')
+def debug_stats_check():
+    """Debug endpoint to check stats and cache status"""
+    try:
+        # Get current stats
+        stats = get_summary_statistics()
+        
+        # Check cache status
+        cache_key = f"get_summary_statistics:bcd8b0c2eb1fce714eab6cef0d771acc"
+        is_cached = cache_key in cache.cache
+        cache_expiry = cache.timeouts.get(cache_key, 0)
+        current_time = time.time()
+        cache_valid = cache_expiry > current_time if is_cached else False
+        
+        # Database connection test
+        conn = get_db_connection()
+        db_connected = conn is not None
+        if conn:
+            conn.close()
+        
+        return f"""
+        <h1>Stats Debug</h1>
+        <h2>Current Stats:</h2>
+        <pre>{stats}</pre>
+        
+        <h2>Cache Status:</h2>
+        <ul>
+            <li>Is Cached: {is_cached}</li>
+            <li>Cache Valid: {cache_valid}</li>
+            <li>Cache Expiry: {cache_expiry}</li>
+            <li>Current Time: {current_time}</li>
+            <li>Time to Expiry: {cache_expiry - current_time if is_cached else 'N/A'} seconds</li>
+        </ul>
+        
+        <h2>Database Status:</h2>
+        <ul>
+            <li>DB Connected: {db_connected}</li>
+        </ul>
+        
+        <h2>Actions:</h2>
+        <a href="/debug/clear-cache" style="margin: 10px; padding: 10px; background: red; color: white; text-decoration: none;">Clear Cache</a>
+        <a href="/" style="margin: 10px; padding: 10px; background: blue; color: white; text-decoration: none;">Go to Homepage</a>
+        """
+    except Exception as e:
+        return f"Error in debug check: {e}"
+
+@app.route('/debug/clear-cache')
+def debug_clear_cache():
+    """Clear the cache and redirect to homepage"""
+    try:
+        cache.clear()
+        logger.info("Cache manually cleared via debug endpoint")
+        return "Cache cleared! <a href='/'>Go to Homepage</a>"
+    except Exception as e:
+        return f"Error clearing cache: {e}"
+
 if __name__ == '__main__':
-    # Warm cache on startup
-    warm_cache()
-    
     # Run the application
     app.run(host='127.0.0.1', port=8080, debug=True, threaded=True) 

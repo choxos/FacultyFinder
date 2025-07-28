@@ -102,6 +102,7 @@
                             </ul>
                         </li>
                     {% else %}
+                        {# Temporarily disabled until user auth is properly configured
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('login') }}">
                                 <i class="fas fa-sign-in-alt me-1"></i>Login
@@ -112,6 +113,7 @@
                                 <i class="fas fa-user-plus me-1"></i>Register
                             </a>
                         </li>
+                        #}
                     {% endif %}
                 </ul>
             </div>
