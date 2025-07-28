@@ -1,830 +1,607 @@
 # Stripe Integration Guide for FacultyFinder
 
-This guide covers implementing Stripe payments for the AI Assistant feature, allowing users to pay for CV analysis when they don't have their own API keys.
+Complete guide for integrating Stripe payment processing into FacultyFinder at facultyfinder.io.
 
-## Overview
+## 📋 Table of Contents
 
-FacultyFinder's AI Assistant offers two options:
-1. **Free**: Users provide their own API keys (Claude, Gemini, ChatGPT, Grok)
-2. **Paid**: Users pay for AI analysis using our API keys
+1. [Stripe Account Setup](#stripe-account-setup)
+2. [Product Configuration](#product-configuration)
+3. [Webhook Configuration](#webhook-configuration)
+4. [Environment Configuration](#environment-configuration)
+5. [Testing Integration](#testing-integration)
+6. [Production Deployment](#production-deployment)
+7. [Advanced Features](#advanced-features)
+8. [Troubleshooting](#troubleshooting)
 
 ## Stripe Account Setup
 
 ### 1. Create Stripe Account
-1. Go to [stripe.com](https://stripe.com) and create an account
-2. Complete account verification
-3. Navigate to the Dashboard
+1. Visit [stripe.com](https://stripe.com)
+2. Click "Start now" and create your account
+3. Use your business email: `admin@facultyfinder.io`
+4. Complete business verification:
+   - Business type: Online software/SaaS
+   - Industry: Education Technology
+   - Website: `https://facultyfinder.io`
+   - Description: "AI-powered faculty discovery platform for academic researchers"
 
-### 2. Get API Keys
-1. Go to **Developers** → **API keys**
-2. Copy your **Publishable key** (starts with `pk_`)
-3. Copy your **Secret key** (starts with `sk_`)
-4. For webhooks, create an endpoint and get the **Webhook secret** (starts with `whsec_`)
+### 2. Account Verification
+Required documents for live payments:
+- Business registration (if applicable)
+- Bank account information
+- Tax identification number
+- Identity verification for account holders
 
-### 3. Set Up Products and Prices
-```bash
-# Create products in Stripe Dashboard or via API:
+### 3. Enable Live Payments
+1. Complete all verification steps
+2. Add bank account for payouts
+3. Set payout schedule (daily/weekly)
+4. Enable live mode in dashboard
 
-# Product 1: Single CV Analysis
-Name: Single CV Analysis
-Description: AI-powered analysis of your CV to match with faculty members
-Price: $9.99 USD (one-time payment)
+## Product Configuration
 
-# Product 2: CV Analysis Package
-Name: CV Analysis Package (5 analyses)
-Description: 5 AI-powered CV analyses with detailed faculty recommendations  
-Price: $39.99 USD (one-time payment)
+### 1. Create Products in Stripe Dashboard
 
-# Product 3: Premium Monthly
-Name: Premium Monthly Access
-Description: Unlimited CV analyses and priority support
-Price: $19.99 USD/month (recurring)
+Navigate to **Products** in your Stripe dashboard and create the following:
+
+#### Product 1: AI Faculty Analysis
 ```
+Name: AI Faculty Analysis
+Description: Get personalized faculty recommendations using advanced AI analysis of your CV and research interests. Powered by Claude, GPT-4, Gemini, or Grok AI.
+
+Pricing:
+- Price: $5.00 CAD
+- Billing: One-time payment
+- Currency: CAD
+```
+
+#### Product 2: Expert Faculty Review
+```
+Name: Expert Faculty Review  
+Description: Manual review and personalized recommendations by our team of academic advisors with PhD-level expertise across multiple disciplines.
+
+Pricing:
+- Price: $50.00 CAD
+- Billing: One-time payment
+- Currency: CAD
+```
+
+#### Product 3: Monthly Unlimited Access (Optional)
+```
+Name: FacultyFinder Pro Monthly
+Description: Unlimited AI analyses, priority support, early access to new features, and advanced search filters.
+
+Pricing:
+- Price: $29.99 CAD
+- Billing: Monthly subscription
+- Currency: CAD
+- Trial: 7-day free trial
+```
+
+#### Product 4: Annual Unlimited Access (Optional)
+```
+Name: FacultyFinder Pro Annual
+Description: Annual subscription with 2 months free. Includes unlimited AI analyses, priority support, and premium features.
+
+Pricing:
+- Price: $299.99 CAD (save $59.89)
+- Billing: Annual subscription
+- Currency: CAD
+```
+
+### 2. Configure Price IDs
+After creating products, copy the Price IDs (they start with `price_`):
+```
+AI Analysis: price_1234567890abcdef
+Expert Review: price_abcdef1234567890
+Monthly Pro: price_monthly123456789
+Annual Pro: price_annual123456789
+```
+
+### 3. Set Up Payment Methods
+Enable the following payment methods:
+- **Credit/Debit Cards**: Visa, Mastercard, American Express
+- **Digital Wallets**: Apple Pay, Google Pay
+- **Bank Transfers**: For larger payments (expert reviews)
+- **Buy Now, Pay Later**: Klarna, Afterpay (optional)
+
+## Webhook Configuration
+
+### 1. Create Webhook Endpoint
+
+In Stripe Dashboard → **Developers** → **Webhooks**:
+
+```
+Endpoint URL: https://facultyfinder.io/stripe/webhook
+Description: FacultyFinder payment processing webhook
+Events to send: (see below)
+```
+
+### 2. Required Webhook Events
+
+Select these events to send to your endpoint:
+
+**Payment Events:**
+```
+payment_intent.succeeded
+payment_intent.payment_failed
+payment_intent.canceled
+payment_intent.requires_action
+```
+
+**Subscription Events (if using subscriptions):**
+```
+customer.subscription.created
+customer.subscription.updated
+customer.subscription.deleted
+customer.subscription.trial_will_end
+invoice.payment_succeeded
+invoice.payment_failed
+```
+
+**Customer Events:**
+```
+customer.created
+customer.updated
+customer.deleted
+```
+
+### 3. Webhook Security
+- Copy the **Webhook Signing Secret** (starts with `whsec_`)
+- This will be used to verify webhook authenticity
+- Store securely in your environment variables
 
 ## Environment Configuration
 
-### 1. Update .env File
+### 1. Development Environment (.env.development)
 ```bash
-# Add to /var/www/ff/.env
-STRIPE_PUBLISHABLE_KEY=pk_live_your_publishable_key_here
-STRIPE_SECRET_KEY=sk_live_your_secret_key_here
-STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_here
+# Stripe Test Configuration
+STRIPE_PUBLISHABLE_KEY=pk_test_51234567890abcdef...
+STRIPE_SECRET_KEY=sk_test_51234567890abcdef...
+STRIPE_WEBHOOK_SECRET=whsec_test_1234567890abcdef...
 
-# Stripe Product IDs (get these from Stripe Dashboard)
-STRIPE_SINGLE_ANALYSIS_PRICE_ID=price_single_analysis_id
-STRIPE_PACKAGE_PRICE_ID=price_package_analysis_id
-STRIPE_PREMIUM_PRICE_ID=price_premium_monthly_id
+# Test Product Price IDs
+STRIPE_AI_ANALYSIS_PRICE_ID=price_test_ai_analysis
+STRIPE_EXPERT_REVIEW_PRICE_ID=price_test_expert_review
+STRIPE_MONTHLY_PRO_PRICE_ID=price_test_monthly_pro
+STRIPE_ANNUAL_PRO_PRICE_ID=price_test_annual_pro
 
-# AI API Keys (for paid users)
-OPENAI_API_KEY=your_openai_key
-ANTHROPIC_API_KEY=your_anthropic_key
-GOOGLE_AI_API_KEY=your_google_ai_key
-GROK_API_KEY=your_grok_key
+# Test Environment Settings
+STRIPE_ENVIRONMENT=test
+DOMAIN_NAME=localhost:8080
+BASE_URL=http://localhost:8080
 ```
 
-## Backend Implementation
-
-### 1. Update Requirements
+### 2. Production Environment (.env)
 ```bash
-# Add to requirements.txt
-stripe==7.8.0
-openai==1.3.7
-anthropic==0.7.8
-google-generativeai==0.3.2
+# Stripe Live Configuration
+STRIPE_PUBLISHABLE_KEY=pk_live_51234567890abcdef...
+STRIPE_SECRET_KEY=sk_live_51234567890abcdef...
+STRIPE_WEBHOOK_SECRET=whsec_1234567890abcdef...
+
+# Live Product Price IDs
+STRIPE_AI_ANALYSIS_PRICE_ID=price_live_ai_analysis
+STRIPE_EXPERT_REVIEW_PRICE_ID=price_live_expert_review
+STRIPE_MONTHLY_PRO_PRICE_ID=price_live_monthly_pro
+STRIPE_ANNUAL_PRO_PRICE_ID=price_live_annual_pro
+
+# Production Settings
+STRIPE_ENVIRONMENT=live
+DOMAIN_NAME=facultyfinder.io
+BASE_URL=https://facultyfinder.io
 ```
 
-### 2. Create Stripe Service
-```python
-# Create webapp/services/stripe_service.py
-import stripe
-import os
-from flask import current_app
-
-class StripeService:
-    def __init__(self):
-        stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
-    
-    def create_checkout_session(self, price_id, success_url, cancel_url, user_email=None):
-        """Create a Stripe checkout session"""
-        try:
-            session = stripe.checkout.Session.create(
-                payment_method_types=['card'],
-                line_items=[{
-                    'price': price_id,
-                    'quantity': 1,
-                }],
-                mode='payment',  # Use 'subscription' for recurring payments
-                success_url=success_url,
-                cancel_url=cancel_url,
-                customer_email=user_email,
-                metadata={
-                    'service': 'cv_analysis',
-                    'price_id': price_id
-                }
-            )
-            return session
-        except Exception as e:
-            current_app.logger.error(f"Stripe checkout session creation failed: {e}")
-            return None
-    
-    def verify_webhook(self, payload, signature):
-        """Verify Stripe webhook signature"""
-        try:
-            webhook_secret = os.environ.get('STRIPE_WEBHOOK_SECRET')
-            event = stripe.Webhook.construct_event(payload, signature, webhook_secret)
-            return event
-        except ValueError:
-            current_app.logger.error("Invalid payload in webhook")
-            return None
-        except stripe.error.SignatureVerificationError:
-            current_app.logger.error("Invalid signature in webhook")
-            return None
-    
-    def handle_payment_success(self, session):
-        """Handle successful payment"""
-        customer_email = session.get('customer_email')
-        price_id = session['metadata'].get('price_id')
-        payment_intent = session.get('payment_intent')
-        
-        # Determine credits based on price_id
-        credits = self.get_credits_for_price(price_id)
-        
-        return {
-            'customer_email': customer_email,
-            'credits': credits,
-            'payment_intent': payment_intent,
-            'session_id': session['id']
-        }
-    
-    def get_credits_for_price(self, price_id):
-        """Map price ID to credits"""
-        price_mappings = {
-            os.environ.get('STRIPE_SINGLE_ANALYSIS_PRICE_ID'): 1,
-            os.environ.get('STRIPE_PACKAGE_PRICE_ID'): 5,
-            os.environ.get('STRIPE_PREMIUM_PRICE_ID'): 999  # Unlimited for subscription
-        }
-        return price_mappings.get(price_id, 0)
-```
-
-### 3. Update Database Schema
-```sql
--- Add to database/schema.sql
-
--- User credits table
-CREATE TABLE user_credits (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email VARCHAR(200) NOT NULL,
-    credits_remaining INTEGER DEFAULT 0,
-    credits_total INTEGER DEFAULT 0,
-    subscription_active BOOLEAN DEFAULT FALSE,
-    stripe_customer_id VARCHAR(100),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    expires_at TIMESTAMP,
-    UNIQUE(email)
-);
-
--- Payment transactions table
-CREATE TABLE payment_transactions (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email VARCHAR(200),
-    stripe_session_id VARCHAR(200),
-    stripe_payment_intent VARCHAR(200),
-    amount_cents INTEGER,
-    currency VARCHAR(3) DEFAULT 'USD',
-    credits_purchased INTEGER,
-    status VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- AI analysis usage tracking
-CREATE TABLE ai_analysis_usage (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    email VARCHAR(200),
-    ai_provider VARCHAR(50),
-    tokens_used INTEGER,
-    cost_cents INTEGER,
-    analysis_type VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Indexes
-CREATE INDEX idx_user_credits_email ON user_credits(email);
-CREATE INDEX idx_payment_transactions_email ON payment_transactions(email);
-CREATE INDEX idx_ai_usage_email ON ai_analysis_usage(email);
-```
-
-### 4. Update Flask App Routes
-```python
-# Add to webapp/app.py
-
-from services.stripe_service import StripeService
-from services.ai_service import AIService
-import stripe
-
-stripe_service = StripeService()
-ai_service = AIService()
-
-@app.route('/payment/create-checkout-session', methods=['POST'])
-def create_checkout_session():
-    """Create Stripe checkout session"""
-    data = request.get_json()
-    price_id = data.get('price_id')
-    user_email = data.get('email')
-    
-    if not price_id:
-        return jsonify({'error': 'Price ID required'}), 400
-    
-    success_url = request.url_root + 'payment/success?session_id={CHECKOUT_SESSION_ID}'
-    cancel_url = request.url_root + 'ai-assistant?cancelled=true'
-    
-    session = stripe_service.create_checkout_session(
-        price_id=price_id,
-        success_url=success_url,
-        cancel_url=cancel_url,
-        user_email=user_email
-    )
-    
-    if session:
-        return jsonify({'checkout_url': session.url})
-    else:
-        return jsonify({'error': 'Failed to create checkout session'}), 500
-
-@app.route('/payment/success')
-def payment_success():
-    """Handle successful payment"""
-    session_id = request.args.get('session_id')
-    
-    if not session_id:
-        return redirect('/ai-assistant?error=no_session')
-    
-    try:
-        # Retrieve the session
-        session = stripe.checkout.Session.retrieve(session_id)
-        
-        if session.payment_status == 'paid':
-            # Process the successful payment
-            payment_data = stripe_service.handle_payment_success(session)
-            
-            # Add credits to user account
-            add_user_credits(
-                email=payment_data['customer_email'],
-                credits=payment_data['credits'],
-                transaction_data=payment_data
-            )
-            
-            return render_template('payment_success.html', 
-                                 credits=payment_data['credits'],
-                                 email=payment_data['customer_email'])
-        else:
-            return redirect('/ai-assistant?error=payment_failed')
-            
-    except Exception as e:
-        logger.error(f"Payment success handling failed: {e}")
-        return redirect('/ai-assistant?error=processing_failed')
-
-@app.route('/webhooks/stripe', methods=['POST'])
-def stripe_webhook():
-    """Handle Stripe webhooks"""
-    payload = request.get_data()
-    signature = request.headers.get('Stripe-Signature')
-    
-    event = stripe_service.verify_webhook(payload, signature)
-    
-    if not event:
-        return '', 400
-    
-    # Handle different event types
-    if event['type'] == 'checkout.session.completed':
-        session = event['data']['object']
-        payment_data = stripe_service.handle_payment_success(session)
-        add_user_credits(
-            email=payment_data['customer_email'],
-            credits=payment_data['credits'],
-            transaction_data=payment_data
-        )
-    
-    elif event['type'] == 'invoice.payment_succeeded':
-        # Handle subscription renewals
-        invoice = event['data']['object']
-        handle_subscription_renewal(invoice)
-    
-    elif event['type'] == 'customer.subscription.deleted':
-        # Handle subscription cancellation
-        subscription = event['data']['object']
-        handle_subscription_cancellation(subscription)
-    
-    return '', 200
-
-@app.route('/ai-assistant/analyze', methods=['POST'])
-def ai_analyze_cv():
-    """Analyze CV with AI (requires credits or API key)"""
-    data = request.get_json()
-    cv_text = data.get('cv_text')
-    user_email = data.get('email')
-    ai_provider = data.get('ai_provider', 'openai')
-    user_api_key = data.get('api_key')
-    
-    if not cv_text:
-        return jsonify({'error': 'CV text required'}), 400
-    
-    # Check if user provided their own API key
-    if user_api_key:
-        # Use user's API key (free)
-        result = ai_service.analyze_cv_with_user_key(
-            cv_text=cv_text,
-            ai_provider=ai_provider,
-            api_key=user_api_key
-        )
-    else:
-        # Use our API key (requires credits)
-        if not user_email:
-            return jsonify({'error': 'Email required for paid analysis'}), 400
-        
-        # Check user credits
-        credits = get_user_credits(user_email)
-        if credits < 1:
-            return jsonify({'error': 'Insufficient credits', 'credits_needed': 1}), 402
-        
-        # Perform analysis
-        result = ai_service.analyze_cv_with_our_key(
-            cv_text=cv_text,
-            ai_provider=ai_provider
-        )
-        
-        if result.get('success'):
-            # Deduct credit
-            deduct_user_credit(user_email, 1)
-            
-            # Track usage
-            track_ai_usage(
-                email=user_email,
-                ai_provider=ai_provider,
-                tokens_used=result.get('tokens_used', 0),
-                cost_cents=result.get('cost_cents', 0)
-            )
-    
-    return jsonify(result)
-
-# Helper functions
-def add_user_credits(email, credits, transaction_data):
-    """Add credits to user account"""
-    try:
-        # Insert or update user credits
-        db.execute_query("""
-            INSERT INTO user_credits (email, credits_remaining, credits_total, stripe_customer_id)
-            VALUES (?, ?, ?, ?)
-            ON CONFLICT(email) DO UPDATE SET
-                credits_remaining = credits_remaining + ?,
-                credits_total = credits_total + ?,
-                updated_at = CURRENT_TIMESTAMP
-        """, [
-            email, credits, credits, transaction_data.get('customer_id'),
-            credits, credits
-        ])
-        
-        # Record transaction
-        db.execute_query("""
-            INSERT INTO payment_transactions 
-            (email, stripe_session_id, stripe_payment_intent, credits_purchased, status)
-            VALUES (?, ?, ?, ?, 'completed')
-        """, [
-            email, 
-            transaction_data.get('session_id'),
-            transaction_data.get('payment_intent'),
-            credits
-        ])
-        
-    except Exception as e:
-        logger.error(f"Failed to add user credits: {e}")
-
-def get_user_credits(email):
-    """Get user's remaining credits"""
-    result = db.execute_query("""
-        SELECT credits_remaining FROM user_credits WHERE email = ?
-    """, [email])
-    
-    return result[0]['credits_remaining'] if result else 0
-
-def deduct_user_credit(email, credits=1):
-    """Deduct credits from user account"""
-    db.execute_query("""
-        UPDATE user_credits 
-        SET credits_remaining = credits_remaining - ?,
-            updated_at = CURRENT_TIMESTAMP
-        WHERE email = ? AND credits_remaining >= ?
-    """, [credits, email, credits])
-```
-
-## Frontend Implementation
-
-### 1. Update AI Assistant Template
-```html
-<!-- Add to webapp/templates/ai_assistant.html -->
-{% extends "base.html" %}
-
-{% block title %}AI Assistant - FacultyFinder{% endblock %}
-
-{% block extra_css %}
-<script src="https://js.stripe.com/v3/"></script>
-{% endblock %}
-
-{% block content %}
-<div class="container">
-    <div class="ai-assistant-container">
-        <h1 class="text-center mb-4">
-            <i class="fas fa-robot text-primary me-3"></i>
-            AI Faculty Matching Assistant
-        </h1>
-        
-        <!-- CV Upload Section -->
-        <div class="facultyfinder-card p-4 mb-4">
-            <h3>Upload Your CV</h3>
-            <div class="cv-upload-area" id="cv-upload-area">
-                <i class="fas fa-cloud-upload-alt fa-3x text-muted mb-3"></i>
-                <h4>Drop your CV here or click to select</h4>
-                <p class="text-muted">Supports PDF, DOC, DOCX files up to 10MB</p>
-                <input type="file" id="cv-file-input" accept=".pdf,.doc,.docx" style="display: none;">
-            </div>
-            <textarea id="cv-text" class="form-control mt-3" rows="10" 
-                      placeholder="Or paste your CV text here..."></textarea>
-        </div>
-        
-        <!-- AI Provider Selection -->
-        <div class="facultyfinder-card p-4 mb-4">
-            <h3>Choose AI Provider</h3>
-            <div class="row">
-                <!-- Free Option: User's API Key -->
-                <div class="col-md-6 mb-3">
-                    <div class="api-provider-card" data-provider="user-key">
-                        <h5><i class="fas fa-key me-2"></i>Use Your API Key (Free)</h5>
-                        <p class="text-muted">Provide your own API key from OpenAI, Anthropic, Google, or Grok</p>
-                        
-                        <div class="provider-options mt-3" style="display: none;">
-                            <select class="form-select mb-3" id="ai-provider-select">
-                                <option value="openai">OpenAI (ChatGPT)</option>
-                                <option value="anthropic">Anthropic (Claude)</option>
-                                <option value="google">Google (Gemini)</option>
-                                <option value="grok">Grok</option>
-                            </select>
-                            
-                            <input type="password" class="form-control" id="user-api-key" 
-                                   placeholder="Enter your API key">
-                            
-                            <small class="text-muted">
-                                Your API key is used only for this analysis and is not stored.
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Paid Option: Our API Keys -->
-                <div class="col-md-6 mb-3">
-                    <div class="api-provider-card" data-provider="paid">
-                        <h5><i class="fas fa-credit-card me-2"></i>Use Our API Keys</h5>
-                        <p class="text-muted">Pay per analysis or subscribe for unlimited access</p>
-                        
-                        <div class="pricing-options mt-3" style="display: none;">
-                            <div class="row">
-                                <div class="col-12 mb-2">
-                                    <button class="btn btn-outline-primary w-100 pricing-btn" 
-                                            data-price-id="{{ stripe_single_price_id }}" data-credits="1">
-                                        Single Analysis - $9.99
-                                    </button>
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <button class="btn btn-outline-success w-100 pricing-btn" 
-                                            data-price-id="{{ stripe_package_price_id }}" data-credits="5">
-                                        5 Analyses - $39.99 <span class="badge bg-success">Best Value</span>
-                                    </button>
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <button class="btn btn-outline-warning w-100 pricing-btn" 
-                                            data-price-id="{{ stripe_premium_price_id }}" data-credits="unlimited">
-                                        Unlimited Monthly - $19.99/month
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <input type="email" class="form-control mt-3" id="user-email" 
-                                   placeholder="Your email address" required>
-                            
-                            <div id="credits-display" class="mt-2" style="display: none;">
-                                <small class="text-success">
-                                    <i class="fas fa-coins me-1"></i>
-                                    You have <span id="credits-count">0</span> credits remaining
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Analysis Button -->
-        <div class="text-center mb-4">
-            <button id="analyze-btn" class="btn btn-primary btn-lg" disabled>
-                <i class="fas fa-magic me-2"></i>Analyze My CV
-            </button>
-        </div>
-        
-        <!-- Results Section -->
-        <div id="results-section" class="facultyfinder-card p-4" style="display: none;">
-            <h3>Faculty Recommendations</h3>
-            <div id="analysis-results"></div>
-        </div>
-    </div>
-</div>
-{% endblock %}
-
-{% block extra_js %}
-<script>
-// Initialize Stripe
-const stripe = Stripe('{{ stripe_publishable_key }}');
-
-document.addEventListener('DOMContentLoaded', function() {
-    initializeAIAssistant();
-});
-
-function initializeAIAssistant() {
-    // Provider selection
-    document.querySelectorAll('.api-provider-card').forEach(card => {
-        card.addEventListener('click', function() {
-            selectProvider(this.dataset.provider);
-        });
-    });
-    
-    // Pricing buttons
-    document.querySelectorAll('.pricing-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            purchaseCredits(this.dataset.priceId);
-        });
-    });
-    
-    // CV file upload
-    document.getElementById('cv-file-input').addEventListener('change', handleFileUpload);
-    document.getElementById('cv-upload-area').addEventListener('click', () => {
-        document.getElementById('cv-file-input').click();
-    });
-    
-    // Analyze button
-    document.getElementById('analyze-btn').addEventListener('click', analyzeCV);
-    
-    // Check existing credits
-    checkUserCredits();
-}
-
-function selectProvider(provider) {
-    // Clear previous selections
-    document.querySelectorAll('.api-provider-card').forEach(card => {
-        card.classList.remove('selected');
-        card.querySelector('.provider-options, .pricing-options').style.display = 'none';
-    });
-    
-    // Select current provider
-    const selectedCard = document.querySelector(`[data-provider="${provider}"]`);
-    selectedCard.classList.add('selected');
-    
-    if (provider === 'user-key') {
-        selectedCard.querySelector('.provider-options').style.display = 'block';
-    } else {
-        selectedCard.querySelector('.pricing-options').style.display = 'block';
-    }
-    
-    updateAnalyzeButton();
-}
-
-function purchaseCredits(priceId) {
-    const email = document.getElementById('user-email').value;
-    
-    if (!email) {
-        alert('Please enter your email address');
-        return;
-    }
-    
-    // Create checkout session
-    fetch('/payment/create-checkout-session', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            price_id: priceId,
-            email: email
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.checkout_url) {
-            window.location.href = data.checkout_url;
-        } else {
-            alert('Error creating checkout session');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error processing payment');
-    });
-}
-
-function analyzeCV() {
-    const cvText = document.getElementById('cv-text').value;
-    const selectedProvider = document.querySelector('.api-provider-card.selected');
-    
-    if (!cvText.trim()) {
-        alert('Please provide your CV text');
-        return;
-    }
-    
-    if (!selectedProvider) {
-        alert('Please select an AI provider option');
-        return;
-    }
-    
-    const isUserKey = selectedProvider.dataset.provider === 'user-key';
-    let requestData = { cv_text: cvText };
-    
-    if (isUserKey) {
-        const apiKey = document.getElementById('user-api-key').value;
-        const provider = document.getElementById('ai-provider-select').value;
-        
-        if (!apiKey) {
-            alert('Please enter your API key');
-            return;
-        }
-        
-        requestData.api_key = apiKey;
-        requestData.ai_provider = provider;
-    } else {
-        const email = document.getElementById('user-email').value;
-        
-        if (!email) {
-            alert('Please enter your email address');
-            return;
-        }
-        
-        requestData.email = email;
-        requestData.ai_provider = 'openai'; // Default for paid
-    }
-    
-    // Show loading
-    const analyzeBtn = document.getElementById('analyze-btn');
-    analyzeBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Analyzing...';
-    analyzeBtn.disabled = true;
-    
-    // Send analysis request
-    fetch('/ai-assistant/analyze', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            displayResults(data.recommendations);
-            updateCreditsDisplay();
-        } else if (data.error === 'Insufficient credits') {
-            alert('You need more credits to perform this analysis. Please purchase credits.');
-        } else {
-            alert('Analysis failed: ' + data.error);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error during analysis');
-    })
-    .finally(() => {
-        // Reset button
-        analyzeBtn.innerHTML = '<i class="fas fa-magic me-2"></i>Analyze My CV';
-        analyzeBtn.disabled = false;
-    });
-}
-
-function displayResults(recommendations) {
-    const resultsSection = document.getElementById('results-section');
-    const resultsContainer = document.getElementById('analysis-results');
-    
-    let html = `
-        <div class="analysis-summary mb-4">
-            <h4>Analysis Summary</h4>
-            <p>${recommendations.summary || 'Based on your CV analysis, here are personalized faculty recommendations.'}</p>
-        </div>
-        
-        <div class="faculty-recommendations">
-            <h4>Recommended Faculty Members</h4>
-            <div class="row">
-    `;
-    
-    recommendations.faculty.forEach(faculty => {
-        html += `
-            <div class="col-md-6 mb-3">
-                <div class="faculty-recommendation-card p-3 border rounded">
-                    <h6><a href="/professor/${faculty.id}">${faculty.name}</a></h6>
-                    <p class="text-muted">${faculty.department}</p>
-                    <p class="small">${faculty.match_reason}</p>
-                    <div class="match-score">
-                        <span class="badge bg-success">Match: ${faculty.match_score}%</span>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-    
-    html += `
-            </div>
-        </div>
-        
-        <div class="recommendations-actions mt-4">
-            <button class="btn btn-primary me-2" onclick="downloadRecommendations()">
-                <i class="fas fa-download me-1"></i>Download Report
-            </button>
-            <button class="btn btn-outline-secondary" onclick="shareRecommendations()">
-                <i class="fas fa-share me-1"></i>Share Results
-            </button>
-        </div>
-    `;
-    
-    resultsContainer.innerHTML = html;
-    resultsSection.style.display = 'block';
-    
-    // Scroll to results
-    resultsSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-function checkUserCredits() {
-    const email = document.getElementById('user-email')?.value;
-    if (!email) return;
-    
-    fetch(`/api/user-credits?email=${encodeURIComponent(email)}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.credits !== undefined) {
-                document.getElementById('credits-count').textContent = data.credits;
-                document.getElementById('credits-display').style.display = 'block';
-            }
-        })
-        .catch(error => console.error('Error checking credits:', error));
-}
-
-function updateCreditsDisplay() {
-    setTimeout(checkUserCredits, 1000);
-}
-
-function handleFileUpload(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    
-    // Implement file upload and text extraction
-    // This would require additional libraries like PDF.js for PDF parsing
-    alert('File upload feature coming soon! Please paste your CV text for now.');
-}
-
-function updateAnalyzeButton() {
-    const selected = document.querySelector('.api-provider-card.selected');
-    const cvText = document.getElementById('cv-text').value;
-    const analyzeBtn = document.getElementById('analyze-btn');
-    
-    analyzeBtn.disabled = !selected || !cvText.trim();
-}
-
-// Update button state when CV text changes
-document.getElementById('cv-text').addEventListener('input', updateAnalyzeButton);
-</script>
-{% endblock %}
-```
-
-## Testing Stripe Integration
-
-### 1. Test Mode Setup
+### 3. Security Configuration
 ```bash
-# Use test API keys in development
-STRIPE_PUBLISHABLE_KEY=pk_test_your_test_key
-STRIPE_SECRET_KEY=sk_test_your_test_key
+# Payment Security
+STRIPE_WEBHOOK_TOLERANCE=300  # 5 minutes
+PAYMENT_RETRY_ATTEMPTS=3
+PAYMENT_TIMEOUT=30  # seconds
 
-# Test credit card numbers (from Stripe docs)
-# Success: 4242424242424242
-# Decline: 4000000000000002
-# Insufficient funds: 4000000000009995
+# Currency Settings
+DEFAULT_CURRENCY=CAD
+SUPPORTED_CURRENCIES=CAD,USD
+
+# Tax Configuration (if applicable)
+STRIPE_TAX_RATE_ID=txr_1234567890abcdef  # Canadian tax rate
 ```
 
-### 2. Webhook Testing
-```bash
-# Install Stripe CLI for local testing
-wget https://github.com/stripe/stripe-cli/releases/download/v1.19.1/stripe_1.19.1_linux_x86_64.tar.gz
-tar -xzf stripe_1.19.1_linux_x86_64.tar.gz
-sudo mv stripe /usr/local/bin/
+## Testing Integration
 
-# Login and forward webhooks
+### 1. Test Cards for Development
+
+Use these test card numbers in development:
+
+**Successful Payments:**
+```
+4242 4242 4242 4242  # Visa
+4000 0056 0000 0008  # Visa (debit)
+5555 5555 5555 4444  # Mastercard
+3782 822463 10005    # American Express
+```
+
+**Failed Payments:**
+```
+4000 0000 0000 0002  # Generic decline
+4000 0000 0000 9995  # Insufficient funds
+4000 0000 0000 9987  # Lost card
+4000 0000 0000 9979  # Stolen card
+```
+
+**Special Cases:**
+```
+4000 0025 0000 3155  # Requires 3D Secure authentication
+4000 0000 0000 3220  # 3D Secure authentication failure
+4242 4242 4242 4241  # Invalid CVC
+4000 0000 0000 0069  # Expired card
+```
+
+### 2. Test Webhook Delivery
+
+#### Using Stripe CLI:
+```bash
+# Install Stripe CLI
+# Download from: https://github.com/stripe/stripe-cli
+
+# Login to Stripe
 stripe login
-stripe listen --forward-to localhost:8008/webhooks/stripe
+
+# Forward events to local development server
+stripe listen --forward-to http://localhost:8080/stripe/webhook
+
+# Trigger test events
+stripe trigger payment_intent.succeeded
+stripe trigger customer.subscription.created
 ```
+
+#### Manual Testing:
+1. Use test mode in Stripe dashboard
+2. Create test payments
+3. Verify webhook delivery in dashboard
+4. Check application logs for processing
+
+### 3. Test User Flows
+
+**AI Analysis Purchase:**
+1. User visits AI assistant page
+2. Uploads CV and selects AI service
+3. Chooses "Quick Analysis ($5)"
+4. Completes payment with test card
+5. Receives analysis results
+
+**Expert Review Purchase:**
+1. User selects "Expert Review ($50)"
+2. Provides additional information
+3. Completes payment
+4. Receives confirmation email
+5. Gets review within 3-5 business days
+
+**Subscription Flow:**
+1. User selects monthly/annual plan
+2. Completes payment setup
+3. Gains access to premium features
+4. Can cancel anytime
 
 ## Production Deployment
 
-### 1. Update Production Configuration
+### 1. Pre-Launch Checklist
+
+**Stripe Configuration:**
+- [ ] Live API keys configured
+- [ ] Webhook endpoint tested
+- [ ] Products and prices created
+- [ ] Payment methods enabled
+- [ ] Tax rates configured (if applicable)
+
+**Application Configuration:**
+- [ ] Environment variables set
+- [ ] SSL certificate active
+- [ ] Domain configured properly
+- [ ] Error handling implemented
+- [ ] Logging configured
+
+**Testing:**
+- [ ] End-to-end payment flow tested
+- [ ] Webhook delivery verified
+- [ ] Refund process tested
+- [ ] Subscription management tested
+- [ ] Error scenarios tested
+
+### 2. Go-Live Process
+
+1. **Switch to Live Mode:**
+   ```bash
+   # Update .env with live keys
+   STRIPE_PUBLISHABLE_KEY=pk_live_...
+   STRIPE_SECRET_KEY=sk_live_...
+   STRIPE_ENVIRONMENT=live
+   ```
+
+2. **Deploy Application:**
+   ```bash
+   cd /var/www/ff
+   git pull origin main
+   sudo systemctl restart facultyfinder
+   ```
+
+3. **Verify Live Configuration:**
+   ```bash
+   # Test webhook endpoint
+   curl -X POST https://facultyfinder.io/stripe/webhook
+   
+   # Test payment page
+   curl https://facultyfinder.io/ai-assistant
+   ```
+
+### 3. Post-Launch Monitoring
+
+**Key Metrics to Monitor:**
+- Payment success rate
+- Failed payment reasons
+- Webhook delivery success
+- Customer signup conversion
+- Subscription churn rate
+
+**Monitoring Tools:**
 ```bash
-# Set live Stripe keys in production .env
-STRIPE_PUBLISHABLE_KEY=pk_live_your_live_key
-STRIPE_SECRET_KEY=sk_live_your_live_key
-STRIPE_WEBHOOK_SECRET=whsec_your_live_webhook_secret
+# Check payment logs
+tail -f /var/log/facultyfinder/payment.log
+
+# Monitor Stripe dashboard
+# - Payment volume
+# - Success/failure rates
+# - Dispute notifications
+# - Webhook delivery status
 ```
 
-### 2. Configure Production Webhooks
-1. Go to Stripe Dashboard → Developers → Webhooks
-2. Add endpoint: `https://your-domain.com/webhooks/stripe`
-3. Select events:
-   - `checkout.session.completed`
-   - `invoice.payment_succeeded`
-   - `customer.subscription.deleted`
+## Advanced Features
 
-### 3. Security Considerations
-- Always verify webhook signatures
-- Use HTTPS for all payment-related pages
-- Store sensitive data encrypted
-- Implement rate limiting on payment endpoints
-- Log all payment activities
+### 1. Subscription Management
+
+**Customer Portal:**
+- Self-service subscription management
+- Payment method updates
+- Invoice downloads
+- Usage tracking
+
+**Configuration in Stripe:**
+```javascript
+// Customer portal settings
+{
+  "business_profile": {
+    "headline": "Manage your FacultyFinder subscription",
+    "privacy_policy_url": "https://facultyfinder.io/privacy",
+    "terms_of_service_url": "https://facultyfinder.io/terms"
+  },
+  "features": {
+    "payment_method_update": {
+      "enabled": true
+    },
+    "subscription_cancel": {
+      "enabled": true,
+      "mode": "at_period_end"
+    },
+    "subscription_pause": {
+      "enabled": false
+    },
+    "invoice_history": {
+      "enabled": true
+    }
+  }
+}
+```
+
+### 2. Usage-Based Billing
+
+**Metered Billing for API Calls:**
+```javascript
+// Report usage to Stripe
+{
+  "subscription_item": "si_1234567890",
+  "quantity": 10,  // Number of AI analyses used
+  "timestamp": 1640995200,
+  "action": "increment"
+}
+```
+
+### 3. Multi-Currency Support
+
+**Supported Currencies:**
+```bash
+# Primary currencies
+CAD  # Canadian Dollar (primary)
+USD  # US Dollar
+EUR  # Euro
+GBP  # British Pound
+
+# Configuration
+SUPPORTED_CURRENCIES=CAD,USD,EUR,GBP
+DEFAULT_CURRENCY=CAD
+```
+
+### 4. Tax Calculation
+
+**Stripe Tax Integration:**
+```javascript
+// Automatic tax calculation
+{
+  "automatic_tax": {
+    "enabled": true
+  },
+  "customer_details": {
+    "tax_exempt": "none",
+    "tax_ids": []
+  }
+}
+```
+
+### 5. Marketplace Features (Future)
+
+**Connect for University Partnerships:**
+- Universities can create accounts
+- Revenue sharing for referrals
+- Branded payment pages
+- Separate payout schedules
+
+## Troubleshooting
+
+### 1. Common Payment Issues
+
+**Payment Declined:**
+```javascript
+// Check decline codes
+{
+  "decline_code": "insufficient_funds",
+  "message": "Your card has insufficient funds."
+}
+
+// Common decline codes:
+// - insufficient_funds
+// - card_declined
+// - expired_card
+// - incorrect_cvc
+// - processing_error
+```
+
+**Solutions:**
+1. Display user-friendly error messages
+2. Suggest alternative payment methods
+3. Retry with different card
+4. Contact customer support
+
+### 2. Webhook Debugging
+
+**Webhook Not Received:**
+```bash
+# Check webhook logs in Stripe dashboard
+# Verify endpoint URL: https://facultyfinder.io/stripe/webhook
+# Check SSL certificate validity
+# Verify webhook signature validation
+
+# Debug webhook processing
+tail -f /var/log/facultyfinder/webhook.log
+```
+
+**Webhook Signature Verification:**
+```python
+import stripe
+import hashlib
+import hmac
+
+def verify_webhook_signature(payload, sig_header, endpoint_secret):
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, endpoint_secret
+        )
+        return True, event
+    except ValueError:
+        return False, "Invalid payload"
+    except stripe.error.SignatureVerificationError:
+        return False, "Invalid signature"
+```
+
+### 3. Subscription Issues
+
+**Failed Subscription Renewal:**
+- Check payment method validity
+- Update billing address
+- Retry payment with Smart Retries
+- Send dunning emails
+
+**Subscription Cancellation:**
+- Process at period end
+- Provide retention offers
+- Export data before deletion
+- Send confirmation email
+
+### 4. Dispute Management
+
+**Chargeback Prevention:**
+- Clear billing descriptor: "FACULTYFINDER.IO"
+- Detailed receipts
+- Customer communication logs
+- Clear refund policy
+
+**Dispute Response:**
+- Gather evidence quickly
+- Submit compelling evidence
+- Use Stripe Radar for fraud prevention
+- Monitor dispute rates
+
+## Security Best Practices
+
+### 1. API Key Security
+```bash
+# Never commit API keys to version control
+# Use environment variables only
+# Rotate keys regularly
+# Monitor API key usage
+
+# Key rotation process:
+1. Generate new API keys in Stripe dashboard
+2. Update environment variables
+3. Deploy application
+4. Delete old keys
+5. Monitor for any issues
+```
+
+### 2. Webhook Security
+```python
+# Always verify webhook signatures
+# Use HTTPS only
+# Implement idempotency
+# Log all webhook events
+# Set up webhook retry logic
+```
+
+### 3. PCI Compliance
+- Never store card data
+- Use Stripe.js for card collection
+- Implement 3D Secure when required
 - Regular security audits
+- Monitor for suspicious activity
 
-This completes the Stripe integration setup. Users can now purchase credits for AI analysis or use their own API keys for free analysis. 
+## Support and Resources
+
+### 1. Stripe Resources
+- **Documentation**: https://stripe.com/docs
+- **API Reference**: https://stripe.com/docs/api
+- **Testing Guide**: https://stripe.com/docs/testing
+- **Webhook Guide**: https://stripe.com/docs/webhooks
+
+### 2. Community Support
+- **Discord**: Stripe Developers
+- **Stack Overflow**: stripe-payments tag
+- **GitHub**: stripe/stripe-node
+
+### 3. Emergency Contacts
+- **Stripe Support**: https://support.stripe.com
+- **Critical Issues**: Available 24/7 for live accounts
+- **Phone Support**: Available for higher-volume accounts
+
+---
+
+## Quick Reference Commands
+
+```bash
+# Test webhook endpoint
+curl -X POST https://facultyfinder.io/stripe/webhook \
+  -H "Content-Type: application/json" \
+  -d '{"test": true}'
+
+# Check payment logs
+tail -f /var/log/facultyfinder/payment.log
+
+# Verify Stripe configuration
+grep STRIPE /var/www/ff/.env
+
+# Test payment flow
+curl https://facultyfinder.io/ai-assistant
+
+# Monitor webhook delivery
+stripe listen --forward-to https://facultyfinder.io/stripe/webhook
+```
+
+---
+
+🚀 **Your Stripe integration is now ready for production!** Monitor the dashboard closely during the first few days to ensure everything is working smoothly. 
