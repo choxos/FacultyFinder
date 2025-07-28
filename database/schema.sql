@@ -167,6 +167,29 @@ CREATE TABLE professor_research_areas (
     UNIQUE(professor_id, research_area_id)
 );
 
+-- Degrees lookup table
+CREATE TABLE degrees (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    degree_type VARCHAR(50) UNIQUE NOT NULL,  -- PhD, MSc, MD, etc.
+    full_name VARCHAR(200),                   -- Doctor of Philosophy, Master of Science, etc.
+    category VARCHAR(50),                     -- Graduate, Undergraduate, Professional, etc.
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Professor-Degree relationship table
+CREATE TABLE professor_degrees (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    professor_id INTEGER,
+    degree_id INTEGER,
+    specialization TEXT,                      -- e.g., "Clinical Epidemiology and Biostatistics"
+    institution VARCHAR(500),                 -- Where degree was obtained
+    year_obtained INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (professor_id) REFERENCES professors(id),
+    FOREIGN KEY (degree_id) REFERENCES degrees(id)
+);
+
 -- API usage tracking
 CREATE TABLE api_usage (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -206,6 +229,9 @@ CREATE INDEX idx_collaborations_prof1 ON collaborations(professor1_id);
 CREATE INDEX idx_collaborations_prof2 ON collaborations(professor2_id);
 CREATE INDEX idx_journal_rankings_year ON journal_rankings(year);
 CREATE INDEX idx_journal_rankings_journal ON journal_rankings(journal_id);
+CREATE INDEX idx_professor_degrees_professor ON professor_degrees(professor_id);
+CREATE INDEX idx_professor_degrees_degree ON professor_degrees(degree_id);
+CREATE INDEX idx_degrees_type ON degrees(degree_type);
 
 -- Create views for common queries
 CREATE VIEW professor_summary AS

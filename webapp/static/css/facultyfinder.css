@@ -206,7 +206,62 @@ footer {
     box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
 }
 
-.form-select:focus {
-    border-color: var(--xera-primary);
-    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
-} 
+  .form-select:focus {
+      border-color: var(--xera-primary);
+      box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+  }
+
+  /* Degree filtering styles */
+  .degrees-display {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+  }
+
+  .degree-filter-link {
+      transition: var(--xera-transition);
+  }
+
+  .degree-filter-link:hover {
+      background-color: var(--xera-primary) !important;
+      transform: scale(1.05);
+  }
+
+  .degrees-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+  }
+
+  .degree-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .degree-badge {
+      margin-bottom: 0.25rem;
+  }
+
+  .degree-link {
+      transition: var(--xera-transition);
+  }
+
+  .degree-link:hover {
+      background-color: var(--xera-primary-dark) !important;
+      transform: scale(1.05);
+  }
+
+  .degree-specialization {
+      font-weight: 500;
+      color: var(--xera-gray-700);
+  }
+
+  /* Filter badges in search results */
+  .badge.bg-info {
+      background-color: var(--xera-accent) !important;
+  }
+
+  .badge.bg-info:hover {
+      background-color: var(--xera-accent-dark) !important;
+  } 

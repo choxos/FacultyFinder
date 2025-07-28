@@ -20,42 +20,54 @@
     <!-- Search and Filters -->
     <div class="search-filters">
         <form method="GET" action="/faculties">
-            <div class="row">
-                <div class="col-lg-6 mb-3">
-                    <label class="filter-label">Search Faculty</label>
-                    <input type="text" class="form-control" name="search" 
-                           placeholder="Professor name, research area, keywords..."
-                           value="{{ search }}">
-                </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <label class="filter-label">University</label>
-                    <input type="text" class="form-control" name="university" 
-                           placeholder="University name..."
-                           value="{{ university }}">
-                </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <label class="filter-label">Department</label>
-                    <input type="text" class="form-control" name="department" 
-                           placeholder="Department..."
-                           value="{{ department }}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-3">
-                    <label class="filter-label">Research Area</label>
-                    <input type="text" class="form-control" name="research_area" 
-                           placeholder="Research interests..."
-                           value="{{ research_area }}">
-                </div>
-                <div class="col-lg-6 mb-3 d-flex align-items-end">
-                    <button type="submit" class="btn btn-primary me-2">
-                        <i class="fas fa-search me-2"></i>Search
-                    </button>
-                    <a href="/faculties" class="btn btn-outline-secondary">
-                        <i class="fas fa-times me-2"></i>Clear
-                    </a>
-                </div>
-            </div>
+                                  <div class="row">
+                          <div class="col-lg-6 mb-3">
+                              <label class="filter-label">Search Faculty</label>
+                              <input type="text" class="form-control" name="search"
+                                     placeholder="Professor name, research area, keywords..."
+                                     value="{{ search }}">
+                          </div>
+                          <div class="col-lg-3 col-md-6 mb-3">
+                              <label class="filter-label">University</label>
+                              <input type="text" class="form-control" name="university"
+                                     placeholder="University name..."
+                                     value="{{ university }}">
+                          </div>
+                          <div class="col-lg-3 col-md-6 mb-3">
+                              <label class="filter-label">Department</label>
+                              <input type="text" class="form-control" name="department"
+                                     placeholder="Department..."
+                                     value="{{ department }}">
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-4 mb-3">
+                              <label class="filter-label">Research Area</label>
+                              <input type="text" class="form-control" name="research_area"
+                                     placeholder="Research interests..."
+                                     value="{{ research_area }}">
+                          </div>
+                          <div class="col-lg-4 mb-3">
+                              <label class="filter-label">Degree Type</label>
+                              <select class="form-select" name="degree">
+                                  <option value="">All Degrees</option>
+                                  {% for deg in available_degrees %}
+                                      <option value="{{ deg.degree_type }}" 
+                                              {% if degree == deg.degree_type %}selected{% endif %}>
+                                          {{ deg.degree_type }} ({{ deg.professor_count }})
+                                      </option>
+                                  {% endfor %}
+                              </select>
+                          </div>
+                          <div class="col-lg-4 mb-3 d-flex align-items-end">
+                              <button type="submit" class="btn btn-primary me-2">
+                                  <i class="fas fa-search me-2"></i>Search
+                              </button>
+                              <a href="/faculties" class="btn btn-outline-secondary">
+                                  <i class="fas fa-times me-2"></i>Clear
+                              </a>
+                          </div>
+                      </div>
         </form>
     </div>
     
@@ -106,19 +118,38 @@
                                 </div>
                             </div>
                             
-                            {% if prof.research_areas %}
-                                <div class="mb-3">
-                                    <small class="text-muted d-block mb-2">Research Areas:</small>
-                                    <div class="research-areas">
-                                        {% for area in prof.research_areas.split(';')[:3] %}
-                                            <span class="research-area-tag">{{ area.strip() }}</span>
-                                        {% endfor %}
-                                        {% if prof.research_areas.split(';')|length > 3 %}
-                                            <span class="research-area-tag">+{{ prof.research_areas.split(';')|length - 3 }} more</span>
-                                        {% endif %}
-                                    </div>
-                                </div>
-                            {% endif %}
+                                                                  {% if prof.degrees %}
+                                          <div class="mb-3">
+                                              <small class="text-muted d-block mb-2">Degrees:</small>
+                                              <div class="degrees-display">
+                                                  {% for degree_text in prof.degrees.split(';')[:2] %}
+                                                      {% set degree_type = degree_text.strip().split(' ')[0] %}
+                                                      <a href="/faculties?degree={{ degree_type }}" 
+                                                         class="badge bg-info text-decoration-none me-1 degree-filter-link"
+                                                         title="Filter by {{ degree_type }}">
+                                                          {{ degree_text.strip() }}
+                                                      </a>
+                                                  {% endfor %}
+                                                  {% if prof.degrees.split(';')|length > 2 %}
+                                                      <span class="badge bg-secondary">+{{ prof.degrees.split(';')|length - 2 }} more</span>
+                                                  {% endif %}
+                                              </div>
+                                          </div>
+                                      {% endif %}
+
+                                      {% if prof.research_areas %}
+                                          <div class="mb-3">
+                                              <small class="text-muted d-block mb-2">Research Areas:</small>
+                                              <div class="research-areas">
+                                                  {% for area in prof.research_areas.split(';')[:3] %}
+                                                      <span class="research-area-tag">{{ area.strip() }}</span>
+                                                  {% endfor %}
+                                                  {% if prof.research_areas.split(';')|length > 3 %}
+                                                      <span class="research-area-tag">+{{ prof.research_areas.split(';')|length - 3 }} more</span>
+                                                  {% endif %}
+                                              </div>
+                                          </div>
+                                      {% endif %}
                             
                             <div class="d-flex justify-content-between align-items-center mt-auto">
                                 <div class="d-flex gap-2">

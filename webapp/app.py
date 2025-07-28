@@ -181,12 +181,14 @@ def professor_profile(professor_id):
     publications = get_professor_publications(professor_id)
     collaborators = get_professor_collaborators(professor_id)
     journal_metrics = get_professor_journal_metrics(professor_id)
+    degrees = get_professor_degrees(professor_id)
     
     return render_template('professor_profile.html',
                          professor=professor,
                          publications=publications,
                          collaborators=collaborators,
-                         journal_metrics=journal_metrics)
+                         journal_metrics=journal_metrics,
+                         degrees=degrees)
 
 @app.route('/ai-assistant')
 def ai_assistant():
@@ -433,6 +435,44 @@ def get_all_universities():
         return db.execute_query(query) or []
     except Exception as e:
         logger.error(f"Error getting all universities: {e}")
+        return []
+
+def get_available_degrees():
+    """Get all available degree types with counts"""
+    try:
+        query = """
+        SELECT d.degree_type, d.full_name, d.category, COUNT(pd.professor_id) as professor_count
+        FROM degrees d
+        LEFT JOIN professor_degrees pd ON d.id = pd.degree_id
+        GROUP BY d.id, d.degree_type, d.full_name, d.category
+        HAVING professor_count > 0
+        ORDER BY professor_count DESC, d.degree_type
+        """
+        return db.execute_query(query) or []
+    except Exception as e:
+        logger.error(f"Error getting available degrees: {e}")
+        return []
+
+def get_professor_degrees(professor_id):
+    """Get degrees for a specific professor"""
+    try:
+        query = """
+        SELECT d.degree_type, d.full_name, d.category, pd.specialization, pd.institution, pd.year_obtained
+        FROM degrees d
+        JOIN professor_degrees pd ON d.id = pd.degree_id
+        WHERE pd.professor_id = ?
+        ORDER BY 
+            CASE d.category
+                WHEN 'Doctoral' THEN 1
+                WHEN 'Master''s' THEN 2
+                WHEN 'Bachelor''s' THEN 3
+                ELSE 4
+            END,
+            d.degree_type
+        """
+        return db.execute_query(query, [professor_id]) or []
+    except Exception as e:
+        logger.error(f"Error getting professor degrees: {e}")
         return []
 
 if __name__ == '__main__':
