@@ -276,3 +276,41 @@ INSERT INTO universities (university_code, name, country, province_state, city) 
 ('CA-ON-002', 'McMaster University', 'Canada', 'Ontario', 'Hamilton'),
 ('CA-ON-001', 'University of Toronto', 'Canada', 'Ontario', 'Toronto'),
 ('CA-BC-001', 'University of British Columbia', 'Canada', 'British Columbia', 'Vancouver'); 
+
+-- Additional performance indexes for faster queries
+CREATE INDEX IF NOT EXISTS idx_professors_name_research ON professors(name, research_areas);
+CREATE INDEX IF NOT EXISTS idx_professors_department_uni ON professors(department, university_id);
+CREATE INDEX IF NOT EXISTS idx_universities_country_province ON universities(country, province_state);
+CREATE INDEX IF NOT EXISTS idx_universities_type_language ON universities(university_type, languages);
+CREATE INDEX IF NOT EXISTS idx_publications_year_journal ON publications(publication_year DESC, journal_id);
+CREATE INDEX IF NOT EXISTS idx_author_publications_composite ON author_publications(professor_id, publication_pmid);
+CREATE INDEX IF NOT EXISTS idx_citation_networks_citing ON citation_networks(citing_professor_id, citation_count DESC);
+CREATE INDEX IF NOT EXISTS idx_citation_networks_cited ON citation_networks(cited_professor_id, citation_count DESC);
+CREATE INDEX IF NOT EXISTS idx_publication_metrics_citations ON publication_metrics(total_citations DESC);
+CREATE INDEX IF NOT EXISTS idx_professor_degrees_composite ON professor_degrees(professor_id, degree_id);
+
+-- Partial indexes for better performance on filtered queries
+CREATE INDEX IF NOT EXISTS idx_professors_active ON professors(id) WHERE name IS NOT NULL AND university_id IS NOT NULL;
+CREATE INDEX IF NOT EXISTS idx_publications_recent ON publications(publication_year DESC, pmid) WHERE publication_year >= 2010;
+CREATE INDEX IF NOT EXISTS idx_universities_with_faculty ON universities(id, name) WHERE id IN (SELECT DISTINCT university_id FROM professors);
+
+-- Covering indexes for frequently accessed columns
+CREATE INDEX IF NOT EXISTS idx_professors_list_view ON professors(id, name, department, university_id, research_areas, position);
+CREATE INDEX IF NOT EXISTS idx_universities_list_view ON universities(id, name, city, province_state, country, university_type);
+
+-- Full-text search indexes (PostgreSQL specific - will be ignored in SQLite)
+-- CREATE INDEX IF NOT EXISTS idx_professors_fts ON professors USING gin(to_tsvector('english', name || ' ' || COALESCE(research_areas, '')));
+-- CREATE INDEX IF NOT EXISTS idx_universities_fts ON universities USING gin(to_tsvector('english', name));
+
+-- Optimize existing indexes by adding missing columns for covering
+DROP INDEX IF EXISTS idx_professors_university;
+CREATE INDEX idx_professors_university_enhanced ON professors(university_id, name, department, id);
+
+DROP INDEX IF EXISTS idx_author_publications_professor;
+CREATE INDEX idx_author_publications_professor_enhanced ON author_publications(professor_id, publication_pmid, author_order);
+
+-- Statistics update for query planner (PostgreSQL)
+-- ANALYZE professors;
+-- ANALYZE universities;
+-- ANALYZE publications;
+-- ANALYZE author_publications; 

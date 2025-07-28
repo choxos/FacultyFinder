@@ -924,7 +924,280 @@ footer {
     margin-bottom: 5px;
 }
 
-/* Smooth theme transition */
+/* Performance optimized CSS for FacultyFinder */
+
+/* Critical CSS - Above the fold styling */
+:root {
+    --xera-primary: #2c5aa0;
+    --xera-primary-dark: #1e3f73;
+    --xera-secondary: #f4b942;
+    --xera-accent: #e67e22;
+    --xera-success: #27ae60;
+    --xera-danger: #e74c3c;
+    --xera-warning: #f39c12;
+    --xera-info: #3498db;
+    --xera-text-primary: #2c3e50;
+    --xera-text-secondary: #7f8c8d;
+    --xera-text-muted: #95a5a6;
+    --xera-bg-primary: #ffffff;
+    --xera-bg-secondary: #f8f9fa;
+    --xera-border-color: #dee2e6;
+    --xera-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --xera-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --xera-shadow-hover: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Optimize font loading */
+@font-display: swap;
+
+/* GPU acceleration for animations */
+.card, .btn, .theme-toggle {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimized transitions */
 * {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-} 
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Contain layout shifts */
+.stat-card, .faculty-card, .university-card {
+    contain: layout style;
+}
+
+/* Optimized loading states */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: loading-shimmer 1.5s infinite;
+    will-change: transform;
+}
+
+@keyframes loading-shimmer {
+    100% {
+        transform: translateX(200%);
+    }
+}
+
+/* Efficient grid layouts */
+.faculty-grid, .university-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    contain: layout;
+}
+
+/* Optimized image handling */
+img {
+    max-width: 100%;
+    height: auto;
+    loading: lazy;
+}
+
+.avatar-placeholder {
+    width: 48px;
+    height: 48px;
+    background: var(--xera-bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--xera-text-muted);
+}
+
+/* Performance optimized buttons */
+.btn {
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--xera-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--xera-primary) 0%, var(--xera-primary-dark) 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--xera-shadow-hover);
+}
+
+/* Optimized cards */
+.card {
+    background: var(--xera-bg-primary);
+    border: 1px solid var(--xera-border-color);
+    border-radius: 8px;
+    transition: var(--xera-transition);
+    will-change: transform;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--xera-shadow-hover);
+}
+
+/* Efficient navbar */
+.navbar {
+    background: var(--xera-bg-primary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--xera-border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    contain: layout style;
+}
+
+/* Optimized search forms */
+.search-form {
+    background: var(--xera-bg-secondary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    contain: layout;
+}
+
+.form-control {
+    border: 1px solid var(--xera-border-color);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--xera-primary);
+    box-shadow: 0 0 0 0.2rem rgba(44, 90, 160, 0.25);
+    outline: none;
+}
+
+/* Toast notifications optimized */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1060;
+    pointer-events: none;
+}
+
+.toast {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--xera-shadow-hover);
+    margin-bottom: 10px;
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    pointer-events: auto;
+    contain: layout style;
+}
+
+.toast.toast-show {
+    transform: translateX(0);
+}
+
+.toast-success {
+    border-left: 4px solid var(--xera-success);
+}
+
+.toast-error {
+    border-left: 4px solid var(--xera-danger);
+}
+
+.toast-warning {
+    border-left: 4px solid var(--xera-warning);
+}
+
+.toast-info {
+    border-left: 4px solid var(--xera-info);
+}
+
+/* Loading spinner optimization */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--xera-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    will-change: transform;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive optimizations */
+@media (max-width: 768px) {
+    .faculty-grid, .university-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-form {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Print optimizations */
+@media print {
+    .navbar, .theme-toggle, .toast-container {
+        display: none !important;
+    }
+    
+    .card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark theme optimizations included in previous implementation */ 

@@ -3,133 +3,22 @@
  * Main application logic and interactions
  */
 
-// Global application object
+// High-performance FacultyFinder application
 const FacultyFinder = {
-    init: function() {
-        this.initSearchFunctionality();
-        this.initNavigationEnhancements();
-        this.initCardInteractions();
-        this.initTooltips();
+    // Configuration
+    config: {
+        debounceDelay: 300,
+        cacheTimeout: 5 * 60 * 1000, // 5 minutes
+        batchSize: 20,
+        prefetchOffset: 5
     },
-
-    initSearchFunctionality: function() {
-        // Enhanced search input behavior
-        const searchInputs = document.querySelectorAll('input[type="text"], input[type="search"]');
-        
-        searchInputs.forEach(input => {
-            // Add loading state on form submission
-            const form = input.closest('form');
-            if (form) {
-                form.addEventListener('submit', function() {
-                    const submitBtn = form.querySelector('button[type="submit"]');
-                    if (submitBtn) {
-                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Searching...';
-                        submitBtn.disabled = true;
-                    }
-                });
-            }
-
-            // Auto-submit on enter for search inputs
-            input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' && form) {
-                    form.submit();
-                }
-            });
-        });
-
-        // Search suggestions (placeholder for future implementation)
-        this.initSearchSuggestions();
-    },
-
-    initSearchSuggestions: function() {
-        // TODO: Implement search suggestions
-        // This would connect to an API endpoint for autocomplete functionality
-    },
-
-    initNavigationEnhancements: function() {
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active navigation highlighting
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('active');
-            }
-        });
-    },
-
-    initCardInteractions: function() {
-        // Enhanced card hover effects
-        const cards = document.querySelectorAll('.facultyfinder-card');
-        
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-4px)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Research area tag interactions
-        const researchTags = document.querySelectorAll('.research-area-tag');
-        
-        researchTags.forEach(tag => {
-            tag.addEventListener('click', function() {
-                const tagText = this.textContent.trim();
-                // Redirect to faculty search with this research area
-                window.location.href = `/faculties?research_area=${encodeURIComponent(tagText)}`;
-            });
-            
-            // Make tags look clickable
-            tag.style.cursor = 'pointer';
-            tag.title = `Search faculty in: ${tag.textContent.trim()}`;
-        });
-    },
-
-    initTooltips: function() {
-        // Initialize Bootstrap tooltips if available
-        if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
-            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-        }
-    },
-
-    // Utility functions
+    
+    // Performance cache
+    cache: new Map(),
+    
+    // Utility functions optimized for performance
     utils: {
-        // Show loading state
-        showLoading: function(element) {
-            element.classList.add('loading');
-        },
-
-        // Hide loading state
-        hideLoading: function(element) {
-            element.classList.remove('loading');
-        },
-
-        // Format numbers with commas
-        formatNumber: function(num) {
-            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        },
-
-        // Debounce function for search inputs
+        // Optimized debounce function
         debounce: function(func, wait) {
             let timeout;
             return function executedFunction(...args) {
@@ -141,78 +30,283 @@ const FacultyFinder = {
                 timeout = setTimeout(later, wait);
             };
         },
-
-        // Copy text to clipboard
-        copyToClipboard: function(text) {
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(text).then(() => {
-                    this.showToast('Copied to clipboard!', 'success');
-                });
-            } else {
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = text;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                this.showToast('Copied to clipboard!', 'success');
+        
+        // Throttle function for scroll events
+        throttle: function(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
             }
         },
-
-        // Show toast notification
-        showToast: function(message, type = 'info') {
-            // Create toast element
-            const toast = document.createElement('div');
-            toast.className = `toast align-items-center text-white bg-${type} border-0`;
-            toast.setAttribute('role', 'alert');
-            toast.innerHTML = `
-                <div class="d-flex">
-                    <div class="toast-body">${message}</div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-                </div>
-            `;
-
-            // Add to page
-            let toastContainer = document.querySelector('.toast-container');
-            if (!toastContainer) {
-                toastContainer = document.createElement('div');
-                toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
-                document.body.appendChild(toastContainer);
+        
+        // Optimized element creation
+        createElement: function(tag, className, innerHTML) {
+            const element = document.createElement(tag);
+            if (className) element.className = className;
+            if (innerHTML) element.innerHTML = innerHTML;
+            return element;
+        },
+        
+        // Efficient batch DOM updates
+        batchDOMUpdates: function(updates) {
+            const fragment = document.createDocumentFragment();
+            updates.forEach(update => {
+                if (typeof update === 'function') {
+                    update(fragment);
+                } else if (update instanceof Node) {
+                    fragment.appendChild(update);
+                }
+            });
+            return fragment;
+        },
+        
+        // Cache management
+        setCache: function(key, data, timeout = FacultyFinder.config.cacheTimeout) {
+            const expiry = Date.now() + timeout;
+            FacultyFinder.cache.set(key, { data, expiry });
+        },
+        
+        getCache: function(key) {
+            const cached = FacultyFinder.cache.get(key);
+            if (cached && cached.expiry > Date.now()) {
+                return cached.data;
+            }
+            if (cached) {
+                FacultyFinder.cache.delete(key);
+            }
+            return null;
+        },
+        
+        // Optimized AJAX with caching
+        fetchWithCache: async function(url, options = {}) {
+            const cacheKey = `${url}_${JSON.stringify(options)}`;
+            const cached = this.getCache(cacheKey);
+            
+            if (cached) {
+                return cached;
             }
             
-            toastContainer.appendChild(toast);
-
-            // Show toast
-            if (typeof bootstrap !== 'undefined' && bootstrap.Toast) {
-                const bsToast = new bootstrap.Toast(toast);
-                bsToast.show();
-                
-                // Remove after it's hidden
-                toast.addEventListener('hidden.bs.toast', () => {
-                    toast.remove();
+            try {
+                const response = await fetch(url, {
+                    ...options,
+                    headers: {
+                        'Cache-Control': 'max-age=300',
+                        ...options.headers
+                    }
                 });
-            } else {
-                // Fallback without Bootstrap
-                setTimeout(() => {
-                    toast.remove();
-                }, 3000);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                this.setCache(cacheKey, data);
+                return data;
+            } catch (error) {
+                console.error('Fetch error:', error);
+                throw error;
             }
+        },
+        
+        // Lazy image loading
+        lazyLoadImages: function() {
+            const images = document.querySelectorAll('img[data-src]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                
+                images.forEach(img => imageObserver.observe(img));
+            } else {
+                // Fallback for older browsers
+                images.forEach(img => {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                });
+            }
+        },
+        
+        // Optimized toast notifications
+        showToast: function(message, type = 'info', duration = 3000) {
+            const toastContainer = document.getElementById('toast-container') || this.createToastContainer();
+            const toast = this.createElement('div', `toast toast-${type}`, `
+                <div class="toast-content">
+                    <i class="fas fa-${this.getToastIcon(type)} me-2"></i>
+                    ${message}
+                </div>
+            `);
+            
+            toastContainer.appendChild(toast);
+            
+            // Animate in
+            requestAnimationFrame(() => {
+                toast.classList.add('toast-show');
+            });
+            
+            // Auto remove
+            setTimeout(() => {
+                toast.classList.remove('toast-show');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 300);
+            }, duration);
+        },
+        
+        createToastContainer: function() {
+            const container = this.createElement('div', 'toast-container');
+            container.id = 'toast-container';
+            document.body.appendChild(container);
+            return container;
+        },
+        
+        getToastIcon: function(type) {
+            const icons = {
+                'success': 'check-circle',
+                'error': 'exclamation-triangle',
+                'warning': 'exclamation-circle',
+                'info': 'info-circle'
+            };
+            return icons[type] || icons.info;
         }
     },
-
-    // Statistics and analytics
-    analytics: {
-        // Track search queries
-        trackSearch: function(query, filters) {
-            // TODO: Implement analytics tracking
-            console.log('Search tracked:', { query, filters });
+    
+    // Optimized search functionality
+    search: {
+        activeRequests: new Map(),
+        
+        init: function() {
+            const searchInputs = document.querySelectorAll('input[type="search"], input[name="search"]');
+            searchInputs.forEach(input => {
+                input.addEventListener('input', 
+                    FacultyFinder.utils.debounce(this.handleSearch.bind(this), FacultyFinder.config.debounceDelay)
+                );
+            });
         },
-
-        // Track profile views
-        trackProfileView: function(professorId) {
-            // TODO: Implement analytics tracking
-            console.log('Profile view tracked:', professorId);
+        
+        handleSearch: async function(event) {
+            const query = event.target.value.trim();
+            const form = event.target.closest('form');
+            
+            if (query.length < 2) return;
+            
+            // Cancel previous request
+            const requestKey = form.id || 'default';
+            if (this.activeRequests.has(requestKey)) {
+                this.activeRequests.get(requestKey).abort();
+            }
+            
+            // Create new request
+            const controller = new AbortController();
+            this.activeRequests.set(requestKey, controller);
+            
+            try {
+                await this.performSearch(query, form, controller.signal);
+            } catch (error) {
+                if (error.name !== 'AbortError') {
+                    console.error('Search error:', error);
+                }
+            } finally {
+                this.activeRequests.delete(requestKey);
+            }
+        },
+        
+        performSearch: async function(query, form, signal) {
+            // Implementation depends on the form type
+            const action = form.action || window.location.pathname;
+            
+            if (action.includes('/faculties')) {
+                await this.searchFaculty(query, signal);
+            } else if (action.includes('/universities')) {
+                await this.searchUniversities(query, signal);
+            }
+        },
+        
+        searchFaculty: async function(query, signal) {
+            try {
+                const params = new URLSearchParams({
+                    search: query,
+                    limit: FacultyFinder.config.batchSize
+                });
+                
+                const data = await FacultyFinder.utils.fetchWithCache(
+                    `/api/v1/faculties/search?${params}`,
+                    { signal }
+                );
+                
+                this.displayFacultyResults(data.faculty || []);
+            } catch (error) {
+                if (error.name !== 'AbortError') {
+                    FacultyFinder.utils.showToast('Search failed. Please try again.', 'error');
+                }
+            }
+        },
+        
+        searchUniversities: async function(query, signal) {
+            try {
+                const params = new URLSearchParams({
+                    search: query,
+                    limit: FacultyFinder.config.batchSize
+                });
+                
+                const data = await FacultyFinder.utils.fetchWithCache(
+                    `/api/v1/universities/search?${params}`,
+                    { signal }
+                );
+                
+                this.displayUniversityResults(data.universities || []);
+            } catch (error) {
+                if (error.name !== 'AbortError') {
+                    FacultyFinder.utils.showToast('Search failed. Please try again.', 'error');
+                }
+            }
+        },
+        
+        displayFacultyResults: function(faculty) {
+            const container = document.getElementById('faculty-grid');
+            if (!container) return;
+            
+            // Use document fragment for efficient DOM updates
+            const fragment = document.createDocumentFragment();
+            
+            faculty.forEach(prof => {
+                const element = FacultyFinder.loadMore.faculty.createFacultyElement(prof);
+                fragment.appendChild(element);
+            });
+            
+            // Clear and update in one operation
+            container.innerHTML = '';
+            container.appendChild(fragment);
+        },
+        
+        displayUniversityResults: function(universities) {
+            const container = document.getElementById('universities-grid');
+            if (!container) return;
+            
+            const fragment = document.createDocumentFragment();
+            
+            universities.forEach(uni => {
+                const element = this.createUniversityElement(uni);
+                fragment.appendChild(element);
+            });
+            
+            container.innerHTML = '';
+            container.appendChild(fragment);
         }
     }
 };
