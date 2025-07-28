@@ -793,14 +793,14 @@ def get_summary_statistics():
 @cache.memoize(timeout=1800)  # Cache for 30 minutes
 @monitor_performance
 def get_top_universities(limit=10):
-    """Get top universities by faculty count with optimized query"""
+    """Get top universities by faculty count with optimized query (excluding universities with 0 faculty)"""
     try:
         query = """
         SELECT u.*, 
                COUNT(p.id) as professor_count, 
                COUNT(DISTINCT p.department) as department_count
         FROM universities u
-        LEFT JOIN professors p ON u.id = p.university_id
+        INNER JOIN professors p ON u.id = p.university_id
         GROUP BY u.id, u.name, u.city, u.province_state, u.country, 
                  u.address, u.university_type, u.languages, u.year_established
         ORDER BY professor_count DESC, u.name ASC
@@ -813,7 +813,7 @@ def get_top_universities(limit=10):
 
 @monitor_performance
 def search_universities_optimized(search='', country='', province='', uni_type='', language='', sort_by='faculty_count', limit=20, offset=0):
-    """Optimized university search with database-level pagination"""
+    """Optimized university search with database-level pagination (excluding universities with 0 faculty)"""
     try:
         conditions = []
         params = []
@@ -823,7 +823,7 @@ def search_universities_optimized(search='', country='', province='', uni_type='
                COUNT(p.id) as professor_count, 
                COUNT(DISTINCT p.department) as department_count
         FROM universities u
-        LEFT JOIN professors p ON u.id = p.university_id
+        INNER JOIN professors p ON u.id = p.university_id
         """
         
         if search:
@@ -848,6 +848,8 @@ def search_universities_optimized(search='', country='', province='', uni_type='
         
         where_clause = " WHERE " + " AND ".join(conditions) if conditions else ""
         group_clause = " GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address, u.university_type, u.languages, u.year_established"
+        # Add HAVING clause to ensure we only show universities with faculty
+        having_clause = " HAVING COUNT(p.id) > 0"
         
         # Determine sort order
         sort_orders = {
@@ -859,7 +861,7 @@ def search_universities_optimized(search='', country='', province='', uni_type='
         }
         order_clause = f" ORDER BY {sort_orders.get(sort_by, sort_orders['faculty_count'])}"
         
-        full_query = base_query + where_clause + group_clause + order_clause
+        full_query = base_query + where_clause + group_clause + having_clause + order_clause
         
         return db.execute_query_with_pagination(full_query, params, limit, offset)
     except Exception as e:
@@ -983,16 +985,43 @@ def get_professor_publications_optimized(professor_id, limit=10, offset=0):
 def get_available_filters():
     """Get available filter options with caching"""
     try:
-        # Get all filter options in a single batch
-        queries = {
-            'universities': "SELECT DISTINCT name FROM universities ORDER BY name",
-            'departments': "SELECT DISTINCT department FROM professors WHERE department IS NOT NULL ORDER BY department",
-            'degrees': "SELECT DISTINCT degree_type FROM degrees ORDER BY degree_type",
-            'countries': "SELECT DISTINCT country FROM universities ORDER BY country",
-            'provinces': "SELECT DISTINCT province_state FROM universities WHERE province_state IS NOT NULL ORDER BY province_state",
-            'types': "SELECT DISTINCT university_type FROM universities WHERE university_type IS NOT NULL ORDER BY university_type",
-            'languages': "SELECT DISTINCT languages FROM universities WHERE languages IS NOT NULL"
-        }
+                 # Get all filter options in a single batch (only for universities with faculty)
+         queries = {
+             'universities': """
+                 SELECT DISTINCT u.name 
+                 FROM universities u 
+                 INNER JOIN professors p ON u.id = p.university_id 
+                 ORDER BY u.name
+             """,
+             'departments': "SELECT DISTINCT department FROM professors WHERE department IS NOT NULL ORDER BY department",
+             'degrees': "SELECT DISTINCT degree_type FROM degrees ORDER BY degree_type",
+             'countries': """
+                 SELECT DISTINCT u.country 
+                 FROM universities u 
+                 INNER JOIN professors p ON u.id = p.university_id 
+                 ORDER BY u.country
+             """,
+             'provinces': """
+                 SELECT DISTINCT u.province_state 
+                 FROM universities u 
+                 INNER JOIN professors p ON u.id = p.university_id 
+                 WHERE u.province_state IS NOT NULL 
+                 ORDER BY u.province_state
+             """,
+             'types': """
+                 SELECT DISTINCT u.university_type 
+                 FROM universities u 
+                 INNER JOIN professors p ON u.id = p.university_id 
+                 WHERE u.university_type IS NOT NULL 
+                 ORDER BY u.university_type
+             """,
+             'languages': """
+                 SELECT DISTINCT u.languages 
+                 FROM universities u 
+                 INNER JOIN professors p ON u.id = p.university_id 
+                 WHERE u.languages IS NOT NULL
+             """
+         }
         
         filters = {}
         for key, query in queries.items():
