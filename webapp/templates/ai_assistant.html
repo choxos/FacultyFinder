@@ -137,6 +137,50 @@
         </div>
     </div>
 
+    <!-- AI Usage Statistics -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <i class="fas fa-chart-line me-2 text-primary"></i>AI Assistant Usage Statistics
+                    </h5>
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="p-3">
+                                <div class="display-6 fw-bold text-primary">{{ ai_stats.total_sessions }}</div>
+                                <small class="text-muted">Total Sessions</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="p-3">
+                                <div class="display-6 fw-bold text-success">{{ ai_stats.successful_sessions }}</div>
+                                <small class="text-muted">Successful Analyses</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="p-3">
+                                <div class="display-6 fw-bold text-info">{{ ai_stats.sessions_last_7_days }}</div>
+                                <small class="text-muted">Last 7 Days</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="p-3">
+                                <div class="display-6 fw-bold text-warning">{{ ai_stats.sessions_last_30_days }}</div>
+                                <small class="text-muted">Last 30 Days</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <small class="text-muted">
+                            <i class="fas fa-users me-1"></i>Join thousands of students who have found their ideal faculty match!
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- User Profile Information -->
     {% if current_user.is_authenticated %}
         <div class="row mb-4">

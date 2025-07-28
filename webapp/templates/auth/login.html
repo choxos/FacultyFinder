@@ -53,7 +53,18 @@
                         </div>
                     </form>
                     
-                    <hr class="my-4">
+                    <!-- Social Login Divider -->
+                    <div class="text-center my-4">
+                        <hr class="mb-3">
+                        <small class="text-muted bg-white px-3">or continue with</small>
+                    </div>
+                    
+                    <!-- Google OAuth Button -->
+                    <div class="d-grid mb-4">
+                        <a href="{{ url_for('google_login') }}" class="btn btn-outline-danger btn-lg">
+                            <i class="fab fa-google me-2"></i>Sign in with Google
+                        </a>
+                    </div>
                     
                     <!-- Registration Link -->
                     <div class="text-center">

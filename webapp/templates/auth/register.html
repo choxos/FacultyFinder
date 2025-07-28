@@ -184,15 +184,28 @@
                                 <i class="fas fa-user-plus me-1"></i>Create Account
                             </button>
                         </div>
-
-                        <!-- Login Link -->
-                        <div class="text-center">
-                            <p class="text-muted mb-0">
-                                Already have an account? 
-                                <a href="{{ url_for('login') }}" class="text-decoration-none">Sign in here</a>
-                            </p>
-                        </div>
                     </form>
+                    
+                    <!-- Social Registration Divider -->
+                    <div class="text-center my-4">
+                        <hr class="mb-3">
+                        <small class="text-muted bg-white px-3">or register with</small>
+                    </div>
+                    
+                    <!-- Google OAuth Button -->
+                    <div class="d-grid mb-4">
+                        <a href="{{ url_for('google_login') }}" class="btn btn-outline-danger btn-lg">
+                            <i class="fab fa-google me-2"></i>Sign up with Google
+                        </a>
+                    </div>
+
+                    <!-- Login Link -->
+                    <div class="text-center">
+                        <p class="text-muted mb-0">
+                            Already have an account? 
+                            <a href="{{ url_for('login') }}" class="text-decoration-none">Sign in here</a>
+                        </p>
+                    </div>
                 </div>
             </div>
 

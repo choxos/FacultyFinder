@@ -18,7 +18,7 @@ import gzip
 import io
 import psutil
 from datetime import datetime, timedelta
-from flask import Flask, render_template, request, jsonify, g, make_response, redirect, url_for
+from flask import Flask, render_template, request, jsonify, g, make_response, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 from typing import List, Dict, Optional
 
@@ -28,6 +28,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import bcrypt
 import re
 from email_validator import validate_email, EmailNotValidError
+
+# Google OAuth imports
+from authlib.integrations.flask_client import OAuth
+import requests
 
 # Performance monitoring
 import time
@@ -58,6 +62,20 @@ login_manager.init_app(app)
 login_manager.login_view = 'login'
 login_manager.login_message = 'Please log in to access this page.'
 login_manager.login_message_category = 'info'
+
+# Initialize OAuth
+oauth = OAuth(app)
+
+# Google OAuth configuration
+google = oauth.register(
+    name='google',
+    client_id=os.environ.get('GOOGLE_CLIENT_ID'),
+    client_secret=os.environ.get('GOOGLE_CLIENT_SECRET'),
+    server_metadata_url='https://accounts.google.com/.well-known/openid-configuration',
+    client_kwargs={
+        'scope': 'openid email profile'
+    }
+)
 
 # User class for Flask-Login
 class User(UserMixin):
@@ -154,7 +172,7 @@ else:
     mail = None
 
 # Database configuration
-DEV_DB = 'database/facultyfinder_dev.db'
+DEV_DB = '../database/facultyfinder_dev.db'
 
 # Connection pool implementation for SQLite
 class SQLiteConnectionPool:
@@ -434,9 +452,9 @@ def get_summary_statistics():
         query = """
         SELECT 
             (SELECT COUNT(*) FROM professors) as professors,
-            (SELECT COUNT(DISTINCT id) FROM universities WHERE id IN (SELECT DISTINCT university_id FROM professors)) as universities,
+            (SELECT COUNT(*) FROM universities) as universities,
             (SELECT COUNT(*) FROM publications) as publications,
-            (SELECT COUNT(DISTINCT country) FROM universities WHERE id IN (SELECT DISTINCT university_id FROM professors)) as countries
+            (SELECT COUNT(DISTINCT country) FROM universities) as countries
         """
         
         cursor = conn.execute(query)
@@ -925,11 +943,27 @@ def professor_profile(professor_id):
         logger.error(f"Error getting professor {professor_id}: {e}")
         return "Error loading professor profile", 500
 
-@app.route('/ai-assistant')
+@app.route('/api/ai-stats')
 @monitor_performance
+def get_ai_stats_endpoint():
+    """API endpoint to get AI usage statistics"""
+    try:
+        stats = get_ai_usage_statistics()
+        return jsonify(stats)
+    except Exception as e:
+        logger.error(f"Error in AI stats endpoint: {e}")
+        return jsonify({"error": "Failed to load AI statistics"}), 500
+
+@app.route('/ai-assistant')
+@monitor_performance 
 def ai_assistant():
-    """AI assistant page"""
-    return render_template('ai_assistant.html')
+    """AI Assistant page with CV analysis"""
+    try:
+        ai_stats = get_ai_usage_statistics()
+        return render_template('ai_assistant.html', ai_stats=ai_stats)
+    except Exception as e:
+        logger.error(f"Error in ai_assistant route: {e}")
+        return render_template('ai_assistant.html', ai_stats={"total_sessions": 0, "successful_sessions": 0, "unique_providers": 0, "sessions_with_own_key": 0, "sessions_last_7_days": 0, "sessions_last_30_days": 0})
 
 @app.route('/about')
 @monitor_performance
@@ -1423,6 +1457,124 @@ def logout():
     logger.info(f"User logged out: {username}")
     return redirect(url_for('index'))
 
+@app.route('/auth/google')
+def google_login():
+    """Redirect to Google OAuth"""
+    redirect_uri = url_for('google_callback', _external=True)
+    return google.authorize_redirect(redirect_uri)
+
+@app.route('/auth/google/callback')
+def google_callback():
+    """Handle Google OAuth callback"""
+    try:
+        token = google.authorize_access_token()
+        user_info = token.get('userinfo')
+        
+        if user_info:
+            email = user_info.get('email')
+            name = user_info.get('name')
+            given_name = user_info.get('given_name', '')
+            family_name = user_info.get('family_name', '')
+            picture = user_info.get('picture', '')
+            
+            if not email:
+                flash('Unable to get email from Google. Please try again.', 'error')
+                return redirect(url_for('login'))
+            
+            conn = get_db_connection()
+            if not conn:
+                flash('Database connection failed. Please try again later.', 'error')
+                return redirect(url_for('login'))
+            
+            # Check if user already exists
+            cursor = conn.execute('SELECT * FROM users WHERE email = ?', (email,))
+            existing_user = cursor.fetchone()
+            
+            if existing_user:
+                # User exists, log them in
+                user = User(
+                    id=existing_user['id'],
+                    username=existing_user['username'],
+                    email=existing_user['email'],
+                    first_name=existing_user['first_name'],
+                    last_name=existing_user['last_name'],
+                    institution=existing_user['institution'],
+                    field_of_study=existing_user['field_of_study'],
+                    academic_level=existing_user['academic_level'],
+                    bio=existing_user['bio'],
+                    website=existing_user['website'],
+                    orcid=existing_user['orcid'],
+                    role=existing_user['role'],
+                    is_active=existing_user['is_active']
+                )
+                login_user(user, remember=True)
+                logger.info(f"User logged in via Google: {email}")
+                
+                # Update profile picture if provided
+                if picture and not existing_user['profile_picture']:
+                    conn.execute('UPDATE users SET profile_picture = ? WHERE id = ?', (picture, existing_user['id']))
+                    conn.commit()
+                
+                return redirect(url_for('dashboard'))
+            else:
+                # Create new user account
+                username = email.split('@')[0]  # Use email prefix as username
+                
+                # Make sure username is unique
+                counter = 1
+                original_username = username
+                while True:
+                    cursor = conn.execute('SELECT id FROM users WHERE username = ?', (username,))
+                    if not cursor.fetchone():
+                        break
+                    username = f"{original_username}{counter}"
+                    counter += 1
+                
+                # Insert new user
+                cursor = conn.execute('''
+                    INSERT INTO users (
+                        username, email, password_hash, first_name, last_name, 
+                        profile_picture, role, is_active, created_at
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (
+                    username,
+                    email,
+                    '',  # No password for OAuth users
+                    given_name,
+                    family_name,
+                    picture,
+                    'user',
+                    True,
+                    datetime.utcnow()
+                ))
+                
+                user_id = cursor.lastrowid
+                conn.commit()
+                
+                # Create user object and log them in
+                user = User(
+                    id=user_id,
+                    username=username,
+                    email=email,
+                    first_name=given_name,
+                    last_name=family_name,
+                    role='user',
+                    is_active=True
+                )
+                login_user(user, remember=True)
+                logger.info(f"New user registered via Google: {email}")
+                flash('Welcome! Your account has been created successfully.', 'success')
+                
+                return redirect(url_for('profile'))  # Redirect to profile to complete setup
+        else:
+            flash('Unable to get user information from Google. Please try again.', 'error')
+            return redirect(url_for('login'))
+            
+    except Exception as e:
+        logger.error(f"Google OAuth error: {e}")
+        flash('Authentication failed. Please try again.', 'error')
+        return redirect(url_for('login'))
+
 @app.route('/dashboard')
 @login_required
 def dashboard():
@@ -1783,6 +1935,42 @@ def user_crypto_payments():
     except Exception as e:
         logger.error(f"Error loading user crypto payments: {e}")
         return render_template('user/crypto_payments.html', error="Failed to load payments")
+
+@cached(timeout=300)  # Cache for 5 minutes
+@monitor_performance
+def get_ai_usage_statistics():
+    """Get AI assistant usage statistics (cached)"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return {"total_sessions": 0, "successful_sessions": 0, "unique_providers": 0, "sessions_with_own_key": 0}
+        
+        query = """
+        SELECT 
+            COUNT(*) as total_sessions,
+            COUNT(CASE WHEN recommendations IS NOT NULL AND recommendations != '' THEN 1 END) as successful_sessions,
+            COUNT(DISTINCT ai_provider) as unique_providers,
+            COUNT(CASE WHEN api_key_provided = 1 THEN 1 END) as sessions_with_own_key,
+            COUNT(CASE WHEN created_at >= date('now', '-7 days') THEN 1 END) as sessions_last_7_days,
+            COUNT(CASE WHEN created_at >= date('now', '-30 days') THEN 1 END) as sessions_last_30_days
+        FROM ai_sessions
+        """
+        
+        cursor = conn.execute(query)
+        row = cursor.fetchone()
+        
+        return {
+            "total_sessions": row['total_sessions'],
+            "successful_sessions": row['successful_sessions'],
+            "unique_providers": row['unique_providers'],
+            "sessions_with_own_key": row['sessions_with_own_key'],
+            "sessions_last_7_days": row['sessions_last_7_days'],
+            "sessions_last_30_days": row['sessions_last_30_days']
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting AI usage statistics: {e}")
+        return {"total_sessions": 0, "successful_sessions": 0, "unique_providers": 0, "sessions_with_own_key": 0, "sessions_last_7_days": 0, "sessions_last_30_days": 0}
 
 if __name__ == '__main__':
     # Warm cache on startup
