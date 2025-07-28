@@ -1,0 +1,296 @@
+/**
+ * FacultyFinder Theme
+ * Educational and Academic Color Scheme
+ * Part of Xera DB Unified Theme System
+ */
+
+:root {
+  /* Primary Brand Colors - Academic Blue */
+  --xera-primary: #1e3a8a;        /* Deep academic blue */
+  --xera-primary-light: #3b82f6;   /* Lighter blue for hover states */
+  --xera-primary-dark: #1e293b;    /* Dark blue for headers */
+  --xera-primary-50: #eff6ff;
+  --xera-primary-100: #dbeafe;
+  --xera-primary-500: #3b82f6;
+  --xera-primary-600: #2563eb;
+  --xera-primary-700: #1d4ed8;
+  --xera-primary-800: #1e40af;
+  --xera-primary-900: #1e3a8a;
+
+  /* Secondary Colors - Academic Gold */
+  --xera-secondary: #d97706;       /* Academic gold/orange */
+  --xera-secondary-light: #f59e0b; /* Lighter gold */
+  --xera-secondary-dark: #b45309;  /* Darker gold */
+
+  /* Accent Colors - Research Green */
+  --xera-accent: #059669;          /* Research/knowledge green */
+  --xera-accent-light: #10b981;    /* Lighter green */
+  --xera-accent-dark: #047857;     /* Darker green */
+
+  /* Educational Specific Colors */
+  --ff-education-blue: #1e40af;
+  --ff-research-green: #059669;
+  --ff-academic-gold: #d97706;
+  --ff-knowledge-purple: #7c3aed;
+  --ff-collaboration-teal: #0891b2;
+
+  /* Status Colors for Academic Levels */
+  --ff-professor: #1e40af;
+  --ff-associate-professor: #2563eb;
+  --ff-assistant-professor: #3b82f6;
+  --ff-adjunct: #64748b;
+  --ff-emeritus: #6366f1;
+
+  /* Research Area Colors */
+  --ff-stem: #059669;
+  --ff-medicine: #dc2626;
+  --ff-social-sciences: #7c3aed;
+  --ff-humanities: #d97706;
+  --ff-business: #0891b2;
+  --ff-arts: #ec4899;
+
+  /* Publication Quartile Colors */
+  --ff-q1: #059669;  /* Green for Q1 journals */
+  --ff-q2: #d97706;  /* Orange for Q2 journals */
+  --ff-q3: #eab308;  /* Yellow for Q3 journals */
+  --ff-q4: #94a3b8;  /* Gray for Q4 journals */
+
+  /* Collaboration Network Colors */
+  --ff-internal-collab: #3b82f6;     /* Blue for internal collaborations */
+  --ff-national-collab: #059669;     /* Green for national collaborations */
+  --ff-international-collab: #7c3aed; /* Purple for international collaborations */
+}
+
+/* FacultyFinder specific component styles */
+.facultyfinder-header {
+  background: linear-gradient(135deg, var(--xera-primary-800) 0%, var(--xera-primary-600) 100%);
+  border-bottom: 3px solid var(--xera-secondary);
+}
+
+.facultyfinder-card {
+  border: 1px solid var(--xera-gray-200);
+  border-radius: var(--xera-radius-lg);
+  box-shadow: var(--xera-shadow);
+  transition: var(--xera-transition);
+}
+
+.facultyfinder-card:hover {
+  box-shadow: var(--xera-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.professor-card {
+  background: white;
+  border-left: 4px solid var(--xera-primary);
+}
+
+.professor-card.professor {
+  border-left-color: var(--ff-professor);
+}
+
+.professor-card.associate-professor {
+  border-left-color: var(--ff-associate-professor);
+}
+
+.professor-card.assistant-professor {
+  border-left-color: var(--ff-assistant-professor);
+}
+
+.professor-card.adjunct {
+  border-left-color: var(--ff-adjunct);
+}
+
+.university-card {
+  background: white;
+  border-top: 4px solid var(--xera-secondary);
+}
+
+.research-area-tag {
+  background: var(--xera-primary-100);
+  color: var(--xera-primary-800);
+  border: 1px solid var(--xera-primary-200);
+  border-radius: var(--xera-radius);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  display: inline-block;
+  margin: 0.125rem;
+}
+
+.publication-metric {
+  background: var(--xera-gray-50);
+  border: 1px solid var(--xera-gray-200);
+  border-radius: var(--xera-radius);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.journal-quartile {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--xera-radius);
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.journal-quartile.q1 {
+  background: var(--ff-q1);
+}
+
+.journal-quartile.q2 {
+  background: var(--ff-q2);
+}
+
+.journal-quartile.q3 {
+  background: var(--ff-q3);
+  color: var(--xera-gray-800);
+}
+
+.journal-quartile.q4 {
+  background: var(--ff-q4);
+}
+
+.collaboration-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--xera-radius);
+  color: white;
+  font-size: 0.75rem;
+}
+
+.collaboration-badge.internal {
+  background: var(--ff-internal-collab);
+}
+
+.collaboration-badge.national {
+  background: var(--ff-national-collab);
+}
+
+.collaboration-badge.international {
+  background: var(--ff-international-collab);
+}
+
+/* Search and filter components */
+.search-filters {
+  background: var(--xera-gray-50);
+  border: 1px solid var(--xera-gray-200);
+  border-radius: var(--xera-radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  margin-bottom: 1rem;
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: var(--xera-gray-700);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Statistics dashboard */
+.stat-card {
+  background: white;
+  border-radius: var(--xera-radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--xera-shadow);
+  border-top: 4px solid var(--xera-primary);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--xera-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--xera-gray-600);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* AI Assistant specific styles */
+.ai-assistant-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cv-upload-area {
+  border: 2px dashed var(--xera-primary-300);
+  border-radius: var(--xera-radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--xera-primary-50);
+  transition: var(--xera-transition);
+}
+
+.cv-upload-area:hover {
+  border-color: var(--xera-primary);
+  background: var(--xera-primary-100);
+}
+
+.api-provider-card {
+  border: 2px solid var(--xera-gray-200);
+  border-radius: var(--xera-radius-lg);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: var(--xera-transition);
+}
+
+.api-provider-card:hover {
+  border-color: var(--xera-primary);
+}
+
+.api-provider-card.selected {
+  border-color: var(--xera-primary);
+  background: var(--xera-primary-50);
+}
+
+/* Publication list styles */
+.publication-item {
+  border-bottom: 1px solid var(--xera-gray-200);
+  padding: 1rem 0;
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+}
+
+.publication-title {
+  font-weight: 600;
+  color: var(--xera-gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.publication-authors {
+  color: var(--xera-gray-600);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.publication-journal {
+  color: var(--xera-gray-700);
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .search-filters {
+    padding: 1rem;
+  }
+  
+  .cv-upload-area {
+    padding: 2rem 1rem;
+  }
+} 

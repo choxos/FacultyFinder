@@ -1,0 +1,398 @@
+{% extends "base.html" %}
+
+{% block title %}{{ professor.name }} - FacultyFinder{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Professor Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="facultyfinder-card p-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center mb-3">
+                            <div>
+                                <h1 class="mb-1">{{ professor.name }}</h1>
+                                {% if professor.other_name %}
+                                    <p class="text-muted mb-1">({{ professor.other_name }})</p>
+                                {% endif %}
+                                <div class="d-flex align-items-center gap-3 flex-wrap">
+                                    {% if professor.position %}
+                                        <span class="position-badge {{ professor.position.lower().replace(' ', '-') }}">
+                                            {{ professor.position }}
+                                        </span>
+                                    {% endif %}
+                                    {% if professor.full_time %}
+                                        <span class="badge bg-success">Full-time</span>
+                                    {% endif %}
+                                    {% if professor.adjunct %}
+                                        <span class="badge bg-secondary">Adjunct</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <h5 class="text-primary mb-2">
+                                <i class="fas fa-building me-2"></i>{{ professor.department or 'Department not specified' }}
+                            </h5>
+                            <p class="mb-1">
+                                <i class="fas fa-university me-2"></i>
+                                <strong>{{ professor.university_name }}</strong>
+                            </p>
+                            {% if professor.city and professor.province_state %}
+                                <p class="text-muted mb-0">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    {{ professor.city }}, {{ professor.province_state }}, {{ professor.country }}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 text-lg-end">
+                        <!-- Contact Information -->
+                        <div class="d-flex flex-column gap-2">
+                            {% if professor.uni_email %}
+                                <a href="mailto:{{ professor.uni_email }}" class="btn btn-outline-primary">
+                                    <i class="fas fa-envelope me-2"></i>Email
+                                </a>
+                            {% endif %}
+                            {% if professor.phone %}
+                                <a href="tel:{{ professor.phone }}" class="btn btn-outline-secondary">
+                                    <i class="fas fa-phone me-2"></i>{{ professor.phone }}
+                                </a>
+                            {% endif %}
+                            {% if professor.website %}
+                                <a href="{{ professor.website }}" target="_blank" class="btn btn-outline-info">
+                                    <i class="fas fa-globe me-2"></i>Website
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+            <!-- Academic Information -->
+            <div class="facultyfinder-card p-4 mb-4">
+                <h3 class="mb-3">
+                    <i class="fas fa-graduation-cap text-primary me-2"></i>
+                    Academic Information
+                </h3>
+                
+                {% if professor.degrees %}
+                    <div class="mb-3">
+                        <h5>Degrees</h5>
+                        <p>{{ professor.degrees }}</p>
+                        {% if professor.all_degrees_and_inst %}
+                            <small class="text-muted">{{ professor.all_degrees_and_inst }}</small>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                
+                {% if professor.other_departments %}
+                    <div class="mb-3">
+                        <h5>Other Affiliations</h5>
+                        <p>{{ professor.other_departments }}</p>
+                    </div>
+                {% endif %}
+                
+                {% if professor.memberships %}
+                    <div class="mb-3">
+                        <h5>Memberships</h5>
+                        <div class="research-areas">
+                            {% for membership in professor.memberships.split(';') %}
+                                <span class="research-area-tag">{{ membership.strip() }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                
+                {% if professor.canada_research_chair %}
+                    <div class="mb-3">
+                        <h5>Canada Research Chair</h5>
+                        <p class="text-success"><strong>{{ professor.canada_research_chair }}</strong></p>
+                    </div>
+                {% endif %}
+                
+                {% if professor.director %}
+                    <div class="mb-3">
+                        <h5>Director Positions</h5>
+                        <p>{{ professor.director }}</p>
+                    </div>
+                {% endif %}
+            </div>
+            
+            <!-- Research Areas -->
+            {% if professor.research_areas %}
+            <div class="facultyfinder-card p-4 mb-4">
+                <h3 class="mb-3">
+                    <i class="fas fa-microscope text-primary me-2"></i>
+                    Research Areas
+                </h3>
+                <div class="research-areas">
+                    {% for area in professor.research_areas.split(';') %}
+                        <span class="research-area-tag">{{ area.strip() }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
+            <!-- Publications -->
+            <div class="facultyfinder-card p-4 mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0">
+                        <i class="fas fa-file-alt text-primary me-2"></i>
+                        Publications
+                    </h3>
+                    {% if publications %}
+                        <span class="badge bg-primary">{{ publications|length }} publications</span>
+                    {% endif %}
+                </div>
+                
+                {% if publications %}
+                    <div class="publications-list">
+                        {% for pub in publications[:5] %}
+                            <div class="publication-item">
+                                <h6 class="publication-title">{{ pub.title }}</h6>
+                                {% if pub.authors %}
+                                    <p class="publication-authors">{{ pub.authors }}</p>
+                                {% endif %}
+                                <p class="publication-journal">
+                                    {% if pub.journal_name %}
+                                        <em>{{ pub.journal_name }}</em>
+                                    {% endif %}
+                                    {% if pub.publication_year %}
+                                        ({{ pub.publication_year }})
+                                    {% endif %}
+                                    {% if pub.volume or pub.issue %}
+                                        - Vol. {{ pub.volume or '' }}{% if pub.issue %}, No. {{ pub.issue }}{% endif %}
+                                    {% endif %}
+                                </p>
+                                {% if pub.pmid %}
+                                    <small class="text-muted">
+                                        PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pub.pmid }}/" target="_blank">{{ pub.pmid }}</a>
+                                        {% if pub.doi %}
+                                            | DOI: <a href="https://doi.org/{{ pub.doi }}" target="_blank">{{ pub.doi }}</a>
+                                        {% endif %}
+                                    </small>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                        
+                        {% if publications|length > 5 %}
+                            <div class="text-center mt-3">
+                                <button class="btn btn-outline-primary" onclick="loadMorePublications()">
+                                    <i class="fas fa-plus me-2"></i>Load More Publications
+                                </button>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-file-alt fa-2x text-muted mb-2"></i>
+                        <p class="text-muted">No publications found in our database.</p>
+                        <small class="text-muted">Publications may not be indexed yet or may be under a different name variation.</small>
+                    </div>
+                {% endif %}
+            </div>
+            
+            <!-- Collaborators -->
+            {% if collaborators %}
+            <div class="facultyfinder-card p-4">
+                <h3 class="mb-3">
+                    <i class="fas fa-users text-primary me-2"></i>
+                    Frequent Collaborators
+                </h3>
+                <div class="row">
+                    {% for collab in collaborators[:6] %}
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">
+                                    <a href="/professor/{{ collab.id }}" class="text-decoration-none">
+                                        {{ collab.name }}
+                                    </a>
+                                </h6>
+                                <small class="text-muted">{{ collab.department }}</small><br>
+                                <small class="text-muted">{{ collab.university_name }}</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-secondary">{{ collab.collaboration_count }} papers</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <!-- Quick Stats -->
+            {% if journal_metrics %}
+            <div class="facultyfinder-card p-4 mb-4">
+                <h4 class="mb-3">
+                    <i class="fas fa-chart-bar text-primary me-2"></i>
+                    Publication Metrics
+                </h4>
+                <div class="row text-center">
+                    <div class="col-6 mb-3">
+                        <div class="publication-metric">
+                            <div class="h4 mb-1 text-primary">{{ journal_metrics.total_publications or 0 }}</div>
+                            <small class="text-muted">Total Publications</small>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="publication-metric">
+                            <div class="h4 mb-1 text-success">{{ "%.1f"|format(journal_metrics.q1_percentage or 0) }}%</div>
+                            <small class="text-muted">Q1 Journals</small>
+                        </div>
+                    </div>
+                </div>
+                
+                {% if journal_metrics.mean_sjr > 0 %}
+                <div class="mb-3">
+                    <small class="text-muted">Mean SJR: <strong>{{ "%.2f"|format(journal_metrics.mean_sjr) }}</strong></small>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+            
+            <!-- Academic Profiles -->
+            <div class="facultyfinder-card p-4 mb-4">
+                <h4 class="mb-3">
+                    <i class="fas fa-link text-primary me-2"></i>
+                    Academic Profiles
+                </h4>
+                <div class="d-grid gap-2">
+                    {% if professor.google_scholar %}
+                        <a href="https://scholar.google.com/citations?user={{ professor.google_scholar }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-graduation-cap me-2"></i>Google Scholar
+                        </a>
+                    {% endif %}
+                    {% if professor.orcid %}
+                        <a href="https://orcid.org/{{ professor.orcid }}" target="_blank" class="btn btn-outline-success btn-sm">
+                            <i class="fab fa-orcid me-2"></i>ORCID
+                        </a>
+                    {% endif %}
+                    {% if professor.researchgate %}
+                        <a href="https://www.researchgate.net/profile/{{ professor.researchgate }}" target="_blank" class="btn btn-outline-info btn-sm">
+                            <i class="fab fa-researchgate me-2"></i>ResearchGate
+                        </a>
+                    {% endif %}
+                    {% if professor.scopus %}
+                        <a href="https://www.scopus.com/authid/detail.uri?authorId={{ professor.scopus }}" target="_blank" class="btn btn-outline-warning btn-sm">
+                            <i class="fas fa-search me-2"></i>Scopus
+                        </a>
+                    {% endif %}
+                    {% if professor.web_of_science %}
+                        <a href="https://www.webofscience.com/wos/author/record/{{ professor.web_of_science }}" target="_blank" class="btn btn-outline-dark btn-sm">
+                            <i class="fas fa-globe me-2"></i>Web of Science
+                        </a>
+                    {% endif %}
+                    {% if professor.academicedu %}
+                        <a href="https://www.academia.edu/{{ professor.academicedu }}" target="_blank" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-university me-2"></i>Academia.edu
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Social Media -->
+            {% if professor.twitter or professor.linkedin %}
+            <div class="facultyfinder-card p-4 mb-4">
+                <h4 class="mb-3">
+                    <i class="fas fa-share-alt text-primary me-2"></i>
+                    Social Media
+                </h4>
+                <div class="d-grid gap-2">
+                    {% if professor.twitter %}
+                        <a href="https://x.com/{{ professor.twitter }}" target="_blank" class="btn btn-outline-dark btn-sm">
+                            <i class="fab fa-x-twitter me-2"></i>X (Twitter)
+                        </a>
+                    {% endif %}
+                    {% if professor.linkedin %}
+                        <a href="https://www.linkedin.com/in/{{ professor.linkedin }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fab fa-linkedin me-2"></i>LinkedIn
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            
+            <!-- Contact Info -->
+            <div class="facultyfinder-card p-4">
+                <h4 class="mb-3">
+                    <i class="fas fa-address-card text-primary me-2"></i>
+                    Contact Information
+                </h4>
+                {% if professor.uni_email %}
+                    <div class="mb-2">
+                        <strong>University Email:</strong><br>
+                        <a href="mailto:{{ professor.uni_email }}">{{ professor.uni_email }}</a>
+                    </div>
+                {% endif %}
+                {% if professor.other_email %}
+                    <div class="mb-2">
+                        <strong>Other Emails:</strong><br>
+                        {% for email in professor.other_email.split(';') %}
+                            <a href="mailto:{{ email.strip() }}">{{ email.strip() }}</a>{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% if professor.phone %}
+                    <div class="mb-2">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:{{ professor.phone }}">{{ professor.phone }}</a>
+                    </div>
+                {% endif %}
+                {% if professor.fax %}
+                    <div class="mb-2">
+                        <strong>Fax:</strong><br>
+                        {{ professor.fax }}
+                    </div>
+                {% endif %}
+                {% if professor.uni_page %}
+                    <div class="mb-2">
+                        <strong>University Profile:</strong><br>
+                        <a href="{{ professor.uni_page }}" target="_blank">View Profile</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Track profile view
+    if (typeof FacultyFinder !== 'undefined' && FacultyFinder.analytics) {
+        FacultyFinder.analytics.trackProfileView('{{ professor.id }}');
+    }
+    
+    // Copy email to clipboard functionality
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = this.textContent;
+            if (typeof FacultyFinder !== 'undefined' && FacultyFinder.utils) {
+                FacultyFinder.utils.copyToClipboard(email);
+            }
+        });
+    });
+});
+
+function loadMorePublications() {
+    // TODO: Implement AJAX loading of more publications
+    alert('Loading more publications... (Feature coming soon!)');
+}
+</script>
+{% endblock %} 

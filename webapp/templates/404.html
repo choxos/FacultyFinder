@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found - FacultyFinder{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+            <div class="facultyfinder-card p-5">
+                <i class="fas fa-search fa-4x text-muted mb-4"></i>
+                <h1 class="display-4 text-primary mb-3">404</h1>
+                <h2 class="mb-3">Page Not Found</h2>
+                <p class="lead text-muted mb-4">
+                    The page you're looking for doesn't exist or has been moved.
+                </p>
+                <p class="text-muted mb-4">
+                    Don't worry! You can find what you're looking for using the links below.
+                </p>
+                
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="/" class="btn btn-primary">
+                        <i class="fas fa-home me-2"></i>Go Home
+                    </a>
+                    <a href="/faculties" class="btn btn-outline-primary">
+                        <i class="fas fa-users me-2"></i>Browse Faculty
+                    </a>
+                    <a href="/universities" class="btn btn-outline-secondary">
+                        <i class="fas fa-university me-2"></i>View Universities
+                    </a>
+                </div>
+                
+                <hr class="my-4">
+                
+                <div class="text-start">
+                    <h5 class="mb-3">Popular Destinations:</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="/faculties?search=health" class="text-decoration-none">
+                                <i class="fas fa-heartbeat me-2 text-danger"></i>Health Research Faculty
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/faculties?search=engineering" class="text-decoration-none">
+                                <i class="fas fa-cogs me-2 text-primary"></i>Engineering Faculty
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/faculties?university=McMaster" class="text-decoration-none">
+                                <i class="fas fa-university me-2 text-success"></i>McMaster University Faculty
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/ai-assistant" class="text-decoration-none">
+                                <i class="fas fa-robot me-2 text-warning"></i>AI Faculty Matching
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Track 404 errors for analytics
+    if (typeof FacultyFinder !== 'undefined' && FacultyFinder.analytics) {
+        FacultyFinder.analytics.track404(window.location.pathname);
+    }
+    
+    // Add some animation to the 404 icon
+    const icon = document.querySelector('.fa-search');
+    if (icon) {
+        setInterval(() => {
+            icon.classList.add('fa-spin');
+            setTimeout(() => {
+                icon.classList.remove('fa-spin');
+            }, 1000);
+        }, 3000);
+    }
+});
+</script>
+{% endblock %} 

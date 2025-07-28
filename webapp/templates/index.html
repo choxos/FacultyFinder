@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+
+{% block title %}FacultyFinder - Discover Your Ideal Faculty{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+            <h1 class="display-4 mb-4">
+                <i class="fas fa-graduation-cap text-primary me-3"></i>
+                Find Your Ideal Faculty
+            </h1>
+            <p class="lead text-muted mb-4">
+                Discover faculty members across Canadian universities who align with your research interests 
+                and academic goals. Search through thousands of professors, their publications, and research areas.
+            </p>
+            
+            <!-- Main Search Bar -->
+            <form method="GET" action="/faculties" class="mb-4">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" name="search" 
+                           placeholder="Search by professor name, research area, or keywords..."
+                           value="{{ request.args.get('search', '') }}">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search me-2"></i>Search Faculty
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Quick Action Buttons -->
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="/universities" class="btn btn-outline-primary">
+                    <i class="fas fa-university me-2"></i>Browse Universities
+                </a>
+                <a href="/ai-assistant" class="btn btn-outline-secondary">
+                    <i class="fas fa-robot me-2"></i>AI Assistant
+                </a>
+                <a href="/api" class="btn btn-outline-info">
+                    <i class="fas fa-code me-2"></i>API Access
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Statistics Dashboard -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="text-center mb-4">Platform Statistics</h2>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="stat-card">
+                <div class="stat-number">{{ stats.total_professors or 0 }}</div>
+                <div class="stat-label">Faculty Members</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="stat-card">
+                <div class="stat-number">{{ stats.total_universities or 0 }}</div>
+                <div class="stat-label">Universities</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="stat-card">
+                <div class="stat-number">{{ stats.total_publications or 0 }}</div>
+                <div class="stat-label">Publications</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="stat-card">
+                <div class="stat-number">{{ stats.countries_covered or 1 }}</div>
+                <div class="stat-label">Countries Covered</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Universities Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="text-center mb-4">Top Universities</h2>
+            <p class="text-center text-muted mb-4">
+                Explore leading Canadian universities with the most faculty in our database
+            </p>
+        </div>
+        
+        {% if top_universities %}
+            {% for university in top_universities %}
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="university-card facultyfinder-card p-4">
+                    <h5 class="mb-3">
+                        <a href="/universities?search={{ university.name }}" class="text-decoration-none">
+                            {{ university.name }}
+                        </a>
+                    </h5>
+                    <div class="row text-center mb-3">
+                        <div class="col-4">
+                            <div class="publication-metric">
+                                <div class="h5 mb-1">{{ university.professor_count or 0 }}</div>
+                                <small class="text-muted">Faculty</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="publication-metric">
+                                <div class="h5 mb-1">{{ university.department_count or 0 }}</div>
+                                <small class="text-muted">Departments</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="publication-metric">
+                                <div class="h5 mb-1">{{ university.publication_count or 0 }}</div>
+                                <small class="text-muted">Publications</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <small class="text-muted">
+                            <i class="fas fa-map-marker-alt me-1"></i>
+                            {{ university.city }}, {{ university.province_state }}
+                        </small>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="/faculties?university={{ university.name }}" class="btn btn-sm btn-primary">
+                            <i class="fas fa-users me-1"></i>View Faculty
+                        </a>
+                        <a href="/universities?search={{ university.name }}" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-info-circle me-1"></i>Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12 text-center">
+                <div class="facultyfinder-card p-5">
+                    <i class="fas fa-university fa-3x text-muted mb-3"></i>
+                    <h4 class="text-muted">Universities Coming Soon</h4>
+                    <p class="text-muted">
+                        We're currently building our database. Check back soon for university data!
+                    </p>
+                    <a href="/about" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Features Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="text-center mb-4">Why Choose FacultyFinder?</h2>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="facultyfinder-card p-4 h-100">
+                <div class="text-center mb-3">
+                    <i class="fas fa-search fa-3x text-primary"></i>
+                </div>
+                <h4 class="text-center mb-3">Advanced Search</h4>
+                <p class="text-muted text-center">
+                    Search faculty by research areas, publications, affiliations, and more. 
+                    Our advanced filters help you find exactly what you're looking for.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="facultyfinder-card p-4 h-100">
+                <div class="text-center mb-3">
+                    <i class="fas fa-robot fa-3x text-success"></i>
+                </div>
+                <h4 class="text-center mb-3">AI-Powered Matching</h4>
+                <p class="text-muted text-center">
+                    Upload your CV and let our AI assistant analyze your background to recommend 
+                    faculty members who align with your research interests.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="facultyfinder-card p-4 h-100">
+                <div class="text-center mb-3">
+                    <i class="fas fa-chart-line fa-3x text-warning"></i>
+                </div>
+                <h4 class="text-center mb-3">Publication Analytics</h4>
+                <p class="text-muted text-center">
+                    Analyze faculty research impact with publication metrics, journal rankings, 
+                    and collaboration networks powered by PubMed and Scimago data.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Call to Action -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <div class="facultyfinder-card p-5">
+                <h3 class="mb-3">Ready to Find Your Ideal Faculty?</h3>
+                <p class="text-muted mb-4">
+                    Start your academic journey by exploring faculty members who share your research interests 
+                    and can guide your graduate studies or research collaboration.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="/faculties" class="btn btn-primary btn-lg">
+                        <i class="fas fa-users me-2"></i>Browse Faculty
+                    </a>
+                    <a href="/ai-assistant" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-robot me-2"></i>Try AI Assistant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add search functionality
+    const searchForm = document.querySelector('form[action="/faculties"]');
+    const searchInput = searchForm.querySelector('input[name="search"]');
+    
+    // Auto-focus search input
+    searchInput.focus();
+    
+    // Add search suggestions (placeholder for future implementation)
+    searchInput.addEventListener('input', function() {
+        // TODO: Implement search suggestions
+    });
+    
+    // Add smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+</script>
+{% endblock %} 

@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block title %}Universities - FacultyFinder{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="mb-3">
+                <i class="fas fa-university text-primary me-3"></i>
+                Canadian Universities
+            </h1>
+            <p class="lead text-muted">
+                Explore universities across Canada and discover their faculty members, departments, and research strengths.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Search and Filters -->
+    <div class="search-filters">
+        <form method="GET" action="/universities">
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <label class="filter-label">Search Universities</label>
+                    <input type="text" class="form-control" name="search" 
+                           placeholder="University name..."
+                           value="{{ search }}">
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <label class="filter-label">Province/State</label>
+                    <select class="form-select" name="province">
+                        <option value="">All Provinces</option>
+                        <option value="Ontario" {% if province == 'Ontario' %}selected{% endif %}>Ontario</option>
+                        <option value="British Columbia" {% if province == 'British Columbia' %}selected{% endif %}>British Columbia</option>
+                        <option value="Quebec" {% if province == 'Quebec' %}selected{% endif %}>Quebec</option>
+                        <option value="Alberta" {% if province == 'Alberta' %}selected{% endif %}>Alberta</option>
+                        <option value="Nova Scotia" {% if province == 'Nova Scotia' %}selected{% endif %}>Nova Scotia</option>
+                        <option value="Manitoba" {% if province == 'Manitoba' %}selected{% endif %}>Manitoba</option>
+                        <option value="Saskatchewan" {% if province == 'Saskatchewan' %}selected{% endif %}>Saskatchewan</option>
+                        <option value="New Brunswick" {% if province == 'New Brunswick' %}selected{% endif %}>New Brunswick</option>
+                        <option value="Newfoundland and Labrador" {% if province == 'Newfoundland and Labrador' %}selected{% endif %}>Newfoundland and Labrador</option>
+                        <option value="Prince Edward Island" {% if province == 'Prince Edward Island' %}selected{% endif %}>Prince Edward Island</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary me-2">
+                        <i class="fas fa-search me-2"></i>Search
+                    </button>
+                    <a href="/universities" class="btn btn-outline-secondary">
+                        <i class="fas fa-times me-2"></i>Clear
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Results -->
+    <div class="row">
+        <div class="col-12">
+            {% if universities %}
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3>Universities ({{ universities|length }} found)</h3>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-sort me-2"></i>Sort by
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="?{{ request.query_string.decode() }}&sort=name">Name</a></li>
+                            <li><a class="dropdown-item" href="?{{ request.query_string.decode() }}&sort=faculty_count">Faculty Count</a></li>
+                            <li><a class="dropdown-item" href="?{{ request.query_string.decode() }}&sort=location">Location</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    {% for university in universities %}
+                    <div class="col-lg-6 col-xl-4 mb-4">
+                        <div class="university-card facultyfinder-card p-4 h-100">
+                            <div class="mb-3">
+                                <h5 class="mb-2">
+                                    <a href="/faculties?university={{ university.name }}" class="text-decoration-none">
+                                        {{ university.name }}
+                                    </a>
+                                </h5>
+                                <div class="university-location">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    {{ university.city }}, {{ university.province_state }}
+                                </div>
+                                <small class="text-muted">{{ university.country }}</small>
+                            </div>
+                            
+                            <div class="row text-center mb-3">
+                                <div class="col-6">
+                                    <div class="publication-metric">
+                                        <div class="h4 mb-1 text-primary">{{ university.professor_count or 0 }}</div>
+                                        <small class="text-muted">Faculty Members</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="publication-metric">
+                                        <div class="h4 mb-1 text-secondary">{{ university.department_count or 0 }}</div>
+                                        <small class="text-muted">Departments</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <a href="/faculties?university={{ university.name }}" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-users me-1"></i>View Faculty
+                                </a>
+                                <div class="text-muted small">
+                                    Code: {{ university.university_code }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            {% else %}
+                <div class="text-center py-5">
+                    <i class="fas fa-university fa-3x text-muted mb-3"></i>
+                    <h4 class="text-muted">No Universities Found</h4>
+                    <p class="text-muted">
+                        Try adjusting your search criteria to find universities.
+                    </p>
+                    <a href="/universities" class="btn btn-primary">
+                        <i class="fas fa-refresh me-2"></i>Reset Search
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- Quick Stats -->
+    {% if universities %}
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3 class="text-center mb-4">Quick Statistics</h3>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="stat-card">
+                <div class="stat-number">{{ universities|length }}</div>
+                <div class="stat-label">Universities Shown</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="stat-card">
+                <div class="stat-number">{{ universities|sum(attribute='professor_count') or 0 }}</div>
+                <div class="stat-label">Total Faculty</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="stat-card">
+                <div class="stat-number">{{ universities|map(attribute='province_state')|unique|list|length }}</div>
+                <div class="stat-label">Provinces Represented</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="stat-card">
+                <div class="stat-number">{{ universities|sum(attribute='department_count') or 0 }}</div>
+                <div class="stat-label">Total Departments</div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Search form enhancements
+    const searchForm = document.querySelector('.search-filters form');
+    const searchInput = searchForm.querySelector('input[name="search"]');
+    
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            searchForm.submit();
+        }
+    });
+    
+    // Province filter change
+    const provinceSelect = searchForm.querySelector('select[name="province"]');
+    provinceSelect.addEventListener('change', function() {
+        searchForm.submit();
+    });
+});
+</script>
+{% endblock %} 

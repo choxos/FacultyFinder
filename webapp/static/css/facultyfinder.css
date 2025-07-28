@@ -1,0 +1,212 @@
+/* FacultyFinder Additional Styles */
+
+/* Ensure proper spacing and layout */
+.container-fluid {
+    max-width: 1400px;
+}
+
+/* Fix navbar active states */
+.navbar-nav .nav-link.active {
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--xera-secondary);
+    border-radius: 1px;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Search suggestions */
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--xera-gray-200);
+    border-top: none;
+    border-radius: 0 0 var(--xera-radius) var(--xera-radius);
+    box-shadow: var(--xera-shadow);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--xera-gray-100);
+}
+
+.suggestion-item:hover {
+    background: var(--xera-gray-50);
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+/* Enhanced card hover effects */
+.facultyfinder-card {
+    transition: all 0.3s ease;
+}
+
+.facultyfinder-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Professor position badges */
+.position-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--xera-radius);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.position-badge.professor {
+    background: var(--ff-professor);
+    color: white;
+}
+
+.position-badge.associate-professor {
+    background: var(--ff-associate-professor);
+    color: white;
+}
+
+.position-badge.assistant-professor {
+    background: var(--ff-assistant-professor);
+    color: white;
+}
+
+.position-badge.adjunct {
+    background: var(--ff-adjunct);
+    color: white;
+}
+
+/* University location styling */
+.university-location {
+    color: var(--xera-gray-600);
+    font-size: 0.875rem;
+}
+
+/* Research area tags styling improvements */
+.research-area-tag {
+    transition: var(--xera-transition);
+}
+
+.research-area-tag:hover {
+    background: var(--xera-primary-200);
+    transform: scale(1.05);
+}
+
+/* Footer improvements */
+footer {
+    margin-top: auto;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .input-group-lg .form-control {
+        font-size: 1rem;
+    }
+}
+
+/* Utility classes */
+.text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.text-truncate-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Social media link styling */
+.social-link {
+    color: var(--xera-gray-600);
+    text-decoration: none;
+    transition: var(--xera-transition);
+}
+
+.social-link:hover {
+    color: var(--xera-primary);
+}
+
+.social-link i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Enhanced button styling */
+.btn-outline-primary:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+/* Table styling for data display */
+.table-responsive {
+    border-radius: var(--xera-radius);
+    overflow: hidden;
+    box-shadow: var(--xera-shadow-sm);
+}
+
+/* Form styling improvements */
+.form-control:focus {
+    border-color: var(--xera-primary);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+
+.form-select:focus {
+    border-color: var(--xera-primary);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+} 

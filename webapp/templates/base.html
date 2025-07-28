@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FacultyFinder - Discover Your Ideal Faculty{% endblock %}</title>
+    
+    <!-- Meta tags -->
+    <meta name="description" content="FacultyFinder helps future students discover their ideal faculty members across Canadian universities based on research interests and academic profiles.">
+    <meta name="keywords" content="faculty finder, academic research, university professors, graduate students, research supervision, Canadian universities">
+    <meta name="author" content="Xera DB">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FacultyFinder - Discover Your Ideal Faculty">
+    <meta property="og:description" content="Connect with faculty members across Canadian universities based on research interests and academic compatibility">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://facultyfinder.xeradb.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="icon" type="image/png" href="/static/favicon-32x32.png">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="/static/css/xera-unified-theme.css" rel="stylesheet">
+    <link href="/static/css/themes/facultyfinder-theme.css" rel="stylesheet">
+    <link href="/static/css/facultyfinder.css" rel="stylesheet">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark facultyfinder-header">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <i class="fas fa-graduation-cap me-2" style="color: white;"></i>
+                <strong>FacultyFinder</strong>
+            </a>
+            
+            <!-- Mobile toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'index' %}active{% endif %}" href="/">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'universities' %}active{% endif %}" href="/universities">
+                            <i class="fas fa-university me-1"></i> Universities
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'faculties' %}active{% endif %}" href="/faculties">
+                            <i class="fas fa-users me-1"></i> Faculty
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'ai_assistant' %}active{% endif %}" href="/ai-assistant">
+                            <i class="fas fa-robot me-1"></i> AI Assistant
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Right side items -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-info-circle me-1"></i> More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/about">
+                                <i class="fas fa-question-circle me-2"></i> About FacultyFinder
+                            </a></li>
+                            <li><a class="dropdown-item" href="/api">
+                                <i class="fas fa-code me-2"></i> API Documentation
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://github.com/xeradb/FacultyFinder" target="_blank">
+                                <i class="fab fa-github me-2"></i> GitHub
+                            </a></li>
+                            <li><a class="dropdown-item" href="https://xeradb.com" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i> Xera DB Project
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main content -->
+    <main class="container-fluid py-4">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-light border-top mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-muted">FacultyFinder</h5>
+                    <p class="text-muted small">
+                        Helping future students discover their ideal faculty members across Canadian universities.
+                        Part of the <a href="https://xeradb.com" target="_blank">Xera DB</a> research platform.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-muted">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="/universities" class="text-muted">Universities</a></li>
+                        <li><a href="/faculties" class="text-muted">Faculty Search</a></li>
+                        <li><a href="/ai-assistant" class="text-muted">AI Assistant</a></li>
+                        <li><a href="/api" class="text-muted">API Access</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-muted">Support</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="/about" class="text-muted">About</a></li>
+                        <li><a href="https://github.com/xeradb/FacultyFinder" target="_blank" class="text-muted">GitHub</a></li>
+                        <li><a href="mailto:support@xeradb.com" class="text-muted">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted small mb-0">
+                        © {{ current_year or 2024 }} Xera DB. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted small mb-0">
+                        Made with <i class="fas fa-heart text-danger"></i> for academic research
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- About Modal -->
+    <div class="modal fade" id="about-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        About FacultyFinder
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        FacultyFinder is a comprehensive platform designed to help prospective graduate students 
+                        and researchers discover faculty members across Canadian universities who align with their 
+                        research interests and academic goals.
+                    </p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li><strong>Faculty Discovery:</strong> Search and filter faculty by research areas, publications, and expertise</li>
+                        <li><strong>AI-Powered Matching:</strong> Upload your CV for personalized faculty recommendations</li>
+                        <li><strong>Publication Analytics:</strong> Analyze faculty research impact and collaboration networks</li>
+                        <li><strong>University Comparison:</strong> Compare institutions and departments across Canada</li>
+                    </ul>
+                    <h6>Data Sources:</h6>
+                    <ul>
+                        <li>University faculty directories and profiles</li>
+                        <li>PubMed publication database</li>
+                        <li>Scimago Journal & Country Rank</li>
+                        <li>Academic social media profiles</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="/about" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/facultyfinder.js"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html> 
