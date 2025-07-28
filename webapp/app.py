@@ -456,8 +456,8 @@ def get_summary_statistics():
         prof_result = cursor.fetchone()
         results['professors'] = prof_result['count'] if prof_result else 0
         
-        # Check universities  
-        cursor = conn.execute('SELECT COUNT(*) as count FROM universities')
+        # Check universities (only those with faculty)
+        cursor = conn.execute('SELECT COUNT(DISTINCT university_id) as count FROM professors WHERE university_id IS NOT NULL')
         uni_result = cursor.fetchone()
         results['universities'] = uni_result['count'] if uni_result else 0
         
@@ -466,8 +466,12 @@ def get_summary_statistics():
         pub_result = cursor.fetchone()
         results['publications'] = pub_result['count'] if pub_result else 0
         
-        # Check countries
-        cursor = conn.execute('SELECT COUNT(DISTINCT country) as count FROM universities')
+        # Check countries (only those with universities that have faculty)
+        cursor = conn.execute('''
+            SELECT COUNT(DISTINCT u.country) as count 
+            FROM universities u 
+            INNER JOIN professors p ON u.id = p.university_id
+        ''')
         country_result = cursor.fetchone()
         results['countries'] = country_result['count'] if country_result else 0
         
@@ -744,16 +748,17 @@ def universities():
                              available_types=filters['types'],
                              available_languages=filters['languages'])
 
-def generate_faculty_cache_key(search, university, department, research_area, degree, sort_by):
+def generate_faculty_cache_key(search, university, department, research_area, degree, sort_by, page, per_page):
     """Generate cache key for faculty search"""
-    params = f"{search}:{university}:{department}:{research_area}:{degree}:{sort_by}"
+    params = f"{search}:{university}:{department}:{research_area}:{degree}:{sort_by}:{page}:{per_page}"
     return f"faculty_search:{hashlib.md5(params.encode()).hexdigest()}"
 
+@cached(timeout=600)  # Cache for 10 minutes
 @monitor_performance
-def search_faculty_optimized(search='', university='', department='', research_area='', degree='', sort_by='name'):
-    """Optimized faculty search with caching"""
+def search_faculty_optimized(search='', university='', department='', research_area='', degree='', sort_by='name', page=1, per_page=20):
+    """Optimized faculty search with caching and pagination"""
     # Check cache first
-    cache_key = generate_faculty_cache_key(search, university, department, research_area, degree, sort_by)
+    cache_key = generate_faculty_cache_key(search, university, department, research_area, degree, sort_by, page, per_page)
     cached_result = cache.get(cache_key)
     if cached_result is not None:
         return cached_result
@@ -761,13 +766,20 @@ def search_faculty_optimized(search='', university='', department='', research_a
     try:
         conn = get_db_connection()
         if not conn:
-            return []
+            return {"results": [], "total": 0, "page": page, "per_page": per_page}
         
         # Base query with optimized joins
         base_query = """
         SELECT p.id, p.name, p.position, p.department, p.research_areas, 
                p.uni_email as email, p.website, u.name as university_name,
                u.address, u.city, u.province_state, u.country
+        FROM professors p
+        LEFT JOIN universities u ON p.university_id = u.id
+        """
+        
+        # Count query
+        count_query = """
+        SELECT COUNT(*) as total
         FROM professors p
         LEFT JOIN universities u ON p.university_id = u.id
         """
@@ -798,8 +810,14 @@ def search_faculty_optimized(search='', university='', department='', research_a
             # For now, we'll skip this filter
             pass
         
-        # Construct final query
+        # Construct WHERE clause
         where_clause = " WHERE " + " AND ".join(conditions) if conditions else ""
+        
+        # Get total count
+        count_query_final = count_query + where_clause
+        cursor = conn.execute(count_query_final, params)
+        total_result = cursor.fetchone()
+        total = total_result['total'] if total_result else 0
         
         # Optimize sorting
         order_clause = {
@@ -809,18 +827,29 @@ def search_faculty_optimized(search='', university='', department='', research_a
             'position': 'ORDER BY p.position, p.name'
         }.get(sort_by, 'ORDER BY p.name')
         
-        final_query = base_query + where_clause + order_clause + " LIMIT 100"  # Limit for performance
+        # Add pagination
+        offset = (page - 1) * per_page
+        final_query = base_query + where_clause + order_clause + f" LIMIT {per_page} OFFSET {offset}"
         
         cursor = conn.execute(final_query, params)
         results = [dict(row) for row in cursor.fetchall()]
         
+        # Prepare response
+        response = {
+            "results": results,
+            "total": total,
+            "page": page,
+            "per_page": per_page,
+            "has_more": (page * per_page) < total
+        }
+        
         # Cache results for 10 minutes
-        cache.set(cache_key, results, 600)
-        return results
+        cache.set(cache_key, response, 600)
+        return response
         
     except Exception as e:
         logger.error(f"Error searching faculty: {e}")
-        return []
+        return {"results": [], "total": 0, "page": page, "per_page": per_page, "has_more": False}
 
 @app.route('/faculties')
 @monitor_performance
@@ -834,22 +863,31 @@ def faculties():
         research_area = request.args.get('research_area', '').strip()
         degree = request.args.get('degree', '').strip()
         sort_by = request.args.get('sort_by', 'name')
+        page = int(request.args.get('page', 1))
+        per_page = 20  # Show 20 faculty per page
         
-        # Get faculty results (with caching)
-        faculty = search_faculty_optimized(
+        # Get faculty results (with caching and pagination)
+        faculty_data = search_faculty_optimized(
             search=search,
             university=university,
             department=department,
             research_area=research_area,
             degree=degree,
-            sort_by=sort_by
+            sort_by=sort_by,
+            page=page,
+            per_page=per_page
         )
         
         # Get available filters (this would need to be implemented)
         available_degrees = []  # Placeholder
         
         return render_template('faculties.html',
-                             faculty=faculty,
+                             faculty=faculty_data['results'],
+                             faculty_total=faculty_data['total'],
+                             faculty_shown=len(faculty_data['results']),
+                             faculty_page=faculty_data['page'],
+                             faculty_per_page=faculty_data['per_page'],
+                             faculty_has_more=faculty_data['has_more'],
                              search=search,
                              university=university,
                              department=department,
@@ -2084,6 +2122,49 @@ def get_ai_usage_statistics():
     except Exception as e:
         logger.error(f"Error getting AI usage statistics: {e}")
         return {"total_sessions": 0, "successful_sessions": 0, "unique_providers": 0, "sessions_with_own_key": 0, "sessions_last_7_days": 0, "sessions_last_30_days": 0}
+
+@app.route('/api/faculty/load-more')
+@monitor_performance
+def api_load_more_faculty():
+    """API endpoint for loading more faculty via AJAX"""
+    try:
+        # Get search parameters
+        search = request.args.get('search', '').strip()
+        university = request.args.get('university', '').strip()
+        department = request.args.get('department', '').strip()
+        research_area = request.args.get('research_area', '').strip()
+        degree = request.args.get('degree', '').strip()
+        sort_by = request.args.get('sort_by', 'name')
+        page = int(request.args.get('page', 2))  # Default to page 2 for load more
+        per_page = 20
+        
+        # Get faculty results
+        faculty_data = search_faculty_optimized(
+            search=search,
+            university=university,
+            department=department,
+            research_area=research_area,
+            degree=degree,
+            sort_by=sort_by,
+            page=page,
+            per_page=per_page
+        )
+        
+        return jsonify({
+            'success': True,
+            'faculty': faculty_data['results'],
+            'total': faculty_data['total'],
+            'page': faculty_data['page'],
+            'per_page': faculty_data['per_page'],
+            'has_more': faculty_data['has_more']
+        })
+        
+    except Exception as e:
+        logger.error(f"Error loading more faculty: {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 if __name__ == '__main__':
     # Warm cache on startup

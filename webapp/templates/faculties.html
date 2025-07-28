@@ -76,7 +76,7 @@
         <div class="col-12">
             {% if faculty %}
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h3>Faculty Members ({{ faculty|length }} found)</h3>
+                    <h3>Faculty Members ({{ faculty_shown }} of {{ faculty_total }} found)</h3>
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-outline-secondary btn-sm active" data-view="grid">
                             <i class="fas fa-th"></i>
@@ -290,11 +290,12 @@
                 </div>
                 
                 <!-- Load More Button -->
+                {% if faculty_has_more %}
                 <div class="row mt-4">
                     <div class="col-12 text-center">
                         <div class="load-more-section">
                             <p class="text-muted mb-3">
-                                Showing {{ faculty|length }} results
+                                Showing {{ faculty_shown }} of {{ faculty_total }} results
                             </p>
                             <button id="loadMoreFaculty" class="btn btn-primary btn-lg load-more-btn" onclick="loadMoreFaculty()">
                                 <i class="fas fa-plus-circle me-2"></i>
@@ -304,6 +305,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
                 
             {% else %}
                 <div class="text-center py-5">
@@ -361,9 +363,130 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Load more faculty function (if implemented)
+// Global variables for pagination
+let currentPage = {{ faculty_page }};
+let hasMore = {{ 'true' if faculty_has_more else 'false' }};
+
+// Load more faculty function
 function loadMoreFaculty() {
-    console.log('Load more faculty functionality to be implemented');
+    if (!hasMore) {
+        return;
+    }
+    
+    const button = document.getElementById('loadMoreFaculty');
+    const originalText = button.innerHTML;
+    
+    // Show loading state
+    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i><span class="btn-text">Loading...</span>';
+    button.disabled = true;
+    
+    // Get current search parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('page', currentPage + 1);
+    
+    // Make AJAX request
+    fetch(`/api/faculty/load-more?${urlParams.toString()}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.faculty.length > 0) {
+                // Append new faculty cards to the grid
+                const facultyGrid = document.querySelector('.faculty-grid .row');
+                
+                data.faculty.forEach(faculty => {
+                    const facultyCard = createFacultyCard(faculty);
+                    facultyGrid.appendChild(facultyCard);
+                });
+                
+                // Update pagination state
+                currentPage = data.page;
+                hasMore = data.has_more;
+                
+                // Update the "Showing X of Y results" text
+                const showingText = document.querySelector('.load-more-section p');
+                const totalShown = document.querySelectorAll('.faculty-card').length;
+                showingText.textContent = `Showing ${totalShown} of ${data.total} results`;
+                
+                // Hide button if no more results
+                if (!hasMore) {
+                    button.parentElement.parentElement.style.display = 'none';
+                }
+            } else {
+                console.error('No more faculty to load or error occurred');
+                hasMore = false;
+                button.parentElement.parentElement.style.display = 'none';
+            }
+        })
+        .catch(error => {
+            console.error('Error loading more faculty:', error);
+        })
+        .finally(() => {
+            // Restore button state
+            button.innerHTML = originalText;
+            button.disabled = false;
+        });
+}
+
+// Function to create faculty card HTML
+function createFacultyCard(faculty) {
+    const col = document.createElement('div');
+    col.className = 'col-lg-4 col-md-6 mb-4';
+    
+    col.innerHTML = `
+        <div class="card faculty-card h-100 border-0 shadow-sm">
+            <div class="card-body d-flex flex-column">
+                <div class="faculty-header mb-3">
+                    <h5 class="card-title mb-2">
+                        <a href="/professor/${faculty.id}" class="text-decoration-none text-primary fw-bold">
+                            ${faculty.name}
+                        </a>
+                    </h5>
+                    ${faculty.position ? `<p class="text-muted mb-1">${faculty.position}</p>` : ''}
+                    ${faculty.department ? `<p class="text-muted small mb-2">${faculty.department}</p>` : ''}
+                </div>
+                
+                <div class="faculty-details flex-grow-1">
+                    ${faculty.university_name ? `
+                        <p class="mb-2">
+                            <i class="fas fa-university me-2 text-primary"></i>
+                            <span class="fw-medium">${faculty.university_name}</span>
+                        </p>
+                    ` : ''}
+                    
+                    ${faculty.research_areas ? `
+                        <div class="research-areas mb-3">
+                            <p class="small text-muted mb-1">
+                                <i class="fas fa-flask me-1"></i>Research Areas:
+                            </p>
+                            <p class="small">${faculty.research_areas.length > 150 ? faculty.research_areas.substring(0, 150) + '...' : faculty.research_areas}</p>
+                        </div>
+                    ` : ''}
+                </div>
+                
+                <div class="faculty-actions">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="/professor/${faculty.id}" class="btn btn-primary btn-sm">
+                            <i class="fas fa-user me-1"></i>View Profile
+                        </a>
+                        
+                        <div class="faculty-contact">
+                            ${faculty.email ? `
+                                <a href="mailto:${faculty.email}" class="text-decoration-none me-2" title="Email">
+                                    <i class="fas fa-envelope text-muted"></i>
+                                </a>
+                            ` : ''}
+                            ${faculty.website ? `
+                                <a href="${faculty.website}" target="_blank" class="text-decoration-none" title="Website">
+                                    <i class="fas fa-globe text-muted"></i>
+                                </a>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    return col;
 }
 </script>
 {% endblock %} 
