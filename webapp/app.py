@@ -658,7 +658,8 @@ def search_faculty_optimized(search='', university='', department='', research_a
         # Base query with optimized joins
         base_query = """
         SELECT p.id, p.name, p.position, p.department, p.research_areas, 
-               p.uni_email as email, p.website, u.name as university_name
+               p.uni_email as email, p.website, u.name as university_name,
+               u.address, u.city, u.province_state, u.country
         FROM professors p
         LEFT JOIN universities u ON p.university_id = u.id
         """

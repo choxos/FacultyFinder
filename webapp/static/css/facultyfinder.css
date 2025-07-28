@@ -778,6 +778,41 @@
     }
 } 
 
+/* Faculty Card Hover Effects */
+.faculty-card {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faculty-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: var(--bs-primary) !important;
+}
+
+.faculty-card:hover .profile-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.faculty-card .profile-avatar {
+    transition: all 0.3s ease;
+}
+
+/* Enhanced card animations */
+.faculty-card:hover .card-title a {
+    color: var(--bs-primary) !important;
+}
+
+.faculty-card:hover .research-areas .badge {
+    transform: scale(1.05);
+}
+
+.faculty-card .research-areas .badge {
+    transition: transform 0.2s ease;
+}
+
 /* Website Link Styling */
 .website-link {
     color: #007bff;
@@ -821,4 +856,21 @@
 
 .university-list-item .website-link:hover {
     color: #5a2d91;
+} 
+
+/* Maps Link Styling in Faculty Cards */
+.faculty-card .maps-link {
+    color: var(--bs-primary);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.faculty-card .maps-link:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    color: var(--bs-success);
+}
+
+.faculty-card:hover .maps-link {
+    opacity: 1;
 } 
