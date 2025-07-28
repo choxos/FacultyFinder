@@ -777,3 +777,48 @@
         padding: 0.4rem;
     }
 } 
+
+/* Website Link Styling */
+.website-link {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.website-link:hover {
+    color: #0056b3;
+    text-decoration: underline !important;
+}
+
+.website-link i {
+    font-size: 0.875em;
+    margin-left: 0.25rem;
+}
+
+/* University Card Website Links */
+.university-card .website-link {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.university-card .website-link:hover {
+    color: #1e7e34;
+}
+
+/* Professor Profile Website Links */
+.professor-profile .website-link {
+    color: #17a2b8;
+}
+
+.professor-profile .website-link:hover {
+    color: #117a8b;
+}
+
+/* List View Website Links */
+.university-list-item .website-link {
+    color: #6f42c1;
+    font-weight: 500;
+}
+
+.university-list-item .website-link:hover {
+    color: #5a2d91;
+} 

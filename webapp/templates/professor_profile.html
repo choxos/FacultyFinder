@@ -54,6 +54,13 @@
                                               {{ professor.university_name }}
                                           </a>
                                       </strong>
+                                      {% if professor.university_website %}
+                                          <a href="{{ professor.university_website }}" target="_blank" 
+                                             class="text-decoration-none ms-2 website-link"
+                                             title="Visit {{ professor.university_name }} website">
+                                              <i class="fas fa-external-link-alt"></i>
+                                          </a>
+                                      {% endif %}
                                   </p>
                                   {% if professor.city and professor.province_state %}
                                       <p class="text-muted mb-0">

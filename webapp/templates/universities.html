@@ -164,6 +164,16 @@
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                             {% endif %}
+                            {% if university.website %}
+                                <br>
+                                <i class="fas fa-link me-2"></i>
+                                <a href="{{ university.website }}" target="_blank" 
+                                   class="text-decoration-none website-link"
+                                   title="Visit {{ university.name }} website">
+                                    <strong>Official Website</strong>
+                                    <i class="fas fa-external-link-alt ms-1"></i>
+                                </a>
+                            {% endif %}
                         </div>
                     </div>
                     
@@ -245,6 +255,15 @@
                                        target="_blank" class="maps-link" title="View on Google Maps">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
+                                {% endif %}
+                                {% if university.website %}
+                                    <span class="ms-3">
+                                        <i class="fas fa-link me-1"></i>
+                                        <a href="{{ university.website }}" target="_blank" 
+                                           class="website-link" title="Visit {{ university.name }} website">
+                                            Official Website <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                    </span>
                                 {% endif %}
                             </div>
                             

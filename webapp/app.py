@@ -380,12 +380,12 @@ def get_top_universities():
         
         # Optimized query with proper joins
         query = """
-        SELECT u.id, u.name, u.city, u.province_state, u.country, u.address,
+        SELECT u.id, u.name, u.city, u.province_state, u.country, u.address, u.website,
                u.university_type, u.languages, u.year_established,
                COUNT(p.id) as professor_count
         FROM universities u
         INNER JOIN professors p ON u.id = p.university_id
-        GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address,
+        GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address, u.website,
                  u.university_type, u.languages, u.year_established
         ORDER BY professor_count DESC
         LIMIT 9
@@ -509,7 +509,7 @@ def search_universities_with_filters(search='', country='', province='', uni_typ
         
         # Optimized query with better structure
         base_query = """
-        SELECT u.id, u.name, u.city, u.province_state, u.country, u.address,
+        SELECT u.id, u.name, u.city, u.province_state, u.country, u.address, u.website,
                u.university_type, u.languages, u.year_established,
                COUNT(p.id) as professor_count
         FROM universities u
@@ -543,7 +543,7 @@ def search_universities_with_filters(search='', country='', province='', uni_typ
         # Construct final query
         where_clause = " WHERE " + " AND ".join(conditions) if conditions else ""
         group_clause = """
-        GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address,
+        GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address, u.website,
                  u.university_type, u.languages, u.year_established
         """
         
@@ -782,7 +782,7 @@ def professor_profile(professor_id):
                p.uni_page, p.website, p.misc, p.twitter, p.linkedin, p.phone, p.fax,
                p.google_scholar, p.scopus, p.web_of_science, p.orcid, p.researchgate,
                p.academicedu, p.created_at, p.updated_at,
-               u.name as university_name, u.city, u.province_state, u.country, u.address
+               u.name as university_name, u.city, u.province_state, u.country, u.address, u.website as university_website
         FROM professors p
         LEFT JOIN universities u ON p.university_id = u.id
         WHERE p.id = ?

@@ -10,6 +10,7 @@ CREATE TABLE universities (
     province_state VARCHAR(100),
     city VARCHAR(200),
     address TEXT,
+    website VARCHAR(500),
     university_type VARCHAR(50),
     languages VARCHAR(200),
     year_established INTEGER,
