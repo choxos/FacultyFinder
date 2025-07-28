@@ -1,244 +1,173 @@
 # FacultyFinder 🎓
 
-> **Discover Your Ideal Faculty** - A comprehensive platform for finding faculty members across Canadian universities based on research interests and academic compatibility.
+**Discover Your Ideal Academic Collaborators Worldwide**
 
-FacultyFinder is part of the [Xera DB](https://xeradb.com) research platform ecosystem, designed to help prospective graduate students and researchers connect with faculty members who align with their academic goals.
+FacultyFinder is an advanced platform designed to help prospective graduate students, researchers, and institutions connect with faculty members who align with their academic goals and research interests across universities worldwide.
 
-![FacultyFinder](https://img.shields.io/badge/Status-In%20Development-yellow)
-![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![Flask](https://img.shields.io/badge/Flask-3.0+-green)
-![License](https://img.shields.io/badge/License-MIT-blue)
+## ✨ Features
 
-## 🚀 Features
+### 🔍 **Smart Faculty Discovery**
+- **Advanced Search & Filtering**: Find faculty by research areas, universities, departments, publications, and more
+- **AI-Powered Matching**: Upload your CV for personalized faculty recommendations using cutting-edge AI
+- **Global Coverage**: Access faculty information from top universities worldwide
+- **Professional Interface**: Modern, responsive design optimized for academic research
 
-### ✅ Implemented
-- **Faculty Search & Discovery**: Advanced search and filtering by name, research areas, university, and department
-- **University Explorer**: Browse and compare Canadian universities with faculty statistics
-- **Detailed Professor Profiles**: Comprehensive profiles with academic information, contact details, and social media links
-- **Professional Theme**: Academic-focused UI with consistent Xera DB branding
-- **Responsive Design**: Mobile-friendly interface with Bootstrap 5
-- **Database Integration**: SQLite for development with PostgreSQL support for production
+### 📊 **Comprehensive Faculty Profiles**
+- **Academic Background**: Detailed information on degrees, positions, and career progression
+- **Research Areas**: Categorized research interests with clickable filtering
+- **Publication Metrics**: Citation counts, H-index, i10-index, and publication records
+- **Collaboration Networks**: Visual representation of academic partnerships
+- **Contact Information**: Direct access to faculty email, office locations, and websites
 
-### 🔄 In Progress
-- **PubMed Integration**: Automatic publication discovery via Entrez API
-- **Journal Impact Metrics**: Scimago journal ranking integration for publication quality assessment
-- **AI-Powered Matching**: CV analysis for personalized faculty recommendations
-- **Collaboration Networks**: Co-authorship analysis and visualization
-- **REST API**: External access to faculty and publication data
+### 🏛️ **University Information**
+- **Global Database**: Universities from 25+ countries with detailed profiles
+- **Department Insights**: Faculty counts, research strengths, and academic programs
+- **Location Integration**: Interactive maps and geographic filtering
+- **Institutional Details**: University types, languages of instruction, establishment dates
 
-### 📋 Planned
-- **Multi-language Support**: French and English interfaces
-- **Advanced Analytics**: Research impact visualization and trends
-- **Notification System**: Updates on faculty research activities
-- **Export Features**: PDF reports and data export capabilities
-
-## 🛠️ Technology Stack
-
-- **Backend**: Flask 3.0+ (Python)
-- **Database**: SQLite (development) / PostgreSQL (production)
-- **Frontend**: Bootstrap 5, Font Awesome, custom CSS themes
-- **Data Processing**: Pandas, NumPy
-- **APIs**: PubMed Entrez, AI providers (Claude, Gemini, ChatGPT, Grok)
-- **Payments**: Stripe integration
-- **Deployment**: Gunicorn, supervisor
+### 🤖 **AI Assistant**
+- **CV Analysis**: Upload PDF/DOCX files for intelligent faculty matching
+- **Multiple AI Models**: Choose between Claude, Gemini, ChatGPT, and Grok
+- **Flexible Pricing**: Use your own API keys or pay-per-use options
+- **Expert Review**: Optional manual CV review by academic professionals
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.8+
-- pip package manager
+- SQLite3 (development) or PostgreSQL (production)
+- Modern web browser
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/xeradb/FacultyFinder.git
-   cd FacultyFinder
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Initialize the database**
-   ```bash
-   python3 scripts/data_loader.py
-   ```
-
-4. **Start the application**
-   ```bash
-   python3 run_app.py
-   ```
-
-5. **Access the application**
-   Open your browser and navigate to: `http://localhost:8080`
-
-### Alternative Launch Methods
-
-**Using the webapp directly:**
 ```bash
-cd webapp
-FLASK_ENV=development FLASK_DEBUG=1 python3 app.py
+# Clone the repository
+git clone https://github.com/facultyfinder/FacultyFinder.git
+cd FacultyFinder
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Initialize database
+cd scripts
+python data_loader.py
+
+# Run the application
+cd ../webapp
+python app.py
 ```
 
-**Using the convenience launcher:**
-```bash
-chmod +x run_app.py
-./run_app.py
-```
-
-## 📊 Database Schema
-
-FacultyFinder uses a comprehensive database schema designed for academic data:
-
-### Core Tables
-- **Universities**: Canadian university information with codes and locations
-- **Professors**: Faculty profiles with contact and academic details
-- **Publications**: Research publications with DOI, PMID, and journal information
-- **Journals**: Journal metadata with Scimago rankings by year
-- **Collaborations**: Co-authorship networks and collaboration metrics
-
-### Data Sources
-- **University Codes**: Standardized Canadian university identifiers
-- **Faculty Data**: McMaster HEI department (validated sample of 281 professors)
-- **Scimago Rankings**: Journal impact metrics from 1999-2024
-- **PubMed**: Publication metadata and citations (planned)
-
-## 🎨 User Interface
-
-FacultyFinder features a professional academic interface with:
-
-- **Unified Theme System**: Consistent with other Xera DB projects
-- **Academic Color Scheme**: Deep blues, academic gold, and research green
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- **Accessibility**: WCAG compliant with semantic HTML and proper ARIA labels
-
-### Key Pages
-
-1. **Home Page** (`/`)
-   - Hero section with main search
-   - Platform statistics dashboard
-   - Top universities showcase
-   - Feature highlights
-
-2. **Faculty Search** (`/faculties`)
-   - Advanced search and filtering
-   - Grid/list view toggle
-   - Professor cards with key information
-   - Research area tags (clickable)
-
-3. **University Explorer** (`/universities`)
-   - University cards with statistics
-   - Province/state filtering
-   - Faculty count and department information
-
-4. **Professor Profiles** (`/professor/<id>`)
-   - Comprehensive academic information
-   - Contact details and social media links
-   - Research areas and collaborations
-   - Publication lists (when available)
-   - Academic profile links (Google Scholar, ORCID, etc.)
-
-## 🔌 API Integration
-
-### Current Integrations
-- **Database**: SQLite/PostgreSQL with optimized queries
-- **Static Assets**: Bootstrap 5 and Font Awesome CDNs
-
-### Planned Integrations
-- **PubMed Entrez API**: Automatic publication discovery
-- **AI Services**: Claude, Gemini, ChatGPT, Grok for CV analysis
-- **Stripe**: Payment processing for premium features
-- **Academic APIs**: ORCID, Crossref, Google Scholar
+Visit `http://localhost:8080` to access FacultyFinder!
 
 ## 📁 Project Structure
 
 ```
 FacultyFinder/
-├── webapp/                 # Flask application
+├── webapp/                 # Flask web application
 │   ├── app.py             # Main application file
 │   ├── templates/         # Jinja2 templates
-│   └── static/            # CSS, JS, and assets
-├── database/              # Database files and schema
-│   ├── schema.sql         # Database schema
-│   └── facultyfinder_dev.db  # SQLite database
-├── scripts/               # Data processing scripts
-│   └── data_loader.py     # Database initialization
-├── data/                  # Source data files
-│   ├── mcmaster_hei_faculty.csv
-│   ├── university_codes.csv
-│   └── scimago_journals_comprehensive.csv
-├── css/themes/            # Theme CSS files
-├── requirements.txt       # Python dependencies
-└── run_app.py            # Application launcher
+│   ├── static/           # CSS, JS, and assets
+│   └── wsgi.py           # WSGI entry point
+├── database/              # Database schema and setup
+├── scripts/              # Data loading and maintenance
+├── data/                 # Raw data files and exports
+└── docs/                 # Documentation and guides
 ```
 
-## 🌐 Environment Configuration
+## 🎨 Technology Stack
 
-### Development
-```bash
-export FLASK_ENV=development
-export FLASK_DEBUG=1
-export DEV_DB_PATH=database/facultyfinder_dev.db
+- **Backend**: Flask (Python), SQLite/PostgreSQL
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 5
+- **AI Integration**: OpenAI, Anthropic Claude, Google Gemini, xAI Grok
+- **Data Sources**: PubMed, ORCID, Scimago Journal Rankings
+- **Deployment**: Gunicorn, Nginx, Systemd
+- **Theming**: Custom CSS with dark mode support
+
+## 🌐 API Access
+
+FacultyFinder provides a comprehensive REST API for developers:
+
+```python
+import requests
+
+# Search faculty
+response = requests.get(
+    "https://api.facultyfinder.io/v1/faculties",
+    params={"search": "machine learning", "country": "Canada"}
+)
+
+faculty = response.json()
 ```
 
-### Production
-```bash
-export FLASK_ENV=production
-export DB_HOST=localhost
-export DB_USER=facultyfinder_user
-export DB_PASSWORD=your_secure_password
-export DB_NAME=facultyfinder_production
-export SECRET_KEY=your_secret_key
-```
+Visit `/api` for complete documentation.
+
+## 🚀 Deployment
+
+FacultyFinder can be deployed on any VPS or cloud platform. See our deployment guides:
+
+- **Quick Setup**: `QUICK_DEPLOYMENT.md`
+- **Complete Guide**: `DEPLOYMENT_GUIDE.md`
+- **Production Configuration**: `webapp/config.py`
+
+## 📊 Data & Privacy
+
+### Data Sources
+- **Universities**: Official institutional websites and directories
+- **Publications**: PubMed, ORCID, and other academic databases
+- **Journal Rankings**: Scimago Journal & Country Rank
+
+### Privacy Commitment
+- Only publicly available academic information is displayed
+- Faculty can request profile updates or removal
+- No personal data collection without consent
+- GDPR and academic privacy standards compliance
 
 ## 🤝 Contributing
 
-We welcome contributions to FacultyFinder! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions from the academic and developer communities!
 
-### Development Workflow
+### Ways to Contribute
+- **University Data**: Help expand our global coverage
+- **Feature Development**: Implement new functionality
+- **Bug Reports**: Identify and report issues
+- **Documentation**: Improve guides and tutorials
+
+### Development Setup
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+4. Submit a pull request
 
-### Code Style
-- Follow PEP 8 for Python code
-- Use meaningful variable and function names
-- Add docstrings for new functions
-- Maintain consistent indentation (4 spaces)
+## 📞 Support & Contact
+
+- **Documentation**: [Visit our docs](https://facultyfinder.io/docs)
+- **Issues**: [GitHub Issues](https://github.com/facultyfinder/FacultyFinder/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/facultyfinder/FacultyFinder/discussions)
+- **Email**: support@facultyfinder.io
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔗 Related Projects
+## 🌟 Acknowledgments
 
-- **[Xera DB](https://xeradb.com)**: Main research platform ecosystem
-- **[EvidenceDB](https://github.com/xeradb/EvidenceDB)**: Evidence-based medicine network visualization
-- **[OpenScienceTracker](https://github.com/xeradb/OpenScienceTracker)**: Open science publication tracking
-- **[CitingRetracted](https://github.com/xeradb/CitingRetracted)**: Retracted paper citation analysis
-
-## 📞 Support
-
-- **Documentation**: [docs.xeradb.com/facultyfinder](https://docs.xeradb.com/facultyfinder)
-- **Issues**: [GitHub Issues](https://github.com/xeradb/FacultyFinder/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/xeradb/FacultyFinder/discussions)
-- **Email**: support@xeradb.com
-
-## 🙏 Acknowledgments
-
-- **McMaster University**: HEI department data
-- **Scimago Lab**: Journal ranking data
-- **PubMed/NCBI**: Publication metadata
-- **Bootstrap Team**: UI framework
-- **Flask Community**: Web framework
+- **Academic Community**: For providing open access to research data
+- **University Partners**: For supporting global academic collaboration
+- **Open Source Libraries**: For enabling rapid development
+- **Contributors**: For their valuable contributions and feedback
 
 ---
 
 <div align="center">
-  <p>Made with ❤️ for the academic community</p>
-  <p>Part of the <a href="https://xeradb.com">Xera DB</a> research platform ecosystem</p>
+<p><strong>Connecting researchers worldwide through intelligent faculty discovery</strong></p>
+<p>
+  <a href="https://facultyfinder.io">Website</a> •
+  <a href="https://facultyfinder.io/api">API</a> •
+  <a href="https://facultyfinder.io/about">About</a> •
+  <a href="https://facultyfinder.io/contact">Contact</a>
+</p>
 </div>

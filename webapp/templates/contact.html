@@ -1,0 +1,320 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - FacultyFinder{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Page Header -->
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="display-4 fw-bold text-primary mb-3">
+                <i class="fas fa-envelope me-3"></i>
+                Contact Us
+            </h1>
+            <p class="lead text-muted">
+                Have questions about FacultyFinder? Need help finding the right faculty? We're here to help!
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-sm">
+                <div class="card-body p-5">
+                    {% if success %}
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            {{ success }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    {% endif %}
+
+                    {% if error %}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            {{ error }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    {% endif %}
+
+                    <form method="POST" action="{{ url_for('contact') }}">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">
+                                    <i class="fas fa-user me-1"></i>
+                                    Full Name *
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="name" 
+                                       name="name" 
+                                       required 
+                                       placeholder="Your full name"
+                                       value="{{ form_data.name if form_data else '' }}">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope me-1"></i>
+                                    Email Address *
+                                </label>
+                                <input type="email" 
+                                       class="form-control" 
+                                       id="email" 
+                                       name="email" 
+                                       required 
+                                       placeholder="your.email@example.com"
+                                       value="{{ form_data.email if form_data else '' }}">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">
+                                <i class="fas fa-tag me-1"></i>
+                                Subject *
+                            </label>
+                            <select class="form-select" id="subject" name="subject" required>
+                                <option value="">Select a topic...</option>
+                                <option value="General Inquiry" {{ 'selected' if form_data and form_data.subject == 'General Inquiry' else '' }}>General Inquiry</option>
+                                <option value="Faculty Search Help" {{ 'selected' if form_data and form_data.subject == 'Faculty Search Help' else '' }}>Faculty Search Help</option>
+                                <option value="AI Assistant Support" {{ 'selected' if form_data and form_data.subject == 'AI Assistant Support' else '' }}>AI Assistant Support</option>
+                                <option value="Data Issues" {{ 'selected' if form_data and form_data.subject == 'Data Issues' else '' }}>Data Issues/Corrections</option>
+                                <option value="Partnership" {{ 'selected' if form_data and form_data.subject == 'Partnership' else '' }}>University Partnership</option>
+                                <option value="Technical Issue" {{ 'selected' if form_data and form_data.subject == 'Technical Issue' else '' }}>Technical Issue</option>
+                                <option value="Feature Request" {{ 'selected' if form_data and form_data.subject == 'Feature Request' else '' }}>Feature Request</option>
+                                <option value="Other" {{ 'selected' if form_data and form_data.subject == 'Other' else '' }}>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">
+                                <i class="fas fa-comment me-1"></i>
+                                Message *
+                            </label>
+                            <textarea class="form-control" 
+                                      id="message" 
+                                      name="message" 
+                                      rows="6" 
+                                      required 
+                                      placeholder="Please describe your inquiry in detail. Include any specific faculty members, universities, or research areas you're interested in.">{{ form_data.message if form_data else '' }}</textarea>
+                            <div class="form-text">
+                                <small class="text-muted">
+                                    For better assistance, please include:
+                                    • Your current academic level or position
+                                    • Specific research interests
+                                    • Universities or faculty you're interested in
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Contact Information -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-clock fa-2x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">Response Time</h5>
+                            <p class="card-text text-muted">
+                                We typically respond to inquiries within 24 hours during business days.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">Academic Support</h5>
+                            <p class="card-text text-muted">
+                                Get personalized help finding faculty that match your research interests and career goals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-university fa-2x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">University Partnerships</h5>
+                            <p class="card-text text-muted">
+                                Interested in adding your university to FacultyFinder? Let's discuss partnership opportunities worldwide.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3 class="text-center mb-4">Frequently Asked Questions</h3>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                            How do I find faculty in my research area?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Use our Faculty Search page to filter by research interests, university, or department. You can also try our AI Assistant for personalized recommendations based on your CV.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                            How accurate is the faculty information?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We regularly update our database from official university sources. If you notice any outdated information, please contact us and we'll investigate and update it promptly.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                            Can I add my university to the database?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! We're always looking to expand our coverage. Contact us with "University Partnership" as the subject, and we'll discuss how to include your institution's faculty in our database.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                            Is the AI Assistant free to use?
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can use the AI Assistant with your own API keys for free. We also offer one-time analysis for $5 CAD or comprehensive manual review for $50 CAD if you prefer not to use your own API keys.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Auto-hide success/error messages after 5 seconds
+    const alerts = document.querySelectorAll('.alert');
+    alerts.forEach(alert => {
+        setTimeout(() => {
+            if (alert && alert.parentNode) {
+                alert.style.transition = 'opacity 0.5s ease';
+                alert.style.opacity = '0';
+                setTimeout(() => {
+                    if (alert.parentNode) {
+                        alert.parentNode.removeChild(alert);
+                    }
+                }, 500);
+            }
+        }, 5000);
+    });
+
+    // Form validation
+    const form = document.querySelector('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectSelect = document.getElementById('subject');
+    const messageTextarea = document.getElementById('message');
+
+    form.addEventListener('submit', function(e) {
+        let hasErrors = false;
+
+        // Reset previous validation styles
+        [nameInput, emailInput, subjectSelect, messageTextarea].forEach(field => {
+            field.classList.remove('is-invalid');
+        });
+
+        // Validate name
+        if (nameInput.value.trim().length < 2) {
+            nameInput.classList.add('is-invalid');
+            hasErrors = true;
+        }
+
+        // Validate email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailInput.value.trim())) {
+            emailInput.classList.add('is-invalid');
+            hasErrors = true;
+        }
+
+        // Validate subject
+        if (!subjectSelect.value) {
+            subjectSelect.classList.add('is-invalid');
+            hasErrors = true;
+        }
+
+        // Validate message
+        if (messageTextarea.value.trim().length < 10) {
+            messageTextarea.classList.add('is-invalid');
+            hasErrors = true;
+        }
+
+        if (hasErrors) {
+            e.preventDefault();
+            // Show error message
+            const errorAlert = document.createElement('div');
+            errorAlert.className = 'alert alert-danger alert-dismissible fade show';
+            errorAlert.innerHTML = `
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                Please check the highlighted fields and try again.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            form.insertBefore(errorAlert, form.firstChild);
+        }
+    });
+
+    // Real-time validation feedback
+    [nameInput, emailInput, messageTextarea].forEach(field => {
+        field.addEventListener('blur', function() {
+            if (this.value.trim().length > 0) {
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
+            }
+        });
+    });
+
+    emailInput.addEventListener('blur', function() {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailPattern.test(this.value.trim())) {
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        }
+    });
+});
+</script>
+{% endblock %} 

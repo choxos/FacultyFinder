@@ -9,10 +9,10 @@
         <div class="col-12">
             <h1 class="mb-3">
                 <i class="fas fa-university text-primary me-3"></i>
-                Canadian Universities
+                Universities Worldwide
             </h1>
             <p class="lead text-muted">
-                Explore universities across Canada and discover their faculty members, departments, and research strengths.
+                Explore universities from around the world. Discover institutions with leading faculty in your field of research.
             </p>
         </div>
     </div>
@@ -21,213 +21,273 @@
     <div class="search-filters">
         <form method="GET" action="/universities">
             <div class="row">
-                <div class="col-lg-6 mb-3">
+                <div class="col-lg-4 mb-3">
                     <label class="filter-label">Search Universities</label>
-                    <input type="text" class="form-control" name="search" 
-                           placeholder="University name..."
+                    <input type="text" class="form-control" name="search"
+                           placeholder="University name, city, or keywords..."
                            value="{{ search }}">
                 </div>
                 <div class="col-lg-3 col-md-6 mb-3">
-                    <label class="filter-label">Province/State</label>
-                    <select class="form-select" name="province">
-                        <option value="">All Provinces</option>
-                        <option value="Ontario" {% if province == 'Ontario' %}selected{% endif %}>Ontario</option>
-                        <option value="British Columbia" {% if province == 'British Columbia' %}selected{% endif %}>British Columbia</option>
-                        <option value="Quebec" {% if province == 'Quebec' %}selected{% endif %}>Quebec</option>
-                        <option value="Alberta" {% if province == 'Alberta' %}selected{% endif %}>Alberta</option>
-                        <option value="Nova Scotia" {% if province == 'Nova Scotia' %}selected{% endif %}>Nova Scotia</option>
-                        <option value="Manitoba" {% if province == 'Manitoba' %}selected{% endif %}>Manitoba</option>
-                        <option value="Saskatchewan" {% if province == 'Saskatchewan' %}selected{% endif %}>Saskatchewan</option>
-                        <option value="New Brunswick" {% if province == 'New Brunswick' %}selected{% endif %}>New Brunswick</option>
-                        <option value="Newfoundland and Labrador" {% if province == 'Newfoundland and Labrador' %}selected{% endif %}>Newfoundland and Labrador</option>
-                        <option value="Prince Edward Island" {% if province == 'Prince Edward Island' %}selected{% endif %}>Prince Edward Island</option>
+                    <label class="filter-label">Country</label>
+                    <select class="form-select" name="country">
+                        <option value="">All Countries</option>
+                        <option value="Canada" {{ 'selected' if country == 'Canada' else '' }}>Canada</option>
+                        <option value="United States" {{ 'selected' if country == 'United States' else '' }}>United States</option>
+                        <option value="United Kingdom" {{ 'selected' if country == 'United Kingdom' else '' }}>United Kingdom</option>
+                        <option value="Australia" {{ 'selected' if country == 'Australia' else '' }}>Australia</option>
+                        <option value="Germany" {{ 'selected' if country == 'Germany' else '' }}>Germany</option>
+                        <option value="France" {{ 'selected' if country == 'France' else '' }}>France</option>
+                        <option value="Netherlands" {{ 'selected' if country == 'Netherlands' else '' }}>Netherlands</option>
+                        <option value="Switzerland" {{ 'selected' if country == 'Switzerland' else '' }}>Switzerland</option>
+                        <option value="Sweden" {{ 'selected' if country == 'Sweden' else '' }}>Sweden</option>
+                        <option value="Denmark" {{ 'selected' if country == 'Denmark' else '' }}>Denmark</option>
+                        <option value="Norway" {{ 'selected' if country == 'Norway' else '' }}>Norway</option>
+                        <option value="Japan" {{ 'selected' if country == 'Japan' else '' }}>Japan</option>
+                        <option value="Singapore" {{ 'selected' if country == 'Singapore' else '' }}>Singapore</option>
+                        <option value="South Korea" {{ 'selected' if country == 'South Korea' else '' }}>South Korea</option>
+                        <option value="China" {{ 'selected' if country == 'China' else '' }}>China</option>
+                        <option value="Hong Kong" {{ 'selected' if country == 'Hong Kong' else '' }}>Hong Kong</option>
+                        <option value="New Zealand" {{ 'selected' if country == 'New Zealand' else '' }}>New Zealand</option>
+                        <option value="Belgium" {{ 'selected' if country == 'Belgium' else '' }}>Belgium</option>
+                        <option value="Austria" {{ 'selected' if country == 'Austria' else '' }}>Austria</option>
+                        <option value="Italy" {{ 'selected' if country == 'Italy' else '' }}>Italy</option>
+                        <option value="Spain" {{ 'selected' if country == 'Spain' else '' }}>Spain</option>
+                        <option value="Finland" {{ 'selected' if country == 'Finland' else '' }}>Finland</option>
+                        <option value="Israel" {{ 'selected' if country == 'Israel' else '' }}>Israel</option>
                     </select>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-3 d-flex align-items-end">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <label class="filter-label">State/Province/Region</label>
+                    <input type="text" class="form-control" name="province"
+                           placeholder="e.g., Ontario, California, London..."
+                           value="{{ province }}">
+                </div>
+                <div class="col-lg-2 col-md-6 mb-3">
+                    <label class="filter-label">University Type</label>
+                    <select class="form-select" name="type">
+                        <option value="">All Types</option>
+                        <option value="Public" {{ 'selected' if uni_type == 'Public' else '' }}>Public</option>
+                        <option value="Private" {{ 'selected' if uni_type == 'Private' else '' }}>Private</option>
+                        <option value="Research" {{ 'selected' if uni_type == 'Research' else '' }}>Research University</option>
+                        <option value="Liberal Arts" {{ 'selected' if uni_type == 'Liberal Arts' else '' }}>Liberal Arts</option>
+                        <option value="Technical" {{ 'selected' if uni_type == 'Technical' else '' }}>Technical/Engineering</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <label class="filter-label">Language of Instruction</label>
+                    <select class="form-select" name="language">
+                        <option value="">All Languages</option>
+                        <option value="English" {{ 'selected' if language == 'English' else '' }}>English</option>
+                        <option value="French" {{ 'selected' if language == 'French' else '' }}>French</option>
+                        <option value="German" {{ 'selected' if language == 'German' else '' }}>German</option>
+                        <option value="Spanish" {{ 'selected' if language == 'Spanish' else '' }}>Spanish</option>
+                        <option value="Dutch" {{ 'selected' if language == 'Dutch' else '' }}>Dutch</option>
+                        <option value="Italian" {{ 'selected' if language == 'Italian' else '' }}>Italian</option>
+                        <option value="Japanese" {{ 'selected' if language == 'Japanese' else '' }}>Japanese</option>
+                        <option value="Chinese" {{ 'selected' if language == 'Chinese' else '' }}>Chinese</option>
+                        <option value="Korean" {{ 'selected' if language == 'Korean' else '' }}>Korean</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <label class="filter-label">Sort By</label>
+                    <select class="form-select" name="sort">
+                        <option value="faculty_count" {{ 'selected' if sort_by == 'faculty_count' else '' }}>Faculty Count</option>
+                        <option value="department_count" {{ 'selected' if sort_by == 'department_count' else '' }}>Department Count</option>
+                        <option value="name" {{ 'selected' if sort_by == 'name' else '' }}>Name (A-Z)</option>
+                        <option value="year_established" {{ 'selected' if sort_by == 'year_established' else '' }}>Year Established</option>
+                        <option value="location" {{ 'selected' if sort_by == 'location' else '' }}>Location</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 mb-3 d-flex align-items-end">
                     <button type="submit" class="btn btn-primary me-2">
-                        <i class="fas fa-search me-2"></i>Search
+                        <i class="fas fa-search me-2"></i>Search Universities
                     </button>
                     <a href="/universities" class="btn btn-outline-secondary">
-                        <i class="fas fa-times me-2"></i>Clear
+                        <i class="fas fa-times me-2"></i>Clear Filters
                     </a>
                 </div>
             </div>
         </form>
     </div>
     
-    <!-- Results -->
-    <div class="row">
+    <!-- Results Header -->
+    <div class="row mb-4">
         <div class="col-12">
-            {% if universities %}
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h3>Universities ({{ universities|length }} found)</h3>
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-sort me-2"></i>Sort by
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="?{{ request.query_string.decode() }}&sort=name">Name</a></li>
-                            <li><a class="dropdown-item" href="?{{ request.query_string.decode() }}&sort=faculty_count">Faculty Count</a></li>
-                            <li><a class="dropdown-item" href="?{{ request.query_string.decode() }}&sort=location">Location</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    {% for university in universities %}
-                    <div class="col-lg-6 col-xl-4 mb-4">
-                        <div class="university-card facultyfinder-card p-4 h-100">
-                            <div class="mb-3">
-                                <h5 class="mb-2">
-                                    <a href="/faculties?university={{ university.name }}" class="text-decoration-none">
-                                        {{ university.name }}
-                                    </a>
-                                </h5>
-                                                                      <div class="university-location">
-                                          <i class="fas fa-map-marker-alt me-2"></i>
-                                          {{ university.city }}, {{ university.province_state }}
-                                          {% if university.address %}
-                                              <a href="https://www.google.com/maps/search/{{ university.address | urlencode }}" 
-                                                 target="_blank" 
-                                                 class="text-decoration-none ms-2 maps-link"
-                                                 title="View {{ university.name }} on Google Maps">
-                                                  <i class="fas fa-external-link-alt"></i>
-                                              </a>
-                                          {% else %}
-                                              {% set maps_query = university.name + ", " + university.city + ", " + university.province_state + ", " + university.country %}
-                                              <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
-                                                 target="_blank" 
-                                                 class="text-decoration-none ms-2 maps-link"
-                                                 title="View {{ university.name }} on Google Maps">
-                                                  <i class="fas fa-external-link-alt"></i>
-                                              </a>
-                                          {% endif %}
-                                      </div>
-                                      <div class="university-details mt-2">
-                                          {% if university.university_type %}
-                                              <a href="/universities?type={{ university.university_type }}" 
-                                                 class="badge bg-primary text-decoration-none me-2 mb-1"
-                                                 title="Filter by {{ university.university_type }} universities">
-                                                  {{ university.university_type|title }}
-                                              </a>
-                                          {% endif %}
-                                          
-                                          {% if university.languages %}
-                                              {% for language in university.languages.split(';') %}
-                                                  {% if language.strip() %}
-                                                      <a href="/universities?language={{ language.strip() }}" 
-                                                         class="badge bg-info text-decoration-none me-1 mb-1"
-                                                         title="Filter by {{ language.strip() }} universities">
-                                                          {{ language.strip() }}
-                                                      </a>
-                                                  {% endif %}
-                                              {% endfor %}
-                                          {% endif %}
-                                          
-                                          {% if university.year_established %}
-                                              <span class="badge bg-secondary mb-1">
-                                                  Est. {{ university.year_established }}
-                                              </span>
-                                          {% endif %}
-                                      </div>
-                                      <small class="text-muted">{{ university.country }}</small>
-                            </div>
-                            
-                            <div class="row text-center mb-3">
-                                <div class="col-6">
-                                    <div class="publication-metric">
-                                        <div class="h4 mb-1 text-primary">{{ university.professor_count or 0 }}</div>
-                                        <small class="text-muted">Faculty Members</small>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="publication-metric">
-                                        <div class="h4 mb-1 text-secondary">{{ university.department_count or 0 }}</div>
-                                        <small class="text-muted">Departments</small>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <a href="/faculties?university={{ university.name }}" class="btn btn-primary btn-sm">
-                                    <i class="fas fa-users me-1"></i>View Faculty
-                                </a>
-                                <div class="text-muted small">
-                                    Code: {{ university.university_code }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                
-            {% else %}
-                <div class="text-center py-5">
-                    <i class="fas fa-university fa-3x text-muted mb-3"></i>
-                    <h4 class="text-muted">No Universities Found</h4>
-                    <p class="text-muted">
-                        Try adjusting your search criteria to find universities.
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h4 class="mb-2">University Directory</h4>
+                    <p class="text-muted mb-0">
+                        {% if search or country or province or uni_type or language %}
+                            Search Results
+                            {% if country %} in {{ country }}{% endif %}
+                        {% else %}
+                            Showing all universities in our global database
+                        {% endif %}
+                        <span class="text-primary fw-bold">({{ universities|length }} found)</span>
                     </p>
-                    <a href="/universities" class="btn btn-primary">
-                        <i class="fas fa-refresh me-2"></i>Reset Search
-                    </a>
                 </div>
-            {% endif %}
+                <div class="view-toggles">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
-    <!-- Quick Stats -->
-    {% if universities %}
-    <div class="row mt-5">
-        <div class="col-12">
-            <h3 class="text-center mb-4">Quick Statistics</h3>
-        </div>
-        <div class="col-md-3 mb-3">
-            <div class="stat-card">
-                <div class="stat-number">{{ universities|length }}</div>
-                <div class="stat-label">Universities Shown</div>
+    <!-- Universities Grid -->
+    <div id="universities-grid" class="row">
+        {% for university in universities %}
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="university-card facultyfinder-card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h5 class="mb-1">
+                            <a href="/faculties?university={{ university.name }}" class="text-decoration-none university-link">
+                                {{ university.name }}
+                            </a>
+                        </h5>
+                        {% if university.year_established %}
+                            <span class="badge bg-secondary">Est. {{ university.year_established }}</span>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="text-muted mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <strong>{{ university.city }}</strong>
+                            {% if university.province_state %}, {{ university.province_state }}{% endif %}
+                            <br>
+                            <i class="fas fa-globe me-2"></i>
+                            <strong>{{ university.country }}</strong>
+                            {% if university.address %}
+                                <a href="https://www.google.com/maps/search/{{ university.name }}+{{ university.address|urlencode }}" 
+                                   target="_blank" class="text-decoration-none maps-link ms-2"
+                                   title="View on Google Maps">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            {% else %}
+                                <a href="https://www.google.com/maps/search/{{ university.name }}+{{ university.city }}+{{ university.province_state }}+{{ university.country|urlencode }}" 
+                                   target="_blank" class="text-decoration-none maps-link ms-2"
+                                   title="View on Google Maps">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <!-- University Details -->
+                    <div class="university-details mb-3">
+                        {% if university.university_type %}
+                            <a href="/universities?type={{ university.university_type }}"
+                               class="badge bg-primary text-decoration-none me-2 mb-1"
+                               title="Filter by {{ university.university_type }} universities">
+                                {{ university.university_type|title }}
+                            </a>
+                        {% endif %}
+
+                        {% if university.languages %}
+                            {% for language in university.languages.split(';') %}
+                                {% if language.strip() %}
+                                    <a href="/universities?language={{ language.strip() }}"
+                                       class="badge bg-info text-decoration-none me-1 mb-1"
+                                       title="Filter by {{ language.strip() }} language universities">
+                                        {{ language.strip() }}
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="university-stats mt-auto">
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <div class="stat-item">
+                                    <div class="stat-number text-primary fw-bold">{{ university.professor_count or 0 }}</div>
+                                    <div class="stat-label small text-muted">Faculty</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-item">
+                                    <div class="stat-number text-primary fw-bold">{{ university.department_count or 0 }}</div>
+                                    <div class="stat-label small text-muted">Departments</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="/faculties?university={{ university.name }}" class="btn btn-sm btn-outline-primary w-100">
+                                <i class="fas fa-users me-2"></i>View Faculty
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <div class="stat-card">
-                <div class="stat-number">{{ universities|sum(attribute='professor_count') or 0 }}</div>
-                <div class="stat-label">Total Faculty</div>
+        {% else %}
+            <div class="col-12">
+                <div class="text-center py-5">
+                    <div class="mb-4">
+                        <i class="fas fa-university fa-4x text-muted"></i>
+                    </div>
+                    <h4 class="text-muted">No Universities Found</h4>
+                    <p class="text-muted mb-4">
+                        We couldn't find any universities matching your search criteria.
+                        <br>Try adjusting your filters or search terms.
+                    </p>
+                    <a href="/universities" class="btn btn-primary">
+                        <i class="fas fa-times me-2"></i>Clear All Filters
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <div class="stat-card">
-                <div class="stat-number">{{ universities|map(attribute='province_state')|unique|list|length }}</div>
-                <div class="stat-label">Provinces Represented</div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-3">
-            <div class="stat-card">
-                <div class="stat-number">{{ universities|sum(attribute='department_count') or 0 }}</div>
-                <div class="stat-label">Total Departments</div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
-    {% endif %}
 </div>
 {% endblock %}
 
 {% block extra_js %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Search form enhancements
-    const searchForm = document.querySelector('.search-filters form');
-    const searchInput = searchForm.querySelector('input[name="search"]');
+    // View toggle functionality
+    const gridView = document.querySelector('[data-view="grid"]');
+    const listView = document.querySelector('[data-view="list"]');
+    const universitiesGrid = document.getElementById('universities-grid');
     
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            searchForm.submit();
-        }
+    if (gridView && listView && universitiesGrid) {
+        gridView.addEventListener('click', function() {
+            universitiesGrid.className = 'row';
+            gridView.classList.add('active');
+            listView.classList.remove('active');
+        });
+        
+        listView.addEventListener('click', function() {
+            universitiesGrid.className = 'list-group';
+            listView.classList.add('active');
+            gridView.classList.remove('active');
+        });
+    }
+    
+    // Search form enhancements
+    const searchInputs = document.querySelectorAll('.search-filters input, .search-filters select');
+    searchInputs.forEach(input => {
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && this.type !== 'submit') {
+                document.querySelector('.search-filters form').submit();
+            }
+        });
     });
     
-    // Province filter change
-    const provinceSelect = searchForm.querySelector('select[name="province"]');
-    provinceSelect.addEventListener('change', function() {
-        searchForm.submit();
+    // Auto-submit on dropdown changes for better UX
+    const selectInputs = document.querySelectorAll('.search-filters select');
+    selectInputs.forEach(select => {
+        select.addEventListener('change', function() {
+            // Optional: auto-submit on select change
+            // document.querySelector('.search-filters form').submit();
+        });
     });
 });
 </script>

@@ -5,26 +5,11 @@ Flask-based web interface for discovering academic faculty and their research
 """
 
 from flask import Flask, render_template, request, jsonify, send_from_directory
-from flask_caching import Cache
-from flask_login import current_user, login_required
-import psycopg2
-import psycopg2.extras
-from psycopg2 import pool
 import sqlite3
 import json
 import os
 from datetime import datetime, timedelta
 import logging
-import pandas as pd
-from collections import defaultdict
-import threading
-from functools import wraps
-import time
-
-# Import authentication and admin modules
-from auth import AuthManager, login_manager
-from admin import admin_bp, init_admin_dashboard
-from user_routes import auth_bp, user_bp, init_user_manager
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -32,1174 +17,140 @@ logger = logging.getLogger(__name__)
 
 # Initialize Flask app
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'development-key-change-in-production'
 
-# Configure caching
-cache = Cache(app, config={
-    'CACHE_TYPE': 'simple',
-    'CACHE_DEFAULT_TIMEOUT': 300  # 5 minutes default
-})
+# Database configuration
+DEV_DB = '../database/facultyfinder_dev.db'
 
-# Load configuration based on environment
-env = os.environ.get('FLASK_ENV', 'development')
-if env == 'production':
+# Simple user context for templates
+@app.context_processor
+def inject_user():
+    """Inject current_user context for templates"""
+    class AnonymousUser:
+        is_authenticated = False
+        def is_admin(self):
+            return False
+        def is_moderator(self):
+            return False
+        def get_full_name(self):
+            return "Guest"
+    
+    return dict(current_user=AnonymousUser())
+
+def get_db_connection():
+    """Get database connection"""
     try:
-        from config import ProductionConfig
-        app.config.from_object(ProductionConfig)
-        DB_CONFIG = ProductionConfig.DB_CONFIG
-        DEV_DB = None
-    except ImportError:
-        # Fallback configuration
-        app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-key-change-in-production')
-        DB_CONFIG = {
-            'host': os.environ.get('DB_HOST', 'localhost'),
-            'port': int(os.environ.get('DB_PORT', 5432)),
-            'user': os.environ.get('DB_USER', 'ff_user'),
-            'password': os.environ.get('DB_PASSWORD', 'Choxos10203040'),
-            'database': os.environ.get('DB_NAME', 'ff_production')
-        }
-        DEV_DB = None
-else:
-    # Development configuration
-    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'facultyfinder-dev-secret-key-change-in-production')
-    DB_CONFIG = {
-        'host': os.environ.get('DB_HOST', 'localhost'),
-        'port': os.environ.get('DB_PORT', 5432),
-        'user': os.environ.get('DB_USER', 'facultyfinder_user'),
-        'password': os.environ.get('DB_PASSWORD', 'your_secure_password'),
-        'database': os.environ.get('DB_NAME', 'facultyfinder_production')
-    }
-    DEV_DB = os.environ.get('DEV_DB_PATH', '../database/facultyfinder_dev.db')
-
-class DatabaseManager:
-    """Optimized database connection and query manager with connection pooling"""
-    
-    _instance = None
-    _lock = threading.Lock()
-    
-    def __new__(cls, *args, **kwargs):
-        if not cls._instance:
-            with cls._lock:
-                if not cls._instance:
-                    cls._instance = super(DatabaseManager, cls).__new__(cls)
-        return cls._instance
-    
-    def __init__(self, config=None, dev_mode=None):
-        if hasattr(self, 'initialized'):
-            return
-            
-        self.config = config or DB_CONFIG
-        self.dev_mode = dev_mode if dev_mode is not None else (DEV_DB is not None)
-        self.connection_pool = None
-        self._local = threading.local()
-        self.initialized = True
-        
-        if not self.dev_mode:
-            try:
-                # Create connection pool for PostgreSQL
-                self.connection_pool = psycopg2.pool.ThreadedConnectionPool(
-                    minconn=2,  # Minimum connections
-                    maxconn=20,  # Maximum connections
-                    **self.config
-                )
-                logger.info("Database connection pool initialized")
-            except Exception as e:
-                logger.error(f"Failed to create connection pool: {e}")
-    
-    def get_connection(self):
-        """Get a database connection from pool or create new SQLite connection"""
-        if self.dev_mode:
-            # For SQLite, use thread-local connections
-            if not hasattr(self._local, 'conn') or self._local.conn is None:
-                self._local.conn = sqlite3.connect(DEV_DB, check_same_thread=False)
-                self._local.conn.row_factory = sqlite3.Row
-                # Enable WAL mode for better concurrency
-                self._local.conn.execute('PRAGMA journal_mode=WAL')
-                self._local.conn.execute('PRAGMA synchronous=NORMAL')
-                self._local.conn.execute('PRAGMA cache_size=10000')
-                self._local.conn.execute('PRAGMA temp_store=memory')
-            return self._local.conn
-        else:
-            # For PostgreSQL, get connection from pool
-            if self.connection_pool:
-                return self.connection_pool.getconn()
-            else:
-                # Fallback to direct connection
-                return psycopg2.connect(**self.config)
-    
-    def return_connection(self, conn):
-        """Return connection to pool (PostgreSQL only)"""
-        if not self.dev_mode and self.connection_pool:
-            self.connection_pool.putconn(conn)
-    
-    def execute_query(self, query, params=None, fetch_one=False):
-        """Execute a query and return results with connection pooling"""
-        conn = None
-        try:
-            conn = self.get_connection()
-            
-            if self.dev_mode:
-                cursor = conn.cursor()
-                cursor.execute(query, params or [])
-                
-                if fetch_one:
-                    result = cursor.fetchone()
-                    return dict(result) if result else None
-                else:
-                    results = cursor.fetchall()
-                    return [dict(row) for row in results]
-            else:
-                cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-                cursor.execute(query, params)
-                
-                if fetch_one:
-                    result = cursor.fetchone()
-                    return dict(result) if result else None
-                else:
-                    results = cursor.fetchall()
-                    return [dict(row) for row in results]
-                    
-        except Exception as e:
-            logger.error(f"Query execution failed: {e}")
-            if conn:
-                conn.rollback()
-            return None
-        finally:
-            if conn and not self.dev_mode:
-                self.return_connection(conn)
-    
-    def execute_query_with_pagination(self, query, params=None, limit=20, offset=0):
-        """Execute query with database-level pagination for better performance"""
-        try:
-            # Add LIMIT and OFFSET to query
-            if self.dev_mode:
-                paginated_query = f"{query} LIMIT ? OFFSET ?"
-                paginated_params = (params or []) + [limit, offset]
-            else:
-                paginated_query = f"{query} LIMIT %s OFFSET %s"
-                paginated_params = (params or []) + [limit, offset]
-            
-            # Get count for total records (optimized)
-            count_query = f"SELECT COUNT(*) as total FROM ({query}) as count_subquery"
-            count_result = self.execute_query(count_query, params, fetch_one=True)
-            total = count_result['total'] if count_result else 0
-            
-            # Get paginated results
-            results = self.execute_query(paginated_query, paginated_params)
-            
-            return {
-                'data': results or [],
-                'total': total,
-                'limit': limit,
-                'offset': offset,
-                'has_more': offset + limit < total
-            }
-        except Exception as e:
-            logger.error(f"Paginated query failed: {e}")
-            return {'data': [], 'total': 0, 'limit': limit, 'offset': offset, 'has_more': False}
-
-# Performance monitoring decorator
-def monitor_performance(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        start_time = time.time()
-        result = func(*args, **kwargs)
-        end_time = time.time()
-        logger.info(f"{func.__name__} executed in {end_time - start_time:.3f}s")
-        return result
-    return wrapper
-
-# Initialize optimized database manager
-db = DatabaseManager(DB_CONFIG, dev_mode=(DEV_DB is not None))
-
-# Initialize authentication
-auth_manager = AuthManager(db)
-auth_manager.init_app(app)
-
-# Initialize admin dashboard
-init_admin_dashboard(db, auth_manager)
-
-# Initialize user manager
-init_user_manager(db, auth_manager)
-
-# Register blueprints
-app.register_blueprint(auth_bp, url_prefix='/auth')
-app.register_blueprint(user_bp, url_prefix='/user')
-app.register_blueprint(admin_bp, url_prefix='/admin')
-
-# Add health check endpoint
-@app.route('/health')
-def health_check():
-    """Health check endpoint for monitoring"""
-    try:
-        # Test database connection
-        result = db.execute_query("SELECT 1")
-        if result:
-            return jsonify({
-                'status': 'healthy',
-                'database': 'connected',
-                'timestamp': datetime.now().isoformat()
-            }), 200
-        else:
-            return jsonify({
-                'status': 'unhealthy',
-                'database': 'disconnected',
-                'timestamp': datetime.now().isoformat()
-            }), 503
+        conn = sqlite3.connect(DEV_DB)
+        conn.row_factory = sqlite3.Row
+        return conn
     except Exception as e:
-        return jsonify({
-            'status': 'unhealthy',
-            'error': str(e),
-            'timestamp': datetime.now().isoformat()
-        }), 503
+        logger.error(f"Database connection error: {e}")
+        return None
 
-# Add performance headers
-@app.after_request
-def after_request(response):
-    """Add performance and caching headers"""
-    if request.endpoint in ['static', 'send_static_file']:
-        # Cache static files for 1 year
-        response.cache_control.max_age = 31536000
-        response.cache_control.public = True
-        response.add_etag()
-    elif request.endpoint in ['api_professors', 'api_universities', 'api_faculty_search']:
-        # Cache API responses for 5 minutes
-        response.cache_control.max_age = 300
-        response.cache_control.public = True
-    elif request.endpoint in ['index', 'universities', 'faculties']:
-        # Cache pages for 2 minutes
-        response.cache_control.max_age = 120
-        response.cache_control.public = True
-    
-    # Add performance headers
-    response.headers['X-Content-Type-Options'] = 'nosniff'
-    response.headers['X-Frame-Options'] = 'DENY'
-    response.headers['X-XSS-Protection'] = '1; mode=block'
-    
-    return response
-
-# Routes with optimizations
 @app.route('/')
-@monitor_performance
 def index():
-    """Main landing page with cached data"""
-    stats = get_summary_statistics()
-    top_universities = get_top_universities(10)
-    
-    return render_template('index.html',
-                         stats=stats,
-                         top_universities=top_universities)
-
-@app.route('/universities')
-@monitor_performance
-def universities():
-    """Universities listing page with optimized search"""
-    # Get search parameters
-    search = request.args.get('search', '').strip()
-    country = request.args.get('country', '')
-    province = request.args.get('province', '')
-    uni_type = request.args.get('type', '')
-    language = request.args.get('language', '')
-    sort_by = request.args.get('sort', 'faculty_count')
-    page = int(request.args.get('page', 1))
-    per_page = 20
-    offset = (page - 1) * per_page
-    
-    # Get search results with pagination
-    result = search_universities_optimized(search, country, province, uni_type, language, sort_by, per_page, offset)
-    universities_data = result['data']
-    
-    # Get filter options (cached)
-    filters = get_available_filters()
-    
-    return render_template('universities.html',
-                         universities=universities_data,
-                         search=search, country=country, province=province,
-                         uni_type=uni_type, language=language, sort_by=sort_by,
-                         available_countries=filters.get('countries', []),
-                         available_provinces=filters.get('provinces', []),
-                         available_types=filters.get('types', []),
-                         available_languages=filters.get('languages', []),
-                         pagination=result)
+    """Home page"""
+    return render_template('index.html')
 
 @app.route('/faculties')
-@monitor_performance
 def faculties():
-    """Faculty listing page with optimized search"""
-    # Get search parameters
-    search = request.args.get('search', '').strip()
-    university = request.args.get('university', '')
-    department = request.args.get('department', '')
-    research_area = request.args.get('research_area', '')
-    degree = request.args.get('degree', '')
-    sort_by = request.args.get('sort', 'publication_count')
-    page = int(request.args.get('page', 1))
-    per_page = 20
-    offset = (page - 1) * per_page
-    
-    # Get search results with pagination
-    result = search_faculty_optimized(search, university, department, research_area, degree, sort_by, per_page, offset)
-    faculty_data = result['data']
-    
-    # Get filter options (cached)
-    filters = get_available_filters()
-    
-    return render_template('faculties.html',
-                         faculty=faculty_data,
-                         search=search, university=university, department=department,
-                         research_area=research_area, degree=degree, sort_by=sort_by,
-                         available_universities=filters.get('universities', []),
-                         available_departments=filters.get('departments', []),
-                         available_degrees=filters.get('degrees', []),
-                         pagination=result)
-
-@app.route('/professor/<int:professor_id>')
-@monitor_performance
-def professor_profile(professor_id):
-    """Individual professor profile page with optimized data loading"""
-    professor = get_professor_details(professor_id)
-    if not professor:
-        return render_template('404.html'), 404
-    
-    # Get publications with pagination (first 5)
-    publications_result = get_professor_publications_optimized(professor_id, limit=5, offset=0)
-    publications = publications_result['data']
-    
-    # Get other data (these could be further optimized with async loading)
-    collaborators = get_professor_collaborators(professor_id)
-    journal_metrics = get_professor_journal_metrics(professor_id)
-    degrees = get_professor_degrees(professor_id)
-    
-    # Citation data (if available)
+    """Faculty listing page - simplified version"""
     try:
-        from citation_analysis import CitationAnalyzer
-        analyzer = CitationAnalyzer(db_path=DEV_DB if DEV_DB else '/tmp/citations.db')
-        citation_metrics = analyzer.calculate_citation_metrics(professor_id)
-        top_cited_papers = analyzer.get_top_cited_papers(professor_id, limit=5)
-        collaboration_network = analyzer.get_collaboration_network(professor_id)
-    except:
-        citation_metrics = None
-        top_cited_papers = []
-        collaboration_network = None
+        conn = get_db_connection()
+        if not conn:
+            return "Database connection error", 500
+        
+        # Simple query to get faculty with university names
+        query = """
+        SELECT p.id, p.name, p.department, p.research_areas, u.name as university_name
+        FROM professors p
+        LEFT JOIN universities u ON p.university_id = u.id
+        ORDER BY p.name
+        LIMIT 50
+        """
+        
+        cursor = conn.execute(query)
+        faculty_data = [dict(row) for row in cursor.fetchall()]
+        conn.close()
+        
+        return render_template('faculties.html',
+                             faculty=faculty_data,
+                             search='', university='', department='',
+                             research_area='', degree='', sort_by='name',
+                             available_universities=[],
+                             available_departments=[],
+                             available_degrees=[],
+                             pagination={'has_more': False, 'total': len(faculty_data)})
     
-    return render_template('professor_profile.html',
-                         professor=professor,
-                         publications=publications,
-                         collaborators=collaborators,
-                         journal_metrics=journal_metrics,
-                         degrees=degrees,
-                         citation_metrics=citation_metrics,
-                         top_cited_papers=top_cited_papers,
-                         collaboration_network=collaboration_network,
-                         publications_pagination=publications_result)
+    except Exception as e:
+        logger.error(f"Error in faculties route: {e}")
+        return f"Error loading faculties: {str(e)}", 500
+
+@app.route('/universities')
+def universities():
+    """Universities listing page"""
+    return render_template('universities.html', universities=[])
 
 @app.route('/ai-assistant')
 def ai_assistant():
-    """AI Assistant page for CV analysis"""
+    """AI Assistant page"""
     return render_template('ai_assistant.html')
-
-@app.route('/api/analyze-cv', methods=['POST'])
-def analyze_cv():
-    """Handle CV analysis requests"""
-    try:
-        # Check if file was uploaded
-        if 'cv_file' not in request.files:
-            return jsonify({'success': False, 'error': 'No CV file uploaded'})
-        
-        file = request.files['cv_file']
-        if file.filename == '':
-            return jsonify({'success': False, 'error': 'No file selected'})
-        
-        # Get form data
-        selected_ai = request.form.get('selected_ai')
-        payment_method = request.form.get('payment_method')
-        api_key = request.form.get('api_key', '')
-        
-        # Validate inputs
-        if not selected_ai or not payment_method:
-            return jsonify({'success': False, 'error': 'Missing required parameters'})
-        
-        if payment_method == 'api-key' and not api_key:
-            return jsonify({'success': False, 'error': 'API key required'})
-        
-        # Save uploaded file temporarily
-        import os
-        import tempfile
-        from werkzeug.utils import secure_filename
-        
-        filename = secure_filename(file.filename)
-        temp_dir = tempfile.gettempdir()
-        file_path = os.path.join(temp_dir, filename)
-        file.save(file_path)
-        
-        try:
-            # Extract text from CV
-            cv_text = extract_cv_text(file_path)
-            
-            # Process based on payment method
-            if payment_method == 'api-key':
-                # Use user's API key for analysis
-                results = analyze_with_ai(cv_text, selected_ai, api_key)
-            elif payment_method == 'one-time':
-                # Handle Stripe payment first
-                return jsonify({'success': False, 'error': 'Payment processing not yet implemented'})
-            elif payment_method == 'manual':
-                # Queue for manual review
-                return jsonify({'success': False, 'error': 'Manual review processing not yet implemented'})
-            else:
-                return jsonify({'success': False, 'error': 'Invalid payment method'})
-            
-            # Generate results HTML
-            results_html = generate_results_html(results)
-            
-            return jsonify({
-                'success': True,
-                'data': {
-                    'html': results_html,
-                    'matches': results.get('matches', []),
-                    'score': results.get('overall_score', 0)
-                }
-            })
-            
-        finally:
-            # Clean up temporary file
-            if os.path.exists(file_path):
-                os.remove(file_path)
-                
-    except Exception as e:
-        app.logger.error(f"CV analysis error: {str(e)}")
-        return jsonify({'success': False, 'error': str(e)})
-
-def extract_cv_text(file_path):
-    """Extract text content from PDF or DOCX files"""
-    import os
-    from pathlib import Path
-    
-    file_ext = Path(file_path).suffix.lower()
-    
-    if file_ext == '.pdf':
-        try:
-            import PyPDF2
-            text = ""
-            with open(file_path, 'rb') as file:
-                pdf_reader = PyPDF2.PdfReader(file)
-                for page in pdf_reader.pages:
-                    text += page.extract_text() + "\n"
-            return text
-        except ImportError:
-            # Fallback to pdfplumber if PyPDF2 not available
-            try:
-                import pdfplumber
-                text = ""
-                with pdfplumber.open(file_path) as pdf:
-                    for page in pdf.pages:
-                        text += page.extract_text() + "\n"
-                return text
-            except ImportError:
-                raise Exception("PDF processing library not available. Please install PyPDF2 or pdfplumber.")
-    
-    elif file_ext == '.docx':
-        try:
-            from docx import Document
-            doc = Document(file_path)
-            text = ""
-            for paragraph in doc.paragraphs:
-                text += paragraph.text + "\n"
-            return text
-        except ImportError:
-            raise Exception("DOCX processing library not available. Please install python-docx.")
-    
-    else:
-        raise Exception("Unsupported file format. Please upload PDF or DOCX files only.")
-
-def analyze_with_ai(cv_text, ai_service, api_key):
-    """Analyze CV using selected AI service"""
-    
-    # Get faculty data for context
-    db = DatabaseManager()
-    faculty_data = db.search_faculty('', '', '', '')  # Get all faculty
-    
-    # Create context about available faculty
-    faculty_context = ""
-    for prof in faculty_data[:50]:  # Limit to first 50 for context
-        faculty_context += f"- {prof['name']} at {prof['university_name']}, {prof['department']}: {prof['research_areas']}\n"
-    
-    prompt = f"""
-    As an expert academic advisor, analyze the following CV and recommend the best faculty matches from our database.
-    
-    CV Content:
-    {cv_text}
-    
-    Available Faculty (sample):
-    {faculty_context}
-    
-    Please provide:
-    1. Top 10 faculty recommendations with match scores (0-100)
-    2. Reasoning for each recommendation
-    3. Research alignment analysis
-    4. Suggested approach for contacting each faculty
-    5. Overall CV strengths and improvement suggestions
-    
-    Format your response as structured JSON with the following format:
-    {{
-        "overall_score": 85,
-        "cv_strengths": ["strength1", "strength2"],
-        "cv_improvements": ["improvement1", "improvement2"],
-        "matches": [
-            {{
-                "faculty_name": "Dr. John Smith",
-                "university": "McMaster University",
-                "department": "Engineering",
-                "match_score": 95,
-                "reasoning": "Strong alignment in AI research...",
-                "contact_strategy": "Mention your ML background..."
-            }}
-        ]
-    }}
-    """
-    
-    try:
-        if ai_service == 'claude':
-            import anthropic
-            client = anthropic.Anthropic(api_key=api_key)
-            response = client.messages.create(
-                model="claude-3-sonnet-20240229",
-                max_tokens=4000,
-                messages=[{"role": "user", "content": prompt}]
-            )
-            result = response.content[0].text
-            
-        elif ai_service == 'chatgpt':
-            import openai
-            client = openai.OpenAI(api_key=api_key)
-            response = client.chat.completions.create(
-                model="gpt-4",
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=4000
-            )
-            result = response.choices[0].message.content
-            
-        elif ai_service == 'gemini':
-            import google.generativeai as genai
-            genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-pro')
-            response = model.generate_content(prompt)
-            result = response.text
-            
-        elif ai_service == 'grok':
-            # Note: Grok API integration would go here
-            # For now, return a placeholder
-            raise Exception("Grok API integration not yet available")
-        
-        else:
-            raise Exception(f"Unsupported AI service: {ai_service}")
-        
-        # Parse JSON response
-        import json
-        import re
-        
-        # Extract JSON from response (in case there's extra text)
-        json_match = re.search(r'\{.*\}', result, re.DOTALL)
-        if json_match:
-            json_str = json_match.group()
-            return json.loads(json_str)
-        else:
-            # Fallback: create structured response from text
-            return {
-                "overall_score": 75,
-                "cv_strengths": ["Well-structured", "Clear objectives"],
-                "cv_improvements": ["Add more publications", "Strengthen research focus"],
-                "matches": [
-                    {
-                        "faculty_name": "Sample Faculty",
-                        "university": "Sample University",
-                        "department": "Sample Department",
-                        "match_score": 80,
-                        "reasoning": "Analysis completed successfully",
-                        "contact_strategy": "Professional email recommended"
-                    }
-                ]
-            }
-            
-    except Exception as e:
-        app.logger.error(f"AI analysis error: {str(e)}")
-        raise Exception(f"AI analysis failed: {str(e)}")
-
-def generate_results_html(results):
-    """Generate HTML for displaying analysis results"""
-    html = f"""
-    <div class="analysis-results">
-        <div class="row mb-4">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h4 class="text-primary">Overall Match Score</h4>
-                        <div class="display-3 text-success">{results.get('overall_score', 0)}%</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5>CV Strengths</h5>
-                        <ul>
-                            {''.join([f'<li>{strength}</li>' for strength in results.get('cv_strengths', [])])}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mb-4">
-            <h4>Top Faculty Recommendations</h4>
-            <div class="row">
-    """
-    
-    for i, match in enumerate(results.get('matches', [])[:10]):
-        html += f"""
-                <div class="col-md-6 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h6 class="card-title">{match.get('faculty_name', 'Unknown')}</h6>
-                                <span class="badge bg-primary">{match.get('match_score', 0)}%</span>
-                            </div>
-                            <p class="text-muted small mb-2">{match.get('university', '')} - {match.get('department', '')}</p>
-                            <p class="small">{match.get('reasoning', '')[:150]}...</p>
-                            <div class="alert alert-light small">
-                                <strong>Contact Strategy:</strong> {match.get('contact_strategy', '')[:100]}...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        """
-    
-    html += """
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-header">
-                <h5>CV Improvement Suggestions</h5>
-            </div>
-            <div class="card-body">
-                <ul>
-    """
-    
-    for improvement in results.get('cv_improvements', []):
-        html += f"<li>{improvement}</li>"
-    
-    html += """
-                </ul>
-            </div>
-        </div>
-    </div>
-    """
-    
-    return html
 
 @app.route('/about')
 def about():
     """About page"""
     return render_template('about.html')
 
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    """Contact us page with form"""
+    if request.method == 'POST':
+        # Get form data
+        name = request.form.get('name', '').strip()
+        email = request.form.get('email', '').strip()
+        subject = request.form.get('subject', '').strip()
+        message = request.form.get('message', '').strip()
+        
+        # Basic validation
+        if not all([name, email, subject, message]):
+            return render_template('contact.html', 
+                                 error="Please fill in all required fields.",
+                                 form_data=request.form)
+        
+        # Here you would typically:
+        # 1. Send email notification
+        # 2. Store in database
+        # 3. Send confirmation email
+        
+        # For now, just show success message
+        success_message = f"Thank you {name}! Your message has been received. We'll get back to you at {email} within 24 hours."
+        return render_template('contact.html', success=success_message)
+    
+    return render_template('contact.html')
+
+@app.route('/health')
+def health():
+    """Health check endpoint"""
+    try:
+        conn = get_db_connection()
+        if conn:
+            cursor = conn.execute("SELECT COUNT(*) FROM professors")
+            count = cursor.fetchone()[0]
+            conn.close()
+            return jsonify({
+                'status': 'healthy',
+                'database': 'connected',
+                'professors_count': count
+            })
+        else:
+            return jsonify({'status': 'unhealthy', 'database': 'disconnected'}), 500
+    except Exception as e:
+        return jsonify({'status': 'unhealthy', 'error': str(e)}), 500
+
 @app.route('/api')
 def api_documentation():
     """API documentation page"""
     return render_template('api_docs.html')
 
-# API Endpoints
-@app.route('/api/v1/professors')
-def api_professors():
-    """API endpoint for professor data"""
-    search = request.args.get('search', '')
-    university = request.args.get('university', '')
-    limit = min(int(request.args.get('limit', 50)), 100)
-    offset = int(request.args.get('offset', 0))
-    
-    faculty_data = search_faculty(search, university, limit=limit, offset=offset)
-    
-    return jsonify({
-        'professors': faculty_data,
-        'total': len(faculty_data),
-        'limit': limit,
-        'offset': offset
-    })
-
-@app.route('/api/v1/universities')
-def api_universities():
-    """API endpoint for university data"""
-    universities_data = get_all_universities()
-    return jsonify({'universities': universities_data})
-
-@app.route('/api/v1/professor/<int:professor_id>')
-def api_professor_detail(professor_id):
-    """API endpoint for individual professor details"""
-    professor = get_professor_details(professor_id)
-    if not professor:
-        return jsonify({'error': 'Professor not found'}), 404
-    
-    publications = get_professor_publications(professor_id)
-    
-    return jsonify({
-        'professor': professor,
-        'publications': publications
-    })
-
-@app.route('/api/v1/professor/<int:professor_id>/publications')
-@monitor_performance
-def api_professor_publications(professor_id):
-    """API endpoint for professor publications with optimized pagination"""
-    try:
-        limit = min(int(request.args.get('limit', 10)), 50)
-        offset = int(request.args.get('offset', 0))
-        
-        result = get_professor_publications_optimized(professor_id, limit, offset)
-        
-        return jsonify({
-            'success': True,
-            **result
-        })
-    except Exception as e:
-        logger.error(f"Error getting paginated publications: {e}")
-        return jsonify({'success': False, 'error': str(e)}), 500
-
-@app.route('/api/v1/faculties/search')
-@monitor_performance
-def api_faculty_search():
-    """API endpoint for faculty search with optimized pagination"""
-    try:
-        search = request.args.get('search', '')
-        university = request.args.get('university', '')
-        department = request.args.get('department', '')
-        research_area = request.args.get('research_area', '')
-        degree = request.args.get('degree', '')
-        sort_by = request.args.get('sort_by', 'publication_count')
-        limit = min(int(request.args.get('limit', 20)), 100)
-        offset = int(request.args.get('offset', 0))
-        
-        result = search_faculty_optimized(search, university, department, research_area, degree, sort_by, limit, offset)
-        
-        return jsonify({
-            'success': True,
-            'faculty': result['data'],
-            **result
-        })
-    except Exception as e:
-        logger.error(f"Error in faculty search API: {e}")
-        return jsonify({'success': False, 'error': str(e)}), 500
-
-# Helper functions with caching and optimization
-@cache.memoize(timeout=600)  # Cache for 10 minutes
-@monitor_performance
-def get_summary_statistics():
-    """Get summary statistics for dashboard with single optimized query"""
-    try:
-        # Use a single query with subqueries for better performance
-        query = """
-        SELECT 
-            (SELECT COUNT(*) FROM professors) as total_professors,
-            (SELECT COUNT(*) FROM universities) as total_universities,
-            (SELECT COUNT(*) FROM publications) as total_publications,
-            (SELECT COUNT(DISTINCT country) FROM universities) as countries_covered
-        """
-        result = db.execute_query(query, fetch_one=True)
-        return result if result else {
-            'total_professors': 0, 'total_universities': 0, 
-            'total_publications': 0, 'countries_covered': 0
-        }
-    except Exception as e:
-        logger.error(f"Error getting summary statistics: {e}")
-        return {'total_professors': 0, 'total_universities': 0, 'total_publications': 0, 'countries_covered': 0}
-
-@cache.memoize(timeout=1800)  # Cache for 30 minutes
-@monitor_performance
-def get_top_universities(limit=10):
-    """Get top universities by faculty count with optimized query (excluding universities with 0 faculty)"""
-    try:
-        query = """
-        SELECT u.*, 
-               COUNT(p.id) as professor_count, 
-               COUNT(DISTINCT p.department) as department_count
-        FROM universities u
-        INNER JOIN professors p ON u.id = p.university_id
-        GROUP BY u.id, u.name, u.city, u.province_state, u.country, 
-                 u.address, u.university_type, u.languages, u.year_established
-        ORDER BY professor_count DESC, u.name ASC
-        LIMIT ?
-        """
-        return db.execute_query(query, [limit]) or []
-    except Exception as e:
-        logger.error(f"Error getting top universities: {e}")
-        return []
-
-@monitor_performance
-def search_universities_optimized(search='', country='', province='', uni_type='', language='', sort_by='faculty_count', limit=20, offset=0):
-    """Optimized university search with database-level pagination (excluding universities with 0 faculty)"""
-    try:
-        conditions = []
-        params = []
-        
-        base_query = """
-        SELECT u.*, 
-               COUNT(p.id) as professor_count, 
-               COUNT(DISTINCT p.department) as department_count
-        FROM universities u
-        INNER JOIN professors p ON u.id = p.university_id
-        """
-        
-        if search:
-            conditions.append("u.name LIKE ?")
-            params.append(f"%{search}%")
-        
-        if country:
-            conditions.append("u.country = ?")
-            params.append(country)
-        
-        if province:
-            conditions.append("u.province_state = ?")
-            params.append(province)
-        
-        if uni_type:
-            conditions.append("u.university_type = ?")
-            params.append(uni_type)
-        
-        if language:
-            conditions.append("u.languages LIKE ?")
-            params.append(f"%{language}%")
-        
-        where_clause = " WHERE " + " AND ".join(conditions) if conditions else ""
-        group_clause = " GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address, u.university_type, u.languages, u.year_established"
-        # Add HAVING clause to ensure we only show universities with faculty
-        having_clause = " HAVING COUNT(p.id) > 0"
-        
-        # Determine sort order
-        sort_orders = {
-            'faculty_count': 'professor_count DESC, u.name ASC',
-            'department_count': 'department_count DESC, u.name ASC',
-            'name': 'u.name ASC',
-            'year_established': 'u.year_established DESC, u.name ASC',
-            'location': 'u.province_state ASC, u.city ASC, u.name ASC'
-        }
-        order_clause = f" ORDER BY {sort_orders.get(sort_by, sort_orders['faculty_count'])}"
-        
-        full_query = base_query + where_clause + group_clause + having_clause + order_clause
-        
-        return db.execute_query_with_pagination(full_query, params, limit, offset)
-    except Exception as e:
-        logger.error(f"Error searching universities: {e}")
-        return {'data': [], 'total': 0, 'limit': limit, 'offset': offset, 'has_more': False}
-
-@monitor_performance
-def search_faculty_optimized(search='', university='', department='', research_area='', degree='', sort_by='publication_count', limit=20, offset=0):
-    """Optimized faculty search with database-level pagination and reduced JOINs"""
-    try:
-        conditions = []
-        params = []
-        
-        # Optimized base query with LEFT JOINs and aggregations
-        base_query = """
-        SELECT p.*, u.name as university_name,
-               COALESCE(pub_stats.publication_count, 0) as publication_count,
-               COALESCE(cite_stats.total_citations, 0) as total_citations,
-               COALESCE(cite_stats.h_index, 0) as h_index
-        FROM professors p
-        LEFT JOIN universities u ON p.university_id = u.id
-        LEFT JOIN (
-            SELECT ap.professor_id, COUNT(*) as publication_count
-            FROM author_publications ap
-            GROUP BY ap.professor_id
-        ) pub_stats ON p.id = pub_stats.professor_id
-        LEFT JOIN (
-            SELECT ap.professor_id,
-                   SUM(COALESCE(pm.total_citations, 0)) as total_citations,
-                   COUNT(CASE WHEN pm.total_citations >= 1 THEN 1 END) as h_index
-            FROM author_publications ap
-            LEFT JOIN publication_metrics pm ON ap.publication_pmid = pm.pmid
-            GROUP BY ap.professor_id
-        ) cite_stats ON p.id = cite_stats.professor_id
-        """
-        
-        if search:
-            conditions.append("(p.name LIKE ? OR p.research_areas LIKE ?)")
-            params.extend([f"%{search}%", f"%{search}%"])
-        
-        if university:
-            conditions.append("u.name LIKE ?")
-            params.append(f"%{university}%")
-        
-        if department:
-            conditions.append("p.department LIKE ?")
-            params.append(f"%{department}%")
-        
-        if research_area:
-            conditions.append("p.research_areas LIKE ?")
-            params.append(f"%{research_area}%")
-        
-        if degree:
-            conditions.append("""
-                p.id IN (
-                    SELECT DISTINCT pd.professor_id 
-                    FROM professor_degrees pd 
-                    JOIN degrees d ON pd.degree_id = d.id 
-                    WHERE d.degree_type = ?
-                )
-            """)
-            params.append(degree)
-        
-        where_clause = " WHERE " + " AND ".join(conditions) if conditions else ""
-        
-        # Determine sort order
-        sort_orders = {
-            'publication_count': 'publication_count DESC, p.name ASC',
-            'citations': 'total_citations DESC, p.name ASC',
-            'h_index': 'h_index DESC, p.name ASC',
-            'name': 'p.name ASC',
-            'university': 'u.name ASC, p.name ASC',
-            'department': 'p.department ASC, p.name ASC'
-        }
-        order_clause = f" ORDER BY {sort_orders.get(sort_by, sort_orders['publication_count'])}"
-        
-        full_query = base_query + where_clause + order_clause
-        
-        return db.execute_query_with_pagination(full_query, params, limit, offset)
-    except Exception as e:
-        logger.error(f"Error searching faculty: {e}")
-        return {'data': [], 'total': 0, 'limit': limit, 'offset': offset, 'has_more': False}
-
-@cache.memoize(timeout=300)
-@monitor_performance
-def get_professor_details(professor_id):
-    """Get professor details with caching"""
-    try:
-        query = """
-        SELECT p.*, u.name as university_name, u.city, u.province_state, u.country, u.address
-        FROM professors p
-        LEFT JOIN universities u ON p.university_id = u.id
-        WHERE p.id = ?
-        """
-        return db.execute_query(query, [professor_id], fetch_one=True)
-    except Exception as e:
-        logger.error(f"Error getting professor details: {e}")
-        return None
-
-@cache.memoize(timeout=600)
-@monitor_performance
-def get_professor_publications_optimized(professor_id, limit=10, offset=0):
-    """Get professor publications with database-level pagination"""
-    try:
-        query = """
-        SELECT pub.*, ap.author_order, ap.is_corresponding, ap.is_first_author, ap.is_last_author,
-               COALESCE(pm.total_citations, 0) as citations
-        FROM publications pub
-        JOIN author_publications ap ON pub.pmid = ap.publication_pmid
-        LEFT JOIN publication_metrics pm ON pub.pmid = pm.pmid
-        WHERE ap.professor_id = ?
-        ORDER BY pub.publication_year DESC, pub.title ASC
-        """
-        return db.execute_query_with_pagination(query, [professor_id], limit, offset)
-    except Exception as e:
-        logger.error(f"Error getting professor publications: {e}")
-        return {'data': [], 'total': 0, 'limit': limit, 'offset': offset, 'has_more': False}
-
-@cache.memoize(timeout=900)  # Cache for 15 minutes
-@monitor_performance
-def get_available_filters():
-    """Get available filter options with caching"""
-    try:
-        # Get all filter options in a single batch (only for universities with faculty)
-        queries = {
-            'universities': """
-                SELECT DISTINCT u.name 
-                FROM universities u 
-                INNER JOIN professors p ON u.id = p.university_id 
-                ORDER BY u.name
-            """,
-            'departments': "SELECT DISTINCT department FROM professors WHERE department IS NOT NULL ORDER BY department",
-            'degrees': "SELECT DISTINCT degree_type FROM degrees ORDER BY degree_type",
-            'countries': """
-                SELECT DISTINCT u.country 
-                FROM universities u 
-                INNER JOIN professors p ON u.id = p.university_id 
-                ORDER BY u.country
-            """,
-            'provinces': """
-                SELECT DISTINCT u.province_state 
-                FROM universities u 
-                INNER JOIN professors p ON u.id = p.university_id 
-                WHERE u.province_state IS NOT NULL 
-                ORDER BY u.province_state
-            """,
-            'types': """
-                SELECT DISTINCT u.university_type 
-                FROM universities u 
-                INNER JOIN professors p ON u.id = p.university_id 
-                WHERE u.university_type IS NOT NULL 
-                ORDER BY u.university_type
-            """,
-            'languages': """
-                SELECT DISTINCT u.languages 
-                FROM universities u 
-                INNER JOIN professors p ON u.id = p.university_id 
-                WHERE u.languages IS NOT NULL
-            """
-        }
-        
-        filters = {}
-        for key, query in queries.items():
-            result = db.execute_query(query)
-            if key == 'languages':
-                # Process semicolon-separated languages
-                langs = set()
-                for row in result or []:
-                    for lang in row['languages'].split(';'):
-                        if lang.strip():
-                            langs.add(lang.strip())
-                filters[key] = sorted(list(langs))
-            else:
-                filters[key] = [row[list(row.keys())[0]] for row in result or []]
-        
-        return filters
-    except Exception as e:
-        logger.error(f"Error getting available filters: {e}")
-        return {}
-
-def get_professor_collaborators(professor_id):
-    """Get professor's collaborators"""
-    try:
-        query = """
-        SELECT p2.id, p2.name, p2.department, u.name as university_name,
-               c.collaboration_count, c.latest_collaboration_year
-        FROM collaborations c
-        JOIN professors p2 ON (c.professor1_id = p2.id OR c.professor2_id = p2.id)
-        LEFT JOIN universities u ON p2.university_id = u.id
-        WHERE (c.professor1_id = ? OR c.professor2_id = ?) AND p2.id != ?
-        ORDER BY c.collaboration_count DESC
-        LIMIT 20
-        """
-        return db.execute_query(query, [professor_id, professor_id, professor_id]) or []
-    except Exception as e:
-        logger.error(f"Error getting professor collaborators: {e}")
-        return []
-
-def get_professor_journal_metrics(professor_id):
-    """Get professor's journal impact metrics"""
-    try:
-        # This is a placeholder implementation
-        # In a real system, this would calculate metrics from publications and journal rankings
-        return {
-            'total_publications': len(get_professor_publications(professor_id)),
-            'q1_percentage': 0,
-            'q2_percentage': 0,
-            'q3_percentage': 0,
-            'q4_percentage': 0,
-            'mean_sjr': 0,
-            'median_sjr': 0
-        }
-    except Exception as e:
-        logger.error(f"Error getting professor journal metrics: {e}")
-        return {}
-
-def get_all_universities():
-    """Get all universities that have faculty members for filter options"""
-    try:
-        query = """
-        SELECT DISTINCT u.name, u.country, u.province_state, u.university_type, u.languages 
-        FROM universities u
-        INNER JOIN professors p ON u.id = p.university_id
-        ORDER BY u.name
-        """
-        return db.execute_query(query) or []
-    except Exception as e:
-        logger.error(f"Error getting all universities: {e}")
-        return []
-
-def get_available_degrees():
-    """Get all available degree types with counts"""
-    try:
-        query = """
-        SELECT d.degree_type, d.full_name, d.category, COUNT(pd.professor_id) as professor_count
-        FROM degrees d
-        LEFT JOIN professor_degrees pd ON d.id = pd.degree_id
-        GROUP BY d.id, d.degree_type, d.full_name, d.category
-        HAVING professor_count > 0
-        ORDER BY professor_count DESC, d.degree_type
-        """
-        return db.execute_query(query) or []
-    except Exception as e:
-        logger.error(f"Error getting available degrees: {e}")
-        return []
-
-def get_professor_degrees(professor_id):
-    """Get degrees for a specific professor"""
-    try:
-        query = """
-        SELECT d.degree_type, d.full_name, d.category, pd.specialization, pd.institution, pd.year_obtained
-        FROM degrees d
-        JOIN professor_degrees pd ON d.id = pd.degree_id
-        WHERE pd.professor_id = ?
-        ORDER BY 
-            CASE d.category
-                WHEN 'Doctoral' THEN 1
-                WHEN 'Master''s' THEN 2
-                WHEN 'Bachelor''s' THEN 3
-                ELSE 4
-            END,
-            d.degree_type
-        """
-        return db.execute_query(query, [professor_id]) or []
-    except Exception as e:
-        logger.error(f"Error getting professor degrees: {e}")
-        return []
-
-# Enhanced activity logging for search tracking
-def log_search_activity(search_type, search_query, search_filters, results_count):
-    """Log search activity for users and analytics"""
-    try:
-        if current_user.is_authenticated:
-            user_id = current_user.id
-        else:
-            user_id = None
-        
-        # Log to user search history
-        query = """
-        INSERT INTO user_search_history (user_id, search_type, search_query, search_filters, 
-                                       results_count, session_id, ip_address)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-        """
-        
-        params = [
-            user_id,
-            search_type,
-            search_query,
-            json.dumps(search_filters),
-            results_count,
-            request.cookies.get('session', ''),
-            request.remote_addr
-        ]
-        
-        db.execute_query(query, params)
-        
-        # Log to activity log if user is authenticated
-        if user_id:
-            auth_manager.log_user_activity(user_id, 'search_performed', {
-                'search_type': search_type,
-                'search_query': search_query,
-                'results_count': results_count
-            })
-            
-    except Exception as e:
-        logger.error(f"Error logging search activity: {e}")
-
-def log_profile_view(professor_id):
-    """Log professor profile views"""
-    try:
-        if current_user.is_authenticated:
-            auth_manager.log_user_activity(current_user.id, 'profile_view', {
-                'professor_id': professor_id,
-                'view_type': 'professor_profile'
-            })
-    except Exception as e:
-        logger.error(f"Error logging profile view: {e}")
-
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8080) 
+    app.run(debug=True, host='127.0.0.1', port=8080) 

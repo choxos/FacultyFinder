@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}FacultyFinder - Discover Your Ideal Faculty{% endblock %}</title>
+    <title>{% block title %}FacultyFinder - Discover Your Ideal Academic Collaborators{% endblock %}</title>
     
-    <!-- Meta tags -->
-    <meta name="description" content="FacultyFinder helps future students discover their ideal faculty members across Canadian universities based on research interests and academic profiles.">
-    <meta name="keywords" content="faculty finder, academic research, university professors, graduate students, research supervision, Canadian universities">
-    <meta name="author" content="Xera DB">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="FacultyFinder - Discover Your Ideal Faculty">
-    <meta property="og:description" content="Connect with faculty members across Canadian universities based on research interests and academic compatibility">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://facultyfinder.xeradb.com">
+    <!-- Meta Tags -->
+    <meta name="description" content="FacultyFinder helps researchers discover ideal faculty collaborators across universities worldwide using AI-powered matching and comprehensive academic profiles.">
+    <meta name="keywords" content="faculty finder, academic collaboration, research, universities, professors, global, worldwide">
+    <meta name="author" content="FacultyFinder Team">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
-    <link rel="icon" type="image/png" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="/static/css/xera-unified-theme.css" rel="stylesheet">
-    <link href="/static/css/themes/facultyfinder-theme.css" rel="stylesheet">
-    <link href="/static/css/facultyfinder.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themes/facultyfinder-theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/facultyfinder.css') }}">
     
     {% block extra_css %}{% endblock %}
 </head>
@@ -33,18 +29,13 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <!-- Brand -->
             <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">
                 <i class="fas fa-graduation-cap text-primary me-2"></i>
                 FacultyFinder
             </a>
-
-            <!-- Mobile menu button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Navigation items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
@@ -68,194 +59,77 @@
                         </a>
                     </li>
                 </ul>
-
-                <!-- User menu -->
                 <ul class="navbar-nav">
-                    {% if current_user.is_authenticated %}
-                        <!-- User dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
-                                {% if current_user.profile_picture %}
-                                    <img src="{{ current_user.profile_picture }}" class="rounded-circle me-2" width="24" height="24" alt="Profile">
-                                {% else %}
-                                    <i class="fas fa-user-circle me-2"></i>
-                                {% endif %}
-                                {{ current_user.get_full_name() }}
-                                {% if current_user.is_admin() %}
-                                    <span class="badge bg-danger ms-1">Admin</span>
-                                {% elif current_user.is_moderator() %}
-                                    <span class="badge bg-warning ms-1">Mod</span>
-                                {% endif %}
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="{{ url_for('user.dashboard') }}">
-                                        <i class="fas fa-tachometer-alt me-2"></i>Dashboard
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ url_for('user.favorites') }}">
-                                        <i class="fas fa-heart me-2"></i>Favorites
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ url_for('user.activity') }}">
-                                        <i class="fas fa-history me-2"></i>Activity
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ url_for('user.payments') }}">
-                                        <i class="fas fa-credit-card me-2"></i>Payments
-                                    </a>
-                                </li>
-                                <li><hr class="dropdown-divider"></li>
-                                {% if current_user.is_moderator() %}
-                                    <li>
-                                        <a class="dropdown-item" href="{{ url_for('admin.dashboard') }}">
-                                            <i class="fas fa-cogs me-2"></i>Admin Panel
-                                        </a>
-                                    </li>
-                                    <li><hr class="dropdown-divider"></li>
-                                {% endif %}
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fas fa-user-edit me-2"></i>Edit Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item text-danger" href="{{ url_for('auth.logout') }}">
-                                        <i class="fas fa-sign-out-alt me-2"></i>Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    {% else %}
-                        <!-- Guest user options -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('auth.login') }}">
-                                <i class="fas fa-sign-in-alt me-1"></i>Login
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary btn-sm ms-2" href="{{ url_for('auth.register') }}">
-                                <i class="fas fa-user-plus me-1"></i>Sign Up
-                            </a>
-                        </li>
-                    {% endif %}
+                    <li class="nav-item">
+                        <span class="nav-link">
+                            <i class="fas fa-user-circle me-1"></i>Guest
+                        </span>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Flash messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <div class="container mt-3">
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show" role="alert">
-                        {% if category == 'success' %}
-                            <i class="fas fa-check-circle me-2"></i>
-                        {% elif category == 'error' %}
-                            <i class="fas fa-exclamation-triangle me-2"></i>
-                        {% elif category == 'warning' %}
-                            <i class="fas fa-exclamation-circle me-2"></i>
-                        {% else %}
-                            <i class="fas fa-info-circle me-2"></i>
-                        {% endif %}
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endwith %}
-
-    <!-- Main content -->
-    <main>
+    <!-- Main Content -->
+    <main class="main-content">
         {% block content %}{% endblock %}
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-5 mt-5">
+    <footer class="footer mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5 class="fw-bold mb-3">
-                        <i class="fas fa-graduation-cap text-primary me-2"></i>
+                <div class="col-md-6">
+                    <h5>
+                        <i class="fas fa-graduation-cap me-2"></i>
                         FacultyFinder
                     </h5>
-                    <p class="text-muted">
-                        Connecting students with their ideal faculty members across Canadian universities. 
-                        Part of the Xera DB ecosystem.
+                    <p class="text-muted mb-3">
+                        Connecting researchers with their ideal academic collaborators worldwide.
                     </p>
-                    {% if current_user.is_authenticated %}
-                        <p class="small text-muted">
-                            Welcome back, {{ current_user.get_full_name() }}!
-                        </p>
-                    {% endif %}
+                    <p class="mb-0">
+                        &copy; 2024 FacultyFinder. All rights reserved.
+                    </p>
                 </div>
-                
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="fw-bold mb-3">Discover</h6>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Quick Links</h6>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('universities') }}" class="text-muted text-decoration-none">Universities</a></li>
-                        <li><a href="{{ url_for('faculties') }}" class="text-muted text-decoration-none">Faculty</a></li>
-                        <li><a href="{{ url_for('ai_assistant') }}" class="text-muted text-decoration-none">AI Assistant</a></li>
+                        <li><a href="{{ url_for('universities') }}" class="text-decoration-none">Universities</a></li>
+                        <li><a href="{{ url_for('faculties') }}" class="text-decoration-none">Faculty</a></li>
+                        <li><a href="{{ url_for('ai_assistant') }}" class="text-decoration-none">AI Assistant</a></li>
+                        <li><a href="{{ url_for('about') }}" class="text-decoration-none">About</a></li>
+                        <li><a href="{{ url_for('contact') }}" class="text-decoration-none">Contact Us</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="fw-bold mb-3">Account</h6>
-                    <ul class="list-unstyled">
-                        {% if current_user.is_authenticated %}
-                            <li><a href="{{ url_for('user.dashboard') }}" class="text-muted text-decoration-none">Dashboard</a></li>
-                            <li><a href="{{ url_for('user.favorites') }}" class="text-muted text-decoration-none">Favorites</a></li>
-                            <li><a href="{{ url_for('user.activity') }}" class="text-muted text-decoration-none">Activity</a></li>
-                        {% else %}
-                            <li><a href="{{ url_for('auth.login') }}" class="text-muted text-decoration-none">Login</a></li>
-                            <li><a href="{{ url_for('auth.register') }}" class="text-muted text-decoration-none">Sign Up</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-                
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="fw-bold mb-3">Support</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="{{ url_for('about') }}" class="text-muted text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Help Center</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="fw-bold mb-3">Connect</h6>
-                    <div class="d-flex gap-2">
-                        <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-github"></i></a>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
                     </div>
                 </div>
             </div>
-            
-            <hr class="my-4 border-secondary">
-            
+            <hr class="my-4">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="text-muted mb-0">&copy; 2024 FacultyFinder by Xera DB. All rights reserved.</p>
+                    <p class="text-muted small mb-0">
+                        &copy; 2024 FacultyFinder. All rights reserved.
+                    </p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
-                    <a href="#" class="text-muted text-decoration-none me-3">Terms of Service</a>
-                    <a href="{{ url_for('api_docs') }}" class="text-muted text-decoration-none">API</a>
+                    <a href="#" class="text-decoration-none text-muted small me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted small">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="/static/js/facultyfinder.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/facultyfinder.js') }}"></script>
     
     {% block extra_js %}{% endblock %}
 </body>
