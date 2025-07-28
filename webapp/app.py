@@ -1079,13 +1079,12 @@ def get_professor_journal_metrics(professor_id):
         return {}
 
 def get_all_universities():
-    """Get all universities"""
+    """Get all universities that have faculty members for filter options"""
     try:
         query = """
-        SELECT u.*, COUNT(p.id) as professor_count
+        SELECT DISTINCT u.name, u.country, u.province_state, u.university_type, u.languages 
         FROM universities u
-        LEFT JOIN professors p ON u.id = p.university_id
-        GROUP BY u.id
+        INNER JOIN professors p ON u.id = p.university_id
         ORDER BY u.name
         """
         return db.execute_query(query) or []
