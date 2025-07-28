@@ -112,12 +112,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <small class="text-muted">
-                            <i class="fas fa-map-marker-alt me-1"></i>
-                            {{ university.city }}, {{ university.province_state }}
-                        </small>
-                    </div>
+                                                  <div class="mb-3">
+                                  <small class="text-muted">
+                                      <i class="fas fa-map-marker-alt me-1"></i>
+                                      {{ university.city }}, {{ university.province_state }}
+                                      {% set maps_query = university.name + ", " + university.city + ", " + university.province_state %}
+                                      <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
+                                         target="_blank" 
+                                         class="text-decoration-none ms-2 maps-link"
+                                         title="View {{ university.name }} on Google Maps">
+                                          <i class="fas fa-external-link-alt"></i>
+                                      </a>
+                                  </small>
+                              </div>
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="/faculties?university={{ university.name }}" class="btn btn-sm btn-primary">
                             <i class="fas fa-users me-1"></i>View Faculty

@@ -264,4 +264,60 @@ footer {
 
   .badge.bg-info:hover {
       background-color: var(--xera-accent-dark) !important;
+  }
+
+  /* Clickable university and department links */
+  .university-link, .university-link-card {
+      color: var(--xera-primary);
+      font-weight: 600;
+      transition: var(--xera-transition);
+  }
+
+  .university-link:hover, .university-link-card:hover {
+      color: var(--xera-primary-dark);
+      text-decoration: underline !important;
+  }
+
+  .department-link {
+      color: var(--xera-primary);
+      transition: var(--xera-transition);
+  }
+
+  .department-link:hover {
+      color: var(--xera-primary-dark);
+      text-decoration: underline !important;
+  }
+
+  .department-link-card {
+      color: var(--xera-gray-700);
+      transition: var(--xera-transition);
+  }
+
+  .department-link-card:hover {
+      color: var(--xera-primary);
+      text-decoration: underline !important;
+  }
+
+  .department-badge {
+      transition: var(--xera-transition);
+  }
+
+  .department-badge:hover {
+      background-color: var(--xera-primary) !important;
+      transform: scale(1.05);
+  }
+
+  /* Google Maps link styling */
+  .maps-link {
+      color: var(--xera-gray-500);
+      transition: var(--xera-transition);
+  }
+
+  .maps-link:hover {
+      color: var(--xera-accent);
+      transform: scale(1.1);
+  }
+
+  .maps-link i {
+      font-size: 0.875rem;
   } 

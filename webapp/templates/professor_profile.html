@@ -32,21 +32,43 @@
                             </div>
                         </div>
                         
-                        <div class="mb-3">
-                            <h5 class="text-primary mb-2">
-                                <i class="fas fa-building me-2"></i>{{ professor.department or 'Department not specified' }}
-                            </h5>
-                            <p class="mb-1">
-                                <i class="fas fa-university me-2"></i>
-                                <strong>{{ professor.university_name }}</strong>
-                            </p>
-                            {% if professor.city and professor.province_state %}
-                                <p class="text-muted mb-0">
-                                    <i class="fas fa-map-marker-alt me-2"></i>
-                                    {{ professor.city }}, {{ professor.province_state }}, {{ professor.country }}
-                                </p>
-                            {% endif %}
-                        </div>
+                                                      <div class="mb-3">
+                                  <h5 class="text-primary mb-2">
+                                      <i class="fas fa-building me-2"></i>
+                                      {% if professor.department %}
+                                          <a href="/faculties?department={{ professor.department }}" 
+                                             class="text-decoration-none department-link"
+                                             title="View all faculty in {{ professor.department }}">
+                                              {{ professor.department }}
+                                          </a>
+                                      {% else %}
+                                          Department not specified
+                                      {% endif %}
+                                  </h5>
+                                  <p class="mb-1">
+                                      <i class="fas fa-university me-2"></i>
+                                      <strong>
+                                          <a href="/faculties?university={{ professor.university_name }}" 
+                                             class="text-decoration-none university-link"
+                                             title="View all faculty at {{ professor.university_name }}">
+                                              {{ professor.university_name }}
+                                          </a>
+                                      </strong>
+                                  </p>
+                                  {% if professor.city and professor.province_state %}
+                                      <p class="text-muted mb-0">
+                                          <i class="fas fa-map-marker-alt me-2"></i>
+                                          {{ professor.city }}, {{ professor.province_state }}, {{ professor.country }}
+                                          {% set maps_query = professor.university_name + ", " + professor.city + ", " + professor.province_state + ", " + professor.country %}
+                                          <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
+                                             target="_blank" 
+                                             class="text-decoration-none ms-2 maps-link"
+                                             title="View {{ professor.university_name }} on Google Maps">
+                                              <i class="fas fa-external-link-alt"></i>
+                                          </a>
+                                      </p>
+                                  {% endif %}
+                              </div>
                     </div>
                     
                     <div class="col-lg-4 text-lg-end">
@@ -131,12 +153,22 @@
                               </div>
                           {% endif %}
                 
-                {% if professor.other_departments %}
-                    <div class="mb-3">
-                        <h5>Other Affiliations</h5>
-                        <p>{{ professor.other_departments }}</p>
-                    </div>
-                {% endif %}
+                                          {% if professor.other_departments %}
+                              <div class="mb-3">
+                                  <h5>Other Affiliations</h5>
+                                  <div class="other-departments">
+                                      {% for dept in professor.other_departments.split(';') %}
+                                          {% if dept.strip() %}
+                                              <a href="/faculties?department={{ dept.strip() }}" 
+                                                 class="badge bg-secondary text-decoration-none me-1 mb-1 department-badge"
+                                                 title="View faculty in {{ dept.strip() }}">
+                                                  {{ dept.strip() }}
+                                              </a>
+                                          {% endif %}
+                                      {% endfor %}
+                                  </div>
+                              </div>
+                          {% endif %}
                 
                 {% if professor.memberships %}
                     <div class="mb-3">

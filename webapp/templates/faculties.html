@@ -105,17 +105,29 @@
                             </div>
                             
                             <div class="mb-3">
-                                <div class="text-muted mb-1">
-                                    <i class="fas fa-building me-2"></i>
-                                    <strong>{{ prof.department or 'Department not specified' }}</strong>
-                                </div>
-                                <div class="university-location">
-                                    <i class="fas fa-university me-2"></i>
-                                    {{ prof.university_name }}
-                                    {% if prof.city and prof.province_state %}
-                                        <br><small class="ms-4">{{ prof.city }}, {{ prof.province_state }}</small>
-                                    {% endif %}
-                                </div>
+                                                                      <div class="text-muted mb-1">
+                                          <i class="fas fa-building me-2"></i>
+                                          {% if prof.department %}
+                                              <a href="/faculties?department={{ prof.department }}" 
+                                                 class="text-decoration-none department-link-card"
+                                                 title="Filter by {{ prof.department }}">
+                                                  <strong>{{ prof.department }}</strong>
+                                              </a>
+                                          {% else %}
+                                              <strong>Department not specified</strong>
+                                          {% endif %}
+                                      </div>
+                                      <div class="university-location">
+                                          <i class="fas fa-university me-2"></i>
+                                          <a href="/faculties?university={{ prof.university_name }}" 
+                                             class="text-decoration-none university-link-card"
+                                             title="Filter by {{ prof.university_name }}">
+                                              {{ prof.university_name }}
+                                          </a>
+                                          {% if prof.city and prof.province_state %}
+                                              <br><small class="ms-4">{{ prof.city }}, {{ prof.province_state }}</small>
+                                          {% endif %}
+                                      </div>
                             </div>
                             
                                                                   {% if prof.degrees %}
