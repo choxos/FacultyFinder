@@ -454,6 +454,124 @@ const FacultyFinder = {
         }
     },
 
+    // Statistics animation for homepage
+    stats: {
+        init: function() {
+            // Only run on homepage
+            if (window.location.pathname === '/') {
+                this.animateCounters();
+            }
+        },
+
+        animateCounters: function() {
+            const statElements = document.querySelectorAll('.stat-number');
+            
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            this.countUp(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                statElements.forEach(el => observer.observe(el));
+            } else {
+                // Fallback for older browsers
+                statElements.forEach(el => this.countUp(el));
+            }
+        },
+
+        countUp: function(element) {
+            const target = parseInt(element.textContent.replace(/,/g, ''));
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+            
+            const animate = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smoother animation
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(target * easeOut);
+                
+                element.textContent = this.formatNumber(current);
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    element.textContent = this.formatNumber(target);
+                }
+            };
+            
+            requestAnimationFrame(animate);
+        },
+
+        formatNumber: function(num) {
+            return num.toLocaleString();
+        }
+    },
+
+    // Statistics animation for homepage
+    stats: {
+        init: function() {
+            // Only run on homepage
+            if (window.location.pathname === '/') {
+                this.animateCounters();
+            }
+        },
+
+        animateCounters: function() {
+            const statElements = document.querySelectorAll('.stat-number');
+            
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            this.countUp(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                statElements.forEach(el => observer.observe(el));
+            } else {
+                // Fallback for older browsers
+                statElements.forEach(el => this.countUp(el));
+            }
+        },
+
+        countUp: function(element) {
+            const target = parseInt(element.textContent.replace(/,/g, ''));
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+            
+            const animate = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smoother animation
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(target * easeOut);
+                
+                element.textContent = this.formatNumber(current);
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    element.textContent = this.formatNumber(target);
+                }
+            };
+            
+            requestAnimationFrame(animate);
+        },
+
+        formatNumber: function(num) {
+            return num.toLocaleString();
+        }
+    },
+
     // Initialize all components
     init: function() {
         console.log('Initializing FacultyFinder...');
@@ -464,7 +582,8 @@ const FacultyFinder = {
         this.loadMore.init();
         this.lazyLoading.init();
         this.performance.init();
-
+        this.stats.init(); // Add stats animation
+        
         console.log('FacultyFinder initialized successfully');
     }
 };
