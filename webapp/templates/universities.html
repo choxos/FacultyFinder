@@ -29,48 +29,37 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-3">
                     <label class="filter-label">Country</label>
-                    <select class="form-select" name="country">
+                    <select class="form-select" name="country" id="countrySelect" onchange="updateProvinces()">
                         <option value="">All Countries</option>
-                        <option value="Canada" {{ 'selected' if country == 'Canada' else '' }}>Canada</option>
-                        <option value="United States" {{ 'selected' if country == 'United States' else '' }}>United States</option>
-                        <option value="United Kingdom" {{ 'selected' if country == 'United Kingdom' else '' }}>United Kingdom</option>
-                        <option value="Australia" {{ 'selected' if country == 'Australia' else '' }}>Australia</option>
-                        <option value="Germany" {{ 'selected' if country == 'Germany' else '' }}>Germany</option>
-                        <option value="France" {{ 'selected' if country == 'France' else '' }}>France</option>
-                        <option value="Netherlands" {{ 'selected' if country == 'Netherlands' else '' }}>Netherlands</option>
-                        <option value="Switzerland" {{ 'selected' if country == 'Switzerland' else '' }}>Switzerland</option>
-                        <option value="Sweden" {{ 'selected' if country == 'Sweden' else '' }}>Sweden</option>
-                        <option value="Denmark" {{ 'selected' if country == 'Denmark' else '' }}>Denmark</option>
-                        <option value="Norway" {{ 'selected' if country == 'Norway' else '' }}>Norway</option>
-                        <option value="Japan" {{ 'selected' if country == 'Japan' else '' }}>Japan</option>
-                        <option value="Singapore" {{ 'selected' if country == 'Singapore' else '' }}>Singapore</option>
-                        <option value="South Korea" {{ 'selected' if country == 'South Korea' else '' }}>South Korea</option>
-                        <option value="China" {{ 'selected' if country == 'China' else '' }}>China</option>
-                        <option value="Hong Kong" {{ 'selected' if country == 'Hong Kong' else '' }}>Hong Kong</option>
-                        <option value="New Zealand" {{ 'selected' if country == 'New Zealand' else '' }}>New Zealand</option>
-                        <option value="Belgium" {{ 'selected' if country == 'Belgium' else '' }}>Belgium</option>
-                        <option value="Austria" {{ 'selected' if country == 'Austria' else '' }}>Austria</option>
-                        <option value="Italy" {{ 'selected' if country == 'Italy' else '' }}>Italy</option>
-                        <option value="Spain" {{ 'selected' if country == 'Spain' else '' }}>Spain</option>
-                        <option value="Finland" {{ 'selected' if country == 'Finland' else '' }}>Finland</option>
-                        <option value="Israel" {{ 'selected' if country == 'Israel' else '' }}>Israel</option>
+                        {% for available_country in available_countries %}
+                            <option value="{{ available_country }}" {{ 'selected' if country == available_country else '' }}>
+                                {{ available_country }}
+                            </option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-3">
                     <label class="filter-label">State/Province/Region</label>
-                    <input type="text" class="form-control" name="province"
-                           placeholder="e.g., Ontario, California, London..."
-                           value="{{ province }}">
+                    <select class="form-select" name="province" id="provinceSelect">
+                        <option value="">All Regions</option>
+                        {% if country and provinces_by_country.get(country) %}
+                            {% for available_province in provinces_by_country[country] %}
+                                <option value="{{ available_province }}" {{ 'selected' if province == available_province else '' }}>
+                                    {{ available_province }}
+                                </option>
+                            {% endfor %}
+                        {% endif %}
+                    </select>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-3">
                     <label class="filter-label">University Type</label>
                     <select class="form-select" name="type">
                         <option value="">All Types</option>
-                        <option value="Public" {{ 'selected' if uni_type == 'Public' else '' }}>Public</option>
-                        <option value="Private" {{ 'selected' if uni_type == 'Private' else '' }}>Private</option>
-                        <option value="Research" {{ 'selected' if uni_type == 'Research' else '' }}>Research University</option>
-                        <option value="Liberal Arts" {{ 'selected' if uni_type == 'Liberal Arts' else '' }}>Liberal Arts</option>
-                        <option value="Technical" {{ 'selected' if uni_type == 'Technical' else '' }}>Technical/Engineering</option>
+                        {% for available_type in available_types %}
+                            <option value="{{ available_type }}" {{ 'selected' if uni_type == available_type else '' }}>
+                                {{ available_type }}
+                            </option>
+                        {% endfor %}
                     </select>
                 </div>
             </div>
@@ -79,33 +68,28 @@
                     <label class="filter-label">Language of Instruction</label>
                     <select class="form-select" name="language">
                         <option value="">All Languages</option>
-                        <option value="English" {{ 'selected' if language == 'English' else '' }}>English</option>
-                        <option value="French" {{ 'selected' if language == 'French' else '' }}>French</option>
-                        <option value="German" {{ 'selected' if language == 'German' else '' }}>German</option>
-                        <option value="Spanish" {{ 'selected' if language == 'Spanish' else '' }}>Spanish</option>
-                        <option value="Dutch" {{ 'selected' if language == 'Dutch' else '' }}>Dutch</option>
-                        <option value="Italian" {{ 'selected' if language == 'Italian' else '' }}>Italian</option>
-                        <option value="Japanese" {{ 'selected' if language == 'Japanese' else '' }}>Japanese</option>
-                        <option value="Chinese" {{ 'selected' if language == 'Chinese' else '' }}>Chinese</option>
-                        <option value="Korean" {{ 'selected' if language == 'Korean' else '' }}>Korean</option>
+                        {% for available_language in available_languages %}
+                            <option value="{{ available_language }}" {{ 'selected' if language == available_language else '' }}>
+                                {{ available_language }}
+                            </option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="col-lg-3 mb-3">
                     <label class="filter-label">Sort By</label>
-                    <select class="form-select" name="sort">
+                    <select class="form-select" name="sort_by">
                         <option value="faculty_count" {{ 'selected' if sort_by == 'faculty_count' else '' }}>Faculty Count</option>
-                        <option value="department_count" {{ 'selected' if sort_by == 'department_count' else '' }}>Department Count</option>
-                        <option value="name" {{ 'selected' if sort_by == 'name' else '' }}>Name (A-Z)</option>
-                        <option value="year_established" {{ 'selected' if sort_by == 'year_established' else '' }}>Year Established</option>
+                        <option value="name" {{ 'selected' if sort_by == 'name' else '' }}>Name</option>
                         <option value="location" {{ 'selected' if sort_by == 'location' else '' }}>Location</option>
+                        <option value="year_established" {{ 'selected' if sort_by == 'year_established' else '' }}>Year Established</option>
                     </select>
                 </div>
-                <div class="col-lg-6 mb-3 d-flex align-items-end">
+                <div class="col-lg-3 mb-3 d-flex align-items-end">
                     <button type="submit" class="btn btn-primary me-2">
-                        <i class="fas fa-search me-2"></i>Search Universities
+                        <i class="fas fa-search me-2"></i>Search
                     </button>
                     <a href="/universities" class="btn btn-outline-secondary">
-                        <i class="fas fa-times me-2"></i>Clear Filters
+                        <i class="fas fa-refresh me-2"></i>Reset
                     </a>
                 </div>
             </div>
@@ -251,44 +235,56 @@
 
 {% block extra_js %}
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // View toggle functionality
-    const gridView = document.querySelector('[data-view="grid"]');
-    const listView = document.querySelector('[data-view="list"]');
-    const universitiesGrid = document.getElementById('universities-grid');
+// Store provinces data from backend
+const provincesByCountry = {{ provinces_by_country|tojson|safe }};
+
+function updateProvinces() {
+    const countrySelect = document.getElementById('countrySelect');
+    const provinceSelect = document.getElementById('provinceSelect');
+    const selectedCountry = countrySelect.value;
     
-    if (gridView && listView && universitiesGrid) {
-        gridView.addEventListener('click', function() {
-            universitiesGrid.className = 'row';
-            gridView.classList.add('active');
-            listView.classList.remove('active');
-        });
-        
-        listView.addEventListener('click', function() {
-            universitiesGrid.className = 'list-group';
-            listView.classList.add('active');
-            gridView.classList.remove('active');
+    // Clear existing province options
+    provinceSelect.innerHTML = '<option value="">All Regions</option>';
+    
+    // Add provinces for selected country
+    if (selectedCountry && provincesByCountry[selectedCountry]) {
+        provincesByCountry[selectedCountry].forEach(function(province) {
+            const option = document.createElement('option');
+            option.value = province;
+            option.textContent = province;
+            provinceSelect.appendChild(option);
         });
     }
-    
-    // Search form enhancements
-    const searchInputs = document.querySelectorAll('.search-filters input, .search-filters select');
-    searchInputs.forEach(input => {
-        input.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' && this.type !== 'submit') {
-                document.querySelector('.search-filters form').submit();
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set up view toggle if buttons exist
+    const viewButtons = document.querySelectorAll('[data-view]');
+    viewButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const view = this.dataset.view;
+            
+            // Update active button
+            viewButtons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
+            
+            // Toggle view
+            const grid = document.getElementById('universities-grid');
+            if (grid) {
+                if (view === 'list') {
+                    grid.classList.add('list-view');
+                } else {
+                    grid.classList.remove('list-view');
+                }
             }
         });
     });
     
-    // Auto-submit on dropdown changes for better UX
-    const selectInputs = document.querySelectorAll('.search-filters select');
-    selectInputs.forEach(select => {
-        select.addEventListener('change', function() {
-            // Optional: auto-submit on select change
-            // document.querySelector('.search-filters form').submit();
-        });
-    });
+    // Initialize provinces dropdown
+    updateProvinces();
 });
 </script>
 {% endblock %} 
