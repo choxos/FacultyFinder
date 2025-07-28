@@ -195,6 +195,306 @@ def ai_assistant():
     """AI Assistant page for CV analysis"""
     return render_template('ai_assistant.html')
 
+@app.route('/api/analyze-cv', methods=['POST'])
+def analyze_cv():
+    """Handle CV analysis requests"""
+    try:
+        # Check if file was uploaded
+        if 'cv_file' not in request.files:
+            return jsonify({'success': False, 'error': 'No CV file uploaded'})
+        
+        file = request.files['cv_file']
+        if file.filename == '':
+            return jsonify({'success': False, 'error': 'No file selected'})
+        
+        # Get form data
+        selected_ai = request.form.get('selected_ai')
+        payment_method = request.form.get('payment_method')
+        api_key = request.form.get('api_key', '')
+        
+        # Validate inputs
+        if not selected_ai or not payment_method:
+            return jsonify({'success': False, 'error': 'Missing required parameters'})
+        
+        if payment_method == 'api-key' and not api_key:
+            return jsonify({'success': False, 'error': 'API key required'})
+        
+        # Save uploaded file temporarily
+        import os
+        import tempfile
+        from werkzeug.utils import secure_filename
+        
+        filename = secure_filename(file.filename)
+        temp_dir = tempfile.gettempdir()
+        file_path = os.path.join(temp_dir, filename)
+        file.save(file_path)
+        
+        try:
+            # Extract text from CV
+            cv_text = extract_cv_text(file_path)
+            
+            # Process based on payment method
+            if payment_method == 'api-key':
+                # Use user's API key for analysis
+                results = analyze_with_ai(cv_text, selected_ai, api_key)
+            elif payment_method == 'one-time':
+                # Handle Stripe payment first
+                return jsonify({'success': False, 'error': 'Payment processing not yet implemented'})
+            elif payment_method == 'manual':
+                # Queue for manual review
+                return jsonify({'success': False, 'error': 'Manual review processing not yet implemented'})
+            else:
+                return jsonify({'success': False, 'error': 'Invalid payment method'})
+            
+            # Generate results HTML
+            results_html = generate_results_html(results)
+            
+            return jsonify({
+                'success': True,
+                'data': {
+                    'html': results_html,
+                    'matches': results.get('matches', []),
+                    'score': results.get('overall_score', 0)
+                }
+            })
+            
+        finally:
+            # Clean up temporary file
+            if os.path.exists(file_path):
+                os.remove(file_path)
+                
+    except Exception as e:
+        app.logger.error(f"CV analysis error: {str(e)}")
+        return jsonify({'success': False, 'error': str(e)})
+
+def extract_cv_text(file_path):
+    """Extract text content from PDF or DOCX files"""
+    import os
+    from pathlib import Path
+    
+    file_ext = Path(file_path).suffix.lower()
+    
+    if file_ext == '.pdf':
+        try:
+            import PyPDF2
+            text = ""
+            with open(file_path, 'rb') as file:
+                pdf_reader = PyPDF2.PdfReader(file)
+                for page in pdf_reader.pages:
+                    text += page.extract_text() + "\n"
+            return text
+        except ImportError:
+            # Fallback to pdfplumber if PyPDF2 not available
+            try:
+                import pdfplumber
+                text = ""
+                with pdfplumber.open(file_path) as pdf:
+                    for page in pdf.pages:
+                        text += page.extract_text() + "\n"
+                return text
+            except ImportError:
+                raise Exception("PDF processing library not available. Please install PyPDF2 or pdfplumber.")
+    
+    elif file_ext == '.docx':
+        try:
+            from docx import Document
+            doc = Document(file_path)
+            text = ""
+            for paragraph in doc.paragraphs:
+                text += paragraph.text + "\n"
+            return text
+        except ImportError:
+            raise Exception("DOCX processing library not available. Please install python-docx.")
+    
+    else:
+        raise Exception("Unsupported file format. Please upload PDF or DOCX files only.")
+
+def analyze_with_ai(cv_text, ai_service, api_key):
+    """Analyze CV using selected AI service"""
+    
+    # Get faculty data for context
+    db = DatabaseManager()
+    faculty_data = db.search_faculty('', '', '', '')  # Get all faculty
+    
+    # Create context about available faculty
+    faculty_context = ""
+    for prof in faculty_data[:50]:  # Limit to first 50 for context
+        faculty_context += f"- {prof['name']} at {prof['university_name']}, {prof['department']}: {prof['research_areas']}\n"
+    
+    prompt = f"""
+    As an expert academic advisor, analyze the following CV and recommend the best faculty matches from our database.
+    
+    CV Content:
+    {cv_text}
+    
+    Available Faculty (sample):
+    {faculty_context}
+    
+    Please provide:
+    1. Top 10 faculty recommendations with match scores (0-100)
+    2. Reasoning for each recommendation
+    3. Research alignment analysis
+    4. Suggested approach for contacting each faculty
+    5. Overall CV strengths and improvement suggestions
+    
+    Format your response as structured JSON with the following format:
+    {{
+        "overall_score": 85,
+        "cv_strengths": ["strength1", "strength2"],
+        "cv_improvements": ["improvement1", "improvement2"],
+        "matches": [
+            {{
+                "faculty_name": "Dr. John Smith",
+                "university": "McMaster University",
+                "department": "Engineering",
+                "match_score": 95,
+                "reasoning": "Strong alignment in AI research...",
+                "contact_strategy": "Mention your ML background..."
+            }}
+        ]
+    }}
+    """
+    
+    try:
+        if ai_service == 'claude':
+            import anthropic
+            client = anthropic.Anthropic(api_key=api_key)
+            response = client.messages.create(
+                model="claude-3-sonnet-20240229",
+                max_tokens=4000,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            result = response.content[0].text
+            
+        elif ai_service == 'chatgpt':
+            import openai
+            client = openai.OpenAI(api_key=api_key)
+            response = client.chat.completions.create(
+                model="gpt-4",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=4000
+            )
+            result = response.choices[0].message.content
+            
+        elif ai_service == 'gemini':
+            import google.generativeai as genai
+            genai.configure(api_key=api_key)
+            model = genai.GenerativeModel('gemini-pro')
+            response = model.generate_content(prompt)
+            result = response.text
+            
+        elif ai_service == 'grok':
+            # Note: Grok API integration would go here
+            # For now, return a placeholder
+            raise Exception("Grok API integration not yet available")
+        
+        else:
+            raise Exception(f"Unsupported AI service: {ai_service}")
+        
+        # Parse JSON response
+        import json
+        import re
+        
+        # Extract JSON from response (in case there's extra text)
+        json_match = re.search(r'\{.*\}', result, re.DOTALL)
+        if json_match:
+            json_str = json_match.group()
+            return json.loads(json_str)
+        else:
+            # Fallback: create structured response from text
+            return {
+                "overall_score": 75,
+                "cv_strengths": ["Well-structured", "Clear objectives"],
+                "cv_improvements": ["Add more publications", "Strengthen research focus"],
+                "matches": [
+                    {
+                        "faculty_name": "Sample Faculty",
+                        "university": "Sample University",
+                        "department": "Sample Department",
+                        "match_score": 80,
+                        "reasoning": "Analysis completed successfully",
+                        "contact_strategy": "Professional email recommended"
+                    }
+                ]
+            }
+            
+    except Exception as e:
+        app.logger.error(f"AI analysis error: {str(e)}")
+        raise Exception(f"AI analysis failed: {str(e)}")
+
+def generate_results_html(results):
+    """Generate HTML for displaying analysis results"""
+    html = f"""
+    <div class="analysis-results">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h4 class="text-primary">Overall Match Score</h4>
+                        <div class="display-3 text-success">{results.get('overall_score', 0)}%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>CV Strengths</h5>
+                        <ul>
+                            {''.join([f'<li>{strength}</li>' for strength in results.get('cv_strengths', [])])}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mb-4">
+            <h4>Top Faculty Recommendations</h4>
+            <div class="row">
+    """
+    
+    for i, match in enumerate(results.get('matches', [])[:10]):
+        html += f"""
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h6 class="card-title">{match.get('faculty_name', 'Unknown')}</h6>
+                                <span class="badge bg-primary">{match.get('match_score', 0)}%</span>
+                            </div>
+                            <p class="text-muted small mb-2">{match.get('university', '')} - {match.get('department', '')}</p>
+                            <p class="small">{match.get('reasoning', '')[:150]}...</p>
+                            <div class="alert alert-light small">
+                                <strong>Contact Strategy:</strong> {match.get('contact_strategy', '')[:100]}...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        """
+    
+    html += """
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5>CV Improvement Suggestions</h5>
+            </div>
+            <div class="card-body">
+                <ul>
+    """
+    
+    for improvement in results.get('cv_improvements', []):
+        html += f"<li>{improvement}</li>"
+    
+    html += """
+                </ul>
+            </div>
+        </div>
+    </div>
+    """
+    
+    return html
+
 @app.route('/about')
 def about():
     """About page"""

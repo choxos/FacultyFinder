@@ -1,0 +1,702 @@
+{% extends "base.html" %}
+
+{% block title %}AI Assistant - FacultyFinder{% endblock %}
+
+{% block extra_css %}
+<style>
+    .upload-area {
+        border: 2px dashed var(--xera-primary);
+        border-radius: 12px;
+        padding: 3rem;
+        text-align: center;
+        transition: var(--xera-transition);
+        cursor: pointer;
+        background: var(--xera-light);
+    }
+    
+    .upload-area:hover {
+        border-color: var(--xera-accent);
+        background: var(--xera-accent-light);
+    }
+    
+    .upload-area.dragover {
+        border-color: var(--xera-accent);
+        background: var(--xera-accent-light);
+        transform: scale(1.02);
+    }
+    
+    .file-preview {
+        background: white;
+        border: 1px solid var(--xera-border);
+        border-radius: 8px;
+        padding: 1rem;
+        display: none;
+    }
+    
+    .ai-option {
+        cursor: pointer;
+        transition: var(--xera-transition);
+        border: 2px solid transparent;
+    }
+    
+    .ai-option:hover {
+        border-color: var(--xera-primary);
+        transform: translateY(-2px);
+    }
+    
+    .ai-option.selected {
+        border-color: var(--xera-accent);
+        box-shadow: 0 4px 20px rgba(var(--xera-accent-rgb), 0.3);
+    }
+    
+    .pricing-card {
+        transition: var(--xera-transition);
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+    
+    .pricing-card:hover {
+        border-color: var(--xera-primary);
+        transform: translateY(-4px);
+    }
+    
+    .pricing-card.selected {
+        border-color: var(--xera-accent);
+        box-shadow: 0 6px 25px rgba(var(--xera-accent-rgb), 0.4);
+    }
+    
+    .api-key-section {
+        display: none;
+        animation: fadeIn 0.3s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .step-indicator {
+        counter-reset: step;
+    }
+    
+    .step-indicator .step {
+        counter-increment: step;
+        position: relative;
+    }
+    
+    .step-indicator .step::before {
+        content: counter(step);
+        background: var(--xera-primary);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+    
+    .step.completed::before {
+        background: var(--xera-success);
+        content: "✓";
+    }
+    
+    .progress-bar-custom {
+        height: 6px;
+        background: var(--xera-light);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--xera-primary), var(--xera-accent));
+        width: 0%;
+        transition: width 0.5s ease;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <h1 class="display-4 text-primary mb-3">
+                    <i class="fas fa-robot me-3"></i>AI-Powered Faculty Matching
+                </h1>
+                <p class="lead text-muted">
+                    Upload your CV and get personalized recommendations for faculty supervisors using advanced AI analysis
+                </p>
+                
+                <!-- Progress Indicator -->
+                <div class="step-indicator mt-4">
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <div class="step" id="step-1">
+                                <span>Upload CV</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="step" id="step-2">
+                                <span>Choose AI</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="step" id="step-3">
+                                <span>Payment Method</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="step" id="step-4">
+                                <span>Get Results</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar-custom mt-3">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="ai-assistant-form" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- Step 1: Upload CV -->
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-upload me-2"></i>Step 1: Upload Your CV
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="upload-area" id="upload-area">
+                                    <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
+                                    <h5>Drop your CV here or click to browse</h5>
+                                    <p class="text-muted">Supported formats: PDF, DOCX (Max 10MB)</p>
+                                    <input type="file" id="cv-file" name="cv_file" accept=".pdf,.docx" class="d-none">
+                                </div>
+                                
+                                <div class="file-preview mt-3" id="file-preview">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-file-alt fa-2x text-primary me-3"></i>
+                                        <div>
+                                            <h6 class="mb-1" id="file-name"></h6>
+                                            <small class="text-muted" id="file-size"></small>
+                                        </div>
+                                        <button type="button" class="btn btn-sm btn-outline-danger ms-auto" id="remove-file">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Choose AI -->
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-brain me-2"></i>Step 2: Choose Your AI Assistant
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card ai-option h-100" data-ai="claude">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-robot fa-2x text-primary mb-2"></i>
+                                                <h6>Claude (Anthropic)</h6>
+                                                <small class="text-muted">Advanced reasoning & analysis</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card ai-option h-100" data-ai="chatgpt">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-comments fa-2x text-success mb-2"></i>
+                                                <h6>ChatGPT (OpenAI)</h6>
+                                                <small class="text-muted">Conversational & comprehensive</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card ai-option h-100" data-ai="gemini">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-gem fa-2x text-warning mb-2"></i>
+                                                <h6>Gemini (Google)</h6>
+                                                <small class="text-muted">Multimodal & intelligent</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card ai-option h-100" data-ai="grok">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-lightning-bolt fa-2x text-info mb-2"></i>
+                                                <h6>Grok (xAI)</h6>
+                                                <small class="text-muted">Real-time & witty</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <input type="hidden" id="selected-ai" name="selected_ai" value="">
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment Method -->
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-credit-card me-2"></i>Step 3: Choose Payment Method
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Own API Key -->
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card pricing-card h-100" data-method="api-key">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-key fa-2x text-success mb-3"></i>
+                                                <h5 class="text-success">FREE</h5>
+                                                <h6>Use Your API Key</h6>
+                                                <p class="text-muted small">Bring your own API key for unlimited use</p>
+                                                <div class="badge bg-success">Most Popular</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- One-time AI Analysis -->
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card pricing-card h-100" data-method="one-time">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-magic fa-2x text-primary mb-3"></i>
+                                                <h5 class="text-primary">$5 CAD</h5>
+                                                <h6>AI Analysis</h6>
+                                                <p class="text-muted small">One-time AI-powered CV analysis and matching</p>
+                                                <div class="badge bg-primary">Quick & Easy</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Manual Review -->
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card pricing-card h-100" data-method="manual">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-user-graduate fa-2x text-warning mb-3"></i>
+                                                <h5 class="text-warning">$50 CAD</h5>
+                                                <h6>Expert Review</h6>
+                                                <p class="text-muted small">Manual CV review by PhD-level academic experts</p>
+                                                <div class="badge bg-warning">Premium</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- API Key Input Section -->
+                                <div class="api-key-section mt-4" id="api-key-section">
+                                    <div class="alert alert-info">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        <strong>API Key Required:</strong> Enter your API key for the selected AI service. Your key is never stored and only used for this analysis.
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="api-key" class="form-label">API Key</label>
+                                        <input type="password" class="form-control" id="api-key" name="api_key" 
+                                               placeholder="Enter your API key here...">
+                                        <div class="form-text">
+                                            <i class="fas fa-shield-alt me-1"></i>Your API key is encrypted and never stored permanently.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <input type="hidden" id="payment-method" name="payment_method" value="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Analysis Preview -->
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-success text-white">
+                                <h6 class="mb-0">
+                                    <i class="fas fa-chart-line me-2"></i>What You'll Get
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Top 10 faculty matches
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Research alignment scores
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Contact recommendations
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Application strategies
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        CV improvement suggestions
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Pricing Comparison -->
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-info text-white">
+                                <h6 class="mb-0">
+                                    <i class="fas fa-calculator me-2"></i>Cost Comparison
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <div class="border-end">
+                                            <div class="text-success h4">FREE</div>
+                                            <small>Your API</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-end">
+                                            <div class="text-primary h4">$5</div>
+                                            <small>AI Analysis</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="text-warning h4">$50</div>
+                                        <small>Expert Review</small>
+                                    </div>
+                                </div>
+                                <hr>
+                                <small class="text-muted">
+                                    <i class="fas fa-lightbulb me-1"></i>
+                                    <strong>Tip:</strong> Start with your own API key for free analysis, then upgrade for expert insights if needed.
+                                </small>
+                            </div>
+                        </div>
+                        
+                        <!-- Security Notice -->
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h6 class="text-primary">
+                                    <i class="fas fa-shield-alt me-2"></i>Privacy & Security
+                                </h6>
+                                <ul class="list-unstyled small text-muted">
+                                    <li class="mb-1">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Your CV is processed securely
+                                    </li>
+                                    <li class="mb-1">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        API keys are never stored
+                                    </li>
+                                    <li class="mb-1">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Files deleted after analysis
+                                    </li>
+                                    <li class="mb-1">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        GDPR compliant processing
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Submit Button -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5" id="submit-btn" disabled>
+                            <i class="fas fa-rocket me-2"></i>Start Analysis
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Payment Modal -->
+<div class="modal fade" id="payment-modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-credit-card me-2"></i>Complete Payment
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="stripe-payment-element">
+                    <!-- Stripe Elements will be inserted here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="complete-payment">
+                    <i class="fas fa-lock me-2"></i>Complete Payment
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Results Modal -->
+<div class="modal fade" id="results-modal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-chart-line me-2"></i>Your Faculty Matches
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="analysis-results">
+                    <!-- Results will be loaded here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="download-results">
+                    <i class="fas fa-download me-2"></i>Download PDF Report
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('ai-assistant-form');
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('cv-file');
+    const filePreview = document.getElementById('file-preview');
+    const submitBtn = document.getElementById('submit-btn');
+    const progressFill = document.getElementById('progress-fill');
+    
+    let selectedFile = null;
+    let selectedAI = null;
+    let paymentMethod = null;
+    
+    // File upload handling
+    uploadArea.addEventListener('click', () => fileInput.click());
+    uploadArea.addEventListener('dragover', handleDragOver);
+    uploadArea.addEventListener('drop', handleDrop);
+    fileInput.addEventListener('change', handleFileSelect);
+    
+    function handleDragOver(e) {
+        e.preventDefault();
+        uploadArea.classList.add('dragover');
+    }
+    
+    function handleDrop(e) {
+        e.preventDefault();
+        uploadArea.classList.remove('dragover');
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            handleFile(files[0]);
+        }
+    }
+    
+    function handleFileSelect(e) {
+        const file = e.target.files[0];
+        if (file) {
+            handleFile(file);
+        }
+    }
+    
+    function handleFile(file) {
+        if (file.size > 10 * 1024 * 1024) {
+            alert('File size must be less than 10MB');
+            return;
+        }
+        
+        if (!file.type.includes('pdf') && !file.type.includes('word')) {
+            alert('Please upload a PDF or DOCX file');
+            return;
+        }
+        
+        selectedFile = file;
+        document.getElementById('file-name').textContent = file.name;
+        document.getElementById('file-size').textContent = formatFileSize(file.size);
+        filePreview.style.display = 'block';
+        updateProgress();
+        updateStepStatus('step-1', true);
+    }
+    
+    document.getElementById('remove-file').addEventListener('click', function() {
+        selectedFile = null;
+        fileInput.value = '';
+        filePreview.style.display = 'none';
+        updateProgress();
+        updateStepStatus('step-1', false);
+    });
+    
+    // AI selection
+    document.querySelectorAll('.ai-option').forEach(option => {
+        option.addEventListener('click', function() {
+            document.querySelectorAll('.ai-option').forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedAI = this.dataset.ai;
+            document.getElementById('selected-ai').value = selectedAI;
+            updateProgress();
+            updateStepStatus('step-2', true);
+            
+            // Show API key section if using own key
+            if (paymentMethod === 'api-key') {
+                updateAPIKeySection();
+            }
+        });
+    });
+    
+    // Payment method selection
+    document.querySelectorAll('.pricing-card').forEach(card => {
+        card.addEventListener('click', function() {
+            document.querySelectorAll('.pricing-card').forEach(c => c.classList.remove('selected'));
+            this.classList.add('selected');
+            paymentMethod = this.dataset.method;
+            document.getElementById('payment-method').value = paymentMethod;
+            
+            const apiKeySection = document.getElementById('api-key-section');
+            if (paymentMethod === 'api-key') {
+                apiKeySection.style.display = 'block';
+                updateAPIKeySection();
+            } else {
+                apiKeySection.style.display = 'none';
+            }
+            
+            updateProgress();
+            updateStepStatus('step-3', true);
+        });
+    });
+    
+    function updateAPIKeySection() {
+        const apiKeyInput = document.getElementById('api-key');
+        if (selectedAI) {
+            const aiNames = {
+                'claude': 'Claude (Anthropic)',
+                'chatgpt': 'ChatGPT (OpenAI)', 
+                'gemini': 'Gemini (Google)',
+                'grok': 'Grok (xAI)'
+            };
+            apiKeyInput.placeholder = `Enter your ${aiNames[selectedAI]} API key...`;
+        }
+    }
+    
+    function updateProgress() {
+        let progress = 0;
+        if (selectedFile) progress += 25;
+        if (selectedAI) progress += 25;
+        if (paymentMethod) progress += 25;
+        if (canSubmit()) progress = 100;
+        
+        progressFill.style.width = progress + '%';
+    }
+    
+    function updateStepStatus(stepId, completed) {
+        const step = document.getElementById(stepId);
+        if (completed) {
+            step.classList.add('completed');
+        } else {
+            step.classList.remove('completed');
+        }
+    }
+    
+    function canSubmit() {
+        if (!selectedFile || !selectedAI || !paymentMethod) return false;
+        if (paymentMethod === 'api-key') {
+            return document.getElementById('api-key').value.trim() !== '';
+        }
+        return true;
+    }
+    
+    // Enable/disable submit button
+    setInterval(() => {
+        submitBtn.disabled = !canSubmit();
+    }, 500);
+    
+    // Form submission
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        if (paymentMethod === 'api-key') {
+            // Direct analysis with API key
+            await startAnalysis();
+        } else {
+            // Show payment modal
+            showPaymentModal();
+        }
+    });
+    
+    async function startAnalysis() {
+        const formData = new FormData();
+        formData.append('cv_file', selectedFile);
+        formData.append('selected_ai', selectedAI);
+        formData.append('payment_method', paymentMethod);
+        if (paymentMethod === 'api-key') {
+            formData.append('api_key', document.getElementById('api-key').value);
+        }
+        
+        try {
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Analyzing...';
+            submitBtn.disabled = true;
+            
+            const response = await fetch('/api/analyze-cv', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                showResults(result.data);
+                updateStepStatus('step-4', true);
+            } else {
+                alert('Analysis failed: ' + result.error);
+            }
+        } catch (error) {
+            alert('Error: ' + error.message);
+        } finally {
+            submitBtn.innerHTML = '<i class="fas fa-rocket me-2"></i>Start Analysis';
+            submitBtn.disabled = false;
+        }
+    }
+    
+    function showPaymentModal() {
+        const modal = new bootstrap.Modal(document.getElementById('payment-modal'));
+        modal.show();
+        // Initialize Stripe here
+    }
+    
+    function showResults(data) {
+        document.getElementById('analysis-results').innerHTML = data.html;
+        const modal = new bootstrap.Modal(document.getElementById('results-modal'));
+        modal.show();
+    }
+    
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+});
+</script>
+{% endblock %} 
