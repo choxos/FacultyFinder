@@ -217,6 +217,70 @@ const FacultyFinder = {
     }
 };
 
+// Theme management
+FacultyFinder.theme = {
+    current: localStorage.getItem('facultyfinder-theme') || 'light',
+    
+    init: function() {
+        // Set initial theme
+        document.documentElement.setAttribute('data-theme', this.current);
+        this.updateToggleButton();
+        
+        // Add theme toggle button
+        this.createToggleButton();
+    },
+    
+    createToggleButton: function() {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'theme-toggle';
+        toggleBtn.id = 'themeToggle';
+        toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        toggleBtn.title = 'Toggle Dark Mode';
+        toggleBtn.setAttribute('aria-label', 'Toggle Dark Mode');
+        
+        // Add click event
+        toggleBtn.addEventListener('click', () => {
+            this.toggle();
+        });
+        
+        document.body.appendChild(toggleBtn);
+    },
+    
+    toggle: function() {
+        const newTheme = this.current === 'light' ? 'dark' : 'light';
+        this.setTheme(newTheme);
+    },
+    
+    setTheme: function(theme) {
+        this.current = theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('facultyfinder-theme', theme);
+        this.updateToggleButton();
+        
+        // Trigger custom event for other components
+        window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme } }));
+    },
+    
+    updateToggleButton: function() {
+        const toggleBtn = document.getElementById('themeToggle');
+        if (!toggleBtn) return;
+        
+        if (this.current === 'dark') {
+            toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            toggleBtn.className = 'theme-toggle dark-mode';
+            toggleBtn.title = 'Switch to Light Mode';
+            toggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
+        } else {
+            toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+            toggleBtn.className = 'theme-toggle light-mode';
+            toggleBtn.title = 'Switch to Dark Mode';
+            toggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
+        }
+    }
+};
+
+// Global function for template access
+
 // Page-specific functionality
 const PageSpecific = {
     // Home page functionality
@@ -292,15 +356,34 @@ const PageSpecific = {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    FacultyFinder.init();
+    // Initialize theme management
+    FacultyFinder.theme.init();
     
-    // Page-specific initialization
-    const path = window.location.pathname;
-    if (path === '/' || path === '/index.html') {
-        PageSpecific.home();
-    } else if (path === '/faculties') {
-        PageSpecific.faculties();
+    const currentPage = window.location.pathname;
+    
+    if (currentPage === '/') {
+        if (typeof initHomePage === 'function') {
+            initHomePage();
+        }
+    } else if (currentPage === '/faculties') {
+        if (typeof initFacultiesPage === 'function') {
+            initFacultiesPage();
+        }
+    } else if (currentPage.includes('/professor/')) {
+        // Initialize citation network on professor profile pages
+        const professorId = currentPage.split('/').pop();
+        if (professorId && !isNaN(professorId)) {
+            FacultyFinder.citations.loadNetworkVisualization(parseInt(professorId));
+        }
     }
+    
+    // Add keyboard shortcut for theme toggle (Ctrl/Cmd + Shift + D)
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'D') {
+            e.preventDefault();
+            FacultyFinder.theme.toggle();
+        }
+    });
 });
 
 // Export for module usage if needed
