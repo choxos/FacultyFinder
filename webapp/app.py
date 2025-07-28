@@ -63,7 +63,7 @@ else:
     mail = None
 
 # Database configuration
-DEV_DB = '../database/facultyfinder_dev.db'
+DEV_DB = 'database/facultyfinder_dev.db'
 
 # Connection pool implementation for SQLite
 class SQLiteConnectionPool:
