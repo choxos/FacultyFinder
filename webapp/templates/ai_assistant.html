@@ -475,13 +475,13 @@
                     <div class="row g-4">
                         <!-- Use Own API Key -->
                         <div class="col-lg-4">
-                            <div class="card pricing-card h-100">
+                            <div class="card ai-service-card h-100" onclick="selectAnalysisOption('api_key')">
                                 <div class="card-body text-center">
                                     <i class="fas fa-key fa-2x text-success mb-3"></i>
                                     <h5>Use Your API Key</h5>
                                     <p class="text-muted">Use your own AI service API key</p>
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" id="apiKey" placeholder="Enter your API key">
+                                    <div class="mb-3" id="apiKeyInput" style="display: none;">
+                                        <input type="text" class="form-control" id="apiKey" placeholder="Enter your API key" onclick="event.stopPropagation()">
                                     </div>
                                     <div class="badge bg-success">FREE</div>
                                     <p class="small text-muted mt-2">You control the costs</p>
@@ -491,7 +491,7 @@
 
                         <!-- One-time Payment -->
                         <div class="col-lg-4">
-                            <div class="card pricing-card recommended h-100">
+                            <div class="card ai-service-card recommended h-100" onclick="selectAnalysisOption('quick_pay')">
                                 <div class="card-body text-center">
                                     <i class="fas fa-lightning-bolt fa-2x text-primary mb-3"></i>
                                     <h5>Quick Analysis</h5>
@@ -505,7 +505,7 @@
 
                         <!-- Manual Review -->
                         <div class="col-lg-4">
-                            <div class="card pricing-card h-100">
+                            <div class="card ai-service-card h-100" onclick="selectAnalysisOption('expert_review')">
                                 <div class="card-body text-center">
                                     <i class="fas fa-user-check fa-2x text-warning mb-3"></i>
                                     <h5>Expert Review</h5>
@@ -517,21 +517,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="text-center mt-4">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="analysisOption" id="useApiKey" value="api_key">
-                            <label class="form-check-label" for="useApiKey">Use My API Key</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="analysisOption" id="quickPay" value="quick_pay" checked>
-                            <label class="form-check-label" for="quickPay">Quick Analysis ($5)</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="analysisOption" id="expertReview" value="expert_review">
-                            <label class="form-check-label" for="expertReview">Expert Review ($50)</label>
-                        </div>
-                    </div>
+                    
+                    <input type="hidden" id="selectedAnalysisOption" value="quick_pay">
                 </div>
             </div>
         </div>
@@ -566,6 +553,15 @@
 </div>
 
 <script>
+// Initialize page
+document.addEventListener('DOMContentLoaded', function() {
+    // Set default analysis option (Quick Analysis - recommended)
+    selectAnalysisOption('quick_pay');
+});
+
+// File selection variables
+let selectedFile = null;
+
 // Academic field mappings
 const academicFields = {
     "health_sciences": [
@@ -695,8 +691,6 @@ const academicFields = {
     ]
 };
 
-let selectedFile = null;
-
 function updateNarrowFields() {
     const broadCategory = document.getElementById('broadCategory').value;
     const narrowField = document.getElementById('narrowField');
@@ -724,6 +718,27 @@ function selectAI(aiService) {
     
     // Update hidden input
     document.getElementById('selectedAI').value = aiService;
+}
+
+function selectAnalysisOption(optionValue) {
+    // Remove selected class from all cards
+    document.querySelectorAll('.ai-service-card').forEach(card => {
+        card.classList.remove('selected');
+    });
+    
+    // Add selected class to clicked card
+    document.querySelector(`.ai-service-card[onclick="selectAnalysisOption('${optionValue}')"]`).classList.add('selected');
+    
+    // Update hidden input
+    document.getElementById('selectedAnalysisOption').value = optionValue;
+
+    // Toggle API key input visibility
+    const apiKeyInput = document.getElementById('apiKeyInput');
+    if (optionValue === 'api_key') {
+        apiKeyInput.style.display = 'block';
+    } else {
+        apiKeyInput.style.display = 'none';
+    }
 }
 
 function handleFileSelect(event) {
@@ -788,7 +803,7 @@ function startAnalysis() {
     const broadCategory = document.getElementById('broadCategory').value;
     const narrowField = document.getElementById('narrowField').value;
     const selectedAI = document.querySelector('input[name="ai_service"]:checked');
-    const analysisOption = document.querySelector('input[name="analysis_option"]:checked');
+    const selectedAnalysisOption = document.getElementById('selectedAnalysisOption').value;
     
     if (!selectedFile) {
         alert('Please upload your CV first.');
@@ -805,45 +820,7 @@ function startAnalysis() {
         return;
     }
     
-    if (!analysisOption) {
-        alert('Please select an analysis option.');
-        return;
-    }
-    
-    {% if not current_user.is_authenticated %}
-    // Validate guest user required fields
-    const guestName = document.getElementById('guestName').value.trim();
-    const guestEmail = document.getElementById('guestEmail').value.trim();
-    const guestLevel = document.getElementById('guestLevel').value;
-    
-    if (!guestName) {
-        alert('Please enter your full name.');
-        document.getElementById('guestName').focus();
-        return;
-    }
-    
-    if (!guestEmail) {
-        alert('Please enter your email address.');
-        document.getElementById('guestEmail').focus();
-        return;
-    }
-    
-    if (!guestLevel) {
-        alert('Please select your academic level.');
-        document.getElementById('guestLevel').focus();
-        return;
-    }
-    
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(guestEmail)) {
-        alert('Please enter a valid email address.');
-        document.getElementById('guestEmail').focus();
-        return;
-    }
-    {% endif %}
-    
-    if (analysisOption.value === 'api_key') {
+    if (selectedAnalysisOption === 'api_key') {
         const apiKey = document.getElementById('apiKey').value.trim();
         if (!apiKey) {
             alert('Please enter your API key or choose a different payment option.');
@@ -857,7 +834,7 @@ function startAnalysis() {
     formData.append('ai_service', selectedAI.value);
     formData.append('broad_category', broadCategory);
     formData.append('narrow_field', narrowField);
-    formData.append('analysis_option', analysisOption.value);
+    formData.append('analysis_option', selectedAnalysisOption);
     
     // Add user profile data
     {% if current_user.is_authenticated %}
@@ -884,7 +861,7 @@ function startAnalysis() {
     formData.append('career_goals', document.getElementById('careerGoals').value);
     formData.append('specific_interests', document.getElementById('specificInterests').value);
     
-    if (analysisOption.value === 'api_key') {
+    if (selectedAnalysisOption === 'api_key') {
         formData.append('api_key', document.getElementById('apiKey').value);
     }
     
