@@ -279,7 +279,302 @@ FacultyFinder.theme = {
     }
 };
 
-// Global function for template access
+// Load more functionality
+FacultyFinder.loadMore = {
+    // Load more publications for professor profile
+    publications: {
+        currentOffset: 5, // First 5 are already loaded
+        loading: false,
+        
+        async load(professorId) {
+            if (this.loading) return;
+            
+            this.loading = true;
+            const loadBtn = document.getElementById('loadMorePublications');
+            const originalContent = loadBtn.innerHTML;
+            
+            // Show loading state
+            loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Loading...';
+            loadBtn.disabled = true;
+            
+            try {
+                const response = await fetch(`/api/v1/professor/${professorId}/publications?limit=10&offset=${this.currentOffset}`);
+                const data = await response.json();
+                
+                if (data.success && data.publications.length > 0) {
+                    this.appendPublications(data.publications);
+                    this.currentOffset += data.publications.length;
+                    
+                    // Hide button if no more publications
+                    if (!data.has_more) {
+                        loadBtn.style.display = 'none';
+                    }
+                } else {
+                    loadBtn.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error loading more publications:', error);
+                FacultyFinder.utils.showToast('Error loading publications', 'error');
+                loadBtn.style.display = 'none';
+            } finally {
+                this.loading = false;
+                loadBtn.innerHTML = originalContent;
+                loadBtn.disabled = false;
+            }
+        },
+        
+        appendPublications(publications) {
+            const container = document.querySelector('.publications-list');
+            const loadMoreContainer = container.querySelector('.text-center');
+            
+            publications.forEach(pub => {
+                const pubElement = this.createPublicationElement(pub);
+                container.insertBefore(pubElement, loadMoreContainer);
+            });
+        },
+        
+        createPublicationElement(pub) {
+            const div = document.createElement('div');
+            div.className = 'publication-item';
+            
+            let authorsHtml = pub.authors ? `<p class="publication-authors">${pub.authors}</p>` : '';
+            let journalInfo = '';
+            
+            if (pub.journal_name || pub.publication_year || pub.volume || pub.issue) {
+                journalInfo = '<p class="publication-journal">';
+                if (pub.journal_name) journalInfo += `<em>${pub.journal_name}</em>`;
+                if (pub.publication_year) journalInfo += ` (${pub.publication_year})`;
+                if (pub.volume || pub.issue) {
+                    journalInfo += ` - Vol. ${pub.volume || ''}`;
+                    if (pub.issue) journalInfo += `, No. ${pub.issue}`;
+                }
+                journalInfo += '</p>';
+            }
+            
+            let linksHtml = '';
+            if (pub.pmid || pub.doi) {
+                linksHtml = '<small class="text-muted">';
+                if (pub.pmid) {
+                    linksHtml += `PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}/" target="_blank">${pub.pmid}</a>`;
+                }
+                if (pub.doi) {
+                    if (pub.pmid) linksHtml += ' | ';
+                    linksHtml += `DOI: <a href="https://doi.org/${pub.doi}" target="_blank">${pub.doi}</a>`;
+                }
+                linksHtml += '</small>';
+            }
+            
+            div.innerHTML = `
+                <h6 class="publication-title">${pub.title}</h6>
+                ${authorsHtml}
+                ${journalInfo}
+                ${linksHtml}
+            `;
+            
+            return div;
+        }
+    },
+    
+    // Load more faculty for faculty listing page
+    faculty: {
+        currentOffset: 0,
+        loading: false,
+        currentParams: {},
+        
+        init() {
+            const resultsContainer = document.getElementById('faculty-grid');
+            if (resultsContainer) {
+                this.currentOffset = resultsContainer.children.length;
+                this.extractCurrentParams();
+            }
+        },
+        
+        extractCurrentParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            this.currentParams = {
+                search: urlParams.get('search') || '',
+                university: urlParams.get('university') || '',
+                department: urlParams.get('department') || '',
+                research_area: urlParams.get('research_area') || '',
+                degree: urlParams.get('degree') || '',
+                sort: urlParams.get('sort') || 'publication_count'
+            };
+        },
+        
+        async load() {
+            if (this.loading) return;
+            
+            this.loading = true;
+            const loadBtn = document.getElementById('loadMoreFaculty');
+            const originalContent = loadBtn.innerHTML;
+            
+            // Show loading state
+            loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Loading more faculty...';
+            loadBtn.disabled = true;
+            
+            try {
+                const params = new URLSearchParams({
+                    ...this.currentParams,
+                    limit: '20',
+                    offset: this.currentOffset.toString()
+                });
+                
+                const response = await fetch(`/api/v1/faculties/search?${params}`);
+                const data = await response.json();
+                
+                if (data.success && data.faculty.length > 0) {
+                    this.appendFaculty(data.faculty);
+                    this.currentOffset += data.faculty.length;
+                    
+                    // Hide button if no more faculty
+                    if (!data.has_more) {
+                        loadBtn.style.display = 'none';
+                    }
+                    
+                    // Update result count
+                    this.updateResultCount(data.total);
+                } else {
+                    loadBtn.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error loading more faculty:', error);
+                FacultyFinder.utils.showToast('Error loading faculty', 'error');
+                loadBtn.style.display = 'none';
+            } finally {
+                this.loading = false;
+                loadBtn.innerHTML = originalContent;
+                loadBtn.disabled = false;
+            }
+        },
+        
+        appendFaculty(facultyList) {
+            const container = document.getElementById('faculty-grid');
+            
+            facultyList.forEach(faculty => {
+                const facultyElement = this.createFacultyElement(faculty);
+                container.appendChild(facultyElement);
+            });
+        },
+        
+        createFacultyElement(faculty) {
+            const div = document.createElement('div');
+            div.className = 'col-lg-6 col-xl-4 mb-4';
+            
+            let degreesHtml = '';
+            if (faculty.degrees && faculty.degrees.length > 0) {
+                degreesHtml = faculty.degrees.map(degree => 
+                    `<a href="/faculties?degree=${encodeURIComponent(degree.degree_type)}" 
+                       class="badge bg-secondary text-decoration-none me-1 mb-1" 
+                       title="Filter by ${degree.degree_type}">${degree.degree_type}</a>`
+                ).join('');
+            }
+            
+            div.innerHTML = `
+                <div class="card faculty-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="faculty-avatar me-3">
+                                <i class="fas fa-user-graduate fa-2x text-primary"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5 class="card-title mb-1">
+                                    <a href="/professor/${faculty.id}" class="text-decoration-none">${faculty.name}</a>
+                                </h5>
+                                <p class="card-subtitle text-muted mb-2">${faculty.position || 'Faculty Member'}</p>
+                                <div class="university-info mb-2">
+                                    <div>
+                                        <a href="/faculties?department=${encodeURIComponent(faculty.department)}" 
+                                           class="department-link text-decoration-none">
+                                            <i class="fas fa-building me-1"></i>${faculty.department}
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="/faculties?university=${encodeURIComponent(faculty.university_name)}" 
+                                           class="university-link text-decoration-none">
+                                            <i class="fas fa-university me-1"></i>${faculty.university_name}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        ${faculty.research_areas ? `
+                        <div class="research-areas mb-3">
+                            <small class="text-muted d-block mb-1">Research Areas:</small>
+                            <div class="research-tags">
+                                ${faculty.research_areas.split(',').slice(0, 3).map(area => 
+                                    `<span class="badge bg-light text-dark me-1 mb-1">${area.trim()}</span>`
+                                ).join('')}
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        ${degreesHtml ? `
+                        <div class="degrees-section mb-3">
+                            <small class="text-muted d-block mb-1">Degrees:</small>
+                            <div class="degrees-list">
+                                ${degreesHtml}
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        <div class="faculty-stats">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <small class="text-muted d-block">Publications</small>
+                                    <strong>${faculty.publication_count || 0}</strong>
+                                </div>
+                                <div class="col-4">
+                                    <small class="text-muted d-block">Citations</small>
+                                    <strong>${faculty.total_citations || 0}</strong>
+                                </div>
+                                <div class="col-4">
+                                    <small class="text-muted d-block">H-Index</small>
+                                    <strong>${faculty.h_index || 0}</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer bg-transparent">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="/professor/${faculty.id}" class="btn btn-primary btn-sm">
+                                <i class="fas fa-user me-1"></i>View Profile
+                            </a>
+                            ${faculty.email ? `
+                            <a href="mailto:${faculty.email}" class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            return div;
+        },
+        
+        updateResultCount(total) {
+            const countElement = document.querySelector('h3:contains("Faculty Members")');
+            if (countElement) {
+                const currentShowing = document.getElementById('faculty-grid').children.length;
+                countElement.textContent = `Faculty Members (${currentShowing} of ${total} shown)`;
+            }
+        }
+    }
+};
+
+// Global functions for template access
+function loadMorePublications() {
+    const professorId = window.location.pathname.split('/').pop();
+    if (professorId && !isNaN(professorId)) {
+        FacultyFinder.loadMore.publications.load(parseInt(professorId));
+    }
+}
+
+function loadMoreFaculty() {
+    FacultyFinder.loadMore.faculty.load();
+}
 
 // Page-specific functionality
 const PageSpecific = {
@@ -384,6 +679,11 @@ document.addEventListener('DOMContentLoaded', function() {
             FacultyFinder.theme.toggle();
         }
     });
+    
+    // Initialize load more functionality
+    if (currentPage === '/faculties') {
+        FacultyFinder.loadMore.faculty.init();
+    }
 });
 
 // Export for module usage if needed

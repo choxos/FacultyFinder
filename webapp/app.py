@@ -574,6 +574,64 @@ def api_professor_detail(professor_id):
         'publications': publications
     })
 
+@app.route('/api/v1/professor/<int:professor_id>/publications')
+def api_professor_publications(professor_id):
+    """API endpoint for professor publications with pagination"""
+    try:
+        limit = min(int(request.args.get('limit', 10)), 50)  # Max 50 per request
+        offset = int(request.args.get('offset', 0))
+        
+        # Get all publications
+        all_publications = get_professor_publications(professor_id)
+        
+        # Apply pagination
+        total = len(all_publications)
+        publications = all_publications[offset:offset + limit]
+        
+        return jsonify({
+            'success': True,
+            'publications': publications,
+            'total': total,
+            'limit': limit,
+            'offset': offset,
+            'has_more': offset + limit < total
+        })
+    except Exception as e:
+        logger.error(f"Error getting paginated publications: {e}")
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/v1/faculties/search')
+def api_faculty_search():
+    """API endpoint for faculty search with pagination"""
+    try:
+        search = request.args.get('search', '')
+        university = request.args.get('university', '')
+        department = request.args.get('department', '')
+        research_area = request.args.get('research_area', '')
+        degree = request.args.get('degree', '')
+        sort_by = request.args.get('sort_by', 'publication_count')
+        limit = min(int(request.args.get('limit', 20)), 100)  # Max 100 per request
+        offset = int(request.args.get('offset', 0))
+        
+        # Get all matching faculty
+        all_faculty = search_faculty(search, university, department, research_area, degree, sort_by)
+        
+        # Apply pagination
+        total = len(all_faculty)
+        faculty = all_faculty[offset:offset + limit]
+        
+        return jsonify({
+            'success': True,
+            'faculty': faculty,
+            'total': total,
+            'limit': limit,
+            'offset': offset,
+            'has_more': offset + limit < total
+        })
+    except Exception as e:
+        logger.error(f"Error in faculty search API: {e}")
+        return jsonify({'success': False, 'error': str(e)}), 500
+
 # Helper functions
 def get_summary_statistics():
     """Get summary statistics for dashboard"""

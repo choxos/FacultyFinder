@@ -195,13 +195,19 @@
                     {% endfor %}
                 </div>
                 
-                <!-- Pagination placeholder -->
+                <!-- Load More Button -->
                 <div class="row mt-4">
                     <div class="col-12 text-center">
-                        <p class="text-muted">
-                            Showing {{ faculty|length }} results. 
-                            <a href="#" class="text-decoration-none">Load more...</a>
-                        </p>
+                        <div class="load-more-section">
+                            <p class="text-muted mb-3">
+                                Showing {{ faculty|length }} results
+                            </p>
+                            <button id="loadMoreFaculty" class="btn btn-primary btn-lg load-more-btn" onclick="loadMoreFaculty()">
+                                <i class="fas fa-plus-circle me-2"></i>
+                                <span class="btn-text">Load More Faculty</span>
+                                <span class="btn-subtext">Show additional results</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 

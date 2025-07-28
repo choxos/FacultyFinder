@@ -259,8 +259,10 @@
                         
                         {% if publications|length > 5 %}
                             <div class="text-center mt-3">
-                                <button class="btn btn-outline-primary" onclick="loadMorePublications()">
-                                    <i class="fas fa-plus me-2"></i>Load More Publications
+                                <button id="loadMorePublications" class="btn btn-primary btn-lg load-more-btn" onclick="loadMorePublications()">
+                                    <i class="fas fa-file-alt me-2"></i>
+                                    <span class="btn-text">Load More Publications</span>
+                                    <span class="btn-subtext">Show additional {{ publications|length - 5 }} publications</span>
                                 </button>
                             </div>
                         {% endif %}
