@@ -109,24 +109,28 @@
                                           {% if degrees %}
                               <div class="mb-3">
                                   <h5>Degrees</h5>
-                                  <div class="degrees-list">
+                                  <div class="degrees-list-horizontal">
                                       {% for degree in degrees %}
-                                          <div class="degree-item mb-2">
-                                              <span class="degree-badge">
+                                          <div class="degree-item-horizontal d-inline-block me-3 mb-2">
+                                              <div class="degree-badge-wrapper">
                                                   <a href="/faculties?degree={{ degree.degree_type }}" 
                                                      class="badge bg-primary text-decoration-none degree-link"
                                                      title="View all faculty with {{ degree.degree_type }}">
                                                       {{ degree.degree_type }}
                                                   </a>
-                                              </span>
-                                              {% if degree.specialization %}
-                                                  <span class="degree-specialization">{{ degree.specialization }}</span>
-                                              {% endif %}
-                                              {% if degree.institution %}
-                                                  <br><small class="text-muted">{{ degree.institution }}</small>
-                                              {% endif %}
-                                              {% if degree.year_obtained %}
-                                                  <small class="text-muted">({{ degree.year_obtained }})</small>
+                                              </div>
+                                              {% if degree.specialization or degree.institution or degree.year_obtained %}
+                                                  <div class="degree-details-horizontal text-muted small mt-1">
+                                                      {% if degree.specialization %}
+                                                          <div class="degree-specialization">{{ degree.specialization }}</div>
+                                                      {% endif %}
+                                                      {% if degree.institution %}
+                                                          <div>{{ degree.institution }}</div>
+                                                      {% endif %}
+                                                      {% if degree.year_obtained %}
+                                                          <div>({{ degree.year_obtained }})</div>
+                                                      {% endif %}
+                                                  </div>
                                               {% endif %}
                                           </div>
                                       {% endfor %}
