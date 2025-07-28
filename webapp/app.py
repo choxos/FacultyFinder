@@ -337,7 +337,7 @@ Sent at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         logger.error(f"Error sending support notification: {e}")
         return False
 
-@cached(timeout=600)  # Cache for 10 minutes
+@cached(timeout=300)  # Cache for 5 minutes (shorter than before)
 @monitor_performance
 def get_summary_statistics():
     """Get summary statistics for the homepage (cached)"""
@@ -369,7 +369,7 @@ def get_summary_statistics():
         logger.error(f"Error getting summary statistics: {e}")
         return {"professors": 0, "universities": 0, "publications": 0, "countries": 0}
 
-@cached(timeout=3600)  # Cache for 1 hour
+@cached(timeout=1800)  # Cache for 30 minutes
 @monitor_performance
 def get_top_universities():
     """Get top universities by professor count (cached)"""
