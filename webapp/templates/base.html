@@ -23,11 +23,24 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/themes/facultyfinder-theme.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/facultyfinder.css') }}">
     
+    <!-- Fixed navbar padding -->
+    <style>
+        body {
+            padding-top: 76px; /* Accommodate fixed navbar height */
+        }
+        
+        @media (max-width: 991.98px) {
+            body {
+                padding-top: 70px; /* Smaller padding for mobile */
+            }
+        }
+    </style>
+    
     {% block extra_css %}{% endblock %}
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">
                 <i class="fas fa-graduation-cap text-primary me-2"></i>
@@ -123,7 +136,7 @@
                         Connecting researchers with their ideal academic collaborators worldwide.
                     </p>
                     <p class="mb-0">
-                        &copy; 2024 FacultyFinder. All rights reserved.
+                        &copy; 2025 FacultyFinder. All rights reserved.
                     </p>
                 </div>
                 <div class="col-md-3">
@@ -149,7 +162,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <p class="text-muted small mb-0">
-                        &copy; 2024 FacultyFinder. All rights reserved.
+                        &copy; 2025 FacultyFinder. All rights reserved.
                     </p>
                 </div>
                 <div class="col-md-6 text-md-end">
