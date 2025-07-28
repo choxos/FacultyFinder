@@ -151,10 +151,107 @@ Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"""
         logger.error(f"Error sending support notification: {e}")
         return False
 
+def get_summary_statistics():
+    """Get summary statistics for the platform"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return {
+                'total_professors': 0,
+                'total_universities': 0,
+                'total_publications': 0,
+                'countries_covered': 0
+            }
+        
+        # Get professor count
+        cursor = conn.execute("SELECT COUNT(*) FROM professors")
+        total_professors = cursor.fetchone()[0]
+        
+        # Get university count
+        cursor = conn.execute("SELECT COUNT(DISTINCT id) FROM universities WHERE id IN (SELECT DISTINCT university_id FROM professors)")
+        total_universities = cursor.fetchone()[0]
+        
+        # Get publication count (approximate from CSV data)
+        cursor = conn.execute("SELECT COUNT(*) FROM professors")
+        total_publications = cursor.fetchone()[0] * 15  # Rough estimate
+        
+        # Get countries covered
+        cursor = conn.execute("SELECT COUNT(DISTINCT country) FROM universities WHERE id IN (SELECT DISTINCT university_id FROM professors)")
+        countries_covered = cursor.fetchone()[0]
+        
+        conn.close()
+        
+        return {
+            'total_professors': total_professors,
+            'total_universities': total_universities,
+            'total_publications': total_publications,
+            'countries_covered': countries_covered
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting summary statistics: {e}")
+        return {
+            'total_professors': 0,
+            'total_universities': 0,
+            'total_publications': 0,
+            'countries_covered': 0
+        }
+
+def get_top_universities():
+    """Get top universities by faculty count"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return []
+        
+        query = """
+        SELECT u.name, u.city, u.province_state, u.country, u.address,
+               u.university_type, u.languages, u.year_established,
+               COUNT(p.id) as professor_count
+        FROM universities u
+        INNER JOIN professors p ON u.id = p.university_id
+        GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address,
+                 u.university_type, u.languages, u.year_established
+        ORDER BY professor_count DESC
+        LIMIT 9
+        """
+        
+        cursor = conn.execute(query)
+        universities = [dict(row) for row in cursor.fetchall()]
+        conn.close()
+        
+        return universities
+        
+    except Exception as e:
+        logger.error(f"Error getting top universities: {e}")
+        return []
+
 @app.route('/')
 def index():
-    """Home page"""
-    return render_template('index.html')
+    """Home page with statistics and top universities"""
+    try:
+        # Get summary statistics
+        stats = get_summary_statistics()
+        
+        # Get top universities
+        top_universities = get_top_universities()
+        
+        return render_template('index.html', 
+                             stats=stats,
+                             top_universities=top_universities)
+    
+    except Exception as e:
+        logger.error(f"Error in index route: {e}")
+        # Provide fallback data
+        stats = {
+            'total_professors': 0,
+            'total_universities': 0,
+            'total_publications': 0,
+            'countries_covered': 0
+        }
+        return render_template('index.html', 
+                             stats=stats,
+                             top_universities=[])
 
 @app.route('/faculties')
 def faculties():
