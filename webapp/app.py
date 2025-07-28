@@ -774,7 +774,15 @@ def professor_profile(professor_id):
         
         # Optimized single query to get all professor data
         query = """
-        SELECT p.*, u.name as university_name, u.city, u.province_state, u.country, u.address
+        SELECT p.id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
+               p.degrees, p.all_degrees_and_inst, p.all_degrees_only, p.research_areas,
+               p.university_id, p.faculty, p.department, p.other_departments,
+               p.primary_affiliation, p.memberships, p.canada_research_chair, p.director,
+               p.position, p.full_time, p.adjunct, p.uni_email as email, p.other_email,
+               p.uni_page, p.website, p.misc, p.twitter, p.linkedin, p.phone, p.fax,
+               p.google_scholar, p.scopus, p.web_of_science, p.orcid, p.researchgate,
+               p.academicedu, p.created_at, p.updated_at,
+               u.name as university_name, u.city, u.province_state, u.country, u.address
         FROM professors p
         LEFT JOIN universities u ON p.university_id = u.id
         WHERE p.id = ?

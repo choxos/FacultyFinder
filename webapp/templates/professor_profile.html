@@ -74,8 +74,8 @@
                     <div class="col-lg-4 text-lg-end">
                         <!-- Contact Information -->
                         <div class="d-flex flex-column gap-2">
-                            {% if professor.uni_email %}
-                                <a href="mailto:{{ professor.uni_email }}" class="btn btn-outline-primary">
+                            {% if professor.email %}
+                                <a href="mailto:{{ professor.email }}" class="btn btn-outline-primary">
                                     <i class="fas fa-envelope me-2"></i>Email
                                 </a>
                             {% endif %}
@@ -87,6 +87,21 @@
                             {% if professor.website %}
                                 <a href="{{ professor.website }}" target="_blank" class="btn btn-outline-info">
                                     <i class="fas fa-globe me-2"></i>Website
+                                </a>
+                            {% endif %}
+                            {% if professor.google_scholar %}
+                                <a href="{{ professor.google_scholar }}" target="_blank" class="btn btn-outline-success">
+                                    <i class="fas fa-graduation-cap me-2"></i>Google Scholar
+                                </a>
+                            {% endif %}
+                            {% if professor.orcid %}
+                                <a href="https://orcid.org/{{ professor.orcid }}" target="_blank" class="btn btn-outline-warning">
+                                    <i class="fab fa-orcid me-2"></i>ORCID
+                                </a>
+                            {% endif %}
+                            {% if professor.linkedin %}
+                                <a href="{{ professor.linkedin }}" target="_blank" class="btn btn-outline-primary">
+                                    <i class="fab fa-linkedin me-2"></i>LinkedIn
                                 </a>
                             {% endif %}
                         </div>
@@ -407,10 +422,10 @@
                     <i class="fas fa-address-card text-primary me-2"></i>
                     Contact Information
                 </h4>
-                {% if professor.uni_email %}
+                {% if professor.email %}
                     <div class="mb-2">
                         <strong>University Email:</strong><br>
-                        <a href="mailto:{{ professor.uni_email }}">{{ professor.uni_email }}</a>
+                        <a href="mailto:{{ professor.email }}">{{ professor.email }}</a>
                     </div>
                 {% endif %}
                 {% if professor.other_email %}
