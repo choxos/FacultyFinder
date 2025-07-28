@@ -21,6 +21,14 @@ The PubMed integration is now fully functional and has been tested with real dat
 - **Publication Years**: 2024-2025 (most recent)
 - **Success Rate**: 100% for known researchers
 
+### 📊 **Search Configuration**
+
+- **Database**: PubMed (NCBI)
+- **Query Fields**: Author name, affiliation, research keywords
+- **Publication Years**: 2025-2026 (most recent)
+- **Article Types**: All research articles, reviews, meta-analyses
+- **Languages**: English (primary), with support for other languages
+
 ## 🛠️ How to Add More Publications
 
 ### Option 1: Use the Existing Script (Recommended)
