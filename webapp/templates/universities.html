@@ -129,6 +129,7 @@
     <!-- Universities Grid -->
     <div id="universities-grid" class="row">
         {% for university in universities %}
+            <!-- Grid View (Default) -->
             <div class="col-lg-6 col-xl-4 mb-4">
                 <div class="university-card facultyfinder-card p-4 h-100">
                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -211,6 +212,88 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- List View (Hidden by default) -->
+                <div class="university-list-item">
+                    <div class="university-list-content">
+                        <!-- Icon -->
+                        <div class="university-list-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        
+                        <!-- Main Info -->
+                        <div class="university-list-main">
+                            <div class="university-list-name">
+                                <a href="/faculties?university={{ university.name }}">{{ university.name }}</a>
+                                {% if university.year_established %}
+                                    <span class="badge bg-secondary ms-2">Est. {{ university.year_established }}</span>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="university-list-location">
+                                <span>
+                                    <i class="fas fa-map-marker-alt me-1"></i>
+                                    <strong>{{ university.city }}</strong>{% if university.province_state %}, {{ university.province_state }}{% endif %}, {{ university.country }}
+                                </span>
+                                {% if university.address %}
+                                    <a href="https://www.google.com/maps/search/{{ university.name }}+{{ university.address|urlencode }}" 
+                                       target="_blank" class="maps-link" title="View on Google Maps">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                {% else %}
+                                    <a href="https://www.google.com/maps/search/{{ university.name }}+{{ university.city }}+{{ university.province_state }}+{{ university.country|urlencode }}" 
+                                       target="_blank" class="maps-link" title="View on Google Maps">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="university-list-badges">
+                                {% if university.university_type %}
+                                    <a href="/universities?type={{ university.university_type }}"
+                                       class="badge bg-primary text-decoration-none"
+                                       title="Filter by {{ university.university_type }} universities">
+                                        {{ university.university_type|title }}
+                                    </a>
+                                {% endif %}
+                                
+                                {% if university.languages %}
+                                    {% for language in university.languages.split(';') %}
+                                        {% if language.strip() %}
+                                            <a href="/universities?language={{ language.strip() }}"
+                                               class="badge bg-info text-decoration-none"
+                                               title="Filter by {{ language.strip() }} language universities">
+                                                {{ language.strip() }}
+                                            </a>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <!-- Stats -->
+                        <div class="university-list-stats">
+                            <div class="university-stat-item">
+                                <div class="university-stat-number">{{ university.professor_count or 0 }}</div>
+                                <div class="university-stat-label">Faculty</div>
+                            </div>
+                            <div class="university-stat-item">
+                                <div class="university-stat-number">{{ university.department_count or 0 }}</div>
+                                <div class="university-stat-label">Departments</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Actions -->
+                        <div class="university-list-actions">
+                            <a href="/faculties?university={{ university.name }}" class="btn btn-primary">
+                                <i class="fas fa-users me-1"></i>View Faculty
+                            </a>
+                            <a href="/universities?country={{ university.country }}" class="btn btn-outline-secondary">
+                                <i class="fas fa-globe me-1"></i>{{ university.country }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         {% else %}
             <div class="col-12">
@@ -259,29 +342,30 @@ function updateProvinces() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-    // Set up view toggle if buttons exist
+    // Set up view toggle functionality
     const viewButtons = document.querySelectorAll('[data-view]');
-    viewButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            const view = this.dataset.view;
-            
-            // Update active button
-            viewButtons.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-            this.classList.add('active');
-            
-            // Toggle view
-            const grid = document.getElementById('universities-grid');
-            if (grid) {
+    const universitiesGrid = document.getElementById('universities-grid');
+    
+    if (viewButtons.length > 0 && universitiesGrid) {
+        viewButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                const view = this.dataset.view;
+                
+                // Update active button
+                viewButtons.forEach(function(btn) {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Toggle view
                 if (view === 'list') {
-                    grid.classList.add('list-view');
+                    universitiesGrid.classList.add('list-view');
                 } else {
-                    grid.classList.remove('list-view');
+                    universitiesGrid.classList.remove('list-view');
                 }
-            }
+            });
         });
-    });
+    }
     
     // Initialize provinces dropdown
     updateProvinces();

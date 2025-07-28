@@ -89,6 +89,7 @@
                 
                 <div id="faculty-grid" class="row">
                     {% for prof in faculty %}
+                        <!-- Grid View (Default) -->
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="faculty-card card h-100 shadow-sm border-0">
                                 <div class="card-body p-4">
@@ -200,6 +201,73 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!-- List View (Hidden by default) -->
+                            <div class="faculty-list-item">
+                                <div class="faculty-list-content">
+                                    <!-- Avatar -->
+                                    <div class="faculty-list-avatar">
+                                        {{ prof.name[0]|upper }}
+                                    </div>
+                                    
+                                    <!-- Main Info -->
+                                    <div class="faculty-list-info">
+                                        <div class="faculty-list-name">
+                                            <a href="/professor/{{ prof.id }}">{{ prof.name }}</a>
+                                        </div>
+                                        {% if prof.position %}
+                                            <div class="faculty-list-position">{{ prof.position }}</div>
+                                        {% endif %}
+                                        <div class="faculty-list-affiliation">
+                                            {% if prof.department %}
+                                                <span>
+                                                    <i class="fas fa-building me-1"></i>
+                                                    <a href="/faculties?department={{ prof.department }}" class="faculty-list-dept">
+                                                        {{ prof.department }}
+                                                    </a>
+                                                </span>
+                                            {% endif %}
+                                            {% if prof.university_name %}
+                                                <span>
+                                                    <i class="fas fa-university me-1"></i>
+                                                    <a href="/faculties?university={{ prof.university_name }}" class="faculty-list-uni">
+                                                        {{ prof.university_name }}
+                                                    </a>
+                                                </span>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Research Areas -->
+                                    {% if prof.research_areas %}
+                                        <div class="faculty-list-research">
+                                            {% set areas = prof.research_areas.split(';') %}
+                                            {% for area in areas[:4] %}
+                                                {% if area.strip() %}
+                                                    <span class="badge bg-light text-dark border">
+                                                        {{ area.strip() }}
+                                                    </span>
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if areas|length > 4 %}
+                                                <span class="badge bg-secondary">+{{ areas|length - 4 }}</span>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+                                    
+                                    <!-- Actions -->
+                                    <div class="faculty-list-actions">
+                                        <a href="/professor/{{ prof.id }}" class="btn btn-primary">
+                                            <i class="fas fa-user me-1"></i>View Profile
+                                        </a>
+                                        {% if prof.email %}
+                                            <a href="mailto:{{ prof.email }}" class="btn btn-outline-secondary" title="Send Email">
+                                                <i class="fas fa-envelope me-1"></i>Contact
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     {% endfor %}
                 </div>
@@ -240,22 +308,28 @@
 {% block extra_js %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // View toggle functionality
-    const gridView = document.querySelector('[data-view="grid"]');
-    const listView = document.querySelector('[data-view="list"]');
+    // Set up view toggle functionality
+    const viewButtons = document.querySelectorAll('[data-view]');
     const facultyGrid = document.getElementById('faculty-grid');
     
-    if (gridView && listView && facultyGrid) {
-        gridView.addEventListener('click', function() {
-            facultyGrid.className = 'row';
-            gridView.classList.add('active');
-            listView.classList.remove('active');
-        });
-        
-        listView.addEventListener('click', function() {
-            facultyGrid.className = 'list-group';
-            listView.classList.add('active');
-            gridView.classList.remove('active');
+    if (viewButtons.length > 0 && facultyGrid) {
+        viewButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                const view = this.dataset.view;
+                
+                // Update active button
+                viewButtons.forEach(function(btn) {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Toggle view
+                if (view === 'list') {
+                    facultyGrid.classList.add('list-view');
+                } else {
+                    facultyGrid.classList.remove('list-view');
+                }
+            });
         });
     }
     
@@ -269,5 +343,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Load more faculty function (if implemented)
+function loadMoreFaculty() {
+    console.log('Load more faculty functionality to be implemented');
+}
 </script>
 {% endblock %} 
