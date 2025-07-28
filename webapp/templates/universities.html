@@ -134,7 +134,8 @@
                 <div class="university-card facultyfinder-card p-4 h-100">
                     <div class="d-flex justify-content-between align-items-start mb-3">
                         <h5 class="mb-1">
-                            <a href="/faculties?university={{ university.name }}" class="text-decoration-none university-link">
+                            <a href="{{ url_for('university_profile', university_id=university.id) }}" 
+                               class="text-decoration-none text-primary fw-bold">
                                 {{ university.name }}
                             </a>
                         </h5>
@@ -234,7 +235,7 @@
                         <!-- Main Info -->
                         <div class="university-list-main">
                             <div class="university-list-name">
-                                <a href="/faculties?university={{ university.name }}">{{ university.name }}</a>
+                                <a href="{{ url_for('university_profile', university_id=university.id) }}">{{ university.name }}</a>
                                 {% if university.year_established %}
                                     <span class="badge bg-secondary ms-2">Est. {{ university.year_established }}</span>
                                 {% endif %}

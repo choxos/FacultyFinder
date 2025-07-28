@@ -448,24 +448,30 @@ def get_summary_statistics():
         if not conn:
             return {"professors": 0, "universities": 0, "publications": 0, "countries": 0}
         
-        # Use a single query with subqueries for better performance
-        query = """
-        SELECT 
-            (SELECT COUNT(*) FROM professors) as professors,
-            (SELECT COUNT(*) FROM universities) as universities,
-            (SELECT COUNT(*) FROM publications) as publications,
-            (SELECT COUNT(DISTINCT country) FROM universities) as countries
-        """
+        # Use individual queries since they work correctly
+        results = {}
         
-        cursor = conn.execute(query)
-        row = cursor.fetchone()
+        # Check professors
+        cursor = conn.execute('SELECT COUNT(*) as count FROM professors')
+        prof_result = cursor.fetchone()
+        results['professors'] = prof_result['count'] if prof_result else 0
         
-        return {
-            "professors": row['professors'],
-            "universities": row['universities'], 
-            "publications": row['publications'],
-            "countries": row['countries']
-        }
+        # Check universities  
+        cursor = conn.execute('SELECT COUNT(*) as count FROM universities')
+        uni_result = cursor.fetchone()
+        results['universities'] = uni_result['count'] if uni_result else 0
+        
+        # Check publications
+        cursor = conn.execute('SELECT COUNT(*) as count FROM publications')
+        pub_result = cursor.fetchone()
+        results['publications'] = pub_result['count'] if pub_result else 0
+        
+        # Check countries
+        cursor = conn.execute('SELECT COUNT(DISTINCT country) as count FROM universities')
+        country_result = cursor.fetchone()
+        results['countries'] = country_result['count'] if country_result else 0
+        
+        return results
         
     except Exception as e:
         logger.error(f"Error getting summary statistics: {e}")
@@ -942,6 +948,113 @@ def professor_profile(professor_id):
     except Exception as e:
         logger.error(f"Error getting professor {professor_id}: {e}")
         return "Error loading professor profile", 500
+
+@app.route('/university/<int:university_id>')
+@monitor_performance
+def university_profile(university_id):
+    """University profile page with statistics"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return "Database connection error", 500
+        
+        # Get university information
+        university_query = """
+        SELECT u.id, u.name, u.city, u.province_state, u.country, u.address, 
+               u.postal_code, u.phone, u.fax, u.email, u.website, u.type, 
+               u.language, u.year_established, u.student_population, u.num_faculty,
+               u.latitude, u.longitude
+        FROM universities u
+        WHERE u.id = ?
+        """
+        
+        cursor = conn.execute(university_query, (university_id,))
+        university = cursor.fetchone()
+        
+        if not university:
+            return "University not found", 404
+        
+        university_dict = dict(university)
+        
+        # Get faculty statistics
+        faculty_stats_query = """
+        SELECT 
+            COUNT(*) as total_faculty,
+            COUNT(DISTINCT faculty) as unique_faculties,
+            COUNT(DISTINCT department) as unique_departments,
+            COUNT(CASE WHEN full_time = 1 THEN 1 END) as full_time_faculty,
+            COUNT(CASE WHEN adjunct = 1 THEN 1 END) as adjunct_faculty
+        FROM professors
+        WHERE university_id = ?
+        """
+        
+        cursor = conn.execute(faculty_stats_query, (university_id,))
+        faculty_stats = dict(cursor.fetchone())
+        
+        # Get faculty by department
+        department_query = """
+        SELECT department, COUNT(*) as faculty_count
+        FROM professors
+        WHERE university_id = ? AND department IS NOT NULL AND department != ''
+        GROUP BY department
+        ORDER BY faculty_count DESC
+        LIMIT 10
+        """
+        
+        cursor = conn.execute(department_query, (university_id,))
+        departments = [dict(row) for row in cursor.fetchall()]
+        
+        # Get publication statistics
+        publication_stats_query = """
+        SELECT 
+            COUNT(DISTINCT pub.id) as total_publications,
+            AVG(CAST(pub.publication_year AS INTEGER)) as avg_publication_year,
+            COUNT(CASE WHEN pub.publication_year >= strftime('%Y', 'now', '-5 years') THEN 1 END) as recent_publications
+        FROM author_publications ap
+        JOIN publications pub ON ap.publication_id = pub.id
+        JOIN professors p ON ap.professor_id = p.id
+        WHERE p.university_id = ?
+        """
+        
+        cursor = conn.execute(publication_stats_query, (university_id,))
+        publication_stats = dict(cursor.fetchone())
+        
+        # Get top research areas
+        research_areas_query = """
+        SELECT research_areas, COUNT(*) as faculty_count
+        FROM professors
+        WHERE university_id = ? AND research_areas IS NOT NULL AND research_areas != ''
+        GROUP BY research_areas
+        ORDER BY faculty_count DESC
+        LIMIT 10
+        """
+        
+        cursor = conn.execute(research_areas_query, (university_id,))
+        research_areas = [dict(row) for row in cursor.fetchall()]
+        
+        # Get recent faculty (top 5 by recent activity)
+        recent_faculty_query = """
+        SELECT p.id, p.name, p.faculty, p.department, p.research_areas
+        FROM professors p
+        WHERE p.university_id = ?
+        ORDER BY p.updated_at DESC
+        LIMIT 5
+        """
+        
+        cursor = conn.execute(recent_faculty_query, (university_id,))
+        recent_faculty = [dict(row) for row in cursor.fetchall()]
+        
+        return render_template('university_profile.html',
+                             university=university_dict,
+                             faculty_stats=faculty_stats,
+                             departments=departments,
+                             publication_stats=publication_stats,
+                             research_areas=research_areas,
+                             recent_faculty=recent_faculty)
+        
+    except Exception as e:
+        logger.error(f"Error getting university {university_id}: {e}")
+        return "Error loading university profile", 500
 
 @app.route('/api/ai-stats')
 @monitor_performance

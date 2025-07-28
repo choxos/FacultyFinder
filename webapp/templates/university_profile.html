@@ -1,0 +1,306 @@
+{% extends "base.html" %}
+
+{% block title %}{{ university.name }} - FacultyFinder{% endblock %}
+
+{% block extra_css %}
+<style>
+.university-hero {
+    background: linear-gradient(135deg, var(--ff-primary-color) 0%, var(--ff-secondary-color) 100%);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.department-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--ff-primary-color);
+}
+
+.research-area-tag {
+    background: var(--ff-accent-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 0.2rem;
+    display: inline-block;
+}
+
+.faculty-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-2px);
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- University Hero Section -->
+<div class="university-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">{{ university.name }}</h1>
+                <p class="lead mb-4">
+                    <i class="fas fa-map-marker-alt me-2"></i>
+                    {{ university.city }}, {{ university.province_state }}, {{ university.country }}
+                </p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        {% if university.year_established %}
+                        <p class="mb-2">
+                            <i class="fas fa-calendar-alt me-2"></i>
+                            <strong>Established:</strong> {{ university.year_established }}
+                        </p>
+                        {% endif %}
+                        
+                        {% if university.type %}
+                        <p class="mb-2">
+                            <i class="fas fa-university me-2"></i>
+                            <strong>Type:</strong> {{ university.type }}
+                        </p>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="col-md-6">
+                        {% if university.language %}
+                        <p class="mb-2">
+                            <i class="fas fa-language me-2"></i>
+                            <strong>Language:</strong> {{ university.language }}
+                        </p>
+                        {% endif %}
+                        
+                        {% if university.student_population %}
+                        <p class="mb-2">
+                            <i class="fas fa-users me-2"></i>
+                            <strong>Students:</strong> {{ "{:,}".format(university.student_population) }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 text-lg-end">
+                <div class="d-flex flex-column gap-2">
+                    {% if university.website %}
+                    <a href="{{ university.website }}" target="_blank" class="btn btn-light btn-lg">
+                        <i class="fas fa-globe me-2"></i>Official Website
+                    </a>
+                    {% endif %}
+                    
+                    {% if university.address %}
+                        {% set maps_query = university.name + ", " + university.address %}
+                    {% else %}
+                        {% set maps_query = university.name + ", " + university.city + ", " + university.province_state + ", " + university.country %}
+                    {% endif %}
+                    <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
+                       target="_blank" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-map-marker-alt me-2"></i>View on Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Statistics Overview -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="fw-bold mb-4">University Statistics</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number text-primary">{{ faculty_stats.total_faculty or 0 }}</div>
+                        <div class="stat-label">Total Faculty</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number text-success">{{ faculty_stats.unique_departments or 0 }}</div>
+                        <div class="stat-label">Departments</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number text-info">{{ publication_stats.total_publications or 0 }}</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number text-warning">{{ publication_stats.recent_publications or 0 }}</div>
+                        <div class="stat-label">Recent Papers (5 years)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Faculty Breakdown -->
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <h3 class="fw-bold mb-4">Faculty by Department</h3>
+            {% if departments %}
+                {% for dept in departments %}
+                <div class="department-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">{{ dept.department }}</h6>
+                            <small class="text-muted">Department</small>
+                        </div>
+                        <div class="text-end">
+                            <span class="badge bg-primary rounded-pill">{{ dept.faculty_count }} Faculty</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-muted">No department information available</p>
+            {% endif %}
+        </div>
+        
+        <div class="col-lg-6">
+            <h3 class="fw-bold mb-4">Research Areas</h3>
+            {% if research_areas %}
+                <div class="mb-3">
+                    {% for area in research_areas %}
+                        <span class="research-area-tag">
+                            {{ area.research_areas }}
+                            <span class="badge bg-light text-dark ms-1">{{ area.faculty_count }}</span>
+                        </span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-muted">No research area information available</p>
+            {% endif %}
+            
+            <!-- Faculty Type Breakdown -->
+            <div class="mt-4">
+                <h5 class="fw-bold mb-3">Faculty Composition</h5>
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="text-center p-3 bg-light rounded">
+                            <div class="fw-bold text-primary">{{ faculty_stats.full_time_faculty or 0 }}</div>
+                            <small class="text-muted">Full-time</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-3 bg-light rounded">
+                            <div class="fw-bold text-secondary">{{ faculty_stats.adjunct_faculty or 0 }}</div>
+                            <small class="text-muted">Adjunct</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Faculty -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="fw-bold mb-4">Recent Faculty Profiles</h3>
+            {% if recent_faculty %}
+                <div class="row g-4">
+                    {% for faculty in recent_faculty %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <a href="{{ url_for('professor_profile', professor_id=faculty.id) }}" class="text-decoration-none">
+                                <h6 class="fw-bold text-primary mb-2">{{ faculty.name }}</h6>
+                                {% if faculty.department %}
+                                <p class="text-muted small mb-2">{{ faculty.department }}</p>
+                                {% endif %}
+                                {% if faculty.research_areas %}
+                                <p class="small mb-0">{{ faculty.research_areas[:100] }}{% if faculty.research_areas|length > 100 %}...{% endif %}</p>
+                                {% endif %}
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('faculties') }}?university={{ university.name }}" class="btn btn-primary">
+                        <i class="fas fa-users me-2"></i>View All Faculty
+                    </a>
+                </div>
+            {% else %}
+                <p class="text-muted">No faculty information available</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Contact Information -->
+    {% if university.email or university.phone or university.address %}
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="fw-bold mb-4">Contact Information</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    {% if university.address %}
+                    <p class="mb-3">
+                        <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                        <strong>Address:</strong><br>
+                        {{ university.address }}<br>
+                        {{ university.city }}, {{ university.province_state }} {{ university.postal_code }}<br>
+                        {{ university.country }}
+                    </p>
+                    {% endif %}
+                </div>
+                
+                <div class="col-md-6">
+                    {% if university.phone %}
+                    <p class="mb-2">
+                        <i class="fas fa-phone me-2 text-primary"></i>
+                        <strong>Phone:</strong> {{ university.phone }}
+                    </p>
+                    {% endif %}
+                    
+                    {% if university.email %}
+                    <p class="mb-2">
+                        <i class="fas fa-envelope me-2 text-primary"></i>
+                        <strong>Email:</strong> 
+                        <a href="mailto:{{ university.email }}">{{ university.email }}</a>
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %} 
