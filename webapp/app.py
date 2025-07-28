@@ -6,6 +6,7 @@ Flask-based web interface for discovering academic faculty and their research
 
 from flask import Flask, render_template, request, jsonify, send_from_directory
 from flask_caching import Cache
+from flask_login import current_user, login_required
 import psycopg2
 import psycopg2.extras
 from psycopg2 import pool
@@ -19,6 +20,11 @@ from collections import defaultdict
 import threading
 from functools import wraps
 import time
+
+# Import authentication and admin modules
+from auth import AuthManager, login_manager
+from admin import admin_bp, init_admin_dashboard
+from user_routes import auth_bp, user_bp, init_user_manager
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -54,7 +60,7 @@ if env == 'production':
         DEV_DB = None
 else:
     # Development configuration
-    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-key-change-in-production')
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'facultyfinder-dev-secret-key-change-in-production')
     DB_CONFIG = {
         'host': os.environ.get('DB_HOST', 'localhost'),
         'port': os.environ.get('DB_PORT', 5432),
@@ -204,6 +210,21 @@ def monitor_performance(func):
 
 # Initialize optimized database manager
 db = DatabaseManager(DB_CONFIG, dev_mode=(DEV_DB is not None))
+
+# Initialize authentication
+auth_manager = AuthManager(db)
+auth_manager.init_app(app)
+
+# Initialize admin dashboard
+init_admin_dashboard(db, auth_manager)
+
+# Initialize user manager
+init_user_manager(db, auth_manager)
+
+# Register blueprints
+app.register_blueprint(auth_bp, url_prefix='/auth')
+app.register_blueprint(user_bp, url_prefix='/user')
+app.register_blueprint(admin_bp, url_prefix='/admin')
 
 # Add health check endpoint
 @app.route('/health')
@@ -1129,6 +1150,56 @@ def get_professor_degrees(professor_id):
     except Exception as e:
         logger.error(f"Error getting professor degrees: {e}")
         return []
+
+# Enhanced activity logging for search tracking
+def log_search_activity(search_type, search_query, search_filters, results_count):
+    """Log search activity for users and analytics"""
+    try:
+        if current_user.is_authenticated:
+            user_id = current_user.id
+        else:
+            user_id = None
+        
+        # Log to user search history
+        query = """
+        INSERT INTO user_search_history (user_id, search_type, search_query, search_filters, 
+                                       results_count, session_id, ip_address)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        """
+        
+        params = [
+            user_id,
+            search_type,
+            search_query,
+            json.dumps(search_filters),
+            results_count,
+            request.cookies.get('session', ''),
+            request.remote_addr
+        ]
+        
+        db.execute_query(query, params)
+        
+        # Log to activity log if user is authenticated
+        if user_id:
+            auth_manager.log_user_activity(user_id, 'search_performed', {
+                'search_type': search_type,
+                'search_query': search_query,
+                'results_count': results_count
+            })
+            
+    except Exception as e:
+        logger.error(f"Error logging search activity: {e}")
+
+def log_profile_view(professor_id):
+    """Log professor profile views"""
+    try:
+        if current_user.is_authenticated:
+            auth_manager.log_user_activity(current_user.id, 'profile_view', {
+                'professor_id': professor_id,
+                'view_type': 'professor_profile'
+            })
+    except Exception as e:
+        logger.error(f"Error logging profile view: {e}")
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8080) 

@@ -1,0 +1,408 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard - FacultyFinder{% endblock %}
+
+{% block extra_css %}
+<style>
+.metric-card {
+    transition: transform 0.2s;
+}
+.metric-card:hover {
+    transform: translateY(-2px);
+}
+.metric-number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+.notification-item {
+    border-left: 4px solid transparent;
+}
+.notification-item.warning {
+    border-left-color: #ffc107;
+}
+.notification-item.error {
+    border-left-color: #dc3545;
+}
+.notification-item.info {
+    border-left-color: #0dcaf0;
+}
+.notification-item.success {
+    border-left-color: #198754;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h3 mb-1">
+                        <i class="fas fa-tachometer-alt text-primary me-2"></i>
+                        Admin Dashboard
+                    </h1>
+                    <p class="text-muted mb-0">System overview and management console</p>
+                </div>
+                <div>
+                    <button class="btn btn-outline-primary me-2" onclick="refreshStats()">
+                        <i class="fas fa-sync-alt me-1"></i>Refresh
+                    </button>
+                    <a href="{{ url_for('admin.users') }}" class="btn btn-primary">
+                        <i class="fas fa-users me-1"></i>Manage Users
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Stats Overview -->
+    <div class="row mb-4">
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="card metric-card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-users fa-2x text-primary mb-2"></i>
+                    <div class="metric-number text-primary">{{ stats.database.users.count if stats.database else 0 }}</div>
+                    <div class="text-muted small">Total Users</div>
+                    {% if stats.database and stats.database.growth %}
+                        <div class="small text-success mt-1">
+                            <i class="fas fa-arrow-up me-1"></i>+{{ stats.database.growth.last_30_days }} this month
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="card metric-card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-graduation-cap fa-2x text-success mb-2"></i>
+                    <div class="metric-number text-success">{{ stats.database.professors.count if stats.database else 0 }}</div>
+                    <div class="text-muted small">Faculty Profiles</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="card metric-card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-university fa-2x text-warning mb-2"></i>
+                    <div class="metric-number text-warning">{{ stats.database.universities.count if stats.database else 0 }}</div>
+                    <div class="text-muted small">Universities</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="card metric-card border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-search fa-2x text-info mb-2"></i>
+                    <div class="metric-number text-info">{{ stats.database.user_search_history.count if stats.database else 0 }}</div>
+                    <div class="text-muted small">Total Searches</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts and Analytics -->
+    <div class="row mb-4">
+        <!-- User Registration Trend -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-chart-line me-2"></i>User Registration Trend
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="registrationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Overview -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-chart-pie me-2"></i>Activity Breakdown
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="activityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed Stats -->
+    <div class="row mb-4">
+        <!-- System Performance -->
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-server me-2"></i>System Performance
+                    </h5>
+                </div>
+                <div class="card-body">
+                    {% if stats.system %}
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>CPU Usage</span>
+                                <span class="fw-bold">{{ "%.1f"|format(stats.system.cpu_percent) }}%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: {{ stats.system.cpu_percent }}%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Memory Usage</span>
+                                <span class="fw-bold">{{ "%.1f"|format(stats.system.memory.percent) }}%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: {{ stats.system.memory.percent }}%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Disk Usage</span>
+                                <span class="fw-bold">{{ "%.1f"|format(stats.system.disk.percent) }}%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: {{ stats.system.disk.percent }}%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="small text-muted">
+                            <i class="fas fa-clock me-1"></i>
+                            Uptime: {{ stats.system.uptime.days if stats.system.uptime else 0 }} days
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Revenue Stats -->
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-dollar-sign me-2"></i>Revenue Stats
+                    </h5>
+                </div>
+                <div class="card-body">
+                    {% if stats.revenue and stats.revenue.total %}
+                        <div class="text-center mb-3">
+                            <div class="metric-number text-success">
+                                ${{ "%.2f"|format((stats.revenue.total.revenue or 0) / 100) }}
+                            </div>
+                            <div class="text-muted small">Total Revenue</div>
+                        </div>
+                        
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <div class="h5 mb-0">{{ stats.revenue.total.transactions or 0 }}</div>
+                                <div class="small text-muted">Transactions</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="h5 mb-0">${{ "%.2f"|format((stats.revenue.total.avg_transaction or 0) / 100) }}</div>
+                                <div class="small text-muted">Avg. Transaction</div>
+                            </div>
+                        </div>
+                        
+                        {% if stats.revenue.failed_payments %}
+                            <div class="mt-3 text-center">
+                                <span class="badge bg-danger">{{ stats.revenue.failed_payments }} failed payments this month</span>
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="text-center text-muted">
+                            <i class="fas fa-chart-line fa-3x mb-2"></i>
+                            <div>No revenue data available</div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Users -->
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-star me-2"></i>Most Active Users
+                    </h5>
+                </div>
+                <div class="card-body">
+                    {% if stats.users and stats.users.top_users %}
+                        {% for user in stats.users.top_users[:5] %}
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-3">
+                                    <i class="fas fa-user-circle fa-lg text-secondary"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="fw-bold small">
+                                        {{ user.first_name or '' }} {{ user.last_name or '' }} 
+                                        {% if not user.first_name and not user.last_name %}{{ user.username }}{% endif %}
+                                    </div>
+                                    <div class="text-muted small">{{ user.email }}</div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="fw-bold small">{{ user.activity_count }}</div>
+                                    <div class="text-muted small">actions</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="text-center text-muted">
+                            <i class="fas fa-users fa-3x mb-2"></i>
+                            <div>No user activity data</div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Notifications -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-bell me-2"></i>System Notifications
+                        {% if notifications %}
+                            <span class="badge bg-primary ms-2">{{ notifications|length }}</span>
+                        {% endif %}
+                    </h5>
+                </div>
+                <div class="card-body">
+                    {% if notifications %}
+                        {% for notification in notifications %}
+                            <div class="notification-item {{ notification.notification_type }} p-3 border rounded mb-2">
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3">
+                                        {% if notification.notification_type == 'error' %}
+                                            <i class="fas fa-exclamation-triangle text-danger"></i>
+                                        {% elif notification.notification_type == 'warning' %}
+                                            <i class="fas fa-exclamation-circle text-warning"></i>
+                                        {% elif notification.notification_type == 'success' %}
+                                            <i class="fas fa-check-circle text-success"></i>
+                                        {% else %}
+                                            <i class="fas fa-info-circle text-info"></i>
+                                        {% endif %}
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">{{ notification.title }}</h6>
+                                        <p class="mb-1">{{ notification.message }}</p>
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock me-1"></i>
+                                            {{ notification.created_at }}
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="text-center text-muted py-4">
+                            <i class="fas fa-bell-slash fa-3x mb-3"></i>
+                            <div>No system notifications</div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Chart.js configurations
+const chartConfig = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        legend: {
+            position: 'bottom'
+        }
+    }
+};
+
+// Registration trend chart
+const registrationCtx = document.getElementById('registrationChart').getContext('2d');
+const registrationData = {{ (stats.users.registration_trend | tojson) if stats.users and stats.users.registration_trend else '[]' }};
+
+new Chart(registrationCtx, {
+    type: 'line',
+    data: {
+        labels: registrationData.map(item => item.month),
+        datasets: [{
+            label: 'New Registrations',
+            data: registrationData.map(item => item.registrations),
+            borderColor: '#0d6efd',
+            backgroundColor: 'rgba(13, 110, 253, 0.1)',
+            tension: 0.3,
+            fill: true
+        }]
+    },
+    options: chartConfig
+});
+
+// Activity breakdown chart
+const activityCtx = document.getElementById('activityChart').getContext('2d');
+const activityData = {{ (stats.activity.by_type | tojson) if stats.activity and stats.activity.by_type else '[]' }};
+
+new Chart(activityCtx, {
+    type: 'doughnut',
+    data: {
+        labels: activityData.map(item => item.activity_type.replace('_', ' ').title()),
+        datasets: [{
+            data: activityData.map(item => item.count),
+            backgroundColor: [
+                '#0d6efd', '#198754', '#ffc107', '#dc3545', '#6f42c1', '#fd7e14'
+            ]
+        }]
+    },
+    options: chartConfig
+});
+
+// Refresh stats function
+function refreshStats() {
+    fetch('{{ url_for("admin.api_stats") }}')
+        .then(response => response.json())
+        .then(data => {
+            // Update metric cards
+            document.querySelectorAll('.metric-number').forEach((element, index) => {
+                if (index === 0 && data.database.users) element.textContent = data.database.users.count;
+                if (index === 1 && data.database.professors) element.textContent = data.database.professors.count;
+                if (index === 2 && data.database.universities) element.textContent = data.database.universities.count;
+                if (index === 3 && data.database.user_search_history) element.textContent = data.database.user_search_history.count;
+            });
+            
+            // Show success message
+            FacultyFinder.utils.showToast('Stats refreshed successfully', 'success');
+        })
+        .catch(error => {
+            console.error('Error refreshing stats:', error);
+            FacultyFinder.utils.showToast('Failed to refresh stats', 'error');
+        });
+}
+
+// Auto-refresh every 5 minutes
+setInterval(refreshStats, 300000);
+</script>
+{% endblock %} 

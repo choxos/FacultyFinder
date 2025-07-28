@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up - FacultyFinder{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow">
+                <div class="card-body p-5">
+                    <!-- Header -->
+                    <div class="text-center mb-4">
+                        <i class="fas fa-user-plus fa-3x text-primary mb-3"></i>
+                        <h3 class="fw-bold">Join FacultyFinder</h3>
+                        <p class="text-muted">Create your account to start discovering faculty</p>
+                    </div>
+
+                    <!-- Registration Form -->
+                    <form method="POST" action="{{ url_for('auth.register') }}">
+                        <div class="row">
+                            <!-- Basic Information -->
+                            <div class="col-md-6">
+                                <h5 class="mb-3"><i class="fas fa-user me-2"></i>Basic Information</h5>
+                                
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username *</label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="username" 
+                                           name="username" 
+                                           required 
+                                           placeholder="Choose a unique username"
+                                           value="{{ request.form.get('username', '') }}">
+                                    <div class="form-text">3-50 characters, letters, numbers, dots, hyphens, underscores only</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" 
+                                           class="form-control" 
+                                           id="email" 
+                                           name="email" 
+                                           required 
+                                           placeholder="your.email@example.com"
+                                           value="{{ request.form.get('email', '') }}">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password *</label>
+                                    <div class="input-group">
+                                        <input type="password" 
+                                               class="form-control" 
+                                               id="password" 
+                                               name="password" 
+                                               required 
+                                               placeholder="Create a strong password">
+                                        <button class="btn btn-outline-secondary" 
+                                                type="button" 
+                                                onclick="togglePassword('password')">
+                                            <i class="fas fa-eye" id="password-toggle"></i>
+                                        </button>
+                                    </div>
+                                    <div class="form-text">
+                                        Must be 8+ characters with uppercase, lowercase, number, and special character
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="first_name" class="form-label">First Name</label>
+                                            <input type="text" 
+                                                   class="form-control" 
+                                                   id="first_name" 
+                                                   name="first_name" 
+                                                   placeholder="Your first name"
+                                                   value="{{ request.form.get('first_name', '') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="last_name" class="form-label">Last Name</label>
+                                            <input type="text" 
+                                                   class="form-control" 
+                                                   id="last_name" 
+                                                   name="last_name" 
+                                                   placeholder="Your last name"
+                                                   value="{{ request.form.get('last_name', '') }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Academic Information -->
+                            <div class="col-md-6">
+                                <h5 class="mb-3"><i class="fas fa-graduation-cap me-2"></i>Academic Profile</h5>
+                                
+                                <div class="mb-3">
+                                    <label for="institution" class="form-label">Institution</label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="institution" 
+                                           name="institution" 
+                                           placeholder="Your current institution"
+                                           value="{{ request.form.get('institution', '') }}">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="field_of_study" class="form-label">Field of Study</label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="field_of_study" 
+                                           name="field_of_study" 
+                                           placeholder="e.g., Computer Science, Biology"
+                                           value="{{ request.form.get('field_of_study', '') }}">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="academic_level" class="form-label">Academic Level</label>
+                                    <select class="form-select" id="academic_level" name="academic_level">
+                                        <option value="">Select your level</option>
+                                        <option value="undergraduate" {{ 'selected' if request.form.get('academic_level') == 'undergraduate' else '' }}>Undergraduate Student</option>
+                                        <option value="graduate" {{ 'selected' if request.form.get('academic_level') == 'graduate' else '' }}>Graduate Student (Masters/PhD)</option>
+                                        <option value="postdoc" {{ 'selected' if request.form.get('academic_level') == 'postdoc' else '' }}>Postdoctoral Researcher</option>
+                                        <option value="faculty" {{ 'selected' if request.form.get('academic_level') == 'faculty' else '' }}>Faculty Member</option>
+                                        <option value="other" {{ 'selected' if request.form.get('academic_level') == 'other' else '' }}>Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="website" class="form-label">Website/Portfolio</label>
+                                    <input type="url" 
+                                           class="form-control" 
+                                           id="website" 
+                                           name="website" 
+                                           placeholder="https://your-website.com"
+                                           value="{{ request.form.get('website', '') }}">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="orcid" class="form-label">ORCID ID</label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="orcid" 
+                                           name="orcid" 
+                                           placeholder="0000-0000-0000-0000"
+                                           value="{{ request.form.get('orcid', '') }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bio -->
+                        <div class="mb-3">
+                            <label for="bio" class="form-label">
+                                <i class="fas fa-user-edit me-1"></i>Bio/Research Interests
+                            </label>
+                            <textarea class="form-control" 
+                                      id="bio" 
+                                      name="bio" 
+                                      rows="3" 
+                                      placeholder="Tell us about your research interests and academic background...">{{ request.form.get('bio', '') }}</textarea>
+                        </div>
+
+                        <!-- Terms and Privacy -->
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to the <a href="#" target="_blank">Terms of Service</a> and 
+                                    <a href="#" target="_blank">Privacy Policy</a> *
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Send me updates about new features and faculty recommendations
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-user-plus me-1"></i>Create Account
+                            </button>
+                        </div>
+
+                        <!-- Login Link -->
+                        <div class="text-center">
+                            <p class="text-muted mb-0">
+                                Already have an account? 
+                                <a href="{{ url_for('auth.login') }}" class="text-decoration-none">Sign in here</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="row mt-4 g-3">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light text-center py-3">
+                        <div class="card-body">
+                            <i class="fas fa-search fa-2x text-primary mb-2"></i>
+                            <h6>Advanced Search</h6>
+                            <small class="text-muted">Filter faculty by research areas and expertise</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light text-center py-3">
+                        <div class="card-body">
+                            <i class="fas fa-bookmark fa-2x text-success mb-2"></i>
+                            <h6>Save Favorites</h6>
+                            <small class="text-muted">Organize faculty and universities in collections</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-light text-center py-3">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line fa-2x text-warning mb-2"></i>
+                            <h6>Track Activity</h6>
+                            <small class="text-muted">Monitor your searches and interactions</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function togglePassword(fieldId) {
+    const field = document.getElementById(fieldId);
+    const toggle = document.getElementById(fieldId + '-toggle');
+    
+    if (field.type === 'password') {
+        field.type = 'text';
+        toggle.className = 'fas fa-eye-slash';
+    } else {
+        field.type = 'password';
+        toggle.className = 'fas fa-eye';
+    }
+}
+</script>
+{% endblock %} 

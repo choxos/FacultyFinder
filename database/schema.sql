@@ -220,6 +220,185 @@ CREATE TABLE ai_sessions (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- User Management Tables
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(200) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    role VARCHAR(20) DEFAULT 'user',  -- 'user', 'admin', 'moderator'
+    is_active BOOLEAN DEFAULT TRUE,
+    email_verified BOOLEAN DEFAULT FALSE,
+    profile_picture TEXT,
+    institution VARCHAR(200),
+    field_of_study VARCHAR(200),
+    academic_level VARCHAR(50),  -- 'undergraduate', 'graduate', 'postdoc', 'faculty', 'other'
+    bio TEXT,
+    website VARCHAR(300),
+    orcid VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_login TIMESTAMP,
+    login_count INTEGER DEFAULT 0,
+    preferences TEXT  -- JSON field for user preferences
+);
+
+-- User Sessions for authentication
+CREATE TABLE user_sessions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    session_token VARCHAR(255) UNIQUE NOT NULL,
+    expires_at TIMESTAMP NOT NULL,
+    ip_address VARCHAR(45),
+    user_agent TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+);
+
+-- User favorites (faculty and universities)
+CREATE TABLE user_favorites (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    item_type VARCHAR(20) NOT NULL,  -- 'professor', 'university'
+    item_id INTEGER NOT NULL,
+    notes TEXT,
+    tags TEXT,  -- JSON array of user-defined tags
+    is_private BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+    UNIQUE(user_id, item_type, item_id)
+);
+
+-- User search history
+CREATE TABLE user_search_history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    search_type VARCHAR(20) NOT NULL,  -- 'faculty', 'university', 'general'
+    search_query TEXT,
+    search_filters TEXT,  -- JSON object with filters applied
+    results_count INTEGER,
+    clicked_results TEXT,  -- JSON array of clicked result IDs
+    session_id VARCHAR(100),
+    ip_address VARCHAR(45),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL
+);
+
+-- User activity log
+CREATE TABLE user_activity_log (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    activity_type VARCHAR(50) NOT NULL,  -- 'login', 'search', 'favorite_add', 'profile_view', 'payment', etc.
+    activity_data TEXT,  -- JSON object with activity details
+    ip_address VARCHAR(45),
+    user_agent TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL
+);
+
+-- Payment history (enhanced from existing)
+CREATE TABLE user_payments (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    payment_intent_id VARCHAR(255),
+    stripe_payment_id VARCHAR(255),
+    amount INTEGER NOT NULL,  -- in cents
+    currency VARCHAR(3) DEFAULT 'CAD',
+    payment_method VARCHAR(50),
+    service_type VARCHAR(50),  -- 'ai_analysis', 'manual_review', 'subscription'
+    service_details TEXT,  -- JSON with service-specific data
+    status VARCHAR(20) DEFAULT 'pending',  -- 'pending', 'completed', 'failed', 'refunded'
+    receipt_url TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    completed_at TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL
+);
+
+-- User saved searches
+CREATE TABLE user_saved_searches (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    search_name VARCHAR(100) NOT NULL,
+    search_type VARCHAR(20) NOT NULL,
+    search_parameters TEXT NOT NULL,  -- JSON object with search params
+    notification_enabled BOOLEAN DEFAULT FALSE,
+    last_run TIMESTAMP,
+    results_count INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+);
+
+-- User collections (groups of favorites)
+CREATE TABLE user_collections (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    is_public BOOLEAN DEFAULT FALSE,
+    color VARCHAR(7),  -- hex color code
+    icon VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+);
+
+-- Collection items (linking favorites to collections)
+CREATE TABLE user_collection_items (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    collection_id INTEGER NOT NULL,
+    favorite_id INTEGER NOT NULL,
+    sort_order INTEGER DEFAULT 0,
+    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (collection_id) REFERENCES user_collections (id) ON DELETE CASCADE,
+    FOREIGN KEY (favorite_id) REFERENCES user_favorites (id) ON DELETE CASCADE,
+    UNIQUE(collection_id, favorite_id)
+);
+
+-- Admin dashboard metrics cache
+CREATE TABLE admin_metrics_cache (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    metric_name VARCHAR(100) NOT NULL,
+    metric_value TEXT NOT NULL,  -- JSON value
+    cache_key VARCHAR(255) UNIQUE NOT NULL,
+    expires_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- System notifications for admin
+CREATE TABLE system_notifications (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    notification_type VARCHAR(50) NOT NULL,  -- 'warning', 'error', 'info', 'success'
+    title VARCHAR(200) NOT NULL,
+    message TEXT NOT NULL,
+    is_read BOOLEAN DEFAULT FALSE,
+    is_dismissed BOOLEAN DEFAULT FALSE,
+    created_by INTEGER,  -- system = NULL, user_id for user-generated
+    metadata TEXT,  -- JSON object with additional data
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (created_by) REFERENCES users (id) ON DELETE SET NULL
+);
+
+-- Enhanced API usage tracking
+CREATE TABLE api_usage_detailed (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    endpoint VARCHAR(200) NOT NULL,
+    method VARCHAR(10) NOT NULL,
+    status_code INTEGER,
+    response_time INTEGER,  -- in milliseconds
+    request_size INTEGER,
+    response_size INTEGER,
+    ip_address VARCHAR(45),
+    user_agent TEXT,
+    api_key_used VARCHAR(100),
+    rate_limited BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL
+);
+
 -- Create indexes for better performance
 CREATE INDEX idx_professors_university ON professors(university_id);
 CREATE INDEX idx_professors_name ON professors(name);
@@ -314,3 +493,7 @@ CREATE INDEX idx_author_publications_professor_enhanced ON author_publications(p
 -- ANALYZE universities;
 -- ANALYZE publications;
 -- ANALYZE author_publications; 
+
+-- Insert default admin user (password should be changed on first login)
+INSERT INTO users (username, email, password_hash, first_name, last_name, role, is_active, email_verified) 
+VALUES ('admin', 'admin@facultyfinder.com', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LeANI1.9M8B8H0K1.', 'Admin', 'User', 'admin', TRUE, TRUE); 

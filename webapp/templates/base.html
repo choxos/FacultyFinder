@@ -31,161 +31,227 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark facultyfinder-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <!-- Brand -->
-            <a class="navbar-brand d-flex align-items-center" href="/">
-                <i class="fas fa-graduation-cap me-2" style="color: white;"></i>
-                <strong>FacultyFinder</strong>
+            <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">
+                <i class="fas fa-graduation-cap text-primary me-2"></i>
+                FacultyFinder
             </a>
-            
-            <!-- Mobile toggle -->
+
+            <!-- Mobile menu button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Navigation items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'index' %}active{% endif %}" href="/">
-                            <i class="fas fa-home me-1"></i> Home
+                        <a class="nav-link" href="{{ url_for('universities') }}">
+                            <i class="fas fa-university me-1"></i>Universities
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'universities' %}active{% endif %}" href="/universities">
-                            <i class="fas fa-university me-1"></i> Universities
+                        <a class="nav-link" href="{{ url_for('faculties') }}">
+                            <i class="fas fa-users me-1"></i>Faculty
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'faculties' %}active{% endif %}" href="/faculties">
-                            <i class="fas fa-users me-1"></i> Faculty
+                        <a class="nav-link" href="{{ url_for('ai_assistant') }}">
+                            <i class="fas fa-robot me-1"></i>AI Assistant
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.endpoint == 'ai_assistant' %}active{% endif %}" href="/ai-assistant">
-                            <i class="fas fa-robot me-1"></i> AI Assistant
+                        <a class="nav-link" href="{{ url_for('about') }}">
+                            <i class="fas fa-info-circle me-1"></i>About
                         </a>
                     </li>
                 </ul>
-                
-                <!-- Right side items -->
+
+                <!-- User menu -->
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-info-circle me-1"></i> More
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/about">
-                                <i class="fas fa-question-circle me-2"></i> About FacultyFinder
-                            </a></li>
-                            <li><a class="dropdown-item" href="/api">
-                                <i class="fas fa-code me-2"></i> API Documentation
-                            </a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="https://github.com/xeradb/FacultyFinder" target="_blank">
-                                <i class="fab fa-github me-2"></i> GitHub
-                            </a></li>
-                            <li><a class="dropdown-item" href="https://xeradb.com" target="_blank">
-                                <i class="fas fa-external-link-alt me-2"></i> Xera DB Project
-                            </a></li>
-                        </ul>
-                    </li>
+                    {% if current_user.is_authenticated %}
+                        <!-- User dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                                {% if current_user.profile_picture %}
+                                    <img src="{{ current_user.profile_picture }}" class="rounded-circle me-2" width="24" height="24" alt="Profile">
+                                {% else %}
+                                    <i class="fas fa-user-circle me-2"></i>
+                                {% endif %}
+                                {{ current_user.get_full_name() }}
+                                {% if current_user.is_admin() %}
+                                    <span class="badge bg-danger ms-1">Admin</span>
+                                {% elif current_user.is_moderator() %}
+                                    <span class="badge bg-warning ms-1">Mod</span>
+                                {% endif %}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for('user.dashboard') }}">
+                                        <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for('user.favorites') }}">
+                                        <i class="fas fa-heart me-2"></i>Favorites
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for('user.activity') }}">
+                                        <i class="fas fa-history me-2"></i>Activity
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for('user.payments') }}">
+                                        <i class="fas fa-credit-card me-2"></i>Payments
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                {% if current_user.is_moderator() %}
+                                    <li>
+                                        <a class="dropdown-item" href="{{ url_for('admin.dashboard') }}">
+                                            <i class="fas fa-cogs me-2"></i>Admin Panel
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                {% endif %}
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user-edit me-2"></i>Edit Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="{{ url_for('auth.logout') }}">
+                                        <i class="fas fa-sign-out-alt me-2"></i>Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <!-- Guest user options -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('auth.login') }}">
+                                <i class="fas fa-sign-in-alt me-1"></i>Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary btn-sm ms-2" href="{{ url_for('auth.register') }}">
+                                <i class="fas fa-user-plus me-1"></i>Sign Up
+                            </a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
     </nav>
-    
+
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="container mt-3">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show" role="alert">
+                        {% if category == 'success' %}
+                            <i class="fas fa-check-circle me-2"></i>
+                        {% elif category == 'error' %}
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                        {% elif category == 'warning' %}
+                            <i class="fas fa-exclamation-circle me-2"></i>
+                        {% else %}
+                            <i class="fas fa-info-circle me-2"></i>
+                        {% endif %}
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
     <!-- Main content -->
-    <main class="container-fluid py-4">
+    <main>
         {% block content %}{% endblock %}
     </main>
-    
+
     <!-- Footer -->
-    <footer class="bg-light border-top mt-5">
-        <div class="container py-4">
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h5 class="text-muted">FacultyFinder</h5>
-                    <p class="text-muted small">
-                        Helping future students discover their ideal faculty members across Canadian universities.
-                        Part of the <a href="https://xeradb.com" target="_blank">Xera DB</a> research platform.
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-graduation-cap text-primary me-2"></i>
+                        FacultyFinder
+                    </h5>
+                    <p class="text-muted">
+                        Connecting students with their ideal faculty members across Canadian universities. 
+                        Part of the Xera DB ecosystem.
                     </p>
+                    {% if current_user.is_authenticated %}
+                        <p class="small text-muted">
+                            Welcome back, {{ current_user.get_full_name() }}!
+                        </p>
+                    {% endif %}
                 </div>
-                <div class="col-md-3">
-                    <h6 class="text-muted">Quick Links</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="/universities" class="text-muted">Universities</a></li>
-                        <li><a href="/faculties" class="text-muted">Faculty Search</a></li>
-                        <li><a href="/ai-assistant" class="text-muted">AI Assistant</a></li>
-                        <li><a href="/api" class="text-muted">API Access</a></li>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Discover</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('universities') }}" class="text-muted text-decoration-none">Universities</a></li>
+                        <li><a href="{{ url_for('faculties') }}" class="text-muted text-decoration-none">Faculty</a></li>
+                        <li><a href="{{ url_for('ai_assistant') }}" class="text-muted text-decoration-none">AI Assistant</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="text-muted">Support</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="/about" class="text-muted">About</a></li>
-                        <li><a href="https://github.com/xeradb/FacultyFinder" target="_blank" class="text-muted">GitHub</a></li>
-                        <li><a href="mailto:support@xeradb.com" class="text-muted">Contact</a></li>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Account</h6>
+                    <ul class="list-unstyled">
+                        {% if current_user.is_authenticated %}
+                            <li><a href="{{ url_for('user.dashboard') }}" class="text-muted text-decoration-none">Dashboard</a></li>
+                            <li><a href="{{ url_for('user.favorites') }}" class="text-muted text-decoration-none">Favorites</a></li>
+                            <li><a href="{{ url_for('user.activity') }}" class="text-muted text-decoration-none">Activity</a></li>
+                        {% else %}
+                            <li><a href="{{ url_for('auth.login') }}" class="text-muted text-decoration-none">Login</a></li>
+                            <li><a href="{{ url_for('auth.register') }}" class="text-muted text-decoration-none">Sign Up</a></li>
+                        {% endif %}
                     </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('about') }}" class="text-muted text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Connect</h6>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
-            <hr class="my-3">
+            
+            <hr class="my-4 border-secondary">
+            
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="text-muted small mb-0">
-                        © {{ current_year or 2024 }} Xera DB. All rights reserved.
-                    </p>
+                    <p class="text-muted mb-0">&copy; 2024 FacultyFinder by Xera DB. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="text-muted small mb-0">
-                        Made with <i class="fas fa-heart text-danger"></i> for academic research
-                    </p>
+                    <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none me-3">Terms of Service</a>
+                    <a href="{{ url_for('api_docs') }}" class="text-muted text-decoration-none">API</a>
                 </div>
             </div>
         </div>
     </footer>
-    
-    <!-- About Modal -->
-    <div class="modal fade" id="about-modal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">
-                        <i class="fas fa-graduation-cap me-2"></i>
-                        About FacultyFinder
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        FacultyFinder is a comprehensive platform designed to help prospective graduate students 
-                        and researchers discover faculty members across Canadian universities who align with their 
-                        research interests and academic goals.
-                    </p>
-                    <h6>Key Features:</h6>
-                    <ul>
-                        <li><strong>Faculty Discovery:</strong> Search and filter faculty by research areas, publications, and expertise</li>
-                        <li><strong>AI-Powered Matching:</strong> Upload your CV for personalized faculty recommendations</li>
-                        <li><strong>Publication Analytics:</strong> Analyze faculty research impact and collaboration networks</li>
-                        <li><strong>University Comparison:</strong> Compare institutions and departments across Canada</li>
-                    </ul>
-                    <h6>Data Sources:</h6>
-                    <ul>
-                        <li>University faculty directories and profiles</li>
-                        <li>PubMed publication database</li>
-                        <li>Scimago Journal & Country Rank</li>
-                        <li>Academic social media profiles</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="/about" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
