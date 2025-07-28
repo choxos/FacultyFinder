@@ -765,7 +765,9 @@ def professor_profile(professor_id):
     cached_result = cache.get(cache_key)
     
     if cached_result is not None:
-        return render_template('professor_profile.html', professor=cached_result)
+        return render_template('professor_profile.html', 
+                             professor=cached_result['professor'], 
+                             publications=cached_result['publications'])
     
     try:
         conn = get_db_connection()
@@ -796,10 +798,43 @@ def professor_profile(professor_id):
         
         professor_dict = dict(professor)
         
-        # Cache for 1 hour
-        cache.set(cache_key, professor_dict, 3600)
+        # Fetch publications for this professor
+        publications_query = """
+        SELECT pub.id, pub.pmid, pub.title, pub.authors, pub.journal_name, 
+               pub.volume, pub.issue, pub.pages, pub.publication_date, 
+               pub.publication_year, pub.abstract, pub.doi
+        FROM author_publications ap
+        JOIN publications pub ON ap.publication_id = pub.id
+        WHERE ap.professor_id = ?
+        ORDER BY pub.publication_year DESC, pub.publication_date DESC
+        """
         
-        return render_template('professor_profile.html', professor=professor_dict)
+        cursor = conn.execute(publications_query, (professor_id,))
+        publications_rows = cursor.fetchall()
+        
+        # Convert to list of dictionaries and parse JSON authors
+        publications = []
+        for row in publications_rows:
+            pub_dict = dict(row)
+            # Parse JSON authors field
+            try:
+                import json
+                authors_list = json.loads(pub_dict['authors']) if pub_dict['authors'] else []
+                pub_dict['authors'] = ', '.join(authors_list) if authors_list else 'Unknown authors'
+            except:
+                pub_dict['authors'] = 'Unknown authors'
+            publications.append(pub_dict)
+        
+        # Cache both professor and publications for 1 hour
+        cache_data = {
+            'professor': professor_dict,
+            'publications': publications
+        }
+        cache.set(cache_key, cache_data, 3600)
+        
+        return render_template('professor_profile.html', 
+                             professor=professor_dict, 
+                             publications=publications)
         
     except Exception as e:
         logger.error(f"Error getting professor {professor_id}: {e}")
