@@ -999,9 +999,7 @@ def university_profile(university_id):
         # Get university information
         university_query = """
         SELECT u.id, u.name, u.city, u.province_state, u.country, u.address, 
-               u.postal_code, u.phone, u.fax, u.email, u.website, u.type, 
-               u.language, u.year_established, u.student_population, u.num_faculty,
-               u.latitude, u.longitude
+               u.website, u.university_type, u.languages, u.year_established
         FROM universities u
         WHERE u.id = ?
         """

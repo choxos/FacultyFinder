@@ -85,28 +85,26 @@
                         </p>
                         {% endif %}
                         
-                        {% if university.type %}
+                        {% if university.university_type %}
                         <p class="mb-2">
                             <i class="fas fa-university me-2"></i>
-                            <strong>Type:</strong> {{ university.type }}
+                            <strong>Type:</strong> {{ university.university_type }}
                         </p>
                         {% endif %}
                     </div>
                     
                     <div class="col-md-6">
-                        {% if university.language %}
+                        {% if university.languages %}
                         <p class="mb-2">
                             <i class="fas fa-language me-2"></i>
-                            <strong>Language:</strong> {{ university.language }}
+                            <strong>Language:</strong> {{ university.languages }}
                         </p>
                         {% endif %}
                         
-                        {% if university.student_population %}
                         <p class="mb-2">
                             <i class="fas fa-users me-2"></i>
-                            <strong>Students:</strong> {{ "{:,}".format(university.student_population) }}
+                            <strong>Faculty Members:</strong> {{ faculty_stats.total_faculty or 0 }}
                         </p>
-                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -265,36 +263,27 @@
     </div>
 
     <!-- Contact Information -->
-    {% if university.email or university.phone or university.address %}
+    {% if university.address %}
     <div class="row mb-5">
         <div class="col-12">
             <h3 class="fw-bold mb-4">Contact Information</h3>
             <div class="row">
                 <div class="col-md-6">
-                    {% if university.address %}
                     <p class="mb-3">
                         <i class="fas fa-map-marker-alt me-2 text-primary"></i>
                         <strong>Address:</strong><br>
                         {{ university.address }}<br>
-                        {{ university.city }}, {{ university.province_state }} {{ university.postal_code }}<br>
+                        {{ university.city }}, {{ university.province_state }}<br>
                         {{ university.country }}
                     </p>
-                    {% endif %}
                 </div>
                 
                 <div class="col-md-6">
-                    {% if university.phone %}
+                    {% if university.website %}
                     <p class="mb-2">
-                        <i class="fas fa-phone me-2 text-primary"></i>
-                        <strong>Phone:</strong> {{ university.phone }}
-                    </p>
-                    {% endif %}
-                    
-                    {% if university.email %}
-                    <p class="mb-2">
-                        <i class="fas fa-envelope me-2 text-primary"></i>
-                        <strong>Email:</strong> 
-                        <a href="mailto:{{ university.email }}">{{ university.email }}</a>
+                        <i class="fas fa-globe me-2 text-primary"></i>
+                        <strong>Website:</strong> 
+                        <a href="{{ university.website }}" target="_blank">{{ university.website }}</a>
                     </p>
                     {% endif %}
                 </div>
