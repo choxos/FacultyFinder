@@ -226,6 +226,159 @@ def get_top_universities():
         logger.error(f"Error getting top universities: {e}")
         return []
 
+def get_available_university_filters():
+    """Get available filter options from universities with faculty"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return {
+                'countries': [],
+                'provinces_by_country': {},
+                'types': [],
+                'languages': []
+            }
+        
+        # Get available countries
+        cursor = conn.execute("""
+            SELECT DISTINCT u.country 
+            FROM universities u 
+            INNER JOIN professors p ON u.id = p.university_id 
+            WHERE u.country IS NOT NULL AND u.country != ''
+            ORDER BY u.country
+        """)
+        countries = [row[0] for row in cursor.fetchall()]
+        
+        # Get provinces/states by country
+        cursor = conn.execute("""
+            SELECT DISTINCT u.country, u.province_state 
+            FROM universities u 
+            INNER JOIN professors p ON u.id = p.university_id 
+            WHERE u.country IS NOT NULL AND u.country != ''
+            AND u.province_state IS NOT NULL AND u.province_state != ''
+            ORDER BY u.country, u.province_state
+        """)
+        
+        provinces_by_country = {}
+        for row in cursor.fetchall():
+            country, province = row
+            if country not in provinces_by_country:
+                provinces_by_country[country] = []
+            if province not in provinces_by_country[country]:
+                provinces_by_country[country].append(province)
+        
+        # Get available university types
+        cursor = conn.execute("""
+            SELECT DISTINCT u.university_type 
+            FROM universities u 
+            INNER JOIN professors p ON u.id = p.university_id 
+            WHERE u.university_type IS NOT NULL AND u.university_type != ''
+            ORDER BY u.university_type
+        """)
+        types = [row[0] for row in cursor.fetchall()]
+        
+        # Get available languages (handle semicolon-separated values)
+        cursor = conn.execute("""
+            SELECT DISTINCT u.languages 
+            FROM universities u 
+            INNER JOIN professors p ON u.id = p.university_id 
+            WHERE u.languages IS NOT NULL AND u.languages != ''
+        """)
+        
+        languages = set()
+        for row in cursor.fetchall():
+            language_string = row[0]
+            if language_string:
+                # Split by semicolon and add each language
+                for lang in language_string.split(';'):
+                    lang = lang.strip()
+                    if lang:
+                        languages.add(lang)
+        
+        languages = sorted(list(languages))
+        conn.close()
+        
+        return {
+            'countries': countries,
+            'provinces_by_country': provinces_by_country,
+            'types': types,
+            'languages': languages
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting university filters: {e}")
+        return {
+            'countries': [],
+            'provinces_by_country': {},
+            'types': [],
+            'languages': []
+        }
+
+def search_universities_with_filters(search='', country='', province='', uni_type='', language='', sort_by='faculty_count'):
+    """Search universities with filters applied"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return []
+        
+        # Base query
+        query = """
+        SELECT u.id, u.name, u.city, u.province_state, u.country, u.address,
+               u.university_type, u.languages, u.year_established,
+               COUNT(p.id) as professor_count
+        FROM universities u
+        INNER JOIN professors p ON u.id = p.university_id
+        WHERE 1=1
+        """
+        
+        params = []
+        
+        # Add filters
+        if search:
+            query += " AND (u.name LIKE ? OR u.city LIKE ?)"
+            params.extend([f'%{search}%', f'%{search}%'])
+        
+        if country:
+            query += " AND u.country = ?"
+            params.append(country)
+        
+        if province:
+            query += " AND u.province_state LIKE ?"
+            params.append(f'%{province}%')
+        
+        if uni_type:
+            query += " AND u.university_type = ?"
+            params.append(uni_type)
+        
+        if language:
+            query += " AND u.languages LIKE ?"
+            params.append(f'%{language}%')
+        
+        # Add grouping
+        query += """
+        GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address,
+                 u.university_type, u.languages, u.year_established
+        """
+        
+        # Add sorting
+        if sort_by == 'name':
+            query += " ORDER BY u.name"
+        elif sort_by == 'location':
+            query += " ORDER BY u.country, u.province_state, u.city"
+        elif sort_by == 'year_established':
+            query += " ORDER BY u.year_established DESC"
+        else:  # faculty_count
+            query += " ORDER BY professor_count DESC"
+        
+        cursor = conn.execute(query, params)
+        universities_data = [dict(row) for row in cursor.fetchall()]
+        conn.close()
+        
+        return universities_data
+        
+    except Exception as e:
+        logger.error(f"Error searching universities: {e}")
+        return []
+
 @app.route('/')
 def index():
     """Home page with statistics and top universities"""
@@ -289,36 +442,53 @@ def faculties():
 
 @app.route('/universities')
 def universities():
-    """Universities listing page with actual data"""
+    """Universities listing page with dynamic filters"""
     try:
-        conn = get_db_connection()
-        if not conn:
-            return render_template('universities.html', universities=[])
+        # Get filter parameters
+        search = request.args.get('search', '').strip()
+        country = request.args.get('country', '').strip()
+        province = request.args.get('province', '').strip()
+        uni_type = request.args.get('type', '').strip()
+        language = request.args.get('language', '').strip()
+        sort_by = request.args.get('sort_by', 'faculty_count')
         
-        # Get all universities with faculty
-        query = """
-        SELECT u.id, u.name, u.city, u.province_state, u.country, u.address,
-               u.university_type, u.languages, u.year_established,
-               COUNT(p.id) as professor_count
-        FROM universities u
-        INNER JOIN professors p ON u.id = p.university_id
-        GROUP BY u.id, u.name, u.city, u.province_state, u.country, u.address,
-                 u.university_type, u.languages, u.year_established
-        ORDER BY professor_count DESC
-        """
+        # Get available filters
+        filters = get_available_university_filters()
         
-        cursor = conn.execute(query)
-        universities_data = [dict(row) for row in cursor.fetchall()]
-        conn.close()
+        # Get filtered universities
+        universities_data = search_universities_with_filters(
+            search=search,
+            country=country, 
+            province=province,
+            uni_type=uni_type,
+            language=language,
+            sort_by=sort_by
+        )
         
         return render_template('universities.html', 
                              universities=universities_data,
-                             search='', country='', province='', 
-                             uni_type='', language='', sort_by='faculty_count')
+                             search=search, 
+                             country=country, 
+                             province=province, 
+                             uni_type=uni_type, 
+                             language=language, 
+                             sort_by=sort_by,
+                             available_countries=filters['countries'],
+                             provinces_by_country=filters['provinces_by_country'],
+                             available_types=filters['types'],
+                             available_languages=filters['languages'])
     
     except Exception as e:
         logger.error(f"Error in universities route: {e}")
-        return render_template('universities.html', universities=[])
+        filters = get_available_university_filters()
+        return render_template('universities.html', 
+                             universities=[],
+                             search='', country='', province='', 
+                             uni_type='', language='', sort_by='faculty_count',
+                             available_countries=filters['countries'],
+                             provinces_by_country=filters['provinces_by_country'],
+                             available_types=filters['types'],
+                             available_languages=filters['languages'])
 
 @app.route('/professor/<int:professor_id>')
 def professor_profile(professor_id):
