@@ -1,0 +1,227 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+# Database files
+database/facultyfinder_dev.db
+database/facultyfinder_production.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploaded files and temporary data
+uploads/
+temp/
+tmp/
+*.tmp
+*.temp
+
+# CV uploads and processing
+webapp/uploads/
+webapp/temp/
+webapp/cv_uploads/
+
+# API keys and secrets
+.env.*
+config.ini
+secrets.json
+api_keys.txt
+
+# Log files
+*.log
+logs/
+webapp/logs/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Compiled CSS and JS (if using preprocessors)
+webapp/static/css/compiled/
+webapp/static/js/compiled/
+
+# Node modules (if using npm for frontend tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated documentation
+docs/build/
+
+# Test outputs
+test_results/
+.coverage
+htmlcov/
+
+# PubMed search cache
+pubmed_cache/
+*.pubmed_cache
+
+# PDF processing temporary files
+*.pdf.txt
+*.docx.txt
+cv_extracted_text/
+
+# SSL certificates (if local development)
+*.pem
+*.key
+*.crt
+*.cert
+
+# Production deployment files
+deploy_keys/
+production_backup/
+
+# OS generated files
+.Trashes
+.Spotlight-V100
+.TemporaryItems
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent 
