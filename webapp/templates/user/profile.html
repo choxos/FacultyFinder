@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - FacultyFinder{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="facultyfinder-card p-4">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="profile-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                         style="width: 60px; height: 60px; font-size: 1.5rem;">
+                        {{ current_user.username[0]|upper }}
+                    </div>
+                    <div>
+                        <h2 class="mb-1">{{ current_user.full_name or current_user.username }}</h2>
+                        <p class="text-muted mb-0">{{ current_user.email }}</p>
+                    </div>
+                </div>
+
+                {% if success %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ success }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endif %}
+
+                {% if error %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ error }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endif %}
+
+                <form method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="first_name" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="first_name" name="first_name" 
+                                   value="{{ current_user.first_name or '' }}">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="last_name" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" name="last_name" 
+                                   value="{{ current_user.last_name or '' }}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="institution" class="form-label">Institution</label>
+                        <input type="text" class="form-control" id="institution" name="institution" 
+                               value="{{ current_user.institution or '' }}" 
+                               placeholder="University or organization">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="field_of_study" class="form-label">Field of Study</label>
+                            <input type="text" class="form-control" id="field_of_study" name="field_of_study" 
+                                   value="{{ current_user.field_of_study or '' }}" 
+                                   placeholder="e.g., Computer Science, Medicine">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="academic_level" class="form-label">Academic Level</label>
+                            <select class="form-select" id="academic_level" name="academic_level">
+                                <option value="">Select level</option>
+                                <option value="undergraduate" {{ 'selected' if current_user.academic_level == 'undergraduate' }}>Undergraduate</option>
+                                <option value="graduate" {{ 'selected' if current_user.academic_level == 'graduate' }}>Graduate Student</option>
+                                <option value="postdoc" {{ 'selected' if current_user.academic_level == 'postdoc' }}>Postdoctoral Researcher</option>
+                                <option value="faculty" {{ 'selected' if current_user.academic_level == 'faculty' }}>Faculty</option>
+                                <option value="industry" {{ 'selected' if current_user.academic_level == 'industry' }}>Industry Professional</option>
+                                <option value="other" {{ 'selected' if current_user.academic_level == 'other' }}>Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="bio" class="form-label">Bio</label>
+                        <textarea class="form-control" id="bio" name="bio" rows="3" 
+                                  placeholder="Tell us about your research interests and background">{{ current_user.bio or '' }}</textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="website" class="form-label">Website</label>
+                            <input type="url" class="form-control" id="website" name="website" 
+                                   value="{{ current_user.website or '' }}" 
+                                   placeholder="https://yourwebsite.com">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="orcid" class="form-label">ORCID ID</label>
+                            <input type="text" class="form-control" id="orcid" name="orcid" 
+                                   value="{{ current_user.orcid or '' }}" 
+                                   placeholder="0000-0000-0000-0000">
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save me-2"></i>Update Profile
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

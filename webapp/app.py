@@ -4,17 +4,30 @@ FacultyFinder Web Application
 Flask-based web interface for discovering academic faculty and their research
 """
 
-from flask import Flask, render_template, request, jsonify, send_from_directory, g, make_response
-import sqlite3
-import json
 import os
-from datetime import datetime, timedelta
+import sys
+import json
+import time
+import sqlite3
 import logging
 import threading
-from functools import wraps, lru_cache
+import functools
+from functools import wraps
 import hashlib
 import gzip
 import io
+import psutil
+from datetime import datetime, timedelta
+from flask import Flask, render_template, request, jsonify, g, make_response, redirect, url_for
+from werkzeug.utils import secure_filename
+from typing import List, Dict, Optional
+
+# Authentication imports
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
+from werkzeug.security import generate_password_hash, check_password_hash
+import bcrypt
+import re
+from email_validator import validate_email, EmailNotValidError
 
 # Performance monitoring
 import time
@@ -38,6 +51,84 @@ logger = logging.getLogger(__name__)
 # Initialize Flask app
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'development-key-change-in-production'
+
+# Initialize Flask-Login
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+login_manager.login_message = 'Please log in to access this page.'
+login_manager.login_message_category = 'info'
+
+# User class for Flask-Login
+class User(UserMixin):
+    def __init__(self, id, username, email, first_name=None, last_name=None, role='user', 
+                 is_active=True, email_verified=False, institution=None, field_of_study=None,
+                 academic_level=None, bio=None, website=None, orcid=None):
+        self.id = id
+        self.username = username
+        self.email = email
+        self.first_name = first_name
+        self.last_name = last_name
+        self.role = role
+        self.is_active = is_active
+        self.email_verified = email_verified
+        self.institution = institution
+        self.field_of_study = field_of_study
+        self.academic_level = academic_level
+        self.bio = bio
+        self.website = website
+        self.orcid = orcid
+    
+    def get_id(self):
+        return str(self.id)
+    
+    def is_admin(self):
+        return self.role == 'admin'
+    
+    def is_moderator(self):
+        return self.role in ['admin', 'moderator']
+    
+    @property
+    def full_name(self):
+        if self.first_name and self.last_name:
+            return f"{self.first_name} {self.last_name}"
+        return self.username
+
+# User loader for Flask-Login
+@login_manager.user_loader
+def load_user(user_id):
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return None
+        
+        cursor = conn.execute(
+            "SELECT * FROM users WHERE id = ? AND is_active = 1", 
+            (user_id,)
+        )
+        user_data = cursor.fetchone()
+        
+        if user_data:
+            return User(
+                id=user_data['id'],
+                username=user_data['username'],
+                email=user_data['email'],
+                first_name=user_data['first_name'],
+                last_name=user_data['last_name'],
+                role=user_data['role'],
+                is_active=user_data['is_active'],
+                email_verified=user_data['email_verified'],
+                institution=user_data['institution'],
+                field_of_study=user_data['field_of_study'],
+                academic_level=user_data['academic_level'],
+                bio=user_data['bio'],
+                website=user_data['website'],
+                orcid=user_data['orcid']
+            )
+    except Exception as e:
+        logger.error(f"Error loading user {user_id}: {e}")
+    
+    return None
 
 # Performance configuration
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 86400  # 1 day for static files
@@ -126,16 +217,9 @@ db_pool = SQLiteConnectionPool(DEV_DB)
 @app.context_processor
 def inject_user():
     """Inject current_user context for templates"""
-    class AnonymousUser:
-        is_authenticated = False
-        def is_admin(self):
-            return False
-        def is_moderator(self):
-            return False
-        def get_full_name(self):
-            return "Guest"
-    
-    return dict(current_user=AnonymousUser())
+    # Flask-Login provides current_user automatically
+    # Just return an empty dict since current_user is already available
+    return dict()
 
 def get_db_connection():
     """Get database connection from pool"""
@@ -1163,6 +1247,264 @@ def after_request(response):
         response.headers['X-Response-Time'] = f"{duration:.2f}ms"
     
     return response
+
+# =====================================================
+# AUTHENTICATION ROUTES
+# =====================================================
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    """User registration"""
+    if request.method == 'POST':
+        try:
+            # Get form data
+            username = request.form.get('username', '').strip()
+            email = request.form.get('email', '').strip().lower()
+            password = request.form.get('password', '')
+            confirm_password = request.form.get('confirm_password', '')
+            first_name = request.form.get('first_name', '').strip()
+            last_name = request.form.get('last_name', '').strip()
+            institution = request.form.get('institution', '').strip()
+            field_of_study = request.form.get('field_of_study', '').strip()
+            academic_level = request.form.get('academic_level', '').strip()
+            bio = request.form.get('bio', '').strip()
+            website = request.form.get('website', '').strip()
+            orcid = request.form.get('orcid', '').strip()
+            
+            # Validation
+            errors = []
+            
+            if not username or len(username) < 3:
+                errors.append("Username must be at least 3 characters long")
+            
+            if not re.match(r'^[a-zA-Z0-9_]+$', username):
+                errors.append("Username can only contain letters, numbers, and underscores")
+            
+            try:
+                validate_email(email)
+            except EmailNotValidError:
+                errors.append("Invalid email address")
+            
+            if not password or len(password) < 6:
+                errors.append("Password must be at least 6 characters long")
+            
+            if password != confirm_password:
+                errors.append("Passwords do not match")
+            
+            if errors:
+                return render_template('auth/register.html', errors=errors, **request.form)
+            
+            # Check if username or email already exists
+            conn = get_db_connection()
+            if not conn:
+                return render_template('auth/register.html', 
+                                     errors=["Database connection error"], **request.form)
+            
+            cursor = conn.execute(
+                "SELECT id FROM users WHERE username = ? OR email = ?", 
+                (username, email)
+            )
+            
+            if cursor.fetchone():
+                return render_template('auth/register.html', 
+                                     errors=["Username or email already exists"], **request.form)
+            
+            # Hash password
+            password_hash = generate_password_hash(password)
+            
+            # Create user
+            cursor = conn.execute("""
+                INSERT INTO users (username, email, password_hash, first_name, last_name,
+                                 institution, field_of_study, academic_level, bio, website, orcid)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (username, email, password_hash, first_name, last_name,
+                  institution, field_of_study, academic_level, bio, website, orcid))
+            
+            user_id = cursor.lastrowid
+            conn.commit()
+            
+            # Log in the user
+            user = load_user(user_id)
+            login_user(user)
+            
+            logger.info(f"New user registered: {username} ({email})")
+            return redirect(url_for('dashboard'))
+            
+        except Exception as e:
+            logger.error(f"Registration error: {e}")
+            return render_template('auth/register.html', 
+                                 errors=["Registration failed. Please try again."], **request.form)
+    
+    return render_template('auth/register.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    """User login"""
+    if request.method == 'POST':
+        try:
+            username_or_email = request.form.get('username_or_email', '').strip()
+            password = request.form.get('password', '')
+            remember = bool(request.form.get('remember'))
+            
+            if not username_or_email or not password:
+                return render_template('auth/login.html', 
+                                     error="Please provide both username/email and password",
+                                     username_or_email=username_or_email)
+            
+            # Find user by username or email
+            conn = get_db_connection()
+            if not conn:
+                return render_template('auth/login.html', 
+                                     error="Database connection error",
+                                     username_or_email=username_or_email)
+            
+            cursor = conn.execute("""
+                SELECT * FROM users 
+                WHERE (username = ? OR email = ?) AND is_active = 1
+            """, (username_or_email, username_or_email.lower()))
+            
+            user_data = cursor.fetchone()
+            
+            if not user_data or not check_password_hash(user_data['password_hash'], password):
+                return render_template('auth/login.html', 
+                                     error="Invalid username/email or password",
+                                     username_or_email=username_or_email)
+            
+            # Create user object and log in
+            user = User(
+                id=user_data['id'],
+                username=user_data['username'],
+                email=user_data['email'],
+                first_name=user_data['first_name'],
+                last_name=user_data['last_name'],
+                role=user_data['role'],
+                is_active=user_data['is_active'],
+                email_verified=user_data['email_verified'],
+                institution=user_data['institution'],
+                field_of_study=user_data['field_of_study'],
+                academic_level=user_data['academic_level'],
+                bio=user_data['bio'],
+                website=user_data['website'],
+                orcid=user_data['orcid']
+            )
+            
+            login_user(user, remember=remember)
+            
+            # Update login stats
+            conn.execute("""
+                UPDATE users 
+                SET last_login = CURRENT_TIMESTAMP, login_count = login_count + 1
+                WHERE id = ?
+            """, (user.id,))
+            conn.commit()
+            
+            logger.info(f"User logged in: {user.username}")
+            
+            # Redirect to next page or dashboard
+            next_page = request.args.get('next')
+            if next_page:
+                return redirect(next_page)
+            return redirect(url_for('dashboard'))
+            
+        except Exception as e:
+            logger.error(f"Login error: {e}")
+            return render_template('auth/login.html', 
+                                 error="Login failed. Please try again.",
+                                 username_or_email=username_or_email)
+    
+    return render_template('auth/login.html')
+
+@app.route('/logout')
+@login_required
+def logout():
+    """User logout"""
+    username = current_user.username
+    logout_user()
+    logger.info(f"User logged out: {username}")
+    return redirect(url_for('index'))
+
+@app.route('/dashboard')
+@login_required
+def dashboard():
+    """User dashboard"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return render_template('user/dashboard.html', error="Database connection error")
+        
+        # Get user's saved items
+        cursor = conn.execute("""
+            SELECT item_type, item_id, saved_at
+            FROM user_saved_items 
+            WHERE user_id = ?
+            ORDER BY saved_at DESC
+        """, (current_user.id,))
+        saved_items = cursor.fetchall()
+        
+        # Get user's activity history  
+        cursor = conn.execute("""
+            SELECT activity_type, description, created_at
+            FROM user_activities 
+            WHERE user_id = ?
+            ORDER BY created_at DESC
+            LIMIT 10
+        """, (current_user.id,))
+        activities = cursor.fetchall()
+        
+        # Get payment history
+        cursor = conn.execute("""
+            SELECT amount, currency, payment_method, status, created_at, description
+            FROM payments 
+            WHERE user_id = ?
+            ORDER BY created_at DESC
+            LIMIT 10
+        """, (current_user.id,))
+        payments = cursor.fetchall()
+        
+        return render_template('user/dashboard.html', 
+                             saved_items=saved_items,
+                             activities=activities,
+                             payments=payments)
+                             
+    except Exception as e:
+        logger.error(f"Dashboard error for user {current_user.id}: {e}")
+        return render_template('user/dashboard.html', error="Error loading dashboard")
+
+@app.route('/profile', methods=['GET', 'POST'])
+@login_required
+def profile():
+    """User profile management"""
+    if request.method == 'POST':
+        try:
+            # Update profile
+            first_name = request.form.get('first_name', '').strip()
+            last_name = request.form.get('last_name', '').strip()
+            institution = request.form.get('institution', '').strip()
+            field_of_study = request.form.get('field_of_study', '').strip()
+            academic_level = request.form.get('academic_level', '').strip()
+            bio = request.form.get('bio', '').strip()
+            website = request.form.get('website', '').strip()
+            orcid = request.form.get('orcid', '').strip()
+            
+            conn = get_db_connection()
+            if conn:
+                conn.execute("""
+                    UPDATE users 
+                    SET first_name=?, last_name=?, institution=?, field_of_study=?,
+                        academic_level=?, bio=?, website=?, orcid=?, updated_at=CURRENT_TIMESTAMP
+                    WHERE id=?
+                """, (first_name, last_name, institution, field_of_study,
+                      academic_level, bio, website, orcid, current_user.id))
+                conn.commit()
+                
+                logger.info(f"Profile updated for user {current_user.username}")
+                return render_template('user/profile.html', success="Profile updated successfully")
+        
+        except Exception as e:
+            logger.error(f"Profile update error: {e}")
+            return render_template('user/profile.html', error="Failed to update profile")
+    
+    return render_template('user/profile.html')
 
 if __name__ == '__main__':
     # Warm cache on startup
