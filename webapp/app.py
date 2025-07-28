@@ -20,6 +20,9 @@ import io
 import time
 import psutil
 
+# CV Analysis
+from cv_analyzer import CVAnalyzer, allowed_file, validate_file_size
+
 # Email functionality
 try:
     from flask_mail import Mail, Message
@@ -847,6 +850,105 @@ def contact():
 def api_documentation():
     """API documentation page"""
     return render_template('api_docs.html')
+
+@app.route('/api/analyze-cv', methods=['POST'])
+@monitor_performance
+def analyze_cv():
+    """
+    AI CV Analysis API Endpoint
+    Handles the complete workflow: CV upload -> AI analysis -> Faculty matching -> Recommendations
+    """
+    try:
+        # Initialize CV analyzer
+        cv_analyzer = CVAnalyzer(get_db_connection)
+        
+        # Validate request
+        if 'cv_file' not in request.files:
+            return jsonify({
+                'success': False,
+                'error': 'No CV file uploaded. Please select a PDF or DOCX file.'
+            }), 400
+        
+        file = request.files['cv_file']
+        if file.filename == '':
+            return jsonify({
+                'success': False,
+                'error': 'No file selected. Please choose a CV file to upload.'
+            }), 400
+        
+        # Validate file type
+        if not allowed_file(file.filename):
+            return jsonify({
+                'success': False,
+                'error': 'Invalid file type. Please upload a PDF or DOCX file.'
+            }), 400
+        
+        # Read file data
+        file_data = file.read()
+        
+        # Validate file size (10MB limit)
+        if not validate_file_size(file_data, max_size_mb=10):
+            return jsonify({
+                'success': False,
+                'error': 'File too large. Please upload a file smaller than 10MB.'
+            }), 400
+        
+        # Get form data
+        ai_service = request.form.get('ai_service', 'claude')
+        analysis_option = request.form.get('analysis_option', 'quick_pay')
+        api_key = request.form.get('api_key') if analysis_option == 'api_key' else None
+        
+        # Collect user data
+        user_data = {
+            'academic_level': request.form.get('guest_level') or request.form.get('user_level'),
+            'broad_category': request.form.get('broad_category'),
+            'narrow_field': request.form.get('narrow_field'),
+            'career_goals': request.form.get('career_goals'),
+            'research_keywords': request.form.get('research_keywords'),
+            'specific_interests': request.form.get('specific_interests'),
+            'institution': request.form.get('guest_institution') or request.form.get('user_institution'),
+            'name': request.form.get('guest_name') or request.form.get('user_name'),
+            'email': request.form.get('guest_email'),
+            'location': request.form.get('guest_location'),
+            'bio': request.form.get('guest_bio') or request.form.get('user_bio')
+        }
+        
+        # Validate required fields
+        required_fields = ['broad_category', 'narrow_field', 'academic_level']
+        missing_fields = [field for field in required_fields if not user_data.get(field)]
+        
+        if missing_fields:
+            return jsonify({
+                'success': False,
+                'error': f'Missing required fields: {", ".join(missing_fields)}'
+            }), 400
+        
+        logger.info(f"Starting CV analysis for {user_data.get('name', 'anonymous')} with {ai_service}")
+        
+        # Perform CV analysis
+        result = cv_analyzer.analyze_cv(
+            file_data=file_data,
+            filename=file.filename,
+            ai_service=ai_service,
+            user_data=user_data,
+            analysis_option=analysis_option,
+            api_key=api_key
+        )
+        
+        # Log the analysis
+        if result['success']:
+            logger.info(f"CV analysis completed successfully. Found {len(result['results']['matching_faculty'])} matching faculty.")
+        else:
+            logger.warning(f"CV analysis failed: {result.get('error')}")
+        
+        return jsonify(result)
+        
+    except Exception as e:
+        logger.error(f"Error in CV analysis endpoint: {e}")
+        return jsonify({
+            'success': False,
+            'error': 'An unexpected error occurred during analysis. Please try again or contact support.'
+        }), 500
 
 @app.route('/health')
 @monitor_performance

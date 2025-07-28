@@ -694,9 +694,223 @@
 </div>
 
 <script>
+function displayResults(results) {
+    const resultsSection = document.getElementById('resultsSection');
+    const resultsContent = document.getElementById('analysisContent');
+    
+    if (!results || !results.cv_summary) {
+        resultsContent.innerHTML = '<div class="alert alert-warning">No analysis results received.</div>';
+        resultsSection.style.display = 'block';
+        return;
+    }
+    
+    const { cv_summary, matching_faculty, recommendations } = results;
+    
+    let html = `
+        <!-- CV Analysis Summary -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-file-alt text-primary me-2"></i>
+                    CV Analysis Summary
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Academic Profile</h6>
+                        <p><strong>Field:</strong> ${cv_summary.academic_field || 'Not specified'}</p>
+                        <p><strong>Career Stage:</strong> ${cv_summary.career_stage || 'Not specified'}</p>
+                        <p><strong>Education Level:</strong> ${cv_summary.education_level || 'Not specified'}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Research Keywords</h6>
+                        <div class="keywords-container">
+                            ${(cv_summary.research_keywords || []).map(keyword => 
+                                `<span class="badge bg-primary me-1 mb-1">${keyword}</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <h6>Summary</h6>
+                        <p class="text-muted">${cv_summary.summary || 'No summary available'}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Faculty Recommendations -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-users text-success me-2"></i>
+                    Top Faculty Recommendations (${matching_faculty.length} found)
+                </h5>
+            </div>
+            <div class="card-body">
+                ${recommendations.summary ? `
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        ${recommendations.summary}
+                    </div>
+                ` : ''}
+                
+                ${recommendations.top_recommendations && recommendations.top_recommendations.length > 0 ? `
+                    <div class="recommendations-list">
+                        ${recommendations.top_recommendations.map((rec, index) => `
+                            <div class="recommendation-card card mb-3 border-start border-primary border-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h6 class="card-title">
+                                                ${index + 1}. ${rec.faculty_name}
+                                                <span class="badge bg-secondary ms-2">${rec.university}</span>
+                                            </h6>
+                                            <p class="card-text">${rec.reasoning}</p>
+                                            <div class="research-alignment">
+                                                <small class="text-muted">
+                                                    <strong>Research Alignment:</strong> ${rec.research_alignment}
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="contact-actions">
+                                                ${rec.contact_info.email ? `
+                                                    <a href="mailto:${rec.contact_info.email}" class="btn btn-outline-primary btn-sm mb-2 w-100">
+                                                        <i class="fas fa-envelope me-1"></i>Send Email
+                                                    </a>
+                                                ` : ''}
+                                                ${rec.contact_info.website ? `
+                                                    <a href="${rec.contact_info.website}" target="_blank" class="btn btn-outline-secondary btn-sm mb-2 w-100">
+                                                        <i class="fas fa-globe me-1"></i>Website
+                                                    </a>
+                                                ` : ''}
+                                                ${rec.contact_info.google_scholar ? `
+                                                    <a href="${rec.contact_info.google_scholar}" target="_blank" class="btn btn-outline-info btn-sm mb-2 w-100">
+                                                        <i class="fas fa-graduation-cap me-1"></i>Google Scholar
+                                                    </a>
+                                                ` : ''}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-steps mt-3">
+                                        <small class="text-muted">
+                                            <strong>Next Steps:</strong> ${rec.next_steps}
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : ''}
+            </div>
+        </div>
+        
+        <!-- General Next Steps -->
+        ${recommendations.general_next_steps && recommendations.general_next_steps.length > 0 ? `
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-list-check text-warning me-2"></i>
+                        Recommended Next Steps
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <ol class="next-steps-list">
+                        ${recommendations.general_next_steps.map(step => `
+                            <li class="mb-2">${step}</li>
+                        `).join('')}
+                    </ol>
+                </div>
+            </div>
+        ` : ''}
+        
+        <!-- Additional Advice -->
+        ${recommendations.additional_advice ? `
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-lightbulb text-info me-2"></i>
+                        Additional Advice
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">${recommendations.additional_advice}</p>
+                </div>
+            </div>
+        ` : ''}
+        
+        <!-- All Matching Faculty -->
+        ${matching_faculty.length > 5 ? `
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-search text-secondary me-2"></i>
+                        All Matching Faculty (${matching_faculty.length} total)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>University</th>
+                                    <th>Department</th>
+                                    <th>Match Score</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${matching_faculty.map(faculty => `
+                                    <tr>
+                                        <td><strong>${faculty.name}</strong></td>
+                                        <td>${faculty.position || 'Faculty'}</td>
+                                        <td>${faculty.university_name}</td>
+                                        <td>${faculty.department || 'N/A'}</td>
+                                        <td>
+                                            <span class="badge bg-${faculty.match_score > 3 ? 'success' : faculty.match_score > 1 ? 'warning' : 'secondary'}">
+                                                ${faculty.match_score || 0}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            ${faculty.uni_email ? `
+                                                <a href="mailto:${faculty.uni_email}" class="btn btn-sm btn-outline-primary me-1" title="Send Email">
+                                                    <i class="fas fa-envelope"></i>
+                                                </a>
+                                            ` : ''}
+                                            ${faculty.website ? `
+                                                <a href="${faculty.website}" target="_blank" class="btn btn-sm btn-outline-secondary" title="Visit Website">
+                                                    <i class="fas fa-globe"></i>
+                                                </a>
+                                            ` : ''}
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        ` : ''}
+    `;
+    
+    resultsContent.innerHTML = html;
+    resultsSection.style.display = 'block';
+    
+    // Scroll to results
+    resultsSection.scrollIntoView({ behavior: 'smooth' });
+    
+    // Show success toast
+    FacultyFinder.utils.showToast('CV analysis completed successfully!', 'success', 5000);
+}
+
 // Initialize page
 document.addEventListener('DOMContentLoaded', function() {
-    // Set default analysis option (Quick Analysis - recommended)
+    // Set default analysis option (3-Pack Bundle - most popular)
     selectAnalysisOption('triple_pack');
 });
 
@@ -862,23 +1076,30 @@ function selectAI(aiService) {
 }
 
 function selectAnalysisOption(optionValue) {
-    // Remove selected class from all cards
+    // Remove active class from all cards
     document.querySelectorAll('.ai-service-card').forEach(card => {
-        card.classList.remove('selected');
+        card.classList.remove('selected', 'border-primary');
     });
     
-    // Add selected class to clicked card
-    document.querySelector(`.ai-service-card[onclick="selectAnalysisOption('${optionValue}')"]`).classList.add('selected');
+    // Add active class to selected card
+    const selectedCard = document.querySelector(`[onclick*="${optionValue}"]`);
+    if (selectedCard) {
+        selectedCard.classList.add('selected', 'border-primary');
+    }
     
-    // Update hidden input
+    // Store selected option
     document.getElementById('selectedAnalysisOption').value = optionValue;
-
-    // Toggle API key input visibility
-    const apiKeyInput = document.getElementById('apiKeyInput');
-    if (optionValue === 'api_key') {
-        apiKeyInput.style.display = 'block';
-    } else {
-        apiKeyInput.style.display = 'none';
+    
+    // Show/hide API key input
+    const apiKeySection = document.getElementById('apiKeyInput');
+    if (apiKeySection) {
+        if (optionValue === 'api_key') {
+            apiKeySection.style.display = 'block';
+            apiKeySection.querySelector('input').required = true;
+        } else {
+            apiKeySection.style.display = 'none';
+            apiKeySection.querySelector('input').required = false;
+        }
     }
 }
 
