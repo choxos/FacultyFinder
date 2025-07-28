@@ -985,43 +985,43 @@ def get_professor_publications_optimized(professor_id, limit=10, offset=0):
 def get_available_filters():
     """Get available filter options with caching"""
     try:
-                 # Get all filter options in a single batch (only for universities with faculty)
-         queries = {
-             'universities': """
-                 SELECT DISTINCT u.name 
-                 FROM universities u 
-                 INNER JOIN professors p ON u.id = p.university_id 
-                 ORDER BY u.name
-             """,
-             'departments': "SELECT DISTINCT department FROM professors WHERE department IS NOT NULL ORDER BY department",
-             'degrees': "SELECT DISTINCT degree_type FROM degrees ORDER BY degree_type",
-             'countries': """
-                 SELECT DISTINCT u.country 
-                 FROM universities u 
-                 INNER JOIN professors p ON u.id = p.university_id 
-                 ORDER BY u.country
-             """,
-             'provinces': """
-                 SELECT DISTINCT u.province_state 
-                 FROM universities u 
-                 INNER JOIN professors p ON u.id = p.university_id 
-                 WHERE u.province_state IS NOT NULL 
-                 ORDER BY u.province_state
-             """,
-             'types': """
-                 SELECT DISTINCT u.university_type 
-                 FROM universities u 
-                 INNER JOIN professors p ON u.id = p.university_id 
-                 WHERE u.university_type IS NOT NULL 
-                 ORDER BY u.university_type
-             """,
-             'languages': """
-                 SELECT DISTINCT u.languages 
-                 FROM universities u 
-                 INNER JOIN professors p ON u.id = p.university_id 
-                 WHERE u.languages IS NOT NULL
-             """
-         }
+        # Get all filter options in a single batch (only for universities with faculty)
+        queries = {
+            'universities': """
+                SELECT DISTINCT u.name 
+                FROM universities u 
+                INNER JOIN professors p ON u.id = p.university_id 
+                ORDER BY u.name
+            """,
+            'departments': "SELECT DISTINCT department FROM professors WHERE department IS NOT NULL ORDER BY department",
+            'degrees': "SELECT DISTINCT degree_type FROM degrees ORDER BY degree_type",
+            'countries': """
+                SELECT DISTINCT u.country 
+                FROM universities u 
+                INNER JOIN professors p ON u.id = p.university_id 
+                ORDER BY u.country
+            """,
+            'provinces': """
+                SELECT DISTINCT u.province_state 
+                FROM universities u 
+                INNER JOIN professors p ON u.id = p.university_id 
+                WHERE u.province_state IS NOT NULL 
+                ORDER BY u.province_state
+            """,
+            'types': """
+                SELECT DISTINCT u.university_type 
+                FROM universities u 
+                INNER JOIN professors p ON u.id = p.university_id 
+                WHERE u.university_type IS NOT NULL 
+                ORDER BY u.university_type
+            """,
+            'languages': """
+                SELECT DISTINCT u.languages 
+                FROM universities u 
+                INNER JOIN professors p ON u.id = p.university_id 
+                WHERE u.languages IS NOT NULL
+            """
+        }
         
         filters = {}
         for key, query in queries.items():
