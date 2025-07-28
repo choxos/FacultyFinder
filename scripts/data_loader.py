@@ -71,16 +71,28 @@ class DataLoader:
             logger.info(f"Loading {len(df)} universities from {csv_path}")
 
             for _, row in df.iterrows():
+                # Parse year_established, handle non-numeric values
+                year_established = None
+                if pd.notna(row.get('established', '')):
+                    try:
+                        year_established = int(float(str(row.get('established', '')).strip()))
+                    except (ValueError, TypeError):
+                        year_established = None
+                
                 self.conn.execute("""
                     INSERT OR REPLACE INTO universities
-                    (university_code, name, country, province_state, city)
-                    VALUES (?, ?, ?, ?, ?)
+                    (university_code, name, country, province_state, city, address, university_type, languages, year_established)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """, (
                     row['university_code'],
                     row['university_name'],
                     row['country'],
                     row['province_state'],
-                    row['city']
+                    row['city'],
+                    row.get('address', ''),
+                    row.get('type', ''),
+                    row.get('language', ''),
+                    year_established
                 ))
 
             self.conn.commit()

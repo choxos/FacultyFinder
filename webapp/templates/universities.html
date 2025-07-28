@@ -86,13 +86,49 @@
                                                                       <div class="university-location">
                                           <i class="fas fa-map-marker-alt me-2"></i>
                                           {{ university.city }}, {{ university.province_state }}
-                                          {% set maps_query = university.name + ", " + university.city + ", " + university.province_state + ", " + university.country %}
-                                          <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
-                                             target="_blank" 
-                                             class="text-decoration-none ms-2 maps-link"
-                                             title="View {{ university.name }} on Google Maps">
-                                              <i class="fas fa-external-link-alt"></i>
-                                          </a>
+                                          {% if university.address %}
+                                              <a href="https://www.google.com/maps/search/{{ university.address | urlencode }}" 
+                                                 target="_blank" 
+                                                 class="text-decoration-none ms-2 maps-link"
+                                                 title="View {{ university.name }} on Google Maps">
+                                                  <i class="fas fa-external-link-alt"></i>
+                                              </a>
+                                          {% else %}
+                                              {% set maps_query = university.name + ", " + university.city + ", " + university.province_state + ", " + university.country %}
+                                              <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
+                                                 target="_blank" 
+                                                 class="text-decoration-none ms-2 maps-link"
+                                                 title="View {{ university.name }} on Google Maps">
+                                                  <i class="fas fa-external-link-alt"></i>
+                                              </a>
+                                          {% endif %}
+                                      </div>
+                                      <div class="university-details mt-2">
+                                          {% if university.university_type %}
+                                              <a href="/universities?type={{ university.university_type }}" 
+                                                 class="badge bg-primary text-decoration-none me-2 mb-1"
+                                                 title="Filter by {{ university.university_type }} universities">
+                                                  {{ university.university_type|title }}
+                                              </a>
+                                          {% endif %}
+                                          
+                                          {% if university.languages %}
+                                              {% for language in university.languages.split(';') %}
+                                                  {% if language.strip() %}
+                                                      <a href="/universities?language={{ language.strip() }}" 
+                                                         class="badge bg-info text-decoration-none me-1 mb-1"
+                                                         title="Filter by {{ language.strip() }} universities">
+                                                          {{ language.strip() }}
+                                                      </a>
+                                                  {% endif %}
+                                              {% endfor %}
+                                          {% endif %}
+                                          
+                                          {% if university.year_established %}
+                                              <span class="badge bg-secondary mb-1">
+                                                  Est. {{ university.year_established }}
+                                              </span>
+                                          {% endif %}
                                       </div>
                                       <small class="text-muted">{{ university.country }}</small>
                             </div>

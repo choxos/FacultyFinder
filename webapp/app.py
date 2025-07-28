@@ -571,13 +571,15 @@ def get_summary_statistics():
         return {'total_professors': 0, 'total_universities': 0, 'total_publications': 0, 'countries_covered': 0}
 
 def get_top_universities():
-    """Get top 10 universities by faculty count"""
+    """Get top 10 universities by faculty count with enhanced data"""
+    db = DatabaseManager()
     try:
         query = """
         SELECT u.*, COUNT(p.id) as professor_count, COUNT(DISTINCT p.department) as department_count
         FROM universities u
         LEFT JOIN professors p ON u.id = p.university_id
-        GROUP BY u.id, u.name, u.city, u.province_state, u.country
+        GROUP BY u.id, u.name, u.city, u.province_state, u.country,
+                 u.address, u.university_type, u.languages, u.year_established
         ORDER BY professor_count DESC
         LIMIT 10
         """
@@ -586,8 +588,9 @@ def get_top_universities():
         logger.error(f"Error getting top universities: {e}")
         return []
 
-def search_universities(search='', country='', province=''):
-    """Search and filter universities"""
+def search_universities(search='', country='', province='', uni_type='', language=''):
+    """Search and filter universities with enhanced filters"""
+    db = DatabaseManager()
     try:
         conditions = []
         params = []
@@ -609,6 +612,14 @@ def search_universities(search='', country='', province=''):
         if province:
             conditions.append("u.province_state = ?")
             params.append(province)
+        
+        if uni_type:
+            conditions.append("u.university_type = ?")
+            params.append(uni_type)
+        
+        if language:
+            conditions.append("u.languages LIKE ?")
+            params.append(f"%{language}%")
         
         where_clause = " WHERE " + " AND ".join(conditions) if conditions else ""
         query = base_query + where_clause + " GROUP BY u.id ORDER BY u.name"

@@ -9,6 +9,10 @@ CREATE TABLE universities (
     country VARCHAR(100) NOT NULL,
     province_state VARCHAR(100),
     city VARCHAR(200),
+    address TEXT,
+    university_type VARCHAR(50),
+    languages VARCHAR(200),
+    year_established INTEGER,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
