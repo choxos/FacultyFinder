@@ -1,296 +1,263 @@
-/**
- * FacultyFinder Theme
- * Educational and Academic Color Scheme
- * Part of Xera DB Unified Theme System
- */
+/*
+* FacultyFinder Custom Theme
+* Professional academic theme for faculty discovery platform
+*/
 
 :root {
-  /* Primary Brand Colors - Academic Blue */
-  --xera-primary: #1e3a8a;        /* Deep academic blue */
-  --xera-primary-light: #3b82f6;   /* Lighter blue for hover states */
-  --xera-primary-dark: #1e293b;    /* Dark blue for headers */
-  --xera-primary-50: #eff6ff;
-  --xera-primary-100: #dbeafe;
-  --xera-primary-500: #3b82f6;
-  --xera-primary-600: #2563eb;
-  --xera-primary-700: #1d4ed8;
-  --xera-primary-800: #1e40af;
-  --xera-primary-900: #1e3a8a;
+    /* Primary Color Palette - Academic Blues */
+    --ff-primary: #1e3a8a;        /* Deep academic blue */
+    --ff-primary-light: #3b82f6;   /* Lighter blue for hover states */
+    --ff-primary-dark: #1e293b;    /* Dark blue for headers */
+    --ff-primary-50: #eff6ff;
+    --ff-primary-100: #dbeafe;
+    --ff-primary-500: #3b82f6;
+    --ff-primary-600: #2563eb;
+    --ff-primary-700: #1d4ed8;
+    --ff-primary-800: #1e40af;
+    --ff-primary-900: #1e3a8a;
 
-  /* Secondary Colors - Academic Gold */
-  --xera-secondary: #d97706;       /* Academic gold/orange */
-  --xera-secondary-light: #f59e0b; /* Lighter gold */
-  --xera-secondary-dark: #b45309;  /* Darker gold */
+    /* Secondary Color Palette - Academic Gold */
+    --ff-secondary: #d97706;       /* Academic gold/orange */
+    --ff-secondary-light: #f59e0b; /* Lighter gold */
+    --ff-secondary-dark: #b45309;  /* Darker gold */
 
-  /* Accent Colors - Research Green */
-  --xera-accent: #059669;          /* Research/knowledge green */
-  --xera-accent-light: #10b981;    /* Lighter green */
-  --xera-accent-dark: #047857;     /* Darker green */
+    /* Accent Color Palette - Research Green */
+    --ff-accent: #059669;          /* Research/knowledge green */
+    --ff-accent-light: #10b981;    /* Lighter green */
+    --ff-accent-dark: #047857;     /* Darker green */
 
-  /* Educational Specific Colors */
-  --ff-education-blue: #1e40af;
-  --ff-research-green: #059669;
-  --ff-academic-gold: #d97706;
-  --ff-knowledge-purple: #7c3aed;
-  --ff-collaboration-teal: #0891b2;
+    /* Neutral Grays */
+    --ff-gray-50: #f8fafc;
+    --ff-gray-100: #f1f5f9;
+    --ff-gray-200: #e2e8f0;
+    --ff-gray-300: #cbd5e1;
+    --ff-gray-400: #94a3b8;
+    --ff-gray-500: #64748b;
+    --ff-gray-600: #475569;
+    --ff-gray-700: #334155;
+    --ff-gray-800: #1e293b;
+    --ff-gray-900: #0f172a;
 
-  /* Status Colors for Academic Levels */
-  --ff-professor: #1e40af;
-  --ff-associate-professor: #2563eb;
-  --ff-assistant-professor: #3b82f6;
-  --ff-adjunct: #64748b;
-  --ff-emeritus: #6366f1;
+    /* Semantic Colors */
+    --ff-success: #059669;
+    --ff-warning: #d97706;
+    --ff-danger: #dc2626;
+    --ff-info: #0284c7;
 
-  /* Research Area Colors */
-  --ff-stem: #059669;
-  --ff-medicine: #dc2626;
-  --ff-social-sciences: #7c3aed;
-  --ff-humanities: #d97706;
-  --ff-business: #0891b2;
-  --ff-arts: #ec4899;
+    /* Typography */
+    --ff-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --ff-font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
 
-  /* Publication Quartile Colors */
-  --ff-q1: #059669;  /* Green for Q1 journals */
-  --ff-q2: #d97706;  /* Orange for Q2 journals */
-  --ff-q3: #eab308;  /* Yellow for Q3 journals */
-  --ff-q4: #94a3b8;  /* Gray for Q4 journals */
-
-  /* Collaboration Network Colors */
-  --ff-internal-collab: #3b82f6;     /* Blue for internal collaborations */
-  --ff-national-collab: #059669;     /* Green for national collaborations */
-  --ff-international-collab: #7c3aed; /* Purple for international collaborations */
+    /* Spacing and Layout */
+    --ff-radius: 0.5rem;
+    --ff-radius-lg: 0.75rem;
+    --ff-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --ff-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --ff-transition: all 0.2s ease-in-out;
 }
 
-/* FacultyFinder specific component styles */
-.facultyfinder-header {
-  background: linear-gradient(135deg, var(--xera-primary-800) 0%, var(--xera-primary-600) 100%);
-  border-bottom: 3px solid var(--xera-secondary);
+/* Navigation Bar */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--ff-primary) !important;
 }
 
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--ff-primary-800) 0%, var(--ff-primary-600) 100%);
+    border-bottom: 3px solid var(--ff-secondary);
+}
+
+/* Cards */
 .facultyfinder-card {
-  border: 1px solid var(--xera-gray-200);
-  border-radius: var(--xera-radius-lg);
-  box-shadow: var(--xera-shadow);
-  transition: var(--xera-transition);
+    border: 1px solid var(--ff-gray-200);
+    border-radius: var(--ff-radius-lg);
+    box-shadow: var(--ff-shadow);
+    transition: var(--ff-transition);
 }
 
 .facultyfinder-card:hover {
-  box-shadow: var(--xera-shadow-lg);
-  transform: translateY(-2px);
+    box-shadow: var(--ff-shadow-lg);
+    transform: translateY(-2px);
 }
 
-.professor-card {
-  background: white;
-  border-left: 4px solid var(--xera-primary);
+/* Featured content highlighting */
+.featured-content {
+    border-left: 4px solid var(--ff-primary);
+    padding-left: 1rem;
 }
 
-.professor-card.professor {
-  border-left-color: var(--ff-professor);
+/* Search and Filter Components */
+.search-form {
+    background: var(--ff-gray-50);
+    border-radius: var(--ff-radius-lg);
+    padding: 1.5rem;
 }
 
-.professor-card.associate-professor {
-  border-left-color: var(--ff-associate-professor);
+.filter-section {
+    border-top: 4px solid var(--ff-secondary);
+    padding-top: 1rem;
 }
 
-.professor-card.assistant-professor {
-  border-left-color: var(--ff-assistant-professor);
-}
-
-.professor-card.adjunct {
-  border-left-color: var(--ff-adjunct);
-}
-
-.university-card {
-  background: white;
-  border-top: 4px solid var(--xera-secondary);
-}
-
+/* Research Areas */
 .research-area-tag {
-  background: var(--xera-primary-100);
-  color: var(--xera-primary-800);
-  border: 1px solid var(--xera-primary-200);
-  border-radius: var(--xera-radius);
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  display: inline-block;
-  margin: 0.125rem;
+    background: var(--ff-primary-100);
+    color: var(--ff-primary-800);
+    border: 1px solid var(--ff-primary-200);
+    border-radius: var(--ff-radius);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
-.publication-metric {
-  background: var(--xera-gray-50);
-  border: 1px solid var(--xera-gray-200);
-  border-radius: var(--xera-radius);
-  padding: 0.75rem;
-  text-align: center;
+/* Position Badges */
+.position-badge {
+    background: var(--ff-gray-50);
+    border: 1px solid var(--ff-gray-200);
+    border-radius: var(--ff-radius);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.journal-quartile {
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--xera-radius);
-  color: white;
-  font-weight: 600;
-  font-size: 0.875rem;
+.position-badge.professor {
+    background: var(--ff-primary);
+    color: white;
+    border: none;
 }
 
-.journal-quartile.q1 {
-  background: var(--ff-q1);
+.position-badge.associate {
+    background: var(--ff-secondary);
+    color: white;
+    border: none;
 }
 
-.journal-quartile.q2 {
-  background: var(--ff-q2);
+.position-badge.assistant {
+    background: var(--ff-accent);
+    color: white;
+    border: none;
 }
 
-.journal-quartile.q3 {
-  background: var(--ff-q3);
-  color: var(--xera-gray-800);
+/* Publication Metrics */
+.metric-item {
+    border-radius: var(--ff-radius);
+    padding: 1rem;
+    text-align: center;
 }
 
-.journal-quartile.q4 {
-  background: var(--ff-q4);
+/* Faculty Grid Layout */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
-.collaboration-badge {
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--xera-radius);
-  color: white;
-  font-size: 0.75rem;
+/* University Cards */
+.university-card {
+    background: var(--ff-gray-50);
+    border: 1px solid var(--ff-gray-200);
+    border-radius: var(--ff-radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--ff-transition);
 }
 
-.collaboration-badge.internal {
-  background: var(--ff-internal-collab);
+.university-card:hover {
+    border-color: var(--ff-primary);
+    transform: translateY(-2px);
 }
 
-.collaboration-badge.national {
-  background: var(--ff-national-collab);
-}
-
-.collaboration-badge.international {
-  background: var(--ff-international-collab);
-}
-
-/* Search and filter components */
-.search-filters {
-  background: var(--xera-gray-50);
-  border: 1px solid var(--xera-gray-200);
-  border-radius: var(--xera-radius-lg);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.filter-group {
-  margin-bottom: 1rem;
-}
-
-.filter-group:last-child {
-  margin-bottom: 0;
-}
-
-.filter-label {
-  font-weight: 600;
-  color: var(--xera-gray-700);
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-/* Statistics dashboard */
+/* Statistics Dashboard */
 .stat-card {
-  background: white;
-  border-radius: var(--xera-radius-lg);
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: var(--xera-shadow);
-  border-top: 4px solid var(--xera-primary);
+    background: white;
+    border: 1px solid var(--ff-gray-200);
+    border-radius: var(--ff-radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--ff-shadow);
+    border-top: 4px solid var(--ff-primary);
 }
 
 .stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--xera-primary);
-  line-height: 1;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ff-primary);
+    display: block;
 }
 
 .stat-label {
-  color: var(--xera-gray-600);
-  font-weight: 500;
-  margin-top: 0.5rem;
+    color: var(--ff-gray-600);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
 }
 
-/* AI Assistant specific styles */
-.ai-assistant-container {
-  max-width: 800px;
-  margin: 0 auto;
+/* Forms and Inputs */
+.form-control:focus {
+    border-color: var(--ff-primary);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
 }
 
+/* CV Upload Area */
 .cv-upload-area {
-  border: 2px dashed var(--xera-primary-300);
-  border-radius: var(--xera-radius-lg);
-  padding: 3rem 2rem;
-  text-align: center;
-  background: var(--xera-primary-50);
-  transition: var(--xera-transition);
+    border: 2px dashed var(--ff-primary-300);
+    border-radius: var(--ff-radius-lg);
+    padding: 2rem;
+    text-align: center;
+    background: var(--ff-primary-50);
+    transition: var(--ff-transition);
 }
 
 .cv-upload-area:hover {
-  border-color: var(--xera-primary);
-  background: var(--xera-primary-100);
+    border-color: var(--ff-primary);
+    background: var(--ff-primary-100);
 }
 
-.api-provider-card {
-  border: 2px solid var(--xera-gray-200);
-  border-radius: var(--xera-radius-lg);
-  padding: 1.5rem;
-  cursor: pointer;
-  transition: var(--xera-transition);
+.cv-upload-area.dragover {
+    border: 2px solid var(--ff-gray-200);
+    border-radius: var(--ff-radius-lg);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--ff-transition);
 }
 
-.api-provider-card:hover {
-  border-color: var(--xera-primary);
+.cv-upload-area.dragover:hover {
+    border-color: var(--ff-primary);
 }
 
-.api-provider-card.selected {
-  border-color: var(--xera-primary);
-  background: var(--xera-primary-50);
+.cv-upload-area.success {
+    border-color: var(--ff-primary);
+    background: var(--ff-primary-50);
 }
 
-/* Publication list styles */
+/* Publication List */
 .publication-item {
-  border-bottom: 1px solid var(--xera-gray-200);
-  padding: 1rem 0;
+    border-bottom: 1px solid var(--ff-gray-200);
+    padding: 1rem 0;
 }
 
 .publication-item:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .publication-title {
-  font-weight: 600;
-  color: var(--xera-gray-900);
-  margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--ff-gray-900);
+    margin-bottom: 0.25rem;
 }
 
 .publication-authors {
-  color: var(--xera-gray-600);
-  font-size: 0.875rem;
-  margin-bottom: 0.25rem;
+    color: var(--ff-gray-600);
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
 }
 
 .publication-journal {
-  color: var(--xera-gray-700);
-  font-style: italic;
-  font-size: 0.875rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .stat-number {
-    font-size: 2rem;
-  }
-  
-  .search-filters {
-    padding: 1rem;
-  }
-  
-  .cv-upload-area {
-    padding: 2rem 1rem;
-  }
+    color: var(--ff-gray-700);
+    font-size: 0.875rem;
+    font-style: italic;
 } 
