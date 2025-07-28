@@ -11,6 +11,14 @@ import os
 from datetime import datetime, timedelta
 import logging
 
+# Email functionality
+try:
+    from flask_mail import Mail, Message
+    MAIL_AVAILABLE = True
+except ImportError:
+    MAIL_AVAILABLE = False
+    logging.warning("Flask-Mail not installed. Email functionality disabled.")
+
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -18,6 +26,25 @@ logger = logging.getLogger(__name__)
 # Initialize Flask app
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'development-key-change-in-production'
+
+# Email configuration
+if MAIL_AVAILABLE:
+    app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
+    app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))
+    app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'True').lower() == 'true'
+    app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL', 'False').lower() == 'true'
+    app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+    app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+    app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
+    
+    # Email addresses
+    app.config['SUPPORT_EMAIL'] = os.getenv('SUPPORT_EMAIL', 'support@facultyfinder.io')
+    app.config['ADMIN_EMAIL'] = os.getenv('ADMIN_EMAIL', 'admin@facultyfinder.io')
+    
+    # Initialize Flask-Mail
+    mail = Mail(app)
+else:
+    mail = None
 
 # Database configuration
 DEV_DB = '../database/facultyfinder_dev.db'
@@ -46,6 +73,83 @@ def get_db_connection():
     except Exception as e:
         logger.error(f"Database connection error: {e}")
         return None
+
+def send_contact_confirmation(user_email, user_name, subject, message):
+    """Send confirmation email to user"""
+    if not mail:
+        logger.warning("Email not configured. Cannot send confirmation.")
+        return False
+    
+    try:
+        msg = Message(
+            subject="Thank you for contacting FacultyFinder",
+            sender=app.config['MAIL_DEFAULT_SENDER'],
+            recipients=[user_email]
+        )
+        
+        # Try to use HTML template, fallback to plain text
+        try:
+            msg.html = render_template('emails/contact_confirmation.html',
+                                     name=user_name,
+                                     subject=subject,
+                                     message=message)
+        except:
+            msg.body = f"""Dear {user_name},
+
+Thank you for contacting FacultyFinder! We have received your message regarding "{subject}" and will respond within 24 hours.
+
+Your message:
+{message}
+
+If you have urgent questions, please contact us directly at {app.config['SUPPORT_EMAIL']}.
+
+Best regards,
+The FacultyFinder Team
+
+---
+FacultyFinder - Connecting researchers worldwide
+https://facultyfinder.io"""
+        
+        mail.send(msg)
+        logger.info(f"Confirmation email sent to {user_email}")
+        return True
+        
+    except Exception as e:
+        logger.error(f"Error sending confirmation email: {e}")
+        return False
+
+def notify_support_team(user_email, user_name, subject, message):
+    """Notify support team of new contact"""
+    if not mail:
+        logger.warning("Email not configured. Cannot notify support team.")
+        return False
+    
+    try:
+        msg = Message(
+            subject=f"New Contact Form: {subject}",
+            sender=app.config['MAIL_DEFAULT_SENDER'],
+            recipients=[app.config['SUPPORT_EMAIL']]
+        )
+        
+        msg.body = f"""New contact form submission:
+
+From: {user_name} <{user_email}>
+Subject: {subject}
+
+Message:
+{message}
+
+---
+Sent from FacultyFinder Contact Form
+Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"""
+        
+        mail.send(msg)
+        logger.info(f"Support notification sent for contact from {user_email}")
+        return True
+        
+    except Exception as e:
+        logger.error(f"Error sending support notification: {e}")
+        return False
 
 @app.route('/')
 def index():
@@ -103,7 +207,7 @@ def about():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    """Contact us page with form"""
+    """Contact us page with form and email functionality"""
     if request.method == 'POST':
         # Get form data
         name = request.form.get('name', '').strip()
@@ -117,16 +221,33 @@ def contact():
                                  error="Please fill in all required fields.",
                                  form_data=request.form)
         
-        # Here you would typically:
-        # 1. Send email notification
-        # 2. Store in database
-        # 3. Send confirmation email
+        # Email validation
+        if '@' not in email or '.' not in email.split('@')[-1]:
+            return render_template('contact.html',
+                                 error="Please enter a valid email address.",
+                                 form_data=request.form)
         
-        # For now, just show success message
-        success_message = f"Thank you {name}! Your message has been received. We'll get back to you at {email} within 24 hours."
+        # Try to send emails
+        confirmation_sent = send_contact_confirmation(email, name, subject, message)
+        support_notified = notify_support_team(email, name, subject, message)
+        
+        # Prepare success message
+        if confirmation_sent:
+            success_message = f"Thank you {name}! Your message has been received. We'll get back to you at {email} within 24 hours."
+        else:
+            success_message = f"Thank you {name}! Your message has been received. We'll get back to you within 24 hours."
+            
+        if not support_notified:
+            logger.warning(f"Support team not notified for contact from {email}")
+        
         return render_template('contact.html', success=success_message)
     
     return render_template('contact.html')
+
+@app.route('/api')
+def api_documentation():
+    """API documentation page"""
+    return render_template('api_docs.html')
 
 @app.route('/health')
 def health():
@@ -137,20 +258,28 @@ def health():
             cursor = conn.execute("SELECT COUNT(*) FROM professors")
             count = cursor.fetchone()[0]
             conn.close()
-            return jsonify({
+            
+            health_status = {
                 'status': 'healthy',
                 'database': 'connected',
-                'professors_count': count
-            })
+                'professors_count': count,
+                'email_configured': mail is not None,
+                'timestamp': datetime.now().isoformat()
+            }
+            
+            return jsonify(health_status)
         else:
-            return jsonify({'status': 'unhealthy', 'database': 'disconnected'}), 500
+            return jsonify({
+                'status': 'unhealthy', 
+                'database': 'disconnected',
+                'timestamp': datetime.now().isoformat()
+            }), 500
     except Exception as e:
-        return jsonify({'status': 'unhealthy', 'error': str(e)}), 500
-
-@app.route('/api')
-def api_documentation():
-    """API documentation page"""
-    return render_template('api_docs.html')
+        return jsonify({
+            'status': 'unhealthy', 
+            'error': str(e),
+            'timestamp': datetime.now().isoformat()
+        }), 500
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=8080) 

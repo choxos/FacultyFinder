@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you for contacting FacultyFinder</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+        }
+        .message-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #1e3a8a;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .message-box strong {
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .response-info {
+            background: #e6f3ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .response-info .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            margin: 25px 0;
+            padding: 15px;
+            background: #f0f9ff;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            margin: 15px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #666;
+            text-decoration: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1e3a8a;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+        @media (max-width: 600px) {
+            .content {
+                padding: 30px 20px;
+            }
+            .header {
+                padding: 25px 20px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎓 FacultyFinder</h1>
+            <p>Connecting researchers worldwide</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <div class="greeting">
+                Dear {{ name }},
+            </div>
+            
+            <p>Thank you for reaching out to FacultyFinder! We're excited to help you with your academic journey.</p>
+            
+            <div class="response-info">
+                <div class="icon">⏰</div>
+                <strong>Response Time</strong><br>
+                We'll respond to your inquiry within <strong>24 hours</strong> during business days.
+            </div>
+            
+            <p>We have received your message regarding "<strong>{{ subject }}</strong>" and our team is already reviewing your inquiry.</p>
+            
+            <div class="message-box">
+                <strong>Your message:</strong>
+                {{ message }}
+            </div>
+            
+            <div class="contact-info">
+                <p><strong>Need immediate assistance?</strong></p>
+                <p>Contact us directly at <a href="mailto:support@facultyfinder.io">support@facultyfinder.io</a></p>
+            </div>
+            
+            <!-- Call to Action -->
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="https://facultyfinder.io" class="btn">Explore FacultyFinder</a>
+            </div>
+            
+            <p>In the meantime, feel free to:</p>
+            <ul>
+                <li><a href="https://facultyfinder.io/faculties">Browse our faculty database</a></li>
+                <li><a href="https://facultyfinder.io/universities">Explore universities worldwide</a></li>
+                <li><a href="https://facultyfinder.io/ai-assistant">Try our AI-powered faculty matching</a></li>
+                <li><a href="https://facultyfinder.io/api">Check out our API documentation</a></li>
+            </ul>
+            
+            <p>Thank you for choosing FacultyFinder to advance your academic career!</p>
+            
+            <p style="margin-top: 30px;">
+                Best regards,<br>
+                <strong>The FacultyFinder Team</strong>
+            </p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>FacultyFinder</strong> - Connecting researchers worldwide</p>
+            <p>
+                <a href="https://facultyfinder.io">Website</a> • 
+                <a href="https://facultyfinder.io/about">About</a> • 
+                <a href="https://facultyfinder.io/api">API</a> • 
+                <a href="https://facultyfinder.io/contact">Contact</a>
+            </p>
+            
+            <div class="social-links">
+                <a href="#">LinkedIn</a> • 
+                <a href="#">Twitter</a> • 
+                <a href="#">GitHub</a>
+            </div>
+            
+            <p style="font-size: 12px; color: #999; margin-top: 20px;">
+                This email was sent because you contacted us through our website.<br>
+                If you didn't expect this email, please ignore it or contact us at support@facultyfinder.io
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
