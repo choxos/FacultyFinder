@@ -26,6 +26,22 @@ from dotenv import load_dotenv
 # OAuth imports
 from webapp.oauth import oauth, oauth_config, oauth_handler, init_oauth_handler, get_oauth_handler
 
+# Faculty ID helper functions
+def generate_faculty_id(university_code: str, professor_id: int) -> str:
+    """Generate faculty_id from university_code and professor_id"""
+    return f"{university_code}-{professor_id:05d}"
+
+def parse_faculty_id(faculty_id: str) -> tuple:
+    """Parse faculty_id to extract university_code and professor_id"""
+    # CA-ON-002-00001 → ("CA-ON-002", 1)
+    parts = faculty_id.split('-')
+    if len(parts) >= 4:
+        university_code = '-'.join(parts[:-1])  # CA-ON-002
+        professor_id = int(parts[-1])  # 1 (from 00001)
+        return university_code, professor_id
+    else:
+        raise ValueError(f"Invalid faculty_id format: {faculty_id}")
+
 # Load environment variables - prioritize production .env
 env_files = ['/var/www/ff/.env', '.env', '.env.test']
 for env_file in env_files:
@@ -121,7 +137,8 @@ class University(BaseModel):
 
 class Professor(BaseModel):
     id: int
-    faculty_id: Optional[str] = None
+    professor_id: int
+    faculty_id: str  # Computed field - generated from university_code + professor_id
     name: str
     first_name: Optional[str] = None
     last_name: Optional[str] = None
@@ -501,7 +518,7 @@ async def get_faculties(
             
             # Main query
             query = f"""
-                SELECT p.id, p.faculty_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email, p.university_code,
+                SELECT p.id, p.professor_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email, p.university_code,
                        COALESCE(p.department, '') as department, 
                        COALESCE(p.position, '') as position, 
                        COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas, 
@@ -527,7 +544,15 @@ async def get_faculties(
             if has_more:
                 rows = rows[:per_page]
             
-            faculties = [Professor(**dict(row)) for row in rows]
+            # Convert to Professor objects with computed faculty_id
+            faculties = []
+            for row in rows:
+                professor_data = dict(row)
+                professor_data['faculty_id'] = generate_faculty_id(
+                    professor_data['university_code'], 
+                    professor_data['professor_id']
+                )
+                faculties.append(Professor(**professor_data))
             
             # Get total count
             count_query = f"""
@@ -578,34 +603,65 @@ async def get_countries():
         raise HTTPException(status_code=500, detail="Failed to retrieve countries")
 
 @app.get("/api/v1/professor/{faculty_id}")
-async def get_professor(faculty_id: str = Path(..., description="Faculty ID (e.g., CA-ON-002-F-0001)")):
+async def get_professor(faculty_id: str = Path(..., description="Faculty ID (e.g., CA-ON-002-00001) or professor_id")):
     """Get individual professor details"""
     try:
         async with get_db_connection() as conn:
-            # Use faculty_id to find professor
-            query = """
-                SELECT p.id, p.faculty_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email,
-                       p.university_code, COALESCE(p.department, '') as department, 
-                       COALESCE(p.position, '') as position, 
-                       COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas,
-                       0 as publication_count, 0 as citation_count, 0 as h_index,
-                       COALESCE(p.adjunct, false) as adjunct,
-                       COALESCE(p.full_time, true) as full_time,
-                       COALESCE(u.name, '') as university_name, 
-                       COALESCE(u.city, '') as city, 
-                       COALESCE(u.province_state, '') as province_state, 
-                       COALESCE(u.country, '') as country
-                FROM professors p
-                LEFT JOIN universities u ON p.university_code = u.university_code
-                WHERE p.faculty_id = $1
-            """
-            
-            row = await conn.fetchrow(query, faculty_id)
+            # Parse faculty_id to get university_code and professor_id
+            try:
+                university_code, professor_id = parse_faculty_id(faculty_id)
+                # Use university_code + professor_id for lookup
+                query = """
+                    SELECT p.id, p.professor_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email,
+                           p.university_code, COALESCE(p.department, '') as department, 
+                           COALESCE(p.position, '') as position, 
+                           COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas,
+                           0 as publication_count, 0 as citation_count, 0 as h_index,
+                           COALESCE(p.adjunct, false) as adjunct,
+                           COALESCE(p.full_time, true) as full_time,
+                           COALESCE(u.name, '') as university_name, 
+                           COALESCE(u.city, '') as city, 
+                           COALESCE(u.province_state, '') as province_state, 
+                           COALESCE(u.country, '') as country
+                    FROM professors p
+                    LEFT JOIN universities u ON p.university_code = u.university_code
+                    WHERE p.university_code = $1 AND p.professor_id = $2
+                """
+                row = await conn.fetchrow(query, university_code, professor_id)
+            except ValueError:
+                # Fallback: treat as direct professor_id if parsing fails
+                if faculty_id.isdigit():
+                    query = """
+                        SELECT p.id, p.professor_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email,
+                               p.university_code, COALESCE(p.department, '') as department, 
+                               COALESCE(p.position, '') as position, 
+                               COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas,
+                               0 as publication_count, 0 as citation_count, 0 as h_index,
+                               COALESCE(p.adjunct, false) as adjunct,
+                               COALESCE(p.full_time, true) as full_time,
+                               COALESCE(u.name, '') as university_name, 
+                               COALESCE(u.city, '') as city, 
+                               COALESCE(u.province_state, '') as province_state, 
+                               COALESCE(u.country, '') as country
+                        FROM professors p
+                        LEFT JOIN universities u ON p.university_code = u.university_code
+                        WHERE p.professor_id = $1
+                    """
+                    row = await conn.fetchrow(query, int(faculty_id))
+                else:
+                    raise HTTPException(status_code=400, detail="Invalid faculty_id format")
             
             if not row:
                 raise HTTPException(status_code=404, detail="Professor not found")
             
-            return Professor(**dict(row))
+            # Convert to dict and add computed faculty_id
+            professor_data = dict(row)
+            professor_data['faculty_id'] = generate_faculty_id(
+                professor_data['university_code'], 
+                professor_data['professor_id']
+            )
+            
+            return Professor(**professor_data)
     
     except HTTPException:
         raise
