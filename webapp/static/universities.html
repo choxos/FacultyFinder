@@ -13,96 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
     
-    <style>
-        body {
-            padding-top: 76px;
-        }
-        
-        .university-card {
-            border-radius: 10px;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .university-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-        
-        .search-filters {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .filter-label {
-            font-weight: 600;
-            color: #495057;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .btn-search {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            border: none;
-            border-radius: 50px;
-            padding: 12px 30px;
-            font-weight: 600;
-        }
-        
-        .view-toggles .btn {
-            border-radius: 50px;
-        }
-        
-        .pagination-info {
-            background: #e3f2fd;
-            border-radius: 10px;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-        
-        .loading-spinner {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3b82f6;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .error-message {
-            background: #fee2e2;
-            color: #991b1b;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #dc2626;
-            margin: 2rem 0;
-        }
-        
-        .empty-state {
-            text-align: center;
-            padding: 3rem;
-            color: #6b7280;
-        }
-        
-        .empty-state i {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            opacity: 0.5;
-        }
-    </style>
+    <!-- Custom CSS Theme -->
+    <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
+    <link rel="stylesheet" href="/static/css/facultyfinder.css">
+    <link rel="stylesheet" href="/static/css/filter-fixes.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -160,33 +76,81 @@
         
         <!-- Search and Filters -->
         <div class="search-filters">
-            <div class="row">
-                <div class="col-lg-4 mb-3">
-                    <label class="filter-label">Search Universities</label>
-                    <input type="text" class="form-control" id="searchInput"
-                           placeholder="University name, city, or keywords...">
+            <form id="university-search-form">
+                <div class="row">
+                    <div class="col-lg-4 mb-3">
+                        <label class="filter-label">Search Universities</label>
+                        <input type="text" class="form-control" name="search" id="searchInput"
+                               placeholder="University name, city, or keywords...">
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <label class="filter-label">Country</label>
+                        <select class="form-select" name="country" id="countrySelect">
+                            <option value="">All Countries</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <label class="filter-label">State/Province/Region</label>
+                        <select class="form-select" name="province" id="provinceSelect">
+                            <option value="">All Regions</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-3">
+                        <label class="filter-label">University Type</label>
+                        <select class="form-select" name="university_type" id="universityTypeSelect">
+                            <option value="">All Types</option>
+                            <option value="Public">Public</option>
+                            <option value="Private">Private</option>
+                            <option value="Research">Research University</option>
+                            <option value="Liberal Arts">Liberal Arts</option>
+                            <option value="Technical">Technical Institute</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <label class="filter-label">Country</label>
-                    <select class="form-select" id="countrySelect">
-                        <option value="">All Countries</option>
-                    </select>
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <label class="filter-label">Language of Instruction</label>
+                        <select class="form-select" name="language" id="languageSelect">
+                            <option value="">All Languages</option>
+                            <option value="English">English</option>
+                            <option value="French">French</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="German">German</option>
+                            <option value="Mandarin">Mandarin</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Russian">Russian</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label class="filter-label">Sort By</label>
+                        <select class="form-select" name="sort_by" id="sortSelect">
+                            <option value="faculty_count">Faculty Count</option>
+                            <option value="name">Name</option>
+                            <option value="location">Location</option>
+                            <option value="year_established">Year Established</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 mb-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary me-2">
+                            <i class="fas fa-search me-2"></i>Search
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="resetFilters()">
+                            <i class="fas fa-refresh me-2"></i>Reset
+                        </button>
+                    </div>
+                    <div class="col-lg-3 mb-3 d-flex align-items-end">
+                        <div class="d-flex align-items-center">
+                            <label class="small text-muted me-2">Per page:</label>
+                            <select class="form-select form-select-sm" style="width: auto;" id="perPageSelect" onchange="searchUniversities()">
+                                <option value="12">12</option>
+                                <option value="24" selected>24</option>
+                                <option value="36">36</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <label class="filter-label">Sort By</label>
-                    <select class="form-select" id="sortSelect">
-                        <option value="faculty_count">Faculty Count</option>
-                        <option value="name">Name</option>
-                        <option value="location">Location</option>
-                        <option value="year_established">Year Established</option>
-                    </select>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-3 d-flex align-items-end">
-                    <button type="button" class="btn btn-search text-white w-100" onclick="searchUniversities()">
-                        <i class="fas fa-search me-2"></i>Search
-                    </button>
-                </div>
-            </div>
+            </form>
         </div>
         
         <!-- Results Header -->
@@ -227,27 +191,14 @@
             <table class="table table-hover table-striped">
                 <thead class="table-dark">
                     <tr>
-                        <th scope="col" class="sortable" data-sort="name">
-                            University Name 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable" data-sort="country">
-                            Country 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable" data-sort="city">
-                            Location 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable text-center" data-sort="faculty_count">
-                            Faculty 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable text-center" data-sort="year_established">
-                            Established 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
+                        <th scope="col">University Name</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Type</th>
+                        <th scope="col" class="text-center">Faculty</th>
+                        <th scope="col" class="text-center">Established</th>
                         <th scope="col">Code</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
@@ -270,10 +221,14 @@
         let currentFilters = {
             search: '',
             country: '',
+            province: '',
+            university_type: '',
+            language: '',
             sort_by: 'faculty_count'
         };
         let allUniversities = [];
         let countries = [];
+        let provincesByCountry = {};
         
         // API Base URL
         const API_BASE = '/api/v1';
@@ -284,11 +239,13 @@
             loadUniversities();
             
             // Add event listeners
-            document.getElementById('searchInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    searchUniversities();
-                }
+            document.getElementById('university-search-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                searchUniversities();
             });
+            
+            // Add change listeners for dynamic filtering
+            document.getElementById('countrySelect').addEventListener('change', updateProvinces);
         });
         
         // Load countries for filter
@@ -310,16 +267,67 @@
             }
         }
         
+        // Update provinces based on selected country
+        function updateProvinces() {
+            const countrySelect = document.getElementById('countrySelect');
+            const provinceSelect = document.getElementById('provinceSelect');
+            const selectedCountry = countrySelect.value;
+            
+            // Clear current options
+            provinceSelect.innerHTML = '<option value="">All Regions</option>';
+            
+            // For now, add some common provinces/states for major countries
+            const provincesByCountry = {
+                'Canada': ['Ontario', 'Quebec', 'British Columbia', 'Alberta', 'Saskatchewan', 'Manitoba', 'Nova Scotia', 'New Brunswick', 'Newfoundland and Labrador', 'Prince Edward Island'],
+                'United States': ['California', 'New York', 'Texas', 'Florida', 'Illinois', 'Pennsylvania', 'Ohio', 'Georgia', 'North Carolina', 'Michigan'],
+                'United Kingdom': ['England', 'Scotland', 'Wales', 'Northern Ireland'],
+                'Australia': ['New South Wales', 'Victoria', 'Queensland', 'Western Australia', 'South Australia', 'Tasmania', 'Australian Capital Territory', 'Northern Territory'],
+                'Germany': ['Bavaria', 'Baden-Württemberg', 'North Rhine-Westphalia', 'Lower Saxony', 'Hesse', 'Saxony', 'Rhineland-Palatinate', 'Schleswig-Holstein'],
+                'France': ['Île-de-France', 'Provence-Alpes-Côte d\'Azur', 'Auvergne-Rhône-Alpes', 'Nouvelle-Aquitaine', 'Occitanie', 'Hauts-de-France', 'Grand Est', 'Pays de la Loire']
+            };
+            
+            if (selectedCountry && provincesByCountry[selectedCountry]) {
+                provincesByCountry[selectedCountry].forEach(province => {
+                    const option = document.createElement('option');
+                    option.value = province;
+                    option.textContent = province;
+                    provinceSelect.appendChild(option);
+                });
+            }
+        }
+        
+        // Search universities
+        function searchUniversities() {
+            // Get filter values
+            currentFilters.search = document.getElementById('searchInput').value;
+            currentFilters.country = document.getElementById('countrySelect').value;
+            currentFilters.province = document.getElementById('provinceSelect').value;
+            currentFilters.university_type = document.getElementById('universityTypeSelect').value;
+            currentFilters.language = document.getElementById('languageSelect').value;
+            currentFilters.sort_by = document.getElementById('sortSelect').value;
+            
+            currentPage = 1;
+            loadUniversities(currentPage);
+        }
+        
         // Load universities
         async function loadUniversities(page = 1) {
             try {
                 showLoading();
                 
+                const perPage = document.getElementById('perPageSelect').value;
                 const params = new URLSearchParams({
                     page: page,
-                    per_page: 20,
+                    per_page: perPage,
                     ...currentFilters
                 });
+                
+                // Remove empty parameters
+                for (let [key, value] of [...params.entries()]) {
+                    if (!value) {
+                        params.delete(key);
+                    }
+                }
                 
                 const response = await fetch(`${API_BASE}/universities?${params}`);
                 const data = await response.json();
@@ -335,15 +343,6 @@
             }
         }
         
-        // Search universities
-        function searchUniversities() {
-            currentFilters.search = document.getElementById('searchInput').value;
-            currentFilters.country = document.getElementById('countrySelect').value;
-            currentFilters.sort_by = document.getElementById('sortSelect').value;
-            currentPage = 1;
-            loadUniversities(currentPage);
-        }
-        
         // Display universities in grid view
         function displayUniversities(universities) {
             const container = document.getElementById('universities-grid');
@@ -351,10 +350,10 @@
             if (universities.length === 0) {
                 container.innerHTML = `
                     <div class="col-12">
-                        <div class="empty-state">
-                            <i class="fas fa-university"></i>
+                        <div class="empty-state text-center p-5">
+                            <i class="fas fa-university fa-4x text-muted mb-3"></i>
                             <h4>No universities found</h4>
-                            <p>Try adjusting your search filters or criteria.</p>
+                            <p class="text-muted">Try adjusting your search filters or criteria.</p>
                         </div>
                     </div>
                 `;
@@ -367,25 +366,48 @@
                     <div class="col-md-6 col-lg-4 mb-4">
                         <div class="card university-card">
                             <div class="card-body">
-                                <h5 class="card-title">${university.name}</h5>
-                                <p class="card-text">
-                                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                                    ${university.city || 'Unknown'}, ${university.country}
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge bg-primary rounded-pill">
-                                        <i class="fas fa-users me-1"></i>
-                                        ${university.faculty_count} faculty
-                                    </span>
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title mb-1">
+                                        <a href="/faculties?university=${encodeURIComponent(university.name)}" class="text-decoration-none university-link">
+                                            ${university.name}
+                                        </a>
+                                    </h5>
                                     ${university.year_established ? 
                                         `<span class="badge bg-secondary">Est. ${university.year_established}</span>` : 
                                         ''
                                     }
                                 </div>
-                                <small class="text-muted">
-                                    <i class="fas fa-code me-1"></i>
-                                    Code: ${university.university_code}
-                                </small>
+                                
+                                <div class="university-details mb-3">
+                                    <p class="card-text">
+                                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                        <strong>${university.city || 'Unknown'}</strong>
+                                        ${university.province ? `, ${university.province}` : ''}
+                                        <br>
+                                        <i class="fas fa-globe me-2"></i>
+                                        <strong>${university.country}</strong>
+                                    </p>
+                                </div>
+                                
+                                <div class="university-stats mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge bg-primary rounded-pill">
+                                            <i class="fas fa-users me-1"></i>
+                                            ${university.faculty_count} faculty
+                                        </span>
+                                        <small class="text-muted">Code: ${university.university_code}</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="university-actions">
+                                    <a href="/faculties?university=${encodeURIComponent(university.name)}" 
+                                       class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-users me-1"></i>View Faculty
+                                    </a>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="showUniversityDetails('${university.name}')">
+                                        <i class="fas fa-info-circle me-1"></i>Details
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -408,13 +430,20 @@
                 const row = `
                     <tr>
                         <td>
-                            <strong>${university.name}</strong>
+                            <strong>
+                                <a href="/faculties?university=${encodeURIComponent(university.name)}" class="text-decoration-none">
+                                    ${university.name}
+                                </a>
+                            </strong>
                         </td>
                         <td>
                             <span class="fw-semibold">${university.country}</span>
                         </td>
                         <td>
-                            ${university.city || 'Unknown'}
+                            ${university.city || 'Unknown'}${university.province ? `, ${university.province}` : ''}
+                        </td>
+                        <td>
+                            <span class="badge bg-info">${university.university_type || 'Not specified'}</span>
                         </td>
                         <td class="text-center">
                             <span class="badge bg-primary">${university.faculty_count}</span>
@@ -427,6 +456,12 @@
                         </td>
                         <td>
                             <code>${university.university_code}</code>
+                        </td>
+                        <td>
+                            <a href="/faculties?university=${encodeURIComponent(university.name)}" 
+                               class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-users me-1"></i>Faculty
+                            </a>
                         </td>
                     </tr>
                 `;
@@ -460,6 +495,26 @@
                 tableContainer.style.display = 'block';
                 displayUniversitiesTable(allUniversities);
             }
+        }
+        
+        // Show university details
+        function showUniversityDetails(universityName) {
+            window.location.href = `/universities?search=${encodeURIComponent(universityName)}`;
+        }
+        
+        // Reset filters
+        function resetFilters() {
+            document.getElementById('university-search-form').reset();
+            currentFilters = {
+                search: '',
+                country: '',
+                province: '',
+                university_type: '',
+                language: '',
+                sort_by: 'faculty_count'
+            };
+            currentPage = 1;
+            loadUniversities(currentPage);
         }
         
         // Display pagination
@@ -545,7 +600,7 @@
             const container = document.getElementById('universities-grid');
             container.innerHTML = `
                 <div class="col-12">
-                    <div class="error-message">
+                    <div class="alert alert-danger">
                         <i class="fas fa-exclamation-triangle me-2"></i>
                         ${message}
                     </div>
