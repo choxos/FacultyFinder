@@ -395,10 +395,8 @@ async def get_universities(
                          u.address, u.website, u.university_type, u.languages, u.year_established
                 HAVING COUNT(p.id) >= 0
                 ORDER BY {order_clause}
-                LIMIT {param_count + 1} OFFSET {param_count + 2}
+                LIMIT {per_page + 1} OFFSET {offset}
             """
-            
-            params.extend([per_page + 1, offset])  # +1 to check if there are more results
             
             rows = await conn.fetch(query, *params)
             
@@ -422,9 +420,7 @@ async def get_universities(
                 ) subquery
             """
             
-            # Remove LIMIT/OFFSET params for count
-            count_params = params[:-2]
-            count_rows = await conn.fetch(count_query, *count_params)
+            count_rows = await conn.fetch(count_query, *params)
             total_count = len(count_rows)
             
             pagination = PaginationInfo(
@@ -490,7 +486,7 @@ async def get_faculties(
                 "name": "p.name ASC",
                 "university": "u.name ASC",
                 "department": "p.department ASC",
-                "publications": "CAST(COALESCE(p.publication_count, 0) AS INTEGER) DESC NULLS LAST",
+                "publications": "CAST(0 AS INTEGER) DESC NULLS LAST",
                 "recent_publications": "CAST(0 AS INTEGER) DESC NULLS LAST"
             }
             order_clause = order_mapping.get(sort_by, "p.name ASC")
@@ -504,11 +500,11 @@ async def get_faculties(
                        COALESCE(p.department, '') as department, 
                        COALESCE(p.position, '') as position, 
                        COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas, 
-                       COALESCE(p.publication_count, 0) as publication_count,
-                       COALESCE(p.publication_count, 0) as total_publications,
+                       0 as publication_count,
+                       0 as total_publications,
                        0 as publications_last_5_years,
-                       COALESCE(p.citation_count, 0) as citation_count,
-                       COALESCE(p.h_index, 0) as h_index,
+                       0 as citation_count,
+                       0 as h_index,
                        COALESCE(p.adjunct, false) as adjunct,
                        COALESCE(p.full_time, true) as full_time,
                        COALESCE(u.name, '') as university_name
@@ -536,9 +532,7 @@ async def get_faculties(
                 WHERE {' AND '.join(where_conditions)}
             """
             
-            # Remove pagination params for count
-            count_params = params[:-2]
-            total_count = await conn.fetchval(count_query, *count_params)
+            total_count = await conn.fetchval(count_query, *params)
             
             pagination = PaginationInfo(
                 page=page,
