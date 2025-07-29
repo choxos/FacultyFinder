@@ -223,17 +223,38 @@
 /* Faculty List View */
 .faculty-list-item {
     border: none;
-    border-bottom: 1px solid var(--bs-border-color);
+    border-bottom: 1px solid #e8ecf0;
     padding: 1.5rem 0;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    position: relative;
+}
+
+.faculty-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #667eea, #764ba2);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.faculty-list-item:hover::before {
+    transform: scaleY(1);
 }
 
 .faculty-list-item:hover {
-    background-color: var(--bs-light);
-    border-radius: var(--ff-radius);
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.02), rgba(255, 255, 255, 0.9));
+    border-radius: 8px;
     margin: 0 -1rem;
     padding: 1.5rem 1rem;
-    box-shadow: var(--ff-shadow-sm);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+    transform: translateY(-2px);
+    border-bottom-color: rgba(102, 126, 234, 0.2);
 }
 
 /* Publication Metrics */
@@ -443,7 +464,242 @@
     --ff-info: #17a2b8;
     --ff-warning: #ffc107;
     --ff-danger: #dc3545;
-} 
+}
+
+/* Dark Theme Global Styles */
+[data-theme="dark"] body {
+    background-color: var(--ff-bg-primary) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: var(--ff-bg-secondary) !important;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: var(--ff-bg-tertiary) !important;
+}
+
+[data-theme="dark"] .text-dark {
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: var(--ff-text-muted) !important;
+}
+
+/* Dark Theme Navigation */
+[data-theme="dark"] .navbar {
+    background-color: var(--ff-bg-secondary) !important;
+    border-bottom: 1px solid var(--ff-border-color);
+}
+
+[data-theme="dark"] .navbar-brand {
+    color: var(--ff-primary) !important;
+}
+
+[data-theme="dark"] .navbar-nav .nav-link {
+    color: var(--ff-text-secondary) !important;
+}
+
+[data-theme="dark"] .navbar-nav .nav-link:hover {
+    color: var(--ff-primary) !important;
+    background-color: rgba(74, 158, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .navbar-nav .nav-link.active {
+    background-color: rgba(74, 158, 255, 0.2) !important;
+    color: var(--ff-primary) !important;
+}
+
+/* Dark Theme Cards */
+[data-theme="dark"] .card {
+    background-color: var(--ff-bg-secondary) !important;
+    border-color: var(--ff-border-color) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .faculty-card,
+[data-theme="dark"] .university-card,
+[data-theme="dark"] .country-card {
+    background-color: var(--ff-bg-secondary) !important;
+    border-color: var(--ff-border-color) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .faculty-card:hover,
+[data-theme="dark"] .university-card:hover,
+[data-theme="dark"] .country-card:hover {
+    background-color: var(--ff-bg-tertiary) !important;
+    border-color: var(--ff-primary) !important;
+}
+
+/* Dark Theme Buttons */
+[data-theme="dark"] .btn-primary {
+    background-color: var(--ff-primary) !important;
+    border-color: var(--ff-primary) !important;
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    color: var(--ff-primary) !important;
+    border-color: var(--ff-primary) !important;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: var(--ff-primary) !important;
+    color: #fff !important;
+}
+
+[data-theme="dark"] .btn-outline-secondary {
+    color: var(--ff-text-secondary) !important;
+    border-color: var(--ff-border-color) !important;
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+    background-color: var(--ff-border-color) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+/* Dark Theme Forms */
+[data-theme="dark"] .form-control {
+    background-color: var(--ff-bg-tertiary) !important;
+    border-color: var(--ff-border-color) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: var(--ff-bg-tertiary) !important;
+    border-color: var(--ff-primary) !important;
+    color: var(--ff-text-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(74, 158, 255, 0.25) !important;
+}
+
+[data-theme="dark"] .form-select {
+    background-color: var(--ff-bg-tertiary) !important;
+    border-color: var(--ff-border-color) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+/* Dark Theme Dropdowns */
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--ff-bg-secondary) !important;
+    border-color: var(--ff-border-color) !important;
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--ff-text-secondary) !important;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--ff-bg-tertiary) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+/* Dark Theme Footer */
+[data-theme="dark"] .footer {
+    background-color: var(--ff-bg-secondary) !important;
+    border-top: 1px solid var(--ff-border-color) !important;
+}
+
+[data-theme="dark"] .footer h5,
+[data-theme="dark"] .footer h6 {
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .footer a {
+    color: var(--ff-text-secondary) !important;
+}
+
+[data-theme="dark"] .footer a:hover {
+    color: var(--ff-primary) !important;
+}
+
+/* Dark Theme Tables */
+[data-theme="dark"] .table {
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .table th {
+    background-color: var(--ff-bg-tertiary) !important;
+    border-color: var(--ff-border-color) !important;
+}
+
+[data-theme="dark"] .table td {
+    border-color: var(--ff-border-color) !important;
+}
+
+/* Dark Theme Hero Section */
+[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%) !important;
+}
+
+/* Dark Theme Statistics Section */
+[data-theme="dark"] .stats-section {
+    background-color: var(--ff-bg-tertiary) !important;
+}
+
+[data-theme="dark"] .stat-card {
+    background-color: var(--ff-bg-secondary) !important;
+    border-color: var(--ff-border-color) !important;
+}
+
+/* Dark Theme Alerts */
+[data-theme="dark"] .alert-info {
+    background-color: rgba(23, 162, 184, 0.2) !important;
+    border-color: var(--ff-info) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .alert-warning {
+    background-color: rgba(255, 193, 7, 0.2) !important;
+    border-color: var(--ff-warning) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .alert-danger {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+    border-color: var(--ff-danger) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] .alert-success {
+    background-color: rgba(40, 167, 69, 0.2) !important;
+    border-color: var(--ff-success) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+/* Dark Theme Borders */
+[data-theme="dark"] .border {
+    border-color: var(--ff-border-color) !important;
+}
+
+[data-theme="dark"] hr {
+    border-color: var(--ff-border-color) !important;
+}
+
+/* Dark Theme Badge */
+[data-theme="dark"] .badge {
+    background-color: var(--ff-bg-tertiary) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+/* Dark Theme Loading States */
+[data-theme="dark"] .placeholder {
+    background-color: var(--ff-bg-tertiary) !important;
+}
+
+/* Dark Theme Theme Toggle Button */
+[data-theme="dark"] #theme-toggle {
+    background-color: var(--ff-bg-secondary) !important;
+    border-color: var(--ff-border-color) !important;
+    color: var(--ff-text-primary) !important;
+}
+
+[data-theme="dark"] #theme-toggle:hover {
+    background-color: var(--ff-bg-tertiary) !important;
+    border-color: var(--ff-primary) !important;
+    color: var(--ff-primary) !important;
+}
 
 /* List View Styles */
 .list-view {
@@ -462,20 +718,24 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
 }
 
-.faculty-list-item {
+/* Remove the problematic display:none rule */
+/* .faculty-list-item {
     display: none;
-}
+} */
 
 .list-view .faculty-list-item {
-    display: flex;
+    display: flex !important;
     align-items: center;
-    padding: 1.25rem;
-    border: 1px solid var(--ff-border-color);
+    padding: 1.5rem;
+    border: 2px solid #e8ecf0;
     border-radius: 8px;
-    background: var(--ff-card-bg);
+    background: #ffffff;
     margin-bottom: 1rem;
-    transition: all 0.3s ease;
-    min-height: 120px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 140px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .list-view .faculty-list-item:hover {
@@ -592,18 +852,39 @@
     display: flex;
     align-items: center;
     padding: 1.5rem;
-    border: 1px solid var(--ff-border-color);
+    border: 1px solid #e8ecf0;
     border-radius: 8px;
-    background: var(--ff-card-bg);
+    background: #ffffff;
     margin-bottom: 1rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     min-height: 140px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.list-view .university-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #28a745, #20c997);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.list-view .university-list-item:hover::before {
+    transform: scaleY(1);
 }
 
 .list-view .university-list-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border-color: var(--ff-primary-color);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.06);
+    border-color: rgba(40, 167, 69, 0.3);
+    background: linear-gradient(90deg, rgba(40, 167, 69, 0.02), rgba(255, 255, 255, 0.9));
 }
 
 .list-view .col-lg-6,
@@ -778,39 +1059,135 @@
     }
 } 
 
-/* Faculty Card Hover Effects */
+/* Faculty Card Styling - Matching University Cards */
 .faculty-card {
-    transition: all 0.3s ease;
+    background: #ffffff;
+    border: 2px solid #e8ecf0 !important;
+    border-radius: 12px !important;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.faculty-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.faculty-card:hover::before {
+    transform: scaleX(1);
 }
 
 .faculty-card:hover {
+    border-color: rgba(102, 126, 234, 0.4) !important;
     transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border-color: var(--bs-primary) !important;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.08);
+    background: #fafbfc;
+}
+
+.faculty-card .faculty-details {
+    border-top: 1px solid #f0f2f5;
+    border-bottom: 1px solid #f0f2f5;
+    margin: 1rem -1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(248, 249, 250, 0.3);
+}
+
+.faculty-card .faculty-stats {
+    border-top: 1px solid #f0f2f5;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.faculty-card .profile-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.08));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid #e8ecf0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .faculty-card:hover .profile-avatar {
     transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.25);
+    border-color: rgba(102, 126, 234, 0.3);
 }
 
-.faculty-card .profile-avatar {
+.faculty-card .badge {
+    border: 1px solid rgba(0,0,0,0.1);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.faculty-card:hover .badge {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faculty-card .btn-outline-primary {
+    border-width: 2px;
+    font-weight: 500;
     transition: all 0.3s ease;
 }
 
-/* Enhanced card animations */
-.faculty-card:hover .card-title a {
-    color: var(--bs-primary) !important;
+.faculty-card .btn-outline-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
 }
 
-.faculty-card:hover .research-areas .badge {
+.faculty-card .stat-item {
+    padding: 0.75rem;
+    border: 1px solid #f0f2f5;
+    border-radius: 6px;
+    background: rgba(248, 249, 250, 0.5);
+    transition: all 0.2s ease;
+}
+
+.faculty-card .stat-item:hover {
+    background: rgba(102, 126, 234, 0.05);
+    border-color: rgba(102, 126, 234, 0.2);
+    transform: scale(1.02);
+}
+
+.faculty-card .stat-number {
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.faculty-card:hover .stat-number {
+    color: #667eea !important;
     transform: scale(1.05);
 }
 
+/* Enhanced Research Areas */
 .faculty-card .research-areas .badge {
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    color: #495057 !important;
+}
+
+.faculty-card:hover .research-areas .badge {
+    background-color: rgba(102, 126, 234, 0.1) !important;
+    border-color: rgba(102, 126, 234, 0.3) !important;
+    transform: scale(1.05);
 }
 
 /* Website Link Styling */
@@ -874,3 +1251,1314 @@
 .faculty-card:hover .maps-link {
     opacity: 1;
 } 
+
+/* Enhanced Card Interactive Elements */
+.faculty-card .btn,
+.university-card .btn {
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.faculty-card .btn-outline-primary:hover,
+.university-card .btn-outline-primary:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-color: #667eea;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.faculty-card .btn-outline-secondary:hover,
+.university-card .btn-outline-secondary:hover {
+    background: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+/* Enhanced Badge Styling */
+.faculty-card .badge,
+.university-card .badge {
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.faculty-card .badge.bg-primary,
+.university-card .badge.bg-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    border: none;
+}
+
+.faculty-card .badge.bg-info,
+.university-card .badge.bg-info {
+    background: linear-gradient(135deg, #17a2b8, #20c997) !important;
+    border: none;
+}
+
+/* Card Content Enhancement */
+.faculty-card .card-title,
+.university-card h5 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.faculty-card .card-title a,
+.university-card .university-name {
+    transition: color 0.3s ease;
+}
+
+.faculty-card:hover .card-title a,
+.university-card:hover .university-name {
+    color: #667eea !important;
+}
+
+/* Contact Info Enhancement */
+.faculty-card .contact-info a,
+.university-card .website-link {
+    color: #6c757d;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.faculty-card .contact-info a:hover,
+.university-card .website-link:hover {
+    color: #667eea;
+    transform: translateX(2px);
+}
+
+/* Stats Enhancement */
+.university-card .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.university-card:hover .stat-number {
+    color: #28a745 !important;
+    transform: scale(1.05);
+} 
+
+/* Professional Load More Button */
+.load-more-btn {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.08));
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    border-radius: 50px !important;
+    color: #667eea !important;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+.load-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.load-more-btn:hover::before {
+    left: 100%;
+}
+
+.load-more-btn:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-color: #667eea;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.load-more-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.load-more-btn .load-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(102, 126, 234, 0.15);
+    margin-right: 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover .load-icon {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.load-more-btn .btn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.load-more-btn .btn-text {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.load-more-btn .btn-subtext {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.load-more-btn:hover .btn-subtext {
+    opacity: 0.9;
+}
+
+/* Loading state */
+.load-more-btn.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.load-more-btn.loading .load-icon {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Load More Section Styling */
+.load-more-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.load-more-section p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .load-more-btn {
+        min-width: 180px;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .load-more-btn .btn-text {
+        font-size: 0.9rem;
+    }
+    
+    .load-more-btn .btn-subtext {
+        font-size: 0.75rem;
+    }
+} 
+
+/* Country Cards */
+.country-card {
+    background: #fff;
+    border: 2px solid #e3e6f0;
+    border-radius: 1rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.country-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.25);
+    border-color: #4e73df;
+}
+
+.country-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4e73df, #36b9cc);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.country-preview-card {
+    background: #fff;
+    border: 1px solid #e3e6f0;
+    border-radius: 1rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.country-preview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.25rem 1.75rem 0 rgba(58, 59, 69, 0.2);
+}
+
+.featured-countries {
+    background: linear-gradient(135deg, #f8f9fc 0%, #e9ecef 100%);
+}
+
+/* Region cards for country profiles */
+.region-card {
+    padding: 1rem;
+    border: 1px solid #e3e6f0;
+    border-radius: 0.5rem;
+    background: #f8f9fc;
+    transition: all 0.2s ease;
+}
+
+.region-card:hover {
+    border-color: #4e73df;
+    background: #fff;
+} 
+
+/* Faculty Card Publication Metrics */
+.metric-item {
+    padding: 0.25rem 0;
+}
+
+.metric-number {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 0.1rem;
+}
+
+.metric-label {
+    font-size: 0.7rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+/* List View Metrics */
+.metric-item-small {
+    flex: 1;
+    padding: 0 0.25rem;
+}
+
+.metric-number-small {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 0.1rem;
+}
+
+.metric-label-small {
+    font-size: 0.65rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1;
+}
+
+/* Clickable Elements Hover Effects */
+.hover-primary:hover {
+    color: var(--ff-primary-color) !important;
+    transition: color 0.2s ease;
+}
+
+.text-muted.hover-primary:hover {
+    color: var(--ff-primary-color) !important;
+}
+
+/* Department Link Overflow Handling */
+.department-link {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.faculty-card .department-link {
+    max-width: 200px; /* Adjust based on card width */
+}
+
+.faculty-list-item .department-link {
+    max-width: 180px; /* Slightly smaller for list view */
+}
+
+/* Research Areas Overflow */
+.research-areas {
+    line-height: 1.3;
+    max-height: 2.6rem; /* Limit to 2 lines */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Enhanced Card Footer */
+.faculty-card .card-footer {
+    background-color: #f8f9fa !important;
+    border-top: 1px solid #e9ecef;
+    padding: 0.75rem 1rem;
+}
+
+.faculty-card .card-footer .row {
+    margin: 0;
+}
+
+.faculty-card .card-footer .col-4 {
+    padding: 0 0.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .department-link {
+        max-width: 150px;
+    }
+    
+    .metric-number {
+        font-size: 1rem;
+    }
+    
+    .metric-label {
+        font-size: 0.65rem;
+    }
+    
+    .metric-number-small {
+        font-size: 0.8rem;
+    }
+    
+    .metric-label-small {
+        font-size: 0.6rem;
+    }
+}
+
+/* Publication Metrics Animation */
+.metric-item:hover .metric-number,
+.metric-item-small:hover .metric-number-small {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* Ensure text doesn't break layout */
+.faculty-card .card-body {
+    min-height: 140px; /* Consistent card height */
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-list-item {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+.faculty-list-item:hover {
+    background-color: #f8f9fa;
+} 
+
+/* ============================================================================
+   CARD STYLING - University, Country, and Faculty Cards
+   ============================================================================ */
+
+/* Base Card Styling */
+.university-card,
+.country-card,
+.faculty-card,
+.card.university-card,
+.card.country-card,
+.card.faculty-card {
+    background: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center align all content */
+}
+
+/* Hover Effects - Raised appearance */
+.university-card:hover,
+.country-card:hover,
+.faculty-card:hover,
+.card.university-card:hover,
+.card.country-card:hover,
+.card.faculty-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--ff-primary-color);
+}
+
+/* Color-coded accent bars */
+.university-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.country-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.faculty-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+/* Card Body Content */
+.university-card .card-body,
+.country-card .card-body,
+.faculty-card .card-body,
+.card.university-card .card-body,
+.card.country-card .card-body,
+.card.faculty-card .card-body {
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card Titles */
+.university-card .card-title,
+.country-card .card-title,
+.faculty-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Card Text */
+.university-card .card-text,
+.country-card .card-text,
+.faculty-card .card-text,
+.university-card p,
+.country-card p,
+.faculty-card p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+}
+
+/* Card Footer with Metrics */
+.university-card .card-footer,
+.country-card .card-footer,
+.faculty-card .card-footer {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-top: 1px solid #dee2e6;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ============================================================================
+   LIST VIEW STYLING
+   ============================================================================ */
+
+.university-list-item,
+.country-list-item,
+.faculty-list-item {
+    background: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+/* List Item Hover Effects */
+.university-list-item:hover,
+.country-list-item:hover,
+.faculty-list-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    border-color: var(--ff-primary-color);
+}
+
+/* List Item Accent Bars */
+.university-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #3498db, #2980b9);
+    border-radius: 2px 0 0 2px;
+}
+
+.country-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #27ae60, #229954);
+    border-radius: 2px 0 0 2px;
+}
+
+.faculty-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #e74c3c, #c0392b);
+    border-radius: 2px 0 0 2px;
+}
+
+/* ============================================================================
+   FACULTY CARD SPECIFIC STYLING
+   ============================================================================ */
+
+/* Faculty Publication Metrics */
+.metric-item {
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.metric-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+/* List View Metrics */
+.metric-item-small {
+    padding: 0.25rem;
+    text-align: center;
+}
+
+.metric-number-small {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.1rem;
+}
+
+.metric-label-small {
+    font-size: 0.65rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+/* ============================================================================
+   UNIVERSITY CARD SPECIFIC STYLING  
+   ============================================================================ */
+
+.university-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 80px;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.25rem;
+    font-weight: 600;
+}
+
+/* ============================================================================
+   COUNTRY CARD SPECIFIC STYLING
+   ============================================================================ */
+
+.country-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.country-stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+}
+
+.country-stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #27ae60;
+    line-height: 1.2;
+}
+
+.country-stat-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.25rem;
+    font-weight: 600;
+}
+
+/* ============================================================================
+   CLICKABLE ELEMENTS STYLING
+   ============================================================================ */
+
+.hover-primary:hover {
+    color: var(--ff-primary-color) !important;
+    transition: color 0.2s ease;
+}
+
+.text-muted.hover-primary:hover {
+    color: var(--ff-primary-color) !important;
+}
+
+/* Department Link Overflow Handling */
+.department-link {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: center;
+}
+
+.faculty-card .department-link {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.faculty-list-item .department-link {
+    max-width: 180px;
+    margin: 0 auto;
+}
+
+/* Research Areas Overflow */
+.research-areas {
+    line-height: 1.4;
+    max-height: 2.8rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: center;
+}
+
+/* ============================================================================
+   ENHANCED VISUAL EFFECTS
+   ============================================================================ */
+
+/* Card Title Links */
+.card-title a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+.card-title a:hover {
+    color: var(--ff-primary-color);
+}
+
+/* Enhanced Borders for Better Separation */
+.university-card,
+.country-card,
+.faculty-card {
+    border-width: 2px;
+    border-style: solid;
+}
+
+/* Different border colors for better differentiation */
+.university-card {
+    border-color: #d6eaf8;
+}
+
+.university-card:hover {
+    border-color: #3498db;
+}
+
+.country-card {
+    border-color: #d5f4e6;
+}
+
+.country-card:hover {
+    border-color: #27ae60;
+}
+
+.faculty-card {
+    border-color: #fadbd8;
+}
+
+.faculty-card:hover {
+    border-color: #e74c3c;
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+@media (max-width: 768px) {
+    .university-card,
+    .country-card,
+    .faculty-card {
+        margin-bottom: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .metric-number,
+    .stat-number,
+    .country-stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .department-link {
+        max-width: 150px;
+    }
+}
+
+/* ============================================================================
+   ANIMATION ENHANCEMENTS
+   ============================================================================ */
+
+/* Subtle scale animation for metrics on hover */
+.metric-item:hover .metric-number,
+.metric-item-small:hover .metric-number-small,
+.stat-item:hover .stat-number,
+.country-stat-item:hover .country-stat-number {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Card content fade-in effect */
+.card-body {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure all text is centered */
+.card-body * {
+    text-align: center;
+}
+
+.card-footer * {
+    text-align: center;
+}
+
+/* Override any left-aligned text */
+.faculty-card p,
+.university-card p,
+.country-card p {
+    text-align: center !important;
+}
+
+.faculty-list-item .row > div,
+.university-list-item .row > div,
+.country-list-item .row > div {
+    text-align: center;
+} 
+
+/* ============================================================================
+   LOAD MORE BUTTON STYLING
+   ============================================================================ */
+
+.load-more-btn {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border: 2px solid #dee2e6;
+    border-radius: 25px;
+    padding: 12px 24px;
+    color: #495057;
+    font-weight: 600;
+    text-transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.load-more-btn:hover {
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    border-color: var(--ff-primary-color);
+    color: var(--ff-primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.load-more-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.load-more-btn .load-icon {
+    background: rgba(var(--ff-primary-color-rgb), 0.1);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover .load-icon {
+    background: rgba(var(--ff-primary-color-rgb), 0.2);
+    transform: rotate(90deg);
+}
+
+.load-more-btn .btn-text {
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.load-more-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.load-more-btn:disabled:hover {
+    transform: none;
+    border-color: #dee2e6;
+    color: #495057;
+}
+
+/* Loading state */
+.load-more-btn.loading {
+    pointer-events: none;
+}
+
+.load-more-btn.loading .load-icon {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Load More Section */
+.load-more-section {
+    padding: 2rem 0;
+}
+
+.load-more-section p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+} 
+
+/* Faculty Card Simple Fix */
+.faculty-card {
+    min-height: 280px;
+    border: 2px solid #fadbd8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: #e74c3c;
+}
+
+/* Compact metrics */
+.faculty-card .metric-number {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.faculty-card .metric-label {
+    font-size: 0.6rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.faculty-card .research-areas {
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 2.5rem;
+} 
+
+/* Faculty Card Improved Layout */
+.faculty-card {
+    border: 2px solid #fadbd8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: auto;
+    min-height: 320px;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: #e74c3c;
+}
+
+.faculty-card .card-body {
+    padding: 1.25rem;
+}
+
+.faculty-card .card-footer {
+    padding: 0.75rem 1rem;
+    background-color: #f8f9fa !important;
+    border-top: 1px solid #e9ecef;
+    margin-top: auto;
+}
+
+/* Compact metrics styling */
+.metric-item {
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.metric-number {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 0.1rem;
+}
+
+.metric-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #6c757d;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Research areas compact display */
+.research-areas {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 2.8rem;
+    font-size: 0.875rem;
+}
+
+/* Department link styling */
+.department-link {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+/* Simple Faculty Card Fix - Remove Problematic CSS */
+.faculty-card {
+    border: 2px solid #fadbd8 !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    min-height: 280px !important;
+    height: auto !important;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    border-color: #e74c3c !important;
+}
+
+/* Compact metrics for small space */
+.metric-number {
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+
+.metric-label {
+    font-size: 0.6rem !important;
+    color: #6c757d !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+} 
+
+/* Faculty Card Layout Fix - Match Universities */
+.faculty-card {
+    border: 2px solid #fadbd8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    min-height: 280px;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: #e74c3c;
+}
+
+/* Small metrics for better fit */
+.faculty-card .metric-number {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.faculty-card .metric-label {
+    font-size: 0.65rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.faculty-card .research-areas {
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 2.4rem;
+} 
+
+/* Table View Styling */
+.table-responsive {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.table th.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.table th.sortable:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.table th.sortable i {
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.table th.sortable:hover i {
+    opacity: 1;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0,123,255,0.05);
+}
+
+/* Table badges and buttons */
+.table .badge {
+    font-size: 0.75rem;
+}
+
+.table .btn-group-sm .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Faculty and University table specific styles */
+#faculty-table td:first-child {
+    min-width: 200px;
+}
+
+#universities-table td:first-child {
+    min-width: 220px;
+}
+
+.table td small {
+    display: block;
+    line-height: 1.2;
+}
+
+/* Responsive table adjustments */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    .table .btn-group-sm .btn {
+        padding: 0.125rem 0.25rem;
+    }
+} 
+
+/* Research Areas Styling */
+.research-area-badge {
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: default;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #dee2e6;
+}
+
+.research-area-badge:hover {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .research-area-badge {
+    background: linear-gradient(135deg, #495057 0%, #6c757d 100%);
+    border-color: #6c757d;
+    color: #f8f9fa !important;
+}
+
+[data-theme="dark"] .research-area-badge:hover {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    border-color: #adb5bd;
+} 
+
+/* Small Research Area Badges for Faculty Cards */
+.small-research-badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.2rem 0.5rem;
+    line-height: 1.2;
+}
+
+.research-areas {
+    max-height: 40px;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .small-research-badge.bg-light {
+    background: #495057 !important;
+    border-color: #6c757d !important;
+    color: #f8f9fa !important;
+}
+
+/* Fix oversized Employment Type filter box */
+.faculties-search select[name="employment_type"] {
+    width: auto;
+    min-width: 140px;
+    max-width: 180px;
+}
+
+.faculties-search .col-lg-3:has(select[name="employment_type"]) {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 140px;
+    max-width: 180px;
+}
+
+/* Alternative approach using specific filter styling */
+.employment-type-filter {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 140px;
+    max-width: 180px;
+}
+
+.employment-type-filter select {
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .employment-type-filter {
+        min-width: 120px;
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .employment-type-filter {
+        width: 100% !important;
+        max-width: none;
+    }
+}

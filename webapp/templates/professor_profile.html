@@ -48,7 +48,7 @@
                                   <p class="mb-1">
                                       <i class="fas fa-university me-2"></i>
                                       <strong>
-                                          <a href="/faculties?university={{ professor.university_name }}" 
+                                          <a href="/faculties?university={% if professor.university_code %}{{ professor.university_code }}{% else %}{{ professor.university_name }}{% endif %}" 
                                              class="text-decoration-none university-link"
                                              title="View all faculty at {{ professor.university_name }}">
                                               {{ professor.university_name }}
@@ -212,16 +212,30 @@
             </div>
             
             <!-- Research Areas -->
-            {% if professor.research_areas %}
+            {% if professor.research_areas and professor.research_areas|length > 0 %}
             <div class="facultyfinder-card p-4 mb-4">
                 <h3 class="mb-3">
                     <i class="fas fa-microscope text-primary me-2"></i>
                     Research Areas
                 </h3>
                 <div class="research-areas">
-                    {% for area in professor.research_areas.split(';') %}
-                        <span class="research-area-tag">{{ area.strip() }}</span>
-                    {% endfor %}
+                    {% if professor.research_areas is string %}
+                        <!-- Handle semicolon-separated string format -->
+                        {% for area in professor.research_areas.split(';') %}
+                            {% if area.strip() %}
+                            <span class="badge bg-light text-dark border px-3 py-2 research-area-badge me-2 mb-2">
+                                {{ area.strip()|title }}
+                            </span>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <!-- Handle JSON array format -->
+                        {% for area in professor.research_areas %}
+                            <span class="badge bg-light text-dark border px-3 py-2 research-area-badge me-2 mb-2">
+                                {{ area|title }}
+                            </span>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
             {% endif %}
@@ -270,10 +284,14 @@
                         
                         {% if publications|length > 5 %}
                             <div class="text-center mt-3">
-                                <button id="loadMorePublications" class="btn btn-primary btn-lg load-more-btn" onclick="loadMorePublications()">
-                                    <i class="fas fa-file-alt me-2"></i>
-                                    <span class="btn-text">Load More Publications</span>
-                                    <span class="btn-subtext">Show additional publications</span>
+                                <button id="loadMorePublications" class="btn load-more-btn" onclick="loadMorePublications()">
+                                    <span class="load-icon">
+                                        <i class="fas fa-plus"></i>
+                                    </span>
+                                    <span class="btn-content">
+                                        <span class="btn-text">Load More</span>
+                                        <span class="btn-subtext">Show additional publications</span>
+                                    </span>
                                 </button>
                             </div>
                         {% endif %}

@@ -235,19 +235,11 @@
             {% if recent_faculty %}
                 <div class="row g-4">
                     {% for faculty in recent_faculty %}
-                    <div class="col-lg-4 col-md-6">
-                        <div class="faculty-card">
-                            <a href="{{ url_for('professor_profile', professor_id=faculty.id) }}" class="text-decoration-none">
-                                <h6 class="fw-bold text-primary mb-2">{{ faculty.name }}</h6>
-                                {% if faculty.department %}
-                                <p class="text-muted small mb-2">{{ faculty.department }}</p>
-                                {% endif %}
-                                {% if faculty.research_areas %}
-                                <p class="small mb-0">{{ faculty.research_areas[:100] }}{% if faculty.research_areas|length > 100 %}...{% endif %}</p>
-                                {% endif %}
-                            </a>
+                        <div class="faculty-card mb-3">
+                            <h6 class="mb-1">{{ faculty.name }}</h6>
+                            <p class="text-muted small mb-1">{{ faculty.position or 'Faculty Member' }}</p>
+                            <p class="text-muted small mb-0">{{ faculty.department or 'Various Departments' }}</p>
                         </div>
-                    </div>
                     {% endfor %}
                 </div>
                 

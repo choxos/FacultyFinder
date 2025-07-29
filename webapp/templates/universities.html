@@ -134,7 +134,7 @@
                 <div class="university-card facultyfinder-card p-4 h-100">
                     <div class="d-flex justify-content-between align-items-start mb-3">
                         <h5 class="mb-1">
-                            <a href="{{ url_for('university_profile', university_id=university.id) }}" 
+                            <a href="{{ url_for('university_profile', university_code=university.university_code) }}" 
                                class="text-decoration-none text-primary fw-bold">
                                 {{ university.name }}
                             </a>
@@ -158,180 +158,154 @@
                                    title="View on Google Maps">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                            {% else %}
-                                <a href="https://www.google.com/maps/search/{{ university.name }}+{{ university.city }}+{{ university.province_state }}+{{ university.country|urlencode }}" 
-                                   target="_blank" class="text-decoration-none maps-link ms-2"
-                                   title="View on Google Maps">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
                             {% endif %}
-                            {% if university.website %}
-                                <br>
+                        </div>
+                        
+                        {% if university.university_type %}
+                            <div class="text-muted mb-2">
+                                <i class="fas fa-building me-2"></i>
+                                <strong>{{ university.university_type }}</strong>
+                            </div>
+                        {% endif %}
+                        
+                        {% if university.language_of_instruction %}
+                            <div class="text-muted mb-2">
+                                <i class="fas fa-language me-2"></i>
+                                <strong>{{ university.language_of_instruction }}</strong>
+                            </div>
+                        {% endif %}
+                        
+                        {% if university.website %}
+                            <div class="text-muted mb-2">
                                 <i class="fas fa-link me-2"></i>
-                                <a href="{{ university.website }}" target="_blank" 
-                                   class="text-decoration-none website-link"
-                                   title="Visit {{ university.name }} website">
+                                <a href="{{ university.website }}" target="_blank" class="text-decoration-none">
                                     <strong>Official Website</strong>
                                     <i class="fas fa-external-link-alt ms-1"></i>
                                 </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                    
-                    <!-- University Details -->
-                    <div class="university-details mb-3">
-                        {% if university.university_type %}
-                            <a href="/universities?type={{ university.university_type }}"
-                               class="badge bg-primary text-decoration-none me-2 mb-1"
-                               title="Filter by {{ university.university_type }} universities">
-                                {{ university.university_type|title }}
-                            </a>
-                        {% endif %}
-
-                        {% if university.languages %}
-                            {% for language in university.languages.split(';') %}
-                                {% if language.strip() %}
-                                    <a href="/universities?language={{ language.strip() }}"
-                                       class="badge bg-info text-decoration-none me-1 mb-1"
-                                       title="Filter by {{ language.strip() }} language universities">
-                                        {{ language.strip() }}
-                                    </a>
-                                {% endif %}
-                            {% endfor %}
+                            </div>
                         {% endif %}
                     </div>
                     
-                    <div class="university-stats mt-auto">
+                    <div class="mt-auto">
                         <div class="row text-center">
                             <div class="col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number text-primary fw-bold">{{ university.professor_count or 0 }}</div>
-                                    <div class="stat-label small text-muted">Faculty</div>
+                                    <div class="stat-number text-primary fw-bold">{{ university.faculty_count or 0 }}</div>
+                                    <div class="stat-label">Faculty</div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number text-primary fw-bold">{{ university.department_count or 0 }}</div>
-                                    <div class="stat-label small text-muted">Departments</div>
+                                    <div class="stat-number text-success fw-bold">{{ university.department_count or 0 }}</div>
+                                    <div class="stat-label">Departments</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-3">
-                            <a href="/faculties?university={{ university.name }}" class="btn btn-sm btn-outline-primary w-100">
-                                <i class="fas fa-users me-2"></i>View Faculty
-                            </a>
-                        </div>
                     </div>
-                </div>
-                
-                <!-- List View (Hidden by default) -->
-                <div class="university-list-item">
-                    <div class="university-list-content">
-                        <!-- Icon -->
-                        <div class="university-list-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        
-                        <!-- Main Info -->
-                        <div class="university-list-main">
-                            <div class="university-list-name">
-                                <a href="{{ url_for('university_profile', university_id=university.id) }}">{{ university.name }}</a>
-                                {% if university.year_established %}
-                                    <span class="badge bg-secondary ms-2">Est. {{ university.year_established }}</span>
-                                {% endif %}
-                            </div>
-                            
-                            <div class="university-list-location">
-                                <span>
-                                    <i class="fas fa-map-marker-alt me-1"></i>
-                                    <strong>{{ university.city }}</strong>{% if university.province_state %}, {{ university.province_state }}{% endif %}, {{ university.country }}
-                                </span>
-                                {% if university.address %}
-                                    <a href="https://www.google.com/maps/search/{{ university.name }}+{{ university.address|urlencode }}" 
-                                       target="_blank" class="maps-link" title="View on Google Maps">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                {% else %}
-                                    <a href="https://www.google.com/maps/search/{{ university.name }}+{{ university.city }}+{{ university.province_state }}+{{ university.country|urlencode }}" 
-                                       target="_blank" class="maps-link" title="View on Google Maps">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                {% endif %}
-                                {% if university.website %}
-                                    <span class="ms-3">
-                                        <i class="fas fa-link me-1"></i>
-                                        <a href="{{ university.website }}" target="_blank" 
-                                           class="website-link" title="Visit {{ university.name }} website">
-                                            Official Website <i class="fas fa-external-link-alt"></i>
-                                        </a>
-                                    </span>
-                                {% endif %}
-                            </div>
-                            
-                            <div class="university-list-badges">
-                                {% if university.university_type %}
-                                    <a href="/universities?type={{ university.university_type }}"
-                                       class="badge bg-primary text-decoration-none"
-                                       title="Filter by {{ university.university_type }} universities">
-                                        {{ university.university_type|title }}
-                                    </a>
-                                {% endif %}
-                                
-                                {% if university.languages %}
-                                    {% for language in university.languages.split(';') %}
-                                        {% if language.strip() %}
-                                            <a href="/universities?language={{ language.strip() }}"
-                                               class="badge bg-info text-decoration-none"
-                                               title="Filter by {{ language.strip() }} language universities">
-                                                {{ language.strip() }}
-                                            </a>
-                                        {% endif %}
-                                    {% endfor %}
-                                {% endif %}
-                            </div>
-                        </div>
-                        
-                        <!-- Stats -->
-                        <div class="university-list-stats">
-                            <div class="university-stat-item">
-                                <div class="university-stat-number">{{ university.professor_count or 0 }}</div>
-                                <div class="university-stat-label">Faculty</div>
-                            </div>
-                            <div class="university-stat-item">
-                                <div class="university-stat-number">{{ university.department_count or 0 }}</div>
-                                <div class="university-stat-label">Departments</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Actions -->
-                        <div class="university-list-actions">
-                            <a href="/faculties?university={{ university.name }}" class="btn btn-primary">
-                                <i class="fas fa-users me-1"></i>View Faculty
-                            </a>
-                            <a href="/universities?country={{ university.country }}" class="btn btn-outline-secondary">
-                                <i class="fas fa-globe me-1"></i>{{ university.country }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% else %}
-            <div class="col-12">
-                <div class="text-center py-5">
-                    <div class="mb-4">
-                        <i class="fas fa-university fa-4x text-muted"></i>
-                    </div>
-                    <h4 class="text-muted">No Universities Found</h4>
-                    <p class="text-muted mb-4">
-                        We couldn't find any universities matching your search criteria.
-                        <br>Try adjusting your filters or search terms.
-                    </p>
-                    <a href="/universities" class="btn btn-primary">
-                        <i class="fas fa-times me-2"></i>Clear All Filters
-                    </a>
                 </div>
             </div>
         {% endfor %}
+    </div>
+    
+    <!-- Universities Table (Hidden by default) -->
+    <div id="universities-table" class="table-responsive" style="display: none;">
+        <table class="table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col" class="sortable" data-sort="name">
+                        University Name 
+                        <i class="fas fa-sort ms-1"></i>
+                    </th>
+                    <th scope="col" class="sortable" data-sort="country">
+                        Country 
+                        <i class="fas fa-sort ms-1"></i>
+                    </th>
+                    <th scope="col" class="sortable" data-sort="city">
+                        Location 
+                        <i class="fas fa-sort ms-1"></i>
+                    </th>
+                    <th scope="col" class="sortable" data-sort="type">
+                        Type 
+                        <i class="fas fa-sort ms-1"></i>
+                    </th>
+                    <th scope="col" class="sortable text-center" data-sort="faculty">
+                        Faculty 
+                        <i class="fas fa-sort ms-1"></i>
+                    </th>
+                    <th scope="col" class="sortable text-center" data-sort="departments">
+                        Departments 
+                        <i class="fas fa-sort ms-1"></i>
+                    </th>
+                    <th scope="col" class="sortable text-center" data-sort="year">
+                        Established 
+                        <i class="fas fa-sort ms-1"></i>
+                    </th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for university in universities %}
+                <tr data-university-id="{{ university.university_code }}">
+                    <td>
+                        <div class="fw-bold">
+                            <a href="{{ url_for('university_profile', university_code=university.university_code) }}" 
+                               class="text-decoration-none text-primary">
+                                {{ university.name }}
+                            </a>
+                        </div>
+                        {% if university.language_of_instruction %}
+                            <small class="text-muted">{{ university.language_of_instruction }}</small>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <div class="fw-semibold">{{ university.country }}</div>
+                        {% if university.province_state %}
+                            <small class="text-muted">{{ university.province_state }}</small>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <div>{{ university.city }}</div>
+                        {% if university.address %}
+                            <a href="https://www.google.com/maps/search/{{ university.name }}+{{ university.address|urlencode }}" 
+                               target="_blank" class="text-decoration-none text-muted" title="View on Google Maps">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </a>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <span class="badge bg-secondary">{{ university.university_type or 'N/A' }}</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="fw-bold text-primary">{{ university.faculty_count or 0 }}</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="fw-bold text-success">{{ university.department_count or 0 }}</span>
+                    </td>
+                    <td class="text-center">
+                        {% if university.year_established %}
+                            <span class="badge bg-info">{{ university.year_established }}</span>
+                        {% else %}
+                            <span class="text-muted">N/A</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a href="{{ url_for('university_profile', university_code=university.university_code) }}" 
+                               class="btn btn-outline-primary btn-sm" title="View Profile">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            {% if university.website %}
+                                <a href="{{ university.website }}" target="_blank" 
+                                   class="btn btn-outline-secondary btn-sm" title="Official Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
 {% endblock %}
@@ -360,35 +334,103 @@ function updateProvinces() {
     }
 }
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-    // Set up view toggle functionality
+    // View toggle functionality
     const viewButtons = document.querySelectorAll('[data-view]');
     const universitiesGrid = document.getElementById('universities-grid');
+    const universitiesTable = document.getElementById('universities-table');
     
-    if (viewButtons.length > 0 && universitiesGrid) {
-        viewButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                const view = this.dataset.view;
-                
-                // Update active button
-                viewButtons.forEach(function(btn) {
-                    btn.classList.remove('active');
-                });
-                this.classList.add('active');
-                
-                // Toggle view
-                if (view === 'list') {
-                    universitiesGrid.classList.add('list-view');
-                } else {
-                    universitiesGrid.classList.remove('list-view');
-                }
-            });
+    viewButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const view = this.getAttribute('data-view');
+            
+            // Update active button
+            viewButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Toggle views
+            if (view === 'grid') {
+                universitiesGrid.style.display = 'flex';
+                universitiesGrid.className = 'row';
+                universitiesTable.style.display = 'none';
+            } else if (view === 'list') {
+                universitiesGrid.style.display = 'none';
+                universitiesTable.style.display = 'block';
+            }
         });
-    }
+    });
     
-    // Initialize provinces dropdown
-    updateProvinces();
+    // Table sorting functionality
+    const sortableHeaders = document.querySelectorAll('.sortable');
+    let currentSort = { column: null, direction: 'asc' };
+    
+    sortableHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const column = this.getAttribute('data-sort');
+            const table = this.closest('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // Determine sort direction
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.direction = 'asc';
+            }
+            currentSort.column = column;
+            
+            // Update header icons
+            sortableHeaders.forEach(h => {
+                const icon = h.querySelector('i');
+                icon.className = 'fas fa-sort ms-1';
+            });
+            
+            const currentIcon = this.querySelector('i');
+            currentIcon.className = currentSort.direction === 'asc' ? 
+                'fas fa-sort-up ms-1' : 'fas fa-sort-down ms-1';
+            
+            // Sort rows
+            rows.sort((a, b) => {
+                let aVal = getCellValue(a, column);
+                let bVal = getCellValue(b, column);
+                
+                // Handle numeric values
+                if (column === 'faculty' || column === 'departments' || column === 'year') {
+                    aVal = parseInt(aVal) || 0;
+                    bVal = parseInt(bVal) || 0;
+                }
+                
+                if (aVal < bVal) return currentSort.direction === 'asc' ? -1 : 1;
+                if (aVal > bVal) return currentSort.direction === 'asc' ? 1 : -1;
+                return 0;
+            });
+            
+            // Reorder table rows
+            rows.forEach(row => tbody.appendChild(row));
+        });
+    });
+    
+    function getCellValue(row, column) {
+        switch(column) {
+            case 'name':
+                return row.querySelector('td:nth-child(1) a').textContent.trim();
+            case 'country':
+                return row.querySelector('td:nth-child(2) .fw-semibold').textContent.trim();
+            case 'city':
+                return row.querySelector('td:nth-child(3) div').textContent.trim();
+            case 'type':
+                return row.querySelector('td:nth-child(4) .badge').textContent.trim();
+            case 'faculty':
+                return row.querySelector('td:nth-child(5) .fw-bold').textContent.trim();
+            case 'departments':
+                return row.querySelector('td:nth-child(6) .fw-bold').textContent.trim();
+            case 'year':
+                const yearBadge = row.querySelector('td:nth-child(7) .badge');
+                return yearBadge ? yearBadge.textContent.trim() : '0';
+            default:
+                return '';
+        }
+    }
 });
 </script>
 {% endblock %} 

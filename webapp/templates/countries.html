@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}Countries - FacultyFinder{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="hero-section text-center mb-5">
+                <h1 class="display-4 fw-bold text-primary">Global Faculty Network</h1>
+                <p class="lead text-muted">Discover academic talent across countries worldwide</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Summary -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="results-summary p-3 bg-light rounded">
+                <h3 class="mb-0">
+                    <i class="fas fa-globe me-2 text-success"></i>
+                    {% if countries_count > 0 %}
+                        {{ countries_count }} {{ 'Country' if countries_count == 1 else 'Countries' }} Found
+                    {% else %}
+                        No Countries Found
+                    {% endif %}
+                </h3>
+                {% if countries_count > 0 %}
+                    <p class="text-muted mb-0">Explore faculty networks across different countries</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Countries Grid -->
+    {% if countries and countries_count > 0 %}
+    <div class="row">
+        {% for country in countries %}
+        <div class="col-md-6 mb-4">
+            <div class="country-card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <i class="fas fa-flag me-2 text-success"></i>
+                        <a href="/country/{{ country.code }}" class="text-decoration-none">
+                            {{ country.name }}
+                        </a>
+                    </h5>
+                    <div class="country-stats mt-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="country-stat-item">
+                                    <div class="country-stat-number text-primary">{{ country.faculty_count }}</div>
+                                    <div class="country-stat-label">Faculty</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="country-stat-item">
+                                    <div class="country-stat-number text-info">{{ country.university_count }}</div>
+                                    <div class="country-stat-label">Universities</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="country-stat-item">
+                                    <div class="country-stat-number text-warning">{{ country.department_count }}</div>
+                                    <div class="country-stat-label">Departments</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-grid">
+                        <a href="/country/{{ country.code }}" class="btn btn-outline-success">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-12">
+            <div class="empty-state text-center py-5">
+                <i class="fas fa-globe fa-4x text-muted mb-3"></i>
+                <h3 class="text-muted">No Countries Found</h3>
+                <p class="text-muted">No countries with faculty data are available at the moment.</p>
+                <a href="/universities" class="btn btn-primary">
+                    <i class="fas fa-university me-2"></i>Browse Universities
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add smooth hover animations
+    const countryCards = document.querySelectorAll('.country-card');
+    countryCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+</script>
+{% endblock %} 

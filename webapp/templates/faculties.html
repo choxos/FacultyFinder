@@ -20,54 +20,104 @@
     <!-- Search and Filters -->
     <div class="search-filters">
         <form method="GET" action="/faculties">
-                                  <div class="row">
-                          <div class="col-lg-6 mb-3">
-                              <label class="filter-label">Search Faculty</label>
-                              <input type="text" class="form-control" name="search"
-                                     placeholder="Professor name, research area, keywords..."
-                                     value="{{ search }}">
-                          </div>
-                          <div class="col-lg-3 col-md-6 mb-3">
-                              <label class="filter-label">University</label>
-                              <input type="text" class="form-control" name="university"
-                                     placeholder="University name..."
-                                     value="{{ university }}">
-                          </div>
-                          <div class="col-lg-3 col-md-6 mb-3">
-                              <label class="filter-label">Department</label>
-                              <input type="text" class="form-control" name="department"
-                                     placeholder="Department..."
-                                     value="{{ department }}">
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-lg-4 mb-3">
-                              <label class="filter-label">Research Area</label>
-                              <input type="text" class="form-control" name="research_area"
-                                     placeholder="Research interests..."
-                                     value="{{ research_area }}">
-                          </div>
-                          <div class="col-lg-4 mb-3">
-                              <label class="filter-label">Degree Type</label>
-                              <select class="form-select" name="degree">
-                                  <option value="">All Degrees</option>
-                                  {% for deg in available_degrees %}
-                                      <option value="{{ deg.degree_type }}" 
-                                              {% if degree == deg.degree_type %}selected{% endif %}>
-                                          {{ deg.degree_type }} ({{ deg.professor_count }})
-                                      </option>
-                                  {% endfor %}
-                              </select>
-                          </div>
-                          <div class="col-lg-4 mb-3 d-flex align-items-end">
-                              <button type="submit" class="btn btn-primary me-2">
-                                  <i class="fas fa-search me-2"></i>Search
-                              </button>
-                              <a href="/faculties" class="btn btn-outline-secondary">
-                                  <i class="fas fa-times me-2"></i>Clear
-                              </a>
-                          </div>
-                      </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <label class="filter-label">Country</label>
+                    <select class="form-select" name="country" id="countrySelect" onchange="updateUniversities()">
+                        <option value="">All Countries</option>
+                        {% for country in filter_options.countries %}
+                            <option value="{{ country.name }}" {% if request.args.get('country') == country.name %}selected{% endif %}>
+                                {{ country.name }} ({{ country.count }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <label class="filter-label">University</label>
+                    <select class="form-select" name="university" id="universitySelect" onchange="updateDepartments()">
+                        <option value="">All Universities</option>
+                        {% for uni in filter_options.universities %}
+                            {% if not request.args.get('country') or uni.country == request.args.get('country') %}
+                                <option value="{{ uni.code }}" {% if university == uni.code %}selected{% endif %}>
+                                    {{ uni.name }} ({{ uni.count }})
+                                </option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <label class="filter-label">Department</label>
+                    <select class="form-select" name="department" id="departmentSelect">
+                        <option value="">All Departments</option>
+                        {% if university %}
+                            <!-- Departments will be loaded dynamically -->
+                        {% else %}
+                            {% for dept in filter_options.departments %}
+                                {% if not university or dept.university_code == university %}
+                                    <option value="{{ dept.name }}" {% if department == dept.name %}selected{% endif %}>
+                                        {{ dept.name }} ({{ dept.count }})
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <label class="filter-label">Search</label>
+                    <input type="text" class="form-control" name="search"
+                           placeholder="Search faculty..."
+                           value="{{ search }}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <label class="filter-label">Research Area</label>
+                    <input type="text" class="form-control" name="research_area"
+                           placeholder="Research interests..."
+                           value="{{ research_area }}">
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <label class="filter-label">Academic Rank</label>
+                    <select class="form-select" name="position">
+                        <option value="">All Ranks</option>
+                        {% for pos in filter_options.positions %}
+                            <option value="{{ pos.name }}" {% if position == pos.name %}selected{% endif %}>
+                                {{ pos.name }} ({{ pos.count }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-lg-2 col-md-3 mb-3">
+                    <label class="filter-label">Employment Type</label>
+                    <select class="form-select" name="employment_type">
+                        <option value="">All Types</option>
+                        {% for emp_type in filter_options.employment_types %}
+                            <option value="{{ emp_type.value }}" {% if employment_type == emp_type.value %}selected{% endif %}>
+                                {{ emp_type.label }} ({{ emp_type.count }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <label class="filter-label">Sort By</label>
+                    <select class="form-select" name="sort_by">
+                        <option value="name" {% if sort_by == 'name' %}selected{% endif %}>Name</option>
+                        <option value="position" {% if sort_by == 'position' %}selected{% endif %}>Academic Rank</option>
+                        <option value="university" {% if sort_by == 'university' %}selected{% endif %}>University</option>
+                        <option value="department" {% if sort_by == 'department' %}selected{% endif %}>Department</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 mb-3 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary me-2">
+                        <i class="fas fa-search me-2"></i>Search
+                    </button>
+                    <a href="/faculties" class="btn btn-outline-secondary">
+                        <i class="fas fa-times me-2"></i>Clear
+                    </a>
+                </div>
+            </div>
         </form>
     </div>
     
@@ -78,10 +128,10 @@
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h3>Faculty Members ({{ faculty_shown }} of {{ faculty_total }} found)</h3>
                     <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-secondary btn-sm active" data-view="grid">
+                        <button type="button" class="btn btn-outline-primary btn-sm active" data-view="grid">
                             <i class="fas fa-th"></i>
                         </button>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" data-view="list">
+                        <button type="button" class="btn btn-outline-primary btn-sm" data-view="list">
                             <i class="fas fa-list"></i>
                         </button>
                     </div>
@@ -89,199 +139,91 @@
                 
                 <div id="faculty-grid" class="row">
                     {% for prof in faculty %}
-                        <!-- Grid View (Default) -->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="faculty-card card h-100 shadow-sm border-0">
-                                <div class="card-body p-4">
-                                    <!-- Professor Header -->
-                                    <div class="d-flex align-items-start mb-3">
-                                        <div class="flex-grow-1">
+                        <div class="col-lg-6 col-xl-4 mb-4">
+                            <div class="faculty-card h-100">
+                                <div class="card-body">
+                                    <div class="faculty-info">
+                                        <!-- Professor Name and Title -->
+                                        <div class="faculty-header mb-3">
                                             <h5 class="card-title mb-1">
-                                                <a href="/professor/{{ prof.id }}" class="text-decoration-none text-primary fw-bold">
+                                                <a href="/professor/{{ prof.id }}" class="text-decoration-none professor-link">
                                                     {{ prof.name }}
                                                 </a>
                                             </h5>
-                                            {% if prof.position %}
-                                                <p class="text-muted small mb-0">{{ prof.position }}</p>
-                                            {% endif %}
-                                        </div>
-                                        <div class="profile-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
-                                             style="width: 50px; height: 50px; font-size: 1.25rem;">
-                                            {{ prof.name[0]|upper }}
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Department and University -->
-                                    <div class="mb-3">
-                                        {% if prof.department %}
-                                            <div class="mb-2">
-                                                <i class="fas fa-building text-muted me-2"></i>
-                                                <a href="/faculties?department={{ prof.department }}" 
-                                                   class="text-decoration-none department-link">
-                                                    <strong>{{ prof.department }}</strong>
+                                            <p class="text-muted small mb-0">
+                                                <i class="fas fa-graduation-cap me-1"></i>
+                                                <a href="/faculties?position={{ prof.position | urlencode }}" 
+                                                   class="text-decoration-none text-muted hover-primary position-link">
+                                                    {{ prof.position or 'Faculty Member' }}{% if prof.adjunct %} (Part-time){% elif not prof.full_time %} (Part-time){% endif %}
                                                 </a>
-                                            </div>
-                                        {% endif %}
+                                            </p>
+                                        </div>
                                         
-                                        {% if prof.university_name %}
-                                            <div class="mb-2">
-                                                <i class="fas fa-university text-muted me-2"></i>
-                                                <a href="/faculties?university={{ prof.university_name }}" 
-                                                   class="text-decoration-none university-link">
+                                        <!-- University -->
+                                        <div class="faculty-affiliation mb-2">
+                                            <p class="text-muted small mb-1">
+                                                <i class="fas fa-university me-1"></i>
+                                                <a href="/faculties?university={{ prof.university_code or prof.university_name | urlencode }}" 
+                                                   class="text-decoration-none text-muted hover-primary university-link">
                                                     {{ prof.university_name }}
                                                 </a>
-                                                {% if prof.address %}
-                                                    {% set maps_query = prof.university_name + ", " + prof.address %}
-                                                    <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
-                                                       target="_blank" 
-                                                       class="text-decoration-none ms-2 maps-link"
-                                                       title="View {{ prof.university_name }} on Google Maps">
-                                                        <i class="fas fa-map-marker-alt text-primary"></i>
-                                                    </a>
-                                                {% elif prof.city and prof.province_state %}
-                                                    {% set maps_query = prof.university_name + ", " + prof.city + ", " + prof.province_state + ", " + prof.country %}
-                                                    <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
-                                                       target="_blank" 
-                                                       class="text-decoration-none ms-2 maps-link"
-                                                       title="View {{ prof.university_name }} on Google Maps">
-                                                        <i class="fas fa-map-marker-alt text-primary"></i>
-                                                    </a>
-                                                {% endif %}
-                                            </div>
-                                        {% endif %}
-                                    </div>
-                                    
-                                    <!-- Research Areas -->
-                                    {% if prof.research_areas %}
-                                        <div class="mb-3">
-                                            <h6 class="text-muted mb-2">
-                                                <i class="fas fa-microscope me-1"></i>Research Areas
-                                            </h6>
-                                            <div class="research-areas">
-                                                {% set areas = prof.research_areas.split(';') %}
-                                                {% for area in areas[:3] %}
-                                                    {% if area.strip() %}
-                                                        <span class="badge bg-light text-dark border me-1 mb-1">
-                                                            {{ area.strip() }}
-                                                        </span>
-                                                    {% endif %}
-                                                {% endfor %}
-                                                {% if areas|length > 3 %}
-                                                    <span class="badge bg-secondary">+{{ areas|length - 3 }} more</span>
-                                                {% endif %}
-                                            </div>
+                                            </p>
+                                            
+                                            <!-- Department -->
+                                            {% if prof.department %}
+                                            <p class="text-muted small mb-0">
+                                                <i class="fas fa-building me-1"></i>
+                                                <a href="/faculties?department={{ prof.department | urlencode }}" 
+                                                   class="text-decoration-none text-muted hover-primary department-link" 
+                                                   title="{{ prof.department }}">
+                                                    {{ prof.department }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                         </div>
-                                    {% endif %}
-                                    
-                                    <!-- Contact Info -->
-                                    <div class="contact-info mt-auto">
-                                        {% if prof.email %}
-                                            <div class="mb-1">
-                                                <i class="fas fa-envelope text-muted me-2"></i>
-                                                <a href="mailto:{{ prof.email }}" class="text-decoration-none small">
-                                                    {{ prof.email }}
-                                                </a>
-                                            </div>
-                                        {% endif %}
                                         
-                                        {% if prof.website %}
-                                            <div class="mb-1">
-                                                <i class="fas fa-globe text-muted me-2"></i>
-                                                <a href="{{ prof.website }}" target="_blank" class="text-decoration-none small">
-                                                    Website
-                                                </a>
-                                            </div>
+                                        <!-- Research Areas -->
+                                        {% if prof.research_areas %}
+                                        <div class="research-areas mt-2">
+                                            {% set research_areas = prof.research_areas if prof.research_areas is iterable and prof.research_areas is not string else [] %}
+                                            {% if research_areas %}
+                                                {% for area in research_areas[:3] %}
+                                                <span class="badge bg-light text-dark border me-1 mb-1 small-research-badge">
+                                                    {{ area|title }}
+                                                </span>
+                                                {% endfor %}
+                                                {% if research_areas|length > 3 %}
+                                                <span class="badge bg-secondary text-white me-1 mb-1 small-research-badge">
+                                                    +{{ research_areas|length - 3 }} more
+                                                </span>
+                                                {% endif %}
+                                            {% endif %}
+                                        </div>
                                         {% endif %}
                                     </div>
                                 </div>
                                 
-                                <!-- Card Footer -->
-                                <div class="card-footer bg-transparent border-0 p-3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <a href="/professor/{{ prof.id }}" class="btn btn-outline-primary btn-sm">
-                                            <i class="fas fa-user me-1"></i>View Profile
-                                        </a>
-                                        
-                                        <div class="d-flex gap-2">
-                                            {% if prof.email %}
-                                                <a href="mailto:{{ prof.email }}" class="btn btn-outline-secondary btn-sm" title="Send Email">
-                                                    <i class="fas fa-envelope"></i>
-                                                </a>
-                                            {% endif %}
-                                            
-                                            {% if prof.website %}
-                                                <a href="{{ prof.website }}" target="_blank" class="btn btn-outline-secondary btn-sm" title="Visit Website">
-                                                    <i class="fas fa-external-link-alt"></i>
-                                                </a>
-                                            {% endif %}
+                                <!-- Publication Metrics Footer -->
+                                <div class="card-footer">
+                                    <div class="row text-center g-0">
+                                        <div class="col-4">
+                                            <div class="metric-item">
+                                                <div class="metric-number text-primary">{{ prof.publication_count or 0 }}</div>
+                                                <div class="metric-label">Publications</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- List View (Hidden by default) -->
-                            <div class="faculty-list-item">
-                                <div class="faculty-list-content">
-                                    <!-- Avatar -->
-                                    <div class="faculty-list-avatar">
-                                        {{ prof.name[0]|upper }}
-                                    </div>
-                                    
-                                    <!-- Main Info -->
-                                    <div class="faculty-list-info">
-                                        <div class="faculty-list-name">
-                                            <a href="/professor/{{ prof.id }}">{{ prof.name }}</a>
+                                        <div class="col-4">
+                                            <div class="metric-item">
+                                                <div class="metric-number text-success">{{ prof.citation_count or 0 }}</div>
+                                                <div class="metric-label">Citations</div>
+                                            </div>
                                         </div>
-                                        {% if prof.position %}
-                                            <div class="faculty-list-position">{{ prof.position }}</div>
-                                        {% endif %}
-                                        <div class="faculty-list-affiliation">
-                                            {% if prof.department %}
-                                                <span>
-                                                    <i class="fas fa-building me-1"></i>
-                                                    <a href="/faculties?department={{ prof.department }}" class="faculty-list-dept">
-                                                        {{ prof.department }}
-                                                    </a>
-                                                </span>
-                                            {% endif %}
-                                            {% if prof.university_name %}
-                                                <span>
-                                                    <i class="fas fa-university me-1"></i>
-                                                    <a href="/faculties?university={{ prof.university_name }}" class="faculty-list-uni">
-                                                        {{ prof.university_name }}
-                                                    </a>
-                                                </span>
-                                            {% endif %}
+                                        <div class="col-4">
+                                            <div class="metric-item">
+                                                <div class="metric-number text-warning">{{ prof.h_index or 0 }}</div>
+                                                <div class="metric-label">H-index</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    
-                                    <!-- Research Areas -->
-                                    {% if prof.research_areas %}
-                                        <div class="faculty-list-research">
-                                            {% set areas = prof.research_areas.split(';') %}
-                                            {% for area in areas[:4] %}
-                                                {% if area.strip() %}
-                                                    <span class="badge bg-light text-dark border">
-                                                        {{ area.strip() }}
-                                                    </span>
-                                                {% endif %}
-                                            {% endfor %}
-                                            {% if areas|length > 4 %}
-                                                <span class="badge bg-secondary">+{{ areas|length - 4 }}</span>
-                                            {% endif %}
-                                        </div>
-                                    {% endif %}
-                                    
-                                    <!-- Actions -->
-                                    <div class="faculty-list-actions">
-                                        <a href="/professor/{{ prof.id }}" class="btn btn-primary">
-                                            <i class="fas fa-user me-1"></i>View Profile
-                                        </a>
-                                        {% if prof.email %}
-                                            <a href="mailto:{{ prof.email }}" class="btn btn-outline-secondary" title="Send Email">
-                                                <i class="fas fa-envelope me-1"></i>Contact
-                                            </a>
-                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -289,18 +231,123 @@
                     {% endfor %}
                 </div>
                 
+                <!-- Table View (initially hidden) -->
+                <div id="faculty-table" class="table-responsive" style="display: none;">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="sortable" data-sort="name">
+                                    <i class="fas fa-user me-1"></i>Name
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="position">
+                                    <i class="fas fa-graduation-cap me-1"></i>Position
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="university">
+                                    <i class="fas fa-university me-1"></i>University
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="department">
+                                    <i class="fas fa-building me-1"></i>Department
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="publications">
+                                    <i class="fas fa-file-alt me-1"></i>Publications
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="citations">
+                                    <i class="fas fa-quote-right me-1"></i>Citations
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="h_index">
+                                    <i class="fas fa-chart-line me-1"></i>H-Index
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th><i class="fas fa-flask me-1"></i>Research Areas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if faculty %}
+                                {% for prof in faculty %}
+                                <tr>
+                                    <td>
+                                        <a href="/professor/{{ prof.id }}" class="text-decoration-none fw-bold">
+                                            {{ prof.name }}
+                                        </a>
+                                    </td>
+                                                                <td>
+                                <a href="/faculties?position={{ prof.position or 'Faculty Member' | urlencode }}" 
+                                   class="text-decoration-none">
+                                    <span class="badge bg-primary">{{ prof.position or 'Faculty Member' }}</span>
+                                </a>
+                                {% if prof.adjunct %}
+                                    <small class="badge bg-info">Adjunct</small>
+                                {% elif not prof.full_time %}
+                                    <small class="badge bg-info">Part-time</small>
+                                {% endif %}
+                            </td>
+                                    <td>
+                                        <a href="/faculties?university={{ prof.university_code or prof.university_name }}" 
+                                           class="text-decoration-none text-muted">
+                                            {{ prof.university_name }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {% if prof.department %}
+                                            <a href="/faculties?department={{ prof.department }}" 
+                                               class="text-decoration-none text-muted">
+                                                {{ prof.department }}
+                                            </a>
+                                        {% else %}
+                                            <span class="text-muted">-</span>
+                                        {% endif %}
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-info">{{ prof.publication_count or 0 }}</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-success">{{ prof.citation_count or 0 }}</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-warning">{{ prof.h_index or 0 }}</span>
+                                    </td>
+                                    <td>
+                                        {% if prof.research_areas %}
+                                            <small class="text-muted" title="{{ prof.research_areas }}">
+                                                {{ prof.research_areas[:100] }}{% if prof.research_areas|length > 100 %}...{% endif %}
+                                            </small>
+                                        {% else %}
+                                            <span class="text-muted">-</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="8" class="text-center text-muted">
+                                        <i class="fas fa-search fa-2x mb-2"></i><br>
+                                        No faculty found matching your criteria.
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+                
                 <!-- Load More Button -->
                 {% if faculty_has_more %}
                 <div class="row mt-4">
                     <div class="col-12 text-center">
                         <div class="load-more-section">
-                            <p class="text-muted mb-3">
+                            <p class="text-center text-muted">
                                 Showing {{ faculty_shown }} of {{ faculty_total }} results
                             </p>
-                            <button id="loadMoreFaculty" class="btn btn-primary btn-lg load-more-btn" onclick="loadMoreFaculty()">
-                                <i class="fas fa-plus-circle me-2"></i>
-                                <span class="btn-text">Load More Faculty</span>
-                                <span class="btn-subtext">Show additional results</span>
+                            <button id="loadMoreFaculty" class="btn load-more-btn" data-page="{{ faculty_page or 1 }}">
+                                <span class="load-icon">
+                                    <i class="fas fa-plus"></i>
+                                </span>
+                                <span class="btn-text">Load More</span>
                             </button>
                         </div>
                     </div>
@@ -327,166 +374,366 @@
 {% block extra_js %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Set up view toggle functionality
+    // View toggle functionality
     const viewButtons = document.querySelectorAll('[data-view]');
     const facultyGrid = document.getElementById('faculty-grid');
+    const facultyTable = document.getElementById('faculty-table');
     
-    if (viewButtons.length > 0 && facultyGrid) {
-        viewButtons.forEach(function(button) {
+    if (viewButtons.length > 0) {
+        viewButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const view = this.dataset.view;
+                const view = this.getAttribute('data-view');
+                console.log('View toggle clicked:', view); // Debug log
                 
                 // Update active button
-                viewButtons.forEach(function(btn) {
-                    btn.classList.remove('active');
-                });
+                viewButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Toggle view
-                if (view === 'list') {
-                    facultyGrid.classList.add('list-view');
-                } else {
-                    facultyGrid.classList.remove('list-view');
+                // Toggle views
+                if (view === 'grid') {
+                    facultyGrid.style.display = 'flex';
+                    facultyGrid.className = 'row';
+                    facultyTable.style.display = 'none';
+                    // Show load more button for grid view
+                    const loadMoreSection = document.querySelector('.load-more-section');
+                    if (loadMoreSection) loadMoreSection.style.display = 'block';
+                } else if (view === 'list') {
+                    facultyGrid.style.display = 'none';
+                    facultyTable.style.display = 'block';
+                    // Hide load more button for table view and load all results
+                    const loadMoreSection = document.querySelector('.load-more-section');
+                    if (loadMoreSection) loadMoreSection.style.display = 'none';
+                    loadAllFacultyForTable();
                 }
             });
         });
     }
     
-    // Search form enhancements
-    const searchInputs = document.querySelectorAll('.search-filters input');
-    searchInputs.forEach(input => {
-        input.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                document.querySelector('.search-filters form').submit();
+    // Table sorting functionality
+    const sortableHeaders = document.querySelectorAll('.sortable');
+    let currentSort = { column: null, direction: 'asc' };
+    
+    sortableHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const column = this.getAttribute('data-sort');
+            const table = this.closest('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // Determine sort direction
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.direction = 'asc';
             }
+            currentSort.column = column;
+            
+            // Update header icons
+            sortableHeaders.forEach(h => {
+                const icon = h.querySelector('i');
+                icon.className = 'fas fa-sort ms-1';
+            });
+            
+            const currentIcon = this.querySelector('i');
+            currentIcon.className = currentSort.direction === 'asc' ? 
+                'fas fa-sort-up ms-1' : 'fas fa-sort-down ms-1';
+            
+            // Sort rows
+            rows.sort((a, b) => {
+                let aVal = getFacultyCellValue(a, column);
+                let bVal = getFacultyCellValue(b, column);
+                
+                // Handle numeric values
+                if (column === 'publications' || column === 'citations' || column === 'hindex') {
+                    aVal = parseInt(aVal) || 0;
+                    bVal = parseInt(bVal) || 0;
+                }
+                
+                if (aVal < bVal) return currentSort.direction === 'asc' ? -1 : 1;
+                if (aVal > bVal) return currentSort.direction === 'asc' ? 1 : -1;
+                return 0;
+            });
+            
+            // Reorder table rows
+            rows.forEach(row => tbody.appendChild(row));
         });
     });
-});
-
-// Global variables for pagination
-let currentPage = {{ faculty_page }};
-let hasMore = {{ 'true' if faculty_has_more else 'false' }};
-
-// Load more faculty function
-function loadMoreFaculty() {
-    if (!hasMore) {
-        return;
+    
+    function getFacultyCellValue(row, column) {
+        switch(column) {
+            case 'name':
+                return row.querySelector('td:nth-child(1) a').textContent.trim();
+            case 'position':
+                return row.querySelector('td:nth-child(2) .fw-semibold').textContent.trim();
+            case 'university':
+                return row.querySelector('td:nth-child(3) a').textContent.trim();
+            case 'department':
+                const deptLink = row.querySelector('td:nth-child(4) a');
+                return deptLink ? deptLink.textContent.trim() : '';
+            case 'publications':
+                return row.querySelector('td:nth-child(5) .fw-bold').textContent.trim();
+            case 'citations':
+                return row.querySelector('td:nth-child(6) .fw-bold').textContent.trim();
+            case 'hindex':
+                return row.querySelector('td:nth-child(7) .fw-bold').textContent.trim();
+            default:
+                return '';
+        }
     }
     
-    const button = document.getElementById('loadMoreFaculty');
-    const originalText = button.innerHTML;
-    
-    // Show loading state
-    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i><span class="btn-text">Loading...</span>';
-    button.disabled = true;
-    
-    // Get current search parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set('page', currentPage + 1);
-    
-    // Make AJAX request
-    fetch(`/api/faculty/load-more?${urlParams.toString()}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.success && data.faculty.length > 0) {
-                // Append new faculty cards to the grid
-                const facultyGrid = document.querySelector('.faculty-grid .row');
-                
-                data.faculty.forEach(faculty => {
-                    const facultyCard = createFacultyCard(faculty);
-                    facultyGrid.appendChild(facultyCard);
-                });
-                
-                // Update pagination state
-                currentPage = data.page;
-                hasMore = data.has_more;
-                
-                // Update the "Showing X of Y results" text
-                const showingText = document.querySelector('.load-more-section p');
-                const totalShown = document.querySelectorAll('.faculty-card').length;
-                showingText.textContent = `Showing ${totalShown} of ${data.total} results`;
-                
-                // Hide button if no more results
-                if (!hasMore) {
-                    button.parentElement.parentElement.style.display = 'none';
+    // Function to load all faculty for table view
+    function loadAllFacultyForTable() {
+        const currentUrl = new URL(window.location);
+        const params = new URLSearchParams(currentUrl.search);
+        params.set('show_all', 'true'); // Add parameter to get all results
+        
+        // Show loading indicator in table
+        const tableBody = document.querySelector('#faculty-table tbody');
+        if (tableBody) {
+            tableBody.innerHTML = '<tr><td colspan="8" class="text-center"><i class="fas fa-spinner fa-spin me-2"></i>Loading all faculty...</td></tr>';
+        }
+        
+        fetch('/faculties?' + params.toString())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
-            } else {
-                console.error('No more faculty to load or error occurred');
-                hasMore = false;
-                button.parentElement.parentElement.style.display = 'none';
-            }
-        })
-        .catch(error => {
-            console.error('Error loading more faculty:', error);
-        })
-        .finally(() => {
-            // Restore button state
-            button.innerHTML = originalText;
-            button.disabled = false;
-        });
-}
-
-// Function to create faculty card HTML
-function createFacultyCard(faculty) {
-    const col = document.createElement('div');
-    col.className = 'col-lg-4 col-md-6 mb-4';
-    
-    col.innerHTML = `
-        <div class="card faculty-card h-100 border-0 shadow-sm">
-            <div class="card-body d-flex flex-column">
-                <div class="faculty-header mb-3">
-                    <h5 class="card-title mb-2">
-                        <a href="/professor/${faculty.id}" class="text-decoration-none text-primary fw-bold">
-                            ${faculty.name}
-                        </a>
-                    </h5>
-                    ${faculty.position ? `<p class="text-muted mb-1">${faculty.position}</p>` : ''}
-                    ${faculty.department ? `<p class="text-muted small mb-2">${faculty.department}</p>` : ''}
-                </div>
+                return response.text(); // Parse as HTML text, not JSON
+            })
+            .then(html => {
+                // Parse the HTML response to extract faculty data
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const newTableBody = doc.querySelector('#faculty-table tbody');
+                const currentTableBody = document.querySelector('#faculty-table tbody');
                 
-                <div class="faculty-details flex-grow-1">
-                    ${faculty.university_name ? `
-                        <p class="mb-2">
-                            <i class="fas fa-university me-2 text-primary"></i>
-                            <span class="fw-medium">${faculty.university_name}</span>
-                        </p>
-                    ` : ''}
+                if (newTableBody && currentTableBody) {
+                    currentTableBody.innerHTML = newTableBody.innerHTML;
+                    console.log('All faculty loaded for table view');
                     
-                    ${faculty.research_areas ? `
-                        <div class="research-areas mb-3">
-                            <p class="small text-muted mb-1">
-                                <i class="fas fa-flask me-1"></i>Research Areas:
-                            </p>
-                            <p class="small">${faculty.research_areas.length > 150 ? faculty.research_areas.substring(0, 150) + '...' : faculty.research_areas}</p>
-                        </div>
-                    ` : ''}
-                </div>
-                
-                <div class="faculty-actions">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="/professor/${faculty.id}" class="btn btn-primary btn-sm">
-                            <i class="fas fa-user me-1"></i>View Profile
-                        </a>
+                    // Initialize table sorting if available
+                    if (typeof initializeTableSorting === 'function') {
+                        initializeTableSorting();
+                    }
+                } else {
+                    console.error('Could not find table body in response');
+                    if (currentTableBody) {
+                        currentTableBody.innerHTML = '<tr><td colspan="8" class="text-center text-muted">No faculty data found</td></tr>';
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error loading all faculty:', error);
+                const tableBody = document.querySelector('#faculty-table tbody');
+                if (tableBody) {
+                    tableBody.innerHTML = '<tr><td colspan="8" class="text-center text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Error loading faculty data</td></tr>';
+                }
+            });
+    }
+    
+    // Load more functionality
+    const loadMoreBtn = document.getElementById('loadMoreFaculty');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            const currentPage = parseInt(this.dataset.page) || 1;
+            const nextPage = currentPage + 1;
+            
+            // Show loading state
+            const btnText = this.querySelector('.btn-text');
+            const loadIcon = this.querySelector('.load-icon i');
+            
+            btnText.textContent = 'Loading...';
+            loadIcon.className = 'fas fa-spinner fa-spin';
+            this.disabled = true;
+            
+            // Build URL with current filters for the API
+            const currentUrl = new URL(window.location);
+            const params = new URLSearchParams(currentUrl.search);
+            params.set('page', nextPage.toString());
+            
+            // Use the API endpoint for load more
+            fetch('/api/v1/faculty/load-more?' + params.toString())
+                .then(response => response.json())
+                .then(data => {
+                    if (data.results && data.results.length > 0) {
+                        // Create new faculty cards and add to grid
+                        const facultyGrid = document.getElementById('faculty-grid');
                         
-                        <div class="faculty-contact">
-                            ${faculty.email ? `
-                                <a href="mailto:${faculty.email}" class="text-decoration-none me-2" title="Email">
-                                    <i class="fas fa-envelope text-muted"></i>
-                                </a>
+                        data.results.forEach(faculty => {
+                            const cardHTML = createFacultyCardHTML(faculty);
+                            facultyGrid.insertAdjacentHTML('beforeend', cardHTML);
+                        });
+                        
+                        // Update page number
+                        this.dataset.page = nextPage.toString();
+                        
+                        // Reset button state
+                        btnText.textContent = 'Load More';
+                        loadIcon.className = 'fas fa-plus';
+                        this.disabled = false;
+                        
+                        // Update shown count
+                        const currentShown = parseInt(document.querySelector('.load-more-section p').textContent.match(/\d+/)[0]);
+                        const newShown = currentShown + data.results.length;
+                        document.querySelector('.load-more-section p').textContent = 
+                            `Showing ${newShown} of ${data.total} results`;
+                        
+                        // Hide button if no more results
+                        if (!data.has_more) {
+                            this.style.display = 'none';
+                        }
+                    } else {
+                        // No more results
+                        this.style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading more faculty:', error);
+                    btnText.textContent = 'Load More';
+                    loadIcon.className = 'fas fa-plus';
+                    this.disabled = false;
+                });
+        });
+    }
+    
+    // Function to create faculty card HTML for dynamic loading
+    function createFacultyCardHTML(faculty) {
+        return `
+            <div class="col-lg-6 col-xl-4 mb-4">
+                <div class="faculty-card h-100">
+                    <div class="card-body">
+                        <div class="faculty-info">
+                            <div class="faculty-header mb-3">
+                                <h5 class="card-title mb-1">
+                                    <a href="/professor/${faculty.id}" class="text-decoration-none professor-link">
+                                        ${faculty.name}
+                                    </a>
+                                </h5>
+                                <p class="text-muted small mb-0">
+                                    <i class="fas fa-graduation-cap me-1"></i>
+                                    <a href="/faculties?position=${encodeURIComponent(faculty.position || 'Faculty Member')}" 
+                                       class="text-decoration-none text-muted hover-primary position-link">
+                                        ${faculty.position || 'Faculty Member'}${faculty.adjunct ? ' (Part-time)' : (!faculty.full_time ? ' (Part-time)' : '')}
+                                    </a>
+                                </p>
+                            </div>
+                            
+                            <div class="faculty-affiliation mb-2">
+                                <p class="text-muted small mb-1">
+                                    <i class="fas fa-university me-1"></i>
+                                    <a href="/faculties?university=${encodeURIComponent(faculty.university_code || faculty.university_name)}" 
+                                       class="text-decoration-none text-muted hover-primary university-link">
+                                        ${faculty.university_name}
+                                    </a>
+                                </p>
+                                
+                                ${faculty.department ? `
+                                <p class="text-muted small mb-0">
+                                    <i class="fas fa-building me-1"></i>
+                                    <a href="/faculties?department=${encodeURIComponent(faculty.department)}" 
+                                       class="text-decoration-none text-muted hover-primary department-link" 
+                                       title="${faculty.department}">
+                                        ${faculty.department}
+                                    </a>
+                                </p>
+                                ` : ''}
+                            </div>
+                            
+                            ${faculty.research_areas ? `
+                            <div class="faculty-research">
+                                <p class="text-muted small research-areas mb-0" title="${faculty.research_areas}">
+                                    <i class="fas fa-flask me-1"></i>
+                                    ${faculty.research_areas}
+                                </p>
+                            </div>
                             ` : ''}
-                            ${faculty.website ? `
-                                <a href="${faculty.website}" target="_blank" class="text-decoration-none" title="Website">
-                                    <i class="fas fa-globe text-muted"></i>
-                                </a>
-                            ` : ''}
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <div class="row text-center g-0">
+                            <div class="col-4">
+                                <div class="metric-item">
+                                    <div class="metric-number text-primary">${faculty.publication_count || 0}</div>
+                                    <div class="metric-label">Publications</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="metric-item">
+                                    <div class="metric-number text-success">${faculty.citation_count || 0}</div>
+                                    <div class="metric-label">Citations</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="metric-item">
+                                    <div class="metric-number text-warning">${faculty.h_index || 0}</div>
+                                    <div class="metric-label">H-index</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    `;
+        `;
+    }
     
-    return col;
-}
+    // Department update functionality
+    function updateDepartments() {
+        const universitySelect = document.getElementById('universitySelect');
+        const departmentSelect = document.getElementById('departmentSelect');
+        
+        if (!universitySelect || !departmentSelect) return;
+        
+        const selectedUniversity = universitySelect.value;
+        
+        // Clear department selection
+        departmentSelect.innerHTML = '<option value="">All Departments</option>';
+        
+        if (selectedUniversity) {
+            // Show loading state
+            departmentSelect.innerHTML = '<option value="">Loading departments...</option>';
+            
+            // Fetch departments for the selected university
+            fetch('/api/departments/' + encodeURIComponent(selectedUniversity))
+                .then(response => response.json())
+                .then(data => {
+                    departmentSelect.innerHTML = '<option value="">All Departments</option>';
+                    if (data.departments && data.departments.length > 0) {
+                        data.departments.forEach(dept => {
+                            const option = document.createElement('option');
+                            option.value = dept.name;
+                            option.textContent = dept.name + ' (' + dept.count + ')';
+                            departmentSelect.appendChild(option);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading departments:', error);
+                    departmentSelect.innerHTML = '<option value="">Error loading departments</option>';
+                });
+        }
+    }
+    
+    // Set up university change listener
+    const universitySelect = document.getElementById('universitySelect');
+    if (universitySelect) {
+        universitySelect.addEventListener('change', updateDepartments);
+        
+        // Load departments on page load if university is selected
+        if (universitySelect.value) {
+            updateDepartments();
+            // Set selected department if any
+            setTimeout(() => {
+                const selectedDept = '{{ department }}';
+                if (selectedDept) {
+                    const departmentSelect = document.getElementById('departmentSelect');
+                    if (departmentSelect) {
+                        departmentSelect.value = selectedDept;
+                    }
+                }
+            }, 500);
+        }
+    }
+});
 </script>
 {% endblock %} 

@@ -29,10 +29,138 @@
             padding-top: 76px; /* Accommodate fixed navbar height */
         }
         
+        /* Fix oversized Employment Type filter box */
+        select[name="employment_type"] {
+            width: auto !important;
+            min-width: 130px;
+            max-width: 170px;
+        }
+        
+        /* Make employment type filter container auto-size */
+        .row .col-lg-3:has(select[name="employment_type"]) {
+            flex: 0 0 auto;
+            width: auto;
+            min-width: 130px;
+            max-width: 170px;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            select[name="employment_type"] {
+                width: 100% !important;
+                max-width: none;
+            }
+            .row .col-lg-3:has(select[name="employment_type"]) {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
         @media (max-width: 991.98px) {
             body {
                 padding-top: 70px; /* Smaller padding for mobile */
             }
+        }
+        
+        /* Enhanced Navigation Styling */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.75rem 1rem !important;
+            margin: 0 0.2rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            color: #495057 !important;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+            color: #007bff !important;
+            transform: translateY(-1px);
+        }
+        
+        .navbar-nav .nav-link.active {
+            background-color: #e3f2fd;
+            color: #1976d2 !important;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+        }
+        
+        .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1976d2 !important;
+        }
+        
+        .navbar-brand:hover {
+            color: #1565c0 !important;
+        }
+        
+        .navbar-nav .nav-link i {
+            font-size: 0.85rem;
+            margin-right: 0.4rem;
+        }
+        
+        /* Dropdown improvements */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 0.5rem 0;
+        }
+        
+        .dropdown-item {
+            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+        
+        /* Button styling */
+        .navbar .btn {
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 991.98px) {
+            .navbar-nav .nav-link {
+                font-size: 0.95rem;
+                padding: 0.6rem 1rem !important;
+                margin: 0.1rem 0;
+            }
+            
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Subtle animation for navbar */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .navbar {
+            animation: fadeInDown 0.6s ease-out;
         }
     </style>
     
@@ -52,23 +180,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('universities') }}">
-                            <i class="fas fa-university me-1"></i>Universities
-                        </a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'countries' else '' }}" href="{{ url_for('countries') }}">Countries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('faculties') }}">
-                            <i class="fas fa-users me-1"></i>Faculty
-                        </a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'universities' else '' }}" href="{{ url_for('universities') }}">Universities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('ai_assistant') }}">
+                        <a class="nav-link {{ 'active' if request.endpoint == 'faculties' else '' }}" href="{{ url_for('faculties') }}">Faculties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ 'active' if request.endpoint == 'ai_assistant' else '' }}" href="{{ url_for('ai_assistant') }}">
                             <i class="fas fa-robot me-1"></i>AI Assistant
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('about') }}">
-                            <i class="fas fa-info-circle me-1"></i>About
                         </a>
                     </li>
                 </ul>
@@ -102,18 +224,11 @@
                             </ul>
                         </li>
                     {% else %}
-                        {# Temporarily disabled until user auth is properly configured
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('login') }}">
-                                <i class="fas fa-sign-in-alt me-1"></i>Login
+                            <a class="btn btn-primary" href="{{ url_for('login') }}">
+                                <i class="fas fa-sign-in-alt me-1"></i>Sign In
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary ms-2" href="{{ url_for('register') }}">
-                                <i class="fas fa-user-plus me-1"></i>Register
-                            </a>
-                        </li>
-                        #}
                     {% endif %}
                 </ul>
             </div>
@@ -142,13 +257,14 @@
                     </p>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="fw-bold">Quick Links</h6>
+                    <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('universities') }}" class="text-decoration-none">Universities</a></li>
-                        <li><a href="{{ url_for('faculties') }}" class="text-decoration-none">Faculty</a></li>
-                        <li><a href="{{ url_for('ai_assistant') }}" class="text-decoration-none">AI Assistant</a></li>
-                        <li><a href="{{ url_for('about') }}" class="text-decoration-none">About</a></li>
-                        <li><a href="{{ url_for('contact') }}" class="text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="{{ url_for('faculties') }}" class="text-light text-decoration-none">Faculty Search</a></li>
+                        <li class="mb-2"><a href="{{ url_for('universities') }}" class="text-light text-decoration-none">Universities</a></li>
+                        <li class="mb-2"><a href="{{ url_for('countries') }}" class="text-light text-decoration-none">Countries</a></li>
+                        <li class="mb-2"><a href="{{ url_for('ai_assistant') }}" class="text-light text-decoration-none">AI Assistant</a></li>
+                        <li class="mb-2"><a href="{{ url_for('about') }}" class="text-light text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="{{ url_for('api_documentation') }}" class="text-light text-decoration-none">API Documentation</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -168,8 +284,8 @@
                     </p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-decoration-none text-muted small me-3">Privacy Policy</a>
-                    <a href="#" class="text-decoration-none text-muted small">Terms of Service</a>
+                    <a href="{{ url_for('privacy_policy') }}" class="text-decoration-none text-muted small me-3">Privacy Policy</a>
+                    <a href="{{ url_for('terms_of_service') }}" class="text-decoration-none text-muted small">Terms of Service</a>
                 </div>
             </div>
         </div>

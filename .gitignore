@@ -224,4 +224,56 @@ production_backup/
 .TemporaryItems
 .fseventsd
 .VolumeIcon.icns
-.com.apple.timemachine.donotpresent 
+.com.apple.timemachine.donotpresent
+
+# SENSITIVE DEPLOYMENT & CONFIGURATION FILES
+# These contain passwords, API keys, credentials, and sensitive deployment information
+# DO NOT COMMIT TO PUBLIC REPOSITORY
+
+# Deployment guides with sensitive information
+*GUIDE*.md
+*DEPLOYMENT*.md
+*SETUP*.md
+EMAIL_SETUP_GUIDE.md
+AI_INTEGRATION_GUIDE.md
+CITATION_ANALYSIS_GUIDE.md
+UNIVERSITY_DATA_COLLECTION_GUIDE.md
+AUTOMATED_PUBLICATION_UPDATE_GUIDE.md
+PUBMED_INTEGRATION_GUIDE.md
+CRYPTOCURRENCY_PAYMENT_GUIDE.md
+PERFORMANCE_OPTIMIZATION_GUIDE.md
+GOOGLE_OAUTH_SETUP_GUIDE.md
+STRIPE_INTEGRATION.md
+PRICING_RECOMMENDATIONS.md
+COMPREHENSIVE_DEPLOYMENT_CHECKLIST.md
+QUICK_DEPLOYMENT.md
+DEPLOYMENT_GUIDE.md
+PUBLICATION_SYSTEM_SETUP.md
+
+# VPS and deployment scripts with credentials
+deploy.sh
+vps_*.sh
+vps_*.md
+fix_python312_vps.sh
+vps_emergency_install.md
+commit_changes.sh
+
+# Production requirements with specific versions
+requirements_python312.txt
+requirements_vps.txt
+requirements_publications.txt
+
+# Migration and automated scripts
+migrate_*.py
+*_migration*.py
+run_pubmed_*.py
+cleanup_*.py
+automated_*.py
+*_updater.py
+
+# Test files that may contain sensitive data
+test_cv_analysis.py
+
+# Checklist and planning files
+COMPLETION_CHECKLIST.md
+*CHECKLIST*.md 

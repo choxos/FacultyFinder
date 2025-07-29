@@ -47,18 +47,18 @@
 .ai-service-card {
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid #e9ecef;
+    border: 2px solid transparent;
 }
 
 .ai-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     border-color: #007bff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .ai-service-card.selected {
     border-color: #007bff;
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background-color: #f8f9ff;
 }
 
 .profile-info {
@@ -120,6 +120,194 @@
     border-color: var(--ff-primary-color) !important;
     background-color: rgba(var(--ff-primary-rgb), 0.05);
 }
+
+/* Form Validation Styles */
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+}
+
+.upload-area.is-invalid {
+    border-color: #dc3545 !important;
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%) !important;
+}
+
+.upload-area.is-valid {
+    border-color: #28a745 !important;
+    background: linear-gradient(135deg, #d1e7dd 0%, #badbcc 100%) !important;
+}
+
+/* Notification System */
+.notification-area {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.notification {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+    animation: slideInFade 0.3s ease forwards;
+}
+
+@keyframes slideInFade {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutFade {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
+
+.notification.success {
+    color: #155724;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+
+.notification.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.notification.warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+}
+
+.notification.info {
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb;
+}
+
+.notification .icon {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.notification .close-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.notification .close-btn:hover {
+    opacity: 1;
+}
+
+/* Enhanced Start Button */
+.start-analysis-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.start-analysis-btn:enabled:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.start-analysis-btn:disabled {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.start-analysis-btn.loading {
+    pointer-events: none;
+}
+
+.start-analysis-btn .spinner {
+    display: none;
+}
+
+.start-analysis-btn.loading .spinner {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.start-analysis-btn.loading .btn-text {
+    opacity: 0.7;
+}
+
+/* Expert Review Card Alignment */
+.expert-review-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.expert-review-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.expert-review-card .btn {
+    margin-top: auto;
+}
+
+.expert-review-card ul {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.pricing-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+}
+
+.pricing-card.recommended {
+    border: 3px solid #ffc107;
+}
 </style>
 {% endblock %}
 
@@ -134,6 +322,13 @@
             <p class="lead text-muted">
                 Upload your CV and get personalized faculty recommendations powered by advanced AI
             </p>
+        </div>
+    </div>
+
+    <!-- Notification Area -->
+    <div class="row">
+        <div class="col-12">
+            <div id="notificationArea" class="notification-area"></div>
         </div>
     </div>
 
@@ -635,15 +830,18 @@
                                 <div class="card-body text-center">
                                     <i class="fas fa-infinity fa-2x text-primary mb-3"></i>
                                     <h6>Monthly Unlimited</h6>
-                                    <div class="display-6 fw-bold text-primary">$19</div>
-                                    <div class="text-muted small">CAD/month</div>
+                                    <div class="display-6 fw-bold text-primary">$49</div>
+                                    <small class="text-muted">CAD/month</small>
                                     <div class="badge bg-warning mb-2">POWER USER</div>
                                     <ul class="list-unstyled small text-start">
-                                        <li><i class="fas fa-check text-success me-1"></i> Unlimited analyses</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> Unlimited AI analyses</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> No per-use charges</li>
                                         <li><i class="fas fa-check text-success me-1"></i> Cancel anytime</li>
-                                        <li><i class="fas fa-check text-success me-1"></i> Priority processing</li>
-                                        <li><i class="fas fa-check text-success me-1"></i> Advanced features</li>
+                                        <li><i class="fas fa-check text-success me-1"></i> Priority support</li>
                                     </ul>
+                                    <button class="btn btn-primary w-100" data-option="monthly_unlimited">
+                                        Choose Monthly Plan
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -654,60 +852,66 @@
                     <div class="row g-3 mb-4">
                         <!-- Basic Expert Review -->
                         <div class="col-lg-4">
-                            <div class="card ai-service-card h-100" onclick="selectAnalysisOption('expert_basic')">
+                            <div class="card ai-service-card expert-review-card h-100" onclick="selectAnalysisOption('expert_basic')">
                                 <div class="card-body text-center">
                                     <i class="fas fa-user-check fa-2x text-warning mb-3"></i>
                                     <h6>Basic Expert Review</h6>
-                                    <div class="display-6 fw-bold text-warning">$29</div>
-                                    <div class="text-muted small">CAD</div>
-                                    <div class="badge bg-warning mb-2">PROFESSIONAL</div>
-                                    <ul class="list-unstyled small text-start">
-                                        <li><i class="fas fa-check text-success me-1"></i> Manual CV analysis</li>
-                                        <li><i class="fas fa-check text-success me-1"></i> Top 10 faculty matches</li>
-                                        <li><i class="fas fa-check text-success me-1"></i> Research fit assessment</li>
-                                        <li><i class="fas fa-check text-success me-1"></i> Contact strategy advice</li>
-                                        <li><i class="fas fa-clock text-muted me-1"></i> 3-5 business days</li>
+                                    <div class="display-6 fw-bold text-warning">$99</div>
+                                    <small class="text-muted">CAD one-time</small>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success me-1"></i>Expert manual review</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>Detailed analysis report</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>Faculty recommendations</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>3-5 day delivery</li>
                                     </ul>
+                                    <button class="btn btn-warning w-100" data-option="expert_basic">
+                                        Order Expert Review
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Premium Expert Review -->
                         <div class="col-lg-4">
-                            <div class="card ai-service-card h-100" onclick="selectAnalysisOption('expert_premium')">
+                            <div class="card ai-service-card expert-review-card h-100" onclick="selectAnalysisOption('expert_premium')">
                                 <div class="card-body text-center">
                                     <i class="fas fa-star fa-2x text-warning mb-3"></i>
                                     <h6>Premium Expert Review</h6>
-                                    <div class="display-6 fw-bold text-warning">$49</div>
-                                    <div class="text-muted small">CAD</div>
-                                    <div class="badge bg-danger mb-2">PREMIUM</div>
-                                    <ul class="list-unstyled small text-start">
-                                        <li><i class="fas fa-check text-success me-1"></i> Everything in Basic</li>
-                                        <li><i class="fas fa-video text-success me-1"></i> 30-min video consultation</li>
-                                        <li><i class="fas fa-calendar text-success me-1"></i> Personalized timeline</li>
-                                        <li><i class="fas fa-envelope text-success me-1"></i> 1-week email support</li>
-                                        <li><i class="fas fa-clock text-muted me-1"></i> 2-3 business days</li>
+                                    <div class="display-6 fw-bold text-warning">$299</div>
+                                    <small class="text-muted">CAD one-time</small>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success me-1"></i>Premium expert review</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>Comprehensive analysis</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>Top 10 faculty matches</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>Contact strategy guide</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>48-hour delivery</li>
                                     </ul>
+                                    <button class="btn btn-warning w-100" data-option="expert_premium">
+                                        Order Premium Review
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <!-- VIP Package -->
                         <div class="col-lg-4">
-                            <div class="card ai-service-card h-100" onclick="selectAnalysisOption('expert_vip')">
+                            <div class="card ai-service-card expert-review-card h-100" onclick="selectAnalysisOption('expert_vip')">
                                 <div class="card-body text-center">
                                     <i class="fas fa-crown fa-2x text-warning mb-3"></i>
                                     <h6>VIP Package</h6>
-                                    <div class="display-6 fw-bold text-warning">$99</div>
-                                    <div class="text-muted small">CAD</div>
-                                    <div class="badge bg-dark mb-2">VIP</div>
-                                    <ul class="list-unstyled small text-start">
-                                        <li><i class="fas fa-check text-success me-1"></i> Everything in Premium</li>
-                                        <li><i class="fas fa-microphone text-success me-1"></i> Mock interview session</li>
-                                        <li><i class="fas fa-handshake text-success me-1"></i> Custom intro emails</li>
-                                        <li><i class="fas fa-graduation-cap text-success me-1"></i> 1-month coaching</li>
-                                        <li><i class="fas fa-clock text-muted me-1"></i> 24-48 hours</li>
+                                    <div class="display-6 fw-bold text-warning">$999</div>
+                                    <small class="text-muted">CAD one-time</small>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success me-1"></i>VIP expert consultation</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>Deep-dive career analysis</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>Personalized strategy</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>15+ faculty matches</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>24-hour priority delivery</li>
+                                        <li><i class="fas fa-check text-success me-1"></i>30-min video consultation</li>
                                     </ul>
+                                    <button class="btn btn-warning w-100" data-option="expert_vip">
+                                        Order VIP Review
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -832,12 +1036,15 @@
     <!-- Analysis Button -->
     <div class="row mb-4">
         <div class="col-12 text-center">
-            <button type="button" class="btn btn-primary btn-lg px-5" onclick="startAnalysis()">
+            <button type="button" id="startAnalysisBtn" class="start-analysis-btn" onclick="startAnalysis()" disabled>
+                <span class="spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </span>
                 <i class="fas fa-magic me-2"></i>
-                Start Faculty Matching Analysis
+                <span class="btn-text">Start Faculty Matching Analysis</span>
             </button>
             <p class="text-muted mt-2 small">
-                Get personalized recommendations based on your CV and research interests
+                <span id="buttonHelpText">Please complete all required fields above</span>
             </p>
         </div>
     </div>
@@ -1278,13 +1485,13 @@ function handleFileSelect(event) {
         ];
         
         if (!allowedTypes.includes(file.type)) {
-            alert('Please select a PDF or Word document.');
+            showNotification('Please select a PDF or Word document.', 'error');
             return;
         }
         
         // Validate file size (10MB limit)
         if (file.size > 10 * 1024 * 1024) {
-            alert('File size must be less than 10MB.');
+            showNotification('File size must be less than 10MB.', 'error');
             return;
         }
         
@@ -1325,101 +1532,201 @@ function clearFile() {
 }
 
 function startAnalysis() {
-    // Validate required fields
-    const broadCategory = document.getElementById('broadCategory').value;
-    const narrowField = document.getElementById('narrowField').value;
+    // Clear any existing notifications
+    clearAllNotifications();
+    
+    // Validate all fields
+    if (!validateAllFields()) {
+        showNotification('Please complete all required fields before starting the analysis.', 'error');
+        return;
+    }
+    
+    // Get button and show loading state
+    const button = document.getElementById('startAnalysisBtn');
+    const helpText = document.getElementById('buttonHelpText');
+    
+    button.classList.add('loading');
+    button.disabled = true;
+    helpText.textContent = 'Analyzing your CV...';
+    helpText.style.color = '#007bff';
+    
+    // Collect form data
+    const formData = new FormData();
+    formData.append('cv_file', selectedFile);
+    
     const selectedAI = document.querySelector('input[name="ai_service"]:checked');
+    formData.append('ai_service', selectedAI.value);
+    
     const selectedAnalysisOption = document.getElementById('selectedAnalysisOption').value;
+    formData.append('analysis_option', selectedAnalysisOption);
     
-    if (!selectedFile) {
-        alert('Please upload your CV first.');
-        return;
-    }
+    formData.append('broad_category', document.getElementById('broadCategory').value);
+    formData.append('narrow_field', document.getElementById('narrowField').value);
     
-    if (!broadCategory || !narrowField) {
-        alert('Please select both broad category and specific field.');
-        return;
-    }
-    
-    if (!selectedAI) {
-        alert('Please select an AI service.');
-        return;
-    }
-    
-    if (selectedAnalysisOption === 'api_key') {
-        const apiKey = document.getElementById('apiKey').value.trim();
-        if (!apiKey) {
-            alert('Please enter your API key or choose a different payment option.');
-            return;
+    // Add guest user data if applicable
+    const guestName = document.getElementById('guestName');
+    if (guestName) {
+        formData.append('guest_name', guestName.value);
+        formData.append('guest_email', document.getElementById('guestEmail').value);
+        formData.append('guest_level', document.getElementById('guestLevel').value);
+        
+        const guestPhone = document.getElementById('guestPhone');
+        if (guestPhone && guestPhone.value) {
+            formData.append('guest_phone', guestPhone.value);
+        }
+        
+        const guestInstitution = document.getElementById('guestInstitution');
+        if (guestInstitution && guestInstitution.value) {
+            formData.append('guest_institution', guestInstitution.value);
         }
     }
     
-    // Collect all form data
-    const formData = new FormData();
-    formData.append('cv_file', selectedFile);
-    formData.append('ai_service', selectedAI.value);
-    formData.append('broad_category', broadCategory);
-    formData.append('narrow_field', narrowField);
-    formData.append('analysis_option', selectedAnalysisOption);
-    
-    // Add user profile data based on authentication status
-    var isAuthenticated = {% if current_user.is_authenticated %}true{% else %}false{% endif %};
-    
-    if (isAuthenticated) {
-        formData.append('user_name', document.getElementById('userName').value);
-        formData.append('user_institution', document.getElementById('userInstitution').value);
-        formData.append('user_level', document.getElementById('userLevel').value);
-        formData.append('user_website', document.getElementById('userWebsite').value);
-        formData.append('user_orcid', document.getElementById('userOrcid').value);
-        formData.append('user_bio', document.getElementById('userBio').value);
-    } else {
-        // Add guest user data
-        formData.append('guest_name', document.getElementById('guestName').value);
-        formData.append('guest_email', document.getElementById('guestEmail').value);
-        formData.append('guest_phone', document.getElementById('guestPhone').value);
-        formData.append('guest_institution', document.getElementById('guestInstitution').value);
-        formData.append('guest_level', document.getElementById('guestLevel').value);
-        formData.append('guest_website', document.getElementById('guestWebsite').value);
-        formData.append('guest_location', document.getElementById('guestLocation').value);
-        formData.append('guest_contact_method', document.getElementById('preferredContact').value);
-        formData.append('guest_bio', document.getElementById('guestBio').value);
-    }
-    
-    formData.append('research_keywords', document.getElementById('researchKeywords').value);
-    formData.append('career_goals', document.getElementById('careerGoals').value);
-    formData.append('specific_interests', document.getElementById('specificInterests').value);
-    
+    // Add API key if using own key
     if (selectedAnalysisOption === 'api_key') {
-        formData.append('api_key', document.getElementById('apiKey').value);
+        formData.append('api_key', document.getElementById('apiKey').value.trim());
     }
     
-    // Show loading state
-    const button = document.querySelector('button[onclick="startAnalysis()"]');
-    const originalText = button.innerHTML;
-    button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Analyzing...';
-    button.disabled = true;
+    // Add payment information if using paid service
+    if (selectedAnalysisOption !== 'api_key') {
+        const paymentMethod = document.getElementById('selectedPaymentMethod').value;
+        formData.append('payment_method', paymentMethod);
+        
+        if (paymentMethod === 'crypto') {
+            formData.append('crypto_currency', document.getElementById('selectedCryptoCurrency').value);
+        }
+    }
     
-    // Submit the form
+    showNotification('Starting CV analysis... This may take a few moments.', 'info');
+    
+    // Submit analysis request
     fetch('/api/analyze-cv', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
+        button.classList.remove('loading');
+        
         if (data.success) {
-            displayResults(data.results);
+            showNotification('Analysis completed successfully!', 'success');
+            displayResults(data);
+            
+            // Reset button
+            button.disabled = false;
+            helpText.textContent = 'Analysis complete';
+            helpText.style.color = '#28a745';
         } else {
-            alert('Analysis failed: ' + data.error);
+            showNotification(`Analysis failed: ${data.error}`, 'error');
+            
+            // Reset button
+            button.disabled = false;
+            validateAllFields(); // This will restore the proper button state
         }
     })
     .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred during analysis. Please try again.');
-    })
-    .finally(() => {
-        // Restore button state
-        button.innerHTML = originalText;
+        console.error('Analysis error:', error);
+        button.classList.remove('loading');
+        showNotification('An error occurred during analysis. Please try again.', 'error');
+        
+        // Reset button
         button.disabled = false;
+        validateAllFields(); // This will restore the proper button state
+    });
+}
+
+// Drag and drop functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const uploadArea = document.getElementById('uploadArea');
+    
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        uploadArea.addEventListener(eventName, preventDefaults, false);
+    });
+    
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
+    ['dragenter', 'dragover'].forEach(eventName => {
+        uploadArea.addEventListener(eventName, highlight, false);
+    });
+    
+    ['dragleave', 'drop'].forEach(eventName => {
+        uploadArea.addEventListener(eventName, unhighlight, false);
+    });
+    
+    // Real-time form validation
+    setupFormValidation();
+    
+    // Initial validation
+    setTimeout(() => {
+        validateAllFields();
+    }, 500);
+});
+
+function setupFormValidation() {
+    // Validate guest user fields if they exist
+    const guestName = document.getElementById('guestName');
+    if (guestName) {
+        ['input', 'blur'].forEach(event => {
+            guestName.addEventListener(event, () => {
+                validateField('guestName', { required: true });
+                validateAllFields();
+            });
+        });
+        
+        ['input', 'blur'].forEach(event => {
+            document.getElementById('guestEmail').addEventListener(event, () => {
+                validateField('guestEmail', { required: true, email: true });
+                validateAllFields();
+            });
+        });
+        
+        document.getElementById('guestLevel').addEventListener('change', () => {
+            validateField('guestLevel', { required: true });
+            validateAllFields();
+        });
+    }
+    
+    // Validate field selections
+    document.getElementById('broadCategory').addEventListener('change', () => {
+        validateField('broadCategory', { required: true });
+        validateAllFields();
+    });
+    
+    document.getElementById('narrowField').addEventListener('change', () => {
+        validateField('narrowField', { required: true });
+        validateAllFields();
+    });
+    
+    // Validate AI service selection
+    document.querySelectorAll('input[name="ai_service"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+            validateAISelection();
+            validateAllFields();
+        });
+    });
+    
+    // Validate API key field
+    const apiKeyField = document.getElementById('apiKey');
+    if (apiKeyField) {
+        ['input', 'blur'].forEach(event => {
+            apiKeyField.addEventListener(event, () => {
+                const selectedOption = document.getElementById('selectedAnalysisOption').value;
+                if (selectedOption === 'api_key') {
+                    validateField('apiKey', { required: true });
+                }
+                validateAllFields();
+            });
+        });
+    }
+    
+    // Monitor analysis option changes
+    const analysisOptionInputs = document.querySelectorAll('input[name="analysis_option"]');
+    analysisOptionInputs.forEach(input => {
+        input.addEventListener('change', () => {
+            validateAllFields();
+        });
     });
 }
 
@@ -1533,13 +1840,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateCryptoAmount(symbol) {
         const selectedOption = document.getElementById('selectedAnalysisOption').value;
         const priceMap = {
-            'single_analysis': 400,  // $4.00 in cents
-            'triple_pack': 1000,     // $10.00 in cents
-            'five_pack': 1500,       // $15.00 in cents
-            'monthly_unlimited': 1900, // $19.00 in cents
-            'expert_basic': 2900,    // $29.00 in cents
-            'expert_premium': 4900,  // $49.00 in cents
-            'expert_vip': 9900       // $99.00 in cents
+            'single_analysis': 400,     // $4.00 in cents
+            'triple_pack': 1000,        // $10.00 in cents
+            'five_pack': 1500,          // $15.00 in cents
+            'monthly_unlimited': 4900,  // $49.00 in cents
+            'expert_basic': 9900,       // $99.00 in cents
+            'expert_premium': 29900,    // $299.00 in cents
+            'expert_vip': 99900         // $999.00 in cents
         };
         
         const amountCAD = priceMap[selectedOption] || 1000;
@@ -1619,12 +1926,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Redirect to payment page
                 window.location.href = `/crypto-payment/${data.payment.payment_id}`;
             } else {
-                alert('Payment creation failed: ' + data.error);
+                showNotification('Payment creation failed: ' + data.error, 'error');
             }
         })
         .catch(error => {
             console.error('Error creating crypto payment:', error);
-            alert('Payment creation failed. Please try again.');
+            showNotification('Payment creation failed. Please try again.', 'error');
         });
     }
 
@@ -1634,13 +1941,208 @@ document.addEventListener('DOMContentLoaded', function() {
             'single_analysis': 400,
             'triple_pack': 1000,
             'five_pack': 1500,
-            'monthly_unlimited': 1900,
-            'expert_basic': 2900,
-            'expert_premium': 4900,
-            'expert_vip': 9900
+            'monthly_unlimited': 4900,
+            'expert_basic': 9900,
+            'expert_premium': 29900,
+            'expert_vip': 99900
         };
         return priceMap[selectedOption] || 1000;
     }
 });
+
+// Notification System Functions
+function showNotification(message, type = 'info', duration = 5000) {
+    const notificationArea = document.getElementById('notificationArea');
+    const notificationId = 'notification-' + Date.now();
+    
+    const iconMap = {
+        'success': 'fas fa-check-circle',
+        'error': 'fas fa-exclamation-circle',
+        'warning': 'fas fa-exclamation-triangle',
+        'info': 'fas fa-info-circle'
+    };
+    
+    const notification = document.createElement('div');
+    notification.id = notificationId;
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <i class="${iconMap[type]} icon"></i>
+        <span class="message">${message}</span>
+        <button class="close-btn" onclick="closeNotification('${notificationId}')">
+            <i class="fas fa-times"></i>
+        </button>
+    `;
+    
+    notificationArea.appendChild(notification);
+    
+    // Auto-remove after duration
+    if (duration > 0) {
+        setTimeout(() => {
+            closeNotification(notificationId);
+        }, duration);
+    }
+    
+    return notificationId;
+}
+
+function closeNotification(notificationId) {
+    const notification = document.getElementById(notificationId);
+    if (notification) {
+        notification.style.animation = 'slideOutFade 0.3s ease forwards';
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }
+}
+
+function clearAllNotifications() {
+    const notificationArea = document.getElementById('notificationArea');
+    notificationArea.innerHTML = '';
+}
+
+// Form Validation Functions
+function validateField(fieldId, validationRules) {
+    const field = document.getElementById(fieldId);
+    if (!field) return true;
+    
+    const value = field.value.trim();
+    let isValid = true;
+    let errorMessage = '';
+    
+    // Check if required
+    if (validationRules.required && !value) {
+        isValid = false;
+        errorMessage = validationRules.requiredMessage || 'This field is required';
+    }
+    
+    // Check email format
+    if (isValid && validationRules.email && value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            isValid = false;
+            errorMessage = 'Please enter a valid email address';
+        }
+    }
+    
+    // Update field styling
+    field.classList.remove('is-valid', 'is-invalid');
+    field.classList.add(isValid ? 'is-valid' : 'is-invalid');
+    
+    // Update or remove feedback message
+    let feedback = field.parentNode.querySelector('.invalid-feedback');
+    if (!isValid) {
+        if (!feedback) {
+            feedback = document.createElement('div');
+            feedback.className = 'invalid-feedback';
+            field.parentNode.appendChild(feedback);
+        }
+        feedback.textContent = errorMessage;
+    } else if (feedback) {
+        feedback.remove();
+    }
+    
+    return isValid;
+}
+
+function validateFileUpload() {
+    const uploadArea = document.getElementById('uploadArea');
+    const isValid = selectedFile !== null;
+    
+    uploadArea.classList.remove('is-valid', 'is-invalid');
+    uploadArea.classList.add(isValid ? 'is-valid' : 'is-invalid');
+    
+    return isValid;
+}
+
+function validateAISelection() {
+    const selectedAI = document.querySelector('input[name="ai_service"]:checked');
+    const aiCards = document.querySelectorAll('.ai-service-card');
+    
+    const isValid = selectedAI !== null;
+    
+    aiCards.forEach(card => {
+        card.classList.remove('is-invalid');
+        if (!isValid) {
+            card.classList.add('is-invalid');
+        }
+    });
+    
+    return isValid;
+}
+
+function validateAllFields() {
+    let isFormValid = true;
+    const errors = [];
+    
+    // Validate CV upload
+    if (!validateFileUpload()) {
+        isFormValid = false;
+        errors.push('Please upload your CV');
+    }
+    
+    // Validate guest user fields (if not logged in)
+    const guestName = document.getElementById('guestName');
+    if (guestName) {
+        if (!validateField('guestName', { required: true, requiredMessage: 'Please enter your name' })) {
+            isFormValid = false;
+            errors.push('Name is required');
+        }
+        
+        if (!validateField('guestEmail', { required: true, email: true, requiredMessage: 'Please enter your email' })) {
+            isFormValid = false;
+            errors.push('Valid email is required');
+        }
+        
+        if (!validateField('guestLevel', { required: true, requiredMessage: 'Please select your academic level' })) {
+            isFormValid = false;
+            errors.push('Academic level is required');
+        }
+    }
+    
+    // Validate field selection
+    const broadCategory = document.getElementById('broadCategory').value;
+    const narrowField = document.getElementById('narrowField').value;
+    
+    if (!validateField('broadCategory', { required: true, requiredMessage: 'Please select a broad category' })) {
+        isFormValid = false;
+        errors.push('Broad category is required');
+    }
+    
+    if (!validateField('narrowField', { required: true, requiredMessage: 'Please select a specific field' })) {
+        isFormValid = false;
+        errors.push('Specific field is required');
+    }
+    
+    // Validate AI service selection
+    if (!validateAISelection()) {
+        isFormValid = false;
+        errors.push('Please select an AI service');
+    }
+    
+    // Validate API key if required
+    const selectedAnalysisOption = document.getElementById('selectedAnalysisOption').value;
+    if (selectedAnalysisOption === 'api_key') {
+        if (!validateField('apiKey', { required: true, requiredMessage: 'Please enter your API key' })) {
+            isFormValid = false;
+            errors.push('API key is required for this option');
+        }
+    }
+    
+    // Update button state
+    const startBtn = document.getElementById('startAnalysisBtn');
+    const helpText = document.getElementById('buttonHelpText');
+    
+    startBtn.disabled = !isFormValid;
+    
+    if (isFormValid) {
+        helpText.textContent = 'Ready to start analysis';
+        helpText.style.color = '#28a745';
+    } else {
+        helpText.textContent = `Please complete: ${errors.join(', ')}`;
+        helpText.style.color = '#dc3545';
+    }
+    
+    return isFormValid;
+}
 </script>
 {% endblock %} 

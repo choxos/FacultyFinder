@@ -107,11 +107,21 @@ Visit `/api` for complete documentation.
 
 ## 🚀 Deployment
 
-FacultyFinder can be deployed on any VPS or cloud platform. See our deployment guides:
+FacultyFinder can be deployed on any VPS or cloud platform. The application uses:
 
-- **Quick Setup**: `QUICK_DEPLOYMENT.md`
-- **Complete Guide**: `DEPLOYMENT_GUIDE.md`
-- **Production Configuration**: `webapp/config.py`
+- **Web Server**: Flask with Gunicorn WSGI server
+- **Database**: SQLite (development) / PostgreSQL (production)
+- **Frontend**: Bootstrap 5 with responsive design
+- **Reverse Proxy**: Nginx recommended for production
+
+### Basic Deployment Steps:
+1. Set up Python 3.11+ environment
+2. Install dependencies: `pip install -r requirements.txt`
+3. Configure environment variables in `.env`
+4. Initialize database and populate with data
+5. Run with `gunicorn webapp.wsgi:application`
+
+*Note: Detailed deployment guides with server configurations are available separately for security reasons.*
 
 ## 📊 Data & Privacy
 
