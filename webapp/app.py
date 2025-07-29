@@ -546,37 +546,8 @@ def add_performance_headers(response):
     response.headers['X-Frame-Options'] = 'DENY'
     response.headers['X-XSS-Protection'] = '1; mode=block'
     
-    # Content Security Policy - Allow Font Awesome CDNs and data URIs
-    csp_policy = (
-        "default-src 'self' data:; "
-        "style-src 'self' 'unsafe-inline' "
-            "https://cdn.jsdelivr.net "
-            "https://cdnjs.cloudflare.com "
-            "https://use.fontawesome.com "
-            "https://ka-f.fontawesome.com; "
-        "font-src 'self' "
-            "https://cdn.jsdelivr.net "
-            "https://cdnjs.cloudflare.com "
-            "https://use.fontawesome.com "
-            "https://ka-f.fontawesome.com "
-            "https://fonts.gstatic.com "
-            "data: blob:; "
-        "img-src 'self' data: https: blob:; "
-        "script-src 'self' 'unsafe-inline' "
-            "https://cdn.jsdelivr.net "
-            "https://cdnjs.cloudflare.com "
-            "https://use.fontawesome.com "
-            "https://kit.fontawesome.com; "
-        "connect-src 'self' "
-            "https://cdn.jsdelivr.net "
-            "https://cdnjs.cloudflare.com "
-            "https://use.fontawesome.com "
-            "https://ka-f.fontawesome.com "
-            "https://kit.fontawesome.com; "
-        "object-src 'none'; "
-        "base-uri 'self'"
-    )
-    response.headers['Content-Security-Policy'] = csp_policy
+    # Note: No CSP headers - removed to match working projects (OpenScienceTracker, CitingRetracted)
+    # This allows Font Awesome and other CDNs to work without restrictions
     
     # Compression - but skip for API routes to avoid JSON parsing issues
     if (response.mimetype.startswith('text/') or response.mimetype == 'application/json') and \
