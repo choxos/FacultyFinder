@@ -6,8 +6,8 @@
     <title>Countries - FacultyFinder</title>
     
     <!-- Meta Tags -->
-    <meta name="description" content="Explore universities and faculty by country. Find academic institutions worldwide.">
-    <meta name="keywords" content="countries, universities by country, global universities, faculty by country">
+    <meta name="description" content="Discover academic talent across countries worldwide. Explore faculty networks and university systems globally.">
+    <meta name="keywords" content="countries, global faculty network, universities by country, academic institutions worldwide">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,61 +19,6 @@
     <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
     <link rel="stylesheet" href="/static/css/facultyfinder.css">
     <link rel="stylesheet" href="/static/css/filter-fixes.css">
-    
-    <style>
-        body {
-            padding-top: 76px;
-        }
-        
-        .country-card {
-            border-radius: 10px;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .country-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-        
-        .flag-icon {
-            width: 60px;
-            height: 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            font-size: 0.8rem;
-        }
-        
-        .stats-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-        
-        .loading-spinner {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3b82f6;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -115,26 +60,52 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container">
-        <!-- Page Header -->
-        <div class="row mb-4">
+    <div class="container mt-4">
+        <div class="row">
             <div class="col-12">
-                <h1 class="mb-3">
-                    <i class="fas fa-globe text-primary me-3"></i>
-                    Countries
-                </h1>
-                <p class="lead text-muted">
-                    Explore universities and faculty members by country. Discover academic opportunities worldwide.
-                </p>
+                <!-- Hero Section -->
+                <div class="hero-section text-center mb-5">
+                    <h1 class="display-4 fw-bold text-primary">Global Faculty Network</h1>
+                    <p class="lead text-muted">Discover academic talent across countries worldwide</p>
+                </div>
             </div>
         </div>
-        
+
+        <!-- Results Summary -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="results-summary p-3 bg-light rounded">
+                    <h3 class="mb-0" id="results-header">
+                        <i class="fas fa-globe me-2 text-success"></i>
+                        <span id="results-text">Loading countries...</span>
+                    </h3>
+                    <p class="text-muted mb-0" id="results-description" style="display: none;">
+                        Explore faculty networks across different countries
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <!-- Countries Grid -->
-        <div id="countries-grid" class="row">
+        <div class="row" id="countries-container">
             <!-- Loading indicator -->
-            <div class="col-12 text-center p-5">
+            <div class="col-12 text-center p-5" id="loading-indicator">
                 <div class="loading-spinner"></div>
                 <p class="mt-3 text-muted">Loading countries...</p>
+            </div>
+        </div>
+
+        <!-- Empty State (initially hidden) -->
+        <div class="row" id="empty-state" style="display: none;">
+            <div class="col-12">
+                <div class="empty-state text-center py-5">
+                    <i class="fas fa-globe fa-4x text-muted mb-3"></i>
+                    <h3 class="text-muted">No Countries Found</h3>
+                    <p class="text-muted">No countries with faculty data are available at the moment.</p>
+                    <a href="/universities" class="btn btn-primary">
+                        <i class="fas fa-university me-2"></i>Browse Universities
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -144,18 +115,55 @@
     
     <!-- Custom JavaScript -->
     <script src="/static/js/facultyfinder.js"></script>
-    
-    <!-- Custom JavaScript -->
+
+    <!-- Countries specific JavaScript -->
     <script>
+        // Global variables
+        let allCountries = [];
+        
         // API Base URL
         const API_BASE = '/api/v1';
         
-        // Load countries when page loads
+        // Country code to flag emoji mapping
+        const countryFlags = {
+            'Canada': '🇨🇦',
+            'United States': '🇺🇸',
+            'United Kingdom': '🇬🇧',
+            'Australia': '🇦🇺',
+            'Germany': '🇩🇪',
+            'France': '🇫🇷',
+            'Netherlands': '🇳🇱',
+            'Switzerland': '🇨🇭',
+            'Sweden': '🇸🇪',
+            'Denmark': '🇩🇰',
+            'Norway': '🇳🇴',
+            'Finland': '🇫🇮',
+            'Belgium': '🇧🇪',
+            'Italy': '🇮🇹',
+            'Spain': '🇪🇸',
+            'Japan': '🇯🇵',
+            'South Korea': '🇰🇷',
+            'China': '🇨🇳',
+            'Singapore': '🇸🇬',
+            'New Zealand': '🇳🇿',
+            'Israel': '🇮🇱',
+            'Ireland': '🇮🇪',
+            'Austria': '🇦🇹',
+            'Czech Republic': '🇨🇿',
+            'Poland': '🇵🇱',
+            'Portugal': '🇵🇹',
+            'Brazil': '🇧🇷',
+            'Mexico': '🇲🇽',
+            'India': '🇮🇳',
+            'South Africa': '🇿🇦'
+        };
+        
+        // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             loadCountries();
         });
         
-        // Load countries
+        // Load countries data
         async function loadCountries() {
             try {
                 showLoading();
@@ -163,7 +171,9 @@
                 const response = await fetch(`${API_BASE}/countries`);
                 const data = await response.json();
                 
+                allCountries = data;
                 displayCountries(data);
+                updateResultsInfo(data.length);
                 
             } catch (error) {
                 console.error('Error loading countries:', error);
@@ -173,90 +183,141 @@
         
         // Display countries
         function displayCountries(countries) {
-            const container = document.getElementById('countries-grid');
+            const container = document.getElementById('countries-container');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const emptyState = document.getElementById('empty-state');
+            
+            // Hide loading indicator
+            loadingIndicator.style.display = 'none';
             
             if (countries.length === 0) {
-                container.innerHTML = `
-                    <div class="col-12">
-                        <div class="text-center p-5">
-                            <i class="fas fa-globe fa-4x text-muted mb-3"></i>
-                            <h4>No countries found</h4>
-                            <p class="text-muted">There seems to be an issue loading the countries data.</p>
-                        </div>
-                    </div>
-                `;
+                emptyState.style.display = 'block';
                 return;
             }
             
+            // Clear container
             container.innerHTML = '';
+            
+            // Create country cards
             countries.forEach(country => {
-                const countryCard = `
-                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                        <div class="card country-card h-100">
-                            <div class="card-body text-center">
-                                <div class="country-flag mb-3">
-                                    <i class="fas fa-flag fa-3x text-primary"></i>
-                                </div>
-                                <h5 class="card-title mb-3">
-                                    <a href="/universities?country=${encodeURIComponent(country.country)}" 
-                                       class="text-decoration-none country-link">
-                                        ${country.country}
-                                    </a>
-                                </h5>
-                                
-                                <div class="country-stats mb-3">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="stat-item">
-                                                <div class="stat-number text-primary fw-bold">
-                                                    ${country.faculty_count}
-                                                </div>
-                                                <div class="stat-label small text-muted">Faculty</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="stat-item">
-                                                <div class="stat-number text-success fw-bold">
-                                                    ${country.university_count || 0}
-                                                </div>
-                                                <div class="stat-label small text-muted">Universities</div>
-                                            </div>
-                                        </div>
+                const countryCard = createCountryCard(country);
+                container.appendChild(countryCard);
+            });
+            
+            // Add smooth hover animations
+            setTimeout(() => {
+                addHoverAnimations();
+            }, 100);
+        }
+        
+        // Create country card element
+        function createCountryCard(country) {
+            const colDiv = document.createElement('div');
+            colDiv.className = 'col-md-6 mb-4';
+            
+            const flag = countryFlags[country.country] || '🏳️';
+            const countryCode = generateCountryCode(country.country);
+            
+            colDiv.innerHTML = `
+                <div class="country-card h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">
+                            <span class="flag-emoji me-2" style="font-size: 1.5rem;">${flag}</span>
+                            <a href="/country/${countryCode}" class="text-decoration-none">
+                                ${country.country}
+                            </a>
+                        </h5>
+                        <div class="country-stats mt-3">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="country-stat-item">
+                                        <div class="country-stat-number text-primary fw-bold">${country.faculty_count || 0}</div>
+                                        <div class="country-stat-label small text-muted">Faculty</div>
                                     </div>
                                 </div>
-                                
-                                <div class="country-actions">
-                                    <a href="/universities?country=${encodeURIComponent(country.country)}" 
-                                       class="btn btn-outline-primary btn-sm me-2">
-                                        <i class="fas fa-university me-1"></i>Universities
-                                    </a>
-                                    <a href="/faculties?country=${encodeURIComponent(country.country)}" 
-                                       class="btn btn-outline-success btn-sm">
-                                        <i class="fas fa-users me-1"></i>Faculty
-                                    </a>
+                                <div class="col-4">
+                                    <div class="country-stat-item">
+                                        <div class="country-stat-number text-info fw-bold">${country.university_count || 0}</div>
+                                        <div class="country-stat-label small text-muted">Universities</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="country-stat-item">
+                                        <div class="country-stat-number text-warning fw-bold">${country.department_count || 0}</div>
+                                        <div class="country-stat-label small text-muted">Departments</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                `;
-                container.innerHTML += countryCard;
+                    <div class="card-footer">
+                        <div class="d-grid">
+                            <a href="/country/${countryCode}" class="btn btn-outline-success">
+                                <i class="fas fa-eye me-2"></i>View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            return colDiv;
+        }
+        
+        // Generate country code from country name
+        function generateCountryCode(countryName) {
+            return countryName.toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^a-z0-9-]/g, '');
+        }
+        
+        // Add hover animations to country cards
+        function addHoverAnimations() {
+            const countryCards = document.querySelectorAll('.country-card');
+            countryCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.transition = 'all 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
             });
+        }
+        
+        // Update results info
+        function updateResultsInfo(count) {
+            const resultsText = document.getElementById('results-text');
+            const resultsDescription = document.getElementById('results-description');
+            
+            if (count > 0) {
+                resultsText.textContent = `${count} ${count === 1 ? 'Country' : 'Countries'} Found`;
+                resultsDescription.style.display = 'block';
+            } else {
+                resultsText.textContent = 'No Countries Found';
+                resultsDescription.style.display = 'none';
+            }
         }
         
         // Show loading indicator
         function showLoading() {
-            const container = document.getElementById('countries-grid');
-            container.innerHTML = `
-                <div class="col-12 text-center p-5">
-                    <div class="loading-spinner"></div>
-                    <p class="mt-3 text-muted">Loading countries...</p>
-                </div>
-            `;
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const emptyState = document.getElementById('empty-state');
+            
+            loadingIndicator.style.display = 'block';
+            emptyState.style.display = 'none';
+            
+            const resultsText = document.getElementById('results-text');
+            resultsText.textContent = 'Loading countries...';
         }
         
         // Show error message
         function showError(message) {
-            const container = document.getElementById('countries-grid');
+            const container = document.getElementById('countries-container');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            
+            loadingIndicator.style.display = 'none';
+            
             container.innerHTML = `
                 <div class="col-12">
                     <div class="alert alert-danger">
@@ -265,7 +326,85 @@
                     </div>
                 </div>
             `;
+            
+            const resultsText = document.getElementById('results-text');
+            resultsText.textContent = 'Error loading countries';
         }
     </script>
+
+    <style>
+        body {
+            padding-top: 76px;
+        }
+        
+        .country-card {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .country-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .country-stat-item {
+            padding: 0.5rem 0;
+        }
+        
+        .country-stat-number {
+            font-size: 1.5rem;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+        
+        .country-stat-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+        
+        .results-summary {
+            background: var(--ff-bg-secondary) !important;
+            border: 1px solid var(--ff-border-color);
+        }
+        
+        .flag-emoji {
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--ff-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hero-section h1 {
+            background: linear-gradient(135deg, var(--ff-primary) 0%, var(--ff-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .empty-state {
+            padding: 3rem 1rem;
+        }
+        
+        .btn-outline-success:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </body>
 </html> 
