@@ -181,7 +181,7 @@ async def get_top_universities(limit: int = 8) -> List[University]:
             FROM universities u
             LEFT JOIN professors p ON p.university_code = u.university_code
             WHERE u.name IS NOT NULL
-            GROUP BY u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established
+            GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state, u.year_established
             HAVING COUNT(p.id) > 0
             ORDER BY COUNT(p.id) DESC
             LIMIT $1
@@ -362,7 +362,7 @@ async def get_universities(
                 FROM universities u
                 LEFT JOIN professors p ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
-                GROUP BY u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established
+                GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state, u.year_established
                 HAVING COUNT(p.id) > 0
                 ORDER BY {order_clause}
                 LIMIT ${param_count + 1} OFFSET ${param_count + 2}
@@ -449,7 +449,7 @@ async def get_faculties(
             
             if employment_type:
                 param_count += 1
-                where_conditions.append(f"p.primary_position ILIKE ${param_count}")
+                where_conditions.append(f"p.position ILIKE ${param_count}")
                 params.append(f"%{employment_type}%")
             
             # Build ORDER BY clause
@@ -468,7 +468,7 @@ async def get_faculties(
             # Main query
             query = f"""
                 SELECT p.id, p.name, p.email, p.university_code,
-                       COALESCE(p.department, '') as department, p.primary_position, COALESCE(p.research_areas, '') as research_areas, p.total_publications,
+                       COALESCE(p.department, '') as department, COALESCE(p.position, '') as primary_position, COALESCE(p.research_areas, '') as research_areas, p.total_publications,
                        p.publications_last_5_years, COALESCE(u.name, '') as university_name
                 FROM professors p
                 LEFT JOIN universities u ON p.university_code = u.university_code
