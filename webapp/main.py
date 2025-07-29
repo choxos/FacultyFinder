@@ -110,8 +110,14 @@ class University(BaseModel):
     city: Optional[str] = None
     university_code: str
     province: Optional[str] = None
+    province_state: Optional[str] = None
+    address: Optional[str] = None
+    website: Optional[str] = None
+    university_type: Optional[str] = None
+    languages: Optional[str] = None
     year_established: Optional[int] = None
     faculty_count: int = 0
+    department_count: int = 0
 
 class Professor(BaseModel):
     id: int
@@ -122,10 +128,16 @@ class Professor(BaseModel):
     university_code: Optional[str] = None
     university_name: Optional[str] = None
     department: Optional[str] = None
+    position: Optional[str] = None
     primary_position: Optional[str] = None
     research_areas: Optional[str] = None
     total_publications: Optional[int] = 0
+    publication_count: Optional[int] = 0
     publications_last_5_years: Optional[int] = 0
+    citation_count: Optional[int] = 0
+    h_index: Optional[int] = 0
+    adjunct: Optional[bool] = False
+    full_time: Optional[bool] = True
 
 class Country(BaseModel):
     country: str
@@ -348,6 +360,11 @@ async def get_universities(
                 where_conditions.append(f"u.province_state = ${param_count}")
                 params.append(province)
             
+            if university_type:
+                param_count += 1
+                where_conditions.append(f"u.university_type = ${param_count}")
+                params.append(university_type)
+            
             # Build ORDER BY clause
             order_mapping = {
                 "faculty_count": "faculty_count DESC",
@@ -362,13 +379,21 @@ async def get_universities(
             
             # Main query
             query = f"""
-                SELECT u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established,
-                       COUNT(p.id) as faculty_count
+                SELECT u.id, u.name, u.country, u.city, u.university_code, 
+                       COALESCE(u.province_state, '') as province_state,
+                       COALESCE(u.address, '') as address,
+                       COALESCE(u.website, '') as website,
+                       COALESCE(u.university_type, '') as university_type,
+                       COALESCE(u.languages, '') as languages,
+                       u.year_established,
+                       COUNT(p.id) as faculty_count,
+                       COUNT(DISTINCT COALESCE(p.department, 'Unknown')) as department_count
                 FROM universities u
                 LEFT JOIN professors p ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
-                GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state, u.year_established
-                HAVING COUNT(p.id) > 0
+                GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state,
+                         u.address, u.website, u.university_type, u.languages, u.year_established
+                HAVING COUNT(p.id) >= 0
                 ORDER BY {order_clause}
                 LIMIT ${param_count + 1} OFFSET ${param_count + 2}
             """
@@ -473,8 +498,17 @@ async def get_faculties(
             # Main query
             query = f"""
                 SELECT p.id, p.name, p.email, p.university_code,
-                       COALESCE(p.department, '') as department, COALESCE(p.position, '') as primary_position, COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas, COALESCE(p.publication_count, 0) as total_publications,
-                       0 as publications_last_5_years, COALESCE(u.name, '') as university_name
+                       COALESCE(p.department, '') as department, 
+                       COALESCE(p.position, '') as position, 
+                       COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas, 
+                       COALESCE(p.publication_count, 0) as publication_count,
+                       COALESCE(p.publication_count, 0) as total_publications,
+                       0 as publications_last_5_years,
+                       COALESCE(p.citation_count, 0) as citation_count,
+                       COALESCE(p.h_index, 0) as h_index,
+                       COALESCE(p.adjunct, false) as adjunct,
+                       COALESCE(p.full_time, true) as full_time,
+                       COALESCE(u.name, '') as university_name
                 FROM professors p
                 LEFT JOIN universities u ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}

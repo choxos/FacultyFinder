@@ -478,9 +478,9 @@
                                         </h5>
                                         <p class="text-muted small mb-0">
                                             <i class="fas fa-graduation-cap me-1"></i>
-                                            <a href="/faculties?position=${encodeURIComponent(prof.primary_position || '')}" 
+                                            <a href="/faculties?position=${encodeURIComponent(prof.position || '')}" 
                                                class="text-decoration-none text-muted hover-primary position-link">
-                                                ${prof.primary_position || 'Faculty Member'}
+                                                ${prof.position || 'Faculty Member'}${prof.adjunct ? ' (Part-time)' : (!prof.full_time ? ' (Part-time)' : '')}
                                             </a>
                                         </p>
                                     </div>
@@ -510,7 +510,7 @@
                                     
                                     <!-- Research Areas -->
                                     ${researchAreas.length > 0 ? `
-                                    <div class="research-areas mt-2 mb-3">
+                                    <div class="research-areas mt-2">
                                         ${researchAreas.slice(0, 3).map(area => 
                                             `<span class="badge bg-light text-dark border me-1 mb-1 small-research-badge">
                                                 ${area}
@@ -531,14 +531,14 @@
                                 <div class="row text-center g-0">
                                     <div class="col-4">
                                         <div class="metric-item">
-                                            <div class="metric-number text-primary">${prof.total_publications || 0}</div>
+                                            <div class="metric-number text-primary">${prof.publication_count || prof.total_publications || 0}</div>
                                             <div class="metric-label">Publications</div>
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="metric-item">
-                                            <div class="metric-number text-success">${prof.publications_last_5_years || 0}</div>
-                                            <div class="metric-label">Recent</div>
+                                            <div class="metric-number text-success">${prof.citation_count || 0}</div>
+                                            <div class="metric-label">Citations</div>
                                         </div>
                                     </div>
                                     <div class="col-4">

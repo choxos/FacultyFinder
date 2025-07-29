@@ -542,28 +542,62 @@
                     data.faculties.forEach(faculty => {
                         const facultyCard = `
                             <div class="col-lg-6 col-xl-4 mb-4">
-                                <div class="faculty-card facultyfinder-card p-4 h-100">
-                                    <div class="faculty-info mb-3">
-                                        <h5 class="mb-1">
-                                            <a href="/professor/${faculty.id}" class="text-decoration-none faculty-link">
-                                                ${faculty.name || 'Unknown Faculty'}
-                                            </a>
-                                        </h5>
-                                        <p class="text-muted small mb-2">
-                                            ${faculty.primary_position || 'Faculty Member'} at ${faculty.university_name || 'Unknown University'}
-                                        </p>
-                                        ${faculty.department ? `<p class="text-muted small mb-0">${faculty.department}</p>` : ''}
-                                    </div>
-                                    <div class="faculty-stats mb-3">
-                                        <div class="d-flex justify-content-between small">
-                                            <span><i class="fas fa-file-alt me-1"></i>${faculty.total_publications || 0} publications</span>
-                                            <span><i class="fas fa-clock me-1"></i>${faculty.publications_last_5_years || 0} recent</span>
+                                <div class="faculty-card h-100">
+                                    <div class="card-body">
+                                        <div class="faculty-info">
+                                            <!-- Professor Name and Title -->
+                                            <div class="faculty-header mb-3">
+                                                <h5 class="card-title mb-1">
+                                                    <a href="/professor/${faculty.id}" class="text-decoration-none professor-link">
+                                                        ${faculty.name || 'Unknown Faculty'}
+                                                    </a>
+                                                </h5>
+                                                <p class="text-muted small mb-0">
+                                                    <i class="fas fa-graduation-cap me-1"></i>
+                                                    ${faculty.position || 'Faculty Member'}${faculty.adjunct ? ' (Part-time)' : (!faculty.full_time ? ' (Part-time)' : '')}
+                                                </p>
+                                            </div>
+                                            
+                                            <!-- University -->
+                                            <div class="faculty-affiliation mb-2">
+                                                <p class="text-muted small mb-1">
+                                                    <i class="fas fa-university me-1"></i>
+                                                    ${faculty.university_name || 'Unknown University'}
+                                                </p>
+                                                
+                                                <!-- Department -->
+                                                ${faculty.department ? `
+                                                <p class="text-muted small mb-0">
+                                                    <i class="fas fa-building me-1"></i>
+                                                    ${faculty.department}
+                                                </p>
+                                                ` : ''}
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="faculty-actions">
-                                        <a href="/professor/${faculty.id}" class="btn btn-outline-primary btn-sm">
-                                            <i class="fas fa-user me-1"></i>View Profile
-                                        </a>
+                                    
+                                    <!-- Publication Metrics Footer -->
+                                    <div class="card-footer">
+                                        <div class="row text-center g-0">
+                                            <div class="col-4">
+                                                <div class="metric-item">
+                                                    <div class="metric-number text-primary">${faculty.publication_count || faculty.total_publications || 0}</div>
+                                                    <div class="metric-label">Publications</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="metric-item">
+                                                    <div class="metric-number text-success">${faculty.citation_count || 0}</div>
+                                                    <div class="metric-label">Citations</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="metric-item">
+                                                    <div class="metric-number text-warning">${faculty.h_index || 0}</div>
+                                                    <div class="metric-label">H-index</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
