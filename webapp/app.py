@@ -1673,6 +1673,12 @@ def api_documentation():
     """API documentation page"""
     return render_template('api_docs.html')
 
+@app.route('/test-icons')
+@monitor_performance
+def test_icons():
+    """Icon loading diagnostic page"""
+    return render_template('test_icons.html')
+
 @app.route('/api/analyze-cv', methods=['POST'])
 @monitor_performance
 def analyze_cv():
