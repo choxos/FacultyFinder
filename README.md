@@ -107,19 +107,40 @@ Visit `/api` for complete documentation.
 
 ## 🚀 Deployment
 
-FacultyFinder can be deployed on any VPS or cloud platform. The application uses:
+FacultyFinder offers multiple deployment approaches based on your needs:
 
-- **Web Server**: Flask with Gunicorn WSGI server
+### 📋 **Choose Your Deployment Path:**
+
+| Goal | Guide | Time | Best For |
+|------|-------|------|----------|
+| **Quick Demo** | `QUICK_START_DEPLOYMENT.md` | 15 min | Testing, demos |
+| **Production Site** | `DEPLOYMENT_GUIDE_RESTRUCTURED.md` | 3-6 hours | Live websites |
+| **Technical Reference** | `DEPLOYMENT_INDEX.md` | - | Choose your path |
+
+### ⚡ **Quick Start (15 Minutes)**
+Get a working website running immediately:
+```bash
+sudo apt update && apt install -y python3 python3-venv git
+git clone https://github.com/yourusername/FacultyFinder.git /var/www/ff
+cd /var/www/ff && python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+# Follow QUICK_START_DEPLOYMENT.md for complete steps
+```
+
+### 🏗️ **Production Deployment (Progressive Phases)**
+Build a complete production system:
+- **Phase 1**: Basic working website (30 min)
+- **Phase 2**: PostgreSQL + authentication (60 min)  
+- **Phase 3**: Domain + SSL + production setup (90 min)
+- **Phase 4**: Advanced features (payments, AI, etc.)
+
+### 🔧 **Technology Stack:**
+- **Backend**: Flask with Gunicorn WSGI server
 - **Database**: SQLite (development) / PostgreSQL (production)
 - **Frontend**: Bootstrap 5 with responsive design
-- **Reverse Proxy**: Nginx recommended for production
-
-### Basic Deployment Steps:
-1. Set up Python 3.11+ environment
-2. Install dependencies: `pip install -r requirements.txt`
-3. Configure environment variables in `.env`
-4. Initialize database and populate with data
-5. Run with `gunicorn webapp.wsgi:application`
+- **Reverse Proxy**: Nginx for production
+- **SSL**: Let's Encrypt (free certificates)
+- **Process Management**: Systemd service
 
 *Note: Detailed deployment guides with server configurations are available separately for security reasons.*
 
