@@ -16,9 +16,12 @@ python-dotenv==1.0.0
 # Optional: Development and monitoring
 watchfiles==0.21.0  # For auto-reload in development
 
-# Security (if needed later)
+# Security and Authentication
 python-multipart==0.0.6  # For form data handling
 python-jose[cryptography]==3.3.0  # For JWT tokens
+authlib==1.2.1  # For OAuth2 integration
+httpx==0.25.2  # For async HTTP requests (OAuth)
+itsdangerous==2.1.2  # For secure session management
 
 # Monitoring and logging (optional)
 structlog==23.2.0

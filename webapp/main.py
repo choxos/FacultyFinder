@@ -11,16 +11,20 @@ from typing import List, Dict, Optional, Any
 from contextlib import asynccontextmanager
 
 # FastAPI imports
-from fastapi import FastAPI, HTTPException, Query, Path, Request, status
-from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
+from fastapi import FastAPI, HTTPException, Query, Path, Request, status, Depends, Cookie
+from fastapi.responses import HTMLResponse, JSONResponse, FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
+from starlette.middleware.sessions import SessionMiddleware
 
 # Database imports
 import asyncpg
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
+
+# OAuth imports
+from webapp.oauth import oauth, oauth_config, oauth_handler, init_oauth_handler, get_oauth_handler
 
 # Load environment variables - prioritize production .env
 env_files = ['/var/www/ff/.env', '.env', '.env.test']
@@ -86,6 +90,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET", "your-secret-key-here"))
 
 # Mount static files
 static_dir = "webapp/static" if os.path.exists("webapp/static") else "static"
@@ -624,6 +629,52 @@ async def get_login_page():
 async def get_register_page():
     """Serve registration page"""
     return FileResponse(os.path.join(static_dir, "register.html"))
+
+# OAuth routes
+@app.get("/auth/google")
+async def google_login(request: Request):
+    """Initiate Google OAuth login"""
+    try:
+        if not oauth_config.is_configured:
+            raise HTTPException(status_code=500, detail="OAuth not configured")
+        
+        redirect_uri = request.url_for('oauth_callback')
+        return await oauth.google.authorize_redirect(request, redirect_uri)
+    except Exception as e:
+        logger.error(f"Google OAuth initiation error: {e}")
+        return RedirectResponse(url="/login?error=oauth_failed")
+
+@app.get("/auth/callback")
+async def oauth_callback(request: Request):
+    """Handle OAuth callback from Google"""
+    try:
+        oauth_handler = get_oauth_handler()
+        auth_result = await oauth_handler.handle_callback(request)
+        
+        # Store user info in session
+        request.session['user'] = auth_result['user']
+        request.session['access_token'] = auth_result['access_token']
+        
+        # Redirect to dashboard or homepage
+        return RedirectResponse(url="/?welcome=true")
+        
+    except Exception as e:
+        logger.error(f"OAuth callback error: {e}")
+        return RedirectResponse(url="/login?error=auth_failed")
+
+@app.get("/auth/logout")
+async def logout(request: Request):
+    """Logout user and clear session"""
+    request.session.clear()
+    return RedirectResponse(url="/?logout=true")
+
+@app.get("/auth/user")
+async def get_current_user(request: Request):
+    """Get current authenticated user info"""
+    user = request.session.get('user')
+    if not user:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    return user
 
 @app.get("/health")
 async def health_check():

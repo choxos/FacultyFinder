@@ -1,8 +1,12 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -24,6 +28,8 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -79,9 +85,13 @@ ipython_config.py
 .python-version
 
 # pipenv
-Pipfile.lock
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
 
-# PEP 582
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
 # Celery stuff
@@ -120,160 +130,12 @@ dmypy.json
 
 # macOS
 .DS_Store
-.AppleDouble
-.LSOverride
 
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-*.lnk
-
-# Linux
-*~
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Project specific
-# Database files
-database/facultyfinder_dev.db
-database/facultyfinder_production.db
-*.db
-*.sqlite
-*.sqlite3
-
-# Uploaded files and temporary data
-uploads/
-temp/
-tmp/
-*.tmp
-*.temp
-
-# CV uploads and processing
-webapp/uploads/
-webapp/temp/
-webapp/cv_uploads/
-
-# API keys and secrets
-.env.*
-config.ini
-secrets.json
-api_keys.txt
-
-# Log files
-*.log
-logs/
-webapp/logs/
-
-# Backup files
-*.bak
-*.backup
-*~
-
-# Compiled CSS and JS (if using preprocessors)
-webapp/static/css/compiled/
-webapp/static/js/compiled/
-
-# Node modules (if using npm for frontend tools)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Generated documentation
-docs/build/
-
-# Test outputs
-test_results/
-.coverage
-htmlcov/
-
-# PubMed search cache
-pubmed_cache/
-*.pubmed_cache
-
-# PDF processing temporary files
-*.pdf.txt
-*.docx.txt
-cv_extracted_text/
-
-# SSL certificates (if local development)
-*.pem
-*.key
-*.crt
-*.cert
-
-# Production deployment files
-deploy_keys/
-production_backup/
-
-# OS generated files
-.Trashes
-.Spotlight-V100
-.TemporaryItems
-.fseventsd
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# SENSITIVE DEPLOYMENT & CONFIGURATION FILES
-# These contain passwords, API keys, credentials, and sensitive deployment information
-# DO NOT COMMIT TO PUBLIC REPOSITORY
-
-# Deployment guides with sensitive information
-*GUIDE*.md
-*DEPLOYMENT*.md
-*SETUP*.md
-EMAIL_SETUP_GUIDE.md
-AI_INTEGRATION_GUIDE.md
-CITATION_ANALYSIS_GUIDE.md
-UNIVERSITY_DATA_COLLECTION_GUIDE.md
-AUTOMATED_PUBLICATION_UPDATE_GUIDE.md
-PUBMED_INTEGRATION_GUIDE.md
-CRYPTOCURRENCY_PAYMENT_GUIDE.md
-PERFORMANCE_OPTIMIZATION_GUIDE.md
-GOOGLE_OAUTH_SETUP_GUIDE.md
-STRIPE_INTEGRATION.md
-PRICING_RECOMMENDATIONS.md
-COMPREHENSIVE_DEPLOYMENT_CHECKLIST.md
-QUICK_DEPLOYMENT.md
+# Deployment guides and sensitive configuration files
+SERVER_DEPLOYMENT_GUIDE.md
 DEPLOYMENT_GUIDE.md
-PUBLICATION_SYSTEM_SETUP.md
-
-# VPS and deployment scripts with credentials
-deploy.sh
-vps_*.sh
-vps_*.md
-fix_python312_vps.sh
-vps_emergency_install.md
-commit_changes.sh
-
-# Production requirements with specific versions
-requirements_python312.txt
-requirements_vps.txt
-requirements_publications.txt
-
-# Migration and automated scripts
-migrate_*.py
-*_migration*.py
-run_pubmed_*.py
-cleanup_*.py
-automated_*.py
-*_updater.py
-
-# Test files that may contain sensitive data
-test_cv_analysis.py
-
-# Checklist and planning files
-COMPLETION_CHECKLIST.md
-*CHECKLIST*.md 
+*_DEPLOYMENT_*.md
+*deployment*.md
+*.secret
+config.ini
+secrets.json 
