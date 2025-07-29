@@ -133,7 +133,7 @@
                             <option value="faculty_count">Faculty Count</option>
                             <option value="name">Name</option>
                             <option value="location">Location</option>
-                            <option value="year_established">Year Established</option>
+                            <option value="established">Year Established</option>
                         </select>
                     </div>
                     <div class="col-lg-3 mb-3 d-flex align-items-end">
@@ -443,8 +443,8 @@
                                         ${university.name}
                                     </a>
                                 </h5>
-                                ${university.year_established ? 
-                                    `<span class="badge bg-secondary">Est. ${university.year_established}</span>` : 
+                                ${university.established ? 
+                                    `<span class="badge bg-secondary">Est. ${university.established}</span>` : 
                                     ''
                                 }
                             </div>
@@ -466,17 +466,17 @@
                                     ` : ''}
                                 </div>
                                 
-                                ${university.university_type ? `
+                                ${university.type ? `
                                 <div class="text-muted mb-2">
                                     <i class="fas fa-building me-2"></i>
-                                    <strong>${university.university_type}</strong>
+                                    <strong>${university.type}</strong>
                                 </div>
                                 ` : ''}
                                 
-                                ${university.languages ? `
+                                ${university.language ? `
                                 <div class="text-muted mb-2">
                                     <i class="fas fa-language me-2"></i>
-                                    <strong>${university.languages}</strong>
+                                    <strong>${university.language}</strong>
                                 </div>
                                 ` : ''}
                                 
@@ -547,8 +547,8 @@
                                 </a>
                             ` : ''}
                         </td>
-                        <td data-sort-value="${university.university_type || ''}">
-                            <span class="badge bg-secondary">${university.university_type || 'N/A'}</span>
+                        <td data-sort-value="${university.type || ''}">
+                            <span class="badge bg-secondary">${university.type || 'N/A'}</span>
                         </td>
                         <td class="text-center" data-sort-value="${university.faculty_count || 0}">
                             <span class="fw-bold text-primary">${university.faculty_count || 0}</span>
@@ -556,9 +556,9 @@
                         <td class="text-center" data-sort-value="${university.department_count || 0}">
                             <span class="fw-bold text-success">${university.department_count || 0}</span>
                         </td>
-                        <td class="text-center" data-sort-value="${university.year_established || 0}">
-                            ${university.year_established ? 
-                                `<span class="badge bg-secondary">${university.year_established}</span>` : 
+                        <td class="text-center" data-sort-value="${university.established || 0}">
+                            ${university.established ? 
+                                `<span class="badge bg-secondary">${university.established}</span>` : 
                                 '<span class="text-muted">Unknown</span>'
                             }
                         </td>

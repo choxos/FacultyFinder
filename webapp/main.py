@@ -113,9 +113,9 @@ class University(BaseModel):
     province_state: Optional[str] = None
     address: Optional[str] = None
     website: Optional[str] = None
-    university_type: Optional[str] = None
-    languages: Optional[str] = None
-    year_established: Optional[int] = None
+    type: Optional[str] = None
+    language: Optional[str] = None
+    established: Optional[int] = None
     faculty_count: int = 0
     department_count: int = 0
 
@@ -362,7 +362,7 @@ async def get_universities(
             
             if university_type:
                 param_count += 1
-                where_conditions.append(f"u.university_type = ${param_count}")
+                where_conditions.append(f"u.type = ${param_count}")
                 params.append(university_type)
             
             # Build ORDER BY clause
@@ -370,7 +370,7 @@ async def get_universities(
                 "faculty_count": "faculty_count DESC",
                 "name": "u.name ASC",
                 "location": "u.country ASC, u.city ASC",
-                "year_established": "u.year_established DESC NULLS LAST"
+                "established": "u.established DESC NULLS LAST"
             }
             order_clause = order_mapping.get(sort_by, "faculty_count DESC")
             
@@ -383,16 +383,16 @@ async def get_universities(
                        COALESCE(u.province_state, '') as province_state,
                        COALESCE(u.address, '') as address,
                        COALESCE(u.website, '') as website,
-                       COALESCE(u.university_type, '') as university_type,
-                       COALESCE(u.languages, '') as languages,
-                       u.year_established,
+                       COALESCE(u.type, '') as type,
+                       COALESCE(u.language, '') as language,
+                       u.established,
                        COUNT(p.id) as faculty_count,
                        COUNT(DISTINCT COALESCE(p.department, 'Unknown')) as department_count
                 FROM universities u
                 LEFT JOIN professors p ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
                 GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state,
-                         u.address, u.website, u.university_type, u.languages, u.year_established
+                         u.address, u.website, u.type, u.language, u.established
                 HAVING COUNT(p.id) >= 0
                 ORDER BY {order_clause}
                 LIMIT ${param_count + 1} OFFSET ${param_count + 2}
