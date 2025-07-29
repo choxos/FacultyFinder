@@ -12,7 +12,7 @@ from contextlib import asynccontextmanager
 
 # FastAPI imports
 from fastapi import FastAPI, HTTPException, Query, Path, Request, status
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
@@ -562,6 +562,23 @@ async def get_professor(professor_id: int = Path(..., description="Professor ID"
     except Exception as e:
         logger.error(f"Error getting professor: {e}")
         raise HTTPException(status_code=500, detail="Failed to retrieve professor")
+
+# Professor detail route
+@app.get("/professor/{professor_id}")
+async def get_professor_page(professor_id: int):
+    """Serve professor detail page"""
+    return FileResponse(os.path.join(static_dir, "professor.html"))
+
+# Authentication routes
+@app.get("/login")
+async def get_login_page():
+    """Serve login page"""
+    return FileResponse(os.path.join(static_dir, "login.html"))
+
+@app.get("/register")
+async def get_register_page():
+    """Serve registration page"""
+    return FileResponse(os.path.join(static_dir, "register.html"))
 
 @app.get("/health")
 async def health_check():
