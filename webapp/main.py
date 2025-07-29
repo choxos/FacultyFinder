@@ -370,7 +370,7 @@ async def get_universities(
                 "faculty_count": "faculty_count DESC",
                 "name": "u.name ASC",
                 "location": "u.country ASC, u.city ASC",
-                "established": "u.established DESC NULLS LAST"
+                "established": "u.year_established DESC NULLS LAST"
             }
             order_clause = order_mapping.get(sort_by, "faculty_count DESC")
             
@@ -395,7 +395,7 @@ async def get_universities(
                          u.address, u.website, u.university_type, u.languages, u.year_established
                 HAVING COUNT(p.id) >= 0
                 ORDER BY {order_clause}
-                LIMIT ${param_count + 1} OFFSET ${param_count + 2}
+                LIMIT {param_count + 1} OFFSET {param_count + 2}
             """
             
             params.extend([per_page + 1, offset])  # +1 to check if there are more results
