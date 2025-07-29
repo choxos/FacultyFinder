@@ -383,16 +383,16 @@ async def get_universities(
                        COALESCE(u.province_state, '') as province_state,
                        COALESCE(u.address, '') as address,
                        COALESCE(u.website, '') as website,
-                       COALESCE(u.type, '') as type,
-                       COALESCE(u.language, '') as language,
-                       u.established,
+                       COALESCE(u.university_type, '') as type,
+                       COALESCE(u.languages, '') as language,
+                       u.year_established as established,
                        COUNT(p.id) as faculty_count,
                        COUNT(DISTINCT COALESCE(p.department, 'Unknown')) as department_count
                 FROM universities u
                 LEFT JOIN professors p ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
                 GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state,
-                         u.address, u.website, u.type, u.language, u.established
+                         u.address, u.website, u.university_type, u.languages, u.year_established
                 HAVING COUNT(p.id) >= 0
                 ORDER BY {order_clause}
                 LIMIT ${param_count + 1} OFFSET ${param_count + 2}
@@ -411,12 +411,15 @@ async def get_universities(
             
             # Get total count for pagination
             count_query = f"""
-                SELECT COUNT(DISTINCT u.id)
-                FROM universities u
-                LEFT JOIN professors p ON p.university_code = u.university_code
-                WHERE {' AND '.join(where_conditions)}
-                GROUP BY u.id
-                HAVING COUNT(p.id) > 0
+                SELECT COUNT(*)
+                FROM (
+                    SELECT DISTINCT u.id
+                    FROM universities u
+                    LEFT JOIN professors p ON p.university_code = u.university_code
+                    WHERE {' AND '.join(where_conditions)}
+                    HAVING COUNT(p.id) >= 0
+                    GROUP BY u.id
+                ) subquery
             """
             
             # Remove LIMIT/OFFSET params for count
