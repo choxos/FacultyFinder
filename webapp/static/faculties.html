@@ -3,154 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Directory - FacultyFinder</title>
+    <title>Faculty Search - FacultyFinder</title>
     
     <!-- Meta Tags -->
-    <meta name="description" content="Search and discover faculty members worldwide. Advanced filtering by research areas, university, department, and publications.">
-    <meta name="keywords" content="faculty search, professors, researchers, academic staff, university faculty">
+    <meta name="description" content="Search and discover faculty members worldwide. Filter by research areas, departments, universities, and more.">
+    <meta name="keywords" content="faculty search, professors, researchers, academic staff, universities, research areas">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
     
-    <style>
-        body {
-            padding-top: 76px;
-        }
-        
-        .faculty-card {
-            border-radius: 10px;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .faculty-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-        
-        .search-filters {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .filter-label {
-            font-weight: 600;
-            color: #495057;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .btn-search {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            border: none;
-            border-radius: 50px;
-            padding: 12px 30px;
-            font-weight: 600;
-        }
-        
-        .view-toggles .btn {
-            border-radius: 50px;
-        }
-        
-        .research-areas {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-        
-        .research-area-tag {
-            background: #e3f2fd;
-            color: #1976d2;
-            padding: 0.25rem 0.5rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            border: 1px solid #bbdefb;
-        }
-        
-        .faculty-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .publications-badge {
-            background: linear-gradient(135deg, #11998e, #38ef7d);
-            color: white;
-            border: none;
-        }
-        
-        .position-badge {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-        }
-        
-        .loading-spinner {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3b82f6;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .error-message {
-            background: #fee2e2;
-            color: #991b1b;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #dc2626;
-            margin: 2rem 0;
-        }
-        
-        .empty-state {
-            text-align: center;
-            padding: 3rem;
-            color: #6b7280;
-        }
-        
-        .empty-state i {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            opacity: 0.5;
-        }
-        
-        .advanced-filters {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-top: 1rem;
-            display: none;
-        }
-        
-        .advanced-filters.show {
-            display: block;
-        }
-    </style>
+    <!-- Custom CSS Theme -->
+    <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
+    <link rel="stylesheet" href="/static/css/facultyfinder.css">
+    <link rel="stylesheet" href="/static/css/filter-fixes.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -198,149 +66,151 @@
             <div class="col-12">
                 <h1 class="mb-3">
                     <i class="fas fa-users text-primary me-3"></i>
-                    Faculty Directory
+                    Faculty Search
                 </h1>
                 <p class="lead text-muted">
-                    Discover leading researchers and faculty members from universities worldwide. Find your next collaborator.
+                    Discover faculty members from universities worldwide. Search by name, research interests, or filter by university and department.
                 </p>
             </div>
         </div>
         
         <!-- Search and Filters -->
         <div class="search-filters">
-            <div class="row">
-                <div class="col-lg-4 mb-3">
-                    <label class="filter-label">Search Faculty</label>
-                    <input type="text" class="form-control" id="searchInput"
-                           placeholder="Name, research areas, or keywords...">
-                </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <label class="filter-label">University</label>
-                    <select class="form-select" id="universitySelect">
-                        <option value="">All Universities</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <label class="filter-label">Sort By</label>
-                    <select class="form-select" id="sortSelect">
-                        <option value="name">Name</option>
-                        <option value="university">University</option>
-                        <option value="publications">Publications</option>
-                        <option value="recent_publications">Recent Publications</option>
-                    </select>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-3 d-flex align-items-end">
-                    <button type="button" class="btn btn-search text-white w-100" onclick="searchFaculty()">
-                        <i class="fas fa-search me-2"></i>Search
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Advanced Filters Toggle -->
-            <div class="row">
-                <div class="col-12">
-                    <button class="btn btn-outline-primary btn-sm" onclick="toggleAdvancedFilters()">
-                        <i class="fas fa-filter me-2"></i>Advanced Filters
-                        <i class="fas fa-chevron-down ms-1" id="advanced-chevron"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Advanced Filters -->
-            <div class="advanced-filters" id="advanced-filters">
+            <form id="faculty-search-form">
                 <div class="row">
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <label class="filter-label">Country</label>
+                        <select class="form-select" name="country" id="countrySelect">
+                            <option value="">All Countries</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <label class="filter-label">University</label>
+                        <select class="form-select" name="university" id="universitySelect">
+                            <option value="">All Universities</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
                         <label class="filter-label">Department</label>
-                        <input type="text" class="form-control" id="departmentInput"
-                               placeholder="Department or faculty...">
+                        <select class="form-select" name="department" id="departmentSelect">
+                            <option value="">All Departments</option>
+                        </select>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <label class="filter-label">Search</label>
+                        <input type="text" class="form-control" name="search" id="searchInput"
+                               placeholder="Search faculty...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
                         <label class="filter-label">Research Area</label>
-                        <input type="text" class="form-control" id="researchAreaInput"
-                               placeholder="Research keywords...">
+                        <input type="text" class="form-control" name="research_area" id="researchAreaInput"
+                               placeholder="Research interests...">
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-3 mb-3">
+                        <label class="filter-label">Academic Rank</label>
+                        <select class="form-select" name="position" id="positionSelect">
+                            <option value="">All Ranks</option>
+                            <option value="Professor">Professor</option>
+                            <option value="Associate Professor">Associate Professor</option>
+                            <option value="Assistant Professor">Assistant Professor</option>
+                            <option value="Lecturer">Lecturer</option>
+                            <option value="Senior Lecturer">Senior Lecturer</option>
+                            <option value="Reader">Reader</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-3 mb-3">
                         <label class="filter-label">Employment Type</label>
-                        <select class="form-select" id="employmentSelect">
+                        <select class="form-select" name="employment_type" id="employmentTypeSelect">
                             <option value="">All Types</option>
-                            <option value="professor">Professor</option>
-                            <option value="associate">Associate Professor</option>
-                            <option value="assistant">Assistant Professor</option>
-                            <option value="lecturer">Lecturer</option>
+                            <option value="full_time">Full-time</option>
+                            <option value="part_time">Part-time</option>
+                            <option value="adjunct">Adjunct</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <label class="filter-label">Sort By</label>
+                        <select class="form-select" name="sort_by" id="sortBySelect">
+                            <option value="name">Name</option>
+                            <option value="university">University</option>
+                            <option value="department">Department</option>
+                            <option value="publications">Publications</option>
+                            <option value="recent_publications">Recent Publications</option>
                         </select>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-lg-3 mb-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary me-2">
+                            <i class="fas fa-search me-2"></i>Search
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="clearFilters()">
+                            <i class="fas fa-times me-2"></i>Clear
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
         
         <!-- Results Header -->
-        <div class="row mb-4">
+        <div class="row">
             <div class="col-12">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h4 class="mb-2">Faculty Results</h4>
-                        <div id="results-info" class="text-muted">
-                            Loading faculty...
-                        </div>
-                    </div>
-                    <div class="view-toggles">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-outline-primary active" data-view="grid" onclick="toggleView('grid')">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 id="results-info">Loading faculty members...</h3>
+                    <div class="view-controls d-flex align-items-center">
+                        <div class="btn-group me-3" role="group">
+                            <button type="button" class="btn btn-outline-primary btn-sm active" data-view="grid" onclick="toggleView('grid')">
                                 <i class="fas fa-th"></i>
                             </button>
-                            <button type="button" class="btn btn-outline-primary" data-view="list" onclick="toggleView('list')">
+                            <button type="button" class="btn btn-outline-primary btn-sm" data-view="list" onclick="toggleView('list')">
                                 <i class="fas fa-list"></i>
                             </button>
                         </div>
+                        
+                        <div class="d-flex align-items-center">
+                            <label class="small text-muted me-2">Per page:</label>
+                            <select class="form-select form-select-sm" style="width: auto;" id="perPageSelect" onchange="searchFaculty()">
+                                <option value="12">12</option>
+                                <option value="24" selected>24</option>
+                                <option value="48">48</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Faculty Grid -->
+                <div id="faculty-grid" class="row">
+                    <!-- Loading indicator -->
+                    <div class="col-12 text-center p-5">
+                        <div class="loading-spinner"></div>
+                        <p class="mt-3 text-muted">Loading faculty members...</p>
+                    </div>
+                </div>
+                
+                <!-- Faculty Table (Hidden by default) -->
+                <div id="faculty-table" class="table-responsive" style="display: none;">
+                    <table class="table table-hover table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">University</th>
+                                <th scope="col">Department</th>
+                                <th scope="col">Research Areas</th>
+                                <th scope="col" class="text-center">Publications</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="faculty-table-body">
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                <div id="pagination-container" class="d-flex justify-content-center mt-4"></div>
             </div>
         </div>
-        
-        <!-- Faculty Grid -->
-        <div id="faculty-grid" class="row">
-            <!-- Loading indicator -->
-            <div class="col-12 text-center p-5">
-                <div class="loading-spinner"></div>
-                <p class="mt-3 text-muted">Loading faculty...</p>
-            </div>
-        </div>
-        
-        <!-- Faculty Table (Hidden by default) -->
-        <div id="faculty-table" class="table-responsive" style="display: none;">
-            <table class="table table-hover table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col" class="sortable" data-sort="name">
-                            Faculty Name 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable" data-sort="university">
-                            University 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable" data-sort="department">
-                            Department 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable" data-sort="position">
-                            Position 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable text-center" data-sort="publications">
-                            Publications 
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col">Research Areas</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Pagination -->
-        <div id="pagination-container"></div>
     </div>
 
     <!-- Bootstrap JS -->
@@ -353,6 +223,7 @@
         let currentPage = 1;
         let currentFilters = {
             search: '',
+            country: '',
             university: '',
             department: '',
             research_area: '',
@@ -360,23 +231,48 @@
             sort_by: 'name'
         };
         let allFaculty = [];
+        let countries = [];
         let universities = [];
+        let departments = [];
         
         // API Base URL
         const API_BASE = '/api/v1';
         
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
+            loadCountries();
             loadUniversities();
             loadFaculty();
             
             // Add event listeners
-            document.getElementById('searchInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    searchFaculty();
-                }
+            document.getElementById('faculty-search-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                searchFaculty();
             });
+            
+            // Add change listeners for dynamic filtering
+            document.getElementById('countrySelect').addEventListener('change', updateUniversities);
+            document.getElementById('universitySelect').addEventListener('change', updateDepartments);
         });
+        
+        // Load countries for filter
+        async function loadCountries() {
+            try {
+                const response = await fetch(`${API_BASE}/countries`);
+                const data = await response.json();
+                
+                const countrySelect = document.getElementById('countrySelect');
+                data.forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country.country;
+                    option.textContent = `${country.country} (${country.faculty_count})`;
+                    countrySelect.appendChild(option);
+                });
+                
+            } catch (error) {
+                console.error('Error loading countries:', error);
+            }
+        }
         
         // Load universities for filter
         async function loadUniversities() {
@@ -384,17 +280,76 @@
                 const response = await fetch(`${API_BASE}/universities?per_page=100`);
                 const data = await response.json();
                 
-                const universitySelect = document.getElementById('universitySelect');
-                data.universities.forEach(university => {
-                    const option = document.createElement('option');
-                    option.value = university.university_code;
-                    option.textContent = university.name;
-                    universitySelect.appendChild(option);
-                });
+                universities = data.universities;
+                updateUniversityOptions();
                 
             } catch (error) {
                 console.error('Error loading universities:', error);
             }
+        }
+        
+        // Update university options based on selected country
+        function updateUniversities() {
+            updateUniversityOptions();
+            updateDepartments(); // Reset departments when university changes
+        }
+        
+        // Update university select options
+        function updateUniversityOptions() {
+            const countrySelect = document.getElementById('countrySelect');
+            const universitySelect = document.getElementById('universitySelect');
+            const selectedCountry = countrySelect.value;
+            
+            // Clear current options
+            universitySelect.innerHTML = '<option value="">All Universities</option>';
+            
+            // Filter universities by selected country
+            const filteredUniversities = selectedCountry 
+                ? universities.filter(uni => uni.country === selectedCountry)
+                : universities;
+            
+            filteredUniversities.forEach(university => {
+                const option = document.createElement('option');
+                option.value = university.university_code;
+                option.textContent = `${university.name} (${university.faculty_count})`;
+                universitySelect.appendChild(option);
+            });
+        }
+        
+        // Update departments (placeholder - would need API endpoint)
+        function updateDepartments() {
+            const departmentSelect = document.getElementById('departmentSelect');
+            departmentSelect.innerHTML = '<option value="">All Departments</option>';
+            
+            // This would typically load departments based on selected university
+            // For now, we'll add some common departments
+            const commonDepartments = [
+                'Computer Science', 'Medicine', 'Engineering', 'Biology', 
+                'Chemistry', 'Physics', 'Mathematics', 'Psychology', 
+                'Business', 'Economics', 'History', 'Literature'
+            ];
+            
+            commonDepartments.forEach(dept => {
+                const option = document.createElement('option');
+                option.value = dept;
+                option.textContent = dept;
+                departmentSelect.appendChild(option);
+            });
+        }
+        
+        // Search faculty
+        function searchFaculty() {
+            // Get filter values
+            currentFilters.search = document.getElementById('searchInput').value;
+            currentFilters.country = document.getElementById('countrySelect').value;
+            currentFilters.university = document.getElementById('universitySelect').value;
+            currentFilters.department = document.getElementById('departmentSelect').value;
+            currentFilters.research_area = document.getElementById('researchAreaInput').value;
+            currentFilters.employment_type = document.getElementById('employmentTypeSelect').value;
+            currentFilters.sort_by = document.getElementById('sortBySelect').value;
+            
+            currentPage = 1;
+            loadFaculty(currentPage);
         }
         
         // Load faculty
@@ -402,11 +357,19 @@
             try {
                 showLoading();
                 
+                const perPage = document.getElementById('perPageSelect').value;
                 const params = new URLSearchParams({
                     page: page,
-                    per_page: 20,
+                    per_page: perPage,
                     ...currentFilters
                 });
+                
+                // Remove empty parameters
+                for (let [key, value] of [...params.entries()]) {
+                    if (!value) {
+                        params.delete(key);
+                    }
+                }
                 
                 const response = await fetch(`${API_BASE}/faculties?${params}`);
                 const data = await response.json();
@@ -422,18 +385,6 @@
             }
         }
         
-        // Search faculty
-        function searchFaculty() {
-            currentFilters.search = document.getElementById('searchInput').value;
-            currentFilters.university = document.getElementById('universitySelect').value;
-            currentFilters.department = document.getElementById('departmentInput').value;
-            currentFilters.research_area = document.getElementById('researchAreaInput').value;
-            currentFilters.employment_type = document.getElementById('employmentSelect').value;
-            currentFilters.sort_by = document.getElementById('sortSelect').value;
-            currentPage = 1;
-            loadFaculty(currentPage);
-        }
-        
         // Display faculty in grid view
         function displayFaculty(faculty) {
             const container = document.getElementById('faculty-grid');
@@ -441,10 +392,10 @@
             if (faculty.length === 0) {
                 container.innerHTML = `
                     <div class="col-12">
-                        <div class="empty-state">
-                            <i class="fas fa-users"></i>
+                        <div class="text-center p-5">
+                            <i class="fas fa-user-slash fa-4x text-muted mb-3"></i>
                             <h4>No faculty found</h4>
-                            <p>Try adjusting your search filters or criteria.</p>
+                            <p class="text-muted">Try adjusting your search filters or criteria.</p>
                         </div>
                     </div>
                 `;
@@ -453,58 +404,77 @@
             
             container.innerHTML = '';
             faculty.forEach(prof => {
-                const initials = getInitials(prof.name);
-                const publications = prof.total_publications || 0;
-                const recentPubs = prof.publications_last_5_years || 0;
-                const researchAreas = prof.research_areas ? prof.research_areas.split('|').slice(0, 3) : [];
-                
                 const facultyCard = `
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card faculty-card">
-                            <div class="card-body text-center">
-                                <div class="faculty-avatar mx-auto">
-                                    ${initials}
-                                </div>
-                                <h5 class="card-title">${prof.name}</h5>
-                                <p class="card-text">
-                                    <i class="fas fa-university text-primary me-2"></i>
-                                    <small>${prof.university_name || 'Unknown University'}</small>
-                                </p>
-                                
-                                ${prof.primary_position ? 
-                                    `<span class="badge position-badge mb-2">${prof.primary_position}</span><br>` : 
-                                    ''
-                                }
-                                
-                                <div class="d-flex justify-content-center gap-2 mb-3">
-                                    <span class="badge publications-badge">
-                                        <i class="fas fa-file-alt me-1"></i>
-                                        ${publications} pubs
-                                    </span>
-                                    ${recentPubs > 0 ? 
-                                        `<span class="badge bg-success">
-                                            <i class="fas fa-clock me-1"></i>
-                                            ${recentPubs} recent
-                                        </span>` : 
-                                        ''
-                                    }
-                                </div>
-                                
-                                ${researchAreas.length > 0 ? `
-                                    <div class="research-areas">
-                                        ${researchAreas.map(area => 
-                                            `<span class="research-area-tag">${area.trim()}</span>`
-                                        ).join('')}
+                    <div class="col-lg-6 col-xl-4 mb-4">
+                        <div class="faculty-card h-100">
+                            <div class="card-body">
+                                <div class="faculty-info">
+                                    <!-- Professor Name and Title -->
+                                    <div class="faculty-header mb-3">
+                                        <h5 class="card-title mb-1">
+                                            <a href="/faculties?search=${encodeURIComponent(prof.name)}" class="text-decoration-none professor-link">
+                                                ${prof.name}
+                                            </a>
+                                        </h5>
+                                        <p class="text-muted small mb-0">
+                                            <i class="fas fa-graduation-cap me-1"></i>
+                                            ${prof.primary_position || 'Faculty Member'}
+                                        </p>
                                     </div>
-                                ` : ''}
-                                
-                                ${prof.email ? `
-                                    <div class="mt-3">
-                                        <a href="mailto:${prof.email}" class="btn btn-outline-primary btn-sm">
-                                            <i class="fas fa-envelope me-1"></i>Contact
-                                        </a>
+                                    
+                                    <!-- University -->
+                                    <div class="faculty-affiliation mb-2">
+                                        <p class="text-muted small mb-1">
+                                            <i class="fas fa-university me-1"></i>
+                                            <a href="/faculties?university=${encodeURIComponent(prof.university_code || prof.university_name)}" 
+                                               class="text-decoration-none text-muted hover-primary university-link">
+                                                ${prof.university_name || 'Unknown University'}
+                                            </a>
+                                        </p>
+                                        
+                                        <!-- Department -->
+                                        ${prof.department ? `
+                                        <p class="text-muted small mb-0">
+                                            <i class="fas fa-building me-1"></i>
+                                            <a href="/faculties?department=${encodeURIComponent(prof.department)}" 
+                                               class="text-decoration-none text-muted hover-primary department-link" 
+                                               title="${prof.department}">
+                                                ${prof.department}
+                                            </a>
+                                        </p>
+                                        ` : ''}
                                     </div>
-                                ` : ''}
+                                    
+                                    <!-- Research Areas -->
+                                    ${prof.research_areas ? `
+                                    <div class="research-areas mt-2 mb-3">
+                                        <small class="text-muted">
+                                            <i class="fas fa-flask me-1"></i>
+                                            ${prof.research_areas.substring(0, 100)}${prof.research_areas.length > 100 ? '...' : ''}
+                                        </small>
+                                    </div>
+                                    ` : ''}
+                                    
+                                    <!-- Publication Stats -->
+                                    <div class="publication-stats mt-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="badge bg-primary me-1">
+                                                    <i class="fas fa-file-alt me-1"></i>
+                                                    ${prof.total_publications || 0} pubs
+                                                </span>
+                                                ${prof.publications_last_5_years ? `
+                                                <span class="badge bg-success">
+                                                    ${prof.publications_last_5_years} recent
+                                                </span>
+                                                ` : ''}
+                                            </div>
+                                            <button class="btn btn-outline-primary btn-sm" onclick="viewFacultyProfile('${prof.name}')">
+                                                <i class="fas fa-eye me-1"></i>View
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -520,73 +490,44 @@
         
         // Display faculty in table view
         function displayFacultyTable(faculty) {
-            const tbody = document.getElementById('table-body');
+            const tbody = document.getElementById('faculty-table-body');
             tbody.innerHTML = '';
             
             faculty.forEach(prof => {
-                const publications = prof.total_publications || 0;
-                const researchAreas = prof.research_areas ? 
-                    prof.research_areas.split('|').slice(0, 2).map(area => 
-                        `<span class="research-area-tag me-1">${area.trim()}</span>`
-                    ).join('') : 'Not specified';
-                
                 const row = `
                     <tr>
                         <td>
-                            <strong>${prof.name}</strong>
-                            ${prof.email ? `<br><small class="text-muted">${prof.email}</small>` : ''}
+                            <strong>
+                                <a href="/faculties?search=${encodeURIComponent(prof.name)}" class="text-decoration-none">
+                                    ${prof.name}
+                                </a>
+                            </strong>
                         </td>
+                        <td>${prof.primary_position || 'Faculty Member'}</td>
                         <td>
-                            <span class="fw-semibold">${prof.university_name || 'Unknown'}</span>
+                            <a href="/faculties?university=${encodeURIComponent(prof.university_code || prof.university_name)}" 
+                               class="text-decoration-none">
+                                ${prof.university_name || 'Unknown'}
+                            </a>
                         </td>
+                        <td>${prof.department || 'Not specified'}</td>
                         <td>
-                            ${prof.department || 'Not specified'}
-                        </td>
-                        <td>
-                            ${prof.primary_position ? 
-                                `<span class="badge position-badge">${prof.primary_position}</span>` : 
-                                '<span class="text-muted">Not specified</span>'
-                            }
+                            <small class="text-muted">
+                                ${prof.research_areas ? prof.research_areas.substring(0, 50) + (prof.research_areas.length > 50 ? '...' : '') : 'Not specified'}
+                            </small>
                         </td>
                         <td class="text-center">
-                            <span class="badge publications-badge">${publications}</span>
-                            ${prof.publications_last_5_years ? 
-                                `<br><small class="text-muted">${prof.publications_last_5_years} recent</small>` : 
-                                ''
-                            }
+                            <span class="badge bg-primary">${prof.total_publications || 0}</span>
                         </td>
                         <td>
-                            ${researchAreas}
+                            <button class="btn btn-outline-primary btn-sm" onclick="viewFacultyProfile('${prof.name}')">
+                                <i class="fas fa-eye me-1"></i>View
+                            </button>
                         </td>
                     </tr>
                 `;
                 tbody.innerHTML += row;
             });
-        }
-        
-        // Get initials from name
-        function getInitials(name) {
-            return name.split(' ')
-                      .map(word => word.charAt(0))
-                      .join('')
-                      .toUpperCase()
-                      .slice(0, 2);
-        }
-        
-        // Toggle advanced filters
-        function toggleAdvancedFilters() {
-            const filters = document.getElementById('advanced-filters');
-            const chevron = document.getElementById('advanced-chevron');
-            
-            if (filters.classList.contains('show')) {
-                filters.classList.remove('show');
-                chevron.classList.remove('fa-chevron-up');
-                chevron.classList.add('fa-chevron-down');
-            } else {
-                filters.classList.add('show');
-                chevron.classList.remove('fa-chevron-down');
-                chevron.classList.add('fa-chevron-up');
-            }
         }
         
         // Toggle between grid and list view
@@ -617,6 +558,27 @@
             }
         }
         
+        // View faculty profile
+        function viewFacultyProfile(name) {
+            window.location.href = `/faculties?search=${encodeURIComponent(name)}`;
+        }
+        
+        // Clear filters
+        function clearFilters() {
+            document.getElementById('faculty-search-form').reset();
+            currentFilters = {
+                search: '',
+                country: '',
+                university: '',
+                department: '',
+                research_area: '',
+                employment_type: '',
+                sort_by: 'name'
+            };
+            currentPage = 1;
+            loadFaculty(currentPage);
+        }
+        
         // Display pagination
         function displayPagination(pagination) {
             const container = document.getElementById('pagination-container');
@@ -626,7 +588,7 @@
                 return;
             }
             
-            let paginationHTML = '<nav aria-label="Faculty pagination"><ul class="pagination justify-content-center">';
+            let paginationHTML = '<nav aria-label="Faculty pagination"><ul class="pagination">';
             
             // Previous button
             if (pagination.page > 1) {
@@ -675,10 +637,7 @@
             const start = ((pagination.page - 1) * pagination.per_page) + 1;
             const end = Math.min(pagination.page * pagination.per_page, pagination.total_count);
             
-            info.innerHTML = `
-                Showing ${start}-${end} of ${pagination.total_count} faculty members
-                <span class="text-primary fw-bold">(Page ${pagination.page} of ${pagination.total_pages})</span>
-            `;
+            info.innerHTML = `Faculty Members (${start}-${end} of ${pagination.total_count} found)`;
         }
         
         // Show loading indicator
@@ -687,12 +646,12 @@
             container.innerHTML = `
                 <div class="col-12 text-center p-5">
                     <div class="loading-spinner"></div>
-                    <p class="mt-3 text-muted">Loading faculty...</p>
+                    <p class="mt-3 text-muted">Loading faculty members...</p>
                 </div>
             `;
             
             const info = document.getElementById('results-info');
-            info.innerHTML = 'Loading faculty...';
+            info.innerHTML = 'Loading faculty members...';
         }
         
         // Show error message
@@ -700,7 +659,7 @@
             const container = document.getElementById('faculty-grid');
             container.innerHTML = `
                 <div class="col-12">
-                    <div class="error-message">
+                    <div class="alert alert-danger">
                         <i class="fas fa-exclamation-triangle me-2"></i>
                         ${message}
                     </div>
