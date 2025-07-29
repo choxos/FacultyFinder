@@ -808,7 +808,7 @@
         </div>
 
         <!-- Payment Method Selection -->
-        <div class="row mb-4" id="paymentMethodSection" style="display: none;">
+        <div class="row mb-4" id="paymentMethodSection">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -819,21 +819,20 @@
                     </div>
                     <div class="card-body">
                         <!-- Payment Method Options -->
-                        <div class="row g-3">
+                        <div class="row g-3 mb-3">
                             <!-- Credit Card Payment -->
                             <div class="col-md-6">
                                 <div class="card payment-method-card h-100" onclick="selectPaymentMethod('credit_card')">
                                     <div class="card-body text-center">
                                         <i class="fas fa-credit-card fa-2x text-primary mb-3"></i>
-                                        <h6>Credit Card</h6>
-                                        <p class="text-muted small mb-3">Visa, MasterCard, Amex</p>
+                                        <h6>Credit/Debit Card</h6>
+                                        <p class="text-muted small mb-3">Secure payment via Stripe</p>
                                         <div class="payment-features">
-                                            <div class="badge bg-success mb-2">INSTANT</div>
                                             <ul class="list-unstyled small text-start">
-                                                <li><i class="fas fa-check text-success me-1"></i> Immediate access</li>
-                                                <li><i class="fas fa-check text-success me-1"></i> Secure SSL encryption</li>
-                                                <li><i class="fas fa-check text-success me-1"></i> Auto-refund protection</li>
-                                                <li><i class="fas fa-check text-success me-1"></i> Receipt via email</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> Instant processing</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> SSL secured</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> All major cards accepted</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> PCI DSS compliant</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -846,14 +845,13 @@
                                     <div class="card-body text-center">
                                         <i class="fab fa-bitcoin fa-2x text-warning mb-3"></i>
                                         <h6>Cryptocurrency</h6>
-                                        <p class="text-muted small mb-3">Bitcoin, Ethereum, USDC & more</p>
+                                        <p class="text-muted small mb-3">Pay with Bitcoin, Ethereum, and more</p>
                                         <div class="payment-features">
-                                            <div class="badge bg-warning text-dark mb-2">PRIVATE</div>
                                             <ul class="list-unstyled small text-start">
+                                                <li><i class="fas fa-check text-success me-1"></i> Lower transaction fees</li>
                                                 <li><i class="fas fa-check text-success me-1"></i> Anonymous payments</li>
-                                                <li><i class="fas fa-check text-success me-1"></i> No personal info needed</li>
-                                                <li><i class="fas fa-check text-success me-1"></i> Lower fees (0.5-1%)</li>
-                                                <li><i class="fas fa-check text-success me-1"></i> Global accessibility</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> 50+ cryptocurrencies</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> Instant confirmation</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -861,57 +859,49 @@
                             </div>
                         </div>
 
-                        <!-- Cryptocurrency Selection (Hidden initially) -->
-                        <div id="cryptoSelection" class="mt-4" style="display: none;">
-                            <h6 class="text-primary mb-3"><i class="fab fa-bitcoin me-2"></i>Select Cryptocurrency</h6>
-                            <div class="row g-2" id="cryptoCurrencies">
-                                <div class="col-md-2 col-4">
-                                    <div class="card crypto-card" onclick="selectCrypto('BTC')">
-                                        <div class="card-body text-center p-2">
-                                            <i class="fab fa-bitcoin text-warning"></i>
-                                            <small>Bitcoin</small>
-                                        </div>
-                                    </div>
+                        <!-- Payment Options for Credit Card -->
+                        <div id="creditCardOptions" class="mb-3" style="display: none;">
+                            <h6 class="text-primary">Credit Card Details</h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-label small">Card Number</label>
+                                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
                                 </div>
-                                <div class="col-md-2 col-4">
-                                    <div class="card crypto-card" onclick="selectCrypto('ETH')">
-                                        <div class="card-body text-center p-2">
-                                            <i class="fab fa-ethereum text-primary"></i>
-                                            <small>Ethereum</small>
-                                        </div>
-                                    </div>
+                                <div class="col-md-3">
+                                    <label class="form-label small">Expiry</label>
+                                    <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
                                 </div>
-                                <div class="col-md-2 col-4">
-                                    <div class="card crypto-card" onclick="selectCrypto('USDC')">
-                                        <div class="card-body text-center p-2">
-                                            <i class="fas fa-dollar-sign text-success"></i>
-                                            <small>USDC</small>
-                                        </div>
-                                    </div>
+                                <div class="col-md-3">
+                                    <label class="form-label small">CVV</label>
+                                    <input type="text" class="form-control" placeholder="123" maxlength="4">
                                 </div>
                             </div>
-                            
-                            <div class="row mt-3">
+                        </div>
+
+                        <!-- Payment Options for Cryptocurrency -->
+                        <div id="cryptoOptions" class="mb-3" style="display: none;">
+                            <h6 class="text-warning">Cryptocurrency Payment</h6>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <label class="form-label small">Payment Provider</label>
-                                    <select class="form-select" id="cryptoProvider">
-                                        <option value="coinbase_commerce">Coinbase Commerce (Recommended)</option>
+                                    <select class="form-select">
+                                        <option value="coinpayments">CoinPayments</option>
                                         <option value="nowpayments">NOWPayments</option>
-                                        <option value="coingate">CoinGate</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label small">Estimated Total</label>
-                                    <div class="form-control-plaintext">
-                                        <span id="cryptoAmount">Loading...</span>
-                                        <small class="text-muted d-block">Exchange rate updates every 5 minutes</small>
-                                    </div>
+                                    <label class="form-label small">Preferred Currency</label>
+                                    <select class="form-select">
+                                        <option value="btc">Bitcoin (BTC)</option>
+                                        <option value="eth">Ethereum (ETH)</option>
+                                        <option value="ltc">Litecoin (LTC)</option>
+                                        <option value="ada">Cardano (ADA)</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
 
                         <input type="hidden" id="selectedPaymentMethod" value="">
-                        <input type="hidden" id="selectedCryptoCurrency" value="">
                     </div>
                 </div>
             </div>
@@ -1122,68 +1112,47 @@
 
         // Select analysis option
         function selectAnalysisOption(option) {
-            // Remove selected class from all cards
+            // Remove active state from all cards
             document.querySelectorAll('.ai-service-card').forEach(card => {
                 card.classList.remove('selected');
             });
             
-            // Add selected class to clicked card
-            event.currentTarget.classList.add('selected');
+            // Add active state to selected card
+            event.target.closest('.ai-service-card').classList.add('selected');
             
             selectedAnalysisOption = option;
             document.getElementById('selectedAnalysisOption').value = option;
             
-            // Show payment method section for paid options
-            const paidOptions = ['single', 'triple_pack', 'five_pack', 'monthly_unlimited', 'expert_basic', 'expert_premium', 'expert_vip'];
-            if (paidOptions.includes(option)) {
-                document.getElementById('paymentMethodSection').style.display = 'block';
-            } else {
-                document.getElementById('paymentMethodSection').style.display = 'none';
-            }
+            // Always show payment method section for any option
+            document.getElementById('paymentMethodSection').style.display = 'block';
             
             validateForm();
         }
 
         // Select payment method
         function selectPaymentMethod(method) {
-            // Remove selected class from all cards
+            // Remove active state from all payment cards
             document.querySelectorAll('.payment-method-card').forEach(card => {
                 card.classList.remove('selected');
             });
             
-            // Add selected class to clicked card
-            event.currentTarget.classList.add('selected');
+            // Add active state to selected card
+            event.target.closest('.payment-method-card').classList.add('selected');
             
             selectedPaymentMethod = method;
             document.getElementById('selectedPaymentMethod').value = method;
             
-            // Show crypto selection if cryptocurrency is selected
-            const cryptoSelection = document.getElementById('cryptoSelection');
-            if (method === 'cryptocurrency') {
-                cryptoSelection.style.display = 'block';
-            } else {
-                cryptoSelection.style.display = 'none';
+            // Show/hide payment options based on method
+            const creditCardOptions = document.getElementById('creditCardOptions');
+            const cryptoOptions = document.getElementById('cryptoOptions');
+            
+            if (method === 'credit_card') {
+                creditCardOptions.style.display = 'block';
+                cryptoOptions.style.display = 'none';
+            } else if (method === 'cryptocurrency') {
+                creditCardOptions.style.display = 'none';
+                cryptoOptions.style.display = 'block';
             }
-            
-            validateForm();
-        }
-
-        // Select cryptocurrency
-        function selectCrypto(crypto) {
-            // Remove selected class from all crypto cards
-            document.querySelectorAll('.crypto-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-            
-            // Add selected class to clicked card
-            event.currentTarget.classList.add('selected');
-            
-            selectedCryptoCurrency = crypto;
-            document.getElementById('selectedCryptoCurrency').value = crypto;
-            
-            // Update crypto amount (mock calculation)
-            const amounts = { BTC: '0.00021', ETH: '0.0045', USDC: '10.00' };
-            document.getElementById('cryptoAmount').textContent = `${amounts[crypto]} ${crypto}`;
             
             validateForm();
         }
