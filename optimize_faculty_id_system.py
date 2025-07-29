@@ -19,20 +19,20 @@ logger = logging.getLogger(__name__)
 # Database configuration
 DATABASE_URL = f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 
-def generate_faculty_id(university_code: str, professor_id: int) -> str:
-    """Generate faculty_id from university_code and professor_id"""
-    return f"{university_code}-{professor_id:05d}"
+def generate_professor_id(university_code: str, sequence_id: int) -> str:
+    """Generate professor_id from university_code and sequence_id"""
+    return f"{university_code}-{sequence_id:05d}"
 
-def parse_faculty_id(faculty_id: str) -> tuple:
-    """Parse faculty_id to extract university_code and professor_id"""
+def parse_professor_id(professor_id: str) -> tuple:
+    """Parse professor_id to extract university_code and sequence_id"""
     # CA-ON-002-00001 → ("CA-ON-002", 1)
-    parts = faculty_id.split('-')
+    parts = professor_id.split('-')
     if len(parts) >= 4:
         university_code = '-'.join(parts[:-1])  # CA-ON-002
-        professor_id = int(parts[-1])  # 1 (from 00001)
-        return university_code, professor_id
+        sequence_id = int(parts[-1])  # 1 (from 00001)
+        return university_code, sequence_id
     else:
-        raise ValueError(f"Invalid faculty_id format: {faculty_id}")
+        raise ValueError(f"Invalid professor_id format: {professor_id}")
 
 async def optimize_faculty_id_system():
     """Remove faculty_id column and optimize the system"""
@@ -91,22 +91,22 @@ async def optimize_faculty_id_system():
             university_counters[university_code] += 1
             new_professor_id = university_counters[university_code]
             
-            # Generate faculty_id to verify it matches
-            reconstructed_faculty_id = generate_faculty_id(university_code, new_professor_id)
+            # Generate professor_id to verify it matches
+            reconstructed_professor_id = generate_professor_id(university_code, new_professor_id)
             
             professor_mappings.append({
                 'database_id': row['id'],
                 'old_faculty_id': faculty_id,
                 'university_code': university_code,
                 'new_professor_id': new_professor_id,
-                'reconstructed_faculty_id': reconstructed_faculty_id,
+                'reconstructed_professor_id': reconstructed_professor_id,
                 'name': row['name']
             })
         
         # Log the mapping
         logger.info("📋 Professor ID mapping preview:")
         for i, mapping in enumerate(professor_mappings[:5]):
-            logger.info(f"  {mapping['name']}: {mapping['old_faculty_id']} → professor_id={mapping['new_professor_id']} ({mapping['reconstructed_faculty_id']})")
+            logger.info(f"  {mapping['name']}: {mapping['old_faculty_id']} → sequence_id={mapping['new_professor_id']} ({mapping['reconstructed_professor_id']})")
         
         if len(professor_mappings) > 5:
             logger.info(f"  ... and {len(professor_mappings) - 5} more")
@@ -161,20 +161,20 @@ async def optimize_faculty_id_system():
         
         logger.info("📊 Sample optimized data:")
         for row in verification_data:
-            reconstructed = generate_faculty_id(row['university_code'], row['professor_id'])
-            logger.info(f"  {row['name']}: professor_id={row['professor_id']} → {reconstructed}")
+            reconstructed = generate_professor_id(row['university_code'], row['professor_id'])
+            logger.info(f"  {row['name']}: sequence_id={row['professor_id']} → {reconstructed}")
         
         # Step 10: Create helper function test
         logger.info("🧪 Testing helper functions...")
         
         test_university_code = "CA-ON-002"
-        test_professor_id = 1
-        test_faculty_id = generate_faculty_id(test_university_code, test_professor_id)
-        parsed_university, parsed_id = parse_faculty_id(test_faculty_id)
+        test_sequence_id = 1
+        test_professor_id = generate_professor_id(test_university_code, test_sequence_id)
+        parsed_university, parsed_id = parse_professor_id(test_professor_id)
         
         logger.info(f"✅ Helper function test:")
-        logger.info(f"  generate_faculty_id('{test_university_code}', {test_professor_id}) = '{test_faculty_id}'")
-        logger.info(f"  parse_faculty_id('{test_faculty_id}') = ('{parsed_university}', {parsed_id})")
+        logger.info(f"  generate_professor_id('{test_university_code}', {test_sequence_id}) = '{test_professor_id}'")
+        logger.info(f"  parse_professor_id('{test_professor_id}') = ('{parsed_university}', {parsed_id})")
         
         # Summary
         total_professors = len(professor_mappings)

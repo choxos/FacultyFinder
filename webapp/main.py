@@ -26,21 +26,21 @@ from dotenv import load_dotenv
 # OAuth imports
 from webapp.oauth import oauth, oauth_config, oauth_handler, init_oauth_handler, get_oauth_handler
 
-# Faculty ID helper functions
-def generate_faculty_id(university_code: str, professor_id: int) -> str:
-    """Generate faculty_id from university_code and professor_id"""
-    return f"{university_code}-{professor_id:05d}"
+# Professor ID helper functions
+def generate_professor_id(university_code: str, sequence_id: int) -> str:
+    """Generate professor_id from university_code and sequence_id"""
+    return f"{university_code}-{sequence_id:05d}"
 
-def parse_faculty_id(faculty_id: str) -> tuple:
-    """Parse faculty_id to extract university_code and professor_id"""
+def parse_professor_id(professor_id: str) -> tuple:
+    """Parse professor_id to extract university_code and sequence_id"""
     # CA-ON-002-00001 → ("CA-ON-002", 1)
-    parts = faculty_id.split('-')
+    parts = professor_id.split('-')
     if len(parts) >= 4:
         university_code = '-'.join(parts[:-1])  # CA-ON-002
-        professor_id = int(parts[-1])  # 1 (from 00001)
-        return university_code, professor_id
+        sequence_id = int(parts[-1])  # 1 (from 00001)
+        return university_code, sequence_id
     else:
-        raise ValueError(f"Invalid faculty_id format: {faculty_id}")
+        raise ValueError(f"Invalid professor_id format: {professor_id}")
 
 def determine_employment_type(full_time: bool, adjunct: bool) -> str:
     """Determine employment type based on full_time and adjunct flags"""
@@ -146,8 +146,7 @@ class University(BaseModel):
 
 class Professor(BaseModel):
     id: int
-    professor_id: int
-    faculty_id: str  # Computed field - generated from university_code + professor_id
+    professor_id: str  # Computed field - generated from university_code + sequence_id (e.g., "CA-ON-002-00001")
     name: str
     first_name: Optional[str] = None
     last_name: Optional[str] = None
@@ -528,7 +527,7 @@ async def get_faculties(
             
             # Main query
             query = f"""
-                SELECT p.id, p.professor_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email, p.university_code,
+                SELECT p.id, p.professor_id as sequence_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email, p.university_code,
                        COALESCE(p.department, '') as department, 
                        COALESCE(p.position, '') as position, 
                        COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas, 
@@ -558,9 +557,9 @@ async def get_faculties(
             faculties = []
             for row in rows:
                 professor_data = dict(row)
-                professor_data['faculty_id'] = generate_faculty_id(
+                professor_data['professor_id'] = generate_professor_id(
                     professor_data['university_code'], 
-                    professor_data['professor_id']
+                    professor_data['sequence_id']
                 )
                 professor_data['employment_type'] = determine_employment_type(
                     professor_data.get('full_time', True),
@@ -616,17 +615,17 @@ async def get_countries():
         logger.error(f"Error getting countries: {e}")
         raise HTTPException(status_code=500, detail="Failed to retrieve countries")
 
-@app.get("/api/v1/professor/{faculty_id}")
-async def get_professor(faculty_id: str = Path(..., description="Faculty ID (e.g., CA-ON-002-00001) or professor_id")):
+@app.get("/api/v1/professor/{professor_id}")
+async def get_professor(professor_id: str = Path(..., description="Professor ID (e.g., CA-ON-002-00001) or sequence number")):
     """Get individual professor details"""
     try:
         async with get_db_connection() as conn:
-            # Parse faculty_id to get university_code and professor_id
+            # Parse professor_id to get university_code and sequence_id
             try:
-                university_code, professor_id = parse_faculty_id(faculty_id)
-                # Use university_code + professor_id for lookup
+                university_code, sequence_id = parse_professor_id(professor_id)
+                # Use university_code + sequence_id for lookup
                 query = """
-                    SELECT p.id, p.professor_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email,
+                    SELECT p.id, p.professor_id as sequence_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email,
                            p.university_code, COALESCE(p.department, '') as department, 
                            COALESCE(p.position, '') as position, 
                            COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas,
@@ -641,12 +640,12 @@ async def get_professor(faculty_id: str = Path(..., description="Faculty ID (e.g
                     LEFT JOIN universities u ON p.university_code = u.university_code
                     WHERE p.university_code = $1 AND p.professor_id = $2
                 """
-                row = await conn.fetchrow(query, university_code, professor_id)
+                row = await conn.fetchrow(query, university_code, sequence_id)
             except ValueError:
-                # Fallback: treat as direct professor_id if parsing fails
-                if faculty_id.isdigit():
+                # Fallback: treat as direct sequence_id if parsing fails
+                if professor_id.isdigit():
                     query = """
-                        SELECT p.id, p.professor_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email,
+                        SELECT p.id, p.professor_id as sequence_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email,
                                p.university_code, COALESCE(p.department, '') as department, 
                                COALESCE(p.position, '') as position, 
                                COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas,
@@ -661,18 +660,18 @@ async def get_professor(faculty_id: str = Path(..., description="Faculty ID (e.g
                         LEFT JOIN universities u ON p.university_code = u.university_code
                         WHERE p.professor_id = $1
                     """
-                    row = await conn.fetchrow(query, int(faculty_id))
+                    row = await conn.fetchrow(query, int(professor_id))
                 else:
-                    raise HTTPException(status_code=400, detail="Invalid faculty_id format")
+                    raise HTTPException(status_code=400, detail="Invalid professor_id format")
             
             if not row:
                 raise HTTPException(status_code=404, detail="Professor not found")
             
             # Convert to dict and add computed fields
             professor_data = dict(row)
-            professor_data['faculty_id'] = generate_faculty_id(
+            professor_data['professor_id'] = generate_professor_id(
                 professor_data['university_code'], 
-                professor_data['professor_id']
+                professor_data['sequence_id']
             )
             professor_data['employment_type'] = determine_employment_type(
                 professor_data.get('full_time', True),
@@ -684,12 +683,12 @@ async def get_professor(faculty_id: str = Path(..., description="Faculty ID (e.g
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error getting professor {faculty_id}: {e}")
+        logger.error(f"Error getting professor {professor_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 # Professor detail route
-@app.get("/professor/{faculty_id}")
-async def get_professor_page(faculty_id: str):
+@app.get("/professor/{professor_id}")
+async def get_professor_page(professor_id: str):
     """Serve professor detail page"""
     return FileResponse(os.path.join(static_dir, "professor.html"))
 
