@@ -569,6 +569,51 @@ async def get_professor_page(professor_id: int):
     """Serve professor detail page"""
     return FileResponse(os.path.join(static_dir, "professor.html"))
 
+# University API endpoint
+@app.get("/api/v1/university/{university_code}", response_model=University)
+async def get_university_by_code(university_code: str):
+    """Get university details by university code"""
+    try:
+        async with await get_db_connection() as conn:
+            query = """
+                SELECT u.id, u.name, u.country, u.city, u.university_code, 
+                       COALESCE(u.province_state, '') as province, u.year_established,
+                       COALESCE(u.website, '') as website, COALESCE(u.university_type, 'Public') as university_type,
+                       COUNT(p.id) as faculty_count
+                FROM universities u
+                LEFT JOIN professors p ON p.university_code = u.university_code
+                WHERE u.university_code = $1 OR u.name = $1
+                GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state, 
+                         u.year_established, u.website, u.university_type
+                LIMIT 1
+            """
+            
+            row = await conn.fetchrow(query, university_code)
+            
+            if not row:
+                raise HTTPException(status_code=404, detail="University not found")
+            
+            # Convert row to dict and ensure all required fields are present
+            university_data = dict(row)
+            
+            # Ensure required fields for University model
+            if 'province' not in university_data:
+                university_data['province'] = university_data.get('province_state', '')
+            
+            return University(**university_data)
+            
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting university: {e}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve university")
+
+# University profile page route
+@app.get("/university/{university_code}")
+async def get_university_page(university_code: str):
+    """Serve university profile page"""
+    return FileResponse(os.path.join(static_dir, "university.html"))
+
 # Authentication routes
 @app.get("/login")
 async def get_login_page():
