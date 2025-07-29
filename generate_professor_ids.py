@@ -17,11 +17,11 @@ for env_file in env_files:
 
 def get_database_url():
     """Construct database URL from environment variables"""
-    host = os.getenv('DATABASE_HOST', 'localhost')
-    port = os.getenv('DATABASE_PORT', '5432')
-    name = os.getenv('DATABASE_NAME', 'facultyfinder')
-    user = os.getenv('DATABASE_USER', 'postgres')
-    password = os.getenv('DATABASE_PASSWORD', '')
+    host = os.getenv('DB_HOST', 'localhost')
+    port = os.getenv('DB_PORT', '5432')
+    name = os.getenv('DB_NAME', 'ff_production')  # Updated to match user's database
+    user = os.getenv('DB_USER', 'ff_user')        # Updated to match user's username
+    password = os.getenv('DB_PASSWORD', 'Choxos10203040')  # Updated to match user's password
     
     return f"postgresql://{user}:{password}@{host}:{port}/{name}"
 
