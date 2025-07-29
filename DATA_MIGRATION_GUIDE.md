@@ -83,13 +83,13 @@ pip install pandas psycopg2-binary python-dotenv
 **Option A: Full Migration System**
 ```bash
 cd /var/www/ff/data_import
-python3 data_migration_system.py --data-dir /var/www/ff/data_import
+python data_migration_system.py --data-dir /var/www/ff/data_import
 ```
 
 **Option B: Simple Import (Faster)**
 ```bash
 cd /var/www/ff/data_import
-python3 simple_data_import.py
+python simple_data_import.py
 ```
 
 ### **Step 4: Restart Website**
