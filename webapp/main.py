@@ -688,7 +688,7 @@ async def get_professor(professor_id: str = Path(..., description="Professor ID 
 
 # Professor detail route
 @app.get("/professor/{professor_id}")
-async def get_professor_page(professor_id: int):
+async def get_professor_page(professor_id: str):
     """Serve professor detail page"""
     return FileResponse(os.path.join(static_dir, "professor.html"))
 
