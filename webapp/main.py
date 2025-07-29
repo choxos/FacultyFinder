@@ -11,7 +11,7 @@ from typing import List, Dict, Optional, Any
 from contextlib import asynccontextmanager
 
 # FastAPI imports
-from fastapi import FastAPI, HTTPException, Query, Path, Request, status, Depends, Cookie
+from fastapi import FastAPI, HTTPException, Query, Path, Request, status, Depends, Cookie, Response
 from fastapi.responses import HTMLResponse, JSONResponse, FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -446,8 +446,8 @@ async def get_universities(
                     FROM universities u
                     LEFT JOIN professors p ON p.university_code = u.university_code
                     WHERE {' AND '.join(where_conditions)}
-                    HAVING COUNT(p.id) >= 0
                     GROUP BY u.id
+                    HAVING COUNT(p.id) >= 0
                 ) subquery
             """
             
@@ -823,6 +823,12 @@ async def internal_error_handler(request: Request, exc: Exception):
         status_code=500,
         content={"detail": "Internal server error", "status_code": 500}
     )
+
+# Favicon route to prevent 404 errors
+@app.get("/favicon.ico")
+async def get_favicon():
+    """Return 204 No Content for favicon to prevent 404 errors"""
+    return Response(status_code=204)
 
 if __name__ == "__main__":
     import uvicorn
