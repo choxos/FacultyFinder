@@ -20,33 +20,21 @@ from fastapi.middleware.gzip import GZipMiddleware
 # Database imports
 import asyncpg
 from pydantic import BaseModel, Field
+from dotenv import load_dotenv
 
-# Configuration imports
-try:
-    from webapp.config import settings, DATABASE_CONFIG, LOGGING_CONFIG, FASTAPI_CONFIG, CORS_CONFIG
-except ImportError:
-    # Fallback for local testing
-    import os
-    from dotenv import load_dotenv
-    load_dotenv('.env.test')
-    
-    class MockSettings:
-        database_url = f"postgresql://test:test@localhost:5432/test"
-        log_level = "INFO"
-    
-    settings = MockSettings()
-    DATABASE_CONFIG = {}
-    LOGGING_CONFIG = {"version": 1, "disable_existing_loggers": False, "handlers": {}, "loggers": {}}
-    FASTAPI_CONFIG = {"title": "FacultyFinder API", "version": "2.0.0"}
-    CORS_CONFIG = {"allow_origins": ["*"], "allow_credentials": True}
+# Load environment variables - prioritize production .env
+env_files = ['/var/www/ff/.env', '.env', '.env.test']
+for env_file in env_files:
+    if os.path.exists(env_file):
+        load_dotenv(env_file)
+        break
 
 # Configure logging
-import logging.config
-logging.config.dictConfig(LOGGING_CONFIG)
-logger = logging.getLogger("facultyfinder")
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-# Database configuration
-DATABASE_URL = settings.database_url
+# Database configuration - use environment variables directly
+DATABASE_URL = f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 
 # Global database pool
 db_pool = None
@@ -100,7 +88,8 @@ app.add_middleware(
 )
 
 # Mount static files
-app.mount("/static", StaticFiles(directory="webapp/static"), name="static")
+static_dir = "webapp/static" if os.path.exists("webapp/static") else "static"
+app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
 # Pydantic models
 class StatsResponse(BaseModel):
