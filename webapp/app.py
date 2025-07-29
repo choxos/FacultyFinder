@@ -54,7 +54,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize Flask app
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'development-key-change-in-production'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') or 'development-key-change-in-production'
 
 # Initialize Flask-Login
 login_manager = LoginManager()
