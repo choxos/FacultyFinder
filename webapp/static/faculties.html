@@ -196,18 +196,41 @@
                 <!-- Faculty Table (Hidden by default) -->
                 <div id="faculty-table" class="table-responsive" style="display: none;">
                     <table class="table table-hover table-striped">
-                        <thead class="table-dark">
+                        <thead class="table-light">
                             <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Position</th>
-                                <th scope="col">University</th>
-                                <th scope="col">Department</th>
-                                <th scope="col">Research Areas</th>
-                                <th scope="col" class="text-center">Publications</th>
-                                <th scope="col">Actions</th>
+                                <th class="sortable" data-sort="name">
+                                    <i class="fas fa-user me-1"></i>Professor
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="position">
+                                    <i class="fas fa-graduation-cap me-1"></i>Position
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="university">
+                                    <i class="fas fa-university me-1"></i>University
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable" data-sort="department">
+                                    <i class="fas fa-building me-1"></i>Department
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable text-center" data-sort="publications">
+                                    <i class="fas fa-file-alt me-1"></i>Publications
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable text-center" data-sort="citations">
+                                    <i class="fas fa-quote-right me-1"></i>Citations
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th class="sortable text-center" data-sort="h_index">
+                                    <i class="fas fa-chart-line me-1"></i>H-index
+                                    <i class="fas fa-sort ms-1"></i>
+                                </th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody id="faculty-table-body">
+                            <!-- Faculty table rows will be populated here -->
                         </tbody>
                     </table>
                 </div>
@@ -435,6 +458,17 @@
             }
         }
         
+        // Helper function to generate professor ID in new format
+        function generateProfessorId(professor, index) {
+            if (professor.university_code) {
+                // Format: CA-ON-002-00001
+                const sequence = String(index + 1).padStart(5, '0');
+                return `${professor.university_code}-${sequence}`;
+            }
+            // Fallback to original ID if no university code
+            return professor.id;
+        }
+
         // Display faculty in grid view
         function displayFaculty(faculty) {
             const container = document.getElementById('faculty-grid');
@@ -442,8 +476,8 @@
             if (faculty.length === 0) {
                 container.innerHTML = `
                     <div class="col-12">
-                        <div class="text-center p-5">
-                            <i class="fas fa-user-slash fa-4x text-muted mb-3"></i>
+                        <div class="empty-state text-center p-5">
+                            <i class="fas fa-user-graduate fa-4x text-muted mb-3"></i>
                             <h4>No faculty found</h4>
                             <p class="text-muted">Try adjusting your search filters or criteria.</p>
                         </div>
@@ -453,7 +487,7 @@
             }
             
             container.innerHTML = '';
-            faculty.forEach(prof => {
+            faculty.forEach((prof, index) => {
                 // Parse research areas if it's a string
                 let researchAreas = [];
                 if (prof.research_areas) {
@@ -464,6 +498,9 @@
                     }
                 }
                 
+                // Generate new professor ID
+                const professorId = generateProfessorId(prof, index);
+                
                 const facultyCard = `
                     <div class="col-lg-6 col-xl-4 mb-4">
                         <div class="faculty-card h-100">
@@ -472,7 +509,7 @@
                                     <!-- Professor Name and Title -->
                                     <div class="faculty-header mb-3">
                                         <h5 class="card-title mb-1">
-                                            <a href="/professor/${prof.id}" class="text-decoration-none professor-link">
+                                            <a href="/professor/${professorId}" class="text-decoration-none professor-link">
                                                 ${prof.name}
                                             </a>
                                         </h5>
@@ -566,36 +603,51 @@
             const tbody = document.getElementById('faculty-table-body');
             tbody.innerHTML = '';
             
-            faculty.forEach(prof => {
+            faculty.forEach((prof, index) => {
+                const professorId = generateProfessorId(prof, index);
+                
                 const row = `
                     <tr>
-                        <td>
-                            <strong>
-                                <a href="/professor/${prof.id}" class="text-decoration-none">
+                        <td data-sort-value="${prof.name}">
+                            <div class="fw-bold">
+                                <a href="/professor/${professorId}" class="text-decoration-none text-primary">
                                     ${prof.name}
                                 </a>
-                            </strong>
+                            </div>
                         </td>
-                        <td>${prof.primary_position || 'Faculty Member'}</td>
-                        <td>
+                        <td data-sort-value="${prof.position || ''}">
+                            ${prof.position || 'Faculty Member'}${prof.adjunct ? ' (Part-time)' : (!prof.full_time ? ' (Part-time)' : '')}
+                        </td>
+                        <td data-sort-value="${prof.university_name || ''}">
                             <a href="/faculties?university=${encodeURIComponent(prof.university_code || prof.university_name)}" 
                                class="text-decoration-none">
-                                ${prof.university_name || 'Unknown'}
+                                ${prof.university_name || 'Unknown University'}
                             </a>
                         </td>
-                        <td>${prof.department || 'Not specified'}</td>
-                        <td>
-                            <small class="text-muted">
-                                ${prof.research_areas ? prof.research_areas.substring(0, 50) + (prof.research_areas.length > 50 ? '...' : '') : 'Not specified'}
-                            </small>
+                        <td data-sort-value="${prof.department || ''}">
+                            ${prof.department ? `
+                                <a href="/faculties?department=${encodeURIComponent(prof.department)}" 
+                                   class="text-decoration-none">
+                                    ${prof.department}
+                                </a>
+                            ` : 'N/A'}
                         </td>
-                        <td class="text-center">
-                            <span class="badge bg-primary">${prof.total_publications || 0}</span>
+                        <td class="text-center" data-sort-value="${prof.publication_count || prof.total_publications || 0}">
+                            <span class="fw-bold text-primary">${prof.publication_count || prof.total_publications || 0}</span>
+                        </td>
+                        <td class="text-center" data-sort-value="${prof.citation_count || 0}">
+                            <span class="fw-bold text-success">${prof.citation_count || 0}</span>
+                        </td>
+                        <td class="text-center" data-sort-value="${prof.h_index || 0}">
+                            <span class="fw-bold text-warning">${prof.h_index || 0}</span>
                         </td>
                         <td>
-                            <button class="btn btn-outline-primary btn-sm" onclick="viewFacultyProfile(${prof.id})">
-                                <i class="fas fa-eye me-1"></i>View
-                            </button>
+                            <div class="btn-group btn-group-sm">
+                                <a href="/professor/${professorId}" 
+                                   class="btn btn-outline-primary btn-sm" title="View Profile">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                 `;
@@ -744,4 +796,5 @@
         }
     </script>
 </body>
+</html> 
 </html> 

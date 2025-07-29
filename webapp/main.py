@@ -577,30 +577,114 @@ async def get_countries():
         logger.error(f"Error getting countries: {e}")
         raise HTTPException(status_code=500, detail="Failed to retrieve countries")
 
-@app.get("/api/v1/professor/{professor_id}", response_model=Professor)
-async def get_professor(professor_id: int = Path(..., description="Professor ID")):
+@app.get("/api/v1/professor/{professor_id}")
+async def get_professor(professor_id: str = Path(..., description="Professor ID (can be integer or university-code format)")):
     """Get individual professor details"""
     try:
         async with await get_db_connection() as conn:
-            query = """
-                SELECT p.*, COALESCE(u.name, '') as university_name
-                FROM professors p
-                LEFT JOIN universities u ON p.university_code = u.university_code
-                WHERE p.id = $1
-            """
-            
-            row = await conn.fetchrow(query, professor_id)
+            # Handle both integer IDs and string format IDs like CA-ON-002-00001
+            if professor_id.isdigit():
+                # Legacy integer ID
+                query = """
+                    SELECT p.id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
+                           p.degrees, p.all_degrees_and_inst, p.all_degrees_only, p.research_areas,
+                           p.university_code, p.faculty, p.department, p.other_departments,
+                           p.primary_affiliation, p.memberships, p.canada_research_chair, p.director,
+                           COALESCE(p.position, '') as position, 
+                           COALESCE(p.full_time, true) as full_time, 
+                           COALESCE(p.adjunct, false) as adjunct, 
+                           p.uni_email as email, p.other_email,
+                           p.uni_page, p.website, p.misc, p.twitter, p.linkedin, p.phone, p.fax,
+                           p.google_scholar, p.scopus, p.web_of_science, p.orcid, p.researchgate,
+                           p.academicedu, p.created_at, p.updated_at,
+                           COALESCE(p.publication_count, 0) as publication_count,
+                           COALESCE(p.citation_count, 0) as citation_count,
+                           COALESCE(p.h_index, 0) as h_index,
+                           COALESCE(u.name, '') as university_name, 
+                           COALESCE(u.city, '') as city, 
+                           COALESCE(u.province_state, '') as province_state, 
+                           COALESCE(u.country, '') as country, 
+                           COALESCE(u.address, '') as address, 
+                           COALESCE(u.website, '') as university_website
+                    FROM professors p
+                    LEFT JOIN universities u ON p.university_code = u.university_code
+                    WHERE p.id = $1
+                """
+                params = [int(professor_id)]
+            else:
+                # New string format ID - extract university code and sequence
+                if '-' in professor_id and len(professor_id.split('-')) >= 4:
+                    # Format: CA-ON-002-00001
+                    parts = professor_id.split('-')
+                    university_code = '-'.join(parts[:3])  # CA-ON-002
+                    sequence = parts[3]  # 00001
+                    
+                    query = """
+                        SELECT p.id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
+                               p.degrees, p.all_degrees_and_inst, p.all_degrees_only, p.research_areas,
+                               p.university_code, p.faculty, p.department, p.other_departments,
+                               p.primary_affiliation, p.memberships, p.canada_research_chair, p.director,
+                               COALESCE(p.position, '') as position, 
+                               COALESCE(p.full_time, true) as full_time, 
+                               COALESCE(p.adjunct, false) as adjunct, 
+                               p.uni_email as email, p.other_email,
+                               p.uni_page, p.website, p.misc, p.twitter, p.linkedin, p.phone, p.fax,
+                               p.google_scholar, p.scopus, p.web_of_science, p.orcid, p.researchgate,
+                               p.academicedu, p.created_at, p.updated_at,
+                               COALESCE(p.publication_count, 0) as publication_count,
+                               COALESCE(p.citation_count, 0) as citation_count,
+                               COALESCE(p.h_index, 0) as h_index,
+                               COALESCE(u.name, '') as university_name, 
+                               COALESCE(u.city, '') as city, 
+                               COALESCE(u.province_state, '') as province_state, 
+                               COALESCE(u.country, '') as country, 
+                               COALESCE(u.address, '') as address, 
+                               COALESCE(u.website, '') as university_website
+                        FROM professors p
+                        LEFT JOIN universities u ON p.university_code = u.university_code
+                        WHERE p.university_code = $1
+                        ORDER BY p.id
+                        LIMIT 1 OFFSET $2
+                    """
+                    try:
+                        offset = int(sequence) - 1  # Convert 00001 to 0-based index
+                        params = [university_code, offset]
+                    except ValueError:
+                        raise HTTPException(status_code=400, detail="Invalid professor ID format")
+                else:
+                    raise HTTPException(status_code=400, detail="Invalid professor ID format")
+
+            row = await conn.fetchrow(query, *params)
             
             if not row:
                 raise HTTPException(status_code=404, detail="Professor not found")
             
-            return Professor(**dict(row))
+            professor_data = dict(row)
+            
+            # Parse research areas if it's JSON
+            if professor_data.get('research_areas'):
+                try:
+                    import json
+                    if isinstance(professor_data['research_areas'], str):
+                        professor_data['research_areas'] = json.loads(professor_data['research_areas'])
+                except (json.JSONDecodeError, TypeError):
+                    # If it's not JSON, treat as comma-separated string
+                    if isinstance(professor_data['research_areas'], str):
+                        professor_data['research_areas'] = professor_data['research_areas']
+                    else:
+                        professor_data['research_areas'] = ""
+            
+            # Ensure all required fields are present for the response
+            professor_data['total_publications'] = professor_data.get('publication_count', 0)
+            professor_data['primary_position'] = professor_data.get('position', '')
+            
+            return professor_data
             
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error getting professor: {e}")
-        raise HTTPException(status_code=500, detail="Failed to retrieve professor")
+        logger.error(f"Error getting professor {professor_id}: {e}")
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 # Professor detail route
 @app.get("/professor/{professor_id}")

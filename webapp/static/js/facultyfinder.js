@@ -217,7 +217,104 @@ const FacultyFinder = {
         }
     },
 
-    // Theme management
+    // Table sorting functionality
+    sorting: {
+        currentSort: { column: null, direction: 'asc' },
+        
+        init: function() {
+            // Add click listeners to sortable headers
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('sortable') || e.target.closest('.sortable')) {
+                    e.preventDefault();
+                    const header = e.target.classList.contains('sortable') ? e.target : e.target.closest('.sortable');
+                    const column = header.getAttribute('data-sort');
+                    if (column) {
+                        this.sortTable(header, column);
+                    }
+                }
+            });
+        },
+        
+        sortTable: function(header, column) {
+            const table = header.closest('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // Determine sort direction
+            let direction = 'asc';
+            if (this.currentSort.column === column && this.currentSort.direction === 'asc') {
+                direction = 'desc';
+            }
+            
+            // Update current sort state
+            this.currentSort = { column, direction };
+            
+            // Update header icons
+            this.updateSortIcons(table, header, direction);
+            
+            // Sort rows
+            rows.sort((a, b) => {
+                const aCell = a.querySelector(`[data-sort-value="${column}"]`) || 
+                             a.cells[this.getColumnIndex(table, column)];
+                const bCell = b.querySelector(`[data-sort-value="${column}"]`) || 
+                             b.cells[this.getColumnIndex(table, column)];
+                
+                if (!aCell || !bCell) return 0;
+                
+                let aValue = aCell.getAttribute('data-sort-value') || aCell.textContent.trim();
+                let bValue = bCell.getAttribute('data-sort-value') || bCell.textContent.trim();
+                
+                // Handle numeric values
+                if (this.isNumeric(aValue) && this.isNumeric(bValue)) {
+                    aValue = parseFloat(aValue) || 0;
+                    bValue = parseFloat(bValue) || 0;
+                    return direction === 'asc' ? aValue - bValue : bValue - aValue;
+                }
+                
+                // Handle text values
+                aValue = aValue.toLowerCase();
+                bValue = bValue.toLowerCase();
+                
+                if (direction === 'asc') {
+                    return aValue.localeCompare(bValue);
+                } else {
+                    return bValue.localeCompare(aValue);
+                }
+            });
+            
+            // Re-append sorted rows
+            rows.forEach(row => tbody.appendChild(row));
+        },
+        
+        updateSortIcons: function(table, activeHeader, direction) {
+            // Reset all sort icons
+            table.querySelectorAll('.sortable i').forEach(icon => {
+                icon.className = 'fas fa-sort ms-1';
+            });
+            
+            // Update active header icon
+            const icon = activeHeader.querySelector('i');
+            if (icon) {
+                icon.className = direction === 'asc' ? 'fas fa-sort-up ms-1' : 'fas fa-sort-down ms-1';
+            }
+        },
+        
+        getColumnIndex: function(table, column) {
+            const headers = table.querySelectorAll('th[data-sort]');
+            for (let i = 0; i < headers.length; i++) {
+                if (headers[i].getAttribute('data-sort') === column) {
+                    return i;
+                }
+            }
+            return 0;
+        },
+        
+        isNumeric: function(value) {
+            return !isNaN(parseFloat(value)) && isFinite(value);
+        }
+    },
+
+    // Enhanced theme management with proper icons
     theme: {
         init: function() {
             const savedTheme = localStorage.getItem('ff-theme') || 'light';
@@ -228,8 +325,8 @@ const FacultyFinder = {
         setTheme: function(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('ff-theme', theme);
-            
-            // Update toggle button icon if exists
+
+            // Update toggle button if exists
             this.updateToggleIcon(theme);
         },
 
@@ -238,11 +335,7 @@ const FacultyFinder = {
             if (toggleBtn) {
                 const icon = toggleBtn.querySelector('i');
                 if (icon) {
-                    // Clear all existing Font Awesome classes
-                    icon.className = '';
-                    // Add the correct icon based on current theme
-                    // Show moon when in light theme (to switch to dark)
-                    // Show sun when in dark theme (to switch to light)
+                    icon.className = ''; // Clear existing classes
                     if (theme === 'dark') {
                         icon.className = 'fas fa-sun';
                         toggleBtn.title = 'Switch to light theme';
@@ -263,60 +356,73 @@ const FacultyFinder = {
         },
 
         createToggleButton: function() {
-            // Remove existing button if it exists
             const existingButton = document.getElementById('theme-toggle');
             if (existingButton) {
-                existingButton.remove();
+                existingButton.remove(); // Remove existing button to prevent duplicates
             }
 
             const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-            
-            // Create button element with improved styling
             const button = FacultyFinder.utils.createElement('button', {
                 id: 'theme-toggle',
                 className: 'btn btn-outline-secondary position-fixed',
                 style: 'bottom: 20px; right: 20px; z-index: 1050; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: all 0.3s ease;'
             });
-            
-            // Create icon element with proper initial icon
+
             const icon = document.createElement('i');
-            // Show moon when in light theme (to switch to dark)
-            // Show sun when in dark theme (to switch to light)
-            if (currentTheme === 'dark') {
-                icon.className = 'fas fa-sun';
-                button.title = 'Switch to light theme';
-                button.setAttribute('aria-label', 'Switch to light theme');
-            } else {
-                icon.className = 'fas fa-moon';
-                button.title = 'Switch to dark theme';
-                button.setAttribute('aria-label', 'Switch to dark theme');
-            }
-            
-            button.appendChild(icon);
-            
-            // Add click event listener
+            button.appendChild(icon); // Append icon to button first
+
             button.addEventListener('click', () => {
                 this.toggle();
-                // Add a small animation effect
                 button.style.transform = 'scale(0.95)';
                 setTimeout(() => {
                     button.style.transform = 'scale(1)';
                 }, 150);
             });
-            
-            // Add hover effects
+
             button.addEventListener('mouseenter', () => {
                 button.style.transform = 'scale(1.1)';
             });
-            
+
             button.addEventListener('mouseleave', () => {
                 button.style.transform = 'scale(1)';
             });
-            
+
             document.body.appendChild(button);
+            this.updateToggleIcon(currentTheme); // Ensure initial icon is correct
+        }
+    },
+
+    // Enhanced view toggle with proper icons
+    viewToggle: {
+        init: function() {
+            // Add icons to existing view toggle buttons
+            this.updateViewToggleIcons();
+        },
+        
+        updateViewToggleIcons: function() {
+            // Update grid view buttons
+            document.querySelectorAll('[data-view="grid"]').forEach(btn => {
+                if (!btn.querySelector('i')) {
+                    const icon = document.createElement('i');
+                    icon.className = 'fas fa-th me-1';
+                    btn.insertBefore(icon, btn.firstChild);
+                }
+                if (!btn.title) {
+                    btn.title = 'Grid View';
+                }
+            });
             
-            // Ensure the icon is correct for the current theme
-            this.updateToggleIcon(currentTheme);
+            // Update list view buttons
+            document.querySelectorAll('[data-view="list"]').forEach(btn => {
+                if (!btn.querySelector('i')) {
+                    const icon = document.createElement('i');
+                    icon.className = 'fas fa-list me-1';
+                    btn.insertBefore(icon, btn.firstChild);
+                }
+                if (!btn.title) {
+                    btn.title = 'List View';
+                }
+            });
         }
     },
 
@@ -358,63 +464,6 @@ const FacultyFinder = {
         }
     },
 
-    // Table sorting functionality
-    table: {
-        init: function() {
-            const sortableHeaders = document.querySelectorAll('th.sortable');
-            sortableHeaders.forEach(header => {
-                header.style.cursor = 'pointer';
-                header.addEventListener('click', this.handleSort.bind(this));
-            });
-        },
-
-        handleSort: function(event) {
-            const header = event.currentTarget;
-            const table = header.closest('table');
-            const tbody = table.querySelector('tbody');
-            const rows = Array.from(tbody.querySelectorAll('tr'));
-            const columnIndex = Array.from(header.parentNode.children).indexOf(header);
-            const sortDirection = header.getAttribute('data-sort-direction') === 'asc' ? 'desc' : 'asc';
-            
-            // Clear all sort indicators
-            table.querySelectorAll('th.sortable').forEach(th => {
-                th.removeAttribute('data-sort-direction');
-                const icon = th.querySelector('.fas');
-                if (icon) {
-                    icon.className = 'fas fa-sort ms-1';
-                }
-            });
-            
-            // Set current sort direction
-            header.setAttribute('data-sort-direction', sortDirection);
-            const icon = header.querySelector('.fas');
-            if (icon) {
-                icon.className = `fas fa-sort-${sortDirection === 'asc' ? 'up' : 'down'} ms-1`;
-            }
-            
-            // Sort rows
-            rows.sort((a, b) => {
-                const aText = a.children[columnIndex].textContent.trim();
-                const bText = b.children[columnIndex].textContent.trim();
-                
-                // Try to parse as numbers first
-                const aNum = parseFloat(aText);
-                const bNum = parseFloat(bText);
-                
-                if (!isNaN(aNum) && !isNaN(bNum)) {
-                    return sortDirection === 'asc' ? aNum - bNum : bNum - aNum;
-                } else {
-                    return sortDirection === 'asc' 
-                        ? aText.localeCompare(bText)
-                        : bText.localeCompare(aText);
-                }
-            });
-            
-            // Reappend sorted rows
-            rows.forEach(row => tbody.appendChild(row));
-        }
-    },
-
     // Filter functionality
     filters: {
         init: function() {
@@ -438,29 +487,18 @@ const FacultyFinder = {
         }
     },
 
-    // Initialize all modules
+    // Initialize all FacultyFinder modules
     init: function() {
-        // Wait for DOM to be ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => this.initModules());
-        } else {
-            this.initModules();
-        }
-    },
-
-    initModules: function() {
         console.log('🚀 FacultyFinder JavaScript initialized');
         
-        // Initialize all modules
+        // Initialize theme management
         this.theme.init();
-        this.search.init();
-        this.table.init();
-        this.filters.init();
         
-        // Performance monitoring
-        if (window.performance && window.performance.mark) {
-            window.performance.mark('facultyfinder-js-loaded');
-        }
+        // Initialize table sorting
+        this.sorting.init();
+        
+        // Initialize view toggles
+        this.viewToggle.init();
         
         console.log('✅ All FacultyFinder modules loaded');
     }
