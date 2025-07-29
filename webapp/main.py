@@ -42,6 +42,15 @@ def parse_faculty_id(faculty_id: str) -> tuple:
     else:
         raise ValueError(f"Invalid faculty_id format: {faculty_id}")
 
+def determine_employment_type(full_time: bool, adjunct: bool) -> str:
+    """Determine employment type based on full_time and adjunct flags"""
+    if adjunct:
+        return "adjunct"
+    elif full_time:
+        return "full-time"
+    else:
+        return "part-time"
+
 # Load environment variables - prioritize production .env
 env_files = ['/var/www/ff/.env', '.env', '.env.test']
 for env_file in env_files:
@@ -155,7 +164,8 @@ class Professor(BaseModel):
     citation_count: Optional[int] = 0
     h_index: Optional[int] = 0
     adjunct: Optional[bool] = False
-    full_time: Optional[bool] = True
+    full_time: Optional[bool] = True  # TRUE = full-time, FALSE = part-time
+    employment_type: Optional[str] = None  # Computed: "full-time", "part-time", "adjunct"
 
 class Country(BaseModel):
     country: str
@@ -465,7 +475,7 @@ async def get_faculties(
     university: Optional[str] = Query(None, description="Filter by university code"),
     department: Optional[str] = Query(None, description="Filter by department"),
     research_area: Optional[str] = Query(None, description="Filter by research area"),
-    employment_type: Optional[str] = Query(None, description="Filter by employment type"),
+    employment_type: Optional[str] = Query(None, description="Filter by employment type (full-time, part-time, adjunct)"),
     sort_by: str = Query("name", description="Sort by: name, university, department, publications, recent_publications"),
     page: int = Query(1, ge=1, description="Page number"),
     per_page: int = Query(20, ge=1, le=100, description="Items per page")
@@ -544,13 +554,17 @@ async def get_faculties(
             if has_more:
                 rows = rows[:per_page]
             
-            # Convert to Professor objects with computed faculty_id
+            # Convert to Professor objects with computed fields
             faculties = []
             for row in rows:
                 professor_data = dict(row)
                 professor_data['faculty_id'] = generate_faculty_id(
                     professor_data['university_code'], 
                     professor_data['professor_id']
+                )
+                professor_data['employment_type'] = determine_employment_type(
+                    professor_data.get('full_time', True),
+                    professor_data.get('adjunct', False)
                 )
                 faculties.append(Professor(**professor_data))
             
@@ -654,11 +668,15 @@ async def get_professor(faculty_id: str = Path(..., description="Faculty ID (e.g
             if not row:
                 raise HTTPException(status_code=404, detail="Professor not found")
             
-            # Convert to dict and add computed faculty_id
+            # Convert to dict and add computed fields
             professor_data = dict(row)
             professor_data['faculty_id'] = generate_faculty_id(
                 professor_data['university_code'], 
                 professor_data['professor_id']
+            )
+            professor_data['employment_type'] = determine_employment_type(
+                professor_data.get('full_time', True),
+                professor_data.get('adjunct', False)
             )
             
             return Professor(**professor_data)

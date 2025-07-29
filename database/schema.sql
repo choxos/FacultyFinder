@@ -39,8 +39,8 @@ CREATE TABLE professors (
     canada_research_chair VARCHAR(500),
     director TEXT,
     position VARCHAR(200),
-    full_time BOOLEAN DEFAULT FALSE,
-    adjunct BOOLEAN DEFAULT FALSE,
+    full_time BOOLEAN DEFAULT FALSE,  -- TRUE = full-time, FALSE = part-time
+    adjunct BOOLEAN DEFAULT FALSE,    -- TRUE = adjunct faculty, FALSE = regular faculty
     uni_email VARCHAR(200),
     other_email TEXT,
     uni_page TEXT,
