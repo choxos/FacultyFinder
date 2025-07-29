@@ -165,10 +165,10 @@
                     </div>
                     <div class="view-toggles">
                         <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-outline-primary active" data-view="grid" onclick="toggleView('grid')">
+                            <button type="button" class="btn btn-outline-primary active" data-view="grid" onclick="toggleView('grid')" title="Grid View">
                                 <i class="fas fa-th"></i>
                             </button>
-                            <button type="button" class="btn btn-outline-primary" data-view="list" onclick="toggleView('list')">
+                            <button type="button" class="btn btn-outline-primary" data-view="list" onclick="toggleView('list')" title="List View">
                                 <i class="fas fa-list"></i>
                             </button>
                         </div>
@@ -196,8 +196,8 @@
                         <th scope="col">Location</th>
                         <th scope="col">Type</th>
                         <th scope="col" class="text-center">Faculty</th>
+                        <th scope="col" class="text-center">Departments</th>
                         <th scope="col" class="text-center">Established</th>
-                        <th scope="col">Code</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -366,50 +366,73 @@
             container.innerHTML = '';
             universities.forEach(university => {
                 const universityCard = `
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card university-card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-3">
-                                    <h5 class="card-title mb-1">
-                                        <a href="/faculties?university=${encodeURIComponent(university.name)}" class="text-decoration-none university-link">
-                                            ${university.name}
-                                        </a>
-                                    </h5>
-                                    ${university.year_established ? 
-                                        `<span class="badge bg-secondary">Est. ${university.year_established}</span>` : 
-                                        ''
-                                    }
+                    <div class="col-lg-6 col-xl-4 mb-4">
+                        <div class="university-card facultyfinder-card p-4 h-100">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h5 class="mb-1">
+                                    <a href="/university/${university.university_code}" class="text-decoration-none text-primary fw-bold">
+                                        ${university.name}
+                                    </a>
+                                </h5>
+                                ${university.year_established ? 
+                                    `<span class="badge bg-secondary">Est. ${university.year_established}</span>` : 
+                                    ''
+                                }
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="text-muted mb-2">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    <strong>${university.city || 'Unknown'}</strong>
+                                    ${university.province ? `, ${university.province}` : ''}
+                                    <br>
+                                    <i class="fas fa-globe me-2"></i>
+                                    <strong>${university.country}</strong>
                                 </div>
                                 
-                                <div class="university-details mb-3">
-                                    <p class="card-text">
-                                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                                        <strong>${university.city || 'Unknown'}</strong>
-                                        ${university.province ? `, ${university.province}` : ''}
-                                        <br>
-                                        <i class="fas fa-globe me-2"></i>
-                                        <strong>${university.country}</strong>
-                                    </p>
+                                ${university.university_type ? `
+                                <div class="text-muted mb-2">
+                                    <i class="fas fa-building me-2"></i>
+                                    <span class="badge bg-info">${university.university_type}</span>
                                 </div>
+                                ` : ''}
                                 
-                                <div class="university-stats mb-3">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <span class="badge bg-primary rounded-pill">
-                                            <i class="fas fa-users me-1"></i>
-                                            ${university.faculty_count} faculty
-                                        </span>
-                                        <small class="text-muted">Code: ${university.university_code}</small>
+                                ${university.website ? `
+                                <div class="text-muted mb-2">
+                                    <i class="fas fa-link me-2"></i>
+                                    <a href="${university.website}" target="_blank" class="text-decoration-none">
+                                        <strong>Official Website</strong>
+                                        <i class="fas fa-external-link-alt ms-1"></i>
+                                    </a>
+                                </div>
+                                ` : ''}
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <div class="row text-center">
+                                    <div class="col-6">
+                                        <div class="stat-item">
+                                            <div class="stat-number text-primary fw-bold">${university.faculty_count || 0}</div>
+                                            <div class="stat-label">Faculty</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="stat-item">
+                                            <div class="stat-number text-success fw-bold">${university.department_count || 0}</div>
+                                            <div class="stat-label">Departments</div>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <div class="university-actions">
-                                    <a href="/faculties?university=${encodeURIComponent(university.name)}" 
+                                <div class="university-actions mt-3 text-center">
+                                    <a href="/university/${university.university_code}" 
                                        class="btn btn-outline-primary btn-sm me-2">
-                                        <i class="fas fa-users me-1"></i>View Faculty
+                                        <i class="fas fa-eye me-1"></i>View Profile
                                     </a>
-                                    <button class="btn btn-outline-secondary btn-sm" onclick="showUniversityDetails('${university.name}')">
-                                        <i class="fas fa-info-circle me-1"></i>Details
-                                    </button>
+                                    <a href="/faculties?university=${encodeURIComponent(university.name)}" 
+                                       class="btn btn-outline-success btn-sm">
+                                        <i class="fas fa-users me-1"></i>Faculty
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -434,22 +457,31 @@
                     <tr>
                         <td>
                             <strong>
-                                <a href="/faculties?university=${encodeURIComponent(university.name)}" class="text-decoration-none">
+                                <a href="/university/${university.university_code}" class="text-decoration-none text-primary">
                                     ${university.name}
                                 </a>
                             </strong>
+                            ${university.website ? `
+                                <br><a href="${university.website}" target="_blank" class="text-decoration-none text-muted small">
+                                    <i class="fas fa-external-link-alt me-1"></i>Official Website
+                                </a>
+                            ` : ''}
                         </td>
                         <td>
                             <span class="fw-semibold">${university.country}</span>
+                            ${university.province ? `<br><small class="text-muted">${university.province}</small>` : ''}
                         </td>
                         <td>
-                            ${university.city || 'Unknown'}${university.province ? `, ${university.province}` : ''}
+                            ${university.city || 'Unknown'}
                         </td>
                         <td>
                             <span class="badge bg-info">${university.university_type || 'Not specified'}</span>
                         </td>
                         <td class="text-center">
-                            <span class="badge bg-primary">${university.faculty_count}</span>
+                            <span class="fw-bold text-primary">${university.faculty_count || 0}</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="fw-bold text-success">${university.department_count || 0}</span>
                         </td>
                         <td class="text-center">
                             ${university.year_established ? 
@@ -458,13 +490,22 @@
                             }
                         </td>
                         <td>
-                            <code>${university.university_code}</code>
-                        </td>
-                        <td>
-                            <a href="/faculties?university=${encodeURIComponent(university.name)}" 
-                               class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-users me-1"></i>Faculty
-                            </a>
+                            <div class="btn-group btn-group-sm">
+                                <a href="/university/${university.university_code}" 
+                                   class="btn btn-outline-primary btn-sm" title="View Profile">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                ${university.website ? `
+                                    <a href="${university.website}" target="_blank" 
+                                       class="btn btn-outline-secondary btn-sm" title="Official Website">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                ` : ''}
+                                <a href="/faculties?university=${encodeURIComponent(university.name)}" 
+                                   class="btn btn-outline-success btn-sm" title="View Faculty">
+                                    <i class="fas fa-users"></i>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                 `;
@@ -501,8 +542,8 @@
         }
         
         // Show university details
-        function showUniversityDetails(universityName) {
-            window.location.href = `/universities?search=${encodeURIComponent(universityName)}`;
+        function showUniversityDetails(universityCode) {
+            window.location.href = `/university/${universityCode}`;
         }
         
         // Reset filters

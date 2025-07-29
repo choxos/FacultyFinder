@@ -98,119 +98,122 @@ const FacultyFinder = {
             const fragment = document.createDocumentFragment();
             elements.forEach(element => fragment.appendChild(element));
             container.appendChild(fragment);
-        },
-
-        // Show toast notification
-        showToast: function(message, type = 'info', duration = 3000) {
-            const toastContainer = document.getElementById('toast-container') || 
-                this.createToastContainer();
-            
-            const toast = this.createElement('div', {
-                className: `toast toast-${type}`,
-                innerHTML: `
-                    <div class="toast-content">
-                        <i class="fas fa-${this.getToastIcon(type)} me-2"></i>
-                        ${message}
-                    </div>
-                    <button class="toast-close" onclick="this.parentElement.remove()">
-                        <i class="fas fa-times"></i>
-                    </button>
-                `
-            });
-
-            toastContainer.appendChild(toast);
-
-            // Auto-remove toast
-            setTimeout(() => {
-                if (toast.parentElement) {
-                    toast.remove();
-                }
-            }, duration);
-
-            return toast;
-        },
-
-        createToastContainer: function() {
-            const container = this.createElement('div', {
-                id: 'toast-container',
-                className: 'toast-container'
-            });
-            document.body.appendChild(container);
-            return container;
-        },
-
-        getToastIcon: function(type) {
-            const icons = {
-                'success': 'check-circle',
-                'error': 'exclamation-circle',
-                'warning': 'exclamation-triangle',
-                'info': 'info-circle'
-            };
-            return icons[type] || 'info-circle';
         }
     },
 
-    // Network layer with caching
-    network: {
-        // Fetch with caching and performance monitoring
-        fetchWithCache: async function(url, options = {}) {
-            const startTime = performance.now();
+    // API functions
+    api: {
+        // Generic fetch with error handling and caching
+        fetch: async function(url, options = {}) {
             const cacheKey = FacultyFinder.utils.generateCacheKey(url, options.params || {});
             
             // Check cache first
-            const cachedData = FacultyFinder.cache.get(cacheKey);
-            if (FacultyFinder.utils.isCacheValid(cachedData)) {
-                const duration = performance.now() - startTime;
-                FacultyFinder.performanceMonitor.logRequest(url, duration);
-                return cachedData.data;
+            const cachedResult = FacultyFinder.cache.get(cacheKey);
+            if (FacultyFinder.utils.isCacheValid(cachedResult)) {
+                return cachedResult.data;
             }
-
-            // Cancel previous request if exists
+            
+            // Cancel previous request if still pending
             if (FacultyFinder.requestController) {
                 FacultyFinder.requestController.abort();
             }
-
-            // Create new AbortController
+            
             FacultyFinder.requestController = new AbortController();
-
+            
+            const startTime = Date.now();
+            
             try {
-                const fetchOptions = {
+                const response = await fetch(url, {
+                    ...options,
                     signal: FacultyFinder.requestController.signal,
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Cache-Control': 'no-cache'
-                    },
-                    ...options
-                };
-
-                const response = await fetch(url, fetchOptions);
+                    timeout: FacultyFinder.config.REQUEST_TIMEOUT
+                });
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-
-                const data = await response.json();
                 
-                // Cache the response
+                const data = await response.json();
+                const duration = Date.now() - startTime;
+                
+                // Log performance
+                FacultyFinder.performanceMonitor.logRequest(url, duration);
+                
+                // Cache result
                 FacultyFinder.cache.set(cacheKey, {
                     data,
                     timestamp: Date.now()
                 });
-
-                const duration = performance.now() - startTime;
-                FacultyFinder.performanceMonitor.logRequest(url, duration);
-
-                return data;
-            } catch (error) {
-                if (error.name === 'AbortError') {
-                    console.log('Request was cancelled');
-                    return null;
-                }
                 
-                console.error('Network error:', error);
-                FacultyFinder.utils.showToast(`Network error: ${error.message}`, 'error');
-                throw error;
+                return data;
+                
+            } catch (error) {
+                if (error.name !== 'AbortError') {
+                    console.error('API request failed:', error);
+                    throw error;
+                }
             }
+        }
+    },
+
+    // UI helper functions
+    ui: {
+        // Show loading spinner
+        showLoading: function(container) {
+            if (typeof container === 'string') {
+                container = document.getElementById(container);
+            }
+            
+            if (container) {
+                container.innerHTML = `
+                    <div class="d-flex justify-content-center align-items-center p-4">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span class="ms-3">Loading...</span>
+                    </div>
+                `;
+            }
+        },
+
+        // Show error message
+        showError: function(container, message) {
+            if (typeof container === 'string') {
+                container = document.getElementById(container);
+            }
+            
+            if (container) {
+                container.innerHTML = `
+                    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <div>${message}</div>
+                    </div>
+                `;
+            }
+        },
+
+        // Create notification
+        createNotification: function(message, type = 'info', duration = 5000) {
+            const notification = FacultyFinder.utils.createElement('div', {
+                className: `alert alert-${type} alert-dismissible fade show position-fixed`,
+                style: 'top: 20px; right: 20px; z-index: 1060; min-width: 300px;'
+            });
+            
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after duration
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, duration);
+            
+            return notification;
         }
     },
 
@@ -231,7 +234,8 @@ const FacultyFinder = {
             if (toggleBtn) {
                 const icon = toggleBtn.querySelector('i');
                 if (icon) {
-                    icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+                    // Clear existing classes and add the correct one
+                    icon.className = `fas fa-${theme === 'dark' ? 'sun' : 'moon'}`;
                 }
             }
         },
@@ -245,15 +249,21 @@ const FacultyFinder = {
         createToggleButton: function() {
             if (document.getElementById('theme-toggle')) return;
 
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const button = FacultyFinder.utils.createElement('button', {
-                id: 'theme-toggle',
-                className: 'btn btn-outline-secondary position-fixed',
-                style: 'bottom: 20px; right: 20px; z-index: 1050; border-radius: 50%; width: 50px; height: 50px;',
-                innerHTML: `<i class="fas fa-${currentTheme === 'dark' ? 'sun' : 'moon'}"></i>`,
-                title: 'Toggle theme'
-            });
-
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            
+            // Create button element
+            const button = document.createElement('button');
+            button.id = 'theme-toggle';
+            button.className = 'btn btn-outline-secondary position-fixed';
+            button.style.cssText = 'bottom: 20px; right: 20px; z-index: 1050; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;';
+            button.title = 'Toggle theme';
+            button.setAttribute('aria-label', 'Toggle dark/light theme');
+            
+            // Create icon element
+            const icon = document.createElement('i');
+            icon.className = `fas fa-${currentTheme === 'dark' ? 'sun' : 'moon'}`;
+            
+            button.appendChild(icon);
             button.addEventListener('click', () => this.toggle());
             document.body.appendChild(button);
         }
@@ -273,325 +283,137 @@ const FacultyFinder = {
 
         handleSearch: function(event) {
             const query = event.target.value.trim();
-            const searchType = event.target.dataset.searchType || 'general';
-
+            const searchType = event.target.getAttribute('data-search-type') || 'general';
+            
             if (query.length >= 2) {
                 this.performSearch(query, searchType);
+            } else if (query.length === 0) {
+                this.clearSearchResults();
             }
         },
 
-        performSearch: async function(query, type) {
-            try {
-                const endpoint = this.getSearchEndpoint(type);
-                const results = await FacultyFinder.network.fetchWithCache(
-                    endpoint, 
-                    { params: { q: query } }
-                );
-
-                if (results) {
-                    this.displaySearchResults(results, type);
-                }
-            } catch (error) {
-                console.error('Search error:', error);
-            }
+        performSearch: function(query, type) {
+            // Implementation would depend on the specific search requirements
+            console.log(`Performing ${type} search for: ${query}`);
         },
 
-        getSearchEndpoint: function(type) {
-            const endpoints = {
-                'faculty': '/api/v1/faculty/search',
-                'university': '/api/v1/university/search',
-                'general': '/api/v1/search'
-            };
-            return endpoints[type] || endpoints.general;
-        },
-
-        displaySearchResults: function(results, type) {
-            // Implementation depends on the page type
-            console.log(`Displaying ${results.length} results for ${type}:`, results);
+        clearSearchResults: function() {
+            // Clear any search result displays
+            const resultsContainers = document.querySelectorAll('.search-results');
+            resultsContainers.forEach(container => {
+                container.innerHTML = '';
+                container.style.display = 'none';
+            });
         }
     },
 
-    // Load more functionality
-    loadMore: {
+    // Table sorting functionality
+    table: {
         init: function() {
-            const loadMoreBtns = document.querySelectorAll('[id^="loadMore"]');
-            loadMoreBtns.forEach(btn => {
-                btn.addEventListener('click', this.handleLoadMore.bind(this));
+            const sortableHeaders = document.querySelectorAll('th.sortable');
+            sortableHeaders.forEach(header => {
+                header.style.cursor = 'pointer';
+                header.addEventListener('click', this.handleSort.bind(this));
             });
         },
 
-        handleLoadMore: async function(event) {
-            const button = event.target;
-            const originalText = button.innerHTML;
+        handleSort: function(event) {
+            const header = event.currentTarget;
+            const table = header.closest('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            const columnIndex = Array.from(header.parentNode.children).indexOf(header);
+            const sortDirection = header.getAttribute('data-sort-direction') === 'asc' ? 'desc' : 'asc';
             
-            // Show loading state
-            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Loading...';
-            button.disabled = true;
-
-            try {
-                const contentType = button.id.replace('loadMore', '').toLowerCase();
-                const container = document.getElementById(`${contentType}-grid`) || 
-                               document.getElementById(`${contentType}-list`);
-                
-                if (!container) {
-                    throw new Error('Container not found');
+            // Clear all sort indicators
+            table.querySelectorAll('th.sortable').forEach(th => {
+                th.removeAttribute('data-sort-direction');
+                const icon = th.querySelector('.fas');
+                if (icon) {
+                    icon.className = 'fas fa-sort ms-1';
                 }
-
-                const currentCount = container.children.length;
-                const endpoint = `/api/v1/${contentType}/load-more`;
+            });
+            
+            // Set current sort direction
+            header.setAttribute('data-sort-direction', sortDirection);
+            const icon = header.querySelector('.fas');
+            if (icon) {
+                icon.className = `fas fa-sort-${sortDirection === 'asc' ? 'up' : 'down'} ms-1`;
+            }
+            
+            // Sort rows
+            rows.sort((a, b) => {
+                const aText = a.children[columnIndex].textContent.trim();
+                const bText = b.children[columnIndex].textContent.trim();
                 
-                const newItems = await FacultyFinder.network.fetchWithCache(endpoint, {
-                    params: { offset: currentCount, limit: 20 }
-                });
-
-                if (newItems && newItems.length > 0) {
-                    this.appendItems(container, newItems, contentType);
-                    FacultyFinder.utils.showToast(`Loaded ${newItems.length} more items`, 'success');
+                // Try to parse as numbers first
+                const aNum = parseFloat(aText);
+                const bNum = parseFloat(bText);
+                
+                if (!isNaN(aNum) && !isNaN(bNum)) {
+                    return sortDirection === 'asc' ? aNum - bNum : bNum - aNum;
                 } else {
-                    button.style.display = 'none';
-                    FacultyFinder.utils.showToast('No more items to load', 'info');
+                    return sortDirection === 'asc' 
+                        ? aText.localeCompare(bText)
+                        : bText.localeCompare(aText);
                 }
-
-            } catch (error) {
-                console.error('Load more error:', error);
-                FacultyFinder.utils.showToast('Error loading more items', 'error');
-            } finally {
-                // Restore button state
-                button.innerHTML = originalText;
-                button.disabled = false;
-            }
-        },
-
-        appendItems: function(container, items, type) {
-            const elements = items.map(item => this.createItemElement(item, type));
-            FacultyFinder.utils.batchDOMUpdates(container, elements);
-        },
-
-        createItemElement: function(item, type) {
-            // This would be implemented based on the item type
-            // For now, return a placeholder
-            return FacultyFinder.utils.createElement('div', {
-                className: 'col-lg-4 col-md-6 mb-4',
-                innerHTML: `<div class="card"><div class="card-body">${item.name || item.title}</div></div>`
             });
+            
+            // Reappend sorted rows
+            rows.forEach(row => tbody.appendChild(row));
         }
     },
 
-    // Image lazy loading
-    lazyLoading: {
+    // Filter functionality
+    filters: {
         init: function() {
-            if ('IntersectionObserver' in window) {
-                this.observer = new IntersectionObserver(this.handleIntersect.bind(this), {
-                    rootMargin: '50px'
-                });
-
-                this.observeImages();
-            } else {
-                // Fallback for older browsers
-                this.loadAllImages();
-            }
-        },
-
-        observeImages: function() {
-            const images = document.querySelectorAll('img[data-src]');
-            images.forEach(img => this.observer.observe(img));
-        },
-
-        handleIntersect: function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    this.observer.unobserve(img);
-                }
+            const filterSelects = document.querySelectorAll('select[data-filter]');
+            filterSelects.forEach(select => {
+                select.addEventListener('change', this.handleFilterChange.bind(this));
             });
         },
 
-        loadAllImages: function() {
-            const images = document.querySelectorAll('img[data-src]');
-            images.forEach(img => {
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-            });
+        handleFilterChange: function(event) {
+            const select = event.target;
+            const filterType = select.getAttribute('data-filter');
+            const value = select.value;
+            
+            this.applyFilter(filterType, value);
+        },
+
+        applyFilter: function(type, value) {
+            // Implementation would depend on the specific filtering requirements
+            console.log(`Applying ${type} filter with value: ${value}`);
         }
     },
 
-    // Performance monitoring
-    performance: {
-        init: function() {
-            // Monitor page load performance
-            window.addEventListener('load', this.logPageLoadTime.bind(this));
-            
-            // Monitor long tasks
-            if ('PerformanceObserver' in window) {
-                this.observeLongTasks();
-            }
-        },
-
-        logPageLoadTime: function() {
-            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-            console.log(`Page load time: ${loadTime}ms`);
-            
-            if (loadTime > 3000) {
-                console.warn('Slow page load detected');
-            }
-        },
-
-        observeLongTasks: function() {
-            try {
-                const observer = new PerformanceObserver(list => {
-                    list.getEntries().forEach(entry => {
-                        if (entry.duration > 50) {
-                            console.warn(`Long task detected: ${entry.duration}ms`);
-                        }
-                    });
-                });
-                observer.observe({ entryTypes: ['longtask'] });
-            } catch (e) {
-                // longtask API not supported
-            }
-        }
-    },
-
-    // Statistics animation for homepage
-    stats: {
-        init: function() {
-            // Only run on homepage
-            if (window.location.pathname === '/') {
-                this.animateCounters();
-            }
-        },
-
-        animateCounters: function() {
-            const statElements = document.querySelectorAll('.stat-number');
-            
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            this.countUp(entry.target);
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-
-                statElements.forEach(el => observer.observe(el));
-            } else {
-                // Fallback for older browsers
-                statElements.forEach(el => this.countUp(el));
-            }
-        },
-
-        countUp: function(element) {
-            const target = parseInt(element.textContent.replace(/,/g, ''));
-            const duration = 2000; // 2 seconds
-            const startTime = performance.now();
-            
-            const animate = (currentTime) => {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function for smoother animation
-                const easeOut = 1 - Math.pow(1 - progress, 3);
-                const current = Math.floor(target * easeOut);
-                
-                element.textContent = this.formatNumber(current);
-                
-                if (progress < 1) {
-                    requestAnimationFrame(animate);
-                } else {
-                    element.textContent = this.formatNumber(target);
-                }
-            };
-            
-            requestAnimationFrame(animate);
-        },
-
-        formatNumber: function(num) {
-            return num.toLocaleString();
-        }
-    },
-
-    // Statistics animation for homepage
-    stats: {
-        init: function() {
-            // Only run on homepage
-            if (window.location.pathname === '/') {
-                this.animateCounters();
-            }
-        },
-
-        animateCounters: function() {
-            const statElements = document.querySelectorAll('.stat-number');
-            
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            this.countUp(entry.target);
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-
-                statElements.forEach(el => observer.observe(el));
-            } else {
-                // Fallback for older browsers
-                statElements.forEach(el => this.countUp(el));
-            }
-        },
-
-        countUp: function(element) {
-            const target = parseInt(element.textContent.replace(/,/g, ''));
-            const duration = 2000; // 2 seconds
-            const startTime = performance.now();
-            
-            const animate = (currentTime) => {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function for smoother animation
-                const easeOut = 1 - Math.pow(1 - progress, 3);
-                const current = Math.floor(target * easeOut);
-                
-                element.textContent = this.formatNumber(current);
-                
-                if (progress < 1) {
-                    requestAnimationFrame(animate);
-                } else {
-                    element.textContent = this.formatNumber(target);
-                }
-            };
-            
-            requestAnimationFrame(animate);
-        },
-
-        formatNumber: function(num) {
-            return num.toLocaleString();
-        }
-    },
-
-    // Initialize all components
+    // Initialize all modules
     init: function() {
-        console.log('Initializing FacultyFinder...');
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this.initModules());
+        } else {
+            this.initModules();
+        }
+    },
+
+    initModules: function() {
+        console.log('🚀 FacultyFinder JavaScript initialized');
         
-        // Initialize components
+        // Initialize all modules
         this.theme.init();
         this.search.init();
-        this.loadMore.init();
-        this.lazyLoading.init();
-        this.performance.init();
-        this.stats.init(); // Add stats animation
+        this.table.init();
+        this.filters.init();
         
-        console.log('FacultyFinder initialized successfully');
+        // Performance monitoring
+        if (window.performance && window.performance.mark) {
+            window.performance.mark('facultyfinder-js-loaded');
+        }
+        
+        console.log('✅ All FacultyFinder modules loaded');
     }
 };
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    FacultyFinder.init();
-});
-
-// Export for use in other scripts
-window.FacultyFinder = FacultyFinder; 
+// Auto-initialize
+FacultyFinder.init(); 
