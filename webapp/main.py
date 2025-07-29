@@ -160,7 +160,7 @@ class FacultiesResponse(BaseModel):
     pagination: PaginationInfo
 
 # Database helper functions
-async def get_db_connection():
+def get_db_connection():
     """Get database connection from pool"""
     if not db_pool:
         raise HTTPException(status_code=500, detail="Database pool not initialized")
