@@ -5,68 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Assistant - FacultyFinder</title>
     
+    <!-- Meta Tags -->
+    <meta name="description" content="AI-powered faculty matching assistant. Upload your CV and get personalized recommendations.">
+    <meta name="keywords" content="AI assistant, faculty matching, CV analysis, academic recommendations">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS Theme -->
+    <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
+    <link rel="stylesheet" href="/static/css/facultyfinder.css">
+    <link rel="stylesheet" href="/static/css/filter-fixes.css">
     
     <style>
-        body {
-            padding-top: 76px;
+        .upload-area {
+            border: 2px dashed #007bff;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
-        
-        .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 0;
-            border-radius: 20px;
-            margin-bottom: 3rem;
+
+        .upload-area:hover {
+            border-color: #0056b3;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
         }
-        
-        .pricing-card {
-            border-radius: 15px;
-            border: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            height: 100%;
+
+        .upload-area.dragover {
+            border-color: #28a745;
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
         }
-        
-        .pricing-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .pricing-card.featured {
-            border: 3px solid #007bff;
-            transform: scale(1.05);
-        }
-        
-        .price {
+
+        .file-icon {
             font-size: 3rem;
-            font-weight: bold;
             color: #007bff;
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
             margin-bottom: 1rem;
-            color: #667eea;
         }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+
+        .pricing-card {
+            transition: transform 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: #007bff;
+        }
+
+        .pricing-card.recommended {
+            border-color: #28a745;
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+        }
+
+        .ai-service-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .ai-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #007bff;
+        }
+
+        .ai-service-card.selected {
+            border-color: #007bff;
+            background-color: #f8f9ff;
+        }
+
+        .profile-info {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 4px solid #ffc107;
+        }
+
+        .field-selection {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .category-badge {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+        }
+
+        .analysis-result {
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+            border-left: 4px solid #17a2b8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .payment-method-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .payment-method-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .payment-method-card.selected {
+            border-color: #007bff;
+            background-color: #f8f9ff;
+        }
+
+        .notification {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+        }
+
+        .notification.success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .notification.error {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .notification.warning {
+            color: #856404;
+            background-color: #fff3cd;
+            border-color: #ffeaa7;
+        }
+
+        .notification.info {
+            color: #055160;
+            background-color: #cff4fc;
+            border-color: #b6effb;
+        }
+
+        .notification .icon {
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .notification .close-btn {
+            margin-left: auto;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .notification .close-btn:hover {
+            opacity: 1;
+        }
+
+        .start-analysis-btn {
+            background: linear-gradient(135deg, #007bff, #0056b3);
             border: none;
             border-radius: 50px;
-            padding: 12px 30px;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
             font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
         }
-        
-        .btn-outline-primary {
-            border: 2px solid #667eea;
-            color: #667eea;
-            border-radius: 50px;
-            padding: 12px 30px;
-            font-weight: 600;
+
+        .start-analysis-btn:enabled:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+        }
+
+        .start-analysis-btn:disabled {
+            background: linear-gradient(135deg, #6c757d, #495057);
+            box-shadow: none;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .start-analysis-btn.loading {
+            pointer-events: none;
+        }
+
+        .start-analysis-btn .spinner {
+            display: none;
+        }
+
+        .start-analysis-btn.loading .spinner {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .start-analysis-btn.loading .btn-text {
+            opacity: 0.7;
+        }
+
+        .expert-review-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .expert-review-card .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .expert-review-card .btn {
+            margin-top: auto;
+        }
+
+        .expert-review-card ul {
+            flex-grow: 1;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -109,328 +278,1076 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="container">
-        <div class="hero-section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold mb-4">
-                            AI-Powered Faculty Matching
-                        </h1>
-                        <p class="lead mb-4">
-                            Let our advanced AI help you find the perfect research collaborators and faculty members 
-                            based on your specific research interests and goals.
-                        </p>
-                        <div class="d-flex gap-3">
-                            <a href="#pricing" class="btn btn-light btn-lg">
-                                <i class="fas fa-rocket me-2"></i>Get Started
-                            </a>
-                            <a href="#features" class="btn btn-outline-light btn-lg">
-                                <i class="fas fa-info-circle me-2"></i>Learn More
-                            </a>
+    <!-- Main Content -->
+    <div class="container py-5">
+        <!-- Header -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold text-primary mb-3">
+                    <i class="fas fa-robot me-3"></i>AI Faculty Matching Assistant
+                </h1>
+                <p class="lead text-muted">
+                    Upload your CV and get personalized faculty recommendations powered by advanced AI
+                </p>
+            </div>
+        </div>
+
+        <!-- Notification Area -->
+        <div class="row">
+            <div class="col-12">
+                <div id="notificationArea" class="notification-area"></div>
+            </div>
+        </div>
+
+        <!-- AI Usage Statistics -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-4">
+                            <i class="fas fa-chart-line me-2 text-primary"></i>AI Assistant Usage Statistics
+                        </h5>
+                        <div class="row text-center">
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="p-3">
+                                    <div class="display-6 fw-bold text-primary" id="total-sessions">1,247</div>
+                                    <small class="text-muted">Total Sessions</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="p-3">
+                                    <div class="display-6 fw-bold text-success" id="successful-sessions">1,098</div>
+                                    <small class="text-muted">Successful Analyses</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="p-3">
+                                    <div class="display-6 fw-bold text-info" id="sessions-7-days">89</div>
+                                    <small class="text-muted">Last 7 Days</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <div class="p-3">
+                                    <div class="display-6 fw-bold text-warning" id="sessions-30-days">342</div>
+                                    <small class="text-muted">Last 30 Days</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <small class="text-muted">
+                                <i class="fas fa-users me-1"></i>Join thousands of students who have found their ideal faculty match!
+                            </small>
                         </div>
                     </div>
-                    <div class="col-lg-4 text-center">
-                        <i class="fas fa-robot" style="font-size: 8rem; opacity: 0.7;"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guest User Information -->
+        <div class="row mb-4" id="guestInfoSection">
+            <div class="col-12">
+                <div class="card profile-info">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-user-circle me-2"></i>Your Information
+                        </h5>
+                        <p class="text-muted small mb-3">
+                            Please provide your information to get better recommendations. All fields are required except where noted.
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="guestName" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="guestName" required
+                                           placeholder="Your full name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="guestEmail" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="guestEmail" required
+                                           placeholder="your.email@example.com">
+                                    <div class="form-text">We'll send your analysis results here</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="guestInstitution" class="form-label">Current Institution</label>
+                                    <input type="text" class="form-control" id="guestInstitution" 
+                                           placeholder="University or organization">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="guestPhone" class="form-label">Phone Number (Optional)</label>
+                                    <input type="tel" class="form-control" id="guestPhone" 
+                                           placeholder="+1 (555) 123-4567">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="guestLevel" class="form-label">Academic Level *</label>
+                                    <select class="form-select" id="guestLevel" required>
+                                        <option value="">Select your academic level</option>
+                                        <option value="high_school">High School Student</option>
+                                        <option value="undergraduate">Undergraduate Student</option>
+                                        <option value="graduate_masters">Graduate Student (Masters)</option>
+                                        <option value="graduate_phd">Graduate Student (PhD)</option>
+                                        <option value="postdoc">Postdoctoral Researcher</option>
+                                        <option value="early_career">Early Career Researcher</option>
+                                        <option value="faculty">Faculty Member</option>
+                                        <option value="industry">Industry Professional</option>
+                                        <option value="career_change">Career Changer</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="guestWebsite" class="form-label">Website/LinkedIn (Optional)</label>
+                                    <input type="url" class="form-control" id="guestWebsite" 
+                                           placeholder="https://linkedin.com/in/yourname">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="guestLocation" class="form-label">Current Location</label>
+                                    <input type="text" class="form-control" id="guestLocation" 
+                                           placeholder="City, Country">
+                                    <div class="form-text">Helps us find faculty in your region</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="preferredContact" class="form-label">Preferred Contact Method</label>
+                                    <select class="form-select" id="preferredContact">
+                                        <option value="email">Email</option>
+                                        <option value="phone">Phone</option>
+                                        <option value="either">Either Email or Phone</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="guestBio" class="form-label">Brief Background & Goals</label>
+                            <textarea class="form-control" id="guestBio" rows="3" 
+                                      placeholder="Tell us about your academic background, research interests, and what you're looking for in a faculty mentor or research supervisor..."></textarea>
+                            <div class="form-text">This helps us provide more targeted recommendations</div>
+                        </div>
+                        
+                        <!-- Privacy Notice -->
+                        <div class="alert alert-light border border-secondary">
+                            <small class="text-muted">
+                                <i class="fas fa-shield-alt me-1"></i>
+                                <strong>Privacy Notice:</strong> Your contact information will only be used to send you analysis results and follow-up communications. 
+                                We do not share your information with third parties. You can opt out of future communications at any time.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic Field Selection -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-graduation-cap me-2"></i>Academic Field Selection
+                        </h5>
+                    </div>
+                    <div class="card-body field-selection">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="broadCategory" class="form-label">Broad Academic Category *</label>
+                                    <select class="form-select" id="broadCategory" onchange="updateNarrowFields()" required>
+                                        <option value="">Select your broad academic category</option>
+                                        <option value="health_sciences">Health Sciences & Medicine</option>
+                                        <option value="life_sciences">Life Sciences & Biology</option>
+                                        <option value="physical_sciences">Physical Sciences</option>
+                                        <option value="engineering">Engineering & Technology</option>
+                                        <option value="computer_science">Computer Science & Information Technology</option>
+                                        <option value="mathematics">Mathematics & Statistics</option>
+                                        <option value="social_sciences">Social Sciences</option>
+                                        <option value="humanities">Humanities & Liberal Arts</option>
+                                        <option value="business">Business & Economics</option>
+                                        <option value="education">Education & Pedagogy</option>
+                                        <option value="environmental">Environmental Sciences</option>
+                                        <option value="interdisciplinary">Interdisciplinary Studies</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="narrowField" class="form-label">Specific Field/Specialty *</label>
+                                    <select class="form-select" id="narrowField" required>
+                                        <option value="">First select a broad category</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="researchKeywords" class="form-label">Research Keywords</label>
+                                    <input type="text" class="form-control" id="researchKeywords" 
+                                           placeholder="e.g., machine learning, cancer biology, quantum computing">
+                                    <div class="form-text">Separate multiple keywords with commas</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="careerGoals" class="form-label">Career Goals</label>
+                                    <select class="form-select" id="careerGoals">
+                                        <option value="">Select your primary career goal</option>
+                                        <option value="academic_research">Academic Research Career</option>
+                                        <option value="industry_rd">Industry R&D</option>
+                                        <option value="clinical_practice">Clinical Practice</option>
+                                        <option value="entrepreneurship">Entrepreneurship</option>
+                                        <option value="policy_government">Policy & Government</option>
+                                        <option value="consulting">Consulting</option>
+                                        <option value="teaching">Teaching & Education</option>
+                                        <option value="non_profit">Non-profit & NGOs</option>
+                                        <option value="undecided">Still Exploring</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="specificInterests" class="form-label">Specific Research Interests & Methodologies</label>
+                            <textarea class="form-control" id="specificInterests" rows="3" 
+                                      placeholder="Describe your specific research interests, preferred methodologies, theoretical frameworks, or any particular approaches you're interested in exploring..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CV Upload Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-file-upload me-2"></i>Upload Your CV/Resume
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="uploadArea" class="upload-area" onclick="document.getElementById('cvFile').click()">
+                            <div class="file-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <h5>Drag & Drop your CV here</h5>
+                            <p class="text-muted mb-3">or click to browse files</p>
+                            <p class="small text-muted">
+                                Supported formats: PDF, DOCX (Max size: 10MB)
+                            </p>
+                            <input type="file" id="cvFile" accept=".pdf,.doc,.docx" style="display: none;" onchange="handleFileSelect(event)">
+                        </div>
+                        
+                        <div id="fileInfo" class="mt-3" style="display: none;">
+                            <div class="alert alert-success d-flex align-items-center">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span id="fileName"></span>
+                                <button type="button" class="btn-close ms-auto" onclick="clearFile()">Choose Different File</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Service Selection -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-robot me-2"></i>Choose Your AI Assistant
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card ai-service-card h-100" onclick="selectAI('claude')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-brain fa-2x text-primary mb-2"></i>
+                                        <h6>Claude (Anthropic)</h6>
+                                        <p class="small text-muted">Advanced reasoning and analysis</p>
+                                        <span class="category-badge">Recommended</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card ai-service-card h-100" onclick="selectAI('gpt')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-lightbulb fa-2x text-success mb-2"></i>
+                                        <h6>ChatGPT (OpenAI)</h6>
+                                        <p class="small text-muted">Creative and comprehensive analysis</p>
+                                        <span class="category-badge">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card ai-service-card h-100" onclick="selectAI('gemini')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-star fa-2x text-warning mb-2"></i>
+                                        <h6>Gemini (Google)</h6>
+                                        <p class="small text-muted">Multi-modal understanding</p>
+                                        <span class="category-badge">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card ai-service-card h-100" onclick="selectAI('grok')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-rocket fa-2x text-info mb-2"></i>
+                                        <h6>Grok (xAI)</h6>
+                                        <p class="small text-muted">Real-time insights</p>
+                                        <span class="category-badge">New</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="selectedAI" value="claude">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Options -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-tags me-2"></i>Choose Your Plan
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- AI Analysis Options -->
+                        <h6 class="text-primary mb-3"><i class="fas fa-robot me-2"></i>AI Analysis Options</h6>
+                        <div class="row g-3 mb-4">
+                            <!-- Single Analysis -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card ai-service-card h-100" onclick="selectAnalysisOption('single')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-file-search fa-2x text-primary mb-3"></i>
+                                        <h6>Single Analysis</h6>
+                                        <div class="display-6 fw-bold text-primary">$7</div>
+                                        <small class="text-muted">CAD one-time</small>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-1"></i> 1 complete analysis</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Faculty recommendations</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> CV analysis summary</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> 30-day validity</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3-Pack Bundle -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card ai-service-card h-100" onclick="selectAnalysisOption('triple_pack')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-layer-group fa-2x text-primary mb-3"></i>
+                                        <h6>3-Analysis Pack</h6>
+                                        <div class="display-6 fw-bold text-primary">$10</div>
+                                        <div class="text-muted small">CAD • Save 52%</div>
+                                        <div class="badge bg-success mb-2">POPULAR</div>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-1"></i> 3 complete analyses</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> $3.33 per analysis</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Perfect for grad school</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> 6-month validity</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5-Pack Bundle -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card ai-service-card h-100" onclick="selectAnalysisOption('five_pack')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-boxes fa-2x text-primary mb-3"></i>
+                                        <h6>5-Analysis Pack</h6>
+                                        <div class="display-6 fw-bold text-primary">$15</div>
+                                        <div class="text-muted small">CAD • Save 40%</div>
+                                        <div class="badge bg-info mb-2">BEST VALUE</div>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-1"></i> 5 complete analyses</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> $3.00 per analysis</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Comprehensive search</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> 1-year validity</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Monthly Unlimited -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card ai-service-card h-100" onclick="selectAnalysisOption('monthly_unlimited')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-infinity fa-2x text-primary mb-3"></i>
+                                        <h6>Monthly Unlimited</h6>
+                                        <div class="display-6 fw-bold text-primary">$49</div>
+                                        <small class="text-muted">CAD/month</small>
+                                        <div class="badge bg-warning mb-2">POWER USER</div>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-1"></i> Unlimited AI analyses</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> No per-use charges</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Cancel anytime</li>
+                                            <li><i class="fas fa-check text-success me-1"></i> Priority support</li>
+                                        </ul>
+                                        <button class="btn btn-primary w-100" data-option="monthly_unlimited">
+                                            Choose Monthly Plan
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expert Review Tiers -->
+                        <h6 class="text-warning mb-3"><i class="fas fa-user-graduate me-2"></i>Expert Manual Review</h6>
+                        <div class="row g-3 mb-4">
+                            <!-- Basic Expert Review -->
+                            <div class="col-lg-4">
+                                <div class="card ai-service-card expert-review-card h-100" onclick="selectAnalysisOption('expert_basic')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-user-check fa-2x text-warning mb-3"></i>
+                                        <h6>Basic Expert Review</h6>
+                                        <div class="display-6 fw-bold text-warning">$99</div>
+                                        <small class="text-muted">CAD one-time</small>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-1"></i>Expert manual review</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>Detailed analysis report</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>Faculty recommendations</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>3-5 day delivery</li>
+                                        </ul>
+                                        <button class="btn btn-warning w-100" data-option="expert_basic">
+                                            Order Expert Review
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Premium Expert Review -->
+                            <div class="col-lg-4">
+                                <div class="card ai-service-card expert-review-card h-100" onclick="selectAnalysisOption('expert_premium')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-star fa-2x text-warning mb-3"></i>
+                                        <h6>Premium Expert Review</h6>
+                                        <div class="display-6 fw-bold text-warning">$299</div>
+                                        <small class="text-muted">CAD one-time</small>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-1"></i>Premium expert review</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>Comprehensive analysis</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>Top 10 faculty matches</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>Contact strategy guide</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>48-hour delivery</li>
+                                        </ul>
+                                        <button class="btn btn-warning w-100" data-option="expert_premium">
+                                            Order Premium Review
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- VIP Package -->
+                            <div class="col-lg-4">
+                                <div class="card ai-service-card expert-review-card h-100" onclick="selectAnalysisOption('expert_vip')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-crown fa-2x text-warning mb-3"></i>
+                                        <h6>VIP Package</h6>
+                                        <div class="display-6 fw-bold text-warning">$999</div>
+                                        <small class="text-muted">CAD one-time</small>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-1"></i>VIP expert consultation</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>Deep-dive career analysis</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>Personalized strategy</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>15+ faculty matches</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>24-hour priority delivery</li>
+                                            <li><i class="fas fa-check text-success me-1"></i>30-min video consultation</li>
+                                        </ul>
+                                        <button class="btn btn-warning w-100" data-option="expert_vip">
+                                            Order VIP Review
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Promotional Banner -->
+                        <div class="alert alert-info border-0 mb-3">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <h6 class="alert-heading mb-1">
+                                        <i class="fas fa-gift me-2"></i>Early Bird Special - Limited Time!
+                                    </h6>
+                                    <p class="mb-0 small">First 1000 users get 50% off all paid options. Use code: <strong>EARLYBIRD50</strong></p>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <div class="badge bg-danger fs-6">50% OFF</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Money-back Guarantee -->
+                        <div class="text-center">
+                            <div class="d-inline-flex align-items-center text-muted small">
+                                <i class="fas fa-shield-alt text-success me-2"></i>
+                                30-day money-back guarantee • Over 1000 students helped • Average 40% increase in interview rates
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" id="selectedAnalysisOption" value="triple_pack">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <div class="row mb-4" id="paymentMethodSection" style="display: none;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-wallet me-2"></i>Payment Method
+                        </h5>
+                        <p class="text-muted mb-0 small">Choose your preferred payment method for secure and fast transactions</p>
+                    </div>
+                    <div class="card-body">
+                        <!-- Payment Method Options -->
+                        <div class="row g-3">
+                            <!-- Credit Card Payment -->
+                            <div class="col-md-6">
+                                <div class="card payment-method-card h-100" onclick="selectPaymentMethod('credit_card')">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-credit-card fa-2x text-primary mb-3"></i>
+                                        <h6>Credit Card</h6>
+                                        <p class="text-muted small mb-3">Visa, MasterCard, Amex</p>
+                                        <div class="payment-features">
+                                            <div class="badge bg-success mb-2">INSTANT</div>
+                                            <ul class="list-unstyled small text-start">
+                                                <li><i class="fas fa-check text-success me-1"></i> Immediate access</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> Secure SSL encryption</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> Auto-refund protection</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> Receipt via email</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cryptocurrency Payment -->
+                            <div class="col-md-6">
+                                <div class="card payment-method-card h-100" onclick="selectPaymentMethod('cryptocurrency')">
+                                    <div class="card-body text-center">
+                                        <i class="fab fa-bitcoin fa-2x text-warning mb-3"></i>
+                                        <h6>Cryptocurrency</h6>
+                                        <p class="text-muted small mb-3">Bitcoin, Ethereum, USDC & more</p>
+                                        <div class="payment-features">
+                                            <div class="badge bg-warning text-dark mb-2">PRIVATE</div>
+                                            <ul class="list-unstyled small text-start">
+                                                <li><i class="fas fa-check text-success me-1"></i> Anonymous payments</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> No personal info needed</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> Lower fees (0.5-1%)</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> Global accessibility</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cryptocurrency Selection (Hidden initially) -->
+                        <div id="cryptoSelection" class="mt-4" style="display: none;">
+                            <h6 class="text-primary mb-3"><i class="fab fa-bitcoin me-2"></i>Select Cryptocurrency</h6>
+                            <div class="row g-2" id="cryptoCurrencies">
+                                <div class="col-md-2 col-4">
+                                    <div class="card crypto-card" onclick="selectCrypto('BTC')">
+                                        <div class="card-body text-center p-2">
+                                            <i class="fab fa-bitcoin text-warning"></i>
+                                            <small>Bitcoin</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-4">
+                                    <div class="card crypto-card" onclick="selectCrypto('ETH')">
+                                        <div class="card-body text-center p-2">
+                                            <i class="fab fa-ethereum text-primary"></i>
+                                            <small>Ethereum</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-4">
+                                    <div class="card crypto-card" onclick="selectCrypto('USDC')">
+                                        <div class="card-body text-center p-2">
+                                            <i class="fas fa-dollar-sign text-success"></i>
+                                            <small>USDC</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small">Payment Provider</label>
+                                    <select class="form-select" id="cryptoProvider">
+                                        <option value="coinbase_commerce">Coinbase Commerce (Recommended)</option>
+                                        <option value="nowpayments">NOWPayments</option>
+                                        <option value="coingate">CoinGate</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small">Estimated Total</label>
+                                    <div class="form-control-plaintext">
+                                        <span id="cryptoAmount">Loading...</span>
+                                        <small class="text-muted d-block">Exchange rate updates every 5 minutes</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="selectedPaymentMethod" value="">
+                        <input type="hidden" id="selectedCryptoCurrency" value="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analysis Button -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <button type="button" id="startAnalysisBtn" class="start-analysis-btn" onclick="startAnalysis()" disabled>
+                    <span class="spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                    <i class="fas fa-magic me-2"></i>
+                    <span class="btn-text">Start Faculty Matching Analysis</span>
+                </button>
+                <p class="text-muted mt-2 small">
+                    <span id="buttonHelpText">Please complete all required fields above</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Results Section (Hidden initially) -->
+        <div id="resultsSection" class="row" style="display: none;">
+            <div class="col-12">
+                <div class="analysis-result">
+                    <h5>
+                        <i class="fas fa-chart-line me-2"></i>Analysis Results
+                    </h5>
+                    <div id="analysisContent">
+                        <!-- Results will be populated here -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Features Section -->
-    <section id="features" class="py-5">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="fw-bold mb-3">AI Assistant Features</h2>
-                    <p class="lead text-muted">Powerful AI tools to accelerate your research collaborations</p>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-search-plus feature-icon"></i>
-                    <h4>Smart Matching</h4>
-                    <p class="text-muted">
-                        AI analyzes research papers, citations, and expertise to find your ideal collaborators.
-                    </p>
-                </div>
-                
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-brain feature-icon"></i>
-                    <h4>Intelligent Recommendations</h4>
-                    <p class="text-muted">
-                        Get personalized faculty recommendations based on your research profile and goals.
-                    </p>
-                </div>
-                
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-chart-line feature-icon"></i>
-                    <h4>Impact Analysis</h4>
-                    <p class="text-muted">
-                        Understand potential collaboration impact through advanced analytics and predictions.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-5 bg-light">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="fw-bold mb-3">Choose Your Plan</h2>
-                    <p class="lead text-muted">Flexible pricing options to meet your research needs</p>
-                </div>
-            </div>
-            
-            <div class="row g-4 justify-content-center">
-                <!-- AI Usage Plan -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card pricing-card">
-                        <div class="card-body text-center p-4">
-                            <h3 class="card-title">AI Unlimited</h3>
-                            <div class="price mb-3">$49<small class="text-muted fs-6">/month</small></div>
-                            <p class="text-muted mb-4">Perfect for active researchers</p>
-                            
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Unlimited AI queries
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Smart faculty matching
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Research impact analysis
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Priority support
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Export recommendations
-                                </li>
-                            </ul>
-                            
-                            <button class="btn btn-primary w-100">
-                                <i class="fas fa-rocket me-2"></i>Start Free Trial
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Expert Review Plans -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card pricing-card featured">
-                        <div class="card-body text-center p-4">
-                            <div class="badge bg-primary mb-3">Most Popular</div>
-                            <h3 class="card-title">Expert Review</h3>
-                            <div class="price mb-3">$99<small class="text-muted fs-6"> - $999</small></div>
-                            <p class="text-muted mb-4">Human expert analysis</p>
-                            
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Manual expert review
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Detailed collaboration plan
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Introduction facilitation
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Custom research matching
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-crown text-warning me-2"></i>
-                                    VIP tier available ($999)
-                                </li>
-                            </ul>
-                            
-                            <button class="btn btn-primary w-100">
-                                <i class="fas fa-user-tie me-2"></i>Contact Expert
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Free Plan -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card pricing-card">
-                        <div class="card-body text-center p-4">
-                            <h3 class="card-title">Basic</h3>
-                            <div class="price mb-3">Free</div>
-                            <p class="text-muted mb-4">Get started with basics</p>
-                            
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    5 AI queries per month
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    Basic faculty search
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
-                                    University browsing
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-times text-muted me-2"></i>
-                                    <span class="text-muted">Advanced matching</span>
-                                </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-times text-muted me-2"></i>
-                                    <span class="text-muted">Export features</span>
-                                </li>
-                            </ul>
-                            
-                            <button class="btn btn-outline-primary w-100">
-                                <i class="fas fa-play me-2"></i>Start Free
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="fw-bold mb-3">How AI Assistant Works</h2>
-                    <p class="lead text-muted">Simple steps to find your ideal research collaborators</p>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-3 text-center">
-                    <div class="mb-3">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" 
-                             style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
-                            1
-                        </div>
-                    </div>
-                    <h5>Describe Your Research</h5>
-                    <p class="text-muted">Tell us about your research interests, goals, and current projects.</p>
-                </div>
-                
-                <div class="col-md-3 text-center">
-                    <div class="mb-3">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" 
-                             style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
-                            2
-                        </div>
-                    </div>
-                    <h5>AI Analysis</h5>
-                    <p class="text-muted">Our AI analyzes millions of research papers and faculty profiles.</p>
-                </div>
-                
-                <div class="col-md-3 text-center">
-                    <div class="mb-3">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" 
-                             style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
-                            3
-                        </div>
-                    </div>
-                    <h5>Get Matches</h5>
-                    <p class="text-muted">Receive ranked recommendations with compatibility scores.</p>
-                </div>
-                
-                <div class="col-md-3 text-center">
-                    <div class="mb-3">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" 
-                             style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
-                            4
-                        </div>
-                    </div>
-                    <h5>Connect</h5>
-                    <p class="text-muted">Reach out to potential collaborators with guided introductions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-5 bg-primary text-white">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="fw-bold mb-4">Ready to Accelerate Your Research?</h2>
-                    <p class="lead mb-4">Join thousands of researchers using AI to find their next breakthrough collaboration.</p>
-                    <div class="d-flex gap-3 justify-content-center">
-                        <a href="#pricing" class="btn btn-light btn-lg">
-                            <i class="fas fa-rocket me-2"></i>Start Your Journey
-                        </a>
-                        <a href="/api/docs" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-code me-2"></i>API Access
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JavaScript -->
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Global variables
+        let selectedFile = null;
+        let selectedAI = 'claude';
+        let selectedAnalysisOption = 'triple_pack';
+        let selectedPaymentMethod = '';
+        let selectedCryptoCurrency = '';
+
+        // Academic field mappings
+        const academicFields = {
+            health_sciences: [
+                'Medicine', 'Nursing', 'Pharmacy', 'Dentistry', 'Public Health',
+                'Medical Research', 'Health Administration', 'Clinical Psychology',
+                'Physical Therapy', 'Occupational Therapy', 'Veterinary Medicine'
+            ],
+            life_sciences: [
+                'Biology', 'Biochemistry', 'Genetics', 'Molecular Biology', 'Ecology',
+                'Marine Biology', 'Neuroscience', 'Microbiology', 'Botany', 'Zoology'
+            ],
+            physical_sciences: [
+                'Physics', 'Chemistry', 'Astronomy', 'Earth Sciences', 'Geology',
+                'Meteorology', 'Materials Science', 'Physical Chemistry'
+            ],
+            engineering: [
+                'Mechanical Engineering', 'Electrical Engineering', 'Civil Engineering',
+                'Chemical Engineering', 'Aerospace Engineering', 'Biomedical Engineering',
+                'Industrial Engineering', 'Environmental Engineering'
+            ],
+            computer_science: [
+                'Computer Science', 'Software Engineering', 'Information Systems',
+                'Cybersecurity', 'Data Science', 'Artificial Intelligence',
+                'Human-Computer Interaction', 'Information Technology'
+            ],
+            mathematics: [
+                'Pure Mathematics', 'Applied Mathematics', 'Statistics',
+                'Mathematical Modeling', 'Actuarial Science', 'Operations Research'
+            ],
+            social_sciences: [
+                'Psychology', 'Sociology', 'Anthropology', 'Political Science',
+                'International Relations', 'Criminal Justice', 'Social Work',
+                'Geography', 'Linguistics', 'Archaeology'
+            ],
+            humanities: [
+                'English Literature', 'History', 'Philosophy', 'Religious Studies',
+                'Art History', 'Music', 'Theater Arts', 'Foreign Languages',
+                'Classics', 'Cultural Studies'
+            ],
+            business: [
+                'Business Administration', 'Finance', 'Marketing', 'Economics',
+                'Accounting', 'Management', 'Entrepreneurship', 'International Business'
+            ],
+            education: [
+                'Elementary Education', 'Secondary Education', 'Special Education',
+                'Educational Psychology', 'Curriculum and Instruction', 'Educational Leadership'
+            ],
+            environmental: [
+                'Environmental Science', 'Environmental Engineering', 'Conservation Biology',
+                'Climate Science', 'Sustainability Studies', 'Environmental Policy'
+            ],
+            interdisciplinary: [
+                'Cognitive Science', 'Bioinformatics', 'Environmental Studies',
+                'Gender Studies', 'Area Studies', 'Science and Technology Studies'
+            ]
+        };
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            validateForm();
+            
+            // Set up drag and drop
+            const uploadArea = document.getElementById('uploadArea');
+            
+            uploadArea.addEventListener('dragover', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                uploadArea.classList.add('dragover');
             });
-        });
-        
-        // Add scroll effect to pricing cards
-        window.addEventListener('scroll', function() {
-            const cards = document.querySelectorAll('.pricing-card');
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            uploadArea.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+            });
+            
+            uploadArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
                 
-                if (isVisible) {
-                    card.style.animation = 'fadeInUp 0.6s ease-out';
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    handleFileSelect({ target: { files: files } });
                 }
             });
         });
-        
-        // Add CSS animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+
+        // Update narrow fields based on broad category
+        function updateNarrowFields() {
+            const broadCategory = document.getElementById('broadCategory').value;
+            const narrowField = document.getElementById('narrowField');
+            
+            narrowField.innerHTML = '<option value="">Select a specific field</option>';
+            
+            if (broadCategory && academicFields[broadCategory]) {
+                academicFields[broadCategory].forEach(field => {
+                    const option = document.createElement('option');
+                    option.value = field;
+                    option.textContent = field;
+                    narrowField.appendChild(option);
+                });
             }
-        `;
-        document.head.appendChild(style);
+            
+            validateForm();
+        }
+
+        // Handle file selection
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            
+            if (!file) return;
+            
+            // Validate file type
+            const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/msword'];
+            if (!allowedTypes.includes(file.type)) {
+                showNotification('Please select a PDF or DOCX file.', 'error');
+                return;
+            }
+            
+            // Validate file size (10MB)
+            if (file.size > 10 * 1024 * 1024) {
+                showNotification('File size must be less than 10MB.', 'error');
+                return;
+            }
+            
+            selectedFile = file;
+            document.getElementById('fileName').textContent = file.name;
+            document.getElementById('fileInfo').style.display = 'block';
+            document.getElementById('uploadArea').style.display = 'none';
+            
+            validateForm();
+        }
+
+        // Clear selected file
+        function clearFile() {
+            selectedFile = null;
+            document.getElementById('cvFile').value = '';
+            document.getElementById('fileInfo').style.display = 'none';
+            document.getElementById('uploadArea').style.display = 'block';
+            
+            validateForm();
+        }
+
+        // Select AI service
+        function selectAI(aiType) {
+            // Remove selected class from all cards
+            document.querySelectorAll('.ai-service-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked card
+            event.currentTarget.classList.add('selected');
+            
+            selectedAI = aiType;
+            document.getElementById('selectedAI').value = aiType;
+            
+            validateForm();
+        }
+
+        // Select analysis option
+        function selectAnalysisOption(option) {
+            // Remove selected class from all cards
+            document.querySelectorAll('.ai-service-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked card
+            event.currentTarget.classList.add('selected');
+            
+            selectedAnalysisOption = option;
+            document.getElementById('selectedAnalysisOption').value = option;
+            
+            // Show payment method section for paid options
+            const paidOptions = ['single', 'triple_pack', 'five_pack', 'monthly_unlimited', 'expert_basic', 'expert_premium', 'expert_vip'];
+            if (paidOptions.includes(option)) {
+                document.getElementById('paymentMethodSection').style.display = 'block';
+            } else {
+                document.getElementById('paymentMethodSection').style.display = 'none';
+            }
+            
+            validateForm();
+        }
+
+        // Select payment method
+        function selectPaymentMethod(method) {
+            // Remove selected class from all cards
+            document.querySelectorAll('.payment-method-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked card
+            event.currentTarget.classList.add('selected');
+            
+            selectedPaymentMethod = method;
+            document.getElementById('selectedPaymentMethod').value = method;
+            
+            // Show crypto selection if cryptocurrency is selected
+            const cryptoSelection = document.getElementById('cryptoSelection');
+            if (method === 'cryptocurrency') {
+                cryptoSelection.style.display = 'block';
+            } else {
+                cryptoSelection.style.display = 'none';
+            }
+            
+            validateForm();
+        }
+
+        // Select cryptocurrency
+        function selectCrypto(crypto) {
+            // Remove selected class from all crypto cards
+            document.querySelectorAll('.crypto-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked card
+            event.currentTarget.classList.add('selected');
+            
+            selectedCryptoCurrency = crypto;
+            document.getElementById('selectedCryptoCurrency').value = crypto;
+            
+            // Update crypto amount (mock calculation)
+            const amounts = { BTC: '0.00021', ETH: '0.0045', USDC: '10.00' };
+            document.getElementById('cryptoAmount').textContent = `${amounts[crypto]} ${crypto}`;
+            
+            validateForm();
+        }
+
+        // Validate form
+        function validateForm() {
+            const requiredFields = [
+                document.getElementById('guestName').value,
+                document.getElementById('guestEmail').value,
+                document.getElementById('guestLevel').value,
+                document.getElementById('broadCategory').value,
+                document.getElementById('narrowField').value,
+                selectedFile !== null,
+                selectedAI !== ''
+            ];
+            
+            const isValid = requiredFields.every(field => field);
+            const startBtn = document.getElementById('startAnalysisBtn');
+            const helpText = document.getElementById('buttonHelpText');
+            
+            if (isValid) {
+                startBtn.disabled = false;
+                helpText.textContent = `Ready to start analysis with ${selectedAI.toUpperCase()}`;
+            } else {
+                startBtn.disabled = true;
+                helpText.textContent = 'Please complete all required fields above';
+            }
+        }
+
+        // Start analysis
+        function startAnalysis() {
+            const startBtn = document.getElementById('startAnalysisBtn');
+            startBtn.classList.add('loading');
+            startBtn.disabled = true;
+            
+            // Simulate analysis process
+            setTimeout(() => {
+                displayMockResults();
+                startBtn.classList.remove('loading');
+                startBtn.disabled = false;
+            }, 3000);
+        }
+
+        // Display mock results
+        function displayMockResults() {
+            const resultsSection = document.getElementById('resultsSection');
+            const resultsContent = document.getElementById('analysisContent');
+            
+            const mockResults = `
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-file-alt text-primary me-2"></i>
+                            CV Analysis Summary
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Academic Profile</h6>
+                                <p><strong>Field:</strong> ${document.getElementById('narrowField').value}</p>
+                                <p><strong>Career Stage:</strong> ${document.getElementById('guestLevel').value.replace('_', ' ')}</p>
+                                <p><strong>Research Keywords:</strong> ${document.getElementById('researchKeywords').value || 'Machine learning, Data analysis'}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Key Strengths</h6>
+                                <ul>
+                                    <li>Strong academic background</li>
+                                    <li>Relevant research experience</li>
+                                    <li>Good publication record</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-users text-success me-2"></i>
+                            Top Faculty Matches
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card border-success mb-3">
+                                    <div class="card-body">
+                                        <h6 class="text-success">Dr. Jane Smith</h6>
+                                        <p class="small">Professor, Computer Science<br>
+                                        Stanford University</p>
+                                        <div class="badge bg-success">95% Match</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-info mb-3">
+                                    <div class="card-body">
+                                        <h6 class="text-info">Dr. John Johnson</h6>
+                                        <p class="small">Associate Professor, Data Science<br>
+                                        MIT</p>
+                                        <div class="badge bg-info">92% Match</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-success">
+                    <h6><i class="fas fa-lightbulb me-2"></i>Recommendations</h6>
+                    <ul class="mb-0">
+                        <li>Focus on publications in top-tier conferences</li>
+                        <li>Consider strengthening machine learning skills</li>
+                        <li>Network with faculty in your target universities</li>
+                    </ul>
+                </div>
+            `;
+            
+            resultsContent.innerHTML = mockResults;
+            resultsSection.style.display = 'block';
+            
+            // Scroll to results
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+            
+            showNotification('Analysis completed successfully!', 'success');
+        }
+
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notificationArea = document.getElementById('notificationArea');
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="icon fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-triangle' : 'fa-info-circle'}"></i>
+                ${message}
+                <button class="close-btn" onclick="this.parentElement.remove()">&times;</button>
+            `;
+            
+            notificationArea.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+
+        // Add event listeners for form validation
+        ['guestName', 'guestEmail', 'guestLevel', 'broadCategory', 'narrowField'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('change', validateForm);
+                element.addEventListener('input', validateForm);
+            }
+        });
+
+        // Initialize with default selection
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select Claude by default
+            setTimeout(() => {
+                document.querySelector('[onclick="selectAI(\'claude\')"]').click();
+                // Select triple pack by default
+                document.querySelector('[onclick="selectAnalysisOption(\'triple_pack\')"]').click();
+            }, 100);
+        });
     </script>
 </body>
 </html> 
