@@ -121,6 +121,7 @@ class University(BaseModel):
 
 class Professor(BaseModel):
     id: int
+    faculty_id: Optional[str] = None
     name: str
     first_name: Optional[str] = None
     last_name: Optional[str] = None
@@ -346,9 +347,9 @@ async def get_universities(
             param_count = 0
             
             if search:
-                param_count += 2
-                where_conditions.append(f"(u.name ILIKE ${param_count-1} OR u.city ILIKE ${param_count})")
-                params.extend([f"%{search}%", f"%{search}%"])
+                param_count += 1
+                where_conditions.append(f"(u.name ILIKE ${param_count} OR u.city ILIKE ${param_count})")
+                params.append(f"%{search}%")
             
             if country:
                 param_count += 1
