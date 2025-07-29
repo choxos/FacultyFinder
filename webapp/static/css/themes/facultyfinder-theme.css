@@ -26,6 +26,16 @@
     --ff-accent-light: #10b981;    /* Lighter green */
     --ff-accent-dark: #047857;     /* Darker green */
 
+    /* Light Theme Colors */
+    --ff-bg-primary: #ffffff;
+    --ff-bg-secondary: #f8fafc;
+    --ff-bg-tertiary: #f1f5f9;
+    --ff-text-primary: #1e293b;
+    --ff-text-secondary: #475569;
+    --ff-text-muted: #64748b;
+    --ff-border-color: #e2e8f0;
+    --ff-border-light: #f1f5f9;
+
     /* Neutral Grays */
     --ff-gray-50: #f8fafc;
     --ff-gray-100: #f1f5f9;
@@ -56,6 +66,46 @@
     --ff-transition: all 0.2s ease-in-out;
 }
 
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    /* Dark Theme Background Colors */
+    --ff-bg-primary: #0f172a;
+    --ff-bg-secondary: #1e293b;
+    --ff-bg-tertiary: #334155;
+    
+    /* Dark Theme Text Colors */
+    --ff-text-primary: #f1f5f9;
+    --ff-text-secondary: #cbd5e1;
+    --ff-text-muted: #94a3b8;
+    
+    /* Dark Theme Border Colors */
+    --ff-border-color: #334155;
+    --ff-border-light: #475569;
+    
+    /* Adjusted Primary Colors for Dark Theme */
+    --ff-primary-50: #1e293b;
+    --ff-primary-100: #334155;
+    
+    /* Dark Theme Shadows */
+    --ff-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    --ff-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* Global Styles */
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+}
+
+body {
+    background-color: var(--ff-bg-primary);
+    color: var(--ff-text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* Navigation Bar */
 .navbar-brand {
     font-weight: 700;
@@ -63,18 +113,44 @@
     color: var(--ff-primary) !important;
 }
 
+.navbar {
+    background-color: var(--ff-bg-primary) !important;
+    border-bottom: 1px solid var(--ff-border-color);
+}
+
+.navbar .nav-link {
+    color: var(--ff-text-secondary) !important;
+}
+
+.navbar .nav-link:hover {
+    color: var(--ff-primary) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--ff-primary) !important;
+    font-weight: 600;
+}
+
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, var(--ff-primary-800) 0%, var(--ff-primary-600) 100%);
     border-bottom: 3px solid var(--ff-secondary);
+    color: white;
 }
 
 /* Cards */
+.card {
+    background-color: var(--ff-bg-secondary);
+    border-color: var(--ff-border-color);
+    color: var(--ff-text-primary);
+}
+
 .facultyfinder-card {
-    border: 1px solid var(--ff-gray-200);
+    border: 1px solid var(--ff-border-color);
     border-radius: var(--ff-radius-lg);
     box-shadow: var(--ff-shadow);
     transition: var(--ff-transition);
+    background-color: var(--ff-bg-secondary);
 }
 
 .facultyfinder-card:hover {
@@ -90,9 +166,17 @@
 
 /* Search and Filter Components */
 .search-form {
-    background: var(--ff-gray-50);
+    background: var(--ff-bg-secondary);
     border-radius: var(--ff-radius-lg);
     padding: 1.5rem;
+    border: 1px solid var(--ff-border-color);
+}
+
+.search-filters {
+    background: var(--ff-bg-secondary);
+    border-radius: var(--ff-radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--ff-border-color);
 }
 
 .filter-section {
@@ -100,103 +184,197 @@
     padding-top: 1rem;
 }
 
-/* Research Areas */
-.research-area-tag {
-    background: var(--ff-primary-100);
-    color: var(--ff-primary-800);
-    border: 1px solid var(--ff-primary-200);
-    border-radius: var(--ff-radius);
-    padding: 0.25rem 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 500;
+/* Form Controls */
+.form-control {
+    background-color: var(--ff-bg-primary);
+    border-color: var(--ff-border-color);
+    color: var(--ff-text-primary);
 }
 
-/* Position Badges */
-.position-badge {
-    background: var(--ff-gray-50);
-    border: 1px solid var(--ff-gray-200);
-    border-radius: var(--ff-radius);
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
+.form-control:focus {
+    background-color: var(--ff-bg-primary);
+    border-color: var(--ff-primary);
+    color: var(--ff-text-primary);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+}
+
+.form-select {
+    background-color: var(--ff-bg-primary);
+    border-color: var(--ff-border-color);
+    color: var(--ff-text-primary);
+}
+
+.form-select:focus {
+    background-color: var(--ff-bg-primary);
+    border-color: var(--ff-primary);
+    color: var(--ff-text-primary);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+}
+
+/* Form Labels */
+.form-label {
+    color: var(--ff-text-secondary);
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
-.position-badge.professor {
-    background: var(--ff-primary);
+.filter-label {
+    color: var(--ff-text-secondary);
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--ff-primary);
+    border-color: var(--ff-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--ff-primary-light);
+    border-color: var(--ff-primary-light);
+}
+
+.btn-outline-primary {
+    color: var(--ff-primary);
+    border-color: var(--ff-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--ff-primary);
+    border-color: var(--ff-primary);
     color: white;
-    border: none;
 }
 
-.position-badge.associate {
-    background: var(--ff-secondary);
+.btn-outline-secondary {
+    color: var(--ff-text-secondary);
+    border-color: var(--ff-border-color);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--ff-bg-tertiary);
+    border-color: var(--ff-border-color);
+    color: var(--ff-text-primary);
+}
+
+/* Tables */
+.table {
+    color: var(--ff-text-primary);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > td {
+    background-color: var(--ff-bg-tertiary);
+}
+
+.table-hover > tbody > tr:hover > td {
+    background-color: var(--ff-bg-tertiary);
+}
+
+.table-dark {
+    background-color: var(--ff-bg-tertiary);
+    color: var(--ff-text-primary);
+}
+
+/* Alerts */
+.alert {
+    border-color: var(--ff-border-color);
+}
+
+.alert-success {
+    background-color: var(--ff-success);
     color: white;
-    border: none;
+    border-color: var(--ff-success);
 }
 
-.position-badge.assistant {
-    background: var(--ff-accent);
+.alert-warning {
+    background-color: var(--ff-warning);
     color: white;
-    border: none;
+    border-color: var(--ff-warning);
 }
 
-/* Publication Metrics */
-.metric-item {
-    border-radius: var(--ff-radius);
-    padding: 1rem;
-    text-align: center;
+.alert-danger {
+    background-color: var(--ff-danger);
+    color: white;
+    border-color: var(--ff-danger);
 }
 
-/* Faculty Grid Layout */
-.faculty-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+.alert-info {
+    background-color: var(--ff-info);
+    color: white;
+    border-color: var(--ff-info);
 }
 
-/* University Cards */
-.university-card {
-    background: #ffffff;
-    border: 1px solid #e8ecf0 !important;
-    border-radius: 12px !important;
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
-    position: relative;
-    overflow: hidden;
+/* Text Colors */
+.text-muted {
+    color: var(--ff-text-muted) !important;
 }
 
-.university-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #28a745, #20c997);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+.text-primary {
+    color: var(--ff-primary) !important;
 }
 
-.university-card:hover::before {
-    transform: scaleX(1);
+.text-secondary {
+    color: var(--ff-text-secondary) !important;
 }
 
-.university-card:hover {
-    border-color: rgba(40, 167, 69, 0.3) !important;
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.08);
-    background: #fafbfc;
+/* Backgrounds */
+.bg-light {
+    background-color: var(--ff-bg-secondary) !important;
 }
 
-/* Statistics Dashboard */
+.bg-white {
+    background-color: var(--ff-bg-primary) !important;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--ff-bg-tertiary);
+    border-top: 1px solid var(--ff-border-color);
+    color: var(--ff-text-primary);
+}
+
+.footer h5, .footer h6 {
+    color: var(--ff-text-primary);
+}
+
+.footer a {
+    color: var(--ff-text-secondary);
+}
+
+.footer a:hover {
+    color: var(--ff-primary);
+}
+
+/* Dropdown Menus */
+.dropdown-menu {
+    background-color: var(--ff-bg-secondary);
+    border-color: var(--ff-border-color);
+}
+
+.dropdown-item {
+    color: var(--ff-text-primary);
+}
+
+.dropdown-item:hover {
+    background-color: var(--ff-bg-tertiary);
+    color: var(--ff-text-primary);
+}
+
+/* Badges */
+.badge {
+    color: white;
+}
+
+.badge.bg-secondary {
+    background-color: var(--ff-text-secondary) !important;
+}
+
+/* Statistics Section */
+.stats-section {
+    background-color: var(--ff-bg-secondary);
+}
+
 .stat-card {
-    background: white;
-    border: 1px solid var(--ff-gray-200);
+    background-color: var(--ff-bg-primary);
+    border: 1px solid var(--ff-border-color);
     border-radius: var(--ff-radius-lg);
     padding: 1.5rem;
     text-align: center;
@@ -212,54 +390,42 @@
 }
 
 .stat-label {
-    color: var(--ff-gray-600);
+    color: var(--ff-text-muted);
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-top: 0.5rem;
 }
 
-/* Forms and Inputs */
-.form-control:focus {
-    border-color: var(--ff-primary);
-    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
-}
-
 /* CV Upload Area */
-.cv-upload-area {
+.cv-upload-area, .upload-area {
     border: 2px dashed var(--ff-primary-300);
     border-radius: var(--ff-radius-lg);
     padding: 2rem;
     text-align: center;
-    background: var(--ff-primary-50);
+    background: var(--ff-bg-secondary);
     transition: var(--ff-transition);
+    color: var(--ff-text-primary);
 }
 
-.cv-upload-area:hover {
+.cv-upload-area:hover, .upload-area:hover {
     border-color: var(--ff-primary);
-    background: var(--ff-primary-100);
+    background: var(--ff-bg-tertiary);
 }
 
-.cv-upload-area.dragover {
-    border: 2px solid var(--ff-gray-200);
-    border-radius: var(--ff-radius-lg);
-    padding: 2rem;
-    text-align: center;
-    transition: var(--ff-transition);
-}
-
-.cv-upload-area.dragover:hover {
-    border-color: var(--ff-primary);
+.cv-upload-area.dragover, .upload-area.dragover {
+    border-color: var(--ff-accent);
+    background: var(--ff-bg-tertiary);
 }
 
 .cv-upload-area.success {
-    border-color: var(--ff-primary);
-    background: var(--ff-primary-50);
+    border-color: var(--ff-accent);
+    background: var(--ff-bg-secondary);
 }
 
 /* Publication List */
 .publication-item {
-    border-bottom: 1px solid var(--ff-gray-200);
+    border-bottom: 1px solid var(--ff-border-color);
     padding: 1rem 0;
 }
 
@@ -269,18 +435,133 @@
 
 .publication-title {
     font-weight: 600;
-    color: var(--ff-gray-900);
+    color: var(--ff-text-primary);
     margin-bottom: 0.25rem;
 }
 
 .publication-authors {
-    color: var(--ff-gray-600);
+    color: var(--ff-text-secondary);
     font-size: 0.875rem;
     margin-bottom: 0.25rem;
 }
 
 .publication-journal {
-    color: var(--ff-gray-700);
+    color: var(--ff-text-muted);
     font-size: 0.875rem;
     font-style: italic;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    transition: all 0.3s ease;
+    background-color: var(--ff-bg-secondary) !important;
+    border-color: var(--ff-border-color) !important;
+    color: var(--ff-text-primary) !important;
+    box-shadow: var(--ff-shadow-lg);
+}
+
+#theme-toggle:hover {
+    background-color: var(--ff-bg-tertiary) !important;
+    border-color: var(--ff-primary) !important;
+    color: var(--ff-primary) !important;
+    transform: scale(1.1);
+}
+
+/* AI Service Cards and other interactive elements */
+.ai-service-card {
+    background-color: var(--ff-bg-secondary);
+    border-color: var(--ff-border-color);
+    color: var(--ff-text-primary);
+}
+
+.ai-service-card:hover {
+    background-color: var(--ff-bg-tertiary);
+    border-color: var(--ff-primary);
+}
+
+.ai-service-card.selected {
+    border-color: var(--ff-primary);
+    background-color: var(--ff-bg-tertiary);
+}
+
+/* Payment Method Cards */
+.payment-method-card {
+    background-color: var(--ff-bg-secondary);
+    border-color: var(--ff-border-color);
+    color: var(--ff-text-primary);
+}
+
+.payment-method-card:hover {
+    background-color: var(--ff-bg-tertiary);
+    border-color: var(--ff-primary);
+}
+
+.payment-method-card.selected {
+    border-color: var(--ff-primary);
+    background-color: var(--ff-bg-tertiary);
+}
+
+/* Pricing Cards */
+.pricing-card {
+    background-color: var(--ff-bg-secondary);
+    border-color: var(--ff-border-color);
+    color: var(--ff-text-primary);
+}
+
+.pricing-card:hover {
+    background-color: var(--ff-bg-tertiary);
+    border-color: var(--ff-primary);
+}
+
+.pricing-card.recommended {
+    border-color: var(--ff-accent);
+    background-color: var(--ff-bg-tertiary);
+}
+
+/* Faculty and University Cards */
+.faculty-card, .university-card {
+    background-color: var(--ff-bg-secondary);
+    border-color: var(--ff-border-color);
+    color: var(--ff-text-primary);
+}
+
+.faculty-card:hover, .university-card:hover {
+    background-color: var(--ff-bg-tertiary);
+    border-color: var(--ff-primary);
+}
+
+/* Loading Spinners */
+.loading-spinner {
+    border-color: var(--ff-border-light);
+    border-top-color: var(--ff-primary);
+}
+
+/* Links */
+a {
+    color: var(--ff-primary);
+}
+
+a:hover {
+    color: var(--ff-primary-light);
+}
+
+/* Border utilities */
+.border {
+    border-color: var(--ff-border-color) !important;
+}
+
+.border-top {
+    border-top-color: var(--ff-border-color) !important;
+}
+
+.border-bottom {
+    border-bottom-color: var(--ff-border-color) !important;
+}
+
+.border-left {
+    border-left-color: var(--ff-border-color) !important;
+}
+
+.border-right {
+    border-right-color: var(--ff-border-color) !important;
 } 
