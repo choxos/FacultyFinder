@@ -168,7 +168,7 @@ async def get_db_connection():
 
 async def get_summary_statistics() -> StatsResponse:
     """Get homepage statistics"""
-    async with await get_db_connection() as conn:
+    async with get_db_connection() as conn:
         # Get counts using DISTINCT to handle any remaining duplicates
         prof_count = await conn.fetchval("SELECT COUNT(DISTINCT name) FROM professors")
         uni_count = await conn.fetchval("SELECT COUNT(DISTINCT name) FROM universities")
@@ -191,7 +191,7 @@ async def get_summary_statistics() -> StatsResponse:
 
 async def get_top_universities(limit: int = 8) -> List[University]:
     """Get top universities by faculty count"""
-    async with await get_db_connection() as conn:
+    async with get_db_connection() as conn:
         query = """
             SELECT u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established,
                    COUNT(p.id) as faculty_count
@@ -339,7 +339,7 @@ async def get_universities(
 ):
     """Get universities with filtering and pagination"""
     try:
-        async with await get_db_connection() as conn:
+        async with get_db_connection() as conn:
             # Build WHERE clause
             where_conditions = ["u.name IS NOT NULL"]
             params = []
@@ -454,7 +454,7 @@ async def get_faculties(
 ):
     """Get faculty with filtering and pagination"""
     try:
-        async with await get_db_connection() as conn:
+        async with get_db_connection() as conn:
             # Build WHERE clause
             where_conditions = ["p.name IS NOT NULL"]
             params = []
@@ -560,7 +560,7 @@ async def get_faculties(
 async def get_countries():
     """Get countries with university and faculty counts"""
     try:
-        async with await get_db_connection() as conn:
+        async with get_db_connection() as conn:
             query = """
                 SELECT u.country, 
                        COUNT(DISTINCT u.id) as university_count,
@@ -584,7 +584,7 @@ async def get_countries():
 async def get_professor(professor_id: str = Path(..., description="Professor ID (can be integer or university-code format)")):
     """Get individual professor details"""
     try:
-        async with await get_db_connection() as conn:
+        async with get_db_connection() as conn:
             # Handle both integer IDs and string format IDs like CA-ON-002-00001
             if professor_id.isdigit():
                 # Legacy integer ID
@@ -765,7 +765,7 @@ async def get_professor_page(professor_id: str):
 async def get_university_by_code(university_code: str):
     """Get university details by university code"""
     try:
-        async with await get_db_connection() as conn:
+        async with get_db_connection() as conn:
             query = """
                 SELECT u.id, u.name, u.country, u.city, u.university_code, 
                        COALESCE(u.province_state, '') as province, u.year_established,
@@ -866,7 +866,7 @@ async def get_current_user(request: Request):
 async def health_check():
     """Health check endpoint"""
     try:
-        async with await get_db_connection() as conn:
+        async with get_db_connection() as conn:
             await conn.fetchval("SELECT 1")
             return {"status": "healthy", "database": "connected", "framework": "FastAPI"}
     except Exception as e:
