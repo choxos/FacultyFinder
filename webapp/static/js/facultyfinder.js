@@ -229,13 +229,29 @@ const FacultyFinder = {
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('ff-theme', theme);
             
-            // Update toggle button if exists
+            // Update toggle button icon if exists
+            this.updateToggleIcon(theme);
+        },
+
+        updateToggleIcon: function(theme) {
             const toggleBtn = document.getElementById('theme-toggle');
             if (toggleBtn) {
                 const icon = toggleBtn.querySelector('i');
                 if (icon) {
-                    // Clear existing classes and add the correct one
-                    icon.className = `fas fa-${theme === 'dark' ? 'sun' : 'moon'}`;
+                    // Clear all existing Font Awesome classes
+                    icon.className = '';
+                    // Add the correct icon based on current theme
+                    // Show moon when in light theme (to switch to dark)
+                    // Show sun when in dark theme (to switch to light)
+                    if (theme === 'dark') {
+                        icon.className = 'fas fa-sun';
+                        toggleBtn.title = 'Switch to light theme';
+                        toggleBtn.setAttribute('aria-label', 'Switch to light theme');
+                    } else {
+                        icon.className = 'fas fa-moon';
+                        toggleBtn.title = 'Switch to dark theme';
+                        toggleBtn.setAttribute('aria-label', 'Switch to dark theme');
+                    }
                 }
             }
         },
@@ -247,25 +263,60 @@ const FacultyFinder = {
         },
 
         createToggleButton: function() {
-            if (document.getElementById('theme-toggle')) return;
+            // Remove existing button if it exists
+            const existingButton = document.getElementById('theme-toggle');
+            if (existingButton) {
+                existingButton.remove();
+            }
 
             const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
             
-            // Create button element
-            const button = document.createElement('button');
-            button.id = 'theme-toggle';
-            button.className = 'btn btn-outline-secondary position-fixed';
-            button.style.cssText = 'bottom: 20px; right: 20px; z-index: 1050; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;';
-            button.title = 'Toggle theme';
-            button.setAttribute('aria-label', 'Toggle dark/light theme');
+            // Create button element with improved styling
+            const button = FacultyFinder.utils.createElement('button', {
+                id: 'theme-toggle',
+                className: 'btn btn-outline-secondary position-fixed',
+                style: 'bottom: 20px; right: 20px; z-index: 1050; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: all 0.3s ease;'
+            });
             
-            // Create icon element
+            // Create icon element with proper initial icon
             const icon = document.createElement('i');
-            icon.className = `fas fa-${currentTheme === 'dark' ? 'sun' : 'moon'}`;
+            // Show moon when in light theme (to switch to dark)
+            // Show sun when in dark theme (to switch to light)
+            if (currentTheme === 'dark') {
+                icon.className = 'fas fa-sun';
+                button.title = 'Switch to light theme';
+                button.setAttribute('aria-label', 'Switch to light theme');
+            } else {
+                icon.className = 'fas fa-moon';
+                button.title = 'Switch to dark theme';
+                button.setAttribute('aria-label', 'Switch to dark theme');
+            }
             
             button.appendChild(icon);
-            button.addEventListener('click', () => this.toggle());
+            
+            // Add click event listener
+            button.addEventListener('click', () => {
+                this.toggle();
+                // Add a small animation effect
+                button.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 150);
+            });
+            
+            // Add hover effects
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'scale(1.1)';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1)';
+            });
+            
             document.body.appendChild(button);
+            
+            // Ensure the icon is correct for the current theme
+            this.updateToggleIcon(currentTheme);
         }
     },
 
