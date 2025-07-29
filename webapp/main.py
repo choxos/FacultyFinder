@@ -342,7 +342,7 @@ async def get_universities(
     try:
         async with get_db_connection() as conn:
             # Build WHERE clause
-            where_conditions = ["u.name IS NOT NULL"]
+            where_conditions = []
             params = []
             param_count = 0
             
@@ -365,6 +365,10 @@ async def get_universities(
                 param_count += 1
                 where_conditions.append(f"u.type = ${param_count}")
                 params.append(university_type)
+            
+            # Ensure there's always a WHERE condition
+            if not where_conditions:
+                where_conditions = ["1=1"]
             
             # Build ORDER BY clause
             order_mapping = {
@@ -573,183 +577,45 @@ async def get_countries():
         logger.error(f"Error getting countries: {e}")
         raise HTTPException(status_code=500, detail="Failed to retrieve countries")
 
-@app.get("/api/v1/professor/{professor_id}")
-async def get_professor(professor_id: str = Path(..., description="Professor ID (can be integer or university-code format)")):
+@app.get("/api/v1/professor/{faculty_id}")
+async def get_professor(faculty_id: str = Path(..., description="Faculty ID (e.g., CA-ON-002-F-0001)")):
     """Get individual professor details"""
     try:
         async with get_db_connection() as conn:
-            # Handle both integer IDs and string format IDs like CA-ON-002-00001
-            if professor_id.isdigit():
-                # Legacy integer ID
-                query = """
-                    SELECT p.id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
-                           p.degrees, p.all_degrees_and_inst, p.all_degrees_only, p.research_areas,
-                           p.university_code, p.faculty, p.department, p.other_departments,
-                           p.primary_affiliation, p.memberships, p.canada_research_chair, p.director,
-                           COALESCE(p.position, '') as position, 
-                           COALESCE(p.full_time, true) as full_time, 
-                           COALESCE(p.adjunct, false) as adjunct, 
-                           p.uni_email as email, p.other_email,
-                           p.uni_page, p.website, p.misc, p.twitter, p.linkedin, p.phone, p.fax,
-                           p.google_scholar, p.scopus, p.web_of_science, p.orcid, p.researchgate,
-                           p.academicedu, p.created_at, p.updated_at,
-                           COALESCE(p.publication_count, 0) as publication_count,
-                           COALESCE(p.citation_count, 0) as citation_count,
-                           COALESCE(p.h_index, 0) as h_index,
-                           COALESCE(u.name, '') as university_name, 
-                           COALESCE(u.city, '') as city, 
-                           COALESCE(u.province_state, '') as province_state, 
-                           COALESCE(u.country, '') as country, 
-                           COALESCE(u.address, '') as address, 
-                           COALESCE(u.website, '') as university_website
-                    FROM professors p
-                    LEFT JOIN universities u ON p.university_code = u.university_code
-                    WHERE p.id = $1
-                """
-                params = [int(professor_id)]
-            else:
-                # New string format ID - extract university code and sequence
-                if '-' in professor_id and len(professor_id.split('-')) >= 4:
-                    # Format: CA-ON-002-00001
-                    parts = professor_id.split('-')
-                    university_code = '-'.join(parts[:3])  # CA-ON-002
-                    sequence = parts[3]  # 00001
-                    
-                    # First try to find by professor_id_new field if it exists
-                    query_by_id = """
-                        SELECT p.id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
-                               p.degrees, p.all_degrees_and_inst, p.all_degrees_only, p.research_areas,
-                               p.university_code, p.faculty, p.department, p.other_departments,
-                               p.primary_affiliation, p.memberships, p.canada_research_chair, p.director,
-                               COALESCE(p.position, '') as position, 
-                               COALESCE(p.full_time, true) as full_time, 
-                               COALESCE(p.adjunct, false) as adjunct, 
-                               p.uni_email as email, p.other_email,
-                               p.uni_page, p.website, p.misc, p.twitter, p.linkedin, p.phone, p.fax,
-                               p.google_scholar, p.scopus, p.web_of_science, p.orcid, p.researchgate,
-                               p.academicedu, p.created_at, p.updated_at,
-                               COALESCE(p.publication_count, 0) as publication_count,
-                               COALESCE(p.citation_count, 0) as citation_count,
-                               COALESCE(p.h_index, 0) as h_index,
-                               COALESCE(u.name, '') as university_name, 
-                               COALESCE(u.city, '') as city, 
-                               COALESCE(u.province_state, '') as province_state, 
-                               COALESCE(u.country, '') as country, 
-                               COALESCE(u.address, '') as address, 
-                               COALESCE(u.website, '') as university_website
-                        FROM professors p
-                        LEFT JOIN universities u ON p.university_code = u.university_code
-                        WHERE p.professor_id_new = $1
-                    """
-                    
-                    # Try to find by professor_id_new field first
-                    row = await conn.fetchrow(query_by_id, professor_id)
-                    
-                    if not row:
-                        # Fallback: use university code + sequence with better ordering
-                        query = """
-                            SELECT p.id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
-                                   p.degrees, p.all_degrees_and_inst, p.all_degrees_only, p.research_areas,
-                                   p.university_code, p.faculty, p.department, p.other_departments,
-                                   p.primary_affiliation, p.memberships, p.canada_research_chair, p.director,
-                                   COALESCE(p.position, '') as position, 
-                                   COALESCE(p.full_time, true) as full_time, 
-                                   COALESCE(p.adjunct, false) as adjunct, 
-                                   p.uni_email as email, p.other_email,
-                                   p.uni_page, p.website, p.misc, p.twitter, p.linkedin, p.phone, p.fax,
-                                   p.google_scholar, p.scopus, p.web_of_science, p.orcid, p.researchgate,
-                                   p.academicedu, p.created_at, p.updated_at,
-                                   COALESCE(p.publication_count, 0) as publication_count,
-                                   COALESCE(p.citation_count, 0) as citation_count,
-                                   COALESCE(p.h_index, 0) as h_index,
-                                   COALESCE(u.name, '') as university_name, 
-                                   COALESCE(u.city, '') as city, 
-                                   COALESCE(u.province_state, '') as province_state, 
-                                   COALESCE(u.country, '') as country, 
-                                   COALESCE(u.address, '') as address, 
-                                   COALESCE(u.website, '') as university_website
-                            FROM professors p
-                            LEFT JOIN universities u ON p.university_code = u.university_code
-                            WHERE p.university_code = $1
-                            ORDER BY p.name, p.id
-                            LIMIT 1 OFFSET $2
-                        """
-                        try:
-                            offset = int(sequence) - 1  # Convert 00001 to 0-based index
-                            if offset < 0:
-                                raise HTTPException(status_code=400, detail="Invalid sequence number")
-                            row = await conn.fetchrow(query, university_code, offset)
-                        except ValueError:
-                            raise HTTPException(status_code=400, detail="Invalid professor ID format")
-                else:
-                    raise HTTPException(status_code=400, detail="Invalid professor ID format")
-
-            if not row:
-                # Try one more fallback - check if it's actually an integer disguised as string
-                try:
-                    int_id = int(professor_id)
-                    query = """
-                        SELECT p.id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
-                               p.degrees, p.all_degrees_and_inst, p.all_degrees_only, p.research_areas,
-                               p.university_code, p.faculty, p.department, p.other_departments,
-                               p.primary_affiliation, p.memberships, p.canada_research_chair, p.director,
-                               COALESCE(p.position, '') as position, 
-                               COALESCE(p.full_time, true) as full_time, 
-                               COALESCE(p.adjunct, false) as adjunct, 
-                               p.uni_email as email, p.other_email,
-                               p.uni_page, p.website, p.misc, p.twitter, p.linkedin, p.phone, p.fax,
-                               p.google_scholar, p.scopus, p.web_of_science, p.orcid, p.researchgate,
-                               p.academicedu, p.created_at, p.updated_at,
-                               COALESCE(p.publication_count, 0) as publication_count,
-                               COALESCE(p.citation_count, 0) as citation_count,
-                               COALESCE(p.h_index, 0) as h_index,
-                               COALESCE(u.name, '') as university_name, 
-                               COALESCE(u.city, '') as city, 
-                               COALESCE(u.province_state, '') as province_state, 
-                               COALESCE(u.country, '') as country, 
-                               COALESCE(u.address, '') as address, 
-                               COALESCE(u.website, '') as university_website
-                        FROM professors p
-                        LEFT JOIN universities u ON p.university_code = u.university_code
-                        WHERE p.id = $1
-                    """
-                    row = await conn.fetchrow(query, int_id)
-                except ValueError:
-                    pass  # Not an integer, continue with 404
+            # Use faculty_id to find professor
+            query = """
+                SELECT p.id, p.faculty_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email,
+                       p.university_code, COALESCE(p.department, '') as department, 
+                       COALESCE(p.position, '') as position, 
+                       COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas,
+                       0 as publication_count, 0 as citation_count, 0 as h_index,
+                       COALESCE(p.adjunct, false) as adjunct,
+                       COALESCE(p.full_time, true) as full_time,
+                       COALESCE(u.name, '') as university_name, 
+                       COALESCE(u.city, '') as city, 
+                       COALESCE(u.province_state, '') as province_state, 
+                       COALESCE(u.country, '') as country
+                FROM professors p
+                LEFT JOIN universities u ON p.university_code = u.university_code
+                WHERE p.faculty_id = $1
+            """
+            
+            row = await conn.fetchrow(query, faculty_id)
             
             if not row:
                 raise HTTPException(status_code=404, detail="Professor not found")
             
-            professor_data = dict(row)
-            
-            # Parse research areas if it's JSON
-            if professor_data.get('research_areas'):
-                try:
-                    import json
-                    if isinstance(professor_data['research_areas'], str):
-                        professor_data['research_areas'] = json.loads(professor_data['research_areas'])
-                except (json.JSONDecodeError, TypeError):
-                    # If it's not JSON, treat as comma-separated string
-                    if isinstance(professor_data['research_areas'], str):
-                        professor_data['research_areas'] = professor_data['research_areas']
-                    else:
-                        professor_data['research_areas'] = ""
-            
-            # Ensure all required fields are present for the response
-            professor_data['total_publications'] = professor_data.get('publication_count', 0)
-            professor_data['primary_position'] = professor_data.get('position', '')
-            
-            return professor_data
-            
+            return Professor(**dict(row))
+    
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error getting professor {professor_id}: {e}")
+        logger.error(f"Error getting professor {faculty_id}: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 # Professor detail route
-@app.get("/professor/{professor_id}")
-async def get_professor_page(professor_id: str):
+@app.get("/professor/{faculty_id}")
+async def get_professor_page(faculty_id: str):
     """Serve professor detail page"""
     return FileResponse(os.path.join(static_dir, "professor.html"))
 
