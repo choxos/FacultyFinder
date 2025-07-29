@@ -500,7 +500,7 @@ async def get_faculties(
             
             # Main query
             query = f"""
-                SELECT p.id, p.name, p.email, p.university_code,
+                SELECT p.id, p.faculty_id, p.name, COALESCE(p.uni_email, p.other_email, '') as email, p.university_code,
                        COALESCE(p.department, '') as department, 
                        COALESCE(p.position, '') as position, 
                        COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas, 
@@ -516,10 +516,8 @@ async def get_faculties(
                 LEFT JOIN universities u ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
                 ORDER BY {order_clause}
-                LIMIT ${param_count + 1} OFFSET ${param_count + 2}
+                LIMIT {per_page + 1} OFFSET {offset}
             """
-            
-            params.extend([per_page + 1, offset])  # +1 to check if there are more results
             
             rows = await conn.fetch(query, *params)
             
