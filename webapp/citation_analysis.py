@@ -24,7 +24,7 @@ class CitationAnalyzer:
         Calculate H-index for a professor
         
         Args:
-            professor_id (int): Professor ID
+            professor_id (int): Professor database ID (not faculty_id string)
             
         Returns:
             int: H-index value
@@ -68,7 +68,7 @@ class CitationAnalyzer:
         Calculate comprehensive citation metrics for a professor
         
         Args:
-            professor_id (int): Professor ID
+            professor_id (int): Professor database ID (not faculty_id string)
             
         Returns:
             Dict: Citation metrics including h-index, total citations, etc.

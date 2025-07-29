@@ -1279,11 +1279,11 @@ def faculties():
                              sort_by='name',
                              filter_options={"universities": [], "departments": [], "positions": [], "employment_types": []})
 
-@app.route('/professor/<string:professor_id>')
+@app.route('/professor/<string:faculty_id>')
 @monitor_performance
-def professor_profile(professor_id):
-    """Professor profile page with caching - now uses string IDs like CA-ON-002-0001"""
-    cache_key = f"professor_profile:{professor_id}"
+def professor_profile(faculty_id):
+    """Professor profile page with caching - now uses faculty IDs like CA-ON-002-F-0001"""
+    cache_key = f"professor_profile:{faculty_id}"
     cached_result = cache.get(cache_key)
     
     if cached_result is not None:
@@ -1296,9 +1296,9 @@ def professor_profile(professor_id):
         if not conn:
             return "Database connection error", 500
         
-        # Optimized single query to get all professor data
+        # Optimized single query to get all professor data using faculty_id
         query = """
-        SELECT p.id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
+        SELECT p.id, p.faculty_id, p.name, p.first_name, p.last_name, p.middle_names, p.other_name,
                p.degrees, p.all_degrees_and_inst, p.all_degrees_only, p.research_areas,
                p.university_code, p.faculty, p.department, p.other_departments,
                p.primary_affiliation, p.memberships, p.canada_research_chair, p.director,
@@ -1309,10 +1309,10 @@ def professor_profile(professor_id):
                u.name as university_name, u.city, u.province_state, u.country, u.address, u.website as university_website
         FROM professors p
         LEFT JOIN universities u ON p.university_code = u.university_code
-        WHERE p.id = ?
+        WHERE p.faculty_id = ?
         """
         
-        cursor = conn.execute(query, (professor_id,))
+        cursor = conn.execute(query, (faculty_id,))
         professor = cursor.fetchone()
         
         if not professor:
@@ -1341,7 +1341,7 @@ def professor_profile(professor_id):
         ORDER BY pub.publication_year DESC, pub.publication_date DESC
         """
         
-        cursor = conn.execute(publications_query, (professor_id,))
+        cursor = conn.execute(publications_query, (professor['id'],))
         publications_rows = cursor.fetchall()
         
         # Convert to list of dictionaries and parse JSON authors
@@ -1369,7 +1369,7 @@ def professor_profile(professor_id):
                              publications=publications)
         
     except Exception as e:
-        logger.error(f"Error getting professor {professor_id}: {e}")
+        logger.error(f"Error getting professor {faculty_id}: {e}")
         return "Error loading professor profile", 500
 
 @app.route('/university/<string:university_code>')

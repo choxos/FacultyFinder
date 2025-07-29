@@ -65,6 +65,7 @@ class University(BaseModel):
 
 class Professor(BaseModel):
     id: int
+    faculty_id: Optional[str] = None
     name: str
     first_name: Optional[str] = None
     last_name: Optional[str] = None
@@ -104,17 +105,17 @@ MOCK_UNIVERSITIES = [
 ]
 
 MOCK_PROFESSORS = [
-    Professor(id=1, name="Dr. John Smith", email="john.smith@mcmaster.ca", 
+    Professor(id=1, faculty_id="CA-ON-002-F-0001", name="Dr. John Smith", email="john.smith@mcmaster.ca", 
               university_code="MCMASTER", university_name="McMaster University",
               department="Health Sciences", primary_position="Professor",
               research_areas="Epidemiology|Public Health|Biostatistics", 
               total_publications=89, publications_last_5_years=23),
-    Professor(id=2, name="Dr. Sarah Johnson", email="s.johnson@utoronto.ca",
+    Professor(id=2, faculty_id="CA-ON-001-F-0001", name="Dr. Sarah Johnson", email="s.johnson@utoronto.ca",
               university_code="UTORONTO", university_name="University of Toronto",
               department="Computer Science", primary_position="Associate Professor",
               research_areas="Machine Learning|AI|Data Science",
               total_publications=67, publications_last_5_years=34),
-    Professor(id=3, name="Dr. Michael Chen", email="mchen@harvard.edu",
+    Professor(id=3, faculty_id="US-MA-001-F-0001", name="Dr. Michael Chen", email="mchen@harvard.edu",
               university_code="HARVARD", university_name="Harvard University", 
               department="Medicine", primary_position="Professor",
               research_areas="Cardiology|Clinical Research|Genetics",
@@ -284,10 +285,10 @@ async def get_countries():
     """Get countries with university and faculty counts"""
     return MOCK_COUNTRIES
 
-@app.get("/api/v1/professor/{professor_id}", response_model=Professor)
-async def get_professor(professor_id: int = Path(...)):
+@app.get("/api/v1/professor/{faculty_id}", response_model=Professor)
+async def get_professor(faculty_id: str = Path(...)):
     """Get individual professor details"""
-    professor = next((p for p in MOCK_PROFESSORS if p.id == professor_id), None)
+    professor = next((p for p in MOCK_PROFESSORS if p.faculty_id == faculty_id), None)
     if not professor:
         raise HTTPException(status_code=404, detail="Professor not found")
     return professor
