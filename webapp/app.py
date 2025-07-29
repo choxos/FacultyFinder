@@ -2574,7 +2574,6 @@ def optimize_database_settings():
 
 
 # Initialize performance optimizations on startup
-@app.before_first_request
 def initialize_performance_optimizations():
     """Initialize performance optimizations when the app starts"""
     try:
