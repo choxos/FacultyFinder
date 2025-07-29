@@ -1,0 +1,36 @@
+[Unit]
+Description=FacultyFinder FastAPI Application
+After=network.target
+After=postgresql.service
+Requires=postgresql.service
+
+[Service]
+Type=exec
+User=xeradb
+Group=xeradb
+WorkingDirectory=/var/www/ff
+Environment="PATH=/var/www/ff/venv/bin"
+Environment="PYTHONPATH=/var/www/ff"
+ExecStart=/var/www/ff/venv/bin/uvicorn webapp.main:app --host 127.0.0.1 --port 8008 --workers 4 --log-level info
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=3
+KillMode=mixed
+TimeoutStopSec=5
+
+# Performance optimizations for FastAPI
+LimitNOFILE=65535
+LimitNPROC=4096
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/ff
+
+# Environment variables file
+EnvironmentFile=/var/www/ff/.env
+
+[Install]
+WantedBy=multi-user.target 

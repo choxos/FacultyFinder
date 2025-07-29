@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - FacultyFinder</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body {
+            padding-top: 76px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+        
+        .pricing-card {
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #007bff;
+            transform: scale(1.05);
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+        
+        .btn-outline-primary {
+            border: 2px solid #667eea;
+            color: #667eea;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="/">
+                <i class="fas fa-graduation-cap me-2"></i>
+                FacultyFinder
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/countries">Countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/universities">Universities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/faculties">Faculties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/ai-assistant">
+                            <i class="fas fa-robot me-1"></i>AI Assistant
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="/api/docs">
+                            <i class="fas fa-code me-1"></i>API Docs
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold mb-4">
+                            AI-Powered Faculty Matching
+                        </h1>
+                        <p class="lead mb-4">
+                            Let our advanced AI help you find the perfect research collaborators and faculty members 
+                            based on your specific research interests and goals.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#pricing" class="btn btn-light btn-lg">
+                                <i class="fas fa-rocket me-2"></i>Get Started
+                            </a>
+                            <a href="#features" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-info-circle me-2"></i>Learn More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <i class="fas fa-robot" style="font-size: 8rem; opacity: 0.7;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="fw-bold mb-3">AI Assistant Features</h2>
+                    <p class="lead text-muted">Powerful AI tools to accelerate your research collaborations</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-search-plus feature-icon"></i>
+                    <h4>Smart Matching</h4>
+                    <p class="text-muted">
+                        AI analyzes research papers, citations, and expertise to find your ideal collaborators.
+                    </p>
+                </div>
+                
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-brain feature-icon"></i>
+                    <h4>Intelligent Recommendations</h4>
+                    <p class="text-muted">
+                        Get personalized faculty recommendations based on your research profile and goals.
+                    </p>
+                </div>
+                
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h4>Impact Analysis</h4>
+                    <p class="text-muted">
+                        Understand potential collaboration impact through advanced analytics and predictions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="fw-bold mb-3">Choose Your Plan</h2>
+                    <p class="lead text-muted">Flexible pricing options to meet your research needs</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- AI Usage Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card">
+                        <div class="card-body text-center p-4">
+                            <h3 class="card-title">AI Unlimited</h3>
+                            <div class="price mb-3">$49<small class="text-muted fs-6">/month</small></div>
+                            <p class="text-muted mb-4">Perfect for active researchers</p>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Unlimited AI queries
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Smart faculty matching
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Research impact analysis
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Priority support
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Export recommendations
+                                </li>
+                            </ul>
+                            
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-rocket me-2"></i>Start Free Trial
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expert Review Plans -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card featured">
+                        <div class="card-body text-center p-4">
+                            <div class="badge bg-primary mb-3">Most Popular</div>
+                            <h3 class="card-title">Expert Review</h3>
+                            <div class="price mb-3">$99<small class="text-muted fs-6"> - $999</small></div>
+                            <p class="text-muted mb-4">Human expert analysis</p>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Manual expert review
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Detailed collaboration plan
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Introduction facilitation
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Custom research matching
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-crown text-warning me-2"></i>
+                                    VIP tier available ($999)
+                                </li>
+                            </ul>
+                            
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-user-tie me-2"></i>Contact Expert
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Free Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card">
+                        <div class="card-body text-center p-4">
+                            <h3 class="card-title">Basic</h3>
+                            <div class="price mb-3">Free</div>
+                            <p class="text-muted mb-4">Get started with basics</p>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    5 AI queries per month
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    Basic faculty search
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2"></i>
+                                    University browsing
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-times text-muted me-2"></i>
+                                    <span class="text-muted">Advanced matching</span>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-times text-muted me-2"></i>
+                                    <span class="text-muted">Export features</span>
+                                </li>
+                            </ul>
+                            
+                            <button class="btn btn-outline-primary w-100">
+                                <i class="fas fa-play me-2"></i>Start Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="fw-bold mb-3">How AI Assistant Works</h2>
+                    <p class="lead text-muted">Simple steps to find your ideal research collaborators</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" 
+                             style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
+                            1
+                        </div>
+                    </div>
+                    <h5>Describe Your Research</h5>
+                    <p class="text-muted">Tell us about your research interests, goals, and current projects.</p>
+                </div>
+                
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" 
+                             style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
+                            2
+                        </div>
+                    </div>
+                    <h5>AI Analysis</h5>
+                    <p class="text-muted">Our AI analyzes millions of research papers and faculty profiles.</p>
+                </div>
+                
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" 
+                             style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
+                            3
+                        </div>
+                    </div>
+                    <h5>Get Matches</h5>
+                    <p class="text-muted">Receive ranked recommendations with compatibility scores.</p>
+                </div>
+                
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" 
+                             style="width: 60px; height: 60px; font-size: 1.5rem; font-weight: bold;">
+                            4
+                        </div>
+                    </div>
+                    <h5>Connect</h5>
+                    <p class="text-muted">Reach out to potential collaborators with guided introductions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="fw-bold mb-4">Ready to Accelerate Your Research?</h2>
+                    <p class="lead mb-4">Join thousands of researchers using AI to find their next breakthrough collaboration.</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="#pricing" class="btn btn-light btn-lg">
+                            <i class="fas fa-rocket me-2"></i>Start Your Journey
+                        </a>
+                        <a href="/api/docs" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-code me-2"></i>API Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add scroll effect to pricing cards
+        window.addEventListener('scroll', function() {
+            const cards = document.querySelectorAll('.pricing-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isVisible) {
+                    card.style.animation = 'fadeInUp 0.6s ease-out';
+                }
+            });
+        });
+        
+        // Add CSS animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html> 
