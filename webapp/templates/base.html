@@ -19,12 +19,38 @@
     <!-- Preconnect to Font Awesome CDNs for faster loading -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://use.fontawesome.com">
     
-    <!-- Primary Font Awesome CDN - Using JSDelivr (allowed by CSP) -->
+    <!-- Font Awesome - Multiple CDN approach for maximum compatibility -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" 
-          integrity="sha384-4bw+/aepP/YC94hEpVNVgifdDr+dn6XteBnVgjPT7kQBNeUUaMQTswdcFa8U6xyY" 
-          crossorigin="anonymous" referrerpolicy="no-referrer">
+          crossorigin="anonymous">
+    
+    <!-- Fallback: CloudFlare CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+    <!-- Simple fallback verification -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Test if Font Awesome loaded
+        const testEl = document.createElement('i');
+        testEl.className = 'fas fa-home';
+        testEl.style.display = 'none';
+        document.body.appendChild(testEl);
+        
+        const computed = window.getComputedStyle(testEl, ':before');
+        const hasIcons = computed.content !== 'none' && computed.content !== '';
+        
+        if (!hasIcons) {
+            console.log('🔄 Font Awesome not detected, loading alternative...');
+            const fallbackLink = document.createElement('link');
+            fallbackLink.rel = 'stylesheet';
+            fallbackLink.href = 'https://use.fontawesome.com/releases/v6.5.1/css/all.css';
+            document.head.appendChild(fallbackLink);
+        }
+        
+        document.body.removeChild(testEl);
+    });
+    </script>
     
     <!-- Font Awesome Fallback Script -->
     <script src="{{ url_for('static', filename='js/fontawesome-fallback.js') }}"></script>
