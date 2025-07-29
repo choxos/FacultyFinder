@@ -176,12 +176,12 @@ async def get_top_universities(limit: int = 8) -> List[University]:
     """Get top universities by faculty count"""
     async with await get_db_connection() as conn:
         query = """
-            SELECT u.id, u.name, u.country, u.city, u.university_code, u.province, u.year_established,
+            SELECT u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established,
                    COUNT(p.id) as faculty_count
             FROM universities u
             LEFT JOIN professors p ON p.university_code = u.university_code
             WHERE u.name IS NOT NULL
-            GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province, u.year_established
+            GROUP BY u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established
             HAVING COUNT(p.id) > 0
             ORDER BY COUNT(p.id) DESC
             LIMIT $1
@@ -340,7 +340,7 @@ async def get_universities(
             
             if province:
                 param_count += 1
-                where_conditions.append(f"u.province = ${param_count}")
+                where_conditions.append(f"u.province_state = ${param_count}")
                 params.append(province)
             
             # Build ORDER BY clause
@@ -357,12 +357,12 @@ async def get_universities(
             
             # Main query
             query = f"""
-                SELECT u.id, u.name, u.country, u.city, u.university_code, u.province, u.year_established,
+                SELECT u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established,
                        COUNT(p.id) as faculty_count
                 FROM universities u
                 LEFT JOIN professors p ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
-                GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province, u.year_established
+                GROUP BY u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established
                 HAVING COUNT(p.id) > 0
                 ORDER BY {order_clause}
                 LIMIT ${param_count + 1} OFFSET ${param_count + 2}
@@ -467,9 +467,9 @@ async def get_faculties(
             
             # Main query
             query = f"""
-                SELECT p.id, p.name, p.first_name, p.last_name, p.email, p.university_code,
-                       p.department, p.primary_position, p.research_areas, p.total_publications,
-                       p.publications_last_5_years, u.name as university_name
+                SELECT p.id, p.name, p.email, p.university_code,
+                       COALESCE(p.department, '') as department, p.primary_position, COALESCE(p.research_areas, '') as research_areas, p.total_publications,
+                       p.publications_last_5_years, COALESCE(u.name, '') as university_name
                 FROM professors p
                 LEFT JOIN universities u ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
@@ -544,7 +544,7 @@ async def get_professor(professor_id: int = Path(..., description="Professor ID"
     try:
         async with await get_db_connection() as conn:
             query = """
-                SELECT p.*, u.name as university_name
+                SELECT p.*, COALESCE(u.name, '') as university_name
                 FROM professors p
                 LEFT JOIN universities u ON p.university_code = u.university_code
                 WHERE p.id = $1
