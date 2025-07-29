@@ -31,7 +31,7 @@ from decimal import Decimal, ROUND_DOWN
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple, Any
 from cryptography.fernet import Fernet
-from flask import current_app
+
 import sqlite3
 
 logger = logging.getLogger(__name__)
