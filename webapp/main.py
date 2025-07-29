@@ -457,8 +457,8 @@ async def get_faculties(
                 "name": "p.name ASC",
                 "university": "u.name ASC",
                 "department": "p.department ASC",
-                "publications": "CAST(p.total_publications AS INTEGER) DESC NULLS LAST",
-                "recent_publications": "CAST(p.publications_last_5_years AS INTEGER) DESC NULLS LAST"
+                "publications": "CAST(COALESCE(p.publication_count, 0) AS INTEGER) DESC NULLS LAST",
+                "recent_publications": "CAST(0 AS INTEGER) DESC NULLS LAST"
             }
             order_clause = order_mapping.get(sort_by, "p.name ASC")
             
@@ -468,8 +468,8 @@ async def get_faculties(
             # Main query
             query = f"""
                 SELECT p.id, p.name, p.email, p.university_code,
-                       COALESCE(p.department, '') as department, COALESCE(p.position, '') as primary_position, COALESCE(p.research_areas, '') as research_areas, p.total_publications,
-                       p.publications_last_5_years, COALESCE(u.name, '') as university_name
+                       COALESCE(p.department, '') as department, COALESCE(p.position, '') as primary_position, COALESCE(CAST(p.research_areas AS TEXT), '') as research_areas, COALESCE(p.publication_count, 0) as total_publications,
+                       0 as publications_last_5_years, COALESCE(u.name, '') as university_name
                 FROM professors p
                 LEFT JOIN universities u ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
