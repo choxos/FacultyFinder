@@ -349,8 +349,22 @@
 }
 
 .facultyfinder-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.08);
+    border-color: rgba(102, 126, 234, 0.4) !important;
+    background: #fafbfc;
+}
+
+/* Enhanced Card Hover Effects for Professor Profile */
+.card {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.08);
+    border-color: rgba(102, 126, 234, 0.4) !important;
 }
 
 /* Position Badges */
@@ -420,6 +434,13 @@
 .publication-metric {
     text-align: center;
     padding: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.publication-metric:hover {
+    transform: scale(1.05);
+    background-color: rgba(102, 126, 234, 0.05);
 }
 
 .publication-metric .metric-value {
@@ -427,6 +448,12 @@
     font-weight: bold;
     color: var(--bs-primary);
     display: block;
+    transition: all 0.3s ease;
+}
+
+.publication-metric:hover .metric-value {
+    color: var(--bs-primary);
+    transform: scale(1.1);
 }
 
 .publication-metric .metric-label {
@@ -494,6 +521,16 @@
     transition: var(--ff-transition);
 }
 
+/* Degree Link Hover Effects */
+.degree-link {
+    transition: all 0.3s ease;
+}
+
+.degree-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
 .department-badge:hover {
     color: var(--ff-primary-dark);
 }
@@ -550,8 +587,9 @@
 }
 
 .metric-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.08);
+    border-color: rgba(102, 126, 234, 0.4) !important;
 }
 
 .metric-card .metric-value {
