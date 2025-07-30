@@ -319,7 +319,10 @@ const FacultyFinder = {
         init: function() {
             const savedTheme = localStorage.getItem('ff-theme') || 'light';
             this.setTheme(savedTheme);
-            this.createToggleButton();
+            // Delay button creation to ensure FontAwesome is loaded
+            setTimeout(() => {
+                this.createToggleButton();
+            }, 250);
         },
 
         setTheme: function(theme) {
@@ -335,16 +338,27 @@ const FacultyFinder = {
             if (toggleBtn) {
                 const icon = toggleBtn.querySelector('i');
                 if (icon) {
-                    icon.className = ''; // Clear existing classes
+                    // Clear existing classes
+                    icon.className = '';
+                    
                     if (theme === 'dark') {
+                        // When in dark mode, show sun icon (to switch to light)
                         icon.className = 'fas fa-sun';
+                        icon.style.color = '#fbbf24'; // Golden sun color
                         toggleBtn.title = 'Switch to light theme';
                         toggleBtn.setAttribute('aria-label', 'Switch to light theme');
                     } else {
+                        // When in light mode, show moon icon (to switch to dark)  
                         icon.className = 'fas fa-moon';
+                        icon.style.color = '#374151'; // Dark moon color
                         toggleBtn.title = 'Switch to dark theme';
                         toggleBtn.setAttribute('aria-label', 'Switch to dark theme');
                     }
+                    
+                    // Ensure icon is visible and styled
+                    icon.style.fontSize = '18px';
+                    icon.style.transition = 'all 0.3s ease';
+                    icon.style.display = 'inline-block';
                 }
             }
         },
@@ -368,27 +382,45 @@ const FacultyFinder = {
                 style: 'bottom: 20px; right: 20px; z-index: 1050; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: all 0.3s ease;'
             });
 
+            // Create icon with initial classes based on current theme
             const icon = document.createElement('i');
-            button.appendChild(icon); // Append icon to button first
+            if (currentTheme === 'dark') {
+                icon.className = 'fas fa-sun';
+                icon.style.color = '#fbbf24'; // Golden sun color
+                button.title = 'Switch to light theme';
+                button.setAttribute('aria-label', 'Switch to light theme');
+            } else {
+                icon.className = 'fas fa-moon';  
+                icon.style.color = '#374151'; // Dark moon color
+                button.title = 'Switch to dark theme';
+                button.setAttribute('aria-label', 'Switch to dark theme');
+            }
+            icon.style.fontSize = '18px';
+            icon.style.transition = 'all 0.3s ease';
+            icon.style.display = 'inline-block';
+            
+            button.appendChild(icon);
 
             button.addEventListener('click', () => {
                 this.toggle();
-                button.style.transform = 'scale(0.95)';
+                // Add click animation with icon rotation
+                button.style.transform = 'scale(0.95) rotate(15deg)';
                 setTimeout(() => {
-                    button.style.transform = 'scale(1)';
+                    button.style.transform = 'scale(1) rotate(0deg)';
                 }, 150);
             });
 
             button.addEventListener('mouseenter', () => {
                 button.style.transform = 'scale(1.1)';
+                button.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
             });
 
             button.addEventListener('mouseleave', () => {
                 button.style.transform = 'scale(1)';
+                button.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
             });
 
             document.body.appendChild(button);
-            this.updateToggleIcon(currentTheme); // Ensure initial icon is correct
         }
     },
 

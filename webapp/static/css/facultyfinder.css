@@ -847,7 +847,42 @@
     background-color: var(--ff-bg-tertiary) !important;
 }
 
-/* Dark Theme Theme Toggle Button */
+/* =================== Theme Toggle Button Styles =================== */
+
+/* Base Theme Toggle Button */
+#theme-toggle {
+    background-color: #ffffff !important;
+    border: 2px solid #dee2e6 !important;
+    color: #374151 !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease !important;
+}
+
+#theme-toggle:hover {
+    background-color: #f8f9fa !important;
+    border-color: #4a9eff !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 4px 15px rgba(74, 158, 255, 0.3) !important;
+}
+
+#theme-toggle i {
+    font-size: 18px !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+}
+
+/* Light Theme Moon Icon */
+[data-theme="light"] #theme-toggle i.fa-moon {
+    color: #374151 !important;
+}
+
+[data-theme="light"] #theme-toggle:hover i.fa-moon {
+    color: #4a9eff !important;
+    transform: rotate(-15deg) !important;
+}
+
+/* Dark Theme Sun Icon */
 [data-theme="dark"] #theme-toggle {
     background-color: var(--ff-bg-secondary) !important;
     border-color: var(--ff-border-color) !important;
@@ -856,8 +891,34 @@
 
 [data-theme="dark"] #theme-toggle:hover {
     background-color: var(--ff-bg-tertiary) !important;
-    border-color: var(--ff-primary) !important;
-    color: var(--ff-primary) !important;
+    border-color: #fbbf24 !important;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3) !important;
+}
+
+[data-theme="dark"] #theme-toggle i.fa-sun {
+    color: #fbbf24 !important;
+}
+
+[data-theme="dark"] #theme-toggle:hover i.fa-sun {
+    color: #fcd34d !important;
+    transform: rotate(180deg) !important;
+}
+
+/* Click Animation */
+#theme-toggle:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s ease !important;
+}
+
+/* Accessibility */
+#theme-toggle:focus {
+    outline: 2px solid #4a9eff !important;
+    outline-offset: 2px !important;
+}
+
+[data-theme="dark"] #theme-toggle:focus {
+    outline: 2px solid #fbbf24 !important;
+    outline-offset: 2px !important;
 }
 
 /* List View Styles */
