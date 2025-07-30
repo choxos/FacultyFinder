@@ -22,7 +22,7 @@ PROVINCE_MAPPING = {
     'Nunavut': 'NU',
     'Ontario': 'ON',
     'Prince Edward Island': 'PE',
-    'Quebec': 'QC',
+    'Québec': 'QC',
     'Saskatchewan': 'SK',
     'Yukon': 'YT'
 }
