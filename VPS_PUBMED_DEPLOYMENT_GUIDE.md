@@ -41,10 +41,10 @@ pip install -r requirements_publications.txt
 nano .env
 
 # Add these lines to your .env file:
-NCBI_EMAIL=your.email@domain.com           # ⚠️ REQUIRED: Your real email
-NCBI_API_KEY=your_api_key_here             # Optional: Get from NCBI
-PUBMED_MAX_RESULTS=100                     # Default: 100 per search
-PUBMED_RATE_LIMIT=3                        # Requests per second (max 10 with API key)
+NCBI_EMAIL=ahmad.pub@gmail.com           # ⚠️ REQUIRED: Your real email
+NCBI_API_KEY=b15aecb7c2315055170736d3eec9f00e1a08             # Optional: Get from NCBI
+PUBMED_MAX_RESULTS=10000                     # Default: 100 per search
+PUBMED_RATE_LIMIT=10                        # Requests per second (max 10 with API key)
 ```
 
 ### Step 3: Get NCBI API Key (Recommended)

@@ -763,6 +763,14 @@
                                                        class="text-decoration-none text-muted hover-primary university-link">
                                                         ${faculty.university_name || 'Unknown University'}
                                                     </a>
+                                                    ${faculty.university_full_address ? `
+                                                        <a href="https://www.google.com/maps/search/${encodeURIComponent(faculty.university_full_address)}" 
+                                                           target="_blank" 
+                                                           class="text-decoration-none ms-2 maps-link"
+                                                           title="View ${faculty.university_name || 'University'} on Google Maps">
+                                                            <i class="fas fa-map-marker-alt text-primary"></i>
+                                                        </a>
+                                                    ` : ''}
                                                 </p>
                                                 
                                                 <!-- Department -->

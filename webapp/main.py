@@ -157,6 +157,11 @@ class Professor(BaseModel):
     email: Optional[str] = None
     university_code: Optional[str] = None
     university_name: Optional[str] = None
+    university_address: Optional[str] = None
+    university_city: Optional[str] = None
+    university_province: Optional[str] = None
+    university_country: Optional[str] = None
+    university_full_address: Optional[str] = None
     department: Optional[str] = None
     position: Optional[str] = None
     primary_position: Optional[str] = None
@@ -557,7 +562,22 @@ async def get_faculties(
                        0 as h_index,
                        COALESCE(p.adjunct, false) as adjunct,
                        COALESCE(p.full_time, true) as full_time,
-                       COALESCE(u.name, '') as university_name
+                       COALESCE(u.name, '') as university_name,
+                       COALESCE(u.address, '') as university_address,
+                       COALESCE(u.city, '') as university_city,
+                       COALESCE(u.province_state, '') as university_province,
+                       COALESCE(u.country, '') as university_country,
+                       CASE 
+                           WHEN u.building_number IS NOT NULL AND u.street IS NOT NULL THEN
+                               CONCAT_WS(', ',
+                                   u.name,
+                                   NULLIF(CONCAT_WS(' ', u.building_number, u.street), ''),
+                                   u.city,
+                                   NULLIF(CONCAT_WS(' ', u.province_state, u.postal_code), ''),
+                                   u.country
+                               )
+                           ELSE CONCAT_WS(', ', u.name, u.city, u.province_state, u.country)
+                       END as university_full_address
                 FROM professors p
                 LEFT JOIN universities u ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
