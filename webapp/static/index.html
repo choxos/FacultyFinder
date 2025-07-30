@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FacultyFinder - Discover Your Ideal Academic Collaborators</title>
+    <title>FacultyFinder - Academic Faculty Database and Research Network</title>
     
     <!-- Meta Tags -->
-    <meta name="description" content="FacultyFinder helps researchers discover ideal faculty collaborators across universities worldwide using AI-powered matching and comprehensive academic profiles.">
+    <meta name="description" content="A comprehensive faculty database to help researchers, graduate students, and academics discover potential supervisors, collaborators, and faculty members across universities.">
     <meta name="keywords" content="faculty finder, academic collaboration, research, universities, professors, global, worldwide">
     <meta name="author" content="FacultyFinder Team">
     
@@ -54,6 +54,11 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <button class="btn btn-outline-secondary me-2" id="theme-toggle" type="button" title="Toggle dark/light mode">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item">
                         <a class="btn btn-outline-primary me-2" href="/login">
                             <i class="fas fa-sign-in-alt me-1"></i>Sign In
                         </a>
@@ -75,53 +80,53 @@
                 <div class="col-lg-6">
                     <div class="hero-content">
                         <div class="badge bg-light text-primary mb-3 fs-6 px-3 py-2">
-                            <i class="fas fa-star me-2"></i>World's Leading Academic Network
+                            <i class="fas fa-graduation-cap me-2"></i>Academic Research Network
                         </div>
-                        <h1 class="display-3 fw-bold text-white mb-4">
-                            Accelerate Your Research Impact with 
-                            <span class="text-warning">Global Faculty Connections</span>
+                        <h1 class="display-4 fw-bold text-white mb-4">
+                            Discover Faculty & 
+                            <span class="text-warning">Research Collaborators</span>
                         </h1>
                         <p class="lead mb-4 text-light fs-5">
-                            Join the premier platform connecting researchers, institutions, and industry leaders. 
-                            Access comprehensive faculty profiles, research metrics, and collaboration opportunities 
-                            from leading universities worldwide.
+                            A comprehensive database to help researchers find potential supervisors, 
+                            collaborators, and faculty members across universities. Explore detailed 
+                            academic profiles and research interests to identify meaningful connections.
                         </p>
                         
                         <!-- Value Proposition Points -->
                         <div class="value-points mb-4">
                             <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-check-circle text-success me-3"></i>
-                                <span class="text-light">Access 280+ verified faculty profiles</span>
+                                <i class="fas fa-university text-warning me-3"></i>
+                                <span class="text-light">Browse faculty from multiple universities</span>
                             </div>
                             <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-check-circle text-success me-3"></i>
-                                <span class="text-light">Connect with 100+ top-tier universities</span>
+                                <i class="fas fa-search text-warning me-3"></i>
+                                <span class="text-light">Search by research areas and expertise</span>
                             </div>
                             <div class="d-flex align-items-center mb-4">
-                                <i class="fas fa-check-circle text-success me-3"></i>
-                                <span class="text-light">AI-powered collaboration matching</span>
+                                <i class="fas fa-robot text-warning me-3"></i>
+                                <span class="text-light">AI-assisted profile matching</span>
                             </div>
                         </div>
                         
                         <!-- CTA Buttons -->
                         <div class="hero-cta">
                             <a href="/faculties" class="btn btn-warning btn-lg me-3 mb-3 px-4 py-3">
-                                <i class="fas fa-rocket me-2"></i>Start Exploring
+                                <i class="fas fa-search me-2"></i>Browse Faculty
                             </a>
                             <a href="/ai-assistant" class="btn btn-outline-light btn-lg mb-3 px-4 py-3">
-                                <i class="fas fa-brain me-2"></i>Try AI Assistant
+                                <i class="fas fa-upload me-2"></i>Upload CV
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-stats-card bg-white rounded-4 shadow-lg p-4">
-                        <h3 class="text-dark mb-4 text-center">Platform Analytics</h3>
+                        <h3 class="text-dark mb-4 text-center">Database Overview</h3>
                         <div class="row g-3">
                             <div class="col-6">
                                 <div class="stat-item text-center">
                                     <div class="stat-number h2 fw-bold text-primary mb-1" id="hero-stat-professors">281</div>
-                                    <div class="stat-label text-muted small">Faculty Members</div>
+                                    <div class="stat-label text-muted small">Faculty Profiles</div>
                                 </div>
                             </div>
                             <div class="col-6">
@@ -138,8 +143,8 @@
                             </div>
                             <div class="col-6">
                                 <div class="stat-item text-center">
-                                    <div class="stat-number h2 fw-bold text-warning mb-1">24/7</div>
-                                    <div class="stat-label text-muted small">Platform Access</div>
+                                    <div class="stat-number h2 fw-bold text-warning mb-1">Free</div>
+                                    <div class="stat-label text-muted small">Access</div>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +154,7 @@
                             <form action="/faculties" method="GET" class="search-form">
                                 <div class="input-group">
                                     <input type="text" name="search" class="form-control form-control-lg" 
-                                           placeholder="Search faculty or research areas...">
+                                           placeholder="Search by name or research area...">
                                     <button class="btn btn-primary btn-lg" type="submit">
                                         <i class="fas fa-search"></i>
                                     </button>
@@ -162,106 +167,101 @@
         </div>
     </div>
 
-    <!-- Business Impact Section -->
-    <section class="business-impact-section py-5 bg-gradient-light">
+    <!-- Features Section -->
+    <section class="features-section py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-5 fw-bold text-dark mb-3">Driving Academic Excellence Worldwide</h2>
-                    <p class="lead text-muted">Trusted by leading researchers and institutions for impactful collaboration</p>
+                    <h2 class="h3 fw-bold text-dark mb-3">Platform Features</h2>
+                    <p class="lead text-muted">Tools designed to support academic research and collaboration</p>
                 </div>
             </div>
             
-            <!-- Key Metrics -->
+            <!-- Key Features -->
             <div class="row g-4 mb-5">
                 <div class="col-lg-3 col-md-6">
-                    <div class="metric-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
-                        <div class="metric-icon mb-3">
+                    <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
+                        <div class="feature-icon mb-3">
                             <div class="icon-circle bg-primary-light">
-                                <i class="fas fa-users fa-2x text-primary"></i>
+                                <i class="fas fa-user-graduate fa-2x text-primary"></i>
                             </div>
                         </div>
-                        <div class="metric-number display-4 fw-bold text-primary mb-2" id="stat-professors">281</div>
-                        <h5 class="metric-label fw-semibold mb-2">Verified Faculty</h5>
-                        <p class="metric-description text-muted small mb-0">Expert researchers across disciplines</p>
+                        <h5 class="feature-label fw-semibold mb-3">Faculty Profiles</h5>
+                        <p class="feature-description text-muted small mb-0">
+                            Detailed academic profiles including research interests, 
+                            education background, and contact information
+                        </p>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="metric-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
-                        <div class="metric-icon mb-3">
+                    <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
+                        <div class="feature-icon mb-3">
                             <div class="icon-circle bg-success-light">
-                                <i class="fas fa-university fa-2x text-success"></i>
+                                <i class="fas fa-search fa-2x text-success"></i>
                             </div>
                         </div>
-                        <div class="metric-number display-4 fw-bold text-success mb-2" id="stat-universities">100</div>
-                        <h5 class="metric-label fw-semibold mb-2">Partner Universities</h5>
-                        <p class="metric-description text-muted small mb-0">Top-tier global institutions</p>
+                        <h5 class="feature-label fw-semibold mb-3">Advanced Search</h5>
+                        <p class="feature-description text-muted small mb-0">
+                            Search and filter faculty by research areas, university, 
+                            department, and employment type
+                        </p>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="metric-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
-                        <div class="metric-icon mb-3">
+                    <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
+                        <div class="feature-icon mb-3">
                             <div class="icon-circle bg-info-light">
-                                <i class="fas fa-chart-line fa-2x text-info"></i>
+                                <i class="fas fa-robot fa-2x text-info"></i>
                             </div>
                         </div>
-                        <div class="metric-number display-4 fw-bold text-info mb-2">95%</div>
-                        <h5 class="metric-label fw-semibold mb-2">Match Accuracy</h5>
-                        <p class="metric-description text-muted small mb-0">AI-powered precision matching</p>
+                        <h5 class="feature-label fw-semibold mb-3">AI Assistant</h5>
+                        <p class="feature-description text-muted small mb-0">
+                            Upload your CV to receive personalized faculty 
+                            recommendations based on your research interests
+                        </p>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="metric-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
-                        <div class="metric-icon mb-3">
+                    <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
+                        <div class="feature-icon mb-3">
                             <div class="icon-circle bg-warning-light">
-                                <i class="fas fa-rocket fa-2x text-warning"></i>
+                                <i class="fas fa-map-marked-alt fa-2x text-warning"></i>
                             </div>
                         </div>
-                        <div class="metric-number display-4 fw-bold text-warning mb-2">2.5x</div>
-                        <h5 class="metric-label fw-semibold mb-2">Faster Connections</h5>
-                        <p class="metric-description text-muted small mb-0">Accelerated collaboration discovery</p>
+                        <h5 class="feature-label fw-semibold mb-3">Geographic View</h5>
+                        <p class="feature-description text-muted small mb-0">
+                            Explore universities by location with integrated 
+                            maps and geographical filtering options
+                        </p>
                     </div>
                 </div>
             </div>
             
-            <!-- ROI Showcase -->
+            <!-- About Section -->
             <div class="row">
                 <div class="col-12">
-                    <div class="roi-showcase bg-gradient-primary rounded-4 p-5 text-white">
+                    <div class="about-section bg-white rounded-4 p-5">
                         <div class="row align-items-center">
                             <div class="col-lg-8">
-                                <h3 class="h2 fw-bold mb-3">Transform Your Research Strategy</h3>
-                                <p class="lead mb-4">
-                                    Join leading academic institutions leveraging our platform to enhance research impact, 
-                                    accelerate collaboration discovery, and drive innovation across disciplines.
+                                <h3 class="h4 fw-bold mb-3">About FacultyFinder</h3>
+                                <p class="mb-4">
+                                    FacultyFinder is an academic research tool developed to assist graduate students, 
+                                    researchers, and academic professionals in discovering potential supervisors, 
+                                    collaborators, and faculty members. Our database contains verified profiles 
+                                    from universities, with a focus on providing accurate and up-to-date information 
+                                    to support the academic community.
                                 </p>
-                                <div class="row g-3">
-                                    <div class="col-md-4">
-                                        <div class="roi-metric">
-                                            <div class="h4 fw-bold text-warning">73%</div>
-                                            <div class="small">Faster project initiation</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="roi-metric">
-                                            <div class="h4 fw-bold text-warning">45%</div>
-                                            <div class="small">More quality connections</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="roi-metric">
-                                            <div class="h4 fw-bold text-warning">60%</div>
-                                            <div class="small">Reduced search time</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="mb-0 text-muted">
+                                    Currently featuring faculty profiles from Canadian universities, 
+                                    with plans to expand internationally as the platform grows.
+                                </p>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <a href="/universities" class="btn btn-warning btn-lg px-4 py-3 fw-semibold">
-                                    <i class="fas fa-chart-bar me-2"></i>Explore Platform
+                                <a href="/universities" class="btn btn-primary btn-lg px-4 py-3">
+                                    <i class="fas fa-university me-2"></i>Browse Universities
                                 </a>
                             </div>
                         </div>
@@ -299,296 +299,111 @@
         </div>
     </div>
 
-    <!-- Solution Features Section -->
-    <section class="solution-features py-5 bg-white">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="display-5 fw-bold mb-4">Enterprise-Grade Research Intelligence</h2>
-                    <p class="lead text-muted">
-                        Streamline faculty discovery and collaboration with cutting-edge technology 
-                        designed for academic institutions and research organizations
-                    </p>
+    <!-- Featured Faculty Section -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-header text-center mb-5">
+                    <h2 class="h3 fw-bold">Featured Faculty</h2>
+                    <p class="text-muted">Recent additions to our faculty database</p>
                 </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="solution-card h-100 bg-light rounded-4 p-4 border-0 hover-shadow">
-                        <div class="solution-header d-flex align-items-start mb-3">
-                            <div class="solution-icon me-3">
-                                <div class="icon-circle bg-primary text-white">
-                                    <i class="fas fa-search-plus fa-lg"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Intelligent Discovery Engine</h4>
-                                <p class="text-muted mb-0">
-                                    Advanced search algorithms with semantic matching across research domains, 
-                                    publications, and academic credentials for precise faculty identification.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="solution-benefits">
-                            <div class="benefit-item d-flex align-items-center mb-2">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">Multi-dimensional search filters</span>
-                            </div>
-                            <div class="benefit-item d-flex align-items-center">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">Real-time index updates</span>
-                            </div>
-                        </div>
+                
+                <div class="row" id="featured-faculty-container">
+                    <!-- Loading placeholder -->
+                    <div class="col-12 text-center">
+                        <div class="loading-spinner"></div>
+                        <p class="mt-2 text-muted">Loading featured faculty...</p>
                     </div>
                 </div>
                 
-                <div class="col-lg-4 col-md-6">
-                    <div class="solution-card h-100 bg-light rounded-4 p-4 border-0 hover-shadow">
-                        <div class="solution-header d-flex align-items-start mb-3">
-                            <div class="solution-icon me-3">
-                                <div class="icon-circle bg-success text-white">
-                                    <i class="fas fa-brain fa-lg"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="fw-bold mb-2">AI-Powered Matching</h4>
-                                <p class="text-muted mb-0">
-                                    Machine learning algorithms analyze research patterns, collaboration history, 
-                                    and academic synergies to recommend optimal faculty partnerships.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="solution-benefits">
-                            <div class="benefit-item d-flex align-items-center mb-2">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">95% accuracy rate</span>
-                            </div>
-                            <div class="benefit-item d-flex align-items-center">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">Continuous learning model</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="solution-card h-100 bg-light rounded-4 p-4 border-0 hover-shadow">
-                        <div class="solution-header d-flex align-items-start mb-3">
-                            <div class="solution-icon me-3">
-                                <div class="icon-circle bg-info text-white">
-                                    <i class="fas fa-analytics fa-lg"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Research Analytics</h4>
-                                <p class="text-muted mb-0">
-                                    Comprehensive metrics dashboard tracking publication impact, citation analysis, 
-                                    and research collaboration patterns for strategic decision-making.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="solution-benefits">
-                            <div class="benefit-item d-flex align-items-center mb-2">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">Real-time analytics</span>
-                            </div>
-                            <div class="benefit-item d-flex align-items-center">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">Custom reporting</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="solution-card h-100 bg-light rounded-4 p-4 border-0 hover-shadow">
-                        <div class="solution-header d-flex align-items-start mb-3">
-                            <div class="solution-icon me-3">
-                                <div class="icon-circle bg-warning text-white">
-                                    <i class="fas fa-shield-alt fa-lg"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Enterprise Security</h4>
-                                <p class="text-muted mb-0">
-                                    Bank-grade security protocols with data encryption, access controls, 
-                                    and compliance standards protecting sensitive academic information.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="solution-benefits">
-                            <div class="benefit-item d-flex align-items-center mb-2">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">SOC 2 compliance</span>
-                            </div>
-                            <div class="benefit-item d-flex align-items-center">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">99.9% uptime SLA</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="solution-card h-100 bg-light rounded-4 p-4 border-0 hover-shadow">
-                        <div class="solution-header d-flex align-items-start mb-3">
-                            <div class="solution-icon me-3">
-                                <div class="icon-circle bg-danger text-white">
-                                    <i class="fas fa-plug fa-lg"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Seamless Integration</h4>
-                                <p class="text-muted mb-0">
-                                    RESTful APIs and webhook support for integration with existing academic 
-                                    systems, CRMs, and institutional databases.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="solution-benefits">
-                            <div class="benefit-item d-flex align-items-center mb-2">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">API-first architecture</span>
-                            </div>
-                            <div class="benefit-item d-flex align-items-center">
-                                <span class="small">24/7 developer support</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="solution-card h-100 bg-light rounded-4 p-4 border-0 hover-shadow">
-                        <div class="solution-header d-flex align-items-start mb-3">
-                            <div class="solution-icon me-3">
-                                <div class="icon-circle bg-secondary text-white">
-                                    <i class="fas fa-headset fa-lg"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="fw-bold mb-2">Expert Support</h4>
-                                <p class="text-muted mb-0">
-                                    Dedicated customer success team with academic domain expertise providing 
-                                    onboarding, training, and ongoing platform optimization.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="solution-benefits">
-                            <div class="benefit-item d-flex align-items-center mb-2">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">Dedicated account manager</span>
-                            </div>
-                            <div class="benefit-item d-flex align-items-center">
-                                <i class="fas fa-check text-success me-2"></i>
-                                <span class="small">Custom training programs</span>
-                            </div>
-                        </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <a href="/faculties" class="btn btn-primary btn-lg">
+                            <i class="fas fa-arrow-right me-2"></i>View All Faculty
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Recent Faculty Section -->
-    <section class="py-5">
+    <!-- Getting Started Section -->
+    <section class="getting-started py-5 bg-primary text-white">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="fw-bold mb-3">Featured Faculty Researchers</h2>
-                    <p class="lead text-muted">Discover leading researchers across different academic fields</p>
-                </div>
-            </div>
-            
-            <div class="row g-4" id="featured-faculty-container">
-                <!-- Featured faculty will be loaded dynamically -->
-                <div class="col-12 text-center">
-                    <div class="loading-spinner"></div>
-                    <p class="mt-2 text-muted">Loading featured faculty...</p>
-                </div>
-            </div>
-            
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <a href="/faculties" class="btn btn-success btn-lg">
-                        <i class="fas fa-arrow-right me-2"></i>Explore All Faculty
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional CTA Section -->
-    <section class="professional-cta py-5 bg-dark text-white position-relative overflow-hidden">
-        <div class="container position-relative">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="cta-content">
-                        <div class="badge bg-warning text-dark mb-3 fs-6 px-3 py-2">
-                            <i class="fas fa-star me-2"></i>Trusted by Leading Institutions
-                        </div>
-                        <h2 class="display-5 fw-bold mb-4">
-                            Ready to Transform Your Research Strategy?
-                        </h2>
-                        <p class="lead mb-4 text-light opacity-90">
-                            Join leading academic institutions leveraging FacultyFinder to accelerate collaboration 
-                            discovery, enhance research impact, and drive innovation across disciplines.
+                    <div class="getting-started-content">
+                        <h3 class="h4 fw-bold mb-4">
+                            Get Started with FacultyFinder
+                        </h3>
+                        <p class="mb-4">
+                            Whether you're a graduate student looking for a supervisor, 
+                            a researcher seeking collaborators, or a faculty member 
+                            exploring new partnerships, our platform can help you find 
+                            the right academic connections.
                         </p>
                         
-                        <!-- Value Points -->
-                        <div class="value-points mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-check-circle text-success me-3"></i>
-                                <span>Access 280+ verified faculty profiles instantly</span>
+                        <!-- Getting Started Steps -->
+                        <div class="steps mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="step-number me-3 bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">
+                                    <span class="small fw-bold">1</span>
+                                </div>
+                                <span>Browse faculty profiles by university or research area</span>
                             </div>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-check-circle text-success me-3"></i>
-                                <span>AI-powered matching with 95% accuracy</span>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="step-number me-3 bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">
+                                    <span class="small fw-bold">2</span>
+                                </div>
+                                <span>Use our AI assistant for personalized recommendations</span>
                             </div>
                             <div class="d-flex align-items-center mb-4">
-                                <i class="fas fa-check-circle text-success me-3"></i>
-                                <span>60% faster collaboration discovery</span>
+                                <div class="step-number me-3 bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">
+                                    <span class="small fw-bold">3</span>
+                                </div>
+                                <span>Connect with faculty members through their profiles</span>
                             </div>
                         </div>
                         
                         <!-- CTA Buttons -->
                         <div class="cta-buttons">
-                            <a href="/faculties" class="btn btn-warning btn-lg me-3 mb-3 px-4 py-3 fw-semibold">
-                                <i class="fas fa-rocket me-2"></i>Start Your Search
+                            <a href="/faculties" class="btn btn-warning btn-lg me-3 mb-3 px-4 py-3">
+                                <i class="fas fa-search me-2"></i>Start Browsing
                             </a>
                             <a href="/ai-assistant" class="btn btn-outline-light btn-lg mb-3 px-4 py-3">
-                                <i class="fas fa-brain me-2"></i>Try AI Matching
+                                <i class="fas fa-upload me-2"></i>Upload CV
                             </a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-6">
-                    <div class="cta-visual text-center">
-                        <div class="stats-highlight bg-white bg-opacity-10 rounded-4 p-4 backdrop-blur">
-                            <h4 class="mb-4 text-warning">Platform Impact</h4>
+                    <div class="getting-started-visual text-center">
+                        <div class="stats-card bg-white bg-opacity-10 rounded-4 p-4">
+                            <h5 class="mb-4 text-warning">Quick Stats</h5>
                             <div class="row g-3">
                                 <div class="col-6">
-                                    <div class="impact-stat">
-                                        <div class="h3 fw-bold text-white mb-1">73%</div>
-                                        <div class="small text-light opacity-75">Faster Project Initiation</div>
+                                    <div class="stat-item">
+                                        <div class="h4 fw-bold text-white mb-1" id="cta-stat-professors">281</div>
+                                        <div class="small text-light opacity-75">Faculty Profiles</div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="impact-stat">
-                                        <div class="h3 fw-bold text-white mb-1">2.5x</div>
-                                        <div class="small text-light opacity-75">More Quality Connections</div>
+                                    <div class="stat-item">
+                                        <div class="h4 fw-bold text-white mb-1" id="cta-stat-universities">100</div>
+                                        <div class="small text-light opacity-75">Universities</div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="impact-stat">
-                                        <div class="h3 fw-bold text-white mb-1">95%</div>
-                                        <div class="small text-light opacity-75">User Satisfaction</div>
+                                    <div class="stat-item">
+                                        <div class="h4 fw-bold text-white mb-1">Free</div>
+                                        <div class="small text-light opacity-75">Access</div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="impact-stat">
-                                        <div class="h3 fw-bold text-white mb-1">24/7</div>
-                                        <div class="small text-light opacity-75">Platform Availability</div>
+                                    <div class="stat-item">
+                                        <div class="h4 fw-bold text-white mb-1">AI</div>
+                                        <div class="small text-light opacity-75">Powered</div>
                                     </div>
                                 </div>
                             </div>
@@ -616,7 +431,8 @@
                         FacultyFinder
                     </h5>
                     <p class="mb-3">
-                        Connecting researchers with their ideal academic collaborators worldwide through AI-powered matching and comprehensive faculty profiles.
+                        A research tool to help graduate students, researchers, and academic professionals 
+                        discover faculty members and potential collaborators across universities.
                     </p>
                     <p class="mb-0">
                         &copy; 2025 FacultyFinder. All rights reserved.
@@ -937,9 +753,42 @@
             }
         }
         
+        // Theme toggle functionality
+        function initializeTheme() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const html = document.documentElement;
+            
+            // Get saved theme or default to light
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-theme', currentTheme);
+            updateThemeIcon(currentTheme);
+            
+            // Theme toggle click handler
+            themeToggle.addEventListener('click', function() {
+                const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+            
+            function updateThemeIcon(theme) {
+                if (theme === 'dark') {
+                    themeIcon.className = 'fas fa-sun';
+                    themeToggle.title = 'Switch to light mode';
+                } else {
+                    themeIcon.className = 'fas fa-moon';
+                    themeToggle.title = 'Switch to dark mode';
+                }
+            }
+        }
+
         // Enhanced page initialization
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Initializing FacultyFinder homepage...');
+            
+            // Initialize theme system
+            initializeTheme();
             
             // Initialize stats to 0 first
             initializeStats();
