@@ -53,6 +53,128 @@ def generate_professor_id(university_code, sequence_id):
     """Generate professor_id from university_code and sequence_id"""
     return f"{university_code}-{sequence_id:05d}"
 
+def incremental_update_universities(csv_file='data/university_codes.csv'):
+    """Perform incremental update of university data including new address fields"""
+    logger.info("🔄 Starting incremental university update...")
+    
+    if not os.path.exists(csv_file):
+        logger.error(f"❌ CSV file not found: {csv_file}")
+        return False
+    
+    conn = connect_database()
+    if not conn:
+        return False
+    
+    try:
+        cursor = conn.cursor(cursor_factory=RealDictCursor)
+        
+        # Read CSV data
+        df = pd.read_csv(csv_file)
+        logger.info(f"📊 Loaded {len(df)} university records from CSV")
+        
+        # Check if address columns exist in database
+        cursor.execute("""
+            SELECT column_name FROM information_schema.columns 
+            WHERE table_name = 'universities' AND column_name IN ('building_number', 'street', 'postal_code')
+        """)
+        address_columns = [row[0] for row in cursor.fetchall()]
+        has_address_columns = len(address_columns) == 3
+        
+        if not has_address_columns:
+            logger.info("⚠️ Address columns not found. Run update_university_address_schema.py first")
+        
+        updated_count = 0
+        
+        # Process each row in CSV
+        for index, row in df.iterrows():
+            university_code = row.get('university_code')
+            university_name = row.get('university_name')
+            
+            if pd.isna(university_code) or pd.isna(university_name):
+                continue
+            
+            # Check if university exists
+            cursor.execute("SELECT id FROM universities WHERE university_code = %s", (university_code,))
+            existing_uni = cursor.fetchone()
+            
+            if existing_uni:
+                # Update existing university
+                if has_address_columns:
+                    update_sql = """
+                        UPDATE universities 
+                        SET name = %s, country = %s, province_state = %s, city = %s,
+                            building_number = %s, street = %s, postal_code = %s,
+                            website = %s, university_type = %s, languages = %s, year_established = %s
+                        WHERE university_code = %s
+                    """
+                    cursor.execute(update_sql, (
+                        university_name, row.get('country'), row.get('province_state'), row.get('city'),
+                        row.get('building_number'), row.get('street'), row.get('postal_code'),
+                        row.get('website'), row.get('type'), row.get('language'), 
+                        row.get('established') if not pd.isna(row.get('established')) else None,
+                        university_code
+                    ))
+                else:
+                    update_sql = """
+                        UPDATE universities 
+                        SET name = %s, country = %s, province_state = %s, city = %s,
+                            website = %s, university_type = %s, languages = %s, year_established = %s
+                        WHERE university_code = %s
+                    """
+                    cursor.execute(update_sql, (
+                        university_name, row.get('country'), row.get('province_state'), row.get('city'),
+                        row.get('website'), row.get('type'), row.get('language'), 
+                        row.get('established') if not pd.isna(row.get('established')) else None,
+                        university_code
+                    ))
+                
+                updated_count += 1
+                logger.info(f"🔄 Updated: {university_name}")
+            else:
+                # Insert new university
+                if has_address_columns:
+                    insert_sql = """
+                        INSERT INTO universities (
+                            university_code, name, country, province_state, city,
+                            building_number, street, postal_code,
+                            website, university_type, languages, year_established
+                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    """
+                    cursor.execute(insert_sql, (
+                        university_code, university_name, row.get('country'), 
+                        row.get('province_state'), row.get('city'),
+                        row.get('building_number'), row.get('street'), row.get('postal_code'),
+                        row.get('website'), row.get('type'), row.get('language'), 
+                        row.get('established') if not pd.isna(row.get('established')) else None
+                    ))
+                else:
+                    insert_sql = """
+                        INSERT INTO universities (
+                            university_code, name, country, province_state, city,
+                            website, university_type, languages, year_established
+                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    """
+                    cursor.execute(insert_sql, (
+                        university_code, university_name, row.get('country'), 
+                        row.get('province_state'), row.get('city'),
+                        row.get('website'), row.get('type'), row.get('language'), 
+                        row.get('established') if not pd.isna(row.get('established')) else None
+                    ))
+                
+                updated_count += 1
+                logger.info(f"➕ Added: {university_name}")
+        
+        conn.commit()
+        logger.info(f"✅ University update complete! Updated/Added: {updated_count}")
+        return True
+        
+    except Exception as e:
+        conn.rollback()
+        logger.error(f"❌ University update failed: {e}")
+        return False
+    finally:
+        conn.close()
+
 def incremental_update_faculty(csv_file='data/mcmaster_hei_faculty.csv'):
     """Perform incremental update of faculty data"""
     logger.info("🔄 Starting incremental faculty update...")
@@ -253,10 +375,10 @@ def restart_service():
 
 def main():
     parser = argparse.ArgumentParser(description='Update FacultyFinder database from CSV files')
-    parser.add_argument('--mode', choices=['incremental', 'full', 'status'], default='incremental',
-                       help='Update mode: incremental (default), full rebuild, or status check')
+    parser.add_argument('--mode', choices=['incremental', 'full', 'status', 'universities'], default='incremental',
+                       help='Update mode: incremental (default), full rebuild, status check, or universities')
     parser.add_argument('--csv', default='data/mcmaster_hei_faculty.csv',
-                       help='Path to faculty CSV file')
+                       help='Path to CSV file (faculty or university)')
     parser.add_argument('--restart', action='store_true',
                        help='Restart the service after update')
     
@@ -272,6 +394,10 @@ def main():
     elif args.mode == 'incremental':
         logger.info(f"📁 Using CSV file: {args.csv}")
         success = incremental_update_faculty(args.csv)
+    elif args.mode == 'universities':
+        csv_file = args.csv if args.csv != 'data/mcmaster_hei_faculty.csv' else 'data/university_codes.csv'
+        logger.info(f"🏫 Updating universities from: {csv_file}")
+        success = incremental_update_universities(csv_file)
     elif args.mode == 'full':
         success = full_rebuild()
     

@@ -20,6 +20,7 @@ show_usage() {
     echo "  ./update_db.sh                    # Quick incremental update + restart service"
     echo "  ./update_db.sh check              # Check database status"
     echo "  ./update_db.sh incremental        # Incremental update only"
+    echo "  ./update_db.sh universities       # Update universities with address data"
     echo "  ./update_db.sh full               # Full database rebuild"
     echo "  ./update_db.sh quick              # Quick update without restart"
     echo ""
@@ -38,6 +39,10 @@ case $MODE in
     "incremental")
         echo "🔄 Performing incremental update..."
         python3 update_database_from_csv.py --mode incremental
+        ;;
+    "universities")
+        echo "🏫 Updating universities with address data..."
+        python3 update_database_from_csv.py --mode universities --restart
         ;;
     "full"|"rebuild")
         echo "🗑️ Performing full database rebuild..."

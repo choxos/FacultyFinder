@@ -137,6 +137,10 @@ class University(BaseModel):
     province: Optional[str] = None
     province_state: Optional[str] = None
     address: Optional[str] = None
+    building_number: Optional[str] = None
+    street: Optional[str] = None
+    postal_code: Optional[str] = None
+    full_address: Optional[str] = None  # Computed field for Google Maps
     website: Optional[str] = None
     type: Optional[str] = None
     language: Optional[str] = None
@@ -413,6 +417,20 @@ async def get_universities(
                 SELECT u.id, u.name, u.country, u.city, u.university_code, 
                        COALESCE(u.province_state, '') as province_state,
                        COALESCE(u.address, '') as address,
+                       COALESCE(u.building_number, '') as building_number,
+                       COALESCE(u.street, '') as street,
+                       COALESCE(u.postal_code, '') as postal_code,
+                       CASE 
+                           WHEN u.building_number IS NOT NULL AND u.street IS NOT NULL THEN
+                               CONCAT_WS(', ',
+                                   u.name,
+                                   NULLIF(CONCAT_WS(' ', u.building_number, u.street), ''),
+                                   u.city,
+                                   NULLIF(CONCAT_WS(' ', u.province_state, u.postal_code), ''),
+                                   u.country
+                               )
+                           ELSE CONCAT_WS(', ', u.name, u.city, u.province_state, u.country)
+                       END as full_address,
                        COALESCE(u.website, '') as website,
                        COALESCE(u.university_type, '') as type,
                        COALESCE(u.languages, '') as language,
@@ -423,7 +441,8 @@ async def get_universities(
                 LEFT JOIN professors p ON p.university_code = u.university_code
                 WHERE {' AND '.join(where_conditions)}
                 GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state,
-                         u.address, u.website, u.university_type, u.languages, u.year_established
+                         u.address, u.building_number, u.street, u.postal_code, u.website, 
+                         u.university_type, u.languages, u.year_established
                 HAVING COUNT(p.id) >= 0
                 ORDER BY {order_clause}
                 LIMIT {per_page + 1} OFFSET {offset}

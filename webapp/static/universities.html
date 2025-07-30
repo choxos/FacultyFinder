@@ -457,14 +457,23 @@
                                     <br>
                                     <i class="fas fa-globe me-2"></i>
                                     <strong>${university.country}</strong>
-                                    ${university.address ? `
-                                        <a href="https://www.google.com/maps/search/${encodeURIComponent(university.name + ' ' + university.address)}" 
-                                           target="_blank" class="text-decoration-none maps-link ms-2"
+                                    ${(university.building_number && university.street) || university.full_address ? `
+                                        <a href="https://www.google.com/maps/search/${encodeURIComponent(university.full_address || university.name + ' ' + university.city)}" 
+                                           target="_blank" class="btn btn-sm btn-outline-primary ms-2 google-maps-btn"
                                            title="View on Google Maps">
-                                            <i class="fas fa-external-link-alt"></i>
+                                            <i class="fas fa-map-marked-alt me-1"></i>Maps
                                         </a>
                                     ` : ''}
                                 </div>
+                                ${(university.building_number && university.street) ? `
+                                <div class="text-muted mb-2 address-details">
+                                    <i class="fas fa-home me-2"></i>
+                                    <small>
+                                        <strong>${university.building_number} ${university.street}</strong>
+                                        ${university.postal_code ? `, ${university.postal_code}` : ''}
+                                    </small>
+                                </div>
+                                ` : ''}
                                 
                                 ${university.type ? `
                                 <div class="text-muted mb-2">
@@ -540,11 +549,14 @@
                         </td>
                         <td data-sort-value="${university.city || ''}">
                             <div>${university.city || 'Unknown'}</div>
-                            ${university.address ? `
-                                <a href="https://www.google.com/maps/search/${encodeURIComponent(university.name + ' ' + university.address)}" 
-                                   target="_blank" class="text-decoration-none text-muted" title="View on Google Maps">
-                                    <i class="fas fa-map-marker-alt"></i>
+                            ${(university.building_number && university.street) || university.full_address ? `
+                                <a href="https://www.google.com/maps/search/${encodeURIComponent(university.full_address || university.name + ' ' + university.city)}" 
+                                   target="_blank" class="btn btn-sm btn-outline-secondary" title="View on Google Maps">
+                                    <i class="fas fa-map-marked-alt"></i>
                                 </a>
+                            ` : ''}
+                            ${(university.building_number && university.street) ? `
+                                <br><small class="text-muted">${university.building_number} ${university.street}</small>
                             ` : ''}
                         </td>
                         <td data-sort-value="${university.type || ''}">
