@@ -1,7 +1,7 @@
 #!/bin/bash
 # Structured EDirect search script for all faculty
 # Uses proper university folder structure
-# Generated on 2025-07-30 09:05:46
+# Generated on 2025-07-30 09:19:00
 
 echo "🚀 Starting structured PubMed search for 10 faculty members..."
 echo "📁 Using folder structure: data/publications/pubmed/[country]/[province]/[university]/"
