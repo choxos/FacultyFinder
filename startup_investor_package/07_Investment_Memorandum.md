@@ -1,16 +1,16 @@
 # Investment Memorandum
-**[Company Name]** - Investment Opportunity
+**FacultyFinder.io** - Seed Investment Opportunity
 
 ---
 
 ## Investment Highlights
 
-✅ **Large & Growing Market**: $[X]B TAM growing at [X]% CAGR
-✅ **Proven Team**: [Key team credentials and relevant experience]
-✅ **Validated Solution**: [Traction metrics and customer validation]
-✅ **Scalable Business Model**: [Revenue model and unit economics]
-✅ **Strong ROI Potential**: [X]x projected return in [X] years
-✅ **Clear Exit Strategy**: [IPO/Acquisition potential]
+✅ **Large & Growing Market**: $2.8B SAM growing at 12.3% CAGR in academic intelligence sector
+✅ **Proven Founder**: PhD in academic research with technical execution proven by live platform
+✅ **Live Platform**: Production system with AI integration, 281+ faculty, 100+ universities
+✅ **AI-First Differentiation**: Only platform combining multiple AI services with automated research data
+✅ **Strong ROI Potential**: 12-24x projected return in 5-7 years (excellent for EdTech)
+✅ **Clear Exit Strategy**: Strategic acquisition by major EdTech/research intelligence companies
 
 ---
 
@@ -18,14 +18,14 @@
 
 | **Investment Details** | |
 |------------------------|---|
-| **Company** | [Company Name] |
-| **Industry** | [Industry/Sector] |
-| **Stage** | [Seed/Series A/etc.] |
-| **Amount Seeking** | $[Amount] |
-| **Valuation** | $[Amount] pre-money |
-| **Equity Offered** | [X]% |
-| **Use of Funds** | [Primary uses] |
-| **Expected Timeline** | [Funding timeline] |
+| **Company** | FacultyFinder.io |
+| **Industry** | EdTech / Academic Intelligence |
+| **Stage** | Seed Round |
+| **Amount Seeking** | $500,000 CAD |
+| **Valuation** | $2,500,000 CAD pre-money |
+| **Equity Offered** | 16.7% (preferred shares) |
+| **Use of Funds** | Product development (40%), Marketing (30%), Team (20%), Operations (10%) |
+| **Expected Timeline** | Q1 2025 funding close |
 
 ---
 

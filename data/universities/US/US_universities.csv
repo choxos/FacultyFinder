@@ -1,0 +1,967 @@
+university_code,university_name,country,province_state,city,building_number,street,postal_code,website,type,language,established
+HARV,Harvard University,USA,MA,Cambridge,1350,Massachusetts Ave,02138,harvard.edu,Private,English,1636
+STAN,Stanford University,USA,CA,Stanford,450,Serra Mall,94305,stanford.edu,Private,English,1885
+MIT,Massachusetts Institute of Technology,USA,MA,Cambridge,77,Massachusetts Ave,02139,mit.edu,Private,English,1861
+YALE,Yale University,USA,CT,New Haven,149,Elm St,06511,yale.edu,Private,English,1701
+PRIN,Princeton University,USA,NJ,Princeton,1,Nassau Hall,08544,princeton.edu,Private,English,1746
+COLU,Columbia University,USA,NY,New York,116,Broadway,10027,columbia.edu,Private,English,1754
+UCHI,University of Chicago,USA,IL,Chicago,5801,Ellis Ave,60637,uchicago.edu,Private,English,1890
+PENN,University of Pennsylvania,USA,PA,Philadelphia,3451,Walnut St,19104,upenn.edu,Private,English,1740
+CALT,California Institute of Technology,USA,CA,Pasadena,1200,California Blvd,91125,caltech.edu,Private,English,1891
+JHOP,Johns Hopkins University,USA,MD,Baltimore,3400,Charles St,21218,jhu.edu,Private,English,1876
+NORT,Northwestern University,USA,IL,Evanston,633,Clark St,60208,northwestern.edu,Private,English,1851
+DUKE,Duke University,USA,NC,Durham,2080,Duke University Rd,27708,duke.edu,Private,English,1838
+CORN,Cornell University,USA,NY,Ithaca,616,Thurston Ave,14853,cornell.edu,Private,English,1865
+RICE,Rice University,USA,TX,Houston,6100,Main St,77005,rice.edu,Private,English,1912
+VAND,Vanderbilt University,USA,TN,Nashville,2201,West End Ave,37235,vanderbilt.edu,Private,English,1873
+WASH,Washington University in St. Louis,USA,MO,St. Louis,1,Brookings Dr,63130,wustl.edu,Private,English,1853
+EMOR,Emory University,USA,GA,Atlanta,201,Dowman Dr,30322,emory.edu,Private,English,1836
+GETO,Georgetown University,USA,DC,Washington,3700,O St NW,20057,georgetown.edu,Private,English,1789
+CARN,Carnegie Mellon University,USA,PA,Pittsburgh,5000,Forbes Ave,15213,cmu.edu,Private,English,1900
+NOTA,University of Notre Dame,USA,IN,Notre Dame,400,Main Building,46556,nd.edu,Private,English,1842
+UCBE,University of California Berkeley,USA,CA,Berkeley,200,California Hall,94720,berkeley.edu,Public,English,1868
+UCLA,University of California Los Angeles,USA,CA,Los Angeles,405,Hilgard Ave,90095,ucla.edu,Public,English,1919
+UMICH,University of Michigan,USA,MI,Ann Arbor,500,State St,48109,umich.edu,Public,English,1817
+UIUC,University of Illinois Urbana-Champaign,USA,IL,Urbana,601,Wright St,61801,illinois.edu,Public,English,1867
+GATECH,Georgia Institute of Technology,USA,GA,Atlanta,225,North Ave NW,30332,gatech.edu,Public,English,1885
+UTEX,University of Texas at Austin,USA,TX,Austin,110,Inner Campus Dr,78712,utexas.edu,Public,English,1883
+UWASH,University of Washington,USA,WA,Seattle,1410,NE Campus Pkwy,98195,washington.edu,Public,English,1861
+WISC,University of Wisconsin-Madison,USA,WI,Madison,500,Lincoln Dr,53706,wisc.edu,Public,English,1848
+NCST,North Carolina State University,USA,NC,Raleigh,2701,Sullivan Dr,27695,ncsu.edu,Public,English,1887
+PENN_ST,Pennsylvania State University,USA,PA,University Park,201,Old Main,16802,psu.edu,Public,English,1855
+FLOR,University of Florida,USA,FL,Gainesville,226,Tigert Hall,32611,ufl.edu,Public,English,1853
+OHST,Ohio State University,USA,OH,Columbus,230,North Oval Mall,43210,osu.edu,Public,English,1870
+PURDUE,Purdue University,USA,IN,West Lafayette,610,Purdue Mall,47907,purdue.edu,Public,English,1869
+RUTG,Rutgers University,USA,NJ,New Brunswick,83,Somerset St,08901,rutgers.edu,Public,English,1766
+VIRG,University of Virginia,USA,VA,Charlottesville,1827,University Ave,22904,virginia.edu,Public,English,1819
+MINN,University of Minnesota,USA,MN,Minneapolis,100,Church St SE,55455,umn.edu,Public,English,1851
+INDI,Indiana University,USA,IN,Bloomington,107,South Indiana Ave,47405,indiana.edu,Public,English,1820
+IOWA,University of Iowa,USA,IA,Iowa City,1,Old Capitol,52242,uiowa.edu,Public,English,1847
+NCAR,University of North Carolina,USA,NC,Chapel Hill,103,South Building,27599,unc.edu,Public,English,1789
+OKLA,University of Oklahoma,USA,OK,Norman,660,Parrington Oval,73019,ou.edu,Public,English,1890
+OREG,University of Oregon,USA,OR,Eugene,1585,East 13th Ave,97403,uoregon.edu,Public,English,1876
+UTAH,University of Utah,USA,UT,Salt Lake City,201,Presidents Cir,84112,utah.edu,Public,English,1850
+COLO,University of Colorado Boulder,USA,CO,Boulder,914,Broadway,80309,colorado.edu,Public,English,1876
+ARIS,University of Arizona,USA,AZ,Tucson,1401,University Blvd,85721,arizona.edu,Public,English,1885
+WASH_ST,Washington State University,USA,WA,Pullman,1500,Stadium Way,99164,wsu.edu,Public,English,1890
+OREG_ST,Oregon State University,USA,OR,Corvallis,1500,Jefferson Way,97331,oregonstate.edu,Public,English,1868
+MONT,University of Montana,USA,MT,Missoula,32,Campus Dr,59812,umt.edu,Public,English,1893
+WYOM,University of Wyoming,USA,WY,Laramie,1000,East University Ave,82071,uwyo.edu,Public,English,1886
+NEVI,University of Nevada Las Vegas,USA,NV,Las Vegas,4505,Maryland Pkwy,89154,unlv.edu,Public,English,1957
+NEWM,University of New Mexico,USA,NM,Albuquerque,1,University of New Mexico,87131,unm.edu,Public,English,1889
+IDAL,University of Idaho,USA,ID,Moscow,875,Perimeter Dr,83844,uidaho.edu,Public,English,1889
+HAWA,University of Hawaii at Manoa,USA,HI,Honolulu,2500,Campus Rd,96822,hawaii.edu,Public,English,1907
+ALAS,University of Alaska Fairbanks,USA,AK,Fairbanks,1764,Tanana Loop,99775,uaf.edu,Public,English,1917
+VERM,University of Vermont,USA,VT,Burlington,85,South Prospect St,05405,uvm.edu,Public,English,1791
+MAIN,University of Maine,USA,ME,Orono,168,College Ave,04469,umaine.edu,Public,English,1865
+NEHA,University of New Hampshire,USA,NH,Durham,105,Main St,03824,unh.edu,Public,English,1866
+RHOD,University of Rhode Island,USA,RI,Kingston,75,Lower College Rd,02881,uri.edu,Public,English,1892
+CONN,University of Connecticut,USA,CT,Storrs,352,Mansfield Rd,06269,uconn.edu,Public,English,1881
+MASS,University of Massachusetts Amherst,USA,MA,Amherst,181,Presidents Dr,01003,umass.edu,Public,English,1863
+DELA,University of Delaware,USA,DE,Newark,104,Hullihen Hall,19716,udel.edu,Public,English,1743
+MARY,University of Maryland,USA,MD,College Park,1101,Hornbake Library,20742,umd.edu,Public,English,1856
+WEST_VA,West Virginia University,USA,WV,Morgantown,1550,University Ave,26506,wvu.edu,Public,English,1867
+KENT,University of Kentucky,USA,KY,Lexington,100,Funkhouser Building,40506,uky.edu,Public,English,1865
+TENN,University of Tennessee,USA,TN,Knoxville,1331,Circle Park Dr,37996,utk.edu,Public,English,1794
+ALAB,University of Alabama,USA,AL,Tuscaloosa,739,University Blvd,35487,ua.edu,Public,English,1831
+MISS,University of Mississippi,USA,MS,Oxford,145,Martindale Student Services Center,38677,olemiss.edu,Public,English,1848
+LOUI,Louisiana State University,USA,LA,Baton Rouge,156,Thomas Boyd Hall,70803,lsu.edu,Public,English,1860
+ARKAN,University of Arkansas,USA,AR,Fayetteville,1,University of Arkansas,72701,uark.edu,Public,English,1871
+KANS,University of Kansas,USA,KS,Lawrence,1450,Jayhawk Blvd,66045,ku.edu,Public,English,1865
+NEBR,University of Nebraska-Lincoln,USA,NE,Lincoln,1400,R St,68588,unl.edu,Public,English,1869
+IOWA_ST,Iowa State University,USA,IA,Ames,515,Morrill Rd,50011,iastate.edu,Public,English,1858
+MISS_ST,Mississippi State University,USA,MS,Mississippi State,75,B.S. Hood Rd,39762,msstate.edu,Public,English,1878
+ALAB_BIR,University of Alabama at Birmingham,USA,AL,Birmingham,1720,2nd Ave South,35294,uab.edu,Public,English,1969
+SOUTH_CAR,University of South Carolina,USA,SC,Columbia,1600,Hampton St,29208,sc.edu,Public,English,1801
+GEOR,University of Georgia,USA,GA,Athens,110,Broad St,30602,uga.edu,Public,English,1785
+FLOR_ST,Florida State University,USA,FL,Tallahassee,600,West College Ave,32306,fsu.edu,Public,English,1851
+CENT_FLOR,University of Central Florida,USA,FL,Orlando,4000,Central Florida Blvd,32816,ucf.edu,Public,English,1963
+MIAM,University of Miami,USA,FL,Coral Gables,1320,Stanford Dr,33146,miami.edu,Private,English,1925
+FLOR_INT,Florida International University,USA,FL,Miami,11200,SW 8th St,33199,fiu.edu,Public,English,1965
+NOVA,Nova Southeastern University,USA,FL,Davie,3301,College Ave,33314,nova.edu,Private,English,1964
+ROLL,Rollins College,USA,FL,Winter Park,1000,Holt Ave,32789,rollins.edu,Private,English,1885
+STET,Stetson University,USA,FL,DeLand,421,North Woodland Blvd,32723,stetson.edu,Private,English,1883
+CHIC_ST,Chicago State University,USA,IL,Chicago,9501,South King Dr,60628,csu.edu,Public,English,1867
+ILLI_CHIC,University of Illinois at Chicago,USA,IL,Chicago,1200,West Harrison St,60607,uic.edu,Public,English,1982
+DEPA,DePaul University,USA,IL,Chicago,1,East Jackson Blvd,60604,depaul.edu,Private,English,1898
+LOYOLA_CHIC,Loyola University Chicago,USA,IL,Chicago,1032,West Sheridan Rd,60660,luc.edu,Private,English,1870
+NORT_ILL,Northern Illinois University,USA,IL,DeKalb,1425,West Lincoln Hwy,60115,niu.edu,Public,English,1895
+SOUTHERN_ILL,Southern Illinois University,USA,IL,Carbondale,1263,Lincoln Dr,62901,siu.edu,Public,English,1869
+WESTERN_ILL,Western Illinois University,USA,IL,Macomb,1,University Cir,61455,wiu.edu,Public,English,1899
+EASTERN_ILL,Eastern Illinois University,USA,IL,Charleston,600,Lincoln Ave,61920,eiu.edu,Public,English,1895
+ILLI_ST,Illinois State University,USA,IL,Normal,1,University Cir,61790,illinoisstate.edu,Public,English,1857
+BUTLER,Butler University,USA,IN,Indianapolis,4600,Sunset Ave,46208,butler.edu,Private,English,1855
+BALL_ST,Ball State University,USA,IN,Muncie,2000,West University Ave,47306,bsu.edu,Public,English,1918
+INDI_ST,Indiana State University,USA,IN,Terre Haute,200,North Seventh St,47809,indstate.edu,Public,English,1865
+VALPARA,Valparaiso University,USA,IN,Valparaiso,1700,Chapel Dr,46383,valpo.edu,Private,English,1859
+EVANSVILLE,University of Evansville,USA,IN,Evansville,1800,Lincoln Ave,47722,evansville.edu,Private,English,1854
+KENT_ST,Kent State University,USA,OH,Kent,800,East Summit St,44242,kent.edu,Public,English,1910
+OHIO_UNIV,Ohio University,USA,OH,Athens,1,Ohio University Dr,45701,ohio.edu,Public,English,1804
+CINC,University of Cincinnati,USA,OH,Cincinnati,2600,Clifton Ave,45221,uc.edu,Public,English,1819
+CASE_WEST,Case Western Reserve University,USA,OH,Cleveland,10900,Euclid Ave,44106,case.edu,Private,English,1826
+MIAMI_OHIO,Miami University,USA,OH,Oxford,501,East High St,45056,miamioh.edu,Public,English,1809
+WRIGHT_ST,Wright State University,USA,OH,Dayton,3640,Colonel Glenn Hwy,45435,wright.edu,Public,English,1967
+AKRON,University of Akron,USA,OH,Akron,302,Buchtel Ave,44325,uakron.edu,Public,English,1870
+TOLEDO,University of Toledo,USA,OH,Toledo,2801,West Bancroft St,43606,utoledo.edu,Public,English,1872
+YOUNG,Youngstown State University,USA,OH,Youngstown,1,University Plaza,44555,ysu.edu,Public,English,1908
+MICH_ST,Michigan State University,USA,MI,East Lansing,220,Trowbridge Rd,48824,msu.edu,Public,English,1855
+WAYNE_ST,Wayne State University,USA,MI,Detroit,42,West Warren Ave,48202,wayne.edu,Public,English,1868
+WESTERN_MICH,Western Michigan University,USA,MI,Kalamazoo,1903,West Michigan Ave,49008,wmich.edu,Public,English,1903
+CENTRAL_MICH,Central Michigan University,USA,MI,Mount Pleasant,1200,South Franklin St,48859,cmich.edu,Public,English,1892
+EASTERN_MICH,Eastern Michigan University,USA,MI,Ypsilanti,900,Oakwood St,48197,emich.edu,Public,English,1849
+MICH_TECH,Michigan Technological University,USA,MI,Houghton,1400,Townsend Dr,49931,mtu.edu,Public,English,1885
+GRAND_VALLEY,Grand Valley State University,USA,MI,Allendale,1,Campus Dr,49401,gvsu.edu,Public,English,1960
+FERRIS_ST,Ferris State University,USA,MI,Big Rapids,1201,South State St,49307,ferris.edu,Public,English,1884
+CALVIN,Calvin University,USA,MI,Grand Rapids,3201,Burton St SE,49546,calvin.edu,Private,English,1876
+HOPE,Hope College,USA,MI,Holland,141,East 12th St,49423,hope.edu,Private,English,1866
+KALAM,Kalamazoo College,USA,MI,Kalamazoo,1200,Academy St,49006,kzoo.edu,Private,English,1833
+ALBION,Albion College,USA,MI,Albion,611,East Porter St,49224,albion.edu,Private,English,1835
+ALMA,Alma College,USA,MI,Alma,614,West Superior St,48801,alma.edu,Private,English,1886
+ADRIAN,Adrian College,USA,MI,Adrian,110,South Madison St,49221,adrian.edu,Private,English,1859
+HILLSDALE,Hillsdale College,USA,MI,Hillsdale,33,East College St,49242,hillsdale.edu,Private,English,1844
+MINN_ST,Minnesota State University Mankato,USA,MN,Mankato,228,Wiecking Center,56001,mnsu.edu,Public,English,1868
+ST_CLOUD,St. Cloud State University,USA,MN,St. Cloud,720,Fourth Ave South,56301,stcloudstate.edu,Public,English,1869
+WINONA_ST,Winona State University,USA,MN,Winona,175,West Mark St,55987,winona.edu,Public,English,1858
+BEMIDJI_ST,Bemidji State University,USA,MN,Bemidji,1500,Birchmont Dr NE,56601,bemidjistate.edu,Public,English,1919
+MOORHEAD_ST,Minnesota State University Moorhead,USA,MN,Moorhead,1104,7th Ave South,56563,mnstate.edu,Public,English,1885
+MACALESTER,Macalester College,USA,MN,St. Paul,1600,Grand Ave,55105,macalester.edu,Private,English,1874
+CARLETON,Carleton College,USA,MN,Northfield,1,North College St,55057,carleton.edu,Private,English,1866
+ST_OLAF,St. Olaf College,USA,MN,Northfield,1520,St. Olaf Ave,55057,stolaf.edu,Private,English,1874
+GUSTAVUS,Gustavus Adolphus College,USA,MN,St. Peter,800,West College Ave,56082,gustavus.edu,Private,English,1862
+HAMLINE,Hamline University,USA,MN,St. Paul,1536,Hewitt Ave,55104,hamline.edu,Private,English,1854
+AUGSBURG,Augsburg University,USA,MN,Minneapolis,2211,Riverside Ave,55454,augsburg.edu,Private,English,1869
+CONCORD,Concordia College,USA,MN,Moorhead,901,8th St South,56562,concordiacollege.edu,Private,English,1891
+ST_JOHNS,Saint John's University,USA,MN,Collegeville,2850,Abbey Plaza,56321,csbsju.edu,Private,English,1857
+ST_KATH,College of Saint Catherine,USA,MN,St. Paul,2004,Randolph Ave,55105,stkate.edu,Private,English,1905
+BETHEL_MN,Bethel University,USA,MN,St. Paul,3900,Bethel Dr,55112,bethel.edu,Private,English,1871
+NYU,New York University,USA,NY,New York,4,Washington Square North,10003,nyu.edu,Private,English,1831
+FORD,Fordham University,USA,NY,Bronx,441,East Fordham Rd,10458,fordham.edu,Private,English,1841
+SYRA,Syracuse University,USA,NY,Syracuse,900,South Crouse Ave,13244,syracuse.edu,Private,English,1870
+ROCH,University of Rochester,USA,NY,Rochester,500,Joseph C. Wilson Blvd,14627,rochester.edu,Private,English,1850
+SUNY_BUFF,University at Buffalo,USA,NY,Buffalo,12,Capen Hall,14260,buffalo.edu,Public,English,1846
+SUNY_ALBANY,University at Albany,USA,NY,Albany,1400,Washington Ave,12222,albany.edu,Public,English,1844
+SUNY_BING,Binghamton University,USA,NY,Binghamton,4400,Vestal Pkwy East,13902,binghamton.edu,Public,English,1946
+SUNY_STORY,Stony Brook University,USA,NY,Stony Brook,100,Nicolls Rd,11794,stonybrook.edu,Public,English,1957
+BARNA,Barnard College,USA,NY,New York,3009,Broadway,10027,barnard.edu,Private,English,1889
+VASS,Vassar College,USA,NY,Poughkeepsie,124,Raymond Ave,12604,vassar.edu,Private,English,1861
+COLGATE,Colgate University,USA,NY,Hamilton,13,Oak Dr,13346,colgate.edu,Private,English,1819
+HAMIL,Hamilton College,USA,NY,Clinton,198,College Hill Rd,13323,hamilton.edu,Private,English,1793
+UNION,Union College,USA,NY,Schenectady,807,Union St,12308,union.edu,Private,English,1795
+ROCHES_INST,Rochester Institute of Technology,USA,NY,Rochester,1,Lomb Memorial Dr,14623,rit.edu,Private,English,1829
+CLARKSON,Clarkson University,USA,NY,Potsdam,8,Clarkson Ave,13699,clarkson.edu,Private,English,1896
+ST_LAWRENCE,St. Lawrence University,USA,NY,Canton,23,Romoda Dr,13617,stlawu.edu,Private,English,1856
+HOBART,Hobart and William Smith Colleges,USA,NY,Geneva,300,Pulteney St,14456,hws.edu,Private,English,1822
+SKIDMORE,Skidmore College,USA,NY,Saratoga Springs,815,North Broadway,12866,skidmore.edu,Private,English,1903
+WELLS,Wells College,USA,NY,Aurora,170,Main St,13026,wells.edu,Private,English,1868
+ELMIRA,Elmira College,USA,NY,Elmira,1,Park Pl,14901,elmira.edu,Private,English,1855
+ITHACA,Ithaca College,USA,NY,Ithaca,953,Danby Rd,14850,ithaca.edu,Private,English,1892
+PENNS,Pennsylvania State University,USA,PA,University Park,201,Old Main,16802,psu.edu,Public,English,1855
+PITT,University of Pittsburgh,USA,PA,Pittsburgh,4200,Fifth Ave,15260,pitt.edu,Public,English,1787
+TEMPLE,Temple University,USA,PA,Philadelphia,1801,North Broad St,19122,temple.edu,Public,English,1884
+DREXEL,Drexel University,USA,PA,Philadelphia,3141,Chestnut St,19104,drexel.edu,Private,English,1891
+VILLA,Villanova University,USA,PA,Villanova,800,Lancaster Ave,19085,villanova.edu,Private,English,1842
+LEHIGH,Lehigh University,USA,PA,Bethlehem,27,Memorial Dr West,18015,lehigh.edu,Private,English,1865
+LAFAY,Lafayette College,USA,PA,Easton,730,High St,18042,lafayette.edu,Private,English,1826
+BUCKNELL,Bucknell University,USA,PA,Lewisburg,1,Dent Dr,17837,bucknell.edu,Private,English,1846
+DICK,Dickinson College,USA,PA,Carlisle,28,North College St,17013,dickinson.edu,Private,English,1773
+FRANK_MARSH,Franklin & Marshall College,USA,PA,Lancaster,415,Harrisburg Ave,17603,fandm.edu,Private,English,1787
+GETTYS,Gettysburg College,USA,PA,Gettysburg,300,North Washington St,17325,gettysburg.edu,Private,English,1832
+HAVER,Haverford College,USA,PA,Haverford,370,Lancaster Ave,19041,haverford.edu,Private,English,1833
+SWARTH,Swarthmore College,USA,PA,Swarthmore,500,College Ave,19081,swarthmore.edu,Private,English,1864
+BRYN_MAWR,Bryn Mawr College,USA,PA,Bryn Mawr,101,North Merion Ave,19010,brynmawr.edu,Private,English,1885
+URSINUS,Ursinus College,USA,PA,Collegeville,601,East Main St,19426,ursinus.edu,Private,English,1869
+MUHLENBERG,Muhlenberg College,USA,PA,Allentown,2400,Chew St,18104,muhlenberg.edu,Private,English,1848
+SUSQUEHANNA,Susquehanna University,USA,PA,Selinsgrove,514,University Ave,17870,susqu.edu,Private,English,1858
+JUNIATA,Juniata College,USA,PA,Huntingdon,1700,Moore St,16652,juniata.edu,Private,English,1876
+ALLEGHENY,Allegheny College,USA,PA,Meadville,520,North Main St,16335,allegheny.edu,Private,English,1815
+WASHING_JEFF,Washington & Jefferson College,USA,PA,Washington,60,South Lincoln St,15301,washjeff.edu,Private,English,1781
+GROVE_CITY,Grove City College,USA,PA,Grove City,100,Campus Dr,16127,gcc.edu,Private,English,1876
+DUQUESNE,Duquesne University,USA,PA,Pittsburgh,600,Forbes Ave,15282,duq.edu,Private,English,1878
+ST_JOSEPHS,Saint Joseph's University,USA,PA,Philadelphia,5600,City Ave,19131,sju.edu,Private,English,1851
+LA_SALLE,La Salle University,USA,PA,Philadelphia,1900,West Olney Ave,19141,lasalle.edu,Private,English,1863
+CABRINI,Cabrini University,USA,PA,Radnor,610,King of Prussia Rd,19087,cabrini.edu,Private,English,1957
+CHESTNUT_HILL,Chestnut Hill College,USA,PA,Philadelphia,9601,Germantown Ave,19118,chc.edu,Private,English,1924
+HOLY_FAMILY,Holy Family University,USA,PA,Philadelphia,9801,Frankford Ave,19114,holyfamily.edu,Private,English,1954
+IMMAC,Immaculata University,USA,PA,Immaculata,1145,King Rd,19345,immaculata.edu,Private,English,1920
+MARYWOOD,Marywood University,USA,PA,Scranton,2300,Adams Ave,18509,marywood.edu,Private,English,1915
+MISERIC,Misericordia University,USA,PA,Dallas,301,Lake St,18612,misericordia.edu,Private,English,1924
+POINT_PARK,Point Park University,USA,PA,Pittsburgh,201,Wood St,15222,pointpark.edu,Private,English,1960
+ROBERT_MORRIS,Robert Morris University,USA,PA,Moon Township,6001,University Blvd,15108,rmu.edu,Private,English,1921
+ROSEMONT,Rosemont College,USA,PA,Rosemont,1400,Montgomery Ave,19010,rosemont.edu,Private,English,1921
+ST_FRANCIS,Saint Francis University,USA,PA,Loretto,117,Evergreen Dr,15940,francis.edu,Private,English,1847
+ST_VINCENT,Saint Vincent College,USA,PA,Latrobe,300,Fraser Purchase Rd,15650,stvincent.edu,Private,English,1846
+SETON_HILL,Seton Hill University,USA,PA,Greensburg,1,Seton Hill Dr,15601,setonhill.edu,Private,English,1883
+THIEL,Thiel College,USA,PA,Greenville,75,College Ave,16125,thiel.edu,Private,English,1866
+UNIV_SCRANTON,University of Scranton,USA,PA,Scranton,800,Linden St,18510,scranton.edu,Private,English,1888
+WAYNESBURG,Waynesburg University,USA,PA,Waynesburg,51,West College St,15370,waynesburg.edu,Private,English,1849
+WESTMIN,Westminster College,USA,PA,New Wilmington,319,South Market St,16172,westminster.edu,Private,English,1852
+WIDENER,Widener University,USA,PA,Chester,1,University Pl,19013,widener.edu,Private,English,1821
+WILKES,Wilkes University,USA,PA,Wilkes-Barre,84,West South St,18766,wilkes.edu,Private,English,1933
+YORK,York College of Pennsylvania,USA,PA,York,441,Country Club Rd,17403,ycp.edu,Private,English,1787
+BROWN,Brown University,USA,RI,Providence,1,Prospect St,02912,brown.edu,Private,English,1764
+DART,Dartmouth College,USA,NH,Hanover,1,Dartmouth College,03755,dartmouth.edu,Private,English,1769
+MIDD,Middlebury College,USA,VT,Middlebury,14,Old Chapel Rd,05753,middlebury.edu,Private,English,1800
+BATES,Bates College,USA,ME,Lewiston,2,Andrews Rd,04240,bates.edu,Private,English,1855
+BOWDOIN,Bowdoin College,USA,ME,Brunswick,255,Maine St,04011,bowdoin.edu,Private,English,1794
+COLBY,Colby College,USA,ME,Waterville,4000,Mayflower Hill,04901,colby.edu,Private,English,1813
+WILLIAMS,Williams College,USA,MA,Williamstown,880,Main St,01267,williams.edu,Private,English,1793
+AMHERST,Amherst College,USA,MA,Amherst,220,South Pleasant St,01002,amherst.edu,Private,English,1821
+WELLESLEY,Wellesley College,USA,MA,Wellesley,106,Central St,02481,wellesley.edu,Private,English,1870
+SMITH,Smith College,USA,MA,Northampton,1,Chapin Way,01063,smith.edu,Private,English,1871
+MOUNT_HOLY,Mount Holyoke College,USA,MA,South Hadley,50,College St,01075,mtholyoke.edu,Private,English,1837
+BRANDEIS,Brandeis University,USA,MA,Waltham,415,South St,02453,brandeis.edu,Private,English,1948
+TUFTS,Tufts University,USA,MA,Medford,419,Boston Ave,02155,tufts.edu,Private,English,1852
+BOSTON_UNIV,Boston University,USA,MA,Boston,1,Silber Way,02215,bu.edu,Private,English,1839
+BOSTON_COLL,Boston College,USA,MA,Chestnut Hill,140,Commonwealth Ave,02467,bc.edu,Private,English,1863
+NORTHEASTERN,Northeastern University,USA,MA,Boston,360,Huntington Ave,02115,northeastern.edu,Private,English,1898
+EMERSON,Emerson College,USA,MA,Boston,120,Boylston St,02116,emerson.edu,Private,English,1880
+SUFFOLK,Suffolk University,USA,MA,Boston,8,Ashburton Pl,02108,suffolk.edu,Private,English,1906
+SIMMONS,Simmons University,USA,MA,Boston,300,The Fenway,02115,simmons.edu,Private,English,1899
+BABSON,Babson College,USA,MA,Wellesley,231,Forest St,02457,babson.edu,Private,English,1919
+BENTLEY,Bentley University,USA,MA,Waltham,175,Forest St,02452,bentley.edu,Private,English,1917
+CLARK,Clark University,USA,MA,Worcester,950,Main St,01610,clarku.edu,Private,English,1887
+WPI,Worcester Polytechnic Institute,USA,MA,Worcester,100,Institute Rd,01609,wpi.edu,Private,English,1865
+HOLY_CROSS,College of the Holy Cross,USA,MA,Worcester,1,College St,01610,holycross.edu,Private,English,1843
+ASSUMPTION,Assumption University,USA,MA,Worcester,500,Salisbury St,01609,assumption.edu,Private,English,1904
+WESTERN_NEW_ENG,Western New England University,USA,MA,Springfield,1215,Wilbraham Rd,01119,wne.edu,Private,English,1919
+SPRINGFIELD,Springfield College,USA,MA,Springfield,263,Alden St,01109,springfield.edu,Private,English,1885
+AMERICAN_INT,American International College,USA,MA,Springfield,1000,State St,01109,aic.edu,Private,English,1885
+ELMS,Elms College,USA,MA,Chicopee,291,Springfield St,01013,elms.edu,Private,English,1928
+BAY_PATH,Bay Path University,USA,MA,Longmeadow,588,Longmeadow St,01106,baypath.edu,Private,English,1897
+STONEHILL,Stonehill College,USA,MA,Easton,320,Washington St,02357,stonehill.edu,Private,English,1948
+BRIDGEWATER,Bridgewater State University,USA,MA,Bridgewater,131,Summer St,02325,bridgew.edu,Public,English,1840
+FITCHBURG,Fitchburg State University,USA,MA,Fitchburg,160,Pearl St,01420,fitchburgstate.edu,Public,English,1894
+FRAMINGHAM,Framingham State University,USA,MA,Framingham,100,State St,01701,framingham.edu,Public,English,1839
+SALEM_ST,Salem State University,USA,MA,Salem,352,Lafayette St,01970,salemstate.edu,Public,English,1854
+WESTFIELD,Westfield State University,USA,MA,Westfield,577,Western Ave,01086,westfield.ma.edu,Public,English,1838
+WORCESTER_ST,Worcester State University,USA,MA,Worcester,486,Chandler St,01602,worcester.edu,Public,English,1874
+MASS_COLL_ART,Massachusetts College of Art and Design,USA,MA,Boston,621,Huntington Ave,02115,massart.edu,Public,English,1873
+MASS_MARITIME,Massachusetts Maritime Academy,USA,MA,Buzzards Bay,101,Academy Dr,02532,maritime.edu,Public,English,1891
+BERKLEE,Berklee College of Music,USA,MA,Boston,1140,Boylston St,02215,berklee.edu,Private,English,1945
+NEW_ENG_CONSERV,New England Conservatory,USA,MA,Boston,290,Huntington Ave,02115,necmusic.edu,Private,English,1867
+LESLEY,Lesley University,USA,MA,Cambridge,29,Everett St,02138,lesley.edu,Private,English,1909
+REGIS,Regis College,USA,MA,Weston,235,Wellesley St,02493,regiscollege.edu,Private,English,1927
+PINE_MANOR,Pine Manor College,USA,MA,Chestnut Hill,400,Heath St,02467,pmc.edu,Private,English,1911
+CURRY,Curry College,USA,MA,Milton,1071,Blue Hill Ave,02186,curry.edu,Private,English,1879
+DEAN,Dean College,USA,MA,Franklin,99,Main St,02038,dean.edu,Private,English,1865
+NICHOLS,Nichols College,USA,MA,Dudley,124,Center Rd,01571,nichols.edu,Private,English,1815
+ANNA_MARIA,Anna Maria College,USA,MA,Paxton,50,Sunset Ln,01612,annamaria.edu,Private,English,1946
+ATLANTIC_UNION,Atlantic Union College,USA,MA,South Lancaster,338,Main St,01561,auc.edu,Private,English,1882
+GORDON,Gordon College,USA,MA,Wenham,255,Grapevine Rd,01984,gordon.edu,Private,English,1889
+EASTERN_NAZARENE,Eastern Nazarene College,USA,MA,Quincy,23,East Elm Ave,02170,enc.edu,Private,English,1900
+FISHER,Fisher College,USA,MA,Boston,118,Beacon St,02116,fisher.edu,Private,English,1903
+HEBREW,Hebrew College,USA,MA,Newton Centre,160,Herrick Rd,02459,hebrewcollege.edu,Private,English,1921
+LASELL,Lasell University,USA,MA,Newton,1844,Commonwealth Ave,02466,lasell.edu,Private,English,1851
+MERRIMACK,Merrimack College,USA,MA,North Andover,315,Turnpike St,01845,merrimack.edu,Private,English,1947
+MOUNT_IDA,Mount Ida College,USA,MA,Newton,777,Dedham St,02459,mountida.edu,Private,English,1899
+NEWBURY,Newbury College,USA,MA,Brookline,129,Fisher Ave,02445,newbury.edu,Private,English,1962
+ST_ANSELM,Saint Anselm College,USA,NH,Manchester,100,Saint Anselm Dr,03102,anselm.edu,Private,English,1889
+KEENE_ST,Keene State College,USA,NH,Keene,229,Main St,03435,keene.edu,Public,English,1909
+PLYMOUTH_ST,Plymouth State University,USA,NH,Plymouth,17,High St,03264,plymouth.edu,Public,English,1871
+SOUTHERN_NH,Southern New Hampshire University,USA,NH,Manchester,2500,North River Rd,03106,snhu.edu,Private,English,1932
+FRANKLIN_PIERCE,Franklin Pierce University,USA,NH,Rindge,40,University Dr,03461,franklinpierce.edu,Private,English,1962
+NEW_ENG_COLL,New England College,USA,NH,Henniker,98,Bridge St,03242,nec.edu,Private,English,1946
+RIVIER,Rivier University,USA,NH,Nashua,420,South Main St,03060,rivier.edu,Private,English,1933
+COLBY_SAWYER,Colby-Sawyer College,USA,NH,New London,541,Main St,03257,colby-sawyer.edu,Private,English,1837
+DANIEL_WEBSTER,Daniel Webster College,USA,NH,Nashua,20,University Dr,03063,dwc.edu,Private,English,1965
+GRANITE_ST,Granite State College,USA,NH,Concord,25,Hall St,03301,granite.edu,Public,English,1972
+MARLBORO,Marlboro College,USA,VT,Marlboro,2582,South Rd,05344,marlboro.edu,Private,English,1946
+BENNINGTON,Bennington College,USA,VT,Bennington,1,College Dr,05201,bennington.edu,Private,English,1932
+SAINT_MICHAELS,Saint Michael's College,USA,VT,Colchester,1,Winooski Park,05439,smcvt.edu,Private,English,1904
+CASTLETON,Castleton University,USA,VT,Castleton,62,Alumni Dr,05735,castleton.edu,Public,English,1787
+JOHNSON_ST,Johnson State College,USA,VT,Johnson,337,College Hill,05656,jsc.edu,Public,English,1828
+LYNDON_ST,Lyndon State College,USA,VT,Lyndonville,1001,College Rd,05851,lyndonstate.edu,Public,English,1911
+NORWICH,Norwich University,USA,VT,Northfield,158,Harmon Dr,05663,norwich.edu,Private,English,1819
+CHAMPLAIN,Champlain College,USA,VT,Burlington,163,South Willard St,05402,champlain.edu,Private,English,1878
+GODDARD,Goddard College,USA,VT,Plainfield,123,Pitkin Rd,05667,goddard.edu,Private,English,1938
+LANDMARK,Landmark College,USA,VT,Putney,19,River Rd South,05346,landmark.edu,Private,English,1985
+NEW_ENG_CULINARY,New England Culinary Institute,USA,VT,Montpelier,56,College St,05602,neci.edu,Private,English,1980
+SIT,SIT Graduate Institute,USA,VT,Brattleboro,1,Kipling Rd,05302,sit.edu,Private,English,1964
+SOUTHERN_VT,Southern Vermont College,USA,VT,Bennington,982,Mansion Dr,05201,svc.edu,Private,English,1926
+STERLING,Sterling College,USA,VT,Craftsbury Common,16,Sterling Dr,05827,sterlingcollege.edu,Private,English,1958
+VT_LAW,Vermont Law School,USA,VT,South Royalton,164,Chelsea St,05068,vermontlaw.edu,Private,English,1972
+VT_TECH,Vermont Technical College,USA,VT,Randolph Center,201,Lawrence Pl,05061,vtc.edu,Public,English,1866
+WOODBURY,Woodbury College,USA,VT,Montpelier,660,Elm St,05602,woodbury-college.edu,Private,English,1975
+SOUTHERN_MAINE,University of Southern Maine,USA,ME,Portland,96,Falmouth St,04104,usm.maine.edu,Public,English,1878
+MAINE_MARITIME,Maine Maritime Academy,USA,ME,Castine,1,Pleasant St,04420,mainemaritime.edu,Public,English,1941
+HUSSON,Husson University,USA,ME,Bangor,1,College Cir,04401,husson.edu,Private,English,1898
+ST_JOSEPHS_ME,Saint Joseph's College of Maine,USA,ME,Standish,278,Whites Bridge Rd,04084,sjcme.edu,Private,English,1912
+THOMAS,Thomas College,USA,ME,Waterville,180,West River Rd,04901,thomas.edu,Private,English,1894
+UNITY,Unity College,USA,ME,Unity,90,Quaker Hill Rd,04988,unity.edu,Private,English,1965
+UNITY_MAINE,University of Maine at Augusta,USA,ME,Augusta,46,University Dr,04330,uma.edu,Public,English,1965
+UNITY_FARM,University of Maine at Farmington,USA,ME,Farmington,224,Main St,04938,farmington.edu,Public,English,1864
+UNITY_FORT_KENT,University of Maine at Fort Kent,USA,ME,Fort Kent,23,University Dr,04743,umfk.edu,Public,English,1878
+UNITY_MACHIAS,University of Maine at Machias,USA,ME,Machias,116,O'Brien Ave,04654,machias.edu,Public,English,1909
+UNITY_PRESQUE_ISLE,University of Maine at Presque Isle,USA,ME,Presque Isle,181,Main St,04769,umpi.edu,Public,English,1903
+JOHNSON_WALES_RI,Johnson & Wales University,USA,RI,Providence,8,Abbott Park Pl,02903,jwu.edu,Private,English,1914
+ROGER_WILLIAMS,Roger Williams University,USA,RI,Bristol,1,Old Ferry Rd,02809,rwu.edu,Private,English,1956
+SALVE_REGINA,Salve Regina University,USA,RI,Newport,100,Ochre Point Ave,02840,salve.edu,Private,English,1934
+BRYANT,Bryant University,USA,RI,Smithfield,1150,Douglas Pike,02917,bryant.edu,Private,English,1863
+PROVIDENCE,Providence College,USA,RI,Providence,1,Cunningham Square,02918,providence.edu,Private,English,1917
+RI_COLL,Rhode Island College,USA,RI,Providence,600,Mount Pleasant Ave,02908,ric.edu,Public,English,1854
+CCRI,Community College of Rhode Island,USA,RI,Warwick,400,East Ave,02886,ccri.edu,Public,English,1964
+NEW_ENG_INST_TECH,New England Institute of Technology,USA,RI,East Greenwich,1,New England Tech Blvd,02818,neit.edu,Private,English,1940
+WESLEYAN,Wesleyan University,USA,CT,Middletown,237,High St,06459,wesleyan.edu,Private,English,1831
+TRINITY,Trinity College,USA,CT,Hartford,300,Summit St,06106,trincoll.edu,Private,English,1823
+CONN_COLL,Connecticut College,USA,CT,New London,270,Mohegan Ave,06320,conncoll.edu,Private,English,1911
+QUINNIPIAC,Quinnipiac University,USA,CT,Hamden,275,Mount Carmel Ave,06518,quinnipiac.edu,Private,English,1929
+FAIRFIELD,Fairfield University,USA,CT,Fairfield,1073,North Benson Rd,06824,fairfield.edu,Private,English,1942
+SACRED_HEART,Sacred Heart University,USA,CT,Fairfield,5151,Park Ave,06825,sacredheart.edu,Private,English,1963
+UNIV_HARTFORD,University of Hartford,USA,CT,West Hartford,200,Bloomfield Ave,06117,hartford.edu,Private,English,1877
+UNIV_NEW_HAVEN,University of New Haven,USA,CT,West Haven,300,Boston Post Rd,06516,newhaven.edu,Private,English,1920
+UNIV_BRIDGEPORT,University of Bridgeport,USA,CT,Bridgeport,126,Park Ave,06604,bridgeport.edu,Private,English,1927
+SOUTHERN_CONN,Southern Connecticut State University,USA,CT,New Haven,501,Crescent St,06515,southernct.edu,Public,English,1893
+CENTRAL_CONN,Central Connecticut State University,USA,CT,New Britain,1615,Stanley St,06050,ccsu.edu,Public,English,1849
+EASTERN_CONN,Eastern Connecticut State University,USA,CT,Willimantic,83,Windham St,06226,easternct.edu,Public,English,1889
+WESTERN_CONN,Western Connecticut State University,USA,CT,Danbury,181,White St,06810,wcsu.edu,Public,English,1903
+CONN_ST_UNIV,Connecticut State University,USA,CT,New Haven,39,Woodland St,06511,ct.edu,Public,English,1893
+ALBERTUS_MAGNUS,Albertus Magnus College,USA,CT,New Haven,700,Prospect St,06511,albertus.edu,Private,English,1925
+HOLY_APOSTLES,Holy Apostles College and Seminary,USA,CT,Cromwell,33,Prospect Hill Rd,06416,holyapostles.edu,Private,English,1956
+LYME_ACADEMY,Lyme Academy College of Fine Arts,USA,CT,Old Lyme,84,Lyme St,06371,lymeacademy.edu,Private,English,1976
+MITCHELL,Mitchell College,USA,CT,New London,437,Pequot Ave,06320,mitchell.edu,Private,English,1938
+PAIER,Paier College of Art,USA,CT,Hamden,20,Gorham Ave,06514,paiercollegeofart.edu,Private,English,1946
+POST,Post University,USA,CT,Waterbury,800,Country Club Rd,06723,post.edu,Private,English,1890
+ST_ALPHONSUS,Saint Alphonsus College,USA,CT,Woodstock,27,Prospect Hill,06281,stalphonsus.org,Private,English,1955
+TEIKYO_POST,Teikyo Post University,USA,CT,Waterbury,800,Country Club Rd,06723,teikyo.edu,Private,English,1890
+UNIV_ST_JOSEPH,University of Saint Joseph,USA,CT,West Hartford,1678,Asylum Ave,06117,usj.edu,Private,English,1932
+GEORGE_WASH,George Washington University,USA,DC,Washington,2121,I St NW,20052,gwu.edu,Private,English,1821
+HOWARD,Howard University,USA,DC,Washington,2400,Sixth St NW,20059,howard.edu,Private,English,1867
+AMERICAN,American University,USA,DC,Washington,4400,Massachusetts Ave NW,20016,american.edu,Private,English,1893
+CATHOLIC,Catholic University of America,USA,DC,Washington,620,Michigan Ave NE,20064,catholic.edu,Private,English,1887
+GALLAUDET,Gallaudet University,USA,DC,Washington,800,Florida Ave NE,20002,gallaudet.edu,Private,English,1864
+UDC,University of the District of Columbia,USA,DC,Washington,4200,Connecticut Ave NW,20008,udc.edu,Public,English,1976
+TRINITY_DC,Trinity Washington University,USA,DC,Washington,125,Michigan Ave NE,20017,trinitydc.edu,Private,English,1897
+POTOMAC,Potomac College,USA,DC,Washington,4000,Chesapeake St NW,20016,potomac.edu,Private,English,1991
+STRAYER,Strayer University,USA,DC,Washington,1133,15th St NW,20005,strayer.edu,Private,English,1892
+CORCORAN,Corcoran School of the Arts & Design,USA,DC,Washington,500,17th St NW,20006,corcoran.gwu.edu,Private,English,1878
+WESLEY,Wesley Theological Seminary,USA,DC,Washington,4500,Massachusetts Ave NW,20016,wesleyseminary.edu,Private,English,1882
+WASHINGTON_THEO,Washington Theological Union,USA,DC,Washington,6896,Laurel St NW,20012,wtu.edu,Private,English,1968
+NATIONAL_DEFENSE,National Defense University,USA,DC,Washington,300,5th Ave SW,20319,ndu.edu,Public,English,1976
+NAVAL_POSTGRAD,Naval Postgraduate School,USA,CA,Monterey,1,University Cir,93943,nps.edu,Public,English,1909
+AIR_FORCE_ACAD,United States Air Force Academy,USA,CO,Colorado Springs,2354,Fairchild Dr,80840,usafa.edu,Public,English,1954
+WEST_POINT,United States Military Academy,USA,NY,West Point,606,Thayer Rd,10996,westpoint.edu,Public,English,1802
+NAVAL_ACAD,United States Naval Academy,USA,MD,Annapolis,121,Blake Rd,21402,usna.edu,Public,English,1845
+COAST_GUARD_ACAD,United States Coast Guard Academy,USA,CT,New London,31,Mohegan Ave,06320,cga.edu,Public,English,1876
+MERCHANT_MARINE,United States Merchant Marine Academy,USA,NY,Kings Point,300,Steamboat Rd,11024,usmma.edu,Public,English,1943
+MOREHOUSE,Morehouse College,USA,GA,Atlanta,830,Westview Dr SW,30314,morehouse.edu,Private,English,1867
+SPELMAN,Spelman College,USA,GA,Atlanta,350,Spelman Ln SW,30314,spelman.edu,Private,English,1881
+CLARK_ATLANTA,Clark Atlanta University,USA,GA,Atlanta,223,James P Brawley Dr SW,30314,cau.edu,Private,English,1988
+FISK,Fisk University,USA,TN,Nashville,1000,17th Ave North,37208,fisk.edu,Private,English,1866
+MEHARRY,Meharry Medical College,USA,TN,Nashville,1005,Dr DB Todd Jr Blvd,37208,mmc.edu,Private,English,1876
+TUSKEGEE,Tuskegee University,USA,AL,Tuskegee,1200,West Montgomery Rd,36088,tuskegee.edu,Private,English,1881
+ALABAMA_ST,Alabama State University,USA,AL,Montgomery,915,South Jackson St,36104,alasu.edu,Public,English,1867
+ALABAMA_A&M,Alabama A&M University,USA,AL,Normal,4900,Meridian St,35762,aamu.edu,Public,English,1875
+MILES,Miles College,USA,AL,Fairfield,5500,Myron Massey Blvd,35064,miles.edu,Private,English,1898
+OAKWOOD,Oakwood University,USA,AL,Huntsville,7000,Adventist Blvd,35896,oakwood.edu,Private,English,1896
+STILLMAN,Stillman College,USA,AL,Tuscaloosa,3601,Stillman Blvd,35401,stillman.edu,Private,English,1876
+TALLADEGA,Talladega College,USA,AL,Talladega,627,West Battle St,35160,talladega.edu,Private,English,1867
+TOUGALOO,Tougaloo College,USA,MS,Tougaloo,500,West County Line Rd,39174,tougaloo.edu,Private,English,1869
+ALCORN_ST,Alcorn State University,USA,MS,Lorman,1000,ASU Dr,39096,alcorn.edu,Public,English,1871
+JACKSON_ST,Jackson State University,USA,MS,Jackson,1400,John R Lynch St,39217,jsums.edu,Public,English,1877
+MISSISSIPPI_VALLEY,Mississippi Valley State University,USA,MS,Itta Bena,14000,Hwy 82 West,38941,mvsu.edu,Public,English,1950
+RUST,Rust College,USA,MS,Holly Springs,150,Rust Ave,38635,rustcollege.edu,Private,English,1866
+GRAMBLING,Grambling State University,USA,LA,Grambling,403,Main St,71245,gram.edu,Public,English,1901
+SOUTHERN_UNIV,Southern University and A&M College,USA,LA,Baton Rouge,801,Harding Blvd,70813,subr.edu,Public,English,1880
+DILLARD,Dillard University,USA,LA,New Orleans,2601,Gentilly Blvd,70122,dillard.edu,Private,English,1869
+XAVIER_LA,Xavier University of Louisiana,USA,LA,New Orleans,1,Drexel Dr,70125,xula.edu,Private,English,1925
+PRAIRIE_VIEW,Prairie View A&M University,USA,TX,Prairie View,100,University Dr,77446,pvamu.edu,Public,English,1876
+TEXAS_SOUTHERN,Texas Southern University,USA,TX,Houston,3100,Cleburne St,77004,tsu.edu,Public,English,1947
+WILEY,Wiley College,USA,TX,Marshall,711,Wiley Ave,75670,wileyc.edu,Private,English,1873
+JARVIS_CHRISTIAN,Jarvis Christian College,USA,TX,Hawkins,1000,Jarvis Christian College,75765,jarvis.edu,Private,English,1912
+PAUL_QUINN,Paul Quinn College,USA,TX,Dallas,3837,Simpson Stuart Rd,75241,pqc.edu,Private,English,1872
+HUSTON_TILLOTSON,Huston-Tillotson University,USA,TX,Austin,900,Chicon St,78702,htu.edu,Private,English,1875
+FLORIDA_A&M,Florida A&M University,USA,FL,Tallahassee,1601,South Martin Luther King Jr Blvd,32307,famu.edu,Public,English,1887
+BETHUNE_COOKMAN,Bethune-Cookman University,USA,FL,Daytona Beach,640,Dr Mary McLeod Bethune Blvd,32114,cookman.edu,Private,English,1904
+EDWARD_WATERS,Edward Waters College,USA,FL,Jacksonville,1658,Kings Rd,32209,ewc.edu,Private,English,1866
+FLORIDA_MEMORIAL,Florida Memorial University,USA,FL,Miami Gardens,15800,Northwest 42nd Ave,33054,fmuniv.edu,Private,English,1879
+NORTH_CAROLINA_A&T,North Carolina A&T State University,USA,NC,Greensboro,1601,East Market St,27411,ncat.edu,Public,English,1891
+NORTH_CAROLINA_CENTRAL,North Carolina Central University,USA,NC,Durham,1801,Fayetteville St,27707,nccu.edu,Public,English,1910
+ELIZABETH_CITY,Elizabeth City State University,USA,NC,Elizabeth City,1704,Weeksville Rd,27909,ecsu.edu,Public,English,1891
+FAYETTEVILLE_ST,Fayetteville State University,USA,NC,Fayetteville,1200,Murchison Rd,28301,uncfsu.edu,Public,English,1867
+WINSTON_SALEM,Winston-Salem State University,USA,NC,Winston-Salem,601,South Martin Luther King Jr Dr,27110,wssu.edu,Public,English,1892
+BENNETT,Bennett College,USA,NC,Greensboro,900,East Washington St,27401,bennett.edu,Private,English,1873
+JOHNSON_C_SMITH,Johnson C. Smith University,USA,NC,Charlotte,100,Beatties Ford Rd,28216,jcsu.edu,Private,English,1867
+LIVINGSTONE,Livingstone College,USA,NC,Salisbury,701,West Monroe St,28144,livingstone.edu,Private,English,1879
+SAINT_AUGUSTINES,Saint Augustine's University,USA,NC,Raleigh,1315,Oakwood Ave,27610,st-aug.edu,Private,English,1867
+SHAW,Shaw University,USA,NC,Raleigh,118,East South St,27601,shawu.edu,Private,English,1865
+SOUTH_CAROLINA_ST,South Carolina State University,USA,SC,Orangeburg,300,College St NE,29117,scsu.edu,Public,English,1896
+CLAFLIN,Claflin University,USA,SC,Orangeburg,400,Magnolia St,29115,claflin.edu,Private,English,1869
+ALLEN,Allen University,USA,SC,Columbia,1530,Harden St,29204,allenuniversity.edu,Private,English,1870
+BENEDICT,Benedict College,USA,SC,Columbia,1600,Harden St,29204,benedict.edu,Private,English,1870
+MORRIS,Morris College,USA,SC,Sumter,100,West College St,29150,morris.edu,Private,English,1908
+VOORHEES,Voorhees College,USA,SC,Denmark,481,Porter St,29042,voorhees.edu,Private,English,1897
+HAMPTON,Hampton University,USA,VA,Hampton,200,William R Harvey Way,23668,hamptonu.edu,Private,English,1868
+HOWARD_VA,Norfolk State University,USA,VA,Norfolk,700,Park Ave,23504,nsu.edu,Public,English,1935
+VIRGINIA_ST,Virginia State University,USA,VA,Petersburg,1,Hayden Dr,23806,vsu.edu,Public,English,1882
+VIRGINIA_UNION,Virginia Union University,USA,VA,Richmond,1500,North Lombardy St,23220,vuu.edu,Private,English,1865
+SAINT_PAULS,Saint Paul's College,USA,VA,Lawrenceville,115,College Dr,23868,saintpauls.edu,Private,English,1888
+BOWIE_ST,Bowie State University,USA,MD,Bowie,14000,Jericho Park Rd,20715,bowiestate.edu,Public,English,1865
+COPPIN_ST,Coppin State University,USA,MD,Baltimore,2500,West North Ave,21216,coppin.edu,Public,English,1900
+MORGAN_ST,Morgan State University,USA,MD,Baltimore,1700,East Cold Spring Ln,21251,morgan.edu,Public,English,1867
+UNIV_MARYLAND_EASTERN,University of Maryland Eastern Shore,USA,MD,Princess Anne,11868,Academic Oval,21853,umes.edu,Public,English,1886
+BLUEFIELD_ST,Bluefield State College,USA,WV,Bluefield,219,Rock St,24701,bluefieldstate.edu,Public,English,1895
+WEST_VIRGINIA_ST,West Virginia State University,USA,WV,Institute,106,Ferrell Hall,25112,wvstateu.edu,Public,English,1891
+LINCOLN_PA,Lincoln University,USA,PA,Lincoln University,1570,Baltimore Pike,19352,lincoln.edu,Public,English,1854
+CHEYNEY,Cheyney University of Pennsylvania,USA,PA,Cheyney,1837,University Cir,19319,cheyney.edu,Public,English,1837
+CENTRAL_ST_OHIO,Central State University,USA,OH,Wilberforce,1400,Brush Row Rd,45384,centralstate.edu,Public,English,1887
+WILBERFORCE,Wilberforce University,USA,OH,Wilberforce,1055,North Bickett Rd,45384,wilberforce.edu,Private,English,1856
+KENTUCKY_ST,Kentucky State University,USA,KY,Frankfort,400,East Main St,40601,kysu.edu,Public,English,1886
+TENNESSEE_ST,Tennessee State University,USA,TN,Nashville,3500,John A Merritt Blvd,37209,tnstate.edu,Public,English,1912
+LANE,Lane College,USA,TN,Jackson,545,Lane Ave,38301,lanecollege.edu,Private,English,1882
+LEMOYNE_OWEN,LeMoyne-Owen College,USA,TN,Memphis,807,Walker Ave,38126,loc.edu,Private,English,1870
+KNOXVILLE,Knoxville College,USA,TN,Knoxville,901,College St,37921,knoxvillecollege.edu,Private,English,1875
+ARKANSAS_BAPTIST,Arkansas Baptist College,USA,AR,Little Rock,1621,Dr Martin Luther King Jr Dr,72202,arkansasbaptist.edu,Private,English,1884
+PHILANDER_SMITH,Philander Smith College,USA,AR,Little Rock,900,West Daisy L Gatson Bates Dr,72202,philander.edu,Private,English,1877
+UNIV_ARKANSAS_PINE_BLUFF,University of Arkansas at Pine Bluff,USA,AR,Pine Bluff,1200,North University Dr,71601,uapb.edu,Public,English,1873
+SHORTER,Shorter College,USA,AR,North Little Rock,604,Locust St,72114,shortercollege.edu,Private,English,1886
+LINCOLN_MO,Lincoln University,USA,MO,Jefferson City,820,Chestnut St,65101,lincolnu.edu,Public,English,1866
+HARRIS_STOWE,Harris-Stowe State University,USA,MO,St. Louis,3026,Laclede Ave,63103,hssu.edu,Public,English,1857
+LANGSTON,Langston University,USA,OK,Langston,4205,North Lincoln Blvd,73050,langston.edu,Public,English,1897
+SOUTHWESTERN_CHRISTIAN,Southwestern Christian College,USA,TX,Terrell,200,Bowser Cir,75160,swcc.edu,Private,English,1949
+OBERLIN,Oberlin College,USA,OH,Oberlin,173,West Lorain St,44074,oberlin.edu,Private,English,1833
+KENYON,Kenyon College,USA,OH,Gambier,106,College Park St,43022,kenyon.edu,Private,English,1824
+DENISON,Denison University,USA,OH,Granville,1,Doane Dr,43023,denison.edu,Private,English,1831
+WITTENBERG,Wittenberg University,USA,OH,Springfield,200,West Ward St,45501,wittenberg.edu,Private,English,1845
+WOOSTER,College of Wooster,USA,OH,Wooster,1189,Beall Ave,44691,wooster.edu,Private,English,1866
+OTTERBEIN,Otterbein University,USA,OH,Westerville,1,South Grove St,43081,otterbein.edu,Private,English,1847
+CAPITAL,Capital University,USA,OH,Columbus,1,College and Main,43209,capital.edu,Private,English,1830
+MARIETTA,Marietta College,USA,OH,Marietta,215,Fifth St,45750,marietta.edu,Private,English,1835
+MUSKINGUM,Muskingum University,USA,OH,New Concord,163,Stormont St,43762,muskingum.edu,Private,English,1837
+BALDWIN_WALLACE,Baldwin Wallace University,USA,OH,Berea,275,Eastland Rd,44017,bw.edu,Private,English,1845
+JOHN_CARROLL,John Carroll University,USA,OH,University Heights,1,John Carroll Blvd,44118,jcu.edu,Private,English,1886
+XAVIER_OH,Xavier University,USA,OH,Cincinnati,3800,Victory Pkwy,45207,xavier.edu,Private,English,1831
+DAYTON,University of Dayton,USA,OH,Dayton,300,College Park,45469,udayton.edu,Private,English,1850
+MOUNT_UNION,University of Mount Union,USA,OH,Alliance,1972,Clark Ave,44601,mountunion.edu,Private,English,1846
+HEIDELBERG,Heidelberg University,USA,OH,Tiffin,310,East Market St,44883,heidelberg.edu,Private,English,1850
+BLUFFTON,Bluffton University,USA,OH,Bluffton,1,University Dr,45817,bluffton.edu,Private,English,1899
+DEFIANCE,Defiance College,USA,OH,Defiance,701,North Clinton St,43512,defiance.edu,Private,English,1850
+FINDLAY,University of Findlay,USA,OH,Findlay,1000,North Main St,45840,findlay.edu,Private,English,1882
+HIRAM,Hiram College,USA,OH,Hiram,11715,Garfield Rd,44234,hiram.edu,Private,English,1850
+LAKE_ERIE,Lake Erie College,USA,OH,Painesville,391,West Washington St,44077,lec.edu,Private,English,1856
+MOUNT_VERNON_NAZARENE,Mount Vernon Nazarene University,USA,OH,Mount Vernon,800,Martinsburg Rd,43050,mvnu.edu,Private,English,1968
+NOTRE_DAME_OH,Notre Dame College,USA,OH,South Euclid,4545,College Rd,44121,notredamecollege.edu,Private,English,1922
+OHIO_DOMINICAN,Ohio Dominican University,USA,OH,Columbus,1216,Sunbury Rd,43219,ohiodominican.edu,Private,English,1911
+OHIO_NORTHERN,Ohio Northern University,USA,OH,Ada,525,South Main St,45810,onu.edu,Private,English,1871
+OHIO_WESLEYAN,Ohio Wesleyan University,USA,OH,Delaware,61,South Sandusky St,43015,owu.edu,Private,English,1842
+TIFFIN,Tiffin University,USA,OH,Tiffin,155,Miami St,44883,tiffin.edu,Private,English,1888
+URBANA,Urbana University,USA,OH,Urbana,579,College Way,43078,urbana.edu,Private,English,1850
+WALSH,Walsh University,USA,OH,North Canton,2020,East Maple St,44720,walsh.edu,Private,English,1958
+WILMINGTON,Wilmington College,USA,OH,Wilmington,1870,Quaker Way,45177,wilmington.edu,Private,English,1870
+WITTENBERG_OHIO,Wittenberg University,USA,OH,Springfield,200,West Ward St,45501,wittenberg.edu,Private,English,1845
+DEPAUW,DePauw University,USA,IN,Greencastle,313,South Locust St,46135,depauw.edu,Private,English,1837
+WABASH,Wabash College,USA,IN,Crawfordsville,301,West Wabash Ave,47933,wabash.edu,Private,English,1832
+HANOVER,Hanover College,USA,IN,Hanover,517,Ball Dr,47243,hanover.edu,Private,English,1827
+FRANKLIN,Franklin College,USA,IN,Franklin,101,Branigin Blvd,46131,franklin.edu,Private,English,1834
+MANCHESTER,University of Manchester,USA,IN,North Manchester,604,East College Ave,46962,manchester.edu,Private,English,1889
+ANDERSON,Anderson University,USA,IN,Anderson,1100,East Fifth St,46012,anderson.edu,Private,English,1917
+TAYLOR,Taylor University,USA,IN,Upland,236,West Reade Ave,46989,taylor.edu,Private,English,1846
+TRI_STATE,Trine University,USA,IN,Angola,1,University Ave,46703,trine.edu,Private,English,1884
+SAINT_JOSEPHS_IN,Saint Joseph's College,USA,IN,Rensselaer,1,St Joseph's College Rd,47978,saintjoe.edu,Private,English,1889
+GOSHEN,Goshen College,USA,IN,Goshen,1700,South Main St,46526,goshen.edu,Private,English,1894
+HUNTINGTON,Huntington University,USA,IN,Huntington,2303,College Ave,46750,huntington.edu,Private,English,1897
+INDIANA_WESLEYAN,Indiana Wesleyan University,USA,IN,Marion,4201,South Washington St,46953,indwes.edu,Private,English,1920
+OAKLAND_CITY,Oakland City University,USA,IN,Oakland City,138,North Lucretia St,47660,oak.edu,Private,English,1885
+ROSE_HULMAN,Rose-Hulman Institute of Technology,USA,IN,Terre Haute,5500,Wabash Ave,47803,rose-hulman.edu,Private,English,1874
+SAINT_MARYS_IN,Saint Mary's College,USA,IN,Notre Dame,1,Saint Mary's College,46556,saintmarys.edu,Private,English,1844
+GRINNELL,Grinnell College,USA,IA,Grinnell,1121,Park St,50112,grinnell.edu,Private,English,1846
+CARLETON_IA,Coe College,USA,IA,Cedar Rapids,1220,First Ave NE,52402,coe.edu,Private,English,1851
+CORNELL_IA,Cornell College,USA,IA,Mount Vernon,600,First St SW,52314,cornellcollege.edu,Private,English,1853
+LUTHER,Luther College,USA,IA,Decorah,700,College Dr,52101,luther.edu,Private,English,1861
+DRAKE,Drake University,USA,IA,Des Moines,2507,University Ave,50311,drake.edu,Private,English,1881
+WARTBURG,Wartburg College,USA,IA,Waverly,100,Wartburg Blvd,50677,wartburg.edu,Private,English,1852
+CENTRAL_IA,Central College,USA,IA,Pella,812,University St,50219,central.edu,Private,English,1853
+SIMPSON,Simpson College,USA,IA,Indianola,701,North C St,50125,simpson.edu,Private,English,1860
+BUENA_VISTA,Buena Vista University,USA,IA,Storm Lake,610,West Fourth St,50588,bvu.edu,Private,English,1891
+CLARKE,Clarke University,USA,IA,Dubuque,1550,Clarke Dr,52001,clarke.edu,Private,English,1843
+GRACELAND,Graceland University,USA,IA,Lamoni,1,University Pl,50140,graceland.edu,Private,English,1895
+GRAND_VIEW,Grand View University,USA,IA,Des Moines,1200,Grandview Ave,50316,grandview.edu,Private,English,1896
+LORAS,Loras College,USA,IA,Dubuque,1450,Alta Vista St,52001,loras.edu,Private,English,1839
+MORNINGSIDE,Morningside College,USA,IA,Sioux City,1501,Morningside Ave,51106,morningside.edu,Private,English,1894
+MOUNT_MERCY,Mount Mercy University,USA,IA,Cedar Rapids,1330,Elmhurst Dr NE,52402,mtmercy.edu,Private,English,1928
+NORTHWESTERN_IA,Northwestern College,USA,IA,Orange City,101,7th St SW,51041,nwciowa.edu,Private,English,1882
+ST_AMBROSE,St. Ambrose University,USA,IA,Davenport,518,West Locust St,52803,sau.edu,Private,English,1882
+UPPER_IOWA,Upper Iowa University,USA,IA,Fayette,605,Washington St,52142,uiu.edu,Private,English,1857
+WALDORF,Waldorf University,USA,IA,Forest City,106,South 6th St,50436,waldorf.edu,Private,English,1903
+WILLIAM_PENN,William Penn University,USA,IA,Oskaloosa,201,Trueblood Ave,52577,wmpenn.edu,Private,English,1873
+KNOX,Knox College,USA,IL,Galesburg,2,East South St,61401,knox.edu,Private,English,1837
+LAKE_FOREST,Lake Forest College,USA,IL,Lake Forest,555,North Sheridan Rd,60045,lakeforest.edu,Private,English,1857
+LAWRENCE,Lawrence University,USA,WI,Appleton,711,East Boldt Way,54911,lawrence.edu,Private,English,1847
+BELOIT,Beloit College,USA,WI,Beloit,700,College St,53511,beloit.edu,Private,English,1846
+RIPON,Ripon College,USA,WI,Ripon,300,West Seward St,54971,ripon.edu,Private,English,1851
+CARROLL,Carroll University,USA,WI,Waukesha,100,North East Ave,53186,carrollu.edu,Private,English,1846
+CARTHAGE,Carthage College,USA,WI,Kenosha,2001,Alford Park Dr,53140,carthage.edu,Private,English,1847
+CONCORDIA_WI,Concordia University Wisconsin,USA,WI,Mequon,12800,North Lake Shore Dr,53097,cuw.edu,Private,English,1881
+EDGEWOOD,Edgewood College,USA,WI,Madison,1000,Edgewood College Dr,53711,edgewood.edu,Private,English,1927
+LAKELAND,Lakeland University,USA,WI,Plymouth,1 Lakeland Dr,53073,lakeland.edu,Private,English,1862,
+MARIAN,Marian University,USA,WI,Fond du Lac,45,South National Ave,54935,marianuniversity.edu,Private,English,1936
+MARQUETTE,Marquette University,USA,WI,Milwaukee,1250,West Wisconsin Ave,53233,marquette.edu,Private,English,1881
+MILWAUKEE_SCHOOL,Milwaukee School of Engineering,USA,WI,Milwaukee,1025,North Broadway,53202,msoe.edu,Private,English,1903
+MOUNT_MARY,Mount Mary University,USA,WI,Milwaukee,2900,North Menomonee River Pkwy,53222,mtmary.edu,Private,English,1913
+NORTHLAND,Northland College,USA,WI,Ashland,1411,Ellis Ave,54806,northland.edu,Private,English,1892
+SAINT_NORBERT,St. Norbert College,USA,WI,De Pere,100,Grant St,54115,snc.edu,Private,English,1898
+SILVER_LAKE,Silver Lake College,USA,WI,Manitowoc,2406,South Alverno Rd,54220,sl.edu,Private,English,1935
+VITERBO,Viterbo University,USA,WI,La Crosse,900,Viterbo Dr,54601,viterbo.edu,Private,English,1890
+WISCONSIN_LUTHERAN,Wisconsin Lutheran College,USA,WI,Milwaukee,8800,West Bluemound Rd,53226,wlc.edu,Private,English,1973
+ALVERNO,Alverno College,USA,WI,Milwaukee,3400,South 43rd St,53234,alverno.edu,Private,English,1887
+CARDINAL_STRITCH,Cardinal Stritch University,USA,WI,Milwaukee,6801,North Yates Rd,53217,stritch.edu,Private,English,1937
+CONCORDIA_MEQUON,Concordia University Wisconsin,USA,WI,Mequon,12800,North Lake Shore Dr,53097,cuw.edu,Private,English,1881
+UW_EAU_CLAIRE,University of Wisconsin-Eau Claire,USA,WI,Eau Claire,105,Garfield Ave,54702,uwec.edu,Public,English,1916
+UW_GREEN_BAY,University of Wisconsin-Green Bay,USA,WI,Green Bay,2420,Nicolet Dr,54311,uwgb.edu,Public,English,1965
+UW_LA_CROSSE,University of Wisconsin-La Crosse,USA,WI,La Crosse,1725,State St,54601,uwlax.edu,Public,English,1909
+UW_MILWAUKEE,University of Wisconsin-Milwaukee,USA,WI,Milwaukee,2200,East Kenwood Blvd,53211,uwm.edu,Public,English,1956
+UW_OSHKOSH,University of Wisconsin-Oshkosh,USA,WI,Oshkosh,800,Algoma Blvd,54901,uwosh.edu,Public,English,1871
+UW_PARKSIDE,University of Wisconsin-Parkside,USA,WI,Kenosha,900,Wood Rd,53141,uwp.edu,Public,English,1968
+UW_PLATTEVILLE,University of Wisconsin-Platteville,USA,WI,Platteville,1,University Plaza,53818,uwplatt.edu,Public,English,1866
+UW_RIVER_FALLS,University of Wisconsin-River Falls,USA,WI,River Falls,410,South 3rd St,54022,uwrf.edu,Public,English,1874
+UW_STEVENS_POINT,University of Wisconsin-Stevens Point,USA,WI,Stevens Point,2100,Main St,54481,uwsp.edu,Public,English,1894
+UW_STOUT,University of Wisconsin-Stout,USA,WI,Menomonie,1,Clocktower Plaza,54751,uwstout.edu,Public,English,1891
+UW_SUPERIOR,University of Wisconsin-Superior,USA,WI,Superior,1800,Grand Ave,54880,uwsuper.edu,Public,English,1893
+UW_WHITEWATER,University of Wisconsin-Whitewater,USA,WI,Whitewater,800,West Main St,53190,uww.edu,Public,English,1868
+AUGUSTA,Augustana College,USA,IL,Rock Island,639,38th St,61201,augustana.edu,Private,English,1860
+BRADLEY,Bradley University,USA,IL,Peoria,1501,West Bradley Ave,61625,bradley.edu,Private,English,1897
+CHICAGO_LOYOLA,Loyola University Chicago,USA,IL,Chicago,1032,West Sheridan Rd,60660,luc.edu,Private,English,1870
+DOMINICAN,Dominican University,USA,IL,River Forest,7900,West Division St,60305,dom.edu,Private,English,1901
+ELMHURST,Elmhurst University,USA,IL,Elmhurst,190,South Prospect Ave,60126,elmhurst.edu,Private,English,1871
+EUREKA,Eureka College,USA,IL,Eureka,300,East College Ave,61530,eureka.edu,Private,English,1855
+GREENVILLE,Greenville University,USA,IL,Greenville,315,East College Ave,62246,greenville.edu,Private,English,1892
+ILLINOIS_COLLEGE,Illinois College,USA,IL,Jacksonville,1101,West College Ave,62650,ic.edu,Private,English,1829
+ILLINOIS_WESLEYAN,Illinois Wesleyan University,USA,IL,Bloomington,1312,Park St,61701,iwu.edu,Private,English,1850
+JUDSON,Judson University,USA,IL,Elgin,1151,North State St,60123,judsonu.edu,Private,English,1963
+LAKE_FOREST_IL,Lake Forest College,USA,IL,Lake Forest,555,North Sheridan Rd,60045,lakeforest.edu,Private,English,1857
+LEWIS,Lewis University,USA,IL,Romeoville,1,University Pkwy,60446,lewisu.edu,Private,English,1932
+MILLIKIN,Millikin University,USA,IL,Decatur,1184,West Main St,62522,millikin.edu,Private,English,1901
+MONMOUTH,Monmouth College,USA,IL,Monmouth,700,East Broadway,61462,monmouthcollege.edu,Private,English,1853
+NORTH_CENTRAL,North Central College,USA,IL,Naperville,30,North Brainard St,60540,northcentralcollege.edu,Private,English,1861
+NORTH_PARK,North Park University,USA,IL,Chicago,3225,West Foster Ave,60625,northpark.edu,Private,English,1891
+OLIVET_NAZARENE,Olivet Nazarene University,USA,IL,Bourbonnais,1,University Ave,60914,olivet.edu,Private,English,1907
+PRINCIPIA,Principia College,USA,IL,Elsah,1,Maybeck Pl,62028,principia.edu,Private,English,1910
+QUINCY,Quincy University,USA,IL,Quincy,1800,College Ave,62301,quincy.edu,Private,English,1860
+ROCKFORD,Rockford University,USA,IL,Rockford,5050,East State St,61108,rockford.edu,Private,English,1847
+ROOSEVELT,Roosevelt University,USA,IL,Chicago,430,South Michigan Ave,60605,roosevelt.edu,Private,English,1945
+SAINT_XAVIER,Saint Xavier University,USA,IL,Chicago,3700,West 103rd St,60655,sxu.edu,Private,English,1846
+TRINITY_CHRISTIAN,Trinity Christian College,USA,IL,Palos Heights,6601,West College Dr,60463,trnty.edu,Private,English,1959
+TRINITY_INTERNATIONAL,Trinity International University,USA,IL,Deerfield,2065,Half Day Rd,60015,tiu.edu,Private,English,1897
+WHEATON,Wheaton College,USA,IL,Wheaton,501,College Ave,60187,wheaton.edu,Private,English,1860
+FRESNO_PACIFIC,Fresno Pacific University,USA,CA,Fresno,1717,South Chestnut Ave,93702,fresno.edu,Private,English,1944
+LOYOLA_MARYMOUNT,Loyola Marymount University,USA,CA,Los Angeles,1,LMU Dr,90045,lmu.edu,Private,English,1911
+OCCIDENTAL,Occidental College,USA,CA,Los Angeles,1600,Campus Rd,90041,oxy.edu,Private,English,1887
+PEPPERDINE,Pepperdine University,USA,CA,Malibu,24255,Pacific Coast Hwy,90263,pepperdine.edu,Private,English,1937
+POMONA,Pomona College,USA,CA,Claremont,333,North College Way,91711,pomona.edu,Private,English,1887
+USC,University of Southern California,USA,CA,Los Angeles,3551,Trousdale Pkwy,90089,usc.edu,Private,English,1880
+CLAREMONT_MCKENNA,Claremont McKenna College,USA,CA,Claremont,888,Columbia Ave,91711,cmc.edu,Private,English,1946
+HARVEY_MUDD,Harvey Mudd College,USA,CA,Claremont,301,Platt Blvd,91711,hmc.edu,Private,English,1955
+SCRIPPS,Scripps College,USA,CA,Claremont,1030,Columbia Ave,91711,scrippscollege.edu,Private,English,1926
+CLAREMONT_GRADUATE,Claremont Graduate University,USA,CA,Claremont,150,East 10th St,91711,cgu.edu,Private,English,1925
+AZUSA_PACIFIC,Azusa Pacific University,USA,CA,Azusa,901,East Alosta Ave,91702,apu.edu,Private,English,1899
+BIOLA,Biola University,USA,CA,La Mirada,13800,Biola Ave,90639,biola.edu,Private,English,1908
+CHAPMAN,Chapman University,USA,CA,Orange,1,University Dr,92866,chapman.edu,Private,English,1861
+DOMINICAN_CA,Dominican University of California,USA,CA,San Rafael,50,Acacia Ave,94901,dominican.edu,Private,English,1890
+GOLDEN_GATE,Golden Gate University,USA,CA,San Francisco,536,Mission St,94105,ggu.edu,Private,English,1901
+HOLY_NAMES,Holy Names University,USA,CA,Oakland,3500,Mountain Blvd,94619,hnu.edu,Private,English,1868
+HUMPHREYS,Humphreys University,USA,CA,Stockton,6650,Inglewood Ave,95207,humphreys.edu,Private,English,1896
+LA_SIERRA,La Sierra University,USA,CA,Riverside,4500,Riverwalk Pkwy,92515,lasierra.edu,Private,English,1922
+LOMA_LINDA,Loma Linda University,USA,CA,Loma Linda,11139,Anderson St,92350,llu.edu,Private,English,1905
+LOYOLA_LAW,Loyola Law School,USA,CA,Los Angeles,919,Albany St,90015,lls.edu,Private,English,1920
+MARYMOUNT_CA,Marymount California University,USA,CA,Rancho Palos Verdes,30800,Palos Verdes Dr East,90275,marymountcalifornia.edu,Private,English,1968
+MILLS,Mills College,USA,CA,Oakland,5000,MacArthur Blvd,94613,mills.edu,Private,English,1852
+MOUNT_SAINT_MARYS_CA,Mount Saint Mary's University,USA,CA,Los Angeles,12001,Chalon Rd,90049,msmu.edu,Private,English,1925
+NOTRE_DAME_DE_NAMUR,Notre Dame de Namur University,USA,CA,Belmont,1500,Ralston Ave,94002,ndnu.edu,Private,English,1851
+PACIFIC_UNION,Pacific Union College,USA,CA,Angwin,1,Angwin Ave,94508,puc.edu,Private,English,1882
+PATTEN,Patten University,USA,CA,Oakland,2433,Coolidge Ave,94601,patten.edu,Private,English,1944
+POINT_LOMA_NAZARENE,Point Loma Nazarene University,USA,CA,San Diego,3900,Lomaland Dr,92106,pointloma.edu,Private,English,1902
+SAINT_MARYS_CA,Saint Mary's College of California,USA,CA,Moraga,1928,Saint Mary's Rd,94575,stmarys-ca.edu,Private,English,1863
+SAN_FRANCISCO,University of San Francisco,USA,CA,San Francisco,2130,Fulton St,94117,usfca.edu,Private,English,1855
+SANTA_CLARA,Santa Clara University,USA,CA,Santa Clara,500,El Camino Real,95053,scu.edu,Private,English,1851
+SIMPSON_CA,Simpson University,USA,CA,Redding,2211,College View Dr,96003,simpsonu.edu,Private,English,1921
+THOMAS_AQUINAS,Thomas Aquinas College,USA,CA,Santa Paula,10000,Ojai Rd,93060,thomasaquinas.edu,Private,English,1971
+UNIVERSITY_REDLANDS,University of Redlands,USA,CA,Redlands,1200,East Colton Ave,92373,redlands.edu,Private,English,1907
+VANGUARD,Vanguard University,USA,CA,Costa Mesa,55,Fair Dr,92626,vanguard.edu,Private,English,1920
+WESTMONT,Westmont College,USA,CA,Santa Barbara,955,La Paz Rd,93108,westmont.edu,Private,English,1937
+WHITTIER,Whittier College,USA,CA,Whittier,13406,East Philadelphia St,90608,whittier.edu,Private,English,1887
+WOODBURY_CA,Woodbury University,USA,CA,Burbank,7500,Glenoaks Blvd,91504,woodbury.edu,Private,English,1884
+UC_DAVIS,University of California Davis,USA,CA,Davis,1,Shields Ave,95616,ucdavis.edu,Public,English,1905
+UC_IRVINE,University of California Irvine,USA,CA,Irvine,1,University Dr,92697,uci.edu,Public,English,1965
+UC_MERCED,University of California Merced,USA,CA,Merced,5200,North Lake Rd,95343,ucmerced.edu,Public,English,2005
+UC_RIVERSIDE,University of California Riverside,USA,CA,Riverside,900,University Ave,92521,ucr.edu,Public,English,1954
+UC_SAN_DIEGO,University of California San Diego,USA,CA,La Jolla,9500,Gilman Dr,92093,ucsd.edu,Public,English,1960
+UC_SANTA_BARBARA,University of California Santa Barbara,USA,CA,Santa Barbara,552,University Rd,93106,ucsb.edu,Public,English,1909
+UC_SANTA_CRUZ,University of California Santa Cruz,USA,CA,Santa Cruz,1156,High St,95064,ucsc.edu,Public,English,1965
+CSU_BAKERSFIELD,California State University Bakersfield,USA,CA,Bakersfield,9001,Stockdale Hwy,93311,csub.edu,Public,English,1970
+CSU_CHANNEL_ISLANDS,California State University Channel Islands,USA,CA,Camarillo,1,University Dr,93012,csuci.edu,Public,English,2002
+CSU_CHICO,California State University Chico,USA,CA,Chico,400,West First St,95929,csuchico.edu,Public,English,1887
+CSU_DOMINGUEZ_HILLS,California State University Dominguez Hills,USA,CA,Carson,1000,East Victoria St,90747,csudh.edu,Public,English,1960
+CSU_EAST_BAY,California State University East Bay,USA,CA,Hayward,25800,Carlos Bee Blvd,94542,csueastbay.edu,Public,English,1957
+CSU_FRESNO,California State University Fresno,USA,CA,Fresno,5241,North Maple Ave,93740,fresnostate.edu,Public,English,1911
+CSU_FULLERTON,California State University Fullerton,USA,CA,Fullerton,800,North State College Blvd,92831,fullerton.edu,Public,English,1957
+CSU_LONG_BEACH,California State University Long Beach,USA,CA,Long Beach,1250,Bellflower Blvd,90840,csulb.edu,Public,English,1949
+CSU_LOS_ANGELES,California State University Los Angeles,USA,CA,Los Angeles,5151,State University Dr,90032,calstatela.edu,Public,English,1947
+CSU_MARITIME,California State University Maritime Academy,USA,CA,Vallejo,200,Maritime Academy Dr,94590,csum.edu,Public,English,1929
+CSU_MONTEREY_BAY,California State University Monterey Bay,USA,CA,Seaside,100,Campus Center,93955,csumb.edu,Public,English,1994
+CSU_NORTHRIDGE,California State University Northridge,USA,CA,Northridge,18111,Nordhoff St,91330,csun.edu,Public,English,1958
+CSU_POMONA,California State Polytechnic University Pomona,USA,CA,Pomona,3801,West Temple Ave,91768,cpp.edu,Public,English,1938
+CSU_SACRAMENTO,California State University Sacramento,USA,CA,Sacramento,6000,J St,95819,csus.edu,Public,English,1947
+CSU_SAN_BERNARDINO,California State University San Bernardino,USA,CA,San Bernardino,5500,University Pkwy,92407,csusb.edu,Public,English,1965
+CSU_SAN_MARCOS,California State University San Marcos,USA,CA,San Marcos,333,South Twin Oaks Valley Rd,92096,csusm.edu,Public,English,1989
+CAL_POLY_SLO,California Polytechnic State University,USA,CA,San Luis Obispo,1,Grand Ave,93407,calpoly.edu,Public,English,1901
+SAN_DIEGO_STATE,San Diego State University,USA,CA,San Diego,5500,Campanile Dr,92182,sdsu.edu,Public,English,1897
+SAN_FRANCISCO_STATE,San Francisco State University,USA,CA,San Francisco,1600,Holloway Ave,94132,sfsu.edu,Public,English,1899
+SAN_JOSE_STATE,San Jose State University,USA,CA,San Jose,1,Washington Square,95192,sjsu.edu,Public,English,1857
+SONOMA_STATE,Sonoma State University,USA,CA,Rohnert Park,1801,East Cotati Ave,94928,sonoma.edu,Public,English,1960
+CSU_STANISLAUS,California State University Stanislaus,USA,CA,Turlock,1,University Cir,95382,csustan.edu,Public,English,1957
+HUMBOLDT_STATE,Humboldt State University,USA,CA,Arcata,1,Harpst St,95521,humboldt.edu,Public,English,1913
+UNIVERSITY_PACIFIC,University of the Pacific,USA,CA,Stockton,3601,Pacific Ave,95211,pacific.edu,Private,English,1851
+ART_INSTITUTE_CA,Art Institute of California,USA,CA,San Francisco,1170,Market St,94102,artinstitutes.edu,Private,English,1939
+ACADEMY_ART,Academy of Art University,USA,CA,San Francisco,79,New Montgomery St,94105,academyart.edu,Private,English,1929
+CALIFORNIA_COLLEGE_ARTS,California College of the Arts,USA,CA,Oakland,5212,Broadway,94618,cca.edu,Private,English,1907
+OTIS_COLLEGE,Otis College of Art and Design,USA,CA,Los Angeles,9045,Lincoln Blvd,90045,otis.edu,Private,English,1918
+FASHION_INSTITUTE,Fashion Institute of Design & Merchandising,USA,CA,Los Angeles,919,South Grand Ave,90015,fidm.edu,Private,English,1969
+WOODBURY_DESIGN,Woodbury University,USA,CA,Burbank,7500,Glenoaks Blvd,91504,woodbury.edu,Private,English,1884
+COGSWELL,Cogswell Polytechnical College,USA,CA,San Jose,1175,Bordeaux Dr,95110,cogswell.edu,Private,English,1887
+EXPRESSION,Expression College,USA,CA,Emeryville,6601,Shellmound St,94608,expression.edu,Private,English,1974
+FULLER,Fuller Theological Seminary,USA,CA,Pasadena,135,North Oakland Ave,91182,fuller.edu,Private,English,1947
+BETHESDA,Bethesda University,USA,CA,Anaheim,730,North Euclid St,92801,bethesdau.edu,Private,English,1976
+CALIFORNIA_BAPTIST,California Baptist University,USA,CA,Riverside,8432,Magnolia Ave,92504,calbaptist.edu,Private,English,1950
+CALIFORNIA_LUTHERAN,California Lutheran University,USA,CA,Thousand Oaks,60,West Olsen Rd,91360,callutheran.edu,Private,English,1959
+CONCORDIA_IRVINE,Concordia University Irvine,USA,CA,Irvine,1530,Concordia West,92612,cui.edu,Private,English,1976
+LIFE_PACIFIC,Life Pacific University,USA,CA,San Dimas,1100,West Covina Blvd,91773,lifepacific.edu,Private,English,1923
+MASTER'S,The Master's University,USA,CA,Santa Clarita,21726,Placerita Canyon Rd,91321,masters.edu,Private,English,1927
+SOUTHERN_CALIFORNIA_SEMINARY,Southern California Seminary,USA,CA,El Cajon,2075,East Madison Ave,92019,socalsem.edu,Private,English,1946
+WESTCLIFF,Westcliff University,USA,CA,Irvine,4199,Campus Dr,92612,westcliff.edu,Private,English,1993
+ALLIANT,Alliant International University,USA,CA,San Diego,10455,Pomerado Rd,92131,alliant.edu,Private,English,1969
+ANTIOCH,Antioch University,USA,CA,Culver City,400,Corporate Pointe,90230,antioch.edu,Private,English,1852
+CALIFORNIA_INSTITUTE_ARTS,California Institute of the Arts,USA,CA,Valencia,24700,McBean Pkwy,91355,calarts.edu,Private,English,1961
+CALIFORNIA_INSTITUTE_INTEGRAL,California Institute of Integral Studies,USA,CA,San Francisco,1453,Mission St,94103,ciis.edu,Private,English,1968
+FIELDING,Fielding Graduate University,USA,CA,Santa Barbara,2020,De la Vina St,93105,fielding.edu,Private,English,1974
+JOHN_F_KENNEDY,John F. Kennedy University,USA,CA,Pleasant Hill,100,Ellinwood Way,94523,jfku.edu,Private,English,1964
+MERIDIAN,Meridian University,USA,CA,Petaluma,47,Fourth St,94952,meridianuniversity.edu,Private,English,1993
+PACIFIC_GRADUATE,Pacific Graduate Institute,USA,CA,Carpinteria,249,Lambert Rd,93013,pacifica.edu,Private,English,1976
+SAYBROOK,Saybrook University,USA,CA,Pasadena,55,Eureka St,91103,saybrook.edu,Private,English,1971
+SOFIA,Sofia University,USA,CA,Palo Alto,1069,East Meadow Cir,94303,sofia.edu,Private,English,1975
+TEXAS_A&M,Texas A&M University,USA,TX,College Station,400,Bizzell St,77843,tamu.edu,Public,English,1876
+TEXAS_TECH,Texas Tech University,USA,TX,Lubbock,2500,Broadway,79409,ttu.edu,Public,English,1923
+UNIVERSITY_HOUSTON,University of Houston,USA,TX,Houston,4800,Calhoun Rd,77204,uh.edu,Public,English,1927
+TEXAS_CHRISTIAN,Texas Christian University,USA,TX,Fort Worth,2800,South University Dr,76129,tcu.edu,Private,English,1873
+SOUTHERN_METHODIST,Southern Methodist University,USA,TX,Dallas,6425,Boaz Ln,75205,smu.edu,Private,English,1911
+BAYLOR,Baylor University,USA,TX,Waco,1311,South 5th St,76798,baylor.edu,Private,English,1845
+TEXAS_A&M_KINGSVILLE,Texas A&M University-Kingsville,USA,TX,Kingsville,700,University Blvd,78363,tamuk.edu,Public,English,1925
+TEXAS_A&M_COMMERCE,Texas A&M University-Commerce,USA,TX,Commerce,2600,West Neal St,75429,tamuc.edu,Public,English,1889
+TEXAS_A&M_CORPUS_CHRISTI,Texas A&M University-Corpus Christi,USA,TX,Corpus Christi,6300,Ocean Dr,78412,tamucc.edu,Public,English,1947
+TEXAS_A&M_GALVESTON,Texas A&M University at Galveston,USA,TX,Galveston,200,Seawolf Pkwy,77553,tamug.edu,Public,English,1962
+TEXAS_A&M_TEXARKANA,Texas A&M University-Texarkana,USA,TX,Texarkana,7101,University Dr,75503,tamut.edu,Public,English,1971
+TEXAS_STATE,Texas State University,USA,TX,San Marcos,601,University Dr,78666,txstate.edu,Public,English,1899
+UNIVERSITY_NORTH_TEXAS,University of North Texas,USA,TX,Denton,1155,Union Cir,76203,unt.edu,Public,English,1890
+SAM_HOUSTON_STATE,Sam Houston State University,USA,TX,Huntsville,1806,Avenue J,77341,shsu.edu,Public,English,1879
+STEPHEN_F_AUSTIN,Stephen F. Austin State University,USA,TX,Nacogdoches,1936,North St,75962,sfasu.edu,Public,English,1923
+LAMAR,Lamar University,USA,TX,Beaumont,4400,Martin Luther King Jr Pkwy,77710,lamar.edu,Public,English,1923
+TEXAS_A&M_INTERNATIONAL,Texas A&M International University,USA,TX,Laredo,5201,University Blvd,78041,tamiu.edu,Public,English,1969
+UNIVERSITY_TEXAS_ARLINGTON,University of Texas at Arlington,USA,TX,Arlington,701,South Nedderman Dr,76019,uta.edu,Public,English,1895
+UNIVERSITY_TEXAS_DALLAS,University of Texas at Dallas,USA,TX,Richardson,800,West Campbell Rd,75080,utdallas.edu,Public,English,1969
+UNIVERSITY_TEXAS_EL_PASO,University of Texas at El Paso,USA,TX,El Paso,500,West University Ave,79968,utep.edu,Public,English,1914
+UNIVERSITY_TEXAS_RIO_GRANDE,University of Texas Rio Grande Valley,USA,TX,Edinburg,1201,West University Dr,78539,utrgv.edu,Public,English,2015
+UNIVERSITY_TEXAS_SAN_ANTONIO,University of Texas at San Antonio,USA,TX,San Antonio,1,UTSA Cir,78249,utsa.edu,Public,English,1969
+UNIVERSITY_TEXAS_TYLER,University of Texas at Tyler,USA,TX,Tyler,3900,University Blvd,75799,uttyler.edu,Public,English,1971
+UNIVERSITY_TEXAS_PERMIAN,University of Texas Permian Basin,USA,TX,Odessa,4901,East University Blvd,79762,utpb.edu,Public,English,1973
+WEST_TEXAS_A&M,West Texas A&M University,USA,TX,Canyon,2501,4th Ave,79016,wtamu.edu,Public,English,1910
+MIDWESTERN_STATE,Midwestern State University,USA,TX,Wichita Falls,3410,Taft Blvd,76308,msutexas.edu,Public,English,1922
+ANGELO_STATE,Angelo State University,USA,TX,San Angelo,2601,West Avenue N,76909,angelo.edu,Public,English,1928
+TARLETON_STATE,Tarleton State University,USA,TX,Stephenville,1333,West Washington St,76402,tarleton.edu,Public,English,1899
+SUL_ROSS_STATE,Sul Ross State University,USA,TX,Alpine,400,North Harrison St,79832,sulross.edu,Public,English,1917
+TEXAS_WOMAN'S,Texas Woman's University,USA,TX,Denton,304,Administration Dr,76204,twu.edu,Public,English,1901
+HOUSTON_BAPTIST,Houston Baptist University,USA,TX,Houston,7502,Fondren Rd,77074,hbu.edu,Private,English,1960
+ABILENE_CHRISTIAN,Abilene Christian University,USA,TX,Abilene,1600,Campus Ct,79699,acu.edu,Private,English,1906
+HARDIN_SIMMONS,Hardin-Simmons University,USA,TX,Abilene,2200,Hickory St,79698,hsutx.edu,Private,English,1891
+HOWARD_PAYNE,Howard Payne University,USA,TX,Brownwood,1000,Fisk Ave,76801,hputx.edu,Private,English,1889
+MCMURRY,McMurry University,USA,TX,Abilene,1400,Sayles Blvd,79697,mcm.edu,Private,English,1923
+SOUTHWESTERN,Southwestern University,USA,TX,Georgetown,1001,East University Ave,78626,southwestern.edu,Private,English,1840
+TRINITY_TX,Trinity University,USA,TX,San Antonio,1,Trinity Pl,78212,trinity.edu,Private,English,1869
+AUSTIN_COLLEGE,Austin College,USA,TX,Sherman,900,North Grand Ave,75090,austincollege.edu,Private,English,1849
+CONCORDIA_TX,Concordia University Texas,USA,TX,Austin,11400,Concordia University Dr,78726,concordia.edu,Private,English,1926
+DALLAS_BAPTIST,Dallas Baptist University,USA,TX,Dallas,3000,Mountain Creek Pkwy,75211,dbu.edu,Private,English,1898
+EAST_TEXAS_BAPTIST,East Texas Baptist University,USA,TX,Marshall,1209,North Grove Ave,75670,etbu.edu,Private,English,1912
+HOUSTON_CHRISTIAN,Houston Christian University,USA,TX,Houston,7502,Fondren Rd,77074,hcutx.edu,Private,English,1960
+LETOURNEAU,LeTourneau University,USA,TX,Longview,2100,South Mobberly Ave,75607,letu.edu,Private,English,1946
+LUBBOCK_CHRISTIAN,Lubbock Christian University,USA,TX,Lubbock,5601,19th St,79407,lcu.edu,Private,English,1957
+OUR_LADY_LAKE,Our Lady of the Lake University,USA,TX,San Antonio,411,Southwest 24th St,78207,ollusa.edu,Private,English,1895
+RICE_UNIVERSITY,Rice University,USA,TX,Houston,6100,Main St,77005,rice.edu,Private,English,1912
+SAINT_EDWARD'S,St. Edward's University,USA,TX,Austin,3001,South Congress Ave,78704,stedwards.edu,Private,English,1885
+SAINT_MARY'S_TX,St. Mary's University,USA,TX,San Antonio,1,Camino Santa Maria,78228,stmarytx.edu,Private,English,1852
+SCHREINER,Schreiner University,USA,TX,Kerrville,2100,Memorial Blvd,78028,schreiner.edu,Private,English,1923
+SOUTHWESTERN_ASSEMBLIES,Southwestern Assemblies of God University,USA,TX,Waxahachie,1200,Sycamore St,75165,sagu.edu,Private,English,1927
+TEXAS_COLLEGE,Texas College,USA,TX,Tyler,2404,North Grand Ave,75702,texascollege.edu,Private,English,1894
+TEXAS_LUTHERAN,Texas Lutheran University,USA,TX,Seguin,1000,West Court St,78155,tlu.edu,Private,English,1891
+TEXAS_WESLEYAN,Texas Wesleyan University,USA,TX,Fort Worth,1201,Wesleyan St,76105,txwes.edu,Private,English,1890
+UNIVERSITY_DALLAS,University of Dallas,USA,TX,Irving,1845,East Northgate Dr,75062,udallas.edu,Private,English,1956
+UNIVERSITY_INCARNATE_WORD,University of the Incarnate Word,USA,TX,San Antonio,4301,Broadway,78209,uiw.edu,Private,English,1881
+UNIVERSITY_ST_THOMAS_TX,University of St. Thomas,USA,TX,Houston,3800,Montrose Blvd,77006,stthom.edu,Private,English,1947
+WAYLAND_BAPTIST,Wayland Baptist University,USA,TX,Plainview,1900,West 7th St,79072,wbu.edu,Private,English,1908
+NOVA_SOUTHEASTERN,Nova Southeastern University,USA,FL,Davie,3301,College Ave,33314,nova.edu,Private,English,1964
+BARRY,Barry University,USA,FL,Miami Shores,11300,Northeast 2nd Ave,33161,barry.edu,Private,English,1940
+LYNN,Lynn University,USA,FL,Boca Raton,3601,North Military Trl,33431,lynn.edu,Private,English,1962
+PALM_BEACH_ATLANTIC,Palm Beach Atlantic University,USA,FL,West Palm Beach,901,South Flagler Dr,33416,pba.edu,Private,English,1968
+SAINT_LEO,Saint Leo University,USA,FL,Saint Leo,33701,State Road 52,33574,saintleo.edu,Private,English,1889
+SAINT_THOMAS_FL,St. Thomas University,USA,FL,Miami Gardens,16401,Northwest 37th Ave,33054,stu.edu,Private,English,1961
+FLORIDA_INSTITUTE_TECH,Florida Institute of Technology,USA,FL,Melbourne,150,West University Blvd,32901,fit.edu,Private,English,1958
+EMBRY_RIDDLE,Embry-Riddle Aeronautical University,USA,FL,Daytona Beach,1,Aerospace Blvd,32114,erau.edu,Private,English,1926
+FLORIDA_TECH_MELBOURNE,Florida Institute of Technology,USA,FL,Melbourne,150,West University Blvd,32901,fit.edu,Private,English,1958
+KEISER,Keiser University,USA,FL,Fort Lauderdale,1500,Northwest 49th St,33309,keiseruniversity.edu,Private,English,1977
+LYNN_UNIVERSITY,Lynn University,USA,FL,Boca Raton,3601,North Military Trl,33431,lynn.edu,Private,English,1962
+NORTHWOOD_FL,Northwood University,USA,FL,West Palm Beach,2600,North Military Trl,33409,northwood.edu,Private,English,1959
+RINGLING,Ringling College of Art and Design,USA,FL,Sarasota,2700,North Tamiami Trl,34234,ringling.edu,Private,English,1931
+SOUTHEASTERN,Southeastern University,USA,FL,Lakeland,1000,Longfellow Blvd,33801,seu.edu,Private,English,1935
+WARNER,Warner University,USA,FL,Lake Wales,13895,Highway 27,33859,warner.edu,Private,English,1968
+WEBBER,Webber International University,USA,FL,Babson Park,1201,North Scenic Hwy,33827,webber.edu,Private,English,1927
+FLORIDA_SOUTHERN,Florida Southern College,USA,FL,Lakeland,111,Lake Hollingsworth Dr,33801,flsouthern.edu,Private,English,1883
+ECKERD,Eckerd College,USA,FL,St. Petersburg,4200,54th Ave South,33711,eckerd.edu,Private,English,1958
+FLAGLER,Flagler College,USA,FL,St. Augustine,74,King St,32084,flagler.edu,Private,English,1968
+FLORIDA_AGRICULTURAL,Florida Agricultural and Mechanical University,USA,FL,Tallahassee,1601,South Martin Luther King Jr Blvd,32307,famu.edu,Public,English,1887
+FLORIDA_ATLANTIC,Florida Atlantic University,USA,FL,Boca Raton,777,Glades Rd,33431,fau.edu,Public,English,1961
+FLORIDA_GULF_COAST,Florida Gulf Coast University,USA,FL,Fort Myers,10501,FGCU Blvd South,33965,fgcu.edu,Public,English,1991
+FLORIDA_INTERNATIONAL,Florida International University,USA,FL,Miami,11200,Southwest 8th St,33199,fiu.edu,Public,English,1965
+FLORIDA_POLYTECHNIC,Florida Polytechnic University,USA,FL,Lakeland,4700,Research Way,33805,floridapoly.edu,Public,English,2012
+NEW_COLLEGE_FL,New College of Florida,USA,FL,Sarasota,5800,Bay Shore Rd,34243,ncf.edu,Public,English,1960
+UNIVERSITY_WEST_FLORIDA,University of West Florida,USA,FL,Pensacola,11000,University Pkwy,32514,uwf.edu,Public,English,1963
+UNIVERSITY_SOUTH_FLORIDA,University of South Florida,USA,FL,Tampa,4202,East Fowler Ave,33620,usf.edu,Public,English,1956
+BINGHAMTON,Binghamton University,USA,NY,Binghamton,4400,Vestal Pkwy East,13902,binghamton.edu,Public,English,1946
+BUFFALO_STATE,Buffalo State College,USA,NY,Buffalo,1300,Elmwood Ave,14222,buffalostate.edu,Public,English,1871
+CORTLAND,SUNY Cortland,USA,NY,Cortland,1,Prospect Ter,13045,cortland.edu,Public,English,1868
+FREDONIA,SUNY Fredonia,USA,NY,Fredonia,280,Central Ave,14063,fredonia.edu,Public,English,1826
+GENESEO,SUNY Geneseo,USA,NY,Geneseo,1,College Cir,14454,geneseo.edu,Public,English,1871
+NEW_PALTZ,SUNY New Paltz,USA,NY,New Paltz,1,Hawk Dr,12561,newpaltz.edu,Public,English,1828
+ONEONTA,SUNY Oneonta,USA,NY,Oneonta,108,Ravine Pkwy,13820,oneonta.edu,Public,English,1889
+OSWEGO,SUNY Oswego,USA,NY,Oswego,7060,State Route 104,13126,oswego.edu,Public,English,1861
+PLATTSBURGH,SUNY Plattsburgh,USA,NY,Plattsburgh,101,Broad St,12901,plattsburgh.edu,Public,English,1889
+POTSDAM,SUNY Potsdam,USA,NY,Potsdam,44,Pierrepont Ave,13676,potsdam.edu,Public,English,1816
+PURCHASE,SUNY Purchase,USA,NY,Purchase,735,Anderson Hill Rd,10577,purchase.edu,Public,English,1967
+BROCKPORT,SUNY Brockport,USA,NY,Brockport,350,New Campus Dr,14420,brockport.edu,Public,English,1835
+COLLEGE_ENVIRONMENTAL,SUNY College of Environmental Science and Forestry,USA,NY,Syracuse,1,Forestry Dr,13210,esf.edu,Public,English,1911
+MARITIME_COLLEGE,SUNY Maritime College,USA,NY,Throggs Neck,6,Pennyfield Ave,10465,sunymaritime.edu,Public,English,1874
+FARMINGDALE,Farmingdale State College,USA,NY,Farmingdale,2350,Broadhollow Rd,11735,farmingdale.edu,Public,English,1912
+OLD_WESTBURY,SUNY Old Westbury,USA,NY,Old Westbury,223,Store Hill Rd,11568,oldwestbury.edu,Public,English,1965
+ADIRONDACK,Adirondack Community College,USA,NY,Queensbury,640,Bay Rd,12804,sunyacc.edu,Public,English,1960
+BROOME,Broome Community College,USA,NY,Binghamton,907,Upper Front St,13905,sunybroome.edu,Public,English,1946
+CAYUGA,Cayuga Community College,USA,NY,Auburn,197,Franklin St,13021,cayuga-cc.edu,Public,English,1953
+CLINTON,Clinton Community College,USA,NY,Plattsburgh,136,Clinton Point Dr,12901,clinton.edu,Public,English,1966
+COLUMBIA_GREENE,Columbia-Greene Community College,USA,NY,Hudson,4400,Route 23,12534,sunycgcc.edu,Public,English,1966
+CORNING,Corning Community College,USA,NY,Corning,1,Academic Dr,14830,corning-cc.edu,Public,English,1956
+DUTCHESS,Dutchess Community College,USA,NY,Poughkeepsie,53,Pendell Rd,12601,sunydutchess.edu,Public,English,1957
+ERIE,Erie Community College,USA,NY,Buffalo,121,Ellicott St,14203,ecc.edu,Public,English,1946
+FINGER_LAKES,Finger Lakes Community College,USA,NY,Canandaigua,3325,Marvin Sands Dr,14424,flcc.edu,Public,English,1965
+FULTON_MONTGOMERY,Fulton-Montgomery Community College,USA,NY,Johnstown,2805,State Highway 67,12095,fmcc.edu,Public,English,1963
+GENESEE,Genesee Community College,USA,NY,Batavia,1,College Rd,14020,genesee.edu,Public,English,1966
+HERKIMER,Herkimer County Community College,USA,NY,Herkimer,100,Reservoir Rd,13350,herkimer.edu,Public,English,1966
+HUDSON_VALLEY,Hudson Valley Community College,USA,NY,Troy,80,Vandenburgh Ave,12180,hvcc.edu,Public,English,1953
+JAMESTOWN,Jamestown Community College,USA,NY,Jamestown,525,Falconer St,14701,sunyjcc.edu,Public,English,1950
+JEFFERSON,Jefferson Community College,USA,NY,Watertown,1220,Coffeen St,13601,sunyjefferson.edu,Public,English,1961
+MOHAWK_VALLEY,Mohawk Valley Community College,USA,NY,Utica,1101,Sherman Dr,13501,mvcc.edu,Public,English,1946
+MONROE,Monroe Community College,USA,NY,Rochester,1000,East Henrietta Rd,14623,monroecc.edu,Public,English,1961
+NASSAU,Nassau Community College,USA,NY,Garden City,1,Education Dr,11530,ncc.edu,Public,English,1959
+NIAGARA_COUNTY,Niagara County Community College,USA,NY,Sanborn,3111,Saunders Settlement Rd,14132,niagaracc.suny.edu,Public,English,1962
+NORTH_COUNTRY,North Country Community College,USA,NY,Saranac Lake,23,Santanoni Ave,12983,nccc.edu,Public,English,1967
+ONONDAGA,Onondaga Community College,USA,NY,Syracuse,4585,West Seneca Tpke,13215,sunyocc.edu,Public,English,1961
+ORANGE,Orange County Community College,USA,NY,Middletown,115,South St,10940,sunyorange.edu,Public,English,1950
+ROCKLAND,Rockland Community College,USA,NY,Suffern,145,College Rd,10901,sunyrockland.edu,Public,English,1959
+SCHENECTADY,Schenectady County Community College,USA,NY,Schenectady,78,Washington Ave,12305,sunysccc.edu,Public,English,1961
+SUFFOLK,Suffolk County Community College,USA,NY,Selden,533,College Rd,11784,sunysuffolk.edu,Public,English,1959
+SULLIVAN,Sullivan County Community College,USA,NY,Loch Sheldrake,112,College Rd,12759,sullivan.suny.edu,Public,English,1962
+TOMPKINS_CORTLAND,Tompkins Cortland Community College,USA,NY,Dryden,170,North St,13053,tc3.edu,Public,English,1968
+ULSTER,Ulster County Community College,USA,NY,Stone Ridge,491,Cottekill Rd,12484,sunyulster.edu,Public,English,1961
+WESTCHESTER,Westchester Community College,USA,NY,Valhalla,75,Grasslands Rd,10595,sunywcc.edu,Public,English,1946
+ADELPHI,Adelphi University,USA,NY,Garden City,1,South Ave,11530,adelphi.edu,Private,English,1896
+ALFRED,Alfred University,USA,NY,Alfred,1,Saxon Dr,14802,alfred.edu,Private,English,1836
+BARD,Bard College,USA,NY,Annandale-on-Hudson,30,Campus Rd,12504,bard.edu,Private,English,1860
+CANISIUS,Canisius College,USA,NY,Buffalo,2001,Main St,14208,canisius.edu,Private,English,1870
+CAZENOVIA,Cazenovia College,USA,NY,Cazenovia,22,Sullivan St,13035,cazenovia.edu,Private,English,1824
+D'YOUVILLE,D'Youville College,USA,NY,Buffalo,320,Porter Ave,14201,dyc.edu,Private,English,1908
+DAEMEN,Daemen College,USA,NY,Amherst,4380,Main St,14226,daemen.edu,Private,English,1947
+DOMINICAN_NY,Dominican College,USA,NY,Orangeburg,470,Western Hwy,10962,dc.edu,Private,English,1952
+ELMIRA_NY,Elmira College,USA,NY,Elmira,1,Park Pl,14901,elmira.edu,Private,English,1855
+EUGENE_LANG,Eugene Lang College,USA,NY,New York,65,West 11th St,10011,newschool.edu,Private,English,1978
+FASHION_INSTITUTE_TECH,Fashion Institute of Technology,USA,NY,New York,227,West 27th St,10001,fitnyc.edu,Public,English,1944
+FIVE_TOWNS,Five Towns College,USA,NY,Dix Hills,305,North Service Rd,11746,ftc.edu,Private,English,1972
+HARTWICK,Hartwick College,USA,NY,Oneonta,1,Hartwick Dr,13820,hartwick.edu,Private,English,1797
+HILBERT,Hilbert College,USA,NY,Hamburg,5200,South Park Ave,14075,hilbert.edu,Private,English,1957
+HOBART_WILLIAM_SMITH,Hobart and William Smith Colleges,USA,NY,Geneva,300,Pulteney St,14456,hws.edu,Private,English,1822
+HOFSTRA,Hofstra University,USA,NY,Hempstead,1000,Fulton Ave,11549,hofstra.edu,Private,English,1935
+HOUGHTON,Houghton College,USA,NY,Houghton,1,Willard Ave,14744,houghton.edu,Private,English,1883
+IONA,Iona College,USA,NY,New Rochelle,715,North Ave,10801,iona.edu,Private,English,1940
+JUILLIARD,The Juilliard School,USA,NY,New York,60,Lincoln Center Plaza,10023,juilliard.edu,Private,English,1905
+KEUKA,Keuka College,USA,NY,Keuka Park,141,Central Ave,14478,keuka.edu,Private,English,1890
+LE_MOYNE,Le Moyne College,USA,NY,Syracuse,1419,Salt Springs Rd,13214,lemoyne.edu,Private,English,1946
+LIM,LIM College,USA,NY,New York,12,East 53rd St,10022,limcollege.edu,Private,English,1939
+LIU_BROOKLYN,Long Island University Brooklyn,USA,NY,Brooklyn,1,University Plaza,11201,liu.edu,Private,English,1926
+LIU_POST,Long Island University Post,USA,NY,Brookville,720,Northern Blvd,11548,liu.edu,Private,English,1954
+MANHATTAN,Manhattan College,USA,NY,Riverdale,4513,Manhattan College Pkwy,10471,manhattan.edu,Private,English,1853
+MANHATTANVILLE,Manhattanville College,USA,NY,Purchase,2900,Purchase St,10577,mville.edu,Private,English,1841
+MARIST,Marist College,USA,NY,Poughkeepsie,3399,North Rd,12601,marist.edu,Private,English,1929
+MARYMOUNT_MANHATTAN,Marymount Manhattan College,USA,NY,New York,221,East 71st St,10021,mmm.edu,Private,English,1936
+MERCY,Mercy College,USA,NY,Dobbs Ferry,555,Broadway,10522,mercy.edu,Private,English,1950
+MOLLOY,Molloy College,USA,NY,Rockville Centre,1000,Hempstead Ave,11571,molloy.edu,Private,English,1955
+MOUNT_SAINT_MARY_NY,Mount Saint Mary College,USA,NY,Newburgh,330,Powell Ave,12550,msmc.edu,Private,English,1960
+MOUNT_SAINT_VINCENT,College of Mount Saint Vincent,USA,NY,Riverdale,6301,Riverdale Ave,10471,mountsaintvincent.edu,Private,English,1847
+NAZARETH,Nazareth College,USA,NY,Rochester,4245,East Ave,14618,naz.edu,Private,English,1924
+NEW_ROCHELLE,College of New Rochelle,USA,NY,New Rochelle,29,Castle Pl,10805,cnr.edu,Private,English,1904
+NEW_SCHOOL,The New School,USA,NY,New York,66,West 12th St,10011,newschool.edu,Private,English,1919
+NIAGARA,Niagara University,USA,NY,Niagara University,5795,Lewiston Rd,14109,niagara.edu,Private,English,1856
+NYACK,Nyack College,USA,NY,Nyack,1,South Blvd,10960,nyack.edu,Private,English,1882
+PACE,Pace University,USA,NY,New York,1,Pace Plaza,10038,pace.edu,Private,English,1906
+PARSONS,Parsons School of Design,USA,NY,New York,2,West 13th St,10011,newschool.edu,Private,English,1896
+PRATT,Pratt Institute,USA,NY,Brooklyn,200,Willoughby Ave,11205,pratt.edu,Private,English,1887
+RENSSELAER,Rensselaer Polytechnic Institute,USA,NY,Troy,110,8th St,12180,rpi.edu,Private,English,1824
+ROBERTS_WESLEYAN,Roberts Wesleyan College,USA,NY,Rochester,2301,Westside Dr,14624,roberts.edu,Private,English,1866
+SAGE,Russell Sage College,USA,NY,Troy,65,1st St,12180,sage.edu,Private,English,1916
+SAINT_BONAVENTURE,St. Bonaventure University,USA,NY,St. Bonaventure,3261,West State Rd,14778,sbu.edu,Private,English,1858
+SAINT_FRANCIS_NY,St. Francis College,USA,NY,Brooklyn Heights,180,Remsen St,11201,sfc.edu,Private,English,1859
+SAINT_JOHN_FISHER,St. John Fisher College,USA,NY,Rochester,3690,East Ave,14618,sjfc.edu,Private,English,1948
+SAINT_JOHNS,St. John's University,USA,NY,Queens,8000,Utopia Pkwy,11439,stjohns.edu,Private,English,1870
+SAINT_JOSEPHS_NY,St. Joseph's College,USA,NY,Brooklyn,245,Clinton Ave,11205,sjcny.edu,Private,English,1916
+SAINT_ROSE,College of Saint Rose,USA,NY,Albany,432,Western Ave,12203,strose.edu,Private,English,1920
+SAINT_THOMAS_AQUINAS,St. Thomas Aquinas College,USA,NY,Sparkill,125,Route 340,10976,stac.edu,Private,English,1952
+SARAH_LAWRENCE,Sarah Lawrence College,USA,NY,Bronxville,1,Mead Way,10708,sarahlawrence.edu,Private,English,1926
+SCHOOL_VISUAL_ARTS,School of Visual Arts,USA,NY,New York,209,East 23rd St,10010,sva.edu,Private,English,1947
+SIENA,Siena College,USA,NY,Loudonville,515,Loudon Rd,12211,siena.edu,Private,English,1937
+SUNY_EMPIRE,SUNY Empire State College,USA,NY,Saratoga Springs,113,West Ave,12866,esc.edu,Public,English,1971
+UTICA,Utica College,USA,NY,Utica,1600,Burrstone Rd,13502,utica.edu,Private,English,1946
+VAUGHN,Vaughn College of Aeronautics and Technology,USA,NY,Flushing,8601,23rd Ave,11369,vaughn.edu,Private,English,1932
+WAGNER,Wagner College,USA,NY,Staten Island,1,Campus Rd,10301,wagner.edu,Private,English,1883
+WEBB,Webb Institute,USA,NY,Glen Cove,298,Crescent Beach Rd,11542,webb.edu,Private,English,1889
+YESHIVA,Yeshiva University,USA,NY,New York,500,West 185th St,10033,yu.edu,Private,English,1886
+COLORADO_SCHOOL_MINES,Colorado School of Mines,USA,CO,Golden,1500,Illinois St,80401,mines.edu,Public,English,1874
+COLORADO_STATE,Colorado State University,USA,CO,Fort Collins,1062,Campus Delivery,80523,colostate.edu,Public,English,1870
+UNIVERSITY_DENVER,University of Denver,USA,CO,Denver,2199,South University Blvd,80208,du.edu,Private,English,1864
+COLORADO_COLLEGE,Colorado College,USA,CO,Colorado Springs,14,East Cache La Poudre St,80903,coloradocollege.edu,Private,English,1874
+REGIS_CO,Regis University,USA,CO,Denver,3333,Regis Blvd,80221,regis.edu,Private,English,1877
+METROPOLITAN_STATE,Metropolitan State University of Denver,USA,CO,Denver,890,Auraria Pkwy,80204,msudenver.edu,Public,English,1963
+COLORADO_STATE_PUEBLO,Colorado State University Pueblo,USA,CO,Pueblo,2200,Bonforte Blvd,81001,csupueblo.edu,Public,English,1933
+UNIVERSITY_NORTHERN_COLORADO,University of Northern Colorado,USA,CO,Greeley,501,20th St,80639,unco.edu,Public,English,1889
+WESTERN_COLORADO,Western Colorado University,USA,CO,Gunnison,1,Western Way,81231,western.edu,Public,English,1901
+ADAMS_STATE,Adams State University,USA,CO,Alamosa,208,Edgemont Blvd,81101,adams.edu,Public,English,1921
+FORT_LEWIS,Fort Lewis College,USA,CO,Durango,1000,Rim Dr,81301,fortlewis.edu,Public,English,1911
+COLORADO_MESA,Colorado Mesa University,USA,CO,Grand Junction,1100,North Ave,81501,coloradomesa.edu,Public,English,1925
+COLORADO_CHRISTIAN,Colorado Christian University,USA,CO,Lakewood,8787,West Alameda Ave,80226,ccu.edu,Private,English,1914
+DENVER_SEMINARY,Denver Seminary,USA,CO,Littleton,6399,South Santa Fe Dr,80120,denverseminary.edu,Private,English,1950
+JOHNSON_WALES_CO,Johnson & Wales University,USA,CO,Denver,7150,Montview Blvd,80220,jwu.edu,Private,English,1914
+NAROPA,Naropa University,USA,CO,Boulder,2130,Arapahoe Ave,80302,naropa.edu,Private,English,1974
+NATIONAL_AMERICAN,National American University,USA,CO,Colorado Springs,1915,Jamboree Dr,80920,national.edu,Private,English,1941
+ROCKY_MOUNTAIN_ART,Rocky Mountain College of Art + Design,USA,CO,Lakewood,1600,Pierce St,80214,rmcad.edu,Private,English,1963
+ROCKY_MOUNTAIN_HEALTH,Rocky Mountain University of Health Professions,USA,UT,Provo,122,East 1700 South,84606,rmuohp.edu,Private,English,1998
+SOUTHERN_UTAH,Southern Utah University,USA,UT,Cedar City,351,West University Blvd,84720,suu.edu,Public,English,1897
+UTAH_STATE,Utah State University,USA,UT,Logan,1400,Old Main Hill,84322,usu.edu,Public,English,1888
+UTAH_VALLEY,Utah Valley University,USA,UT,Orem,800,West University Pkwy,84058,uvu.edu,Public,English,1941
+WEBER_STATE,Weber State University,USA,UT,Ogden,1137,University Cir,84408,weber.edu,Public,English,1889
+DIXIE_STATE,Dixie State University,USA,UT,St. George,225,South 700 East,84770,dixie.edu,Public,English,1911
+SNOW_COLLEGE,Snow College,USA,UT,Ephraim,150,East College Ave,84627,snow.edu,Public,English,1888
+SALT_LAKE_COMMUNITY,Salt Lake Community College,USA,UT,Salt Lake City,4600,South Redwood Rd,84123,slcc.edu,Public,English,1948
+BRIGHAM_YOUNG,Brigham Young University,USA,UT,Provo,1,BYU,84602,byu.edu,Private,English,1875
+WESTMINSTER_UT,Westminster College,USA,UT,Salt Lake City,1840,South 1300 East,84105,westminstercollege.edu,Private,English,1875
+NEVADA_LAS_VEGAS,University of Nevada Las Vegas,USA,NV,Las Vegas,4505,Maryland Pkwy,89154,unlv.edu,Public,English,1957
+NEVADA_RENO,University of Nevada Reno,USA,NV,Reno,1664,North Virginia St,89557,unr.edu,Public,English,1874
+GREAT_BASIN,Great Basin College,USA,NV,Elko,1500,College Pkwy,89801,gbcnv.edu,Public,English,1967
+NEVADA_STATE,Nevada State College,USA,NV,Henderson,1300,Nevada State Dr,89002,nsc.edu,Public,English,2002
+TRUCKEE_MEADOWS,Truckee Meadows Community College,USA,NV,Reno,7000,Dandini Blvd,89512,tmcc.edu,Public,English,1971
+COLLEGE_SOUTHERN_NEVADA,College of Southern Nevada,USA,NV,Las Vegas,6375,West Charleston Blvd,89146,csn.edu,Public,English,1971
+WESTERN_NEVADA,Western Nevada College,USA,NV,Carson City,2201,West College Pkwy,89703,wnc.edu,Public,English,1971
+SIERRA_NEVADA,Sierra Nevada College,USA,NV,Incline Village,999,Tahoe Blvd,89451,sierranevada.edu,Private,English,1969
+ART_INSTITUTE_LAS_VEGAS,Art Institute of Las Vegas,USA,NV,Henderson,2350,Corporate Cir,89074,artinstitutes.edu,Private,English,1983
+ARIZONA_STATE,Arizona State University,USA,AZ,Tempe,1151,South Forest Ave,85287,asu.edu,Public,English,1885
+NORTHERN_ARIZONA,Northern Arizona University,USA,AZ,Flagstaff,1395,South Knoles Dr,86011,nau.edu,Public,English,1899
+ARIZONA_WESTERN,Arizona Western College,USA,AZ,Yuma,2020,South Avenue 8E,85365,azwestern.edu,Public,English,1963
+CENTRAL_ARIZONA,Central Arizona College,USA,AZ,Coolidge,8470,North Overfield Rd,85128,centralaz.edu,Public,English,1961
+COCHISE,Cochise College,USA,AZ,Douglas,901,North Colombo Ave,85607,cochise.edu,Public,English,1962
+COCONINO,Coconino Community College,USA,AZ,Flagstaff,2800,South Lone Tree Rd,86001,coconino.edu,Public,English,1991
+ESTRELLA_MOUNTAIN,Estrella Mountain Community College,USA,AZ,Avondale,3000,North Dysart Rd,85392,estrellamountain.edu,Public,English,1992
+GATEWAYS,GateWay Community College,USA,AZ,Phoenix,108,North 40th St,85034,gatewaycc.edu,Public,English,1968
+GLENDALE_COMMUNITY,Glendale Community College,USA,AZ,Glendale,6000,West Olive Ave,85302,gccaz.edu,Public,English,1965
+MARICOPA,Mesa Community College,USA,AZ,Mesa,1833,West Southern Ave,85202,mesacc.edu,Public,English,1963
+MOHAVE,Mohave Community College,USA,AZ,Kingman,1971,Jagerson Ave,86409,mohave.edu,Public,English,1971
+NAVAJO,Navajo Technical University,USA,AZ,Crownpoint,505,BIA Route 7,87313,navajotech.edu,Public,English,1979
+PARADISE_VALLEY,Paradise Valley Community College,USA,AZ,Phoenix,18401,North 32nd St,85032,paradisevalley.edu,Public,English,1985
+PHOENIX_COLLEGE,Phoenix College,USA,AZ,Phoenix,1202,West Thomas Rd,85013,phoenixcollege.edu,Public,English,1920
+PIMA,Pima Community College,USA,AZ,Tucson,4905,East Broadway Blvd,85709,pima.edu,Public,English,1966
+RIO_SALADO,Rio Salado College,USA,AZ,Tempe,2323,West 14th St,85281,riosalado.edu,Public,English,1978
+SCOTTSDALE,Scottsdale Community College,USA,AZ,Scottsdale,9000,East Chaparral Rd,85256,scottsdalecc.edu,Public,English,1969
+SOUTH_MOUNTAIN,South Mountain Community College,USA,AZ,Phoenix,7050,South 24th St,85042,southmountaincc.edu,Public,English,1979
+TOHONO_OODHAM,Tohono O'odham Community College,USA,AZ,Sells,2840,West Indian Rte 15,85634,tocc.edu,Public,English,1998
+YAVAPAI,Yavapai College,USA,AZ,Prescott,1100,East Sheldon St,86301,yc.edu,Public,English,1966
+ARIZONA_CHRISTIAN,Arizona Christian University,USA,AZ,Glendale,2625,East Cactus Rd,85032,arizonachristian.edu,Private,English,1960
+GRAND_CANYON,Grand Canyon University,USA,AZ,Phoenix,3300,West Camelback Rd,85017,gcu.edu,Private,English,1949
+EMBRY_RIDDLE_AZ,Embry-Riddle Aeronautical University,USA,AZ,Prescott,3700,Willow Creek Rd,86301,erau.edu,Private,English,1978
+PRESCOTT_COLLEGE,Prescott College,USA,AZ,Prescott,220,Grove Ave,86301,prescott.edu,Private,English,1966
+SOUTHWEST_COLLEGE_NATUROPATHIC,Southwest College of Naturopathic Medicine,USA,AZ,Tempe,2140,East Broadway Rd,85282,scnm.edu,Private,English,1992
+UNIVERSITY_ADVANCING_TECH,University of Advancing Technology,USA,AZ,Tempe,2625,West Baseline Rd,85283,uat.edu,Private,English,1983
+WESTERN_INTERNATIONAL,Western International University,USA,AZ,Phoenix,9215,North Black Canyon Hwy,85021,west.edu,Private,English,1978
+NEW_MEXICO_STATE,New Mexico State University,USA,NM,Las Cruces,1780,East University Ave,88003,nmsu.edu,Public,English,1888
+NEW_MEXICO_TECH,New Mexico Institute of Mining and Technology,USA,NM,Socorro,801,Leroy Pl,87801,nmt.edu,Public,English,1889
+EASTERN_NEW_MEXICO,Eastern New Mexico University,USA,NM,Portales,1500,South Ave K,88130,enmu.edu,Public,English,1934
+WESTERN_NEW_MEXICO,Western New Mexico University,USA,NM,Silver City,1000,West College Ave,88062,wnmu.edu,Public,English,1893
+NEW_MEXICO_HIGHLANDS,New Mexico Highlands University,USA,NM,Las Vegas,1005,Diamond Ave,87701,nmhu.edu,Public,English,1893
+NORTHERN_NEW_MEXICO,Northern New Mexico College,USA,NM,Espanola,921,Paseo de Onate,87532,nnmc.edu,Public,English,1909
+SAN_JUAN,San Juan College,USA,NM,Farmington,4601,College Blvd,87402,sanjuancollege.edu,Public,English,1956
+CENTRAL_NEW_MEXICO,Central New Mexico Community College,USA,NM,Albuquerque,525,Buena Vista Dr SE,87106,cnm.edu,Public,English,1965
+CLOVIS,Clovis Community College,USA,NM,Clovis,417,Schepps Blvd,88101,clovis.edu,Public,English,1990
+DONA_ANA,Doña Ana Community College,USA,NM,Las Cruces,3400,South Espina St,88003,dacc.nmsu.edu,Public,English,1973
+LUNA,Luna Community College,USA,NM,Las Vegas,366,Luna Dr,87701,luna.edu,Public,English,1970
+MESALANDS,Mesalands Community College,USA,NM,Tucumcari,911,South 10th St,88401,mesalands.edu,Public,English,1979
+NAVAJO_TECHNICAL,Navajo Technical University,USA,NM,Crownpoint,505,BIA Route 7,87313,navajotech.edu,Public,English,1979
+NEW_MEXICO_JUNIOR,New Mexico Junior College,USA,NM,Hobbs,5317,Lovington Hwy,88240,nmjc.edu,Public,English,1965
+NEW_MEXICO_MILITARY,New Mexico Military Institute,USA,NM,Roswell,101,West College Blvd,88201,nmmi.edu,Public,English,1891
+SANTA_FE_COMMUNITY,Santa Fe Community College,USA,NM,Santa Fe,6401,Richards Ave,87508,sfcc.edu,Public,English,1983
+SOUTHWESTERN_INDIAN,Southwestern Indian Polytechnic Institute,USA,NM,Albuquerque,9169,Coors Rd NW,87120,sipi.edu,Public,English,1971
+UNIVERSITY_SOUTHWEST,University of the Southwest,USA,NM,Hobbs,6610,Lovington Hwy,88240,usw.edu,Private,English,1962
+ST_JOHNS_NM,St. John's College,USA,NM,Santa Fe,1160,Camino Cruz Blanca,87505,sjc.edu,Private,English,1964
+INSTITUTE_AMERICAN_INDIAN,Institute of American Indian Arts,USA,NM,Santa Fe,83,Avan Nu Po Rd,87508,iaia.edu,Public,English,1962
+BOISE_STATE,Boise State University,USA,ID,Boise,1910,University Dr,83725,boisestate.edu,Public,English,1932
+IDAHO_STATE,Idaho State University,USA,ID,Pocatello,921,South 8th Ave,83209,isu.edu,Public,English,1901
+LEWIS_CLARK_STATE,Lewis-Clark State College,USA,ID,Lewiston,500,8th Ave,83501,lcsc.edu,Public,English,1893
+COLLEGE_IDAHO,College of Idaho,USA,ID,Caldwell,2112,Cleveland Blvd,83605,collegeofidaho.edu,Private,English,1891
+COLLEGE_SOUTHERN_IDAHO,College of Southern Idaho,USA,ID,Twin Falls,315,Falls Ave,83301,csi.edu,Public,English,1964
+NORTH_IDAHO_COLLEGE,North Idaho College,USA,ID,Coeur d'Alene,1000,West Garden Ave,83814,nic.edu,Public,English,1933
+BRIGHAM_YOUNG_IDAHO,Brigham Young University-Idaho,USA,ID,Rexburg,525,South Center St,83460,byui.edu,Private,English,1888
+STEVENS_HENAGER,Stevens-Henager College,USA,ID,Boise,1444,South Entertainment Ave,83709,stevenshenager.edu,Private,English,1891
+UNIVERSITY_PHOENIX_IDAHO,University of Phoenix,USA,ID,Meridian,3075,East Goldstone Dr,83642,phoenix.edu,Private,English,1976
+MONTANA_STATE,Montana State University,USA,MT,Bozeman,210,Montana Hall,59717,montana.edu,Public,English,1893
+MONTANA_TECH,Montana Technological University,USA,MT,Butte,1300,West Park St,59701,mtech.edu,Public,English,1900
+MONTANA_STATE_NORTHERN,Montana State University Northern,USA,MT,Havre,300,13th St West,59501,msun.edu,Public,English,1929
+MONTANA_STATE_BILLINGS,Montana State University Billings,USA,MT,Billings,1500,University Dr,59101,msubillings.edu,Public,English,1927
+UNIVERSITY_GREAT_FALLS,University of Providence,USA,MT,Great Falls,1301,20th St South,59405,ugf.edu,Private,English,1932
+CARROLL_COLLEGE,Carroll College,USA,MT,Helena,1601,North Benton Ave,59625,carroll.edu,Private,English,1909
+ROCKY_MOUNTAIN_COLLEGE,Rocky Mountain College,USA,MT,Billings,1511,Poly Dr,59102,rocky.edu,Private,English,1878
+SALISH_KOOTENAI,Salish Kootenai College,USA,MT,Pablo,58138,Highway 93,59855,skc.edu,Public,English,1977
+LITTLE_BIG_HORN,Little Big Horn College,USA,MT,Crow Agency,8645,South Weaver Dr,59022,lbhc.edu,Public,English,1980
+CHIEF_DULL_KNIFE,Chief Dull Knife College,USA,MT,Lame Deer,1 College Dr,59043,cdkc.edu,Public,English,1975,
+FORT_BELKNAP,Fort Belknap College,USA,MT,Harlem,335,Bear Paw St,59526,fbcc.edu,Public,English,1984
+FORT_PECK,Fort Peck Community College,USA,MT,Poplar,605,Indian Ave,59255,fpcc.edu,Public,English,1978
+STONE_CHILD,Stone Child College,USA,MT,Box Elder,8294,Upper Box Elder Rd,59521,stonechild.edu,Public,English,1984
+BLACKFEET,Blackfeet Community College,USA,MT,Browning,504,SE Boundary St,59417,bfcc.edu,Public,English,1974
+AANIIIH_NAKODA,Aaniiih Nakoda College,USA,MT,Harlem,335,Bear Paw St,59526,ancollege.edu,Public,English,1984
+DAWSON,Dawson Community College,USA,MT,Glendive,300,College Dr,59330,dawson.edu,Public,English,1940
+FLATHEAD_VALLEY,Flathead Valley Community College,USA,MT,Kalispell,777,Grandview Dr,59901,fvcc.edu,Public,English,1967
+GREAT_FALLS_COLLEGE,Great Falls College Montana State University,USA,MT,Great Falls,2100,16th Ave South,59405,gfcmsu.edu,Public,English,1969
+HELENA_COLLEGE,Helena College University of Montana,USA,MT,Helena,1115,North Roberts St,59601,helenacollege.edu,Public,English,1939
+MILES_COMMUNITY,Miles Community College,USA,MT,Miles City,2715,Dickinson St,59301,milescc.edu,Public,English,1939
+CASPER_COLLEGE,Casper College,USA,WY,Casper,125,College Dr,82601,caspercollege.edu,Public,English,1945
+CENTRAL_WYOMING,Central Wyoming College,USA,WY,Riverton,2660,Peck Ave,82501,cwc.edu,Public,English,1966
+EASTERN_WYOMING,Eastern Wyoming College,USA,WY,Torrington,3200,West C St,82240,ewc.edu,Public,English,1948
+LARAMIE_COUNTY,Laramie County Community College,USA,WY,Cheyenne,1400,East College Dr,82007,lccc.edu,Public,English,1968
+NORTHERN_WYOMING,Northern Wyoming Community College District,USA,WY,Sheridan,3059,Coffeen Ave,82801,sheridan.edu,Public,English,1948
+NORTHWEST,Northwest College,USA,WY,Powell,231,West 6th St,82435,nwc.edu,Public,English,1946
+WESTERN_WYOMING,Western Wyoming Community College,USA,WY,Rock Springs,2500,College Dr,82902,wwcc.edu,Public,English,1959
+ALASKA_ANCHORAGE,University of Alaska Anchorage,USA,AK,Anchorage,3211,Providence Dr,99508,uaa.alaska.edu,Public,English,1954
+ALASKA_SOUTHEAST,University of Alaska Southeast,USA,AK,Juneau,11120,Glacier Hwy,99801,uas.alaska.edu,Public,English,1972
+ALASKA_PACIFIC,Alaska Pacific University,USA,AK,Anchorage,4101,University Dr,99508,alaskapacific.edu,Private,English,1957
+ALASKA_BIBLE,Alaska Bible College,USA,AK,Palmer,248,East Elmwood Ave,99645,akbible.edu,Private,English,1966
+CHARTER_COLLEGE,Charter College,USA,AK,Anchorage,2221,East Northern Lights Blvd,99508,chartercollege.edu,Private,English,1985
+ILISAGVIK,Ilisagvik College,USA,AK,Barrow,100,Stevenson Rd,99723,ilisagvik.edu,Public,English,1995
+HAWAII_MANOA,University of Hawaii at Manoa,USA,HI,Honolulu,2500,Campus Rd,96822,hawaii.edu,Public,English,1907
+HAWAII_HILO,University of Hawaii at Hilo,USA,HI,Hilo,200,West Kawili St,96720,hilo.hawaii.edu,Public,English,1970
+HAWAII_WEST_OAHU,University of Hawaii West Oahu,USA,HI,Kapolei,91-1001,Farrington Hwy,96707,westoahu.hawaii.edu,Public,English,1976
+BRIGHAM_YOUNG_HAWAII,Brigham Young University-Hawaii,USA,HI,Laie,55-220,Kulanui St,96762,byuh.edu,Private,English,1955
+CHAMINADE,Chaminade University of Honolulu,USA,HI,Honolulu,3140,Waialae Ave,96816,chaminade.edu,Private,English,1955
+HAWAII_PACIFIC,Hawaii Pacific University,USA,HI,Honolulu,1164,Bishop St,96813,hpu.edu,Private,English,1965
+HONOLULU_COMMUNITY,Honolulu Community College,USA,HI,Honolulu,874,Dillingham Blvd,96817,honolulu.hawaii.edu,Public,English,1920
+KAPIOLANI_COMMUNITY,Kapiolani Community College,USA,HI,Honolulu,4303,Diamond Head Rd,96816,kcc.hawaii.edu,Public,English,1946
+KAUAI_COMMUNITY,Kauai Community College,USA,HI,Lihue,3-1901,Kaumualii Hwy,96766,kauai.hawaii.edu,Public,English,1965
+LEEWARD_COMMUNITY,Leeward Community College,USA,HI,Pearl City,96-045,Ala Ike,96782,leeward.hawaii.edu,Public,English,1968
+MAUI_COLLEGE,University of Hawaii Maui College,USA,HI,Kahului,310,Kaahumanu Ave,96732,maui.hawaii.edu,Public,English,1967
+WINDWARD_COMMUNITY,Windward Community College,USA,HI,Kaneohe,45-720,Keaahala Rd,96744,windward.hawaii.edu,Public,English,1972
+HAWAII_TOKAI,Hawaii Tokai International College,USA,HI,Kapolei,91-971,Farrington Hwy,96707,hawaii-tokai.edu,Private,English,1992
+REMINGTON_COLLEGE_HAWAII,Remington College,USA,HI,Honolulu,1111,Bishop St,96813,remingtoncollege.edu,Private,English,1985

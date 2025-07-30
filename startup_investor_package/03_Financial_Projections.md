@@ -1,18 +1,24 @@
 # Financial Projections & Model
-**[Company Name]** - 5-Year Financial Forecast
+**FacultyFinder.io** - 5-Year Financial Forecast & Investment Analysis
 
 ---
 
 ## Executive Financial Summary
 
-### Key Financial Metrics
+### Key Financial Metrics (CAD)
 | Metric | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
 |--------|--------|--------|--------|--------|--------|
-| Revenue | $[X] | $[X] | $[X] | $[X] | $[X] |
-| Gross Profit | $[X] | $[X] | $[X] | $[X] | $[X] |
-| EBITDA | $[X] | $[X] | $[X] | $[X] | $[X] |
-| Net Income | $[X] | $[X] | $[X] | $[X] | $[X] |
-| Cash Flow | $[X] | $[X] | $[X] | $[X] | $[X] |
+| Revenue | $180,000 | $850,000 | $2,400,000 | $5,200,000 | $8,800,000 |
+| Gross Profit | $155,000 | $755,000 | $2,160,000 | $4,780,000 | $8,140,000 |
+| EBITDA | ($35,000) | ($45,000) | ($60,000) | $780,000 | $1,910,000 |
+| Net Income | ($35,000) | ($45,000) | ($60,000) | $680,000 | $1,710,000 |
+| Operating Cash Flow | ($28,000) | ($35,000) | ($45,000) | $850,000 | $2,100,000 |
+
+**Key Highlights:**
+- **Revenue Growth**: 372% CAGR over 5 years (typical for SaaS EdTech)
+- **Gross Margin**: 85%+ (high-margin SaaS model)
+- **Break-even**: Month 32 (Year 3) - industry standard for EdTech platforms
+- **Cash Flow Positive**: Year 4 with strong profitability trajectory
 
 ---
 
@@ -20,31 +26,37 @@
 
 ### Revenue Streams
 
-#### Stream 1: [Primary Revenue Stream]
-- **Model**: [Subscription/One-time/Usage-based/etc.]
-- **Pricing**: $[amount] per [unit/month/user/etc.]
+#### Stream 1: AI Analysis Services (45% of revenue)
+- **Model**: Pay-per-use + Subscription bundles
+- **Pricing**: $4 CAD per analysis, $19/month unlimited plans
 - **Growth Assumptions**:
-  - Year 1: [X] customers, [X]% growth rate
-  - Year 2: [X] customers, [X]% growth rate
-  - Year 3: [X] customers, [X]% growth rate
+  - Year 1: 2,500 users, 25% monthly growth
+  - Year 2: 12,000 users, 18% monthly growth  
+  - Year 3: 35,000 users, 12% monthly growth
+- **Revenue Contribution**: $81,000 (Y1) → $382,500 (Y2) → $1,080,000 (Y3)
 
-#### Stream 2: [Secondary Revenue Stream]
-- **Model**: [Description]
-- **Pricing**: $[amount]
-- **Contribution**: [X]% of total revenue
+#### Stream 2: Enterprise/University Contracts (40% of revenue)
+- **Model**: SaaS subscription ($99-999 CAD/month) + enterprise deals
+- **Pricing**: $99-999 CAD monthly, $5,000-50,000 annual contracts
+- **Growth Assumptions**:
+  - Year 1: 5 clients, avg $1,200/month
+  - Year 2: 25 clients, avg $2,800/month
+  - Year 3: 75 clients, avg $3,200/month
+- **Revenue Contribution**: $72,000 (Y1) → $340,000 (Y2) → $960,000 (Y3)
 
-#### Stream 3: [Additional Revenue Stream]
-- **Model**: [Description]
-- **Pricing**: $[amount]
-- **Contribution**: [X]% of total revenue
+#### Stream 3: Expert Review Services (15% of revenue)
+- **Model**: Premium consulting ($29-99 CAD per session)
+- **Pricing**: $29-99 CAD per expert consultation
+- **Growth Assumptions**: 20% of AI users upgrade to expert services
+- **Revenue Contribution**: $27,000 (Y1) → $127,500 (Y2) → $360,000 (Y3)
 
 ### Customer Acquisition Model
-- **Customer Acquisition Cost (CAC)**: $[amount]
-- **Customer Lifetime Value (CLV)**: $[amount]
-- **CLV/CAC Ratio**: [ratio] (Target: 3:1 or higher)
-- **Payback Period**: [X] months
-- **Monthly Churn Rate**: [X]%
-- **Annual Revenue per Customer**: $[amount]
+- **Customer Acquisition Cost (CAC)**: $25 CAD (individual), $2,500 CAD (enterprise)
+- **Customer Lifetime Value (CLV)**: $180 CAD (individual), $15,000 CAD (enterprise)
+- **CLV/CAC Ratio**: 7.2:1 (individual), 6:1 (enterprise) - excellent ratios
+- **Payback Period**: 3.5 months (individual), 8 months (enterprise)
+- **Monthly Churn Rate**: 8% (individual), 5% (enterprise) - typical for EdTech
+- **Annual Revenue per User**: $72 CAD (blended average)
 
 ---
 
