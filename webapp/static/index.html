@@ -612,20 +612,81 @@
                                 <div class="university-card facultyfinder-card p-4 h-100">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
                                         <h5 class="mb-1">
-                                            <a href="/university/${university.university_code || university.name}" class="text-decoration-none university-link">
+                                            <a href="/university/${university.university_code || university.name}" class="text-decoration-none text-primary fw-bold">
                                                 ${university.name || 'Unknown University'}
                                             </a>
                                         </h5>
-                                        <span class="badge bg-success">${university.faculty_count || 0} faculty</span>
+                                        ${university.established ? 
+                                            `<span class="badge bg-secondary">Est. ${university.established}</span>` : 
+                                            ''
+                                        }
                                     </div>
-                                    <p class="text-muted mb-3">
-                                        <i class="fas fa-map-marker-alt me-2"></i>
-                                        ${university.city || 'Unknown'}, ${university.country || 'Unknown'}
-                                    </p>
-                                    <div class="university-actions">
-                                        <a href="/faculties?university=${encodeURIComponent(university.name || '')}" class="btn btn-outline-primary btn-sm">
-                                            <i class="fas fa-users me-1"></i>View Faculty
-                                        </a>
+                                    
+                                    <div class="mb-3">
+                                        <div class="text-muted mb-2">
+                                            <i class="fas fa-map-marker-alt me-2"></i>
+                                            <strong>${university.city || 'Unknown'}</strong>
+                                            ${university.province_state ? `, ${university.province_state}` : ''}
+                                            <br>
+                                            <i class="fas fa-globe me-2"></i>
+                                            <strong>${university.country || 'Unknown'}</strong>
+                                            ${(university.building_number && university.street) || university.full_address ? `
+                                                <a href="https://www.google.com/maps/search/${encodeURIComponent(university.full_address || university.name + ' ' + university.city)}" 
+                                                   target="_blank" class="btn btn-sm btn-outline-primary ms-2 google-maps-btn"
+                                                   title="View on Google Maps">
+                                                    <i class="fas fa-map-marked-alt me-1"></i>Maps
+                                                </a>
+                                            ` : ''}
+                                        </div>
+                                        ${(university.building_number && university.street) ? `
+                                        <div class="text-muted mb-2 address-details">
+                                            <i class="fas fa-home me-2"></i>
+                                            <small>
+                                                <strong>${university.building_number} ${university.street}</strong>
+                                                ${university.postal_code ? `, ${university.postal_code}` : ''}
+                                            </small>
+                                        </div>
+                                        ` : ''}
+                                        
+                                        ${university.type ? `
+                                        <div class="text-muted mb-2">
+                                            <i class="fas fa-building me-2"></i>
+                                            <strong>${university.type}</strong>
+                                        </div>
+                                        ` : ''}
+                                        
+                                        ${university.website ? `
+                                        <div class="text-muted mb-2">
+                                            <i class="fas fa-link me-2"></i>
+                                            <a href="${university.website}" target="_blank" class="text-decoration-none">
+                                                <strong>Official Website</strong>
+                                                <i class="fas fa-external-link-alt ms-1"></i>
+                                            </a>
+                                        </div>
+                                        ` : ''}
+                                    </div>
+                                    
+                                    <div class="mt-auto">
+                                        <div class="row text-center">
+                                            <div class="col-6">
+                                                <div class="stat-item">
+                                                    <div class="stat-number text-primary fw-bold">${university.faculty_count || 0}</div>
+                                                    <div class="stat-label">Faculty</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="stat-item">
+                                                    <div class="stat-number text-success fw-bold">${university.department_count || 0}</div>
+                                                    <div class="stat-label">Departments</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <a href="/faculties?university=${encodeURIComponent(university.name || '')}" class="btn btn-outline-primary btn-sm w-100">
+                                                <i class="fas fa-users me-1"></i>View Faculty
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -660,7 +721,19 @@
                 container.innerHTML = '';
                 
                 if (data.faculties && data.faculties.length > 0) {
-                    data.faculties.forEach(faculty => {
+                    data.faculties.forEach((faculty, index) => {
+                        // Process research areas
+                        const researchAreas = [];
+                        if (faculty.research_interests) {
+                            const areas = faculty.research_interests.split(/[,;]/)
+                                .map(area => area.trim())
+                                .filter(area => area.length > 0 && area.length < 50);
+                            researchAreas.push(...areas.slice(0, 5));
+                        }
+                        
+                        // Generate professor ID
+                        const professorId = faculty.id || `prof-${index}`;
+                        
                         const facultyCard = `
                             <div class="col-lg-6 col-xl-4 mb-4">
                                 <div class="faculty-card h-100">
@@ -669,13 +742,16 @@
                                             <!-- Professor Name and Title -->
                                             <div class="faculty-header mb-3">
                                                 <h5 class="card-title mb-1">
-                                                    <a href="/professor/${faculty.id}" class="text-decoration-none professor-link">
+                                                    <a href="/professor/${professorId}" class="text-decoration-none professor-link">
                                                         ${faculty.name || 'Unknown Faculty'}
                                                     </a>
                                                 </h5>
                                                 <p class="text-muted small mb-0">
                                                     <i class="fas fa-graduation-cap me-1"></i>
-                                                    ${faculty.position || 'Faculty Member'}${faculty.adjunct ? ' (Part-time)' : (!faculty.full_time ? ' (Part-time)' : '')}
+                                                    <a href="/faculties?position=${encodeURIComponent(faculty.position || '')}" 
+                                                       class="text-decoration-none text-muted hover-primary position-link">
+                                                        ${faculty.position || 'Faculty Member'}${faculty.adjunct ? ' (Part-time)' : (!faculty.full_time ? ' (Part-time)' : '')}
+                                                    </a>
                                                 </p>
                                             </div>
                                             
@@ -683,17 +759,40 @@
                                             <div class="faculty-affiliation mb-2">
                                                 <p class="text-muted small mb-1">
                                                     <i class="fas fa-university me-1"></i>
-                                                    ${faculty.university_name || 'Unknown University'}
+                                                    <a href="/faculties?university=${encodeURIComponent(faculty.university_code || faculty.university_name)}" 
+                                                       class="text-decoration-none text-muted hover-primary university-link">
+                                                        ${faculty.university_name || 'Unknown University'}
+                                                    </a>
                                                 </p>
                                                 
                                                 <!-- Department -->
                                                 ${faculty.department ? `
                                                 <p class="text-muted small mb-0">
                                                     <i class="fas fa-building me-1"></i>
-                                                    ${faculty.department}
+                                                    <a href="/faculties?department=${encodeURIComponent(faculty.department)}" 
+                                                       class="text-decoration-none text-muted hover-primary department-link" 
+                                                       title="${faculty.department}">
+                                                        ${faculty.department}
+                                                    </a>
                                                 </p>
                                                 ` : ''}
                                             </div>
+                                            
+                                            <!-- Research Areas -->
+                                            ${researchAreas.length > 0 ? `
+                                            <div class="research-areas mt-2">
+                                                ${researchAreas.slice(0, 3).map(area => 
+                                                    `<span class="badge bg-light text-dark border me-1 mb-1 small-research-badge">
+                                                        ${area}
+                                                    </span>`
+                                                ).join('')}
+                                                ${researchAreas.length > 3 ? 
+                                                    `<span class="badge bg-secondary text-white me-1 mb-1 small-research-badge">
+                                                        +${researchAreas.length - 3} more
+                                                    </span>` : ''
+                                                }
+                                            </div>
+                                            ` : ''}
                                         </div>
                                     </div>
                                     
