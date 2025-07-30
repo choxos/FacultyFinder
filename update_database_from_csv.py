@@ -175,7 +175,7 @@ def incremental_update_universities(csv_file='data/university_codes.csv'):
     finally:
         conn.close()
 
-def incremental_update_faculty(csv_file='data/mcmaster_hei_faculty.csv'):
+def incremental_update_faculty(csv_file='data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv'):
     """Perform incremental update of faculty data"""
     logger.info("🔄 Starting incremental faculty update...")
     
@@ -377,7 +377,7 @@ def main():
     parser = argparse.ArgumentParser(description='Update FacultyFinder database from CSV files')
     parser.add_argument('--mode', choices=['incremental', 'full', 'status', 'universities'], default='incremental',
                        help='Update mode: incremental (default), full rebuild, status check, or universities')
-    parser.add_argument('--csv', default='data/mcmaster_hei_faculty.csv',
+    parser.add_argument('--csv', default='data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv',
                        help='Path to CSV file (faculty or university)')
     parser.add_argument('--restart', action='store_true',
                        help='Restart the service after update')

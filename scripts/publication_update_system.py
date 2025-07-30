@@ -677,7 +677,7 @@ if __name__ == "__main__":
     
     # Paths
     DATABASE_PATH = "database/facultyfinder_dev.db"
-    FACULTY_CSV = "data/mcmaster_hei_faculty.csv"
+    FACULTY_CSV = "data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv"
     SCIMAGO_CSV = "data/scimago_journals_comprehensive.csv"
     
     # Initialize system

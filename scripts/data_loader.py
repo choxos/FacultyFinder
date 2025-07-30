@@ -102,7 +102,7 @@ class DataLoader:
             logger.error(f"Failed to load universities: {e}")
             return False
 
-    def load_faculty(self, csv_path='../data/mcmaster_hei_faculty.csv'):
+    def load_faculty(self, csv_path='../data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv'):
         """Load faculty data from CSV"""
         try:
             df = pd.read_csv(csv_path)

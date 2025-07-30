@@ -46,7 +46,7 @@ def add_faculty_id_to_csv():
     """Add faculty_id column to CSV if it doesn't exist"""
     logger.info("📝 Checking/adding faculty_id column to CSV...")
     
-    csv_file = 'data/mcmaster_hei_faculty.csv'
+    csv_file = 'data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv'
     if not os.path.exists(csv_file):
         logger.error(f"❌ CSV file not found: {csv_file}")
         return False
@@ -280,7 +280,7 @@ def import_faculty_with_ids(conn):
     
     logger.info("👨‍🏫 Importing faculty with faculty_id...")
     
-    faculty_file = 'data/mcmaster_hei_faculty.csv'
+    faculty_file = 'data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv'
     if not os.path.exists(faculty_file):
         logger.error(f"❌ Faculty file not found: {faculty_file}")
         return False

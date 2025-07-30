@@ -39,7 +39,7 @@ def add_faculty_id_to_csv():
     """Add faculty_id column to the CSV file"""
     logger.info("📝 Adding faculty_id column to CSV file...")
     
-    csv_file = 'data/mcmaster_hei_faculty.csv'
+    csv_file = 'data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv'
     if not os.path.exists(csv_file):
         logger.error(f"❌ CSV file not found: {csv_file}")
         return False
@@ -213,7 +213,7 @@ def import_data_with_faculty_id(conn):
     
     # Import professors with faculty_id
     logger.info("👨‍🏫 Importing professors with faculty_id...")
-    faculty_file = 'data/mcmaster_hei_faculty.csv'
+    faculty_file = 'data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv'
     if os.path.exists(faculty_file):
         df_prof = pd.read_csv(faculty_file)
         

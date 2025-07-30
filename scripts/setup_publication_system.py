@@ -74,7 +74,7 @@ def setup_database(db_path):
 def check_data_files():
     """Check if required data files exist"""
     required_files = [
-        "data/mcmaster_hei_faculty.csv",
+        "data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv",
         "data/scimago_journals_comprehensive.csv"
     ]
     
@@ -102,7 +102,7 @@ PUBMED_API_KEY = None  # Optional but recommended - get from NCBI
 DATABASE_PATH = "database/facultyfinder_dev.db"
 
 # Data File Paths
-FACULTY_CSV_PATH = "data/mcmaster_hei_faculty.csv"
+FACULTY_CSV_PATH = "data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv"
 SCIMAGO_CSV_PATH = "data/scimago_journals_comprehensive.csv"
 
 # Update Schedule Configuration
