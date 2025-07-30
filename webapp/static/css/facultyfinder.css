@@ -1952,7 +1952,7 @@
     text-align: center; /* Center align all content */
 }
 
-/* Hover Effects - Raised appearance */
+/* Hover Effects - Enhanced raised appearance matching commit ac7c9ad */
 .university-card:hover,
 .country-card:hover,
 .faculty-card:hover,
@@ -1960,8 +1960,9 @@
 .card.country-card:hover,
 .card.faculty-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    border-color: var(--ff-primary-color);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.08);
+    border-color: rgba(102, 126, 234, 0.4) !important;
+    background: #fafbfc;
 }
 
 /* Color-coded accent bars */

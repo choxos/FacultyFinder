@@ -167,6 +167,23 @@
                                                    class="text-decoration-none text-muted hover-primary university-link">
                                                     {{ prof.university_name }}
                                                 </a>
+                                                {% if prof.address %}
+                                                    {% set maps_query = prof.university_name + ", " + prof.address %}
+                                                    <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
+                                                       target="_blank" 
+                                                       class="text-decoration-none ms-2 maps-link"
+                                                       title="View {{ prof.university_name }} on Google Maps">
+                                                        <i class="fas fa-map-marker-alt text-primary"></i>
+                                                    </a>
+                                                {% elif prof.city and prof.province_state %}
+                                                    {% set maps_query = prof.university_name + ", " + prof.city + ", " + prof.province_state + ", " + prof.country %}
+                                                    <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
+                                                       target="_blank" 
+                                                       class="text-decoration-none ms-2 maps-link"
+                                                       title="View {{ prof.university_name }} on Google Maps">
+                                                        <i class="fas fa-map-marker-alt text-primary"></i>
+                                                    </a>
+                                                {% endif %}
                                             </p>
                                             
                                             <!-- Department -->
