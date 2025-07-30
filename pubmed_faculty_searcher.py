@@ -1,32 +1,36 @@
 #!/usr/bin/env python3
 """
-PubMed Faculty Searcher
-Reads faculty CSV files and runs EDirect searches dynamically
-Searches both all publications and current affiliation publications
+PubMed Faculty Searcher - JSON-based with PMID Tracking
+Reads faculty CSV files and runs EDirect searches in JSON format
+Creates individual PMID JSON files and faculty tracking CSVs
 """
 
 import os
 import csv
+import json
 import subprocess
 import sys
 import time
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Set
 import argparse
 
 class PubMedFacultySearcher:
-    """Dynamic PubMed searcher based on faculty CSV data"""
+    """JSON-based PubMed searcher with PMID tracking"""
     
-    def __init__(self, base_path: str = "data/publications/pubmed"):
-        self.base_path = base_path
+    def __init__(self, base_publications_path: str = "data/publications/pubmed", 
+                 base_faculties_path: str = "data/faculties"):
+        self.base_publications_path = base_publications_path
+        self.base_faculties_path = base_faculties_path
         self.faculty_data = []
         self.search_stats = {
             'total_faculty': 0,
-            'successful_all_searches': 0,
-            'successful_affiliation_searches': 0,
+            'successful_faculty': 0,
             'failed_searches': 0,
             'total_all_publications': 0,
-            'total_affiliation_publications': 0
+            'total_current_affiliation_publications': 0,
+            'successful_all_searches': 0,
+            'successful_current_searches': 0
         }
     
     def load_faculty_csv(self, csv_path: str) -> List[Dict]:
@@ -41,33 +45,34 @@ class PubMedFacultySearcher:
         faculty_list = []
         
         try:
-            with open(csv_path, 'r', encoding='utf-8') as f:
+            with open(csv_path, 'r', encoding='utf-8-sig') as f:  # utf-8-sig handles BOM
                 reader = csv.DictReader(f)
                 
-                for row in reader:
-                    # Extract key information
+                for row_num, row in enumerate(reader, start=2):
+                    # Extract key information with better handling of empty values
                     faculty_info = {
-                        'faculty_id': row.get('faculty_id', ''),
-                        'name': row.get('name', ''),
-                        'first_name': row.get('first_name', ''),
-                        'last_name': row.get('last_name', ''),
-                        'university_code': row.get('university_code', ''),
-                        'university': row.get('university', ''),
-                        'faculty': row.get('faculty', ''),
-                        'department': row.get('department', ''),
-                        'position': row.get('position', ''),
-                        'full_time': row.get('full_time', ''),
-                        'adjunct': row.get('adjunct', ''),
-                        'uni_email': row.get('uni_email', ''),
-                        'research_areas': row.get('research_areas', ''),
-                        'gscholar': row.get('gscholar', ''),
-                        'orcid': row.get('orcid', ''),
-                        'scopus': row.get('scopus', '')
+                        'faculty_id': row.get('faculty_id', '').strip(),
+                        'name': row.get('name', '').strip(),
+                        'first_name': row.get('first_name', '').strip(),
+                        'last_name': row.get('last_name', '').strip(),
+                        'university_code': row.get('university_code', '').strip(),
+                        'university': row.get('university', '').strip(),
+                        'university_name': row.get('university', '').strip(),  # Alias for compatibility
+                        'faculty': row.get('faculty', '').strip(),
+                        'department': row.get('department', '').strip(),
+                        'position': row.get('position', '').strip(),
+                        'uni_email': row.get('uni_email', '').strip(),
+                        'other_email': row.get('other_email', '').strip()
                     }
                     
-                    # Only add if we have a valid name
-                    if faculty_info['name'].strip():
+                    # Only include faculty with basic required information
+                    if (faculty_info['faculty_id'] and 
+                        faculty_info['name'] and 
+                        faculty_info['university_code']):
                         faculty_list.append(faculty_info)
+                    else:
+                        print(f"⚠️  Skipping row {row_num}: Missing required fields")
+                        continue
             
             print(f"✅ Loaded {len(faculty_list)} faculty members")
             
@@ -75,7 +80,7 @@ class PubMedFacultySearcher:
             if faculty_list:
                 print(f"📋 Sample faculty:")
                 for i, faculty in enumerate(faculty_list[:5]):
-                    print(f"   {i+1}. {faculty['name']} - {faculty['department']}")
+                    print(f"   {i+1}. {faculty['faculty_id']} - {faculty['name']} - {faculty['department']}")
                 if len(faculty_list) > 5:
                     print(f"   ... and {len(faculty_list) - 5} more")
             
@@ -85,63 +90,53 @@ class PubMedFacultySearcher:
             print(f"❌ Error loading CSV: {str(e)}")
             return []
     
-    def extract_university_path_info(self, university_code: str) -> Dict:
+    def extract_path_info(self, faculty: Dict) -> Dict:
         """Extract country, province, and university info from university code"""
         
         # Default structure for McMaster
         path_info = {
             'country': 'CA',
             'province': 'ON', 
-            'university_code': university_code
+            'university_code': faculty['university_code']
         }
         
         # Parse university code (e.g., CA-ON-002)
-        if '-' in university_code:
-            parts = university_code.split('-')
+        if '-' in faculty['university_code']:
+            parts = faculty['university_code'].split('-')
             if len(parts) >= 3:
                 path_info['country'] = parts[0]
                 path_info['province'] = parts[1]
         
         return path_info
     
-    def get_faculty_output_path(self, faculty: Dict) -> str:
-        """Get the full output path for a faculty member's publications"""
+    def get_faculty_csv_path(self, faculty: Dict) -> str:
+        """Get the CSV file path for faculty publication tracking"""
         
-        path_info = self.extract_university_path_info(faculty['university_code'])
+        path_info = self.extract_path_info(faculty)
         university_folder = f"{faculty['university_code']}_{faculty['university'].lower().replace(' ', '').replace('university', 'ca')}"
         
         # Handle McMaster specifically
         if 'mcmaster' in faculty['university'].lower():
             university_folder = f"{faculty['university_code']}_mcmaster.ca"
         
-        return os.path.join(
-            self.base_path,
+        publications_dir = os.path.join(
+            self.base_faculties_path,
             path_info['country'],
             path_info['province'],
-            university_folder
+            university_folder,
+            'publications'
         )
-    
-    def get_faculty_filenames(self, faculty: Dict) -> Dict[str, str]:
-        """Generate filenames for faculty publications (all and affiliation-specific)"""
         
-        # Clean name for filename
-        clean_name = faculty['name'].replace(' ', '_').replace(',', '').replace('.', '')
-        # Remove any problematic characters
-        clean_name = ''.join(c for c in clean_name if c.isalnum() or c in ['_', '-'])
-        
-        return {
-            'all': f"{clean_name}_all_publications.txt",
-            'affiliation': f"{clean_name}_current_affiliation.txt"
-        }
+        return os.path.join(publications_dir, f"{faculty['faculty_id']}.csv")
     
     def get_search_queries(self, faculty: Dict) -> Dict[str, List[str]]:
         """Generate search queries for all publications and current affiliation"""
         
-        # All publications queries (no quotations as requested)
+        # All publications queries (no quotations)
         all_queries = [
             f"{faculty['name']}[Author]",
-            f"{faculty['last_name']} {faculty['first_name'][:1]}[Author]",  # "Guyatt G[Author]"
-            f"{faculty['first_name']} {faculty['last_name']}[Author]"  # "Gordon Guyatt[Author]"
+            f"{faculty['last_name']} {faculty['first_name'][:1]}[Author]",
+            f"{faculty['first_name']} {faculty['last_name']}[Author]"
         ]
         
         # Current affiliation queries
@@ -157,291 +152,291 @@ class PubMedFacultySearcher:
             'affiliation': affiliation_queries
         }
     
-    def run_search_queries(self, queries: List[str], output_file: str, search_type: str) -> int:
-        """Run a set of queries and return the best result count"""
-        
-        best_result = None
-        best_count = 0
-        
-        for i, query in enumerate(queries):
-            temp_file = f"{output_file}.tmp{i}"
-            
-            try:
-                # Run esearch | efetch (no quotes around the entire query)
-                cmd = f"esearch -db pubmed -query '{query}' | efetch -format medline > \"{temp_file}\""
-                result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=60)
-                
-                if result.returncode == 0 and os.path.exists(temp_file):
-                    # Count publications
-                    with open(temp_file, 'r') as f:
-                        content = f.read()
-                        pub_count = content.count('PMID-')
-                    
-                    print(f"      {search_type} Query {i+1}: {query} → {pub_count} publications")
-                    
-                    if pub_count > best_count:
-                        best_count = pub_count
-                        best_result = temp_file
-                
-            except subprocess.TimeoutExpired:
-                print(f"      {search_type} Query {i+1}: Timeout")
-            except Exception as e:
-                print(f"      {search_type} Query {i+1}: Error - {str(e)}")
-            
-            # Small delay between queries
-            time.sleep(1)
-        
-        # Use the best result
-        if best_result and best_count > 0:
-            # Move best result to final location
-            os.rename(best_result, output_file)
-            
-            # Clean up other temp files
-            for i in range(len(queries)):
-                temp_file = f"{output_file}.tmp{i}"
-                if os.path.exists(temp_file) and temp_file != best_result:
-                    os.remove(temp_file)
-            
-            return best_count
-        
-        else:
-            # Clean up temp files
-            for i in range(len(queries)):
-                temp_file = f"{output_file}.tmp{i}"
-                if os.path.exists(temp_file):
-                    os.remove(temp_file)
-            
-            return 0
-    
-    def run_edirect_search(self, faculty: Dict, delay: float = 2.0) -> Dict[str, int]:
-        """Run EDirect search for a single faculty member (both all and affiliation)"""
+    def run_edirect_json_search(self, query: str, search_type: str) -> Optional[Dict]:
+        """Run a single EDirect search and return JSON result"""
         
         try:
-            # Get output path and filenames
-            output_dir = self.get_faculty_output_path(faculty)
-            filenames = self.get_faculty_filenames(faculty)
-            queries = self.get_search_queries(faculty)
+            # Run esearch | efetch with correct JSON format for PubMed
+            cmd = f"esearch -db pubmed -query '{query}' | efetch -format docsum -mode json"
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=120)
             
-            # Create directory if it doesn't exist
-            os.makedirs(output_dir, exist_ok=True)
-            
-            print(f"🔍 Searching for {faculty['name']}...")
-            print(f"   🏫 {faculty['university']} - {faculty['department']}")
-            print(f"   📁 Output dir: {output_dir}")
-            
-            results = {'all': 0, 'affiliation': 0}
-            
-            # Search all publications
-            print(f"   📚 Searching all publications...")
-            all_output_file = os.path.join(output_dir, filenames['all'])
-            all_count = self.run_search_queries(queries['all'], all_output_file, "All")
-            results['all'] = all_count
-            
-            if all_count > 0:
-                print(f"   ✅ All publications: {all_count}")
-                self.search_stats['successful_all_searches'] += 1
-                self.search_stats['total_all_publications'] += all_count
+            if result.returncode == 0 and result.stdout.strip():
+                try:
+                    # Parse JSON response
+                    json_data = json.loads(result.stdout)
+                    return json_data
+                except json.JSONDecodeError as e:
+                    print(f"      ❌ JSON parsing error for {search_type}: {str(e)}")
+                    return None
             else:
-                print(f"   ❌ No publications found (all)")
-            
-            # Search current affiliation publications
-            print(f"   🏛️  Searching current affiliation publications...")
-            affiliation_output_file = os.path.join(output_dir, filenames['affiliation'])
-            affiliation_count = self.run_search_queries(queries['affiliation'], affiliation_output_file, "Affiliation")
-            results['affiliation'] = affiliation_count
-            
-            if affiliation_count > 0:
-                print(f"   ✅ Current affiliation: {affiliation_count}")
-                self.search_stats['successful_affiliation_searches'] += 1
-                self.search_stats['total_affiliation_publications'] += affiliation_count
-            else:
-                print(f"   ❌ No publications found (current affiliation)")
-            
-            # Summary for this faculty
-            if all_count > 0 or affiliation_count > 0:
-                print(f"   📊 Summary: {all_count} total, {affiliation_count} at {faculty['university']}")
+                print(f"      ❌ EDirect command failed for {search_type}")
+                return None
                 
-                # Add delay between faculty searches
-                if delay > 0:
-                    time.sleep(delay)
+        except subprocess.TimeoutExpired:
+            print(f"      ❌ Timeout for {search_type}")
+            return None
+        except Exception as e:
+            print(f"      ❌ Error in {search_type}: {str(e)}")
+            return None
+    
+    def parse_and_save_publications(self, json_data: Dict, search_type: str) -> Set[str]:
+        """Parse JSON response and save individual publication files"""
+        
+        pmids = set()
+        
+        try:
+            # EDirect JSON structure: {"result": {"uids": [...], "pmid1": {...}, "pmid2": {...}}}
+            result = json_data.get('result', {})
+            uids = result.get('uids', [])
+            
+            print(f"      📚 Found {len(uids)} publications for {search_type}")
+            
+            # Create directory for PMID files
+            os.makedirs(self.base_publications_path, exist_ok=True)
+            
+            for pmid in uids:
+                # Get publication data for this PMID
+                pub_data = result.get(pmid, {})
                 
-                return results
-            else:
-                print(f"   ❌ No publications found with any search strategy")
-                self.search_stats['failed_searches'] += 1
-                return results
+                if pub_data:
+                    # Save individual PMID JSON file
+                    pmid_file = os.path.join(self.base_publications_path, f"{pmid}.json")
+                    
+                    # Add search metadata to the publication
+                    pub_data['search_metadata'] = {
+                        'search_type': search_type,
+                        'retrieved_date': datetime.now().isoformat(),
+                        'pmid': pmid
+                    }
+                    
+                    with open(pmid_file, 'w', encoding='utf-8') as f:
+                        json.dump(pub_data, f, indent=2)
+                    
+                    pmids.add(pmid)
+                    print(f"        ✅ Saved {pmid}.json")
+                else:
+                    print(f"        ⚠️  No data found for PMID {pmid}")
+            
+            return pmids
             
         except Exception as e:
-            print(f"   ❌ Search failed: {str(e)}")
-            self.search_stats['failed_searches'] += 1
-            return {'all': 0, 'affiliation': 0}
-    
-    def search_faculty_batch(self, faculty_list: List[Dict], 
-                           start_index: int = 0, 
-                           max_faculty: Optional[int] = None,
-                           delay: float = 2.0) -> Dict:
-        """Run searches for a batch of faculty members"""
+            print(f"      ❌ Error parsing publications: {str(e)}")
+            return set()
+
+    def save_faculty_tracking_csv(self, faculty: Dict, all_pmids: Set[str], 
+                                 current_affiliation_pmids: Set[str]) -> None:
+        """Save faculty tracking CSV with PMID and current_affiliation columns"""
         
-        if max_faculty:
-            end_index = min(start_index + max_faculty, len(faculty_list))
-            batch = faculty_list[start_index:end_index]
-        else:
-            batch = faculty_list[start_index:]
-        
-        print(f"🚀 Starting batch search for {len(batch)} faculty members...")
-        print(f"📊 Range: {start_index + 1} to {start_index + len(batch)} of {len(faculty_list)}")
-        print(f"📋 Search types: All publications + Current affiliation")
-        print("=" * 70)
-        
-        self.search_stats['total_faculty'] = len(batch)
-        start_time = datetime.now()
-        
-        for i, faculty in enumerate(batch):
-            print(f"\n[{i+1}/{len(batch)}] Processing {faculty['name']}")
+        try:
+            # Extract university info for folder structure
+            university_code = faculty.get('university_code', 'unknown')
+            country = university_code[:2] if len(university_code) >= 2 else 'unknown'
+            province = university_code[3:5] if len(university_code) >= 5 else 'unknown'
             
-            results = self.run_edirect_search(faculty, delay)
+            # Create faculty CSV directory
+            csv_dir = os.path.join(self.base_faculties_path, country, province, university_code, 'publications')
+            os.makedirs(csv_dir, exist_ok=True)
             
-            # Show progress
-            if (i + 1) % 10 == 0:
-                elapsed = datetime.now() - start_time
-                avg_time = elapsed.total_seconds() / (i + 1)
-                remaining = avg_time * (len(batch) - i - 1)
+            # Create CSV file
+            faculty_id = faculty.get('faculty_id', 'unknown')
+            csv_file = os.path.join(csv_dir, f"{faculty_id}.csv")
+            
+            with open(csv_file, 'w', newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
+                writer.writerow(['pmid', 'current_affiliation'])
                 
-                successful_faculty = self.search_stats['successful_all_searches']
-                
-                print(f"\n📈 Progress: {i+1}/{len(batch)} completed")
-                print(f"   ⏱️  Average time per faculty: {avg_time:.1f}s")
-                print(f"   🕐 Estimated remaining: {remaining/60:.1f} minutes")
-                print(f"   ✅ Success rate: {successful_faculty}/{i+1} ({100*successful_faculty/(i+1):.1f}%)")
-                print(f"   📚 Publications found: {self.search_stats['total_all_publications']} total, {self.search_stats['total_affiliation_publications']} current affiliation")
-        
-        # Final statistics
-        end_time = datetime.now()
-        total_time = end_time - start_time
-        
-        print(f"\n🎉 Batch search completed!")
-        print("=" * 70)
-        print(f"📊 Final Statistics:")
-        print(f"   👨‍🔬 Total faculty processed: {self.search_stats['total_faculty']}")
-        print(f"   ✅ Successful all searches: {self.search_stats['successful_all_searches']}")
-        print(f"   ✅ Successful affiliation searches: {self.search_stats['successful_affiliation_searches']}")
-        print(f"   ❌ Failed searches: {self.search_stats['failed_searches']}")
-        print(f"   📚 Total publications (all): {self.search_stats['total_all_publications']}")
-        print(f"   🏛️  Total publications (current affiliation): {self.search_stats['total_affiliation_publications']}")
-        print(f"   ⏱️  Total time: {total_time}")
-        print(f"   📈 Success rate: {100*self.search_stats['successful_all_searches']/self.search_stats['total_faculty']:.1f}%")
-        
-        if self.search_stats['successful_all_searches'] > 0:
-            avg_all_pubs = self.search_stats['total_all_publications'] / self.search_stats['successful_all_searches']
-            print(f"   📊 Average publications per faculty (all): {avg_all_pubs:.1f}")
-        
-        if self.search_stats['successful_affiliation_searches'] > 0:
-            avg_aff_pubs = self.search_stats['total_affiliation_publications'] / self.search_stats['successful_affiliation_searches']
-            print(f"   📊 Average publications per faculty (current affiliation): {avg_aff_pubs:.1f}")
-        
-        return self.search_stats
-    
-    def show_directory_structure(self, faculty_list: List[Dict]):
-        """Show what the directory structure will look like"""
-        
-        print(f"\n📁 Directory Structure Preview:")
-        print("=" * 60)
-        
-        # Group by university
-        universities = {}
-        for faculty in faculty_list:
-            uni_code = faculty['university_code']
-            if uni_code not in universities:
-                universities[uni_code] = {
-                    'info': faculty,
-                    'faculty_count': 0
-                }
-            universities[uni_code]['faculty_count'] += 1
-        
-        for uni_code, uni_data in universities.items():
-            path_info = self.extract_university_path_info(uni_code)
-            output_path = self.get_faculty_output_path(uni_data['info'])
+                for pmid in sorted(all_pmids):
+                    current_affiliation = pmid in current_affiliation_pmids
+                    writer.writerow([pmid, str(current_affiliation).upper()])
             
-            print(f"\n🏫 {uni_data['info']['university']}")
-            print(f"   📁 Path: {output_path}")
-            print(f"   👨‍🔬 Faculty: {uni_data['faculty_count']}")
-            print(f"   📄 Files per faculty:")
-            print(f"      • [Name]_all_publications.txt (all career publications)")
-            print(f"      • [Name]_current_affiliation.txt (publications at {uni_data['info']['university']})")
+            print(f"    📝 Saved faculty tracking: {csv_file}")
+            print(f"       📊 Total publications: {len(all_pmids)}")
+            print(f"       🏛️  Current affiliation: {len(current_affiliation_pmids)}")
+            
+        except Exception as e:
+            print(f"    ❌ Error saving faculty CSV: {str(e)}")
+
+    def search_faculty_publications(self, faculty: Dict) -> None:
+        """Search and save publications for a single faculty member"""
+        
+        name = faculty.get('name', 'Unknown')
+        faculty_id = faculty.get('faculty_id', 'unknown')
+        
+        # Better university name extraction
+        university_name = faculty.get('university_name', faculty.get('university', 'McMaster University'))
+        if not university_name or university_name.strip() == '':
+            university_name = 'McMaster University'  # Default for this dataset
+        
+        print(f"  🔬 Processing: {name} (ID: {faculty_id})")
+        print(f"      🏛️  University: {university_name}")
+        
+        # Prepare search queries
+        queries = {
+            'all_publications': f"{name}[Author]",
+            'current_affiliation': f"{name}[Author] AND {university_name}[Affiliation]"
+        }
+        
+        all_pmids = set()
+        current_affiliation_pmids = set()
+        
+        for search_type, query in queries.items():
+            print(f"    🔍 {search_type}: {query}")
+            
+            # Run EDirect search
+            json_result = self.run_edirect_json_search(query, search_type)
+            
+            if json_result:
+                # Parse and save individual publications
+                pmids = self.parse_and_save_publications(json_result, search_type)
+                
+                if search_type == 'all_publications':
+                    all_pmids = pmids
+                    self.search_stats['total_all_publications'] += len(pmids)
+                    self.search_stats['successful_all_searches'] += 1
+                elif search_type == 'current_affiliation':
+                    current_affiliation_pmids = pmids
+                    self.search_stats['total_current_affiliation_publications'] += len(pmids)
+                    self.search_stats['successful_current_searches'] += 1
+                    
+            else:
+                print(f"    ❌ No results for {search_type}")
+                self.search_stats['failed_searches'] += 1
+            
+            # Delay between searches
+            if hasattr(self, 'delay') and self.delay > 0:
+                time.sleep(self.delay)
+        
+        # Save faculty tracking CSV
+        self.save_faculty_tracking_csv(faculty, all_pmids, current_affiliation_pmids)
+        
+        self.search_stats['successful_faculty'] += 1
+    
+    def run_searches(self, csv_path: str, max_faculty: Optional[int] = None, 
+                    start_index: int = 0, delay: float = 2.0) -> None:
+        """Run PubMed searches for faculty members"""
+        
+        print("🔬 **PubMed Faculty Searcher - JSON Based**\n")
+        
+        # Load faculty data
+        self.faculty_data = self.load_faculty_csv(csv_path)
+        
+        if not self.faculty_data:
+            print("❌ No faculty data loaded. Exiting.")
+            return
+        
+        # Set delay for use in searches
+        self.delay = delay
+        
+        # Determine range to process
+        total_faculty = len(self.faculty_data)
+        end_index = min(start_index + max_faculty, total_faculty) if max_faculty else total_faculty
+        
+        faculty_to_process = self.faculty_data[start_index:end_index]
+        
+        print(f"📊 Processing {len(faculty_to_process)} faculty members (indices {start_index}-{end_index-1})")
+        print(f"⏱️  Delay between searches: {delay} seconds")
+        print("=" * 80)
+        
+        self.search_stats['total_faculty'] = len(faculty_to_process)
+        
+        # Process each faculty member
+        for i, faculty in enumerate(faculty_to_process, start=start_index + 1):
+            print(f"\n[{i}/{end_index}] Starting faculty search...")
+            
+            try:
+                self.search_faculty_publications(faculty)
+                print(f"    ✅ Completed successfully!")
+                
+            except Exception as e:
+                print(f"    ❌ Error processing faculty: {str(e)}")
+                self.search_stats['failed_searches'] += 1
+                continue
+        
+        # Print final statistics
+        self.print_final_stats()
+    
+    def print_final_stats(self) -> None:
+        """Print comprehensive final statistics"""
+        
+        stats = self.search_stats
+        
+        print("\n" + "=" * 80)
+        print("📊 **FINAL SEARCH STATISTICS**")
+        print("=" * 80)
+        
+        print(f"👥 Faculty Processing:")
+        print(f"   • Total faculty: {stats['total_faculty']}")
+        print(f"   • Successful: {stats['successful_faculty']}")
+        print(f"   • Failed: {stats['failed_searches']}")
+        
+        success_rate = (stats['successful_faculty'] / stats['total_faculty'] * 100) if stats['total_faculty'] > 0 else 0
+        print(f"   • Success rate: {success_rate:.1f}%")
+        
+        print(f"\n📚 Publication Results:")
+        print(f"   • All publications found: {stats['total_all_publications']}")
+        print(f"   • Current affiliation pubs: {stats['total_current_affiliation_publications']}")
+        print(f"   • Individual PMID files created: {stats['total_all_publications']} (deduplicated)")
+        
+        print(f"\n🔍 Search Success:")
+        print(f"   • Successful all-publication searches: {stats['successful_all_searches']}")
+        print(f"   • Successful current-affiliation searches: {stats['successful_current_searches']}")
+        
+        print(f"\n📁 Output Locations:")
+        print(f"   • PMID JSON files: {self.base_publications_path}/")
+        print(f"   • Faculty CSV tracking: {self.base_faculties_path}/[country]/[province]/[university]/publications/")
+        
+        print("=" * 80)
 
 def main():
     """Main function with command line interface"""
     
-    parser = argparse.ArgumentParser(description="PubMed Faculty Searcher - Dual Search Strategy")
+    parser = argparse.ArgumentParser(description='PubMed Faculty Publication Searcher - JSON Based')
     parser.add_argument('csv_file', help='Path to faculty CSV file')
-    parser.add_argument('--start', type=int, default=0, help='Starting faculty index (0-based)')
-    parser.add_argument('--max', type=int, help='Maximum number of faculty to search')
-    parser.add_argument('--delay', type=float, default=2.0, help='Delay between searches (seconds)')
-    parser.add_argument('--preview', action='store_true', help='Preview directory structure only')
-    parser.add_argument('--output-base', default='data/publications/pubmed', help='Base output directory')
+    parser.add_argument('--max', type=int, help='Maximum number of faculty to process (default: all)')
+    parser.add_argument('--start', type=int, default=0, help='Starting index (default: 0)')
+    parser.add_argument('--delay', type=float, default=2.0, help='Delay between searches in seconds (default: 2.0)')
+    parser.add_argument('--publications-base', default='data/publications/pubmed', 
+                       help='Base path for PMID JSON files (default: data/publications/pubmed)')
+    parser.add_argument('--faculties-base', default='data/faculties',
+                       help='Base path for faculty CSV tracking files (default: data/faculties)')
     
     args = parser.parse_args()
     
-    print("🔬 PubMed Faculty Searcher - Dual Search Strategy")
-    print("=" * 60)
-    print(f"CSV File: {args.csv_file}")
-    print(f"Output Base: {args.output_base}")
-    print(f"📋 Search Strategy:")
-    print(f"   1. All publications: [Author] searches")
-    print(f"   2. Current affiliation: [Author] AND [University][Affiliation]")
-    print(f"   📄 Creates 2 files per faculty member")
+    # Validate CSV file exists
+    if not os.path.exists(args.csv_file):
+        print(f"❌ Error: CSV file not found: {args.csv_file}")
+        return 1
     
-    # Initialize searcher
-    searcher = PubMedFacultySearcher(args.output_base)
+    # Create searcher instance
+    searcher = PubMedFacultySearcher(
+        base_publications_path=args.publications_base,
+        base_faculties_path=args.faculties_base
+    )
     
-    # Load faculty data
-    faculty_list = searcher.load_faculty_csv(args.csv_file)
-    
-    if not faculty_list:
-        print("❌ No faculty data loaded. Exiting.")
-        sys.exit(1)
-    
-    # Show directory structure preview
-    searcher.show_directory_structure(faculty_list)
-    
-    if args.preview:
-        print("\n👀 Preview mode - no searches will be run")
-        return
-    
-    # Confirm before starting
-    if not args.max or args.max > 50:
-        print(f"\n⚠️  About to search {len(faculty_list)} faculty members (2 searches each).")
-        print(f"   This will create {len(faculty_list) * 2} files and may take several hours.")
-        response = input("Continue? (y/n): ")
-        if response.lower() != 'y':
-            print("❌ Search cancelled")
-            return
-    
-    print(f"\n🚀 Starting EDirect searches...")
-    print(f"💡 Tip: You can stop anytime with Ctrl+C and resume later with --start={args.start}")
+    print(f"🚀 Starting PubMed searches...")
+    print(f"📄 CSV file: {args.csv_file}")
+    print(f"📂 PMID files output: {args.publications_base}/")
+    print(f"📂 Faculty CSV output: {args.faculties_base}/[country]/[province]/[university]/publications/")
+    print("-" * 80)
     
     try:
         # Run the searches
-        stats = searcher.search_faculty_batch(
-            faculty_list,
+        searcher.run_searches(
+            args.csv_file,
             start_index=args.start,
             max_faculty=args.max,
             delay=args.delay
         )
         
-        print(f"\n📋 Next Steps:")
-        print(f"1. Parse results: python3 parse_medline_structured.py {args.output_base}")
-        print(f"2. Transfer to VPS: scp -r parsed_publications_structured/ user@vps:/var/www/ff/")
-        print(f"3. Import to database: python3 import_pubmed_data.py parsed_publications_structured/")
-        
     except KeyboardInterrupt:
         print(f"\n\n⏹️  Search interrupted by user")
-        print(f"📊 Progress so far:")
-        print(f"   ✅ Successful (all): {searcher.search_stats['successful_all_searches']}")
-        print(f"   ✅ Successful (affiliation): {searcher.search_stats['successful_affiliation_searches']}")
-        print(f"   ❌ Failed: {searcher.search_stats['failed_searches']}")
-        print(f"\n💡 To resume, run:")
-        print(f"   python3 pubmed_faculty_searcher.py {args.csv_file} --start={args.start + searcher.search_stats['total_faculty']}")
+        return 1
+    except Exception as e:
+        print(f"\n❌ Fatal error: {str(e)}")
+        return 1
+    
+    print(f"\n🎉 PubMed search completed successfully!")
+    return 0
 
 if __name__ == "__main__":
-    main() 
+    exit(main()) 
