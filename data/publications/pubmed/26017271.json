@@ -1,0 +1,154 @@
+{
+  "pmid": "26017271",
+  "uid": "26017271",
+  "title": "Accurate, fully-automated NMR spectral profiling for metabolomics.",
+  "abstract": "Many diseases cause significant changes to the concentrations of small molecules (a.k.a. metabolites) that appear in a person's biofluids, which means such diseases can often be readily detected from a person's \"metabolic profile\"-i.e., the list of concentrations of those metabolites. This information can be extracted from a biofluids Nuclear Magnetic Resonance (NMR) spectrum. However, due to its complexity, NMR spectral profiling has remained manual, resulting in slow, expensive and error-prone procedures that have hindered clinical and industrial adoption of metabolomics via NMR. This paper presents a system, BAYESIL, which can quickly, accurately, and autonomously produce a person's metabolic profile. Given a 1D 1H NMR spectrum of a complex biofluid (specifically serum or cerebrospinal fluid), BAYESIL can automatically determine the metabolic profile. This requires first performing several spectral processing steps, then matching the resulting spectrum against a reference compound library, which contains the \"signatures\" of each relevant metabolite. BAYESIL views spectral matching as an inference problem within a probabilistic graphical model that rapidly approximates the most probable metabolic profile. Our extensive studies on a diverse set of complex mixtures including real biological samples (serum and CSF), defined mixtures and realistic computer generated spectra; involving > 50 compounds, show that BAYESIL can autonomously find the concentration of NMR-detectable metabolites accurately (~ 90% correct identification and ~ 10% quantification error), in less than 5 minutes on a single CPU. These results demonstrate that BAYESIL is the first fully-automatic publicly-accessible system that provides quantitative NMR spectral profiling effectively-with an accuracy on these biofluids that meets or exceeds the performance of trained experts. We anticipate this tool will usher in high-throughput metabolomics and enable a wealth of new applications of NMR in clinical settings. BAYESIL is accessible at http://www.bayesil.ca.",
+  "authors": [
+    {
+      "last_name": "Ravanbakhsh",
+      "fore_name": "Siamak",
+      "initials": "S",
+      "name": "Siamak Ravanbakhsh",
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, AB, Canada; Alberta Innovates Center for Machine Learning, Edmonton, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Philip",
+      "initials": "P",
+      "name": "Philip Liu",
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, AB, Canada; Department of Biological Sciences, University of Alberta, Edmonton, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Bjorndahl",
+      "fore_name": "Trent C",
+      "initials": "TC",
+      "name": "Trent C Bjorndahl",
+      "affiliations": []
+    },
+    {
+      "last_name": "Mandal",
+      "fore_name": "Rupasri",
+      "initials": "R",
+      "name": "Rupasri Mandal",
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, AB, Canada; Department of Biological Sciences, University of Alberta, Edmonton, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Grant",
+      "fore_name": "Jason R",
+      "initials": "JR",
+      "name": "Jason R Grant",
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Eisner",
+      "fore_name": "Roman",
+      "initials": "R",
+      "name": "Roman Eisner",
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Sinelnikov",
+      "fore_name": "Igor",
+      "initials": "I",
+      "name": "Igor Sinelnikov",
+      "affiliations": [
+        "Department of Biological Sciences, University of Alberta, Edmonton, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Hu",
+      "fore_name": "Xiaoyu",
+      "initials": "X",
+      "name": "Xiaoyu Hu",
+      "affiliations": [
+        "Fiorgen Foundation, 50019 Sesto Fiorentino, Florence, Italy."
+      ]
+    },
+    {
+      "last_name": "Luchinat",
+      "fore_name": "Claudio",
+      "initials": "C",
+      "name": "Claudio Luchinat",
+      "affiliations": [
+        "Centro Risonanze Magnetiche, University of Florence, Florence, Italy."
+      ]
+    },
+    {
+      "last_name": "Greiner",
+      "fore_name": "Russell",
+      "initials": "R",
+      "name": "Russell Greiner",
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, AB, Canada; Alberta Innovates Center for Machine Learning, Edmonton, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Wishart",
+      "fore_name": "David S",
+      "initials": "DS",
+      "name": "David S Wishart",
+      "affiliations": [
+        "Department of Computing Science, University of Alberta, Edmonton, AB, Canada; Department of Biological Sciences, University of Alberta, Edmonton, AB, Canada; National Research Council, National Institute for Nanotechnology, Edmonton, AB, Canada."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "PloS one",
+    "iso_abbreviation": "PLoS One",
+    "issn": "1932-6203",
+    "issn_type": "Electronic",
+    "volume": "10",
+    "issue": "5",
+    "pub_year": "2015"
+  },
+  "start_page": "e0124219",
+  "pages": "e0124219",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Magnetic Resonance Imaging",
+    "Metabolomics"
+  ],
+  "article_ids": {
+    "pubmed": "26017271",
+    "pmc": "PMC4446368",
+    "doi": "10.1371/journal.pone.0124219",
+    "pii": "PONE-D-14-48556"
+  },
+  "doi": "10.1371/journal.pone.0124219",
+  "pmc_id": "PMC4446368",
+  "dates": {
+    "completed": "2016-04-25",
+    "revised": "2018-11-13"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.350445",
+    "pmid": "26017271"
+  }
+}

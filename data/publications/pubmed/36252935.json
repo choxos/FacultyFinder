@@ -1,0 +1,125 @@
+{
+  "pmid": "36252935",
+  "uid": "36252935",
+  "title": "Machine learning for detecting centre-level irregularities in randomized controlled trials: A pilot study.",
+  "abstract": "Centralized statistical monitoring is sometimes employed as an alternative to onsite monitoring for randomized control trials. Current central monitoring methods have limitations, in that they are relatively resource intensive and do not necessarily generalize to studies where an irregularity pattern has not been observed before. Machine learning has been effective in detecting irregularities in industries such as finance and manufacturing, but to date none have been applied to clinical trials. We conducted a pilot study for the use of machine learning to identify center-level irregularities in data from multicenter clinical trials. We employed unsupervised machine learning methods, which do not rely on labelled data, and therefore allow for the automated discovery of previously unseen irregularity patterns while maintaining flexibility when applied to new data with different structures. This pilot study employs unsupervised machine learning to compute distance matrices between centres, which we used to produce centre-level continuous features. We then used a one-class support vector machine to learn the underlying distribution of each data set to identify data that was substantially different from these distributions. We evaluated our approach against current automatable centralized monitoring methods on two trials with known irregularities. While current approaches performed well on one trial (AUROC 0.752 for monitoring vs. 0.584 for machine learning), our techniques performed substantially better on the other (AUROC 0.140 for monitoring vs 0.728 for machine learning). The results of this pilot study suggest both the feasibility and the potential value of a machine learning-based approach to irregularity detection in RCTs.",
+  "authors": [
+    {
+      "last_name": "Petch",
+      "fore_name": "Jeremy",
+      "initials": "J",
+      "name": "Jeremy Petch",
+      "affiliations": [
+        "Centre for Data Science and Digital Health, Hamilton Health Sciences, Canada; Institute of Health Policy, Management and Evaluation, University of Toronto, Canada; Division of Cardiology, Department of Medicine, McMaster University, Canada; Population Health Research Institute, McMaster University, Canada."
+      ]
+    },
+    {
+      "last_name": "Nelson",
+      "fore_name": "Walter",
+      "initials": "W",
+      "name": "Walter Nelson",
+      "affiliations": [
+        "Centre for Data Science and Digital Health, Hamilton Health Sciences, Canada; Department of Statistical Sciences, University of Toronto, Canada."
+      ]
+    },
+    {
+      "last_name": "Di",
+      "fore_name": "Shuang",
+      "initials": "S",
+      "name": "Shuang Di",
+      "affiliations": [
+        "Centre for Data Science and Digital Health, Hamilton Health Sciences, Canada; Dalla Lana School of Public Health, University of Toronto, Canada."
+      ]
+    },
+    {
+      "last_name": "Balasubramanian",
+      "fore_name": "Kumar",
+      "initials": "K",
+      "name": "Kumar Balasubramanian",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Canada."
+      ]
+    },
+    {
+      "last_name": "Yusuf",
+      "fore_name": "Salim",
+      "initials": "S",
+      "name": "Salim Yusuf",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Canada."
+      ]
+    },
+    {
+      "last_name": "Devereaux",
+      "fore_name": "P J",
+      "initials": "PJ",
+      "name": "P J Devereaux",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Canada."
+      ]
+    },
+    {
+      "last_name": "Borges",
+      "fore_name": "Flavia K",
+      "initials": "FK",
+      "name": "Flavia K Borges",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Canada."
+      ]
+    },
+    {
+      "last_name": "Bangdiwala",
+      "fore_name": "Shrikant I",
+      "initials": "SI",
+      "name": "Shrikant I Bangdiwala",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Canada; Department of Health Research Methods, Evidence, and Impact, McMaster University, Canada. Electronic address: shrikant.bangdiwala@phri.ca."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Contemporary clinical trials",
+    "iso_abbreviation": "Contemp Clin Trials",
+    "issn": "1559-2030",
+    "issn_type": "Electronic",
+    "volume": "122",
+    "pub_year": "2022",
+    "pub_month": "Nov"
+  },
+  "start_page": "106963",
+  "pages": "106963",
+  "language": "eng",
+  "publication_types": [
+    "Multicenter Study",
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Pilot Projects",
+    "Randomized Controlled Trials as Topic",
+    "Machine Learning"
+  ],
+  "article_ids": {
+    "pubmed": "36252935",
+    "doi": "10.1016/j.cct.2022.106963",
+    "pii": "S1551-7144(22)00289-0"
+  },
+  "doi": "10.1016/j.cct.2022.106963",
+  "dates": {
+    "completed": "2022-11-15",
+    "revised": "2023-01-26"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "agency": "CIHR",
+      "country": "Canada"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T15:11:58.119330",
+    "pmid": "36252935"
+  }
+}

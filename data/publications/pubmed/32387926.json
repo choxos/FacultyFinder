@@ -1,0 +1,74 @@
+{
+  "pmid": "32387926",
+  "uid": "32387926",
+  "title": "A classification-based approach to semi-supervised clustering with pairwise constraints.",
+  "abstract": "In this paper, we introduce a neural network framework for semi-supervised clustering with pairwise (must-link or cannot-link) constraints. In contrast to existing approaches, we decompose semi-supervised clustering into two simpler classification tasks: the first stage uses a pair of Siamese neural networks to label the unlabeled pairs of points as must-link or cannot-link; the second stage uses the fully pairwise-labeled dataset produced by the first stage in a supervised neural-network-based clustering method. The proposed approach is motivated by the observation that binary classification (such as assigning pairwise relations) is usually easier than multi-class clustering with partial supervision. On the other hand, being classification-based, our method solves only well-defined classification problems, rather than less well specified clustering tasks. Extensive experiments on various datasets demonstrate the high performance of the proposed method.",
+  "authors": [
+    {
+      "last_name": "Śmieja",
+      "fore_name": "Marek",
+      "initials": "M",
+      "name": "Marek Śmieja",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland. Electronic address: marek.smieja@uj.edu.pl."
+      ]
+    },
+    {
+      "last_name": "Struski",
+      "fore_name": "Łukasz",
+      "initials": "Ł",
+      "name": "Łukasz Struski",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland. Electronic address: lukasz.struski@uj.edu.pl."
+      ]
+    },
+    {
+      "last_name": "Figueiredo",
+      "fore_name": "Mário A T",
+      "initials": "MAT",
+      "name": "Mário A T Figueiredo",
+      "affiliations": [
+        "Instituto de Telecomunicações, Instituto Superior Técnico, Universidade de Lisboa, Lisboa, Portugal. Electronic address: mario.figueiredo@tecnico.ulisboa.pt."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Neural networks : the official journal of the International Neural Network Society",
+    "iso_abbreviation": "Neural Netw",
+    "issn": "1879-2782",
+    "issn_type": "Electronic",
+    "volume": "127",
+    "pub_year": "2020",
+    "pub_month": "Jul"
+  },
+  "start_page": "193",
+  "end_page": "203",
+  "pages": "193-203",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Cluster Analysis",
+    "Databases, Factual",
+    "Neural Networks, Computer",
+    "Supervised Machine Learning"
+  ],
+  "article_ids": {
+    "pubmed": "32387926",
+    "doi": "10.1016/j.neunet.2020.04.017",
+    "pii": "S0893-6080(20)30137-4"
+  },
+  "doi": "10.1016/j.neunet.2020.04.017",
+  "dates": {
+    "completed": "2020-10-05",
+    "revised": "2020-10-05"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:59:37.874425",
+    "pmid": "32387926"
+  }
+}

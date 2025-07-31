@@ -1,0 +1,369 @@
+{
+  "pmid": "37263307",
+  "uid": "37263307",
+  "title": "Gut Microbiome Composition Is Associated With Future Onset of Crohn's Disease in Healthy First-Degree Relatives.",
+  "abstract": "BACKGROUND & AIMS: The cause of Crohn's disease (CD) is unknown, but the current hypothesis is that microbial or environmental factors induce gut inflammation in genetically susceptible individuals, leading to chronic intestinal inflammation. Case-control studies of patients with CD have cataloged alterations in the gut microbiome composition; however, these studies fail to distinguish whether the altered gut microbiome composition is associated with initiation of CD or is the result of inflammation or drug treatment. METHODS: In this prospective cohort study, 3483 healthy first-degree relatives (FDRs) of patients with CD were recruited to identify the gut microbiome composition that precedes the onset of CD and to what extent this composition predicts the risk of developing CD. We applied a machine learning approach to the analysis of the gut microbiome composition (based on 16S ribosomal RNA sequencing) to define a microbial signature that associates with future development of CD. The performance of the model was assessed in an independent validation cohort. RESULTS: In the validation cohort, the microbiome risk score (MRS) model yielded a hazard ratio of 2.24 (95% confidence interval, 1.03-4.84; P = .04), using the median of the MRS from the discovery cohort as the threshold. The MRS demonstrated a temporal validity by capturing individuals that developed CD up to 5 years before disease onset (area under the curve > 0.65). The 5 most important taxa contributing to the MRS included Ruminococcus torques, Blautia, Colidextribacter, an uncultured genus-level group from Oscillospiraceae, and Roseburia. CONCLUSION: This study is the first to demonstrate that gut microbiome composition is associated with future onset of CD and suggests that gut microbiome is a contributor in the pathogenesis of CD.",
+  "authors": [
+    {
+      "last_name": "Raygoza Garay",
+      "fore_name": "Juan Antonio",
+      "initials": "JA",
+      "name": "Juan Antonio Raygoza Garay",
+      "affiliations": [
+        "Division of Gastroenterology & Hepatology, Temerty Faculty of Medicine, University of Toronto, Toronto, Ontario, Canada; Zane Cohen Center for Digestive Diseases, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Turpin",
+      "fore_name": "Williams",
+      "initials": "W",
+      "name": "Williams Turpin",
+      "affiliations": [
+        "Zane Cohen Center for Digestive Diseases, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Sun-Ho",
+      "initials": "SH",
+      "name": "Sun-Ho Lee",
+      "affiliations": [
+        "Division of Gastroenterology & Hepatology, Temerty Faculty of Medicine, University of Toronto, Toronto, Ontario, Canada; Zane Cohen Center for Digestive Diseases, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "Michelle I",
+      "initials": "MI",
+      "name": "Michelle I Smith",
+      "affiliations": [
+        "Zane Cohen Center for Digestive Diseases, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Goethel",
+      "fore_name": "Ashleigh",
+      "initials": "A",
+      "name": "Ashleigh Goethel",
+      "affiliations": [
+        "Zane Cohen Center for Digestive Diseases, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Griffiths",
+      "fore_name": "Anne M",
+      "initials": "AM",
+      "name": "Anne M Griffiths",
+      "affiliations": [
+        "Division of Gastroenterology, The Hospital for Sick Children, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Moayyedi",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Moayyedi",
+      "affiliations": [
+        "Department of Medicine, Farncombe Family Digestive Health Research Institute, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Espin-Garcia",
+      "fore_name": "Osvaldo",
+      "initials": "O",
+      "name": "Osvaldo Espin-Garcia",
+      "affiliations": [
+        "Division of Biostatistics, Dalla Lana School of Public Health, University of Toronto, Toronto, Ontario, Canada; Biostatistics Department, Princess Margaret Cancer Center, University Health Network, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Abreu",
+      "fore_name": "Maria",
+      "initials": "M",
+      "name": "Maria Abreu",
+      "affiliations": [
+        "Division of Gastroenterology, Department of Medicine, University of Miami, Miller School of Medicine, Miami, Florida."
+      ]
+    },
+    {
+      "last_name": "Aumais",
+      "fore_name": "Guy L",
+      "initials": "GL",
+      "name": "Guy L Aumais",
+      "affiliations": [
+        "Hopital Maisonneuve-Rosemont, Montreal, Quebec, Canada."
+      ]
+    },
+    {
+      "last_name": "Bernstein",
+      "fore_name": "Charles N",
+      "initials": "CN",
+      "name": "Charles N Bernstein",
+      "affiliations": [
+        "Inflammatory Bowel Disease Clinical and Research Center and Department of Internal Medicine, Max Rady College of Medicine, Rady Faculty of Health Sciences, University of Manitoba, Manitoba, Winnipeg, Canada."
+      ]
+    },
+    {
+      "last_name": "Biron",
+      "fore_name": "Irit A",
+      "initials": "IA",
+      "name": "Irit A Biron",
+      "affiliations": [
+        "Division of Gastroenterology, Rabin Medical Center, Petah-Tikva, Israel."
+      ]
+    },
+    {
+      "last_name": "Cino",
+      "fore_name": "Maria",
+      "initials": "M",
+      "name": "Maria Cino",
+      "affiliations": [
+        "Division of Gastroenterology & Hepatology, Temerty Faculty of Medicine, University of Toronto, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Deslandres",
+      "fore_name": "Colette",
+      "initials": "C",
+      "name": "Colette Deslandres",
+      "affiliations": [
+        "Department of Hepatology and Pediatric Nutrition, Centre Hospitalier Universitaire Sainte-Justine, Montreal, Quebec, Canada."
+      ]
+    },
+    {
+      "last_name": "Dotan",
+      "fore_name": "Iris",
+      "initials": "I",
+      "name": "Iris Dotan",
+      "affiliations": [
+        "Division of Gastroenterology, Rabin Medical Center, Petah-Tikva, Israel."
+      ]
+    },
+    {
+      "last_name": "El-Matary",
+      "fore_name": "Wael",
+      "initials": "W",
+      "name": "Wael El-Matary",
+      "affiliations": [
+        "Pediatric Gastroenterology, Max Rady College of Medicine, University of Manitoba, Manitoba, Winnipeg, Canada."
+      ]
+    },
+    {
+      "last_name": "Feagan",
+      "fore_name": "Brian",
+      "initials": "B",
+      "name": "Brian Feagan",
+      "affiliations": [
+        "Departments of Epidemiology and Biostatistics, University of Western Ontario, London, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Guttman",
+      "fore_name": "David S",
+      "initials": "DS",
+      "name": "David S Guttman",
+      "affiliations": [
+        "Center for the Analysis of Genome Evolution and Function, University of Toronto, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Huynh",
+      "fore_name": "Hien",
+      "initials": "H",
+      "name": "Hien Huynh",
+      "affiliations": [
+        "Department of Pediatrics, University of Alberta, Edmonton, Alberta, Canada."
+      ]
+    },
+    {
+      "last_name": "Dieleman",
+      "fore_name": "Levinus A",
+      "initials": "LA",
+      "name": "Levinus A Dieleman",
+      "affiliations": [
+        "Division of Gastroenterology, Department of Medicine, University of Alberta, Edmonton, Alberta, Canada."
+      ]
+    },
+    {
+      "last_name": "Hyams",
+      "fore_name": "Jeffrey S",
+      "initials": "JS",
+      "name": "Jeffrey S Hyams",
+      "affiliations": [
+        "Division of Digestive Diseases, Hepatology, and Nutrition, Connecticut Children's Medical Center, Hartford, Connecticut."
+      ]
+    },
+    {
+      "last_name": "Jacobson",
+      "fore_name": "Kevan",
+      "initials": "K",
+      "name": "Kevan Jacobson",
+      "affiliations": [
+        "Research Institute, British Columbia Children's Hospital, Vancouver, British Columbia, Canada."
+      ]
+    },
+    {
+      "last_name": "Mack",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Mack",
+      "affiliations": [
+        "Division of Gastroenterology, Hepatology & Nutrition, Children's Hospital of Eastern Ontario and University of Ottawa, Ottawa, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Marshall",
+      "fore_name": "John K",
+      "initials": "JK",
+      "name": "John K Marshall",
+      "affiliations": [
+        "Department of Medicine, Farncombe Family Digestive Health Research Institute, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Otley",
+      "fore_name": "Anthony",
+      "initials": "A",
+      "name": "Anthony Otley",
+      "affiliations": [
+        "Division of Gastroenterology, Izaak Walton Killam Hospital, Dalhousie University, Halifax, Nova Scotia, Canada."
+      ]
+    },
+    {
+      "last_name": "Panaccione",
+      "fore_name": "Remo",
+      "initials": "R",
+      "name": "Remo Panaccione",
+      "affiliations": [
+        "Inflammatory Bowel Disease Unit, University of Calgary, Calgary, Alberta, Canada."
+      ]
+    },
+    {
+      "last_name": "Ropeleski",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Ropeleski",
+      "affiliations": [
+        "Gastrointestinal Diseases Research Unit, Department of Medicine, Queen's University, Kingston, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Silverberg",
+      "fore_name": "Mark S",
+      "initials": "MS",
+      "name": "Mark S Silverberg",
+      "affiliations": [
+        "Division of Gastroenterology & Hepatology, Temerty Faculty of Medicine, University of Toronto, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Steinhart",
+      "fore_name": "A Hillary",
+      "initials": "AH",
+      "name": "A Hillary Steinhart",
+      "affiliations": [
+        "Division of Gastroenterology & Hepatology, Temerty Faculty of Medicine, University of Toronto, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Turner",
+      "fore_name": "Dan",
+      "initials": "D",
+      "name": "Dan Turner",
+      "affiliations": [
+        "The Juliet Keidan Institute of Pediatric Gastroenterology and Nutrition, Shaare Zedek Medical Center, The Hebrew University of Jerusalem, Jerusalem, Israel."
+      ]
+    },
+    {
+      "last_name": "Yerushalmi",
+      "fore_name": "Baruch",
+      "initials": "B",
+      "name": "Baruch Yerushalmi",
+      "affiliations": [
+        "Pediatric Gastroenterology Unit, Soroka University Medical Center and Faculty of Health Sciences, Ben-Gurion University of the Negev, Beer-Sheva, Israel."
+      ]
+    },
+    {
+      "last_name": "Paterson",
+      "fore_name": "Andrew D",
+      "initials": "AD",
+      "name": "Andrew D Paterson",
+      "affiliations": [
+        "Division of Biostatistics, Dalla Lana School of Public Health, University of Toronto, Toronto, Ontario, Canada; Genetics and Genome Biology, The Hospital for Sick Children Research Institute, The Hospital for Sick Children, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Xu",
+      "fore_name": "Wei",
+      "initials": "W",
+      "name": "Wei Xu",
+      "affiliations": [
+        "Division of Biostatistics, Dalla Lana School of Public Health, University of Toronto, Toronto, Ontario, Canada; Biostatistics Department, Princess Margaret Cancer Center, University Health Network, Toronto, Ontario, Canada. Electronic address: wei.xu@uhnres.utoronto.ca."
+      ]
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "last_name": "Croitoru",
+      "fore_name": "Kenneth",
+      "initials": "K",
+      "name": "Kenneth Croitoru",
+      "affiliations": [
+        "Division of Gastroenterology & Hepatology, Temerty Faculty of Medicine, University of Toronto, Toronto, Ontario, Canada; Zane Cohen Center for Digestive Diseases, Mount Sinai Hospital, Toronto, Ontario, Canada. Electronic address: ken.croitoru@sinaihealth.ca."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Gastroenterology",
+    "iso_abbreviation": "Gastroenterology",
+    "issn": "1528-0012",
+    "issn_type": "Electronic",
+    "volume": "165",
+    "issue": "3",
+    "pub_year": "2023",
+    "pub_month": "Sep"
+  },
+  "start_page": "670",
+  "end_page": "681",
+  "pages": "670-681",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Gastrointestinal Microbiome",
+    "Crohn Disease",
+    "Inflammation",
+    "Prospective Studies",
+    "Faecalibacterium",
+    "Leukocyte L1 Antigen Complex"
+  ],
+  "article_ids": {
+    "pubmed": "37263307",
+    "doi": "10.1053/j.gastro.2023.05.032",
+    "pii": "S0016-5085(23)00805-3"
+  },
+  "doi": "10.1053/j.gastro.2023.05.032",
+  "dates": {
+    "completed": "2023-11-04",
+    "revised": "2024-12-10"
+  },
+  "chemicals": [
+    "Leukocyte L1 Antigen Complex"
+  ],
+  "grants": [
+    {
+      "grant_id": "CMF108031",
+      "agency": "CIHR",
+      "country": "Canada"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:45:00.442422",
+    "pmid": "37263307"
+  }
+}

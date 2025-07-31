@@ -1,0 +1,265 @@
+{
+  "openalex_id": "W1551385220",
+  "doi": null,
+  "title": "Large Scale Physical Modeling Sound Synthesis",
+  "abstract": "Stefan Bilbao, Brian Hamilton,Alberto Torin and Craig WebbAcoustics Group, University of Edinburghsbilbao@staffmail.ed.ac.ukPaul Graham, Alan Gray,Kostas Kavoussanakis and James PerryEPCC, University of EdinburghABSTRACTSound synthesis based on physical models of musical in-struments is, ultimately, an exercise in numerical simula-tion. As such, for complex systems of the type seen in mu-sical acoustics, simulation can be a computationally costlyundertaking, particularly if simplifying hypotheses, suchas those of traveling wave or mode decompositions are notemployed. In this paper, large scale time stepping meth-ods, such as the ﬁnite difference time domain and ﬁnitevolume time domain methods are explored for a variety ofsystems of interest in musical acoustics, includingbrass in-struments, percussion instruments based on thin plate andshell vibration, and also their embeddings in 3D acousticspaces. Attention is paid here to implementation issues,particularly on parallel hardware, which is well-suited totime stepping methods operating over regular grids. Soundexamples are presented.1. INTRODUCTIONPhysical modeling sound synthesis has been approachedina variety of ways; perhaps the best known methods are thelumped mass spring network methodology, developed byCadoz and associates [1], modal synthesis, developed atIRCAM [2] and digital waveguide methods developed bySmith at CCRMA [3], and subsequently greatly extended[4, 5, 6]. A direct comparison of these methods is dif-ﬁc ult (but possible [7])—all possess distinct advantages:lumped network methods allow an extreme degree of con-trol over the system, to the level of individual masses andsprings; modal methods offer the possibility of exact so-lutions when modal data is available in closed form, oreasily computed, and waveguides are extremely efﬁcientwhen the system under consideration behaves (nearly) asthe 1D wave equation, which is roughly true for a varietyof systems of interest in musical acoustics.Direct numerical simulation techniques, essentially timestepping methods such as the ﬁnite difference time domainmethod (FDTD) [8], or ﬁnite volume time domain method[9], though mainly used in other mainstream domains canalso be applied to the problem of sound synthesis; indeed,theywereproposedas longagoas 1969byRuiz [10], in the",
+  "authors": [
+    {
+      "display_name": "Stefan Bilbao",
+      "id": "A5023116667",
+      "orcid": "https://orcid.org/0000-0001-5332-9887",
+      "institutions": [
+        {
+          "id": "I3130638677",
+          "display_name": "Edinburgh College",
+          "country_code": "GB",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stefan Bilbao"
+    },
+    {
+      "display_name": "Brian Hamilton",
+      "id": "A5032304190",
+      "orcid": "https://orcid.org/0000-0002-7031-1838",
+      "institutions": [
+        {
+          "id": "I3130638677",
+          "display_name": "Edinburgh College",
+          "country_code": "GB",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brian Hamilton"
+    },
+    {
+      "display_name": "Alberto Torin",
+      "id": "A5055166758",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3130638677",
+          "display_name": "Edinburgh College",
+          "country_code": "GB",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alberto Torin"
+    },
+    {
+      "display_name": "Craig J. Webb",
+      "id": "A5034810176",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3130638677",
+          "display_name": "Edinburgh College",
+          "country_code": "GB",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Craig Webb"
+    },
+    {
+      "display_name": "Paul Graham",
+      "id": "A5103350640",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Paul Graham"
+    },
+    {
+      "display_name": "Alan Gray",
+      "id": "A5109854669",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Alan Gray"
+    },
+    {
+      "display_name": "Kostas Kavoussanakis",
+      "id": "A5059197049",
+      "orcid": "https://orcid.org/0000-0001-9167-7145",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Kostas Kavoussanakis"
+    },
+    {
+      "display_name": "James Perry",
+      "id": "A5112360117",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "James Perry"
+    }
+  ],
+  "publication_year": 2013,
+  "publication_date": "2013-08-01",
+  "type": "article",
+  "cited_by_count": 10,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C71139939",
+      "display_name": "Modal",
+      "level": 2,
+      "score": 0.6226052
+    },
+    {
+      "id": "C136197465",
+      "display_name": "Variety (cybernetics)",
+      "level": 2,
+      "score": 0.5077096
+    },
+    {
+      "id": "C2778755073",
+      "display_name": "Scale (ratio)",
+      "level": 2,
+      "score": 0.49300954
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.48398733
+    },
+    {
+      "id": "C2983311337",
+      "display_name": "Musical instrument",
+      "level": 2,
+      "score": 0.4736615
+    },
+    {
+      "id": "C32155586",
+      "display_name": "Simula",
+      "level": 2,
+      "score": 0.46232158
+    },
+    {
+      "id": "C178884764",
+      "display_name": "Musical acoustics",
+      "level": 3,
+      "score": 0.44914395
+    },
+    {
+      "id": "C24890656",
+      "display_name": "Acoustics",
+      "level": 1,
+      "score": 0.44282827
+    },
+    {
+      "id": "C81687914",
+      "display_name": "Percussion",
+      "level": 2,
+      "score": 0.41232377
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.4022222
+    },
+    {
+      "id": "C558565934",
+      "display_name": "Musical",
+      "level": 2,
+      "score": 0.21521816
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.1809898
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.1417126
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.13820705
+    },
+    {
+      "id": "C142362112",
+      "display_name": "Art",
+      "level": 0,
+      "score": 0.11447683
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C188027245",
+      "display_name": "Polymer chemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C153349607",
+      "display_name": "Visual arts",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11349",
+      "display_name": "Music Technology and Sound Studies",
+      "score": 0.9998
+    },
+    {
+      "id": "T10822",
+      "display_name": "Acoustic Wave Phenomena Research",
+      "score": 0.997
+    },
+    {
+      "id": "T11309",
+      "display_name": "Music and Audio Processing",
+      "score": 0.996
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://www.research.ed.ac.uk/portal/files/11221959/smc13_r1.pdf",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:41:27.140491",
+  "source_database": "OpenAlex"
+}

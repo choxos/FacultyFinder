@@ -1,0 +1,332 @@
+{
+  "pmid": "35728900",
+  "uid": "35728900",
+  "title": "Investigation of the use of a sensor bracelet for the presymptomatic detection of changes in physiological parameters related to COVID-19: an interim analysis of a prospective cohort study (COVI-GAPP).",
+  "abstract": "OBJECTIVES: We investigated machinelearningbased identification of presymptomatic COVID-19 and detection of infection-related changes in physiology using a wearable device. DESIGN: Interim analysis of a prospective cohort study. SETTING, PARTICIPANTS AND INTERVENTIONS: Participants from a national cohort study in Liechtenstein were included. Nightly they wore the Ava-bracelet that measured respiratory rate (RR), heart rate (HR), HR variability (HRV), wrist-skin temperature (WST) and skin perfusion. SARS-CoV-2 infection was diagnosed by molecular and/or serological assays. RESULTS: A total of 1.5 million hours of physiological data were recorded from 1163 participants (mean age 44±5.5 years). COVID-19 was confirmed in 127 participants of which, 66 (52%) had worn their device from baseline to symptom onset (SO) and were included in this analysis. Multi-level modelling revealed significant changes in five (RR, HR, HRV, HRV ratio and WST) device-measured physiological parameters during the incubation, presymptomatic, symptomatic and recovery periods of COVID-19 compared with baseline. The training set represented an 8-day long instance extracted from day 10 to day 2 before SO. The training set consisted of 40 days measurements from 66 participants. Based on a random split, the test set included 30% of participants and 70% were selected for the training set. The developed long short-term memory (LSTM) based recurrent neural network (RNN) algorithm had a recall (sensitivity) of 0.73 in the training set and 0.68 in the testing set when detecting COVID-19 up to 2 days prior to SO. CONCLUSION: Wearable sensor technology can enable COVID-19 detection during the presymptomatic period. Our proposed RNN algorithm identified 68% of COVID-19 positive participants 2 days prior to SO and will be further trained and validated in a randomised, single-blinded, two-period, two-sequence crossover trial. Trial registration number ISRCTN51255782; Pre-results.",
+  "authors": [
+    {
+      "last_name": "Risch",
+      "fore_name": "Martin",
+      "initials": "M",
+      "name": "Martin Risch",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Vaduz, Liechtenstein.",
+        "Central Laboratory, Canton Hospital Graubünden, Chur, Switzerland.",
+        "Dr Risch Medical Laboratory, Buchs, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Grossmann",
+      "fore_name": "Kirsten",
+      "initials": "K",
+      "name": "Kirsten Grossmann",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Vaduz, Liechtenstein.",
+        "Faculty of Medical Sciences, Private University in the Principality of Liechtenstein, Triesen, Liechtenstein."
+      ],
+      "orcid": "0000-0002-0460-3736"
+    },
+    {
+      "last_name": "Aeschbacher",
+      "fore_name": "Stefanie",
+      "initials": "S",
+      "name": "Stefanie Aeschbacher",
+      "affiliations": [
+        "Cardiovascular Research Institute Basel (CRIB), University Hospital Basel, University of Basel, Basel, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Weideli",
+      "fore_name": "Ornella C",
+      "initials": "OC",
+      "name": "Ornella C Weideli",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Vaduz, Liechtenstein."
+      ],
+      "orcid": "0000-0003-2339-9440"
+    },
+    {
+      "last_name": "Kovac",
+      "fore_name": "Marc",
+      "initials": "M",
+      "name": "Marc Kovac",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Buchs, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Pereira",
+      "fore_name": "Fiona",
+      "initials": "F",
+      "name": "Fiona Pereira",
+      "affiliations": [
+        "Department of Metabolism, Digestive Diseases and Reproduction, Imperial College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Wohlwend",
+      "fore_name": "Nadia",
+      "initials": "N",
+      "name": "Nadia Wohlwend",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Buchs, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Risch",
+      "fore_name": "Corina",
+      "initials": "C",
+      "name": "Corina Risch",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Buchs, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Hillmann",
+      "fore_name": "Dorothea",
+      "initials": "D",
+      "name": "Dorothea Hillmann",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Buchs, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Lung",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Lung",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Buchs, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Renz",
+      "fore_name": "Harald",
+      "initials": "H",
+      "name": "Harald Renz",
+      "affiliations": [
+        "Institute of Laboratory Medicine and Pathobiochemistry, Molecular Diagnostics, Philipps University Marburg, Marburg, Germany."
+      ],
+      "orcid": "0000-0003-0602-7215"
+    },
+    {
+      "last_name": "Twerenbold",
+      "fore_name": "Raphael",
+      "initials": "R",
+      "name": "Raphael Twerenbold",
+      "affiliations": [
+        "Cardiovascular Research Institute Basel (CRIB), University Hospital Basel, University of Basel, Basel, Switzerland.",
+        "Department of Cardiology and University Center of Cardiovascular Science, University Heart and Vascular Center Hamburg, Hamburg, Germany."
+      ],
+      "orcid": "0000-0003-3814-6542"
+    },
+    {
+      "last_name": "Rothenbühler",
+      "fore_name": "Martina",
+      "initials": "M",
+      "name": "Martina Rothenbühler",
+      "affiliations": [
+        "Ava AG, Zurich, Switzerland."
+      ],
+      "orcid": "0000-0001-8009-4104"
+    },
+    {
+      "last_name": "Leibovitz",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Leibovitz",
+      "affiliations": [
+        "Ava AG, Zurich, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Kovacevic",
+      "fore_name": "Vladimir",
+      "initials": "V",
+      "name": "Vladimir Kovacevic",
+      "affiliations": [
+        "Ava AG, Zurich, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Markovic",
+      "fore_name": "Andjela",
+      "initials": "A",
+      "name": "Andjela Markovic",
+      "affiliations": [
+        "Ava AG, Zurich, Switzerland.",
+        "Department of Psychology, University of Fribourg, Fribourg, Switzerland.",
+        "Department of Pulmonology, University Hospital Zurich, Zurich, Switzerland."
+      ],
+      "orcid": "0000-0003-2104-9543"
+    },
+    {
+      "last_name": "Klaver",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Klaver",
+      "affiliations": [
+        "Julius Clinical, Zeist, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Brakenhoff",
+      "fore_name": "Timo B",
+      "initials": "TB",
+      "name": "Timo B Brakenhoff",
+      "affiliations": [
+        "Julius Clinical, Zeist, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Franks",
+      "fore_name": "Billy",
+      "initials": "B",
+      "name": "Billy Franks",
+      "affiliations": [
+        "Julius Clinical, Zeist, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Mitratza",
+      "fore_name": "Marianna",
+      "initials": "M",
+      "name": "Marianna Mitratza",
+      "affiliations": [
+        "UMC Utrecht, Utrecht, The Netherlands.",
+        "Julius Global Health, Julius Center for Health Sciences and Primary Care, University Medical Center, Utrecht, The Netherlands."
+      ],
+      "orcid": "0000-0002-1573-2015"
+    },
+    {
+      "last_name": "Downward",
+      "fore_name": "George S",
+      "initials": "GS",
+      "name": "George S Downward",
+      "affiliations": [
+        "UMC Utrecht, Utrecht, The Netherlands.",
+        "Julius Global Health, Julius Center for Health Sciences and Primary Care, University Medical Center, Utrecht, The Netherlands."
+      ],
+      "orcid": "0000-0001-6642-7048"
+    },
+    {
+      "last_name": "Dowling",
+      "fore_name": "Ariel",
+      "initials": "A",
+      "name": "Ariel Dowling",
+      "affiliations": [
+        "Takeda Pharmaceuticals, Digital Clinical Devices, Cambridge, UK."
+      ],
+      "orcid": "0000-0002-7889-4978"
+    },
+    {
+      "last_name": "Montes",
+      "fore_name": "Santiago",
+      "initials": "S",
+      "name": "Santiago Montes",
+      "affiliations": [
+        "Roche Diagnostics Nederland B.V, Almere, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Grobbee",
+      "fore_name": "Diederick E",
+      "initials": "DE",
+      "name": "Diederick E Grobbee",
+      "affiliations": [
+        "UMC Utrecht, Utrecht, The Netherlands.",
+        "Julius Global Health, Julius Center for Health Sciences and Primary Care, University Medical Center, Utrecht, The Netherlands."
+      ],
+      "orcid": "0000-0003-4472-4468"
+    },
+    {
+      "last_name": "Cronin",
+      "fore_name": "Maureen",
+      "initials": "M",
+      "name": "Maureen Cronin",
+      "affiliations": [
+        "Ava AG, Zurich, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Conen",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Conen",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Goodale",
+      "fore_name": "Brianna M",
+      "initials": "BM",
+      "name": "Brianna M Goodale",
+      "affiliations": [
+        "Ava AG, Zurich, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Risch",
+      "fore_name": "Lorenz",
+      "initials": "L",
+      "name": "Lorenz Risch",
+      "affiliations": [
+        "Dr Risch Medical Laboratory, Vaduz, Liechtenstein lorenzrisch@hotmail.com.",
+        "Dr Risch Medical Laboratory, Buchs, Switzerland.",
+        "Center of Laboratory Medicine, University Institute of Clinical Chemistry, University of Bern, Bern, Switzerland."
+      ],
+      "orcid": "0000-0003-2692-6699"
+    },
+    {
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "BMJ open",
+    "iso_abbreviation": "BMJ Open",
+    "issn": "2044-6055",
+    "issn_type": "Electronic",
+    "volume": "12",
+    "issue": "6",
+    "pub_year": "2022",
+    "pub_month": "Jun",
+    "pub_day": "21"
+  },
+  "start_page": "e058274",
+  "pages": "e058274",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Randomized Controlled Trial",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Adult",
+    "COVID-19",
+    "Cohort Studies",
+    "Humans",
+    "Middle Aged",
+    "Prospective Studies",
+    "SARS-CoV-2"
+  ],
+  "article_ids": {
+    "pubmed": "35728900",
+    "pmc": "PMC9240454",
+    "doi": "10.1136/bmjopen-2021-058274",
+    "pii": "bmjopen-2021-058274"
+  },
+  "doi": "10.1136/bmjopen-2021-058274",
+  "pmc_id": "PMC9240454",
+  "dates": {
+    "completed": "2022-06-23",
+    "revised": "2023-11-05"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:15:03.503587",
+    "pmid": "35728900"
+  }
+}

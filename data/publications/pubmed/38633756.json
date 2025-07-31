@@ -1,0 +1,102 @@
+{
+  "pmid": "38633756",
+  "uid": "38633756",
+  "title": "Applying machine-learning models to differentiate benign and malignant thyroid nodules classified as C-TIRADS 4 based on 2D-ultrasound combined with five contrast-enhanced ultrasound key frames.",
+  "abstract": "OBJECTIVES: To apply machine learning to extract radiomics features from thyroid two-dimensional ultrasound (2D-US) combined with contrast-enhanced ultrasound (CEUS) images to classify and predict benign and malignant thyroid nodules, classified according to the Chinese version of the thyroid imaging reporting and data system (C-TIRADS) as category 4. MATERIALS AND METHODS: This retrospective study included 313 pathologically diagnosed thyroid nodules (203 malignant and 110 benign). Two 2D-US images and five CEUS key frames (\"2[nd] second after the arrival time\" frame, \"time to peak\" frame, \"2[nd] second after peak\" frame, \"first-flash\" frame, and \"second-flash\" frame) were selected to manually label the region of interest using the \"Labelme\" tool. A total of 7 images of each nodule and their annotates were imported into the Darwin Research Platform for radiomics analysis. The datasets were randomly split into training and test cohorts in a 9:1 ratio. Six classifiers, namely, support vector machine, logistic regression, decision tree, random forest (RF), gradient boosting decision tree and extreme gradient boosting, were used to construct and test the models. Performance was evaluated using a receiver operating characteristic curve analysis. The area under the curve (AUC), sensitivity, specificity, positive predictive value (PPV), negative predictive value (NPV), accuracy (ACC), and F1-score were calculated. One junior radiologist and one senior radiologist reviewed the 2D-US image and CEUS videos of each nodule and made a diagnosis. We then compared their AUC and ACC with those of our best model. RESULTS: The AUC of the diagnosis of US, CEUS and US combined CEUS by junior radiologist and senior radiologist were 0.755, 0.750, 0.784, 0.800, 0.873, 0.890, respectively. The RF classifier performed better than the other five, with an AUC of 1 for the training cohort and 0.94 (95% confidence interval 0.88-1) for the test cohort. The sensitivity, specificity, accuracy, PPV, NPV, and F1-score of the RF model in the test cohort were 0.82, 0.93, 0.90, 0.85, 0.92, and 0.84, respectively. The RF model with 2D-US combined with CEUS key frames achieved equivalent performance as the senior radiologist (AUC: 0.94 vs. 0.92, P = 0.798; ACC: 0.90 vs. 0.92) and outperformed the junior radiologist (AUC: 0.94 vs. 0.80, P = 0.039, ACC: 0.90 vs. 0.81) in the test cohort. CONCLUSIONS: Our model, based on 2D-US and CEUS key frames radiomics features, had good diagnostic efficacy for thyroid nodules, which are classified as C-TIRADS 4. It shows promising potential in assisting less experienced junior radiologists.",
+  "authors": [
+    {
+      "last_name": "Chen",
+      "fore_name": "Jia-Hui",
+      "initials": "JH",
+      "name": "Jia-Hui Chen",
+      "affiliations": [
+        "Department of Ultrasound, Shengjing Hospital of China Medical University, Shenyang, China."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yu-Qing",
+      "initials": "YQ",
+      "name": "Yu-Qing Zhang",
+      "affiliations": [
+        "Department of Ultrasound, Shengjing Hospital of China Medical University, Shenyang, China."
+      ]
+    },
+    {
+      "last_name": "Zhu",
+      "fore_name": "Tian-Tong",
+      "initials": "TT",
+      "name": "Tian-Tong Zhu",
+      "affiliations": [
+        "Department of Ultrasound, Shengjing Hospital of China Medical University, Shenyang, China."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Qian",
+      "initials": "Q",
+      "name": "Qian Zhang",
+      "affiliations": [
+        "Department of Ultrasound, Shengjing Hospital of China Medical University, Shenyang, China."
+      ]
+    },
+    {
+      "last_name": "Zhao",
+      "fore_name": "Ao-Xue",
+      "initials": "AX",
+      "name": "Ao-Xue Zhao",
+      "affiliations": [
+        "Department of Ultrasound, Shengjing Hospital of China Medical University, Shenyang, China."
+      ]
+    },
+    {
+      "last_name": "Huang",
+      "fore_name": "Ying",
+      "initials": "Y",
+      "name": "Ying Huang",
+      "affiliations": [
+        "Department of Ultrasound, Shengjing Hospital of China Medical University, Shenyang, China."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Frontiers in endocrinology",
+    "iso_abbreviation": "Front Endocrinol (Lausanne)",
+    "issn": "1664-2392",
+    "issn_type": "Print",
+    "volume": "15",
+    "pub_year": "2024"
+  },
+  "start_page": "1299686",
+  "pages": "1299686",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Thyroid Nodule",
+    "Thyroid Neoplasms",
+    "Retrospective Studies",
+    "ROC Curve",
+    "Ultrasonography"
+  ],
+  "article_ids": {
+    "pubmed": "38633756",
+    "pmc": "PMC11021584",
+    "doi": "10.3389/fendo.2024.1299686"
+  },
+  "doi": "10.3389/fendo.2024.1299686",
+  "pmc_id": "PMC11021584",
+  "dates": {
+    "completed": "2024-04-19",
+    "revised": "2024-04-25"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.666159",
+    "pmid": "38633756"
+  }
+}

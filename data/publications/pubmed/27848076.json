@@ -1,0 +1,298 @@
+{
+  "pmid": "27848076",
+  "uid": "27848076",
+  "title": "Identifying gene-gene interactions that are highly associated with four quantitative lipid traits across multiple cohorts.",
+  "abstract": "Genetic loci explain only 25-30 % of the heritability observed in plasma lipid traits. Epistasis, or gene-gene interactions may contribute to a portion of this missing heritability. Using the genetic data from five NHLBI cohorts of 24,837 individuals, we combined the use of the quantitative multifactor dimensionality reduction (QMDR) algorithm with two SNP-filtering methods to exhaustively search for SNP-SNP interactions that are associated with HDL cholesterol (HDL-C), LDL cholesterol (LDL-C), total cholesterol (TC) and triglycerides (TG). SNPs were filtered either on the strength of their independent effects (main effect filter) or the prior knowledge supporting a given interaction (Biofilter). After the main effect filter, QMDR identified 20 SNP-SNP models associated with HDL-C, 6 associated with LDL-C, 3 associated with TC, and 10 associated with TG (permutation P value <0.05). With the use of Biofilter, we identified 2 SNP-SNP models associated with HDL-C, 3 associated with LDL-C, 1 associated with TC and 8 associated with TG (permutation P value <0.05). In an independent dataset of 7502 individuals from the eMERGE network, we replicated 14 of the interactions identified after main effect filtering: 11 for HDL-C, 1 for LDL-C and 2 for TG. We also replicated 23 of the interactions found to be associated with TG after applying Biofilter. Prior knowledge supports the possible role of these interactions in the genetic etiology of lipid traits. This study also presents a computationally efficient pipeline for analyzing data from large genotyping arrays and detecting SNP-SNP interactions that are not primarily driven by strong main effects.",
+  "authors": [
+    {
+      "last_name": "De",
+      "fore_name": "Rishika",
+      "initials": "R",
+      "name": "Rishika De",
+      "affiliations": [
+        "Department of Genetics, Geisel School of Medicine at Dartmouth, Hanover, NH, USA."
+      ]
+    },
+    {
+      "last_name": "Verma",
+      "fore_name": "Shefali S",
+      "initials": "SS",
+      "name": "Shefali S Verma",
+      "affiliations": [
+        "The Center for Systems Genomics, The Pennsylvania State University, University Park, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Holzinger",
+      "fore_name": "Emily",
+      "initials": "E",
+      "name": "Emily Holzinger",
+      "affiliations": [
+        "The Center for Systems Genomics, The Pennsylvania State University, University Park, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Hall",
+      "fore_name": "Molly",
+      "initials": "M",
+      "name": "Molly Hall",
+      "affiliations": [
+        "The Center for Systems Genomics, The Pennsylvania State University, University Park, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Burt",
+      "fore_name": "Amber",
+      "initials": "A",
+      "name": "Amber Burt",
+      "affiliations": [
+        "Division of Medical Genetics, Department of Medicine, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Carrell",
+      "fore_name": "David S",
+      "initials": "DS",
+      "name": "David S Carrell",
+      "affiliations": [
+        "Group Health Research Institute, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Crosslin",
+      "fore_name": "David R",
+      "initials": "DR",
+      "name": "David R Crosslin",
+      "affiliations": [
+        "Department of Genome Sciences, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Jarvik",
+      "fore_name": "Gail P",
+      "initials": "GP",
+      "name": "Gail P Jarvik",
+      "affiliations": [
+        "Division of Medical Genetics, Department of Medicine, University of Washington, Seattle, WA, USA.",
+        "Department of Genome Sciences, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Kuivaniemi",
+      "fore_name": "Helena",
+      "initials": "H",
+      "name": "Helena Kuivaniemi",
+      "affiliations": [
+        "Division of Molecular Biology and Human Genetics, Department of Biomedical Sciences, Faculty of Medicine and Health Sciences, Stellenbosch University, Tygerberg, 7505, South Africa."
+      ]
+    },
+    {
+      "last_name": "Kullo",
+      "fore_name": "Iftikhar J",
+      "initials": "IJ",
+      "name": "Iftikhar J Kullo",
+      "affiliations": [
+        "Division of Cardiovascular Diseases, Mayo Clinic, Rochester, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Lange",
+      "fore_name": "Leslie A",
+      "initials": "LA",
+      "name": "Leslie A Lange",
+      "affiliations": [
+        "Department of Genetics, University of North Carolina School of Medicine at Chapel Hill, Chapel Hill, NC, USA."
+      ]
+    },
+    {
+      "last_name": "Lanktree",
+      "fore_name": "Matthew B",
+      "initials": "MB",
+      "name": "Matthew B Lanktree",
+      "affiliations": [
+        "Departments of Medicine and Biochemistry, Schulich School of Medicine and Dentistry, University of Western Ontario, London, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Larson",
+      "fore_name": "Eric B",
+      "initials": "EB",
+      "name": "Eric B Larson",
+      "affiliations": [
+        "Group Health Research Institute, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "North",
+      "fore_name": "Kari E",
+      "initials": "KE",
+      "name": "Kari E North",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, University of North Carolina at Chapel Hill, Chapel Hill, NC, USA."
+      ]
+    },
+    {
+      "last_name": "Reiner",
+      "fore_name": "Alex P",
+      "initials": "AP",
+      "name": "Alex P Reiner",
+      "affiliations": [
+        "Division of Public Health Sciences, Fred Hutchinson Cancer Research Center, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Tragante",
+      "fore_name": "Vinicius",
+      "initials": "V",
+      "name": "Vinicius Tragante",
+      "affiliations": [
+        "Department of Cardiology, Division Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands.",
+        "Department of Medical Genetics, Biomedical Genetics, University Medical Center, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Tromp",
+      "fore_name": "Gerard",
+      "initials": "G",
+      "name": "Gerard Tromp",
+      "affiliations": [
+        "Division of Molecular Biology and Human Genetics, Department of Biomedical Sciences, Faculty of Medicine and Health Sciences, Stellenbosch University, Tygerberg, 7505, South Africa."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "James G",
+      "initials": "JG",
+      "name": "James G Wilson",
+      "affiliations": [
+        "Department of Physiology and Biophysics, University of Mississippi Medical Center, Jackson, MS, USA."
+      ]
+    },
+    {
+      "last_name": "Asselbergs",
+      "fore_name": "Folkert W",
+      "initials": "FW",
+      "name": "Folkert W Asselbergs",
+      "affiliations": [
+        "Department of Cardiology, Division Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands.",
+        "Institute of Cardiovascular Science, University College London, 222 Euston Road, London, NW1 2DA, UK.",
+        "Durrer Center for Cardiogenetic Research, ICIN-Netherlands Heart Institute, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Drenos",
+      "fore_name": "Fotios",
+      "initials": "F",
+      "name": "Fotios Drenos",
+      "affiliations": [
+        "MRC Integrative Epidemiology Unit, School of Social and Community Medicine, University of Bristol, Oakfield House, Oakfield Grove, Bristol, UK.",
+        "Centre for Cardiovascular Genetics, Institute of Cardiovascular Science, University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Moore",
+      "fore_name": "Jason H",
+      "initials": "JH",
+      "name": "Jason H Moore",
+      "affiliations": [
+        "Institute for Biomedical Informatics, The Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Ritchie",
+      "fore_name": "Marylyn D",
+      "initials": "MD",
+      "name": "Marylyn D Ritchie",
+      "affiliations": [
+        "Department of Biomedical and Translational Informatics, Geisinger Health System, 205 Hood Center for Health Research, Center Street, Danville, PA, 17821, USA. mdritchie@geisinger.edu."
+      ]
+    },
+    {
+      "last_name": "Keating",
+      "fore_name": "Brendan",
+      "initials": "B",
+      "name": "Brendan Keating",
+      "affiliations": [
+        "Penn Transplant Institute, University of Pennsylvania, 3400 Spruce Street, Philadelphia, PA, 19104, USA. bkeating@mail.med.upenn.edu.",
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA. bkeating@mail.med.upenn.edu."
+      ]
+    },
+    {
+      "last_name": "Gilbert-Diamond",
+      "fore_name": "Diane",
+      "initials": "D",
+      "name": "Diane Gilbert-Diamond",
+      "affiliations": [
+        "Institute for Quantitative Biomedical Sciences at Dartmouth, Hanover, NH, USA. Diane.Gilbert-Diamond@dartmouth.edu.",
+        "Department of Epidemiology, Geisel School of Medicine at Dartmouth, Hanover, NH, USA. Diane.Gilbert-Diamond@dartmouth.edu."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Human genetics",
+    "iso_abbreviation": "Hum Genet",
+    "issn": "1432-1203",
+    "issn_type": "Electronic",
+    "volume": "136",
+    "issue": "2",
+    "pub_year": "2017",
+    "pub_month": "Feb"
+  },
+  "start_page": "165",
+  "end_page": "178",
+  "pages": "165-178",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Body Mass Index",
+    "Cardiovascular Diseases",
+    "Cholesterol, HDL",
+    "Cholesterol, LDL",
+    "Cohort Studies",
+    "Epistasis, Genetic",
+    "Female",
+    "Genetic Loci",
+    "Genetic Markers",
+    "Genome, Human",
+    "Genotyping Techniques",
+    "Humans",
+    "Linear Models",
+    "Linkage Disequilibrium",
+    "Male",
+    "Multifactor Dimensionality Reduction",
+    "Phenotype",
+    "Polymorphism, Single Nucleotide",
+    "Triglycerides"
+  ],
+  "article_ids": {
+    "pubmed": "27848076",
+    "doi": "10.1007/s00439-016-1738-7",
+    "pii": "10.1007/s00439-016-1738-7"
+  },
+  "doi": "10.1007/s00439-016-1738-7",
+  "dates": {
+    "completed": "2017-07-26",
+    "revised": "2020-03-06"
+  },
+  "chemicals": [
+    "Cholesterol, HDL",
+    "Cholesterol, LDL",
+    "Genetic Markers",
+    "Triglycerides"
+  ],
+  "grants": [
+    {
+      "grant_id": "F31 HG008588",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:34:39.067225",
+    "pmid": "27848076"
+  }
+}

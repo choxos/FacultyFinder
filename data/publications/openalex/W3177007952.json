@@ -1,0 +1,260 @@
+{
+  "openalex_id": "W3177007952",
+  "doi": "https://doi.org/10.18653/v1/2021.acl-long.515",
+  "title": "Regression Bugs Are In Your Model! Measuring, Reducing and Analyzing Regressions In NLP Model Updates",
+  "abstract": "Yuqing Xie, Yi-An Lai, Yuanjun Xiong, Yi Zhang, Stefano Soatto. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). 2021.",
+  "authors": [
+    {
+      "display_name": "Yuqing Xie",
+      "id": "A5019841406",
+      "orcid": "https://orcid.org/0000-0001-9693-4892",
+      "institutions": [
+        {
+          "id": "I151746483",
+          "display_name": "University of Waterloo",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuqing Xie"
+    },
+    {
+      "display_name": "Yi-An Lai",
+      "id": "A5102792874",
+      "orcid": "https://orcid.org/0000-0002-7699-1117",
+      "institutions": [
+        {
+          "id": "I1311688040",
+          "display_name": "Amazon (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yi-An Lai"
+    },
+    {
+      "display_name": "Yuanjun Xiong",
+      "id": "A5005925571",
+      "orcid": "https://orcid.org/0000-0002-6391-4921",
+      "institutions": [
+        {
+          "id": "I1311688040",
+          "display_name": "Amazon (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuanjun Xiong"
+    },
+    {
+      "display_name": "Yi Zhang",
+      "id": "A5100388367",
+      "orcid": "https://orcid.org/0009-0007-7269-8187",
+      "institutions": [
+        {
+          "id": "I1311688040",
+          "display_name": "Amazon (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yi Zhang"
+    },
+    {
+      "display_name": "Stefano Soatto",
+      "id": "A5038328783",
+      "orcid": "https://orcid.org/0000-0003-2902-6362",
+      "institutions": [
+        {
+          "id": "I1311688040",
+          "display_name": "Amazon (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stefano Soatto"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-01-01",
+  "type": "article",
+  "cited_by_count": 5,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "6589",
+  "last_page": "6602",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2021.acl-long.515.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.69926363
+    },
+    {
+      "id": "C2777045944",
+      "display_name": "Zhàng",
+      "level": 3,
+      "score": 0.6780874
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.6497922
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.61047477
+    },
+    {
+      "id": "C155092808",
+      "display_name": "Computational linguistics",
+      "level": 2,
+      "score": 0.6084852
+    },
+    {
+      "id": "C83546350",
+      "display_name": "Regression",
+      "level": 2,
+      "score": 0.5607406
+    },
+    {
+      "id": "C20556612",
+      "display_name": "Volume (thermodynamics)",
+      "level": 2,
+      "score": 0.5324035
+    },
+    {
+      "id": "C152877465",
+      "display_name": "Regression analysis",
+      "level": 2,
+      "score": 0.44708425
+    },
+    {
+      "id": "C18555067",
+      "display_name": "Joint (building)",
+      "level": 2,
+      "score": 0.41754723
+    },
+    {
+      "id": "C67186912",
+      "display_name": "Data modeling",
+      "level": 2,
+      "score": 0.4158822
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.30066675
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.2459363
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.119203895
+    },
+    {
+      "id": "C77088390",
+      "display_name": "Database",
+      "level": 1,
+      "score": 0.10722649
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.10383555
+    },
+    {
+      "id": "C191935318",
+      "display_name": "China",
+      "level": 2,
+      "score": 0.08125925
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.07065743
+    },
+    {
+      "id": "C170154142",
+      "display_name": "Architectural engineering",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9998
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9983
+    },
+    {
+      "id": "T12026",
+      "display_name": "Explainable Artificial Intelligence (XAI)",
+      "score": 0.9822
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2021.acl-long.515",
+  "pdf_url": "https://aclanthology.org/2021.acl-long.515.pdf",
+  "retrieved_date": "2025-07-30T16:05:12.033320",
+  "source_database": "OpenAlex"
+}

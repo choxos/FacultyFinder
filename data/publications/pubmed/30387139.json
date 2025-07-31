@@ -1,0 +1,91 @@
+{
+  "pmid": "30387139",
+  "uid": "30387139",
+  "title": "Log-ratio lasso: Scalable, sparse estimation for log-ratio models.",
+  "abstract": "Positive-valued signal data is common in the biological and medical sciences, due to the prevalence of mass spectrometry other imaging techniques. With such data, only the relative intensities of the raw measurements are meaningful. It is desirable to consider models consisting of the log-ratios of all pairs of the raw features, since log-ratios are the simplest meaningful derived features. In this case, however, the dimensionality of the predictor space becomes large, and computationally efficient estimation procedures are required. In this work, we introduce an embedding of the log-ratio parameter space into a space of much lower dimension and use this representation to develop an efficient penalized fitting procedure. This procedure serves as the foundation for a two-step fitting procedure that combines a convex filtering step with a second non-convex pruning step to yield highly sparse solutions. On a cancer proteomics data set, the proposed method fits a highly sparse model consisting of features of known biological relevance while greatly improving upon the predictive accuracy of less interpretable methods.",
+  "authors": [
+    {
+      "last_name": "Bates",
+      "fore_name": "Stephen",
+      "initials": "S",
+      "name": "Stephen Bates",
+      "affiliations": [
+        "Department of Statistics, Stanford University."
+      ],
+      "orcid": "0000-0002-3273-8179"
+    },
+    {
+      "last_name": "Tibshirani",
+      "fore_name": "Robert",
+      "initials": "R",
+      "name": "Robert Tibshirani",
+      "affiliations": [
+        "Departments of Biomedical Data Science and Statistics, Stanford University."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Biometrics",
+    "iso_abbreviation": "Biometrics",
+    "issn": "1541-0420",
+    "issn_type": "Electronic",
+    "volume": "75",
+    "issue": "2",
+    "pub_year": "2019",
+    "pub_month": "Jun"
+  },
+  "start_page": "613",
+  "end_page": "624",
+  "pages": "613-624",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+  ],
+  "keywords": [
+    "Computer Simulation",
+    "Data Interpretation, Statistical",
+    "Humans",
+    "Mass Spectrometry",
+    "Models, Statistical",
+    "Neoplasms",
+    "Proteomics",
+    "Reference Standards"
+  ],
+  "article_ids": {
+    "pubmed": "30387139",
+    "mid": "NIHMS1830228",
+    "pmc": "PMC9470385",
+    "doi": "10.1111/biom.12995"
+  },
+  "doi": "10.1111/biom.12995",
+  "pmc_id": "PMC9470385",
+  "dates": {
+    "completed": "2020-01-29",
+    "revised": "2022-09-15"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 EB001988",
+      "agency": "NIBIB NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 GM134483",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 GM096982",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:07:16.801778",
+    "pmid": "30387139"
+  }
+}

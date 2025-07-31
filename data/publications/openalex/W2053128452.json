@@ -1,0 +1,556 @@
+{
+  "openalex_id": "W2053128452",
+  "doi": "https://doi.org/10.1021/ml500030p",
+  "title": "Structure-Guided Rescaffolding of Selective Antagonists of BCL-X<sub>L</sub>",
+  "abstract": "Because of the promise of BCL-2 antagonists in combating chronic lymphocytic leukemia (CLL) and non-Hodgkin's lymphoma (NHL), interest in additional selective antagonists of antiapoptotic proteins has grown. Beginning with a series of selective, potent BCL-XL antagonists containing an undesirable hydrazone functionality, in silico design and X-ray crystallography were utilized to develop alternative scaffolds that retained the selectivity and potency of the starting compounds.",
+  "authors": [
+    {
+      "display_name": "Michael F. T. Koehler",
+      "id": "A5078585814",
+      "orcid": "https://orcid.org/0000-0003-0967-8304",
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael F. T. Koehler"
+    },
+    {
+      "display_name": "Philippe Bergeron",
+      "id": "A5112074148",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Philippe Bergeron"
+    },
+    {
+      "display_name": "Edna F. Choo",
+      "id": "A5027966349",
+      "orcid": "https://orcid.org/0000-0003-4200-8302",
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Edna F. Choo"
+    },
+    {
+      "display_name": "Kevin Lau",
+      "id": "A5019186205",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kevin Lau"
+    },
+    {
+      "display_name": "Chudi Ndubaku",
+      "id": "A5005055708",
+      "orcid": "https://orcid.org/0000-0003-4183-0417",
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chudi Ndubaku"
+    },
+    {
+      "display_name": "Danette Dudley",
+      "id": "A5065805849",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Danette Dudley"
+    },
+    {
+      "display_name": "Paul Gibbons",
+      "id": "A5003188981",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul Gibbons"
+    },
+    {
+      "display_name": "Brad E. Sleebs",
+      "id": "A5065212330",
+      "orcid": "https://orcid.org/0000-0001-9117-1048",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brad E. Sleebs"
+    },
+    {
+      "display_name": "Carl S. Rye",
+      "id": "A5028334193",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Carl S. Rye"
+    },
+    {
+      "display_name": "George Nikolakopoulos",
+      "id": "A5064878830",
+      "orcid": "https://orcid.org/0000-0003-0126-1897",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "George Nikolakopoulos"
+    },
+    {
+      "display_name": "Chinh T. Bui",
+      "id": "A5110896192",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chinh Bui"
+    },
+    {
+      "display_name": "Sanji Kulasegaram",
+      "id": "A5097691262",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sanji Kulasegaram"
+    },
+    {
+      "display_name": "Wilhelmus J. A. Kersten",
+      "id": "A5002298097",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wilhelmus J. A. Kersten"
+    },
+    {
+      "display_name": "Brian J. Smith",
+      "id": "A5086060103",
+      "orcid": "https://orcid.org/0000-0003-0498-1910",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brian J. Smith"
+    },
+    {
+      "display_name": "Peter E. Czabotar",
+      "id": "A5063424737",
+      "orcid": "https://orcid.org/0000-0002-2594-496X",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peter E. Czabotar"
+    },
+    {
+      "display_name": "Peter M. Colman",
+      "id": "A5051473344",
+      "orcid": "https://orcid.org/0000-0001-8537-4041",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peter M. Colman"
+    },
+    {
+      "display_name": "David C.S. Huang",
+      "id": "A5040208750",
+      "orcid": "https://orcid.org/0000-0002-3101-4873",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David C. S. Huang"
+    },
+    {
+      "display_name": "Jonathan B. Baell",
+      "id": "A5040184200",
+      "orcid": "https://orcid.org/0000-0003-2114-8242",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan B. Baell"
+    },
+    {
+      "display_name": "Keith G. Watson",
+      "id": "A5041387405",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Keith G. Watson"
+    },
+    {
+      "display_name": "Lisa Hasvold",
+      "id": "A5033294241",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2948539688",
+          "display_name": "AbbVie (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lisa Hasvold"
+    },
+    {
+      "display_name": "Zhi‐Fu Tao",
+      "id": "A5065873347",
+      "orcid": "https://orcid.org/0000-0001-5040-2444",
+      "institutions": [
+        {
+          "id": "I2948539688",
+          "display_name": "AbbVie (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhi-Fu Tao"
+    },
+    {
+      "display_name": "Le Wang",
+      "id": "A5100350804",
+      "orcid": "https://orcid.org/0000-0002-7250-2873",
+      "institutions": [
+        {
+          "id": "I2948539688",
+          "display_name": "AbbVie (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Le Wang"
+    },
+    {
+      "display_name": "Andrew J. Souers",
+      "id": "A5017976189",
+      "orcid": "https://orcid.org/0009-0002-5965-0633",
+      "institutions": [
+        {
+          "id": "I2948539688",
+          "display_name": "AbbVie (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew J. Souers"
+    },
+    {
+      "display_name": "Steven W. Elmore",
+      "id": "A5108529517",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2948539688",
+          "display_name": "AbbVie (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven W. Elmore"
+    },
+    {
+      "display_name": "John A. Flygare",
+      "id": "A5073714235",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John A. Flygare"
+    },
+    {
+      "display_name": "Wayne J. Fairbrother",
+      "id": "A5044566453",
+      "orcid": "https://orcid.org/0000-0003-0480-5124",
+      "institutions": [
+        {
+          "id": "I183934855",
+          "display_name": "Genentech",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wayne J. Fairbrother"
+    },
+    {
+      "display_name": "Guillaume Lessène",
+      "id": "A5080942529",
+      "orcid": "https://orcid.org/0000-0002-1193-8147",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guillaume Lessene"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-03-21",
+  "type": "article",
+  "cited_by_count": 37,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S191852912",
+    "display_name": "ACS Medicinal Chemistry Letters",
+    "issn_l": "1948-5875",
+    "issn": [
+      "1948-5875"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320006"
+  },
+  "volume": "5",
+  "issue": "6",
+  "first_page": "662",
+  "last_page": "667",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://europepmc.org/articles/pmc4060937?pdf=render",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.50675017
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.36553854
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12620",
+      "display_name": "Signaling Pathways in Disease",
+      "score": 0.9935
+    },
+    {
+      "id": "T10911",
+      "display_name": "Chemical Synthesis and Analysis",
+      "score": 0.9859
+    },
+    {
+      "id": "T12505",
+      "display_name": "Peptidase Inhibition and Analysis",
+      "score": 0.9842
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1021/ml500030p",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:14:12.451263",
+  "source_database": "OpenAlex"
+}

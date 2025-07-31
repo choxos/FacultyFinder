@@ -1,0 +1,191 @@
+{
+  "openalex_id": "W1999493200",
+  "doi": "https://doi.org/10.1118/1.4883877",
+  "title": "The most suitable person to establish quality assurance guidelines for the generation and use of noncommercial clinical software is a medical physicist",
+  "abstract": "Arguing against the Proposition is Alan Wassyng, Ph.D. Dr. Wassyng earned his Ph.D. in Applied Mathematics from the University of the Witwatersrand, Johannesburg, South Africa in 1979. After spending 14 years as an academic, first at the University of Witwatersrand and then at the University of Minnesota, he incorporated a computer consulting company in Toronto, Canada. He returned to academia in 2002, joining the Department of Computing and Software at McMaster University, Hamilton, ON, Canada, where he is currently Associate Professor and Director of the Centre for Software Certification. Dr. Wassyng has published widely on software certification and the development of dependable embedded systems. He is cofounder of the Software Certification Consortium, and is Co-PI on the highly funded “Certification of Safety-Critical Software Intensive Systems” project led by McMaster University. Presentations at the Canadian Organization of Medical Physicists (COMP) Winter School1 showed that medical physicists are deeply imbued in a safety culture. They react instinctively within this culture, pay attention to human-technology interaction, and exhibit due process in the light of safety concerns. I compare this to the environment of a software engineering colleague who specializes in testing: she lives in a volatile, market-driven, and cost-minimizing environment. Even though she has years of experience in testing different products, her instincts and her quality goals are different from those of a medical physicist. The software engineering literature does not acknowledge the need for the conjunction of computational software design processes with a deep safety culture, which is required for deployment of software used to support clinical decision making. Instead, such software is confused with either control software, which directly operates a medical device, or commercial products where patient wellbeing is not directly affected by the correctness of the output. As a result, there are no guidelines in the software engineering literature that address the specific characteristics and needs of clinical software. When advising on software quality guidelines, a typical software engineer takes a broad-spectrum approach. This approach suffers from two serious flaws. First, it encourages the perception that software is correct unless proven otherwise. This dangerous assumption has been a contributor to several fatal accidents in the safety-critical world.2 A recent article3 talks about problems “when a computer lulls us into a false sense of security”. Second, this broad-spectrum approach does not use the knowledge of the people associated with the software, and does not acknowledge the specifics of the operational environment that these people understand. Vessey and Glass4 criticize the software engineering community for their broad, generic solutions, calling them weak solutions. They contend that the most effective and strong solutions are those that target the specific environment or situation. Medical physicists, with their knowledge, can provide this strong solution. In a 2012 survey of software development and maintenance practices sent to medical physicists across Canada, the medical physics community demonstrated that it already has a level of understanding necessary to provide meaningful software quality guidance to its own community. The devil is in the details and the medical physicists who responded to the survey understood the details of their environment and the implications of problems. This understanding is far beyond what a software engineer outside the clinic can bring to the table. Kendall and Post, after studying decades of development of nuclear arsenal simulation software at the Los Alamos National Laboratory, concluded that the best people to draw up a list of “best practices” for software development and maintenance are the members of the code project teams themselves, and that these practices are those “… that the teams have judged useful for improving the way they do business”.5 It is the same for medical physicists. They know the best ways to assess their software in order to safely do their business. Software safety – under defined conditions, software should not contribute to unsafe behavior or generate results that can lead directly to harm; Software security – protection afforded the software to keep it from harm, and from causing harm through users maliciously bypassing the softwareˈs designed-in safety and dependability; Software dependability – in its intended environment, the software can be trusted to produce the outputs for which it was designed, with no adverse effects. Lack of continuity8 (Moderator: in software engineering, continuity refers to a continuous function for which, intuitively, small changes in the input result in small changes in the output) – If a bridge is built to withstand a force of 100 tonnes, because of the mostly continuous behavior of physical objects and our mathematical models, the bridge is likely to be safe for loads less than or equal to 100 tonnes. We do not expect it to collapse if a bicycle goes across it. In contrast, a simple error in software that finds a number within a list of n numbers could easily result in the software working only when n is even. This happens if the designer separates the behavior into two cases (n is even and n is odd) and forgets to deal with the one case (n is odd). Thus, in this case, the software will work when n = 1000, but not for all n < 1000 – it fails when n = 19, for example. Information hiding9 (Moderator: information hiding is a software development technique in which each moduleˈs interfaces reveal as little as possible about the moduleˈs inner workings and other modules are prevented from using information about the module that is not in the moduleˈs interface specification)7 – This is a specific way of performing modularization so that the resulting design significantly improves safety and dependability when changes are made. SQA monitors the development process of the software so that the resulting product is, and remains, safe, secure, and dependable. This should include ways of evaluating the information hiding aspects of the design. Similar principles are software testing,10,11 hazard analysis,12 the absolute need for requirements traceability,13 and semantics for module interface specifications,14 and numerous others. How can medical physicists take these principles into account when they do not possess this fundamental software knowledge? The person who does have this knowledge is a software engineer (or perhaps, a computer scientist). The Professional Engineers Act of Ontario [“Professional Engineers Act”, Professional Engineers Ontario, http://www.e-laws.gov.on.ca/html/statutes/english/elaws_statutes_90p28_e.htm/] states that the mandate of an engineer is “to ensure that the public interest may be served and protected.” A software engineer is tasked with developing software-dependent systems and protecting the public from harm caused by those systems. There are definite differences in SQA requirements in different domains – which is why some people think it is appropriate to have an MP establish SQA guidelines. However, there are more commonalities across different domains than there are differences, so software knowledge is of primary importance. SQA is a team effort, with domain expertise coming from the MP. However, the core knowledge and guidance must come from a software engineer. My colleague built his argument around a software engineering list of software qualities: safety, security, dependability. Why not a list from scientists: accuracy, trustworthiness, readability, consistency with the physics, and simplicity? Apparently, scientists focus on simplicity far more than software engineers.15 For any set of qualities, we still need to achieve them. My colleague suggests, for example, information hiding and requirements traceability as fundamental principles for anyone. David Parnas, who first published the information hiding principle, complained in an invited talk16 that most software engineers do not know how to properly apply the principle. Several Standish Group surveys reported that only 9%–16% of software projects are delivered successfully, largely because software engineers do not understand user requirements.17 But medical physicists do understand their user requirements because they are the users. How do we add quality to a piece of software? It is well understood18 that there is a disconnect between the desire for the high-level quality and what low-level activities actually achieve it. There are no common activities or “silver bullets” such as “information hiding” to achieve, for example, “dependability”. There is no research that demonstrates that particular code-level activities guarantee any high-level quality. The best we can do is to understand the particular software in front of us. In the case of clinical software, medical physicists have the best understanding of what is in front of them in terms of use and the physics embedded in it. By keeping the software code very simple (which scientists have a tendency to do15), medical physicists are in the best position to decide what further keeps them out of trouble. My colleague suggests that software engineers have a mandate to ensure that the public is served and protected. Software engineers do not always live in that culture. Medical physicists live in a safety culture and they have the capacity to fully understand what will best achieve quality software for their own work. I have been involved in the COMP Winter School1 since its inception (I missed one year), and give a talk each year on medical device software. I have been told that the medical physicists find this talk disturbing because they are surprised to find out how much they do not understand about software! Their safety culture is, indeed, admirable, but this does not make up for a lack of technical (software and system safety) knowledge. SQA needs a team of people, including domain experts and software experts. The SQA lead must have both the software expertise and the requisite safety knowledge. The fact that some software engineers are not immersed in the system safety world should not lead us astray. We see more and more software engineers who work in the medical domain, understand software, and have developed expertise in what is required in a regulated domain, in which safety is a primary concern. If there are not enough software engineers with this safety focus, we should be championing changes to the software engineering curriculum. There are conferences19,20 targeted at software engineering in the medical domain. These conferences focus on medical devices and reporting/planning software. IEC standard 62304 focuses on safety of software used in medical devices.21 Just because the standard applies to medical devices does not mean it is irrelevant for other clinical software. Software that can impact the health and safety of patients is deemed to be a medical device in most regulatory regimes. There is a (growing) body of software engineers who do have the specific software expertise required, as well as familiarity with basic safety concepts and regulatory guidelines. They are in a much better position to establish quality assurance guidelines for medical software than are medical physicists.",
+  "authors": [
+    {
+      "display_name": "Diane Kelly",
+      "id": "A5042291040",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I51768193",
+          "display_name": "Royal Military College of Canada",
+          "country_code": "CA",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Diane Kelly"
+    },
+    {
+      "display_name": "Alan Wassyng",
+      "id": "A5012108478",
+      "orcid": "https://orcid.org/0000-0003-4614-3421",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alan Wassyng"
+    },
+    {
+      "display_name": "Colin G. Orton",
+      "id": "A5026442912",
+      "orcid": "https://orcid.org/0000-0003-3428-5166",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Colin G. Orton"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-08-05",
+  "type": "article",
+  "cited_by_count": 3,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S95522064",
+    "display_name": "Medical Physics",
+    "issn_l": "0094-2405",
+    "issn": [
+      "0094-2405",
+      "1522-8541",
+      "2473-4209"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "41",
+  "issue": "9",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C2992330918",
+      "display_name": "Medical physicist",
+      "level": 2,
+      "score": 0.90022796
+    },
+    {
+      "id": "C106436119",
+      "display_name": "Quality assurance",
+      "level": 3,
+      "score": 0.72846484
+    },
+    {
+      "id": "C19527891",
+      "display_name": "Medical physics",
+      "level": 1,
+      "score": 0.63021165
+    },
+    {
+      "id": "C2777904410",
+      "display_name": "Software",
+      "level": 2,
+      "score": 0.47320813
+    },
+    {
+      "id": "C2779530757",
+      "display_name": "Quality (philosophy)",
+      "level": 2,
+      "score": 0.46082675
+    },
+    {
+      "id": "C31601959",
+      "display_name": "Medical imaging",
+      "level": 2,
+      "score": 0.4145572
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.3758331
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.34386182
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.29928955
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.18394038
+    },
+    {
+      "id": "C126838900",
+      "display_name": "Radiology",
+      "level": 1,
+      "score": 0.17559177
+    },
+    {
+      "id": "C21547014",
+      "display_name": "Operations management",
+      "level": 1,
+      "score": 0.12653914
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C2778618615",
+      "display_name": "External quality assessment",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10639",
+      "display_name": "Advanced Software Engineering Methodologies",
+      "score": 0.9969
+    },
+    {
+      "id": "T12423",
+      "display_name": "Software Reliability and Analysis Research",
+      "score": 0.9967
+    },
+    {
+      "id": "T10430",
+      "display_name": "Software Engineering Techniques and Practices",
+      "score": 0.9967
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1118/1.4883877",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:41:49.322393",
+  "source_database": "OpenAlex"
+}

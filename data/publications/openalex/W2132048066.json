@@ -1,0 +1,221 @@
+{
+  "openalex_id": "W2132048066",
+  "doi": "https://doi.org/10.1109/4233.735785",
+  "title": "Microscopic image analysis for quantitative measurement and feature identification of normal and cancerous colonic mucosa",
+  "abstract": "The development of an automated algorithm for the categorization of normal and cancerous colon mucosa is reported. Six features based on texture analysis were studied. They were derived using the co-occurrence matrix and were angular second moment, entropy, contrast, inverse difference moment, dissimilarity, and correlation. Optical density was also studied. Forty-four normal images and 58 cancerous images from sections of the colon were analyzed. These two groups were split equally into two subgroups: one set was used for supervised training and the other to test the classification algorithm. A stepwise selection procedure showed that correlation and entropy were the features that discriminated most strongly between normal and cancerous tissue (P<0.0001). A parametric linear-discriminate function was used to determine the classification rule. For the training set, a sensitivity and specificity of 93.1% and 81.8%, respectively, were achieved, with an overall accuracy of 88.2%. These results mere confirmed with the test set, with a sensitivity and specificity of 93.1% and 86.4%, respectively, and an overall accuracy of 90.2%.",
+  "authors": [
+    {
+      "display_name": "Abdelrahim Nasser Esgiar",
+      "id": "A5073590002",
+      "orcid": "https://orcid.org/0000-0002-5724-9072",
+      "institutions": [
+        {
+          "id": "I84884186",
+          "display_name": "Newcastle University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Nasser Esgiar"
+    },
+    {
+      "display_name": "R.N.G. Naguib",
+      "id": "A5061674247",
+      "orcid": "https://orcid.org/0000-0001-6807-7993",
+      "institutions": [
+        {
+          "id": "I73417466",
+          "display_name": "Coventry University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R.N.G. Naguib"
+    },
+    {
+      "display_name": "B.S. Sharif",
+      "id": "A5087572051",
+      "orcid": "https://orcid.org/0000-0002-8679-4272",
+      "institutions": [
+        {
+          "id": "I84884186",
+          "display_name": "Newcastle University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B.S. Sharif"
+    },
+    {
+      "display_name": "Mark K. Bennett",
+      "id": "A5055304416",
+      "orcid": "https://orcid.org/0000-0003-1046-1292",
+      "institutions": [
+        {
+          "id": "I84884186",
+          "display_name": "Newcastle University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M.K. Bennett"
+    },
+    {
+      "display_name": "Alan Murray",
+      "id": "A5084479722",
+      "orcid": "https://orcid.org/0000-0003-2621-4632",
+      "institutions": [
+        {
+          "id": "I2801924861",
+          "display_name": "Freeman Hospital",
+          "country_code": "GB",
+          "type": "healthcare"
+        },
+        {
+          "id": "I84884186",
+          "display_name": "Newcastle University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Murray"
+    }
+  ],
+  "publication_year": 1998,
+  "publication_date": "1998-01-01",
+  "type": "article",
+  "cited_by_count": 162,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S68937846",
+    "display_name": "IEEE Transactions on Information Technology in Biomedicine",
+    "issn_l": "1089-7771",
+    "issn": [
+      "1089-7771",
+      "1558-0032"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "2",
+  "issue": "3",
+  "first_page": "197",
+  "last_page": "203",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.7375419
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.65749717
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.5757166
+    },
+    {
+      "id": "C117220453",
+      "display_name": "Correlation",
+      "level": 2,
+      "score": 0.531093
+    },
+    {
+      "id": "C148483581",
+      "display_name": "Feature selection",
+      "level": 2,
+      "score": 0.4575753
+    },
+    {
+      "id": "C106301342",
+      "display_name": "Entropy (arrow of time)",
+      "level": 2,
+      "score": 0.42042786
+    },
+    {
+      "id": "C169903167",
+      "display_name": "Test set",
+      "level": 2,
+      "score": 0.41870156
+    },
+    {
+      "id": "C117251300",
+      "display_name": "Parametric statistics",
+      "level": 2,
+      "score": 0.41780075
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.27161664
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.25152954
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.23903853
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T13114",
+      "display_name": "Image Processing Techniques and Applications",
+      "score": 0.9803
+    },
+    {
+      "id": "T10824",
+      "display_name": "Image Retrieval and Classification Techniques",
+      "score": 0.9789
+    },
+    {
+      "id": "T10052",
+      "display_name": "Medical Image Segmentation Techniques",
+      "score": 0.9513
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/4233.735785",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:41:27.146791",
+  "source_database": "OpenAlex"
+}

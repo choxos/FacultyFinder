@@ -1,0 +1,79 @@
+{
+  "pmid": "27147327",
+  "uid": "27147327",
+  "title": "A feasibility study of dynamic adaptive radiotherapy for nonsmall cell lung cancer.",
+  "abstract": "PURPOSE: The final state of the tumor at the end of a radiotherapy course is dependent on the doses given in each fraction during the treatment course. This study investigates the feasibility of using dynamic adaptive radiotherapy (DART) in treating lung cancers assuming CBCT is available to observe midtreatment tumor states. DART adapts treatment plans using a dynamic programming technique to consider the expected changes of the tumor in the optimization process. METHODS: DART is constructed using a stochastic control formalism framework. It minimizes the total expected number of tumor cells at the end of a treatment course, which is equivalent to maximizing tumor control probability, subject to the uncertainty inherent in the tumor response. This formulation allows for nonstationary dose distributions as well as nonstationary fractional doses as needed to achieve a series of optimal plans that are conformal to the tumor over time, i.e., spatiotemporally optimal plans. Sixteen phantom cases with various sizes and locations of tumors and organs-at-risk (OAR) were generated using in-house software. Each case was planned with DART and conventional IMRT prescribing 60 Gy in 30 fractions. The observations of the change in the tumor volume over a treatment course were simulated using a two-level cell population model. Monte Carlo simulations of the treatment course for each case were run to account for uncertainty in the tumor response. The same OAR dose constraints were applied for both methods. The frequency of replanning was varied between 1, 2, 5 (weekly), and 29 times (daily). The final average tumor dose and OAR doses have been compared to quantify the potential dosimetric benefits of DART. RESULTS: The average tumor max, min, mean, and D95 doses using DART relative to these using conventional IMRT were 124.0%-125.2%, 102.1%-114.7%, 113.7%-123.4%, and 102.0%-115.9% (range dependent on the frequency of replanning). The average relative maximum doses for the cord and esophagus, mean doses for the heart and lungs, and D05 for the unspecified tissue resulting 84%-102.4%, 99.8%-106.9%, 66.9%-85.6%, 58.2%-78.8%, and 85.2%-94.0%, respectively. CONCLUSIONS: It is feasible to apply DART to the treatment of NSCLC using CBCT to observe the midtreatment tumor state. Potential increases in the tumor dose and reductions in the OAR dose, particularly for parallel OARs with mean or dose-volume constraints, could be achieved using DART compared to nonadaptive IMRT.",
+  "authors": [
+    {
+      "last_name": "Kim",
+      "fore_name": "Minsun",
+      "initials": "M",
+      "name": "Minsun Kim",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington, Seattle, Washington 98195-6043."
+      ]
+    },
+    {
+      "last_name": "Phillips",
+      "fore_name": "Mark H",
+      "initials": "MH",
+      "name": "Mark H Phillips",
+      "affiliations": [
+        "Departments of Radiation Oncology and Neurological Surgery, University of Washington, Seattle, Washington 98195-6043."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Medical physics",
+    "iso_abbreviation": "Med Phys",
+    "issn": "2473-4209",
+    "issn_type": "Electronic",
+    "volume": "43",
+    "issue": "5",
+    "pub_year": "2016",
+    "pub_month": "May"
+  },
+  "start_page": "2153",
+  "pages": "2153",
+  "language": "eng",
+  "publication_types": [
+    "Comparative Study",
+    "Journal Article"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Carcinoma, Non-Small-Cell Lung",
+    "Computer Simulation",
+    "Feasibility Studies",
+    "Four-Dimensional Computed Tomography",
+    "Humans",
+    "Lung",
+    "Models, Anatomic",
+    "Monte Carlo Method",
+    "Organs at Risk",
+    "Phantoms, Imaging",
+    "Radiotherapy Dosage",
+    "Radiotherapy Planning, Computer-Assisted",
+    "Radiotherapy, Image-Guided",
+    "Radiotherapy, Intensity-Modulated",
+    "Stochastic Processes",
+    "Treatment Outcome",
+    "Tumor Burden"
+  ],
+  "article_ids": {
+    "pubmed": "27147327",
+    "doi": "10.1118/1.4945023"
+  },
+  "doi": "10.1118/1.4945023",
+  "dates": {
+    "completed": "2017-02-08",
+    "revised": "2017-02-14"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:52:16.704768",
+    "pmid": "27147327"
+  }
+}

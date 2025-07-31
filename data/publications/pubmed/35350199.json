@@ -1,0 +1,400 @@
+{
+  "pmid": "35350199",
+  "uid": "35350199",
+  "title": "Autoantibody discovery across monogenic, acquired, and COVID19-associated autoimmunity with scalable PhIP-Seq.",
+  "abstract": "Phage Immunoprecipitation-Sequencing (PhIP-Seq) allows for unbiased, proteome-wide autoantibody discovery across a variety of disease settings, with identification of disease-specific autoantigens providing new insight into previously poorly understood forms of immune dysregulation. Despite several successful implementations of PhIP-Seq for autoantigen discovery, including our previous work (Vazquez et al. 2020), current protocols are inherently difficult to scale to accommodate large cohorts of cases and importantly, healthy controls. Here, we develop and validate a high throughput extension of PhIP-seq in various etiologies of autoimmune and inflammatory diseases, including APS1, IPEX, RAG1/2 deficiency, Kawasaki Disease (KD), Multisystem Inflammatory Syndrome in Children (MIS-C), and finally, mild and severe forms of COVID19. We demonstrate that these scaled datasets enable machine-learning approaches that result in robust prediction of disease status, as well as the ability to detect both known and novel autoantigens, such as PDYN in APS1 patients, and intestinally expressed proteins BEST4 and BTNL8 in IPEX patients. Remarkably, BEST4 antibodies were also found in 2 patients with RAG1/2 deficiency, one of whom had very early onset IBD. Scaled PhIP-Seq examination of both MIS-C and KD demonstrated rare, overlapping antigens, including CGNL1, as well as several strongly enriched putative pneumonia-associated antigens in severe COVID19, including the endosomal protein EEA1. Together, scaled PhIP-Seq provides a valuable tool for broadly assessing both rare and common autoantigen overlap between autoimmune diseases of varying origins and etiologies.",
+  "authors": [
+    {
+      "last_name": "Vazquez",
+      "fore_name": "Sara E",
+      "initials": "SE",
+      "name": "Sara E Vazquez",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States.",
+        "Diabetes Center, University of California, San Francisco, San Francisco, United States.",
+        "School of Medicine, University of California, San Francisc, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Mann",
+      "fore_name": "Sabrina A",
+      "initials": "SA",
+      "name": "Sabrina A Mann",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States.",
+        "Chan Zuckerberg Biohub, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Bodansky",
+      "fore_name": "Aaron",
+      "initials": "A",
+      "name": "Aaron Bodansky",
+      "affiliations": [
+        "Department of Pediatric Critical Care Medicine, University of California, San Francisco, San Francisco, United State."
+      ]
+    },
+    {
+      "last_name": "Kung",
+      "fore_name": "Andrew F",
+      "initials": "AF",
+      "name": "Andrew F Kung",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Quandt",
+      "fore_name": "Zoe",
+      "initials": "Z",
+      "name": "Zoe Quandt",
+      "affiliations": [
+        "Department of Medicine, University of California, San Francisc, San Francisco, United States.",
+        "Diabetes Center, University of California, San Francisco, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Ferré",
+      "fore_name": "Elise M N",
+      "initials": "EMN",
+      "name": "Elise M N Ferré",
+      "affiliations": [
+        "Fungal Pathogenesis Section, Laboratory of Clinical Immunology & Microbiology, National Institute of Allergy & Infectious Diseases (NIAID), National Institutes of Health (NIH)."
+      ]
+    },
+    {
+      "last_name": "Landegren",
+      "fore_name": "Nils",
+      "initials": "N",
+      "name": "Nils Landegren",
+      "affiliations": [
+        "Department of Medicine (Solna), Karolinska University Hospital, Karolinska Institutet, Stockholm 17176, Sweden.",
+        "Science for life Laboratory, Department of Medical Sciences, Uppsala University, Uppsala 75237, Sweden."
+      ]
+    },
+    {
+      "last_name": "Eriksson",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Eriksson",
+      "affiliations": [
+        "Center for Molecular Medicine, Department of Medicine (Solna), Karolinska Institutet, Stockholm, Sweden.",
+        "Department of Clinical Genetics, Uppsala University Hospital, Uppsala, Sweden.",
+        "Department of Immunology, Genetics and Pathology, Uppsala University, Uppsala, Sweden."
+      ]
+    },
+    {
+      "last_name": "Bastard",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Bastard",
+      "affiliations": [
+        "Laboratory of Human Genetics of Infectious Diseases, Necker Branch, INSERM U1163, Necker Hospital for Sick Children, Paris, France.",
+        "St. Giles Laboratory of Human Genetics of Infectious Diseases, Rockefeller Branch, The Rockefeller University, New York, NY, USA.",
+        "University of Paris, Imagine Institute, Paris, France.",
+        "Department of Pediatrics, Necker Hospital for Sick Children, AP-HP, Paris, France."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Shen-Ying",
+      "initials": "SY",
+      "name": "Shen-Ying Zhang",
+      "affiliations": [
+        "St. Giles Laboratory of Human Genetics of Infectious Diseases, Rockefeller Branch, The Rockefeller University, New York, NY, USA.",
+        "Laboratory of Human Genetics of Infectious Diseases, Necker Branch, INSERM U1163, Paris, France, EU.",
+        "University of Paris, Imagine Institute, Paris, France, EU."
+      ]
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Jamin",
+      "initials": "J",
+      "name": "Jamin Liu",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States.",
+        "University of California, Berkeley-University of California, San Francisco Graduate Program in Bioengineering, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Mitchell",
+      "fore_name": "Anthea",
+      "initials": "A",
+      "name": "Anthea Mitchell",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States.",
+        "Chan Zuckerberg Biohub, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Mandel-Brehm",
+      "fore_name": "Caleigh",
+      "initials": "C",
+      "name": "Caleigh Mandel-Brehm",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Miao",
+      "fore_name": "Brenda",
+      "initials": "B",
+      "name": "Brenda Miao",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Sowa",
+      "fore_name": "Gavin",
+      "initials": "G",
+      "name": "Gavin Sowa",
+      "affiliations": [
+        "School of Medicine, University of California, San Francisco, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Zorn",
+      "fore_name": "Kelsey",
+      "initials": "K",
+      "name": "Kelsey Zorn",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Chan",
+      "fore_name": "Alice Y",
+      "initials": "AY",
+      "name": "Alice Y Chan",
+      "affiliations": [
+        "Department of Pediatrics, Division of Pediatric allergy, immunology, bone and marrow transplantation, Division of Pediatric Rheumatology, University of California, San Francisco, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "Shimizu",
+      "fore_name": "Chisato",
+      "initials": "C",
+      "name": "Chisato Shimizu",
+      "affiliations": [
+        "Kawasaki Disease Research Center, Rady Children's Hospital and Department of Pediatrics, UCSD School of Medicine, La Jolla, CA 92093, USA."
+      ]
+    },
+    {
+      "last_name": "Tremoulet",
+      "fore_name": "Adriana",
+      "initials": "A",
+      "name": "Adriana Tremoulet",
+      "affiliations": [
+        "Kawasaki Disease Research Center, Rady Children's Hospital and Department of Pediatrics, UCSD School of Medicine, La Jolla, CA 92093, USA."
+      ]
+    },
+    {
+      "last_name": "Lynch",
+      "fore_name": "Kara",
+      "initials": "K",
+      "name": "Kara Lynch",
+      "affiliations": [
+        "Zuckerberg San Francisco General, San Francisco, CA 94110, USA.",
+        "Department of Laboratory Medicine, University of California, San Francisco, San Francisco, CA 94143, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael R",
+      "initials": "MR",
+      "name": "Michael R Wilson",
+      "affiliations": [
+        "Weill Institute for Neurosciences, University of California, San Francisco, San Francisco, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Kampe",
+      "fore_name": "Olle",
+      "initials": "O",
+      "name": "Olle Kampe",
+      "affiliations": [
+        "Department of Clinical Science and KG Jebsen Center for Autoimmune Disorders, University of Bergen, Bergen, Norway.",
+        "Department of Medicine, Karolinska Institutet, Stockholm, Sweden.",
+        "Center of Molecular Medicine, and Department of Endocrinology, Metabolism and Diabetes, Karolinska University Hospital, Stockholm, Sweden."
+      ]
+    },
+    {
+      "last_name": "Dobbs",
+      "fore_name": "Kerry",
+      "initials": "K",
+      "name": "Kerry Dobbs",
+      "affiliations": [
+        "Laboratory of Clinical Immunology and Microbiology, National Institute of Allergy and Infectious Diseases, National Institutes of Health, Bethesda, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Delmonte",
+      "fore_name": "Ottavia M",
+      "initials": "OM",
+      "name": "Ottavia M Delmonte",
+      "affiliations": [
+        "Laboratory of Clinical Immunology and Microbiology, National Institute of Allergy and Infectious Diseases, National Institutes of Health, Bethesda, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Notarangelo",
+      "fore_name": "Luigi D",
+      "initials": "LD",
+      "name": "Luigi D Notarangelo",
+      "affiliations": [
+        "Laboratory of Clinical Immunology and Microbiology, National Institute of Allergy and Infectious Diseases, National Institutes of Health, Bethesda, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Burns",
+      "fore_name": "Jane C",
+      "initials": "JC",
+      "name": "Jane C Burns",
+      "affiliations": [
+        "Kawasaki Disease Research Center, Rady Children's Hospital and Department of Pediatrics, UCSD School of Medicine, La Jolla, CA 92093, USA."
+      ]
+    },
+    {
+      "last_name": "Casanova",
+      "fore_name": "Jean-Laurent",
+      "initials": "JL",
+      "name": "Jean-Laurent Casanova",
+      "affiliations": [
+        "St. Giles Laboratory of Human Genetics of Infectious Diseases, Rockefeller Branch, The Rockefeller University, New York, NY, USA.",
+        "Laboratory of Human Genetics of Infectious Diseases, Necker Branch, INSERM U1163, Paris, France, EU.",
+        "University of Paris, Imagine Institute, Paris, France, EU.",
+        "Howard Hughes Medical Institute, New York, NY, USA.",
+        "Department of Pediatrics, Necker Hospital for Sick Children, Paris, France, EU."
+      ]
+    },
+    {
+      "last_name": "Lionakis",
+      "fore_name": "Michail S",
+      "initials": "MS",
+      "name": "Michail S Lionakis",
+      "affiliations": [
+        "Fungal Pathogenesis Section, Laboratory of Clinical Immunology & Microbiology, National Institute of Allergy & Infectious Diseases (NIAID), National Institutes of Health (NIH)."
+      ]
+    },
+    {
+      "last_name": "Torgerson",
+      "fore_name": "Troy R",
+      "initials": "TR",
+      "name": "Troy R Torgerson",
+      "affiliations": [
+        "Seattle Children's Research Institute, Seattle, United States.",
+        "Department of Pediatrics, University of Washington, Seattle, United States.",
+        "Current address: Allen Institute for Immunology, Seattle, United States."
+      ]
+    },
+    {
+      "last_name": "Anderson",
+      "fore_name": "Mark S",
+      "initials": "MS",
+      "name": "Mark S Anderson",
+      "affiliations": [
+        "Diabetes Center, University of California, San Francisco, San Francisco, United States."
+      ]
+    },
+    {
+      "last_name": "DeRisi",
+      "fore_name": "Joseph L",
+      "initials": "JL",
+      "name": "Joseph L DeRisi",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, San Francisco, United States.",
+        "Chan Zuckerberg Biohub, San Francisco, United States."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "bioRxiv : the preprint server for biology",
+    "iso_abbreviation": "bioRxiv",
+    "issn": "2692-8205",
+    "issn_type": "Electronic",
+    "pub_year": "2022",
+    "pub_month": "Mar",
+    "pub_day": "24"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Preprint",
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "35350199",
+    "pmc": "PMC8963698",
+    "doi": "10.1101/2022.03.23.485509",
+    "pii": "2022.03.23.485509"
+  },
+  "doi": "10.1101/2022.03.23.485509",
+  "pmc_id": "PMC8963698",
+  "dates": {
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "ZIA AI001175",
+      "agency": "Intramural NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 GM007618",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R61 HD105590",
+      "agency": "NICHD NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UL1 TR001866",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "TL1 TR001871",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL140898",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI088364",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "ZIA AI001222",
+      "agency": "Intramural NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "F30 DK123915",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P01 AI118688",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI163029",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.747140",
+    "pmid": "35350199"
+  }
+}

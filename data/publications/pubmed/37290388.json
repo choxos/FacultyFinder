@@ -1,0 +1,121 @@
+{
+  "pmid": "37290388",
+  "uid": "37290388",
+  "title": "Health warning based on 3R ECG Sample's combined features and LSTM.",
+  "abstract": "Most researches use the fixed-length sample to identify ECG abnormalities based on MIT ECG dataset, which leads to information loss. To address this problem, this paper proposes a method for ECG abnormality detection and health warning based on ECG Holter of PHIA and 3R-TSH-L method. The 3R-TSH-L method is implemented by:(1) getting 3R ECG samples using Pan-Tompkins method and using volatility to obtain high-quality raw ECG data; (2) extracting combination features including time-domain features, frequency domain features and time-frequency domain features; (3) using LSTM for classification, training and testing the algorithm based on the MIT-BIH dataset, and obtaining relatively optimal features as spliced normalized fusion features including kurtosis, skewness and RR interval time domain features, STFT-based sub-band spectrum features, and harmonic ratio features. The ECG data were collected using the self-developed ECG Holter (PHIA) on 14 subjects, aged between 24 and 75 including both male and female, to build the ECG dataset (ECG-H). The algorithm was transferred to the ECG-H dataset, and a health warning assessment model based on abnormal ECG rate and heart rate variability weighting was proposed. Experiments show that 3R-TSH-L method proposed in the paper has a high accuracy of 98.28% for the detection of ECG abnormalities of MIT-BIH dataset and a good transfer learning ability of 95.66% accuracy for ECG-H. The health warning model was also testified to be reasonable. The key technique of the ECG Holter of PHIA and the method 3R-TSH-L proposed in this paper is expected to be widely used in family-oriented healthcare.",
+  "authors": [
+    {
+      "last_name": "Liu",
+      "fore_name": "Qingshan",
+      "initials": "Q",
+      "name": "Qingshan Liu",
+      "affiliations": [
+        "Power Quality Analysis and Load Detection Technology Laboratory, Anhui Jianzhu University, Hefei, 230601, China. Electronic address: juliusyunyi@qq.com."
+      ]
+    },
+    {
+      "last_name": "Gao",
+      "fore_name": "Cuiyun",
+      "initials": "C",
+      "name": "Cuiyun Gao",
+      "affiliations": [
+        "Power Quality Analysis and Load Detection Technology Laboratory, Anhui Jianzhu University, Hefei, 230601, China. Electronic address: gaocuiyun@ahjzu.edu.cn."
+      ]
+    },
+    {
+      "last_name": "Zhao",
+      "fore_name": "Yang",
+      "initials": "Y",
+      "name": "Yang Zhao",
+      "affiliations": [
+        "Power Quality Analysis and Load Detection Technology Laboratory, Anhui Jianzhu University, Hefei, 230601, China. Electronic address: zhaoyang@ahjzu.edu.cn."
+      ]
+    },
+    {
+      "last_name": "Huang",
+      "fore_name": "Songqun",
+      "initials": "S",
+      "name": "Songqun Huang",
+      "affiliations": [
+        "Department of Cardiovasology Changhai Hospital, Second Military Medical University, Shanghai, 200433, China. Electronic address: hsq8593@163.com."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "Power Quality Analysis and Load Detection Technology Laboratory, Anhui Jianzhu University, Hefei, 230601, China. Electronic address: 15715612106@163.com."
+      ]
+    },
+    {
+      "last_name": "Dong",
+      "fore_name": "Xiaoyu",
+      "initials": "X",
+      "name": "Xiaoyu Dong",
+      "affiliations": [
+        "Power Quality Analysis and Load Detection Technology Laboratory, Anhui Jianzhu University, Hefei, 230601, China. Electronic address: 1103073493@qq.com."
+      ]
+    },
+    {
+      "last_name": "Lu",
+      "fore_name": "Zhonghai",
+      "initials": "Z",
+      "name": "Zhonghai Lu",
+      "affiliations": [
+        "School of Electrical Engineering and Computer Science, KTH Royal Institute of Technology, Stockholm, 16440, Sweden. Electronic address: zhonghai@kth.se."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Computers in biology and medicine",
+    "iso_abbreviation": "Comput Biol Med",
+    "issn": "1879-0534",
+    "issn_type": "Electronic",
+    "volume": "162",
+    "pub_year": "2023",
+    "pub_month": "Aug"
+  },
+  "start_page": "107082",
+  "pages": "107082",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Male",
+    "Humans",
+    "Female",
+    "Young Adult",
+    "Adult",
+    "Middle Aged",
+    "Aged",
+    "Electrocardiography",
+    "Signal Processing, Computer-Assisted",
+    "Algorithms",
+    "Electrocardiography, Ambulatory",
+    "Arrhythmias, Cardiac",
+    "Thyrotropin"
+  ],
+  "article_ids": {
+    "pubmed": "37290388",
+    "doi": "10.1016/j.compbiomed.2023.107082",
+    "pii": "S0010-4825(23)00547-4"
+  },
+  "doi": "10.1016/j.compbiomed.2023.107082",
+  "dates": {
+    "completed": "2023-06-19",
+    "revised": "2023-11-21"
+  },
+  "chemicals": [
+    "Thyrotropin"
+  ],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.587013",
+    "pmid": "37290388"
+  }
+}

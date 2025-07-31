@@ -1,0 +1,270 @@
+{
+  "openalex_id": "W2068548513",
+  "doi": "https://doi.org/10.1080/10556788.2012.700713",
+  "title": "Augmented Lagrangian alternating direction method for matrix separation based on low-rank factorization",
+  "abstract": "AbstractThe matrix separation problem aims to separate a low-rank matrix and a sparse matrix from their sum. This problem has recently attracted considerable research attention due to its wide range of potential applications. Nuclear-norm minimization models have been proposed for matrix separation and proved to yield exact separations under suitable conditions. These models, however, typically require the calculation of a full or partial singular value decomposition at every iteration that can become increasingly costly as matrix dimensions and rank grow. To improve scalability, in this paper, we propose and investigate an alternative approach based on solving a non-convex, low-rank factorization model by an augmented Lagrangian alternating direction method. Numerical studies indicate that the effectiveness of the proposed model is limited to problems where the sparse matrix does not dominate the low-rank one in magnitude, though this limitation can be alleviated by certain data pre-processing techniques. On the other hand, extensive numerical results show that, within its applicability range, the proposed method in general has a much faster solution speed than nuclear-norm minimization algorithms and often provides better recoverability.Keywords: matrix separationalternating direction methodaugmented Lagrangian function This article is part of the following collections: Charles Broyden Prize AcknowledgementsThe work of Yuan Shen was supported by the Chinese Scholarship Council during his visit to Rice University. The work of Zaiwen Wen was supported in part by NSF DMS-0439872 through UCLA IPAM. The work of Yin Zhang was supported in part by NSF Grant DMS-0811188 and ONR Grant N00014-08-1-1101.",
+  "authors": [
+    {
+      "display_name": "Yuxiaotong Shen",
+      "id": "A5101563740",
+      "orcid": "https://orcid.org/0000-0001-6681-8938",
+      "institutions": [
+        {
+          "id": "I881766915",
+          "display_name": "Nanjing University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Shen"
+    },
+    {
+      "display_name": "Zaidao Wen",
+      "id": "A5030436858",
+      "orcid": "https://orcid.org/0000-0003-1258-7737",
+      "institutions": [
+        {
+          "id": "I183067930",
+          "display_name": "Shanghai Jiao Tong University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Z. Wen"
+    },
+    {
+      "display_name": "Yulong Zhang",
+      "id": "A5083177895",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I74775410",
+          "display_name": "Rice University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Zhang"
+    }
+  ],
+  "publication_year": 2012,
+  "publication_date": "2012-07-13",
+  "type": "article",
+  "cited_by_count": 296,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S103047102",
+    "display_name": "Optimization methods & software",
+    "issn_l": "1026-7670",
+    "issn": [
+      "1026-7670",
+      "1029-4937",
+      "1055-6788"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320547"
+  },
+  "volume": "29",
+  "issue": "2",
+  "first_page": "239",
+  "last_page": "263",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "http://www.caam.rice.edu/%7Eyzhang/reports/tr1102.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C150452318",
+      "display_name": "Augmented Lagrangian method",
+      "level": 2,
+      "score": 0.7513931
+    },
+    {
+      "id": "C2778459887",
+      "display_name": "Matrix completion",
+      "level": 3,
+      "score": 0.7116699
+    },
+    {
+      "id": "C22789450",
+      "display_name": "Singular value decomposition",
+      "level": 2,
+      "score": 0.6336434
+    },
+    {
+      "id": "C42355184",
+      "display_name": "Matrix decomposition",
+      "level": 3,
+      "score": 0.62829715
+    },
+    {
+      "id": "C106487976",
+      "display_name": "Matrix (chemical analysis)",
+      "level": 2,
+      "score": 0.59519
+    },
+    {
+      "id": "C164226766",
+      "display_name": "Rank (graph theory)",
+      "level": 2,
+      "score": 0.59263253
+    },
+    {
+      "id": "C92207270",
+      "display_name": "Matrix norm",
+      "level": 3,
+      "score": 0.5800001
+    },
+    {
+      "id": "C90199385",
+      "display_name": "Low-rank approximation",
+      "level": 3,
+      "score": 0.5621448
+    },
+    {
+      "id": "C126255220",
+      "display_name": "Mathematical optimization",
+      "level": 1,
+      "score": 0.5324351
+    },
+    {
+      "id": "C2777749129",
+      "display_name": "Robust principal component analysis",
+      "level": 3,
+      "score": 0.52818453
+    },
+    {
+      "id": "C56372850",
+      "display_name": "Sparse matrix",
+      "level": 3,
+      "score": 0.52388686
+    },
+    {
+      "id": "C109282560",
+      "display_name": "Singular value",
+      "level": 3,
+      "score": 0.48132694
+    },
+    {
+      "id": "C28826006",
+      "display_name": "Applied mathematics",
+      "level": 1,
+      "score": 0.44083524
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.4340309
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.4071718
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.40621108
+    },
+    {
+      "id": "C155281189",
+      "display_name": "Tensor (intrinsic definition)",
+      "level": 2,
+      "score": 0.148871
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.13984457
+    },
+    {
+      "id": "C158693339",
+      "display_name": "Eigenvalues and eigenvectors",
+      "level": 2,
+      "score": 0.10550347
+    },
+    {
+      "id": "C27438332",
+      "display_name": "Principal component analysis",
+      "level": 2,
+      "score": 0.1021961
+    },
+    {
+      "id": "C114614502",
+      "display_name": "Combinatorics",
+      "level": 1,
+      "score": 0.083560854
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C192562407",
+      "display_name": "Materials science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C202444582",
+      "display_name": "Pure mathematics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C159985019",
+      "display_name": "Composite material",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C163716315",
+      "display_name": "Gaussian",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10500",
+      "display_name": "Sparse and Compressive Sensing Techniques",
+      "score": 1.0
+    },
+    {
+      "id": "T11447",
+      "display_name": "Blind Source Separation Techniques",
+      "score": 0.9968
+    },
+    {
+      "id": "T10688",
+      "display_name": "Image and Signal Denoising Methods",
+      "score": 0.9912
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1080/10556788.2012.700713",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:04:39.011219",
+  "source_database": "OpenAlex"
+}

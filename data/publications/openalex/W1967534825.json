@@ -1,0 +1,330 @@
+{
+  "openalex_id": "W1967534825",
+  "doi": "https://doi.org/10.5589/m10-078",
+  "title": "Targets, methods, and sites for assessing the in-flight spatial resolution of electro-optical data products",
+  "abstract": "AbstractThe spatial resolution of a digital, electro-optical remote sensing imaging system or product is an important image quality characteristic that helps determine the utility of an imaging source. Although spatial resolution is often described by a single image quality parameter, the ground sample distance, there are several other parameters that affect image sharpness and need to be considered. These other parameters are associated with the point-spread function, signal-to-noise ratio, and dynamic range of the image product. This review paper covers the various approaches to in-flight measurement of spatial resolution parameters, including ground sample distance, point spread function, optical transfer function, modulation transfer function, far field response, and edge response and their significance, as well as target types and methods to determine these spatial resolution parameters. To this end, the paper lists and describes various targets found across the world, as well as astronomical ones. These targets are appropriate for evaluating a wide range of image scale products. For high spatial resolution imaging systems, the types of targets range from engineered fixed and deployable targets to agricultural and urban features, allowing almost any site to be used for determining spatial resolution. Independent, comprehensive image product evaluation sites that are currently in use in the US and Europe are also described.La résolution spatiale d'un système imageur numérique électro-optique de télédétection ou d'un produit dérivé est une caractéristique importante de la qualité de l'image qui permet de déterminer l'utilité d'une source imageante. Bien que la résolution spatiale soit souvent définie à partir d'un seul paramètre de qualité d'image, la résolution au sol, il y a plusieurs autres paramètres qui affectent la netteté de l'image et qui méritent d'être pris en considération. Ces autres paramètres sont associés à la fonction d'étalement du point, au rapport signal sur bruit et à la dynamique du produit image. Dans cet article de synthèse, on présente les différentes approches utilisées pour la mesure en vol des paramètres de la résolution spatiale incluant la résolution au sol, la fonction d'étalement du point, la fonction de transfert optique, la fonction de transfert de modulation, la réponse de champ lointain et l'effet de lisière ainsi que leur signification, de même que les types de cibles et les méthodes pour déterminer ces paramètres de la résolution spatiale. À cette fin, on énumère et on décrit dans l'article les diverses cibles rencontrées à travers le monde de même que les cibles astronomiques. Ces cibles sont appropriées pour l'évaluation d'une large gamme de produits à l'échelle de l'image. Pour les systèmes imageur à haute résolution spatiale, les types de cibles varient des cibles fixes et déployables aux cibles caractéristiques du milieu agricole et urbain, ce qui permet d'utiliser presque n'importe quel site pour déterminer la résolution spatiale. On décrit également les sites indépendants et intégrés pour l'évaluation des produits images présentement utilisés aux États-Unis et en Europe.[Traduit par la Rédaction] AcknowledgementsThe authors would like to thank Gyanesh Chander and Philippe Teillet for their efforts as guest editors of this special issue. The authors appreciate the time and efforts of Ulrich Beisl of Leica-Geosystems, Juergen Hefele of Intergraph ZI Deutschland GmbH, Michael Gruber of Microsoft Photogrammetry, and Adam Evans and Joseph Kosofsky of Applanix for graciously assisting in providing target and site information. The authors also thank Brett Thomassie and DigitalGlobe for providing spatial resolution target imagery.",
+  "authors": [
+    {
+      "display_name": "Mary Pagnutti",
+      "id": "A5087974380",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210094944",
+          "display_name": "Innovative Imaging and Research (United States)",
+          "country_code": "US",
+          "type": "company"
+        },
+        {
+          "id": "I2802384920",
+          "display_name": "Stennis Space Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I99041443",
+          "display_name": "Mississippi State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Mary Pagnutti"
+    },
+    {
+      "display_name": "Slawomir Blonski",
+      "id": "A5079733495",
+      "orcid": "https://orcid.org/0000-0003-1066-4268",
+      "institutions": [
+        {
+          "id": "I2802384920",
+          "display_name": "Stennis Space Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210144891",
+          "display_name": "Science Systems and Applications (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Slawomir Blonski"
+    },
+    {
+      "display_name": "Michael Cramer",
+      "id": "A5088063230",
+      "orcid": "https://orcid.org/0000-0002-3647-617X",
+      "institutions": [
+        {
+          "id": "I100066346",
+          "display_name": "University of Stuttgart",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Cramer"
+    },
+    {
+      "display_name": "Dennis Helder",
+      "id": "A5081167451",
+      "orcid": "https://orcid.org/0000-0002-7379-4679",
+      "institutions": [
+        {
+          "id": "I177156846",
+          "display_name": "South Dakota State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dennis Helder"
+    },
+    {
+      "display_name": "Kara Holekamp",
+      "id": "A5070017091",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2802384920",
+          "display_name": "Stennis Space Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210144891",
+          "display_name": "Science Systems and Applications (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kara Holekamp"
+    },
+    {
+      "display_name": "Eija Honkavaara",
+      "id": "A5010833142",
+      "orcid": "https://orcid.org/0000-0002-7236-2145",
+      "institutions": [
+        {
+          "id": "I33876163",
+          "display_name": "Finnish Geospatial Research Institute",
+          "country_code": "FI",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eija Honkavaara"
+    },
+    {
+      "display_name": "Robert Ryan",
+      "id": "A5114256884",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I99041443",
+          "display_name": "Mississippi State University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2802384920",
+          "display_name": "Stennis Space Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210094944",
+          "display_name": "Innovative Imaging and Research (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Ryan"
+    }
+  ],
+  "publication_year": 2010,
+  "publication_date": "2010-10-01",
+  "type": "article",
+  "cited_by_count": 37,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "fr",
+  "source": {
+    "id": "S85837164",
+    "display_name": "Canadian Journal of Remote Sensing",
+    "issn_l": "0703-8992",
+    "issn": [
+      "0703-8992",
+      "1712-7971",
+      "1712-798X"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320547"
+  },
+  "volume": "36",
+  "issue": "5",
+  "first_page": "583",
+  "last_page": "601",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C175231954",
+      "display_name": "Optical transfer function",
+      "level": 2,
+      "score": 0.74857724
+    },
+    {
+      "id": "C205372480",
+      "display_name": "Image resolution",
+      "level": 2,
+      "score": 0.7223696
+    },
+    {
+      "id": "C197513456",
+      "display_name": "Ground sample distance",
+      "level": 3,
+      "score": 0.5887319
+    },
+    {
+      "id": "C69179731",
+      "display_name": "Point spread function",
+      "level": 2,
+      "score": 0.55258757
+    },
+    {
+      "id": "C198531522",
+      "display_name": "Sample (material)",
+      "level": 2,
+      "score": 0.51428646
+    },
+    {
+      "id": "C204323151",
+      "display_name": "Range (aeronautics)",
+      "level": 2,
+      "score": 0.4748652
+    },
+    {
+      "id": "C55020928",
+      "display_name": "Image quality",
+      "level": 3,
+      "score": 0.4671841
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.46655434
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.43869433
+    },
+    {
+      "id": "C99498987",
+      "display_name": "Noise (video)",
+      "level": 3,
+      "score": 0.4207007
+    },
+    {
+      "id": "C138268822",
+      "display_name": "Resolution (logic)",
+      "level": 2,
+      "score": 0.41834646
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.4093474
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.35652894
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.35024083
+    },
+    {
+      "id": "C120665830",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.34220392
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.29442477
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.23992035
+    },
+    {
+      "id": "C160633673",
+      "display_name": "Pixel",
+      "level": 2,
+      "score": 0.21009576
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.14143988
+    },
+    {
+      "id": "C97355855",
+      "display_name": "Thermodynamics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C146978453",
+      "display_name": "Aerospace engineering",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12019",
+      "display_name": "Calibration and Measurement Techniques",
+      "score": 0.9998
+    },
+    {
+      "id": "T12389",
+      "display_name": "Infrared Target Detection Methodologies",
+      "score": 0.995
+    },
+    {
+      "id": "T10111",
+      "display_name": "Remote Sensing in Agriculture",
+      "score": 0.992
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.5589/m10-078",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:13:17.300253",
+  "source_database": "OpenAlex"
+}

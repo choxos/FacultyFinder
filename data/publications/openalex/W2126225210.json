@@ -1,0 +1,375 @@
+{
+  "openalex_id": "W2126225210",
+  "doi": "https://doi.org/10.1109/tcbb.2005.50",
+  "title": "Correlation between Gene Expression and GO Semantic Similarity",
+  "abstract": "This research analyzes some aspects of the relationship between gene expression, gene function, and gene annotation. Many recent studies are implicitly based on the assumption that gene products that are biologically and functionally related would maintain this similarity both in their expression profiles as well as in their Gene Ontology (GO) annotation. We analyze how accurate this assumption proves to be using real publicly available data. We also aim to validate a measure of semantic similarity for GO annotation. We use the Pearson correlation coefficient and its absolute value as a measure of similarity between expression profiles of gene products. We explore a number of semantic similarity measures (Resnik, Jiang, and Lin) and compute the similarity between gene products annotated using the GO. Finally, we compute correlation coefficients to compare gene expression similarity against GO semantic similarity. Our results suggest that the Resnik similarity measure outperforms the others and seems better suited for use in Gene Ontology. We also deduce that there seems to be correlation between semantic similarity in the GO annotation and gene expression for the three GO ontologies. We show that this correlation is negligible up to a certain semantic similarity value; then, for higher similarity values, the relationship trend becomes almost linear. These results can be used to augment the knowledge provided by clustering algorithms and in the development of bioinformatic tools for finding and characterizing gene products.",
+  "authors": [
+    {
+      "display_name": "Joseph Sevilla",
+      "id": "A5017604012",
+      "orcid": "https://orcid.org/0000-0002-9112-824X",
+      "institutions": [
+        {
+          "id": "I161372803",
+          "display_name": "Strathmore University",
+          "country_code": "KE",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J.L. Sevilla"
+    },
+    {
+      "display_name": "Víctor Segura",
+      "id": "A5076844152",
+      "orcid": "https://orcid.org/0000-0002-7740-6290",
+      "institutions": [
+        {
+          "id": "I88155538",
+          "display_name": "Universidad de Navarra",
+          "country_code": "ES",
+          "type": "funder"
+        },
+        {
+          "id": "I170828890",
+          "display_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
+          "country_code": "ES",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Segura"
+    },
+    {
+      "display_name": "Adam Podhorski",
+      "id": "A5048015801",
+      "orcid": "https://orcid.org/0000-0002-5567-9503",
+      "institutions": [
+        {
+          "id": "I88155538",
+          "display_name": "Universidad de Navarra",
+          "country_code": "ES",
+          "type": "funder"
+        },
+        {
+          "id": "I170828890",
+          "display_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
+          "country_code": "ES",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Podhorski"
+    },
+    {
+      "display_name": "Elizabeth Guruceaga",
+      "id": "A5043296656",
+      "orcid": "https://orcid.org/0000-0003-0547-681X",
+      "institutions": [
+        {
+          "id": "I88155538",
+          "display_name": "Universidad de Navarra",
+          "country_code": "ES",
+          "type": "funder"
+        },
+        {
+          "id": "I170828890",
+          "display_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
+          "country_code": "ES",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Guruceaga"
+    },
+    {
+      "display_name": "José M. Mato",
+      "id": "A5008532501",
+      "orcid": "https://orcid.org/0000-0003-1264-3153",
+      "institutions": [
+        {
+          "id": "I170828890",
+          "display_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
+          "country_code": "ES",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I88155538",
+          "display_name": "Universidad de Navarra",
+          "country_code": "ES",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J.M. Mato"
+    },
+    {
+      "display_name": "Luis Alfonso Martínez‐Cruz",
+      "id": "A5101836939",
+      "orcid": "https://orcid.org/0000-0002-5856-9377",
+      "institutions": [
+        {
+          "id": "I4210112728",
+          "display_name": "CIC bioGUNE",
+          "country_code": "ES",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L.A. Martinez-Cruz"
+    },
+    {
+      "display_name": "Fernando J. Corrales",
+      "id": "A5006711564",
+      "orcid": "https://orcid.org/0000-0002-0231-5159",
+      "institutions": [
+        {
+          "id": "I88155538",
+          "display_name": "Universidad de Navarra",
+          "country_code": "ES",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F.J. Corrales"
+    },
+    {
+      "display_name": "Ángel Rubio",
+      "id": "A5046603247",
+      "orcid": "https://orcid.org/0000-0002-3274-2450",
+      "institutions": [
+        {
+          "id": "I170828890",
+          "display_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
+          "country_code": "ES",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I88155538",
+          "display_name": "Universidad de Navarra",
+          "country_code": "ES",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Rubio"
+    }
+  ],
+  "publication_year": 2005,
+  "publication_date": "2005-10-01",
+  "type": "article",
+  "cited_by_count": 246,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S36029991",
+    "display_name": "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
+    "issn_l": "1545-5963",
+    "issn": [
+      "1545-5963",
+      "1557-9964",
+      "2374-0043"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "2",
+  "issue": "4",
+  "first_page": "330",
+  "last_page": "338",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C130318100",
+      "display_name": "Semantic similarity",
+      "level": 2,
+      "score": 0.85274386
+    },
+    {
+      "id": "C103278499",
+      "display_name": "Similarity (geometry)",
+      "level": 3,
+      "score": 0.7851317
+    },
+    {
+      "id": "C117220453",
+      "display_name": "Correlation",
+      "level": 2,
+      "score": 0.59477425
+    },
+    {
+      "id": "C2908923196",
+      "display_name": "Gene Annotation",
+      "level": 4,
+      "score": 0.5758529
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.56493944
+    },
+    {
+      "id": "C2776321320",
+      "display_name": "Annotation",
+      "level": 2,
+      "score": 0.5516608
+    },
+    {
+      "id": "C55078378",
+      "display_name": "Pearson product-moment correlation coefficient",
+      "level": 2,
+      "score": 0.51084584
+    },
+    {
+      "id": "C73555534",
+      "display_name": "Cluster analysis",
+      "level": 2,
+      "score": 0.48852932
+    },
+    {
+      "id": "C90559484",
+      "display_name": "Expression (computer science)",
+      "level": 2,
+      "score": 0.4774459
+    },
+    {
+      "id": "C2776517306",
+      "display_name": "Similarity measure",
+      "level": 2,
+      "score": 0.46347058
+    },
+    {
+      "id": "C25810664",
+      "display_name": "Ontology",
+      "level": 2,
+      "score": 0.46045947
+    },
+    {
+      "id": "C2987395477",
+      "display_name": "Gene ontology",
+      "level": 4,
+      "score": 0.44216365
+    },
+    {
+      "id": "C143271835",
+      "display_name": "Similitude",
+      "level": 2,
+      "score": 0.417422
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.39552653
+    },
+    {
+      "id": "C124101348",
+      "display_name": "Data mining",
+      "level": 1,
+      "score": 0.39000475
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.3091182
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.27932563
+    },
+    {
+      "id": "C150194340",
+      "display_name": "Gene expression",
+      "level": 3,
+      "score": 0.24409476
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.18025008
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.16721636
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.1102511
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.070254594
+    },
+    {
+      "id": "C141231307",
+      "display_name": "Genome",
+      "level": 3,
+      "score": 0.068636626
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C111472728",
+      "display_name": "Epistemology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10887",
+      "display_name": "Bioinformatics and Genomic Networks",
+      "score": 0.9998
+    },
+    {
+      "id": "T10885",
+      "display_name": "Gene expression and cancer classification",
+      "score": 0.9994
+    },
+    {
+      "id": "T11710",
+      "display_name": "Biomedical Text Mining and Ontologies",
+      "score": 0.9934
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tcbb.2005.50",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:36:41.245080",
+  "source_database": "OpenAlex"
+}

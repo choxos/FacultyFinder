@@ -1,0 +1,169 @@
+{
+  "pmid": "32562286",
+  "uid": "32562286",
+  "title": "Initial evaluation of a convolutional neural network used for noninvasive assessment of coronary artery disease severity from coronary computed tomography angiography data.",
+  "abstract": "PURPOSE: Coronary computed tomography angiography (CTA) has one of the highest diagnostic sensitivities for detection of the significance of coronary artery disease (CAD); however, sensitivity is moderate and may result in increased catheterization rates. We performed an efficacy study to determine whether a trained machine learning algorithm that uses coronary CTA data may improve CAD diagnosis accuracy. METHODS: Sixty-four-patient image datasets based on coronary CTA were retrospectively collected to generate eight views considering 45° increments around the coronary artery centerline. The dataset was randomly split into training and testing cohorts. Invasive FFR measurements were used as ground truth labels. A convolutional neural network (CNN) was trained and the model's capacity to predict severity of CAD was assessed on the testing cohort. Classification accuracy and area under the receiver operating characteristic curve (AUROC) analysis were performed. Similar CAD severity classification accuracy and AUROC analyses were performed using only percent diameter stenosis (%DS) and CT-derived FFR performed by 13 operators with various levels of expertise. RESULTS: Classification accuracy over the test cohort was 80.9% using the trained network and 72.4% using the user-operated CT-derived FFR software. AUROC over the test cohort was 0.862 using the trained network, 0.807 using %DS, and 0.758 using the human-operated CT-derived FFR software. CONCLUSIONS: A trained neural network compared noninferiorly in-terms of classification accuracy and AUROC with human operators of a CT-derived FFR software, and in-terms of AUROC with clinical decision-making using %DS.",
+  "authors": [
+    {
+      "last_name": "Podgorsak",
+      "fore_name": "Alexander R",
+      "initials": "AR",
+      "name": "Alexander R Podgorsak",
+      "affiliations": [
+        "From the Canon Stroke and Vascular Research Center, 875 Ellicott Street, Buffalo, NY, 14222, USA."
+      ]
+    },
+    {
+      "last_name": "Sommer",
+      "fore_name": "Kelsey N",
+      "initials": "KN",
+      "name": "Kelsey N Sommer",
+      "affiliations": [
+        "From the Canon Stroke and Vascular Research Center, 875 Ellicott Street, Buffalo, NY, 14222, USA."
+      ]
+    },
+    {
+      "last_name": "Reddy",
+      "fore_name": "Abhinay",
+      "initials": "A",
+      "name": "Abhinay Reddy",
+      "affiliations": [
+        "From the Canon Stroke and Vascular Research Center, 875 Ellicott Street, Buffalo, NY, 14222, USA."
+      ]
+    },
+    {
+      "last_name": "Iyer",
+      "fore_name": "Vijay",
+      "initials": "V",
+      "name": "Vijay Iyer",
+      "affiliations": [
+        "From the Canon Stroke and Vascular Research Center, 875 Ellicott Street, Buffalo, NY, 14222, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael F",
+      "initials": "MF",
+      "name": "Michael F Wilson",
+      "affiliations": [
+        "From the Canon Stroke and Vascular Research Center, 875 Ellicott Street, Buffalo, NY, 14222, USA."
+      ]
+    },
+    {
+      "last_name": "Rybicki",
+      "fore_name": "Frank J",
+      "initials": "FJ",
+      "name": "Frank J Rybicki",
+      "affiliations": [
+        "Department of Radiology, University of Cincinnati, 234 Goodman Street, Cincinnati, OH, USA."
+      ]
+    },
+    {
+      "last_name": "Mitsouras",
+      "fore_name": "Dimitrios",
+      "initials": "D",
+      "name": "Dimitrios Mitsouras",
+      "affiliations": [
+        "San Francisco Department of Radiology and Biomedical Imaging, University of California, 505 Parnassus Avenue, San Francisco, CA, 94143, USA."
+      ]
+    },
+    {
+      "last_name": "Sharma",
+      "fore_name": "Umesh",
+      "initials": "U",
+      "name": "Umesh Sharma",
+      "affiliations": [
+        "From the Canon Stroke and Vascular Research Center, 875 Ellicott Street, Buffalo, NY, 14222, USA."
+      ]
+    },
+    {
+      "last_name": "Fujimoto",
+      "fore_name": "Shinchiro",
+      "initials": "S",
+      "name": "Shinchiro Fujimoto",
+      "affiliations": [
+        "Department of Cardiovascular Medicine, Juntendo University, 3-1-3 Hongo, Bunkyo-ku, Tokyo, Japan."
+      ]
+    },
+    {
+      "last_name": "Kumamaru",
+      "fore_name": "Kanako K",
+      "initials": "KK",
+      "name": "Kanako K Kumamaru",
+      "affiliations": [
+        "Department of Radiology, Juntendo University, 3-1-3 Hongo, Bunkyo-ku, Tokyo, Japan."
+      ]
+    },
+    {
+      "last_name": "Angel",
+      "fore_name": "Erin",
+      "initials": "E",
+      "name": "Erin Angel",
+      "affiliations": [
+        "Canon Medical Systems USA, Inc., 2441 Michelle Drive, Tustin, CA, 92780, USA."
+      ]
+    },
+    {
+      "last_name": "Ionita",
+      "fore_name": "Ciprian N",
+      "initials": "CN",
+      "name": "Ciprian N Ionita",
+      "affiliations": [
+        "From the Canon Stroke and Vascular Research Center, 875 Ellicott Street, Buffalo, NY, 14222, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Medical physics",
+    "iso_abbreviation": "Med Phys",
+    "issn": "2473-4209",
+    "issn_type": "Electronic",
+    "volume": "47",
+    "issue": "9",
+    "pub_year": "2020",
+    "pub_month": "Sep"
+  },
+  "start_page": "3996",
+  "end_page": "4004",
+  "pages": "3996-4004",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Computed Tomography Angiography",
+    "Coronary Angiography",
+    "Coronary Artery Disease",
+    "Coronary Stenosis",
+    "Fractional Flow Reserve, Myocardial",
+    "Humans",
+    "Neural Networks, Computer",
+    "Predictive Value of Tests",
+    "Retrospective Studies",
+    "Severity of Illness Index",
+    "Tomography, X-Ray Computed"
+  ],
+  "article_ids": {
+    "pubmed": "32562286",
+    "doi": "10.1002/mp.14339"
+  },
+  "doi": "10.1002/mp.14339",
+  "dates": {
+    "completed": "2021-05-14",
+    "revised": "2021-05-14"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "agency": "James H. Cummings Foundation (James H. Cummings Foundation, Inc.)"
+    },
+    {
+      "agency": "Canon Medical Systems USA"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.633289",
+    "pmid": "32562286"
+  }
+}

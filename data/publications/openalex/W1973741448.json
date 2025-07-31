@@ -1,0 +1,781 @@
+{
+  "openalex_id": "W1973741448",
+  "doi": "https://doi.org/10.3389/fnsys.2011.00002",
+  "title": "A Baseline for the Multivariate Comparison of Resting-State Networks",
+  "abstract": "As the size of functional and structural MRI datasets expands, it becomes increasingly important to establish a baseline from which diagnostic relevance may be determined, a processing strategy that efficiently prepares data for analysis, and a statistical approach that identifies important effects in a manner that is both robust and reproducible. In this paper, we introduce a multivariate analytic approach that optimizes sensitivity and reduces unnecessary testing. We demonstrate the utility of this mega-analytic approach by identifying the effects of age and gender on the resting state networks of 603 healthy adolescents and adults (mean age: 23.4 years, range: 12 to 71 years). Data were collected on the same scanner, preprocessed using an automated analysis pipeline based in SPM, and studied using group independent component analysis. Resting state networks were identified and evaluated in terms of three primary outcome measures: time course spectral power, spatial map intensity, and functional network connectivity. Results revealed robust effects of age on all three outcome measures, largely indicating decreases in network coherence and connectivity with increasing age. Gender effects were of smaller magnitude but suggested stronger intra-network connectivity in females and more inter-network connectivity in males, particularly with regard to sensorimotor networks. These findings, along with the analysis approach and statistical framework described here, provide a useful baseline for future investigations of brain networks in health and disease.",
+  "authors": [
+    {
+      "display_name": "Elena A. Allen",
+      "id": "A5004414758",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elena A. Allen"
+    },
+    {
+      "display_name": "Erik B. Erhardt",
+      "id": "A5082694822",
+      "orcid": "https://orcid.org/0000-0002-9817-4011",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Erik B. Erhardt"
+    },
+    {
+      "display_name": "Eswar Damaraju",
+      "id": "A5070489711",
+      "orcid": "https://orcid.org/0000-0002-5345-3551",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eswar Damaraju"
+    },
+    {
+      "display_name": "William Gruner",
+      "id": "A5010667361",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William Gruner"
+    },
+    {
+      "display_name": "J.M. Segall",
+      "id": "A5075530972",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Judith M. Segall"
+    },
+    {
+      "display_name": "Rogers F. Silva",
+      "id": "A5024260846",
+      "orcid": "https://orcid.org/0000-0002-7271-1288",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rogers F. Silva"
+    },
+    {
+      "display_name": "Martin Havlíček",
+      "id": "A5046878536",
+      "orcid": "https://orcid.org/0000-0001-9217-8268",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin Havlicek"
+    },
+    {
+      "display_name": "Srinivas Rachakonda",
+      "id": "A5110094835",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Srinivas Rachakonda"
+    },
+    {
+      "display_name": "Jill Fries",
+      "id": "A5027310217",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jill Fries"
+    },
+    {
+      "display_name": "Ravi Kalyanam",
+      "id": "A5053332249",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ravi Kalyanam"
+    },
+    {
+      "display_name": "Andrew M. Michael",
+      "id": "A5016698254",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew M. Michael"
+    },
+    {
+      "display_name": "Arvind Caprihan",
+      "id": "A5030080051",
+      "orcid": "https://orcid.org/0000-0002-4810-359X",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Arvind Caprihan"
+    },
+    {
+      "display_name": "Jessica A. Turner",
+      "id": "A5005182829",
+      "orcid": "https://orcid.org/0000-0003-0076-8434",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jessica A. Turner"
+    },
+    {
+      "display_name": "Tom Eichele",
+      "id": "A5086955528",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4432739",
+          "display_name": "University of Bergen",
+          "country_code": "NO",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tom Eichele"
+    },
+    {
+      "display_name": "Steven Adelsheim",
+      "id": "A5009825570",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven Adelsheim"
+    },
+    {
+      "display_name": "Angela D. Bryan",
+      "id": "A5009045762",
+      "orcid": "https://orcid.org/0000-0002-6019-3380",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Angela D. Bryan"
+    },
+    {
+      "display_name": "Juan Bustillo",
+      "id": "A5030435608",
+      "orcid": "https://orcid.org/0000-0001-8730-8152",
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Juan Bustillo"
+    },
+    {
+      "display_name": "Vincent P. Clark",
+      "id": "A5085419608",
+      "orcid": "https://orcid.org/0000-0002-9151-2102",
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vincent P. Clark"
+    },
+    {
+      "display_name": "Sarah W. Feldstein Ewing",
+      "id": "A5033898419",
+      "orcid": "https://orcid.org/0000-0002-9120-9306",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sarah W. Feldstein Ewing"
+    },
+    {
+      "display_name": "Francesca M. Filbey",
+      "id": "A5084353177",
+      "orcid": "https://orcid.org/0000-0002-7466-4796",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I162577319",
+          "display_name": "The University of Texas at Dallas",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Francesca Filbey"
+    },
+    {
+      "display_name": "Corey C. Ford",
+      "id": "A5108224499",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Corey C. Ford"
+    },
+    {
+      "display_name": "Kent E. Hutchison",
+      "id": "A5007663400",
+      "orcid": "https://orcid.org/0000-0002-4805-9277",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kent Hutchison"
+    },
+    {
+      "display_name": "Rex E. Jung",
+      "id": "A5038892405",
+      "orcid": "https://orcid.org/0000-0003-3718-0597",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rex E. Jung"
+    },
+    {
+      "display_name": "Kent A. Kiehl",
+      "id": "A5015647568",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kent A. Kiehl"
+    },
+    {
+      "display_name": "Piyadasa Kodituwakku",
+      "id": "A5054769124",
+      "orcid": "https://orcid.org/0000-0001-6426-9146",
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Piyadasa Kodituwakku"
+    },
+    {
+      "display_name": "Yuko M. Komesu",
+      "id": "A5042563940",
+      "orcid": "https://orcid.org/0000-0002-7961-6865",
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuko M. Komesu"
+    },
+    {
+      "display_name": "Andrew R. Mayer",
+      "id": "A5023429332",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew R. Mayer"
+    },
+    {
+      "display_name": "Godfrey D. Pearlson",
+      "id": "A5011715160",
+      "orcid": "https://orcid.org/0000-0002-7525-5185",
+      "institutions": [
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210093608",
+          "display_name": "Neuropsychiatric Research Institute",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I4401726811",
+          "display_name": "Hartford Financial Services (United States)",
+          "country_code": null,
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Godfrey D. Pearlson"
+    },
+    {
+      "display_name": "J. P. Phillips",
+      "id": "A5068575502",
+      "orcid": "https://orcid.org/0000-0001-6530-699X",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John P. Phillips"
+    },
+    {
+      "display_name": "Joseph Sadek",
+      "id": "A5029831532",
+      "orcid": "https://orcid.org/0000-0001-7234-1814",
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210154741",
+          "display_name": "New Mexico VA Health Care System",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joseph R. Sadek"
+    },
+    {
+      "display_name": "Michael C. Stevens",
+      "id": "A5042913057",
+      "orcid": "https://orcid.org/0000-0002-3799-5465",
+      "institutions": [
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210093608",
+          "display_name": "Neuropsychiatric Research Institute",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I4401726811",
+          "display_name": "Hartford Financial Services (United States)",
+          "country_code": null,
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Stevens"
+    },
+    {
+      "display_name": "Ursina Teuscher",
+      "id": "A5086757729",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ursina Teuscher"
+    },
+    {
+      "display_name": "Robert J. Thoma",
+      "id": "A5044569327",
+      "orcid": "https://orcid.org/0000-0002-4091-5593",
+      "institutions": [
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert J. Thoma"
+    },
+    {
+      "display_name": "Vince D. Calhoun",
+      "id": "A5032850756",
+      "orcid": "https://orcid.org/0000-0001-9058-0747",
+      "institutions": [
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1334567473",
+          "display_name": "Mind Research Network",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vince D. Calhoun"
+    }
+  ],
+  "publication_year": 2011,
+  "publication_date": "2011-01-01",
+  "type": "article",
+  "cited_by_count": 1292,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S97434221",
+    "display_name": "Frontiers in Systems Neuroscience",
+    "issn_l": "1662-5137",
+    "issn": [
+      "1662-5137"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320527"
+  },
+  "volume": "5",
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.frontiersin.org/articles/10.3389/fnsys.2011.00002/pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C66324658",
+      "display_name": "Resting state fMRI",
+      "level": 2,
+      "score": 0.7776259
+    },
+    {
+      "id": "C12725497",
+      "display_name": "Baseline (sea)",
+      "level": 2,
+      "score": 0.77581704
+    },
+    {
+      "id": "C161584116",
+      "display_name": "Multivariate statistics",
+      "level": 2,
+      "score": 0.719261
+    },
+    {
+      "id": "C38180746",
+      "display_name": "Multivariate analysis",
+      "level": 2,
+      "score": 0.47231174
+    },
+    {
+      "id": "C48103436",
+      "display_name": "State (computer science)",
+      "level": 2,
+      "score": 0.43132263
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.3181981
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.19094288
+    },
+    {
+      "id": "C169760540",
+      "display_name": "Neuroscience",
+      "level": 1,
+      "score": 0.13351902
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.11500576
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.100731134
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.067156434
+    },
+    {
+      "id": "C505870484",
+      "display_name": "Fishery",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10581",
+      "display_name": "Neural dynamics and brain function",
+      "score": 0.9998
+    },
+    {
+      "id": "T10241",
+      "display_name": "Functional Brain Connectivity Studies",
+      "score": 0.994
+    },
+    {
+      "id": "T11513",
+      "display_name": "stochastic dynamics and bifurcation",
+      "score": 0.9914
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3389/fnsys.2011.00002",
+  "pdf_url": "https://www.frontiersin.org/articles/10.3389/fnsys.2011.00002/pdf",
+  "retrieved_date": "2025-07-30T14:42:28.984379",
+  "source_database": "OpenAlex"
+}

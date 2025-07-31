@@ -1,0 +1,312 @@
+{
+  "pmid": "40443788",
+  "uid": "40443788",
+  "title": "Machine Learning Accurately Predicts Need for Critical Care Support in Patients Admitted to Hospital for Community-Acquired Pneumonia.",
+  "abstract": "OBJECTIVES: Hospitalized community-acquired pneumonia (CAP) patients are admitted for ventilation, vasopressors, and renal replacement therapy (RRT). This study aimed to develop a machine learning (ML) model that predicts the need for such interventions and compare its accuracy to that of logistic regression (LR). DESIGN: This retrospective observational study trained separate models using random-forest classifier (RFC), support vector machines (SVMs), Extreme Gradient Boosting (XGBoost), and multilayer perceptron (MLP) to predict three endpoints: eventual use of invasive ventilation, vasopressors, and RRT during hospitalization. RFC-based models were overall most accurate in a derivation COVID-19 CAP cohort and were validated in one COVID-19 CAP and two non-COVID-19 CAP cohorts. SETTING: This study is part of the Community-Acquired Pneumonia: Toward InnoVAtive Treatment (CAPTIVATE) Research program. PATIENTS: Two thousand four hundred twenty COVID-19 and 1909 non-COVID-19 CAP patients over 18 years old hospitalized and not needing invasive ventilation, vasopressors, and RRT on the day of admission were included. INTERVENTIONS: None. MEASUREMENTS AND MAIN RESULTS: Performance was evaluated with area under the receiver operating characteristic curve (AUROC) and accuracy. RFCs performed better than XGBoost, SVM, and MLP models. For comparison, we evaluated LR models in the same cohorts. AUROC was very high ranging from 0.74 to 0.95 in predicting ventilation, vasopressors, and RRT use in our derivation and validation cohorts. ML used and variables such as Fio2, Glasgow Coma Scale, and mean arterial pressure to predict ventilator, vasopressor use, creatinine, and potassium to predict RRT use. LR was less accurate than ML, with AUROC ranging 0.66 to 0.8. CONCLUSIONS: A ML algorithm more accurately predicts need of invasive ventilation, vasopressors, or RRT in hospitalized non-COVID-19 CAP and COVID-19 patients than regression models and could augment clinician judgment for triage and care of hospitalized CAP patients.",
+  "authors": [
+    {
+      "last_name": "Chen",
+      "fore_name": "George S",
+      "initials": "GS",
+      "name": "George S Chen",
+      "affiliations": [
+        "University of British Columbia, Vancouver, BC, Canada."
+      ],
+      "orcid": "0000-0002-1425-6475"
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Terry",
+      "initials": "T",
+      "name": "Terry Lee",
+      "affiliations": [
+        "Centre for Advancing Health Outcomes, St. Paul's Hospital, University of British Columbia, Vancouver, BC, Canada."
+      ]
+    },
+    {
+      "last_name": "Tsang",
+      "fore_name": "Jennifer L Y",
+      "initials": "JLY",
+      "name": "Jennifer L Y Tsang",
+      "affiliations": [
+        "Critical Care Medicine, Niagara Health Knowledge Institute, St Catharines, ON, Canada.",
+        "Critical Care Medicine, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Binnie",
+      "fore_name": "Alexandra",
+      "initials": "A",
+      "name": "Alexandra Binnie",
+      "affiliations": [
+        "Critical Care Department, William Osler Health System, Brampton, ON, Canada.",
+        "Critical Care Medicine, Algarve Biomedical Centre, Faro, Portugal.",
+        "Critical Care Medicine, Centro Hospitalar Universitário do Algarve, Faro, Portugal."
+      ]
+    },
+    {
+      "last_name": "McCarthy",
+      "fore_name": "Anne",
+      "initials": "A",
+      "name": "Anne McCarthy",
+      "affiliations": [
+        "Infectious Disease, Ottawa Research Institute, University of Ottawa, Ottawa, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Cowan",
+      "fore_name": "Juthaporn",
+      "initials": "J",
+      "name": "Juthaporn Cowan",
+      "affiliations": [
+        "Infectious Disease, Ottawa Research Institute, University of Ottawa, Ottawa, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Archambault",
+      "fore_name": "Patrick",
+      "initials": "P",
+      "name": "Patrick Archambault",
+      "affiliations": [
+        "St. George Hospital, Levis, QC, Canada."
+      ]
+    },
+    {
+      "last_name": "Lellouche",
+      "fore_name": "Francois",
+      "initials": "F",
+      "name": "Francois Lellouche",
+      "affiliations": [
+        "CHU de Québec-Université Laval Research Center, Population Health and Optimal Health Practices Unit, Trauma- Emergency- Critical Care Medicine, Québec City, QC, Canada.",
+        "Department of Anesthesiology and Critical Care Medicine, Division of Critical Care Medicine, Faculty of Medicine, Université Laval, Québec City, QC, Canada."
+      ]
+    },
+    {
+      "last_name": "Turgeon",
+      "fore_name": "Alexis F",
+      "initials": "AF",
+      "name": "Alexis F Turgeon",
+      "affiliations": [
+        "CHU de Québec-Université Laval Research Center, Population Health and Optimal Health Practices Unit, Trauma- Emergency- Critical Care Medicine, Québec City, QC, Canada.",
+        "Department of Anesthesiology and Critical Care Medicine, Division of Critical Care Medicine, Faculty of Medicine, Université Laval, Québec City, QC, Canada."
+      ]
+    },
+    {
+      "last_name": "Yoon",
+      "fore_name": "Jennifer",
+      "initials": "J",
+      "name": "Jennifer Yoon",
+      "affiliations": [
+        "Critical Care Medicine, Humber River Hospital, Toronto, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Lamontagne",
+      "fore_name": "Francois",
+      "initials": "F",
+      "name": "Francois Lamontagne",
+      "affiliations": [
+        "Critical Care Medicine, University of Sherbrooke, Sherbrooke, QC, Canada."
+      ]
+    },
+    {
+      "last_name": "McGeer",
+      "fore_name": "Allison",
+      "initials": "A",
+      "name": "Allison McGeer",
+      "affiliations": [
+        "Mt. Sinai Hospital, University of Toronto, Toronto, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Douglas",
+      "fore_name": "Josh",
+      "initials": "J",
+      "name": "Josh Douglas",
+      "affiliations": [
+        "Critical Care Medicine, Lion's Gate Hospital, North Vancouver, BC, Canada."
+      ]
+    },
+    {
+      "last_name": "Daley",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Daley",
+      "affiliations": [
+        "Infectious Disease, Memorial University of Newfoundland, St. John's, NL, Canada."
+      ]
+    },
+    {
+      "last_name": "Fowler",
+      "fore_name": "Robert",
+      "initials": "R",
+      "name": "Robert Fowler",
+      "affiliations": [
+        "Critical Care Medicine, Sunnybrook Health Sciences Centre, Toronto, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Maslove",
+      "fore_name": "David M",
+      "initials": "DM",
+      "name": "David M Maslove",
+      "affiliations": [
+        "Department of Critical Care, Kingston General Hospital and Queen's University, Kingston, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Winston",
+      "fore_name": "Brent W",
+      "initials": "BW",
+      "name": "Brent W Winston",
+      "affiliations": [
+        "Departments of Critical Care Medicine, Medicine and Biochemistry and Molecular Biology, Foothills Medical Centre, University of Calgary, Calgary, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Todd C",
+      "initials": "TC",
+      "name": "Todd C Lee",
+      "affiliations": [
+        "Division of Infectious Disease, McGill University, Montreal, QC, Canada."
+      ]
+    },
+    {
+      "last_name": "Tran",
+      "fore_name": "Karen C",
+      "initials": "KC",
+      "name": "Karen C Tran",
+      "affiliations": [
+        "Division of General Internal Medicine, Vancouver General Hospital, Vancouver, BC, Canada."
+      ]
+    },
+    {
+      "last_name": "Cheng",
+      "fore_name": "Matthew P",
+      "initials": "MP",
+      "name": "Matthew P Cheng",
+      "affiliations": [
+        "Division of Infectious Disease, McGill University, Montreal, QC, Canada."
+      ]
+    },
+    {
+      "last_name": "Vinh",
+      "fore_name": "Donald C",
+      "initials": "DC",
+      "name": "Donald C Vinh",
+      "affiliations": [
+        "Division of Infectious Disease, McGill University, Montreal, QC, Canada."
+      ]
+    },
+    {
+      "last_name": "Boyd",
+      "fore_name": "John H",
+      "initials": "JH",
+      "name": "John H Boyd",
+      "affiliations": [
+        "Centre for Heart Lung Innovation, St. Paul's Hospital, University of British Columbia, Vancouver, BC, Canada.",
+        "Division of Critical Care Medicine, St. Paul's Hospital, University of British Columbia, Vancouver, BC, Canada."
+      ]
+    },
+    {
+      "last_name": "Walley",
+      "fore_name": "Keith R",
+      "initials": "KR",
+      "name": "Keith R Walley",
+      "affiliations": [
+        "Centre for Heart Lung Innovation, St. Paul's Hospital, University of British Columbia, Vancouver, BC, Canada.",
+        "Division of Critical Care Medicine, St. Paul's Hospital, University of British Columbia, Vancouver, BC, Canada."
+      ]
+    },
+    {
+      "last_name": "Singer",
+      "fore_name": "Joel",
+      "initials": "J",
+      "name": "Joel Singer",
+      "affiliations": [
+        "Centre for Advancing Health Outcomes, St. Paul's Hospital, University of British Columbia, Vancouver, BC, Canada."
+      ]
+    },
+    {
+      "last_name": "Marshall",
+      "fore_name": "John C",
+      "initials": "JC",
+      "name": "John C Marshall",
+      "affiliations": [
+        "Department of Surgery, St. Michael's Hospital, Toronto, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Russell",
+      "fore_name": "James A",
+      "initials": "JA",
+      "name": "James A Russell",
+      "affiliations": [
+        "Centre for Heart Lung Innovation, St. Paul's Hospital, University of British Columbia, Vancouver, BC, Canada.",
+        "Division of Critical Care Medicine, St. Paul's Hospital, University of British Columbia, Vancouver, BC, Canada."
+      ]
+    },
+    {
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Critical care explorations",
+    "iso_abbreviation": "Crit Care Explor",
+    "issn": "2639-8028",
+    "issn_type": "Electronic",
+    "volume": "7",
+    "issue": "6",
+    "pub_year": "2025",
+    "pub_month": "Jun"
+  },
+  "start_page": "e1262",
+  "pages": "e1262",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Observational Study",
+    "Comment"
+  ],
+  "keywords": [
+    "Humans",
+    "Retrospective Studies",
+    "Community-Acquired Infections",
+    "Machine Learning",
+    "Male",
+    "Female",
+    "COVID-19",
+    "Middle Aged",
+    "Aged",
+    "Critical Care",
+    "Hospitalization",
+    "Respiration, Artificial",
+    "Renal Replacement Therapy",
+    "Pneumonia",
+    "Vasoconstrictor Agents",
+    "SARS-CoV-2",
+    "Community-Acquired Pneumonia"
+  ],
+  "article_ids": {
+    "pubmed": "40443788",
+    "pmc": "PMC12119046",
+    "doi": "10.1097/CCE.0000000000001262",
+    "pii": "02107256-202506000-00001"
+  },
+  "doi": "10.1097/CCE.0000000000001262",
+  "pmc_id": "PMC12119046",
+  "dates": {
+    "completed": "2025-05-30",
+    "revised": "2025-07-03"
+  },
+  "chemicals": [
+    "Vasoconstrictor Agents"
+  ],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T15:03:38.982914",
+    "pmid": "40443788"
+  }
+}

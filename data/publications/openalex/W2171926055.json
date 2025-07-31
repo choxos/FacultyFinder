@@ -1,0 +1,203 @@
+{
+  "openalex_id": "W2171926055",
+  "doi": "https://doi.org/10.4018/jdwm.2006100102",
+  "title": "Navigation Rules for Exploring Large Multidimensional Data Cubes",
+  "abstract": "Navigating through multidimensional data cubes is a nontrivial task. Although On-Line Analytical Processing (OLAP) provides the capability to view multidimensional data through rollup, drill-down, and slicing-dicing, it offers minimal guidance to end users in the actual knowledge discovery process. In this article, we address this knowledge discovery problem by identifying novel and useful patterns concealed in multidimensional data that are used for effective exploration of data cubes. We present an algorithm for the DIscovery of Sk-NAvigation Rules (DISNAR), which discovers the hidden interesting patterns in the form of Sk-navigation rules using a test of skewness on the pairs of the current and its candidate drill-down lattice nodes. The rules then are used to enhance navigational capabilities, as illustrated by our rule-driven system. Extensive experimental analysis shows that the DISNAR algorithm discovers the interesting patterns with a high recall and precision with small execution time and low space overhead.",
+  "authors": [
+    {
+      "display_name": "Navin Kumar",
+      "id": "A5043300275",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I79272384",
+          "display_name": "University of Maryland, Baltimore County",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Navin Kumar"
+    },
+    {
+      "display_name": "Aryya Gangopadhyay",
+      "id": "A5051208435",
+      "orcid": "https://orcid.org/0000-0002-7553-7932",
+      "institutions": [
+        {
+          "id": "I79272384",
+          "display_name": "University of Maryland, Baltimore County",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Aryya Gangopadhyay"
+    },
+    {
+      "display_name": "George Karabatis",
+      "id": "A5065573453",
+      "orcid": "https://orcid.org/0000-0002-2208-0801",
+      "institutions": [
+        {
+          "id": "I79272384",
+          "display_name": "University of Maryland, Baltimore County",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "George Karabatis"
+    },
+    {
+      "display_name": "Sanjay Bapna",
+      "id": "A5054624422",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I83909951",
+          "display_name": "Morgan State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sanjay Bapna"
+    },
+    {
+      "display_name": "Zhiyuan Chen",
+      "id": "A5100438515",
+      "orcid": "https://orcid.org/0000-0002-6984-7248",
+      "institutions": [
+        {
+          "id": "I79272384",
+          "display_name": "University of Maryland, Baltimore County",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhiyuan Chen"
+    }
+  ],
+  "publication_year": 2006,
+  "publication_date": "2006-10-01",
+  "type": "article",
+  "cited_by_count": 7,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S53932126",
+    "display_name": "International Journal of Data Warehousing and Mining",
+    "issn_l": "1548-3924",
+    "issn": [
+      "1548-3924",
+      "1548-3932"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320424"
+  },
+  "volume": "2",
+  "issue": "4",
+  "first_page": "27",
+  "last_page": "48",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://mdsoar.org/bitstreams/7b2fe000-8889-4c0b-97e4-cbb6ed10ba5e/download",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.8554477
+    },
+    {
+      "id": "C201932085",
+      "display_name": "Online analytical processing",
+      "level": 3,
+      "score": 0.83084327
+    },
+    {
+      "id": "C124101348",
+      "display_name": "Data mining",
+      "level": 1,
+      "score": 0.6245208
+    },
+    {
+      "id": "C120567893",
+      "display_name": "Knowledge extraction",
+      "level": 2,
+      "score": 0.57308817
+    },
+    {
+      "id": "C78168278",
+      "display_name": "Data cube",
+      "level": 2,
+      "score": 0.5642026
+    },
+    {
+      "id": "C2776190703",
+      "display_name": "Slicing",
+      "level": 2,
+      "score": 0.5190147
+    },
+    {
+      "id": "C98045186",
+      "display_name": "Process (computing)",
+      "level": 2,
+      "score": 0.42078274
+    },
+    {
+      "id": "C135572916",
+      "display_name": "Data warehouse",
+      "level": 2,
+      "score": 0.36550623
+    },
+    {
+      "id": "C23123220",
+      "display_name": "Information retrieval",
+      "level": 1,
+      "score": 0.34482342
+    },
+    {
+      "id": "C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "score": 0.08750084
+    },
+    {
+      "id": "C111919701",
+      "display_name": "Operating system",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11106",
+      "display_name": "Data Management and Algorithms",
+      "score": 0.999
+    },
+    {
+      "id": "T10317",
+      "display_name": "Advanced Database Systems and Queries",
+      "score": 0.9973
+    },
+    {
+      "id": "T12016",
+      "display_name": "Web Data Mining and Analysis",
+      "score": 0.9903
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.4018/jdwm.2006100102",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:48:51.691940",
+  "source_database": "OpenAlex"
+}

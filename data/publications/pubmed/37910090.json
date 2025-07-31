@@ -1,0 +1,101 @@
+{
+  "pmid": "37910090",
+  "uid": "37910090",
+  "title": "Prediction of High-Risk Donors for Kidney Discard and Nonrecovery Using Structured Donor Characteristics and Unstructured Donor Narratives.",
+  "abstract": "IMPORTANCE: Despite the unmet need, many deceased-donor kidneys are discarded or not recovered. Inefficient allocation and prolonged ischemia time are contributing factors, and early detection of high-risk donors may reduce organ loss. OBJECTIVE: To evaluate the feasibility of machine learning (ML) and natural language processing (NLP) classification of donors with kidneys that are used vs not used for organ transplant. DESIGN, SETTING, AND PARTICIPANTS: This retrospective cohort study used donor information (structured donor characteristics and unstructured donor narratives) from the United Network for Organ Sharing (UNOS). All donor offers to a single transplant center between January 2015 and December 2020 were used to train and validate ML models to predict donors who had at least 1 kidney transplanted (at our center or another center). The donor data from 2021 were used to test each model. EXPOSURES: Donor information was provided by UNOS to the transplant centers with potential transplant candidates. Each center evaluated the donor and decided within an allotted time whether to accept the kidney for organ transplant. MAIN OUTCOMES AND MEASURES: Outcome metrics of the test cohort included area under the receiver operating characteristic curve (AUROC), F1 score, accuracy, precision, and recall of each ML classifier. Feature importance and Shapley additive explanation (SHAP) summaries were assessed for model explainability. RESULTS: The training/validation cohort included 9555 donors (median [IQR] age, 50 [36-58] years; 5571 male [58.3%]), and the test cohort included 2481 donors (median [IQR] age, 52 [40-59] years; 1496 male [60.3%]). Only 20% to 30% of potential donors had at least 1 kidney transplanted. The ML model with a single variable (Kidney Donor Profile Index) showed an AUROC of 0.69, F1 score of 0.42, and accuracy of 0.64. Multivariable ML models based on basic a priori structured donor data showed similar metrics (logistic regression: AUROC = 0.70; F1 score = 0.42; accuracy = 0.62; random forest classifier: AUROC = 0.69; F1 score = 0.42; accuracy = 0.64). The classic NLP model (bag-of-words model) showed its best metrics (AUROC = 0.60; F1 score = 0.35; accuracy = 0.59) by the logistic regression classifier. The advanced Bidirectional Encoder Representations From Transformers model showed comparable metrics (AUROC = 0.62; F1 score = 0.39; accuracy = 0.69) only after appending basic donor information. Feature importance and SHAP detected the variables (and words) that affected the models most. CONCLUSIONS AND RELEVANCE: Results of this cohort study suggest that models using ML can be applied to predict donors with high-risk kidneys not used for organ transplant, but the models still need further elaboration. The use of unstructured data is likely to expand the possibilities; further exploration of new approaches will be necessary to develop models with better predictive metrics.",
+  "authors": [
+    {
+      "last_name": "Sageshima",
+      "fore_name": "Junichiro",
+      "initials": "J",
+      "name": "Junichiro Sageshima",
+      "affiliations": [
+        "Department of Surgery, University of California, Davis Health, Sacramento."
+      ]
+    },
+    {
+      "last_name": "Than",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Than",
+      "affiliations": [
+        "Department of Surgery, University of California, Davis Health, Sacramento."
+      ]
+    },
+    {
+      "last_name": "Goussous",
+      "fore_name": "Naeem",
+      "initials": "N",
+      "name": "Naeem Goussous",
+      "affiliations": [
+        "Department of Surgery, University of California, Davis Health, Sacramento."
+      ]
+    },
+    {
+      "last_name": "Mineyev",
+      "fore_name": "Neal",
+      "initials": "N",
+      "name": "Neal Mineyev",
+      "affiliations": [
+        "Department of Surgery, University of California, Davis Health, Sacramento."
+      ]
+    },
+    {
+      "last_name": "Perez",
+      "fore_name": "Richard",
+      "initials": "R",
+      "name": "Richard Perez",
+      "affiliations": [
+        "Department of Surgery, University of California, Davis Health, Sacramento."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "JAMA surgery",
+    "iso_abbreviation": "JAMA Surg",
+    "issn": "2168-6262",
+    "issn_type": "Electronic",
+    "volume": "159",
+    "issue": "1",
+    "pub_year": "2024",
+    "pub_month": "Jan",
+    "pub_day": "01"
+  },
+  "start_page": "60",
+  "end_page": "68",
+  "pages": "60-68",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Male",
+    "Middle Aged",
+    "Kidney Transplantation",
+    "Cohort Studies",
+    "Retrospective Studies",
+    "Kidney",
+    "Tissue Donors"
+  ],
+  "article_ids": {
+    "pubmed": "37910090",
+    "pmc": "PMC10620675",
+    "doi": "10.1001/jamasurg.2023.4679",
+    "pii": "2811385"
+  },
+  "doi": "10.1001/jamasurg.2023.4679",
+  "pmc_id": "PMC10620675",
+  "dates": {
+    "completed": "2024-01-11",
+    "revised": "2025-04-15"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:51:49.741224",
+    "pmid": "37910090"
+  }
+}

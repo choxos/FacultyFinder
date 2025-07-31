@@ -1,0 +1,558 @@
+{
+  "pmid": "38881045",
+  "uid": "38881045",
+  "title": "The Study of the Epidemiology of Pediatric Hypertension Registry (SUPERHERO): rationale and methods.",
+  "abstract": "Despite increasing prevalence of hypertension in youth and high adult cardiovascular mortality rates, the long-term consequences of youth-onset hypertension remain unknown. This is due to limitations of prior research, such as small sample sizes, reliance on manual record review, and limited analytic methods, that did not address major biases. The Study of the Epidemiology of Pediatric Hypertension (SUPERHERO) is a multisite, retrospective registry of youth evaluated by subspecialists for hypertension disorders. Sites obtain harmonized electronic health record data using standardized biomedical informatics scripts validated with randomized manual record review. Inclusion criteria are index visit for International Classification of Diseases, 10th Revision (ICD-10) code-defined hypertension disorder on or after January 1, 2015, and age < 19 years. We exclude patients with ICD-10 code-defined pregnancy, kidney failure on dialysis, or kidney transplantation. Data include demographics, anthropomorphics, US Census Bureau tract, histories, blood pressure, ICD-10 codes, medications, laboratory and imaging results, and ambulatory blood pressure. SUPERHERO leverages expertise in epidemiology, statistics, clinical care, and biomedical informatics to create the largest and most diverse registry of youth with newly diagnosed hypertension disorders. SUPERHERO's goals are to reduce CVD burden across the life course and establish gold-standard biomedical informatics methods for youth with hypertension disorders.",
+  "authors": [
+    {
+      "last_name": "South",
+      "fore_name": "Andrew M",
+      "initials": "AM",
+      "name": "Andrew M South",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States.",
+        "Department of Epidemiology and Prevention, Division of Public Health Sciences, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States.",
+        "Center for Artificial Intelligence Research, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ],
+      "orcid": "0000-0002-3204-4142"
+    },
+    {
+      "last_name": "Giammattei",
+      "fore_name": "Victoria C",
+      "initials": "VC",
+      "name": "Victoria C Giammattei",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Bagley",
+      "fore_name": "Kiri W",
+      "initials": "KW",
+      "name": "Kiri W Bagley",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Bakhoum",
+      "fore_name": "Christine Y",
+      "initials": "CY",
+      "name": "Christine Y Bakhoum",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Yale University School of Medicine, New Haven, CT 06519, United States."
+      ]
+    },
+    {
+      "last_name": "Beasley",
+      "fore_name": "William H",
+      "initials": "WH",
+      "name": "William H Beasley",
+      "affiliations": [
+        "Developmental and Behavioral Pediatrics, Department of Pediatrics, University of Oklahoma Health Sciences Center, Oklahoma City, OK 73104, United States."
+      ]
+    },
+    {
+      "last_name": "Bily",
+      "fore_name": "Morgan B",
+      "initials": "MB",
+      "name": "Morgan B Bily",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Baylor College of Medicine, Houston, TX 77030, United States."
+      ]
+    },
+    {
+      "last_name": "Biswas",
+      "fore_name": "Shupti",
+      "initials": "S",
+      "name": "Shupti Biswas",
+      "affiliations": [
+        "Department of Pediatrics, Zucker School of Medicine at Hofstra/Northwell, New Hyde Park, New Hyde Park, NY 11040, United States."
+      ]
+    },
+    {
+      "last_name": "Bridges",
+      "fore_name": "Aaron M",
+      "initials": "AM",
+      "name": "Aaron M Bridges",
+      "affiliations": [
+        "Center for Artificial Intelligence Research, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States.",
+        "Clinical and Translational Science Institute, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Byfield",
+      "fore_name": "Rushelle L",
+      "initials": "RL",
+      "name": "Rushelle L Byfield",
+      "affiliations": [
+        "Division of Nephrology and Hypertension, Department of Pediatrics, Columbia University Vagelos College of Physicians and Surgeons, New York, NY 10032, United States."
+      ]
+    },
+    {
+      "last_name": "Campbell",
+      "fore_name": "Jessica Fallon",
+      "initials": "JF",
+      "name": "Jessica Fallon Campbell",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Baylor College of Medicine, Houston, TX 77030, United States."
+      ]
+    },
+    {
+      "last_name": "Chanchlani",
+      "fore_name": "Rahul",
+      "initials": "R",
+      "name": "Rahul Chanchlani",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, McMaster University, Hamilton, ON L8N 1H4, Canada."
+      ]
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Ashton",
+      "initials": "A",
+      "name": "Ashton Chen",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "D'Agostino McGowan",
+      "fore_name": "Lucy",
+      "initials": "L",
+      "name": "Lucy D'Agostino McGowan",
+      "affiliations": [
+        "Department of Statistical Sciences, Wake Forest University, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Downs",
+      "fore_name": "Stephen M",
+      "initials": "SM",
+      "name": "Stephen M Downs",
+      "affiliations": [
+        "Department of Pediatrics-General, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Fergeson",
+      "fore_name": "Gina M",
+      "initials": "GM",
+      "name": "Gina M Fergeson",
+      "affiliations": [
+        "Department of Pediatrics, University of Oklahoma Health Sciences Center, Oklahoma City, OK 73104, United States."
+      ]
+    },
+    {
+      "last_name": "Greenberg",
+      "fore_name": "Jason H",
+      "initials": "JH",
+      "name": "Jason H Greenberg",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Yale University School of Medicine, New Haven, CT 06519, United States."
+      ]
+    },
+    {
+      "last_name": "Hill-Horowitz",
+      "fore_name": "Taylor A",
+      "initials": "TA",
+      "name": "Taylor A Hill-Horowitz",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Cohen Children's Medical Center, Zucker School of Medicine at Hofstra/Northwell, New Hyde Park, NY 11040, United States."
+      ]
+    },
+    {
+      "last_name": "Jensen",
+      "fore_name": "Elizabeth T",
+      "initials": "ET",
+      "name": "Elizabeth T Jensen",
+      "affiliations": [
+        "Department of Epidemiology and Prevention, Division of Public Health Sciences, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Kallash",
+      "fore_name": "Mahmoud",
+      "initials": "M",
+      "name": "Mahmoud Kallash",
+      "affiliations": [
+        "Division of Nephrology and Hypertension, Department of Pediatrics, Ohio State College of Medicine, Columbus, OH 43205, United States."
+      ]
+    },
+    {
+      "last_name": "Kamel",
+      "fore_name": "Margret",
+      "initials": "M",
+      "name": "Margret Kamel",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Emory University School of Medicine, Atlanta, GA 30322, United States."
+      ]
+    },
+    {
+      "last_name": "Kiessling",
+      "fore_name": "Stefan G",
+      "initials": "SG",
+      "name": "Stefan G Kiessling",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, University of Kentucky College of Medicine, Lexington, KY 40506, United States."
+      ]
+    },
+    {
+      "last_name": "Kline",
+      "fore_name": "David M",
+      "initials": "DM",
+      "name": "David M Kline",
+      "affiliations": [
+        "Department of Biostatistics and Data Science, Division of Public Health Sciences, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ],
+      "orcid": "0000-0001-6183-3303"
+    },
+    {
+      "last_name": "Laisure",
+      "fore_name": "John R",
+      "initials": "JR",
+      "name": "John R Laisure",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Gang",
+      "initials": "G",
+      "name": "Gang Liu",
+      "affiliations": [
+        "Division of Pediatric Research, Department of Pediatrics, Atrium Health Levine Children's, Charlotte, NC 28207, United States."
+      ]
+    },
+    {
+      "last_name": "Londeree",
+      "fore_name": "Jackson",
+      "initials": "J",
+      "name": "Jackson Londeree",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Emory University School of Medicine, Atlanta, GA 30322, United States."
+      ]
+    },
+    {
+      "last_name": "Lucas",
+      "fore_name": "Caroline B",
+      "initials": "CB",
+      "name": "Caroline B Lucas",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Mannemuddhu",
+      "fore_name": "Sai Sudha",
+      "initials": "SS",
+      "name": "Sai Sudha Mannemuddhu",
+      "affiliations": [
+        "Division of Pediatric Nephrology, East Tennessee Children's Hospital, University of Tennessee at Knoxville, Knoxville, TN 37916, United States."
+      ]
+    },
+    {
+      "last_name": "Mao",
+      "fore_name": "Kuo-Rei",
+      "initials": "KR",
+      "name": "Kuo-Rei Mao",
+      "affiliations": [
+        "IS Enterprise Reporting, Texas Children's Hospital, Baylor College of Medicine, Houston, TX 77030, United States."
+      ]
+    },
+    {
+      "last_name": "Misurac",
+      "fore_name": "Jason M",
+      "initials": "JM",
+      "name": "Jason M Misurac",
+      "affiliations": [
+        "Division of Nephrology, Dialysis, and Transplantation, Department of Pediatrics, University of Iowa Carver College of Medicine, Iowa City, IA 52242, United States."
+      ]
+    },
+    {
+      "last_name": "Murphy",
+      "fore_name": "Margaret O",
+      "initials": "MO",
+      "name": "Margaret O Murphy",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, University of Kentucky College of Medicine, Lexington, KY 40506, United States."
+      ]
+    },
+    {
+      "last_name": "Nugent",
+      "fore_name": "James T",
+      "initials": "JT",
+      "name": "James T Nugent",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Yale University School of Medicine, New Haven, CT 06519, United States."
+      ]
+    },
+    {
+      "last_name": "Onugha",
+      "fore_name": "Elizabeth A",
+      "initials": "EA",
+      "name": "Elizabeth A Onugha",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Baylor College of Medicine, Houston, TX 77030, United States."
+      ]
+    },
+    {
+      "last_name": "Pudupakkam",
+      "fore_name": "Ashna",
+      "initials": "A",
+      "name": "Ashna Pudupakkam",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Baylor College of Medicine, Houston, TX 77030, United States."
+      ]
+    },
+    {
+      "last_name": "Redmond",
+      "fore_name": "Kathy M",
+      "initials": "KM",
+      "name": "Kathy M Redmond",
+      "affiliations": [
+        "Department of Pediatrics, University of Oklahoma Health Sciences Center, Oklahoma City, OK 73104, United States."
+      ]
+    },
+    {
+      "last_name": "Riar",
+      "fore_name": "Sandeep",
+      "initials": "S",
+      "name": "Sandeep Riar",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Emory University School of Medicine, Atlanta, GA 30322, United States."
+      ]
+    },
+    {
+      "last_name": "Sethna",
+      "fore_name": "Christine B",
+      "initials": "CB",
+      "name": "Christine B Sethna",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Cohen Children's Medical Center, Zucker School of Medicine at Hofstra/Northwell, New Hyde Park, NY 11040, United States."
+      ]
+    },
+    {
+      "last_name": "Siddiqui",
+      "fore_name": "Sahar",
+      "initials": "S",
+      "name": "Sahar Siddiqui",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Baylor College of Medicine, Houston, TX 77030, United States."
+      ]
+    },
+    {
+      "last_name": "Thumann",
+      "fore_name": "Ashley L",
+      "initials": "AL",
+      "name": "Ashley L Thumann",
+      "affiliations": [
+        "General and Community Pediatrics, Department of Pediatrics, University of Oklahoma Health Sciences Center, Oklahoma City, OK 73104, United States."
+      ]
+    },
+    {
+      "last_name": "Uss",
+      "fore_name": "Stephen R",
+      "initials": "SR",
+      "name": "Stephen R Uss",
+      "affiliations": [
+        "Yale Center for Clinical Investigation, Yale University School of Medicine, New Haven, CT 06519, United States."
+      ]
+    },
+    {
+      "last_name": "Vincent",
+      "fore_name": "Carol L",
+      "initials": "CL",
+      "name": "Carol L Vincent",
+      "affiliations": [
+        "Section of Nephrology, Department of Pediatrics, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Viviano",
+      "fore_name": "Irina V",
+      "initials": "IV",
+      "name": "Irina V Viviano",
+      "affiliations": [
+        "Center for Artificial Intelligence Research, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States.",
+        "Clinical and Translational Science Institute, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "Walsh",
+      "fore_name": "Michael J",
+      "initials": "MJ",
+      "name": "Michael J Walsh",
+      "affiliations": [
+        "Section of Cardiology, Department of Pediatrics, Wake Forest University School of Medicine, Winston Salem, NC 27157, United States."
+      ]
+    },
+    {
+      "last_name": "White",
+      "fore_name": "Blanche D",
+      "initials": "BD",
+      "name": "Blanche D White",
+      "affiliations": [
+        "Division of Nephrology and Hypertension, Department of Pediatrics, Atrium Health Levine Children's, Charlotte, NC 28203, United States."
+      ]
+    },
+    {
+      "last_name": "Woroniecki",
+      "fore_name": "Robert P",
+      "initials": "RP",
+      "name": "Robert P Woroniecki",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Stony Brook Medicine, Stony Brook, NY 11794, United States."
+      ]
+    },
+    {
+      "last_name": "Wu",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wu",
+      "affiliations": [
+        "McMaster University School of Medicine, Hamilton, ON L8N 1H4, Canada."
+      ]
+    },
+    {
+      "last_name": "Yamaguchi",
+      "fore_name": "Ikuyo",
+      "initials": "I",
+      "name": "Ikuyo Yamaguchi",
+      "affiliations": [
+        "Department of Pediatrics, Division of Nephrology, University of Oklahoma College of Medicine, Oklahoma City, OK 73104, United States."
+      ]
+    },
+    {
+      "last_name": "Yun",
+      "fore_name": "Emily",
+      "initials": "E",
+      "name": "Emily Yun",
+      "affiliations": [
+        "Division of Nephrology, Department of Pediatrics, Emory University School of Medicine, Atlanta, GA 30322, United States."
+      ]
+    },
+    {
+      "last_name": "Weaver",
+      "fore_name": "Donald J",
+      "initials": "DJ",
+      "name": "Donald J Weaver",
+      "affiliations": [
+        "Division of Nephrology and Hypertension, Department of Pediatrics, Atrium Health Levine Children's, Charlotte, NC 28203, United States."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "American journal of epidemiology",
+    "iso_abbreviation": "Am J Epidemiol",
+    "issn": "1476-6256",
+    "issn_type": "Electronic",
+    "volume": "193",
+    "issue": "12",
+    "pub_year": "2024",
+    "pub_month": "Dec",
+    "pub_day": "02"
+  },
+  "start_page": "1650",
+  "end_page": "1661",
+  "pages": "1650-1661",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Multicenter Study"
+  ],
+  "keywords": [
+    "Humans",
+    "Registries",
+    "Hypertension",
+    "Adolescent",
+    "Child",
+    "Female",
+    "Male",
+    "Retrospective Studies",
+    "United States",
+    "Electronic Health Records",
+    "Child, Preschool",
+    "Prevalence",
+    "International Classification of Diseases"
+  ],
+  "article_ids": {
+    "pubmed": "38881045",
+    "pmc": "PMC11637526",
+    "doi": "10.1093/aje/kwae116",
+    "pii": "7693041"
+  },
+  "doi": "10.1093/aje/kwae116",
+  "pmc_id": "PMC11637526",
+  "dates": {
+    "completed": "2024-12-12",
+    "revised": "2025-03-14"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "UL1 TR001863",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "agency": "Wake Forest University School of Medicine Clinical and Translational Science Institute and Atrium Health Translational Research Initiative Joint Pilot Project Award"
+    },
+    {
+      "grant_id": "R01-HL162912",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UL1 TR001420",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K23-HL148394",
+      "agency": "NIH National Heart, Lung, and Blood Institute"
+    },
+    {
+      "grant_id": "R01 DK131091",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL162912",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01-DK131091",
+      "agency": "NIH National Institute of Diabetes and Digestive and Kidney Diseases"
+    },
+    {
+      "grant_id": "UL1TR001420",
+      "agency": "National Institutes of Health (NIH) National Center for Advancing Translational Sciences"
+    },
+    {
+      "grant_id": "K23 HL148394",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "L40 HL148910",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL146818",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "agency": "Canadian Institutes of Health Research and Kidney Foundation of Canada"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T15:05:30.663994",
+    "pmid": "38881045"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "pmid": "34847061",
+  "uid": "34847061",
+  "title": "A Deep Learning Approach to Refine the Identification of High-Quality Clinical Research Articles From the Biomedical Literature: Protocol for Algorithm Development and Validation.",
+  "abstract": "BACKGROUND: A barrier to practicing evidence-based medicine is the rapidly increasing body of biomedical literature. Use of method terms to limit the search can help reduce the burden of screening articles for clinical relevance; however, such terms are limited by their partial dependence on indexing terms and usually produce low precision, especially when high sensitivity is required. Machine learning has been applied to the identification of high-quality literature with the potential to achieve high precision without sacrificing sensitivity. The use of artificial intelligence has shown promise to improve the efficiency of identifying sound evidence. OBJECTIVE: The primary objective of this research is to derive and validate deep learning machine models using iterations of Bidirectional Encoder Representations from Transformers (BERT) to retrieve high-quality, high-relevance evidence for clinical consideration from the biomedical literature. METHODS: Using the HuggingFace Transformers library, we will experiment with variations of BERT models, including BERT, BioBERT, BlueBERT, and PubMedBERT, to determine which have the best performance in article identification based on quality criteria. Our experiments will utilize a large data set of over 150,000 PubMed citations from 2012 to 2020 that have been manually labeled based on their methodological rigor for clinical use. We will evaluate and report on the performance of the classifiers in categorizing articles based on their likelihood of meeting quality criteria. We will report fine-tuning hyperparameters for each model, as well as their performance metrics, including recall (sensitivity), specificity, precision, accuracy, F-score, the number of articles that need to be read before finding one that is positive (meets criteria), and classification probability scores. RESULTS: Initial model development is underway, with further development planned for early 2022. Performance testing is expected to star in February 2022. Results will be published in 2022. CONCLUSIONS: The experiments will aim to improve the precision of retrieving high-quality articles by applying a machine learning classifier to PubMed searching. INTERNATIONAL REGISTERED REPORT IDENTIFIER (IRRID): DERR1-10.2196/29398.",
+  "authors": [
+    {
+      "last_name": "Abdelkader",
+      "fore_name": "Wael",
+      "initials": "W",
+      "name": "Wael Abdelkader",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-9581-1521"
+    },
+    {
+      "last_name": "Navarro",
+      "fore_name": "Tamara",
+      "initials": "T",
+      "name": "Tamara Navarro",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0003-2810-6942"
+    },
+    {
+      "last_name": "Parrish",
+      "fore_name": "Rick",
+      "initials": "R",
+      "name": "Rick Parrish",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-3809-6015"
+    },
+    {
+      "last_name": "Cotoi",
+      "fore_name": "Chris",
+      "initials": "C",
+      "name": "Chris Cotoi",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0001-7029-0582"
+    },
+    {
+      "last_name": "Germini",
+      "fore_name": "Federico",
+      "initials": "F",
+      "name": "Federico Germini",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada.",
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-0802-3616"
+    },
+    {
+      "last_name": "Linkins",
+      "fore_name": "Lori-Ann",
+      "initials": "LA",
+      "name": "Lori-Ann Linkins",
+      "affiliations": [
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-9308-173X"
+    },
+    {
+      "last_name": "Iorio",
+      "fore_name": "Alfonso",
+      "initials": "A",
+      "name": "Alfonso Iorio",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada.",
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-3331-8766"
+    },
+    {
+      "last_name": "Haynes",
+      "fore_name": "R Brian",
+      "initials": "RB",
+      "name": "R Brian Haynes",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada.",
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-1453-3196"
+    },
+    {
+      "last_name": "Ananiadou",
+      "fore_name": "Sophia",
+      "initials": "S",
+      "name": "Sophia Ananiadou",
+      "affiliations": [
+        "Department of Computer Science, University of Manchester, Manchester, United Kingdom.",
+        "The Alan Turing Institute, London, United Kingdom."
+      ],
+      "orcid": "0000-0002-4097-9191"
+    },
+    {
+      "last_name": "Chu",
+      "fore_name": "Lingyang",
+      "initials": "L",
+      "name": "Lingyang Chu",
+      "affiliations": [
+        "Department of Computing and Software, Faculty of Engineering, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-8937-1750"
+    },
+    {
+      "last_name": "Lokker",
+      "fore_name": "Cynthia",
+      "initials": "C",
+      "name": "Cynthia Lokker",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0003-2436-4290"
+    }
+  ],
+  "journal": {
+    "title": "JMIR research protocols",
+    "iso_abbreviation": "JMIR Res Protoc",
+    "issn": "1929-0748",
+    "issn_type": "Print",
+    "volume": "10",
+    "issue": "11",
+    "pub_year": "2021",
+    "pub_month": "Nov",
+    "pub_day": "29"
+  },
+  "start_page": "e29398",
+  "pages": "e29398",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "34847061",
+    "pmc": "PMC8669577",
+    "doi": "10.2196/29398",
+    "pii": "v10i11e29398"
+  },
+  "doi": "10.2196/29398",
+  "pmc_id": "PMC8669577",
+  "dates": {
+    "revised": "2022-01-11"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:40:11.222495",
+    "pmid": "34847061"
+  }
+}

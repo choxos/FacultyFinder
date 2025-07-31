@@ -1,0 +1,118 @@
+{
+  "pmid": "39946267",
+  "uid": "39946267",
+  "title": "Robust automated method of spatial resolution measurement in radiotherapy CT simulation images.",
+  "abstract": "BACKGROUND: Variation in imaging protocol, patient positioning, and the presence of artifacts can vary image quality in CT images used for radiotherapy planning. Automated methods for spatial resolution (SR) estimation exist but require further investigation and validation for wider adoption. PURPOSE: To validated previously existing algorithm for SR estimation and introduce improvements that make it robust to patient positioning, CT protocol, site, and artifacts. METHOD: A reference algorithm based on the previous gold standard was recreated and modified to improve robustness. The algorithms were tested on three different datasets: (1) a cylindrical ACR CT QC phantom scanned using a Siemens SOMATOM Definition Edge scanner and reconstructed using 61 different kernels, (2) a set of anthropomorphic phantoms scanned with the presence of artifacts common to clinical acquisitions such as blankets and immobilization devices, and (3) a clinical patient dataset of head and neck (HN) CT scans (nine patients) and spine/pelvis (10 patients). The robustness of both algorithms was tested on the clinical patient data. RESULTS: Over the range of tested kernels, both algorithms were accurate when the ground truth MTF f50 was within the range 0.2-0.7 mm[-1] in the cylindrical phantom datasets with an RMS error of 10.3% and 3.8% for the reference and modified versions of the algorithm, respectively, as compared to the ground truth. In the anthropomorphic phantom datasets the reference algorithm showed an 8.4% and 30.0% difference from ground truth for the Pelvic and HN phantoms, respectively, while the modified algorithm showed 4.9% and 3.9% percent difference from ground truth. In the clinical dataset the reference algorithm estimated a mean f50 value of 0.21 ± 0.03 mm[-1] and 0.25 ± 0.03 mm[-1] for pelvis/spine while the reference algorithm estimated mean of 0.28 ± 0.02 and 0.29 ± 0.01 mm[-1] for HN and pelvis/spine, respectively, as compared to the ground truth found to be 0.28 mm[-1] on the cylindrical phantom. CONCLUSION: The SR algorithm was validated cylindrical/anthropomorphic phantoms and clinical CT scans. Further modifications were tested and showed improved accuracy in more challenging CT acquisitions.",
+  "authors": [
+    {
+      "last_name": "Govyadinov",
+      "fore_name": "Pavel",
+      "initials": "P",
+      "name": "Pavel Govyadinov",
+      "affiliations": [
+        "Department of Radiation Physics, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Layman",
+      "fore_name": "Rick R",
+      "initials": "RR",
+      "name": "Rick R Layman",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Netherton",
+      "fore_name": "Tucker",
+      "initials": "T",
+      "name": "Tucker Netherton",
+      "affiliations": [
+        "Department of Radiation Physics, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Mumme",
+      "fore_name": "Raymond",
+      "initials": "R",
+      "name": "Raymond Mumme",
+      "affiliations": [
+        "Department of Radiation Physics, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Jones",
+      "fore_name": "Aaron K",
+      "initials": "AK",
+      "name": "Aaron K Jones",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Court",
+      "fore_name": "Laurence E",
+      "initials": "LE",
+      "name": "Laurence E Court",
+      "affiliations": [
+        "Department of Radiation Physics, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA.",
+        "The University of Texas MD Anderson Cancer Center UTHealth Houston Graduate School of Biomedical Sciences, Houston, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Ahmad",
+      "fore_name": "Moiz",
+      "initials": "M",
+      "name": "Moiz Ahmad",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Journal of applied clinical medical physics",
+    "iso_abbreviation": "J Appl Clin Med Phys",
+    "issn": "1526-9914",
+    "issn_type": "Electronic",
+    "volume": "26",
+    "issue": "3",
+    "pub_year": "2025",
+    "pub_month": "Mar"
+  },
+  "start_page": "e70006",
+  "pages": "e70006",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Phantoms, Imaging",
+    "Algorithms",
+    "Tomography, X-Ray Computed",
+    "Radiotherapy Planning, Computer-Assisted",
+    "Image Processing, Computer-Assisted",
+    "Radiotherapy Dosage",
+    "Head and Neck Neoplasms",
+    "Radiotherapy, Intensity-Modulated",
+    "Artifacts"
+  ],
+  "article_ids": {
+    "pubmed": "39946267",
+    "pmc": "PMC11905253",
+    "doi": "10.1002/acm2.70006"
+  },
+  "doi": "10.1002/acm2.70006",
+  "pmc_id": "PMC11905253",
+  "dates": {
+    "completed": "2025-05-07",
+    "revised": "2025-05-07"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:31:25.744124",
+    "pmid": "39946267"
+  }
+}

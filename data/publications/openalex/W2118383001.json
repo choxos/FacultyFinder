@@ -1,0 +1,203 @@
+{
+  "openalex_id": "W2118383001",
+  "doi": "https://doi.org/10.1111/nph.12686",
+  "title": "Improving representation of leaf respiration in large‐scale predictive climate–vegetation models",
+  "abstract": "Estimates of plant respiration (R) profoundly influence our understanding of ecosystem and Earth system functioning. Each year, R releases six to eight times more CO2 into the atmosphere than does the burning of fossil fuels (Canadell et al., 2007; Le Quere et al., 2009), with half being released by leaves (Atkin et al., 2007). Small fractional changes in leaf R can thus have large impacts on ecosystem functioning (Piao et al., 2010) and the magnitude of future atmospheric CO2 concentrations and related climate change (Cox et al., 2000; Huntingford et al., 2013). Given this, it is essential that Earth system models (ESMs) accurately account for spatial and temporal variations in leaf R (King et al., 2006; Wythers et al., 2013). However, at present, variations in leaf R are poorly represented in ESMs and this has led to substantial uncertainty in future modelled scenarios (Atkin et al., 2008; Leuzinger & Thomas, 2011). Thus, there is an urgent need to improve representation of leaf R in predictions of future vegetation–climate scenarios (Atkin et al., 2010), including in models that seek to predict the terrestrial carbon–nitrogen (C–N) cycle in a future, high-CO2 world (Zaehle et al., 2014; this issue of New Phytologist pp. 803–822). Several factors are responsible for the poor representation of R in ESMs. First, until recently, only limited data were available describing biogeographically and taxonomically related variations in leaf R around the world (Wright et al., 2006). Second, our understanding of how climate-change drivers impact R remains limited (Kruse et al., 2011; Searle et al., 2011; Huntingford et al., 2013; Kornfeld et al., 2013), although quantitative approaches are now emerging that will enable dynamic climate responses of R to be incorporated into ESMs over different timescales (King et al., 2006; Atkin et al., 2008; Smith & Dukes, 2013; Wythers et al., 2013). Finally, there has been insufficient communication between climate and large-scale ecosystem modellers and empirical biologists (Leuzinger & Thomas, 2011; Atkin, 2013); this has constrained improvements in the representation of leaf R in ESMs in recent years. '… policies supporting core funding for blue skies research – and which accept some redundancy and risk – may be needed to accelerate step changes in scientific understanding.' The workshop was organized by Owen Atkin (ANU, Australia), Patrick Meir (ANU, Australia) and Matthew Turnbull (University of Canterbury, New Zealand). Funding for the workshop was provided by the New Phytologist Trust, with additional financial support provided by the Division of Plant Sciences, Research School of Biology at ANU. The objectives of the workshop were as follows: to use existing and emerging data on leaf R and associated traits (e.g. photosynthesis, leaf structure and leaf chemistry) to summarise existing knowledge on temporal and spatial variations in leaf R, across scales, from species to site to global; to establish how the emerging data sets could be used to improve parameterization of leaf R in global and ecosystem-level models; and to undertake a re-evaluation of past modelling approaches used to predict genetic and environmentally mediated variations in respiratory flux. Addressing the question of how one models variations in leaf R first requires that the question 'What is respiration?' be addressed. As was noted at the 24th New Phytologist Symposium (Atkin et al., 2010), achieving a consensus on this question can be a challenge, particularly when bringing together researchers who work at different scales. Kevin Griffin (Columbia University, USA) bravely accepted the challenge of addressing this question. His talk provided an overview of the pathways via which R occurs, how variations in respiratory flux are regulated by factors such as substrate supply and use of respiratory products for biosynthesis and cellular maintenance (e.g. ATP, reducing equivalents and C skeletons), and the importance of R in global biogeochemical processes. Importantly, Kevin also outlined challenges associated with the modelling variation in rates of R; here, the complexity of interactions between leaf R and a range of other metabolic processes in leaves was highlighted. Further evidence of this complexity was provided by Ben Long (ANU, Australia), who discussed the importance of heterogeneity of mitochondrial populations within leaves, particularly with reference to photosynthetic (e.g. mesophyll) and nonphotosynthetic (e.g. epidermal) cells (Armstrong et al., 2006). Collectively, these talks provided an ideal basis for subsequent debates on how to account for variation in leaf R, in both developing and fully expanded leaves. In the lead-up to the workshop, discussions between the organizers and some of the participants (Graham Farquhar (ANU, Australia), Mike Ryan (Colorado State University, USA) and Peter Reich (University of Minnesota, USA)) focused on whether advances in modelling of leaf R could be achieved via adopting research strategies similar to those that led to the generalized model of photosynthesis by Farquhar et al. (1980). At the workshop, Graham Farquhar gave a historical account of how their 1980 model was formulated – here, a central feature was the prevalence of ample funding for 'blue skies' science leading up to the end of the 1970s, which enabled the formation of a detailed and holistic understanding of photosynthetic metabolism. Building on this knowledge base, Farquhar et al. (1980) were able to formulate a process-based model that was both comprehensive and yet simple. Could such an approach also be applied to modelling of leaf R ? Right now, the answer is probably no. While much is now known about the pathways via which respiratory metabolism takes place in leaves, both in darkness and in the light (Florez-Sarasa et al., 2012; Griffin & Turnbull, 2012; Tcherkez et al., 2012), unfortunately our understanding of the factors that regulate respiratory fluxes in vivo remain incomplete. Consequently, it may be some time before a respiration equivalent to the Farquhar et al. (1980) model emerges. Nevertheless, the lessons learnt from how their model was developed suggests that policies supporting core funding for blue skies research – and which accept some redundancy and risk – may be needed to accelerate step changes in scientific understanding (Öquist & Benner, 2012). A further debate emerged from a talk by Mike Ryan, in which he explored an alternative conceptual framework via which variations in leaf R might be modelled. Central to his thesis was that leaf R should not be viewed simply as a tax on growth, but instead as intimately linked to both substrate provision by photosynthesis (i.e. a 'push' component) and demand for respiratory products by cellular maintenance and biosynthesis (i.e. a 'pull' component). Here, Mike advocated considering whole-plant source–sink relationships when modelling leaf R in forest ecosystems, in much the same way as outlined recently by Fatichi et al. (2014) for vegetation models that incorporate photosynthesis. While it may be some time before modelling frameworks can address these issues, it is timely that researchers be reminded of the need to avoid considering leaf R in isolation from push–pull and sink–source relationships in plants. These talks linked effectively to subsequent seminars on how variations in leaf R are currently represented in global dynamic vegetation models (Stephen Sitch and Lina Mercado, University of Exeter, UK) and ecosystem C-flux models (Belinda Medlyn, Macquarie University, Australia). Such modelling frameworks often assume that, at the whole-plant level, R has a maintenance component (Rm, dependent on the amount and/or chemistry of plant biomass, particularly N concentration) and a growth component (Rg, linked to rates of C supply by photosynthesis and/or biosynthesis; Ryan, 1995; Dewar et al., 1999; Thornley & Cannell, 2000; Cox, 2001; Gifford, 2003; Clark et al., 2011). In his talk, Stephen Sitch provided an example of this, using the UK Hadley Centre Joint UK Land Environment Simulator (JULES) land surface model; here, leaf Rm (at a set temperature) is assumed to be proportional to photosynthetic carboxylation capacity (Vcmax), with the latter in turn being predicted from (assumed) leaf N concentrations of several plant functional types (PFTs) (Cox, 2001). Importantly, no account is taken of variations in relationships among N, photosynthetic capacity and leaf R in JULES, even though there is a growing realization in the empirical literature that these trait relationships are not fixed (Wright et al., 2006; Atkin et al., 2008; Kattge et al., 2009; Reich et al., 2009; Atkinson et al., 2010; Ow et al., 2010). It was with these issues in mind that the workshop then began exploring how relationships between leaf R at a common reference temperature (e.g. 25°C), photosynthesis and leaf N vary globally, using existing data from the TRY global plant trait database (introduced in a talk by Jens Kattge (Max Planck Institute, Germany); Kattge et al., 2011) and the newly collected data of leaf R. Owen Atkin introduced the data set to participants: it consists of multispecies surveys of leaf R (R measured either at a set T or at the prevailing ambient T), light-saturated photosynthesis (Asat), light- and CO2-saturated photosynthesis (Amax), internal CO2 concentration (Ci), stomatal conductance (gs), leaf mass per area (LMA), [N], [phosphorus (P)] and often carbohydrate concentration (sugars and starch). The file includes information on PFTs, location (latitude, longitude, altitude) and associated climate data from the WorldClim database (Hijmans et al., 2005). Contained within the file are > 3500 rows of measurements (> 880 species) from c. 100 thermally contrasting sites, from biomes ranging from the Arctic to the tropics (Fig. 1). Area- and mass-based rates of leaf R at a standard T (25°C) differed enormously among species and sites, with the highest rates exhibited by Arctic plants being > 25-fold higher than the lowest rates exhibited by plants in the warm tropics. The data were used to explore relationships between leaf R and a range of leaf traits, such as photosynthetic capacity, leaf N and LMA, as well as the relationships between leaf R and climate variables, and the impact of climate, biome, and PFT on bivariate relationships linking leaf R to related traits. Initial multivariate analyses by several participants, including Mark Tjoelker and Kristine Crous (University of Western Sydney, Australia), revealed that much of the variation in R could be accounted for with knowledge of the growth T in each environment, PFT and leaf N. Further analyses using a mixed-effects model framework were initiated by Keith Bloomfield (ANU, Australia) and Jon Lloyd (James Cook University, Australia). To further explore linkages between leaf R and photosynthetic capacity, Keith then gave a talk outlining the relationship between Vcmax and leaf R at several globally distributed sites (using data obtained from A–Ci curves in several thermally contrasting biomes). These data pointed to marked shifts in the slope of the leaf R–Vcmax relationship (e.g. among biomes and among plant functional types), raising concerns about the current assumption of fixed scaling rules between leaf R and photosynthetic capacity in several modelling frameworks (Smith & Dukes, 2013). Our analyses in all these areas have continued since the workshop. When predicting rates of respiratory CO2 release, dynamic vegetation models typically use leaf N and/or photosynthesis to estimate leaf R at a set measuring temperature (T); for example, R at 25°C. Thereafter, model frameworks such as that used in JULES (Cox, 2001; Clark et al., 2011) assume that leaf R is T-dependent, with a fixed Q10 of 2.0 (i.e. leaf R doubles for every 10°C rise in T). No account is taken of dynamic changes in the shape of the short-term T response of leaf R that arise from the fact that the functional form of the relationship departs significantly from a simple exponential, particularly at extremes of the natural range of T, and which may affect metabolism substantially (James, 1953; Forward, 1960; Tjoelker et al., 2001; Atkin & Tjoelker, 2003; O'Sullivan et al., 2013). Moreover, until recently (King et al., 2006; Atkin et al., 2008; Wythers et al., 2013), model runs took no account of acclimation to sustained changes in growth T (Smith & Dukes, 2013). Given the importance of these issues, talks reviewed the state of play in ESMs with respect to T responses of leaf R. Jeff Dukes (Purdue University, USA) drew on his work with Nick Smith (Purdue University, USA) to provide a comprehensive review of ESMs and the extent to which they account for T responses of R. The talk highlighted how accounting for thermal acclimation can markedly alter predicted rates of global C exchange between the atmosphere and vegetation. These issues were further extended by Mark Vanderwell (University of Florida, USA), who presented and explored a novel approach to accounting for both variations in Q10 and acclimation in a modelling framework. Later, Odhran O'Sullivan (ANU, Australia) outlined an emerging global data set on T-response curves of leaf R. This data set consists of > 800 high-resolution R–T responses from 23 globally distributed, thermally contrasting sites. Data were obtained using detached branches (continuous heating at 1°C min−1 over the 20–65°C range; O'Sullivan et al., 2013). This data set revealed that leaf R could be modelled with a high degree of accuracy up to 45°C. Discussions led by Odhran and John Evans (ANU, Australia) focused on formulating alternative ways of modelling site-to-site variation in the short- and long-term T dependence of leaf R. Although it is well known that leaf R takes place in both the light (Rlight) and darkness (Rdark), leaf R is typically lower when photosynthesis is also occurring, even when refixation of respiratory CO2 is taken into account. When measured at a common temperature, Rlight can be 80% lower than Rdark (Atkin et al., 2000; Shapiro et al., 2004; Zaragoza-Castells et al., 2007; Griffin & Turnbull, 2012; Heskel et al., 2013). Because leaf R becomes increasing light-inhibited at high temperatures, the overall temperature sensitivity of Rlight is typically less than that of leaf Rdark (Atkin et al., 2005). Failure to account for light inhibition of leaf R can lead to large overestimates of daily respiration in individual leaves (Atkin et al., 2013) and whole ecosystems (and hence gross primary productivity) (Wohlfahrt et al., 2005; Barbour et al., 2011; Bruhn et al., 2011). Thus, there is a pressing need for climate–vegetation models to account for light inhibition of leaf R. However, before the workshop, there were insufficient data available to predict variations in the degree of light inhibition of R under different circumstances or in different biomes. It was with this issue in mind that a data set was presented by Lasantha Weerasinghe (ANU, Australia) that includes multispecies surveys of Rlight (estimated using the Kok method; Ayub et al., 2011) and associated rates of Asat, Ci, gs, LMA, [N] and [P]. Initial exploration of the data suggested that when measured at the prevailing growth T of each environment, light inhibits leaf R by an average of c. 30% globally, albeit with considerable interspecific variability. These data are now being used to explore relationships between rates of Rlight (and the degree of light inhibition of R) and a range of traits (including calculated rates of leaf carboxylation, Vc, and leaf oxygenation, Vo), as well as exploring the relationship between Rlight and climate variables; the file includes location data (latitude, longitude, altitude) and associated climate data from WorldClim (Hijmans et al., 2005). When asking about the purpose of the workshop, Richard Norby (Editor and Trustee, New Phytologist) wondered whether the meeting would simply be a 'talkfest' or whether it would be something more. It was with this pointed question in mind that we strove to ensure that the workshop would not only provide a forum to discuss ideas, but would also be the catalyst for assembling new global data sets on leaf R that have tangible utility for improving climate–vegetation models. Much of the meeting focused on deliverables – deliverables that can be used by modellers to improve estimates of leaf R, to better predict how short- and long-term changes in T affect leaf R, and to enable modellers to begin taking into account light inhibition of leaf R. Moreover, by describing global patterns in leaf R and associated leaf traits, the data sets provide clues as to the underlying processes by which rates of R vary. In doing so, the data may also lead to and guide future experiments designed to explore the functional basis of why rates of leaf R vary so much among species within individual ecosystems and among thermally contrasting biomes. Finally, the success of 8th New Phytologist Workshop depended on inputs from many people, including those who attended the workshop (Fig. 2) and others who played major roles in providing data but were unable to attend the meeting (e.g. Rossella Guerrieri, Joana Zaragoza-Castells, Françoise Yoko Ishida, Nicholas Mirotchnick, Mary Heskel, Martijn Slot, Ülo Niinemets, Hendrik Poorter and Ian Wright), who helped to run the meeting (Nur Abdul Bahar and Buddhima Kariyawasam), and who provided some really excellent food (thanks to Ian Wallis – our star cook). Finally, many thanks to the New Phytologist Trust and the ANU for funding what was a highly productive and enjoyable workshop.",
+  "authors": [
+    {
+      "display_name": "Owen K. Atkin",
+      "id": "A5025094320",
+      "orcid": "https://orcid.org/0000-0003-1041-5202",
+      "institutions": [
+        {
+          "id": "I118347636",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Owen K. Atkin"
+    },
+    {
+      "display_name": "Patrick Meir",
+      "id": "A5050358490",
+      "orcid": "https://orcid.org/0000-0002-2362-0398",
+      "institutions": [
+        {
+          "id": "I118347636",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patrick Meir"
+    },
+    {
+      "display_name": "Matthew H. Turnbull",
+      "id": "A5082652130",
+      "orcid": "https://orcid.org/0000-0002-3433-5859",
+      "institutions": [
+        {
+          "id": "I185492890",
+          "display_name": "University of Canterbury",
+          "country_code": "NZ",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthew H. Turnbull"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-04-10",
+  "type": "article",
+  "cited_by_count": 40,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S58631098",
+    "display_name": "New Phytologist",
+    "issn_l": "0028-646X",
+    "issn": [
+      "0028-646X",
+      "1469-8137"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "202",
+  "issue": "3",
+  "first_page": "743",
+  "last_page": "748",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nph.12686",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C132651083",
+      "display_name": "Climate change",
+      "level": 2,
+      "score": 0.5630605
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.5600936
+    },
+    {
+      "id": "C2776133958",
+      "display_name": "Vegetation (pathology)",
+      "level": 2,
+      "score": 0.5412992
+    },
+    {
+      "id": "C80368990",
+      "display_name": "Earth system science",
+      "level": 2,
+      "score": 0.5408573
+    },
+    {
+      "id": "C91586092",
+      "display_name": "Atmospheric sciences",
+      "level": 1,
+      "score": 0.49250683
+    },
+    {
+      "id": "C110872660",
+      "display_name": "Ecosystem",
+      "level": 2,
+      "score": 0.48349956
+    },
+    {
+      "id": "C100970517",
+      "display_name": "Physical geography",
+      "level": 1,
+      "score": 0.42137045
+    },
+    {
+      "id": "C2778755073",
+      "display_name": "Scale (ratio)",
+      "level": 2,
+      "score": 0.41162145
+    },
+    {
+      "id": "C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "score": 0.37519038
+    },
+    {
+      "id": "C18903297",
+      "display_name": "Ecology",
+      "level": 1,
+      "score": 0.3480003
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.34666118
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.12951675
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.12614104
+    },
+    {
+      "id": "C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "score": 0.09530887
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10266",
+      "display_name": "Plant Water Relations and Carbon Dynamics",
+      "score": 0.9998
+    },
+    {
+      "id": "T11760",
+      "display_name": "Plant responses to elevated CO2",
+      "score": 0.9993
+    },
+    {
+      "id": "T10029",
+      "display_name": "Climate variability and models",
+      "score": 0.9978
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1111/nph.12686",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nph.12686",
+  "retrieved_date": "2025-07-30T15:53:49.566322",
+  "source_database": "OpenAlex"
+}

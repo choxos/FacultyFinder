@@ -1,0 +1,360 @@
+{
+  "pmid": "29035042",
+  "uid": "29035042",
+  "title": "nmrML: A Community Supported Open Data Standard for the Description, Storage, and Exchange of NMR Data.",
+  "abstract": "NMR is a widely used analytical technique with a growing number of repositories available. As a result, demands for a vendor-agnostic, open data format for long-term archiving of NMR data have emerged with the aim to ease and encourage sharing, comparison, and reuse of NMR data. Here we present nmrML, an open XML-based exchange and storage format for NMR spectral data. The nmrML format is intended to be fully compatible with existing NMR data for chemical, biochemical, and metabolomics experiments. nmrML can capture raw NMR data, spectral data acquisition parameters, and where available spectral metadata, such as chemical structures associated with spectral assignments. The nmrML format is compatible with pure-compound NMR data for reference spectral libraries as well as NMR data from complex biomixtures, i.e., metabolomics experiments. To facilitate format conversions, we provide nmrML converters for Bruker, JEOL and Agilent/Varian vendor formats. In addition, easy-to-use Web-based spectral viewing, processing, and spectral assignment tools that read and write nmrML have been developed. Software libraries and Web services for data validation are available for tool developers and end-users. The nmrML format has already been adopted for capturing and disseminating NMR data for small molecules by several open source data processing tools and metabolomics reference spectral libraries, e.g., serving as storage format for the MetaboLights data repository. The nmrML open access data standard has been endorsed by the Metabolomics Standards Initiative (MSI), and we here encourage user participation and feedback to increase usability and make it a successful standard.",
+  "authors": [
+    {
+      "last_name": "Schober",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Schober",
+      "affiliations": [
+        "Leibniz Institute of Plant Biochemistry , Department of Stress and Developmental Biology, Weinberg 3, 06120 Halle, Germany."
+      ],
+      "orcid": "0000-0001-8014-6648"
+    },
+    {
+      "last_name": "Jacob",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Jacob",
+      "affiliations": [
+        "INRA, Univ. Bordeaux , UMR1332 Fruit Biology and Pathology, Metabolome Facility of Bordeaux Functional Genomics Center, MetaboHUB, IBVM, Centre INRA Bordeaux, 71 av Edouard Bourlaux, F-33140 Villenave d'Ornon, France."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": [
+        "Departments of Computing Sciences and Biological Sciences, University of Alberta , Edmonton, Canada T6G 2E8."
+      ]
+    },
+    {
+      "last_name": "Cruz",
+      "fore_name": "Joseph A",
+      "initials": "JA",
+      "name": "Joseph A Cruz",
+      "affiliations": [
+        "Departments of Computing Sciences and Biological Sciences, University of Alberta , Edmonton, Canada T6G 2E8."
+      ]
+    },
+    {
+      "last_name": "Marcu",
+      "fore_name": "Ana",
+      "initials": "A",
+      "name": "Ana Marcu",
+      "affiliations": [
+        "Departments of Computing Sciences and Biological Sciences, University of Alberta , Edmonton, Canada T6G 2E8."
+      ]
+    },
+    {
+      "last_name": "Grant",
+      "fore_name": "Jason R",
+      "initials": "JR",
+      "name": "Jason R Grant",
+      "affiliations": [
+        "Departments of Computing Sciences and Biological Sciences, University of Alberta , Edmonton, Canada T6G 2E8."
+      ]
+    },
+    {
+      "last_name": "Moing",
+      "fore_name": "Annick",
+      "initials": "A",
+      "name": "Annick Moing",
+      "affiliations": [
+        "INRA, Univ. Bordeaux , UMR1332 Fruit Biology and Pathology, Metabolome Facility of Bordeaux Functional Genomics Center, MetaboHUB, IBVM, Centre INRA Bordeaux, 71 av Edouard Bourlaux, F-33140 Villenave d'Ornon, France."
+      ]
+    },
+    {
+      "last_name": "Deborde",
+      "fore_name": "Catherine",
+      "initials": "C",
+      "name": "Catherine Deborde",
+      "affiliations": [
+        "INRA, Univ. Bordeaux , UMR1332 Fruit Biology and Pathology, Metabolome Facility of Bordeaux Functional Genomics Center, MetaboHUB, IBVM, Centre INRA Bordeaux, 71 av Edouard Bourlaux, F-33140 Villenave d'Ornon, France."
+      ]
+    },
+    {
+      "last_name": "de Figueiredo",
+      "fore_name": "Luis F",
+      "initials": "LF",
+      "name": "Luis F de Figueiredo",
+      "affiliations": [
+        "European Bioinformatics Institute (EMBL-EBI), European Molecular Biology Laboratory , Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, U.K."
+      ]
+    },
+    {
+      "last_name": "Haug",
+      "fore_name": "Kenneth",
+      "initials": "K",
+      "name": "Kenneth Haug",
+      "affiliations": [
+        "European Bioinformatics Institute (EMBL-EBI), European Molecular Biology Laboratory , Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, U.K."
+      ]
+    },
+    {
+      "last_name": "Rocca-Serra",
+      "fore_name": "Philippe",
+      "initials": "P",
+      "name": "Philippe Rocca-Serra",
+      "affiliations": [
+        "University of Oxford , e-Research Centre1, 7 Keble Road, Oxford OX1 3QG, U.K."
+      ]
+    },
+    {
+      "last_name": "Easton",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Easton",
+      "affiliations": [
+        "School of Engineering, University of Birmingham , Edgbaston, Birmingham B15 2TT, U.K."
+      ]
+    },
+    {
+      "last_name": "Ebbels",
+      "fore_name": "Timothy M D",
+      "initials": "TMD",
+      "name": "Timothy M D Ebbels",
+      "affiliations": [
+        "Computational and Systems Medicine, Department of Surgery and Cancer, Imperial College London , London, SW7 2AZ, U.K."
+      ]
+    },
+    {
+      "last_name": "Hao",
+      "fore_name": "Jie",
+      "initials": "J",
+      "name": "Jie Hao",
+      "affiliations": [
+        "Computational and Systems Medicine, Department of Surgery and Cancer, Imperial College London , London, SW7 2AZ, U.K."
+      ]
+    },
+    {
+      "last_name": "Ludwig",
+      "fore_name": "Christian",
+      "initials": "C",
+      "name": "Christian Ludwig",
+      "affiliations": [
+        "Institute of Metabolism and Systems Research, University of Birmingham , Edgbaston, Birmingham B15 2TT, U.K."
+      ]
+    },
+    {
+      "last_name": "Günther",
+      "fore_name": "Ulrich L",
+      "initials": "UL",
+      "name": "Ulrich L Günther",
+      "affiliations": [
+        "Institute of Cancer and Genomic Sciences, University of Birmingham , Edgbaston, Birmingham B15 2TT, U.K."
+      ]
+    },
+    {
+      "last_name": "Rosato",
+      "fore_name": "Antonio",
+      "initials": "A",
+      "name": "Antonio Rosato",
+      "affiliations": [
+        "Magnetic Resonance Center (CERM) and Department of Chemistry, University of Florence , 50019 Sesto Fiorentino, Florence, Italy."
+      ],
+      "orcid": "0000-0001-6172-0368"
+    },
+    {
+      "last_name": "Klein",
+      "fore_name": "Matthias S",
+      "initials": "MS",
+      "name": "Matthias S Klein",
+      "affiliations": [
+        "Department of Biological Sciences, University of Calgary , 2500 University Drive NW, Calgary, Alberta T2N 1N4, Canada."
+      ]
+    },
+    {
+      "last_name": "Lewis",
+      "fore_name": "Ian A",
+      "initials": "IA",
+      "name": "Ian A Lewis",
+      "affiliations": [
+        "Department of Biological Sciences, University of Calgary , 2500 University Drive NW, Calgary, Alberta T2N 1N4, Canada."
+      ]
+    },
+    {
+      "last_name": "Luchinat",
+      "fore_name": "Claudio",
+      "initials": "C",
+      "name": "Claudio Luchinat",
+      "affiliations": [
+        "Magnetic Resonance Center (CERM) and Department of Chemistry, University of Florence , 50019 Sesto Fiorentino, Florence, Italy."
+      ]
+    },
+    {
+      "last_name": "Jones",
+      "fore_name": "Andrew R",
+      "initials": "AR",
+      "name": "Andrew R Jones",
+      "affiliations": [
+        "Institute of Integrative Biology, University of Liverpool , Bioscience Building, Crown Street, Liverpool L69 7ZB, U.K."
+      ]
+    },
+    {
+      "last_name": "Grauslys",
+      "fore_name": "Arturas",
+      "initials": "A",
+      "name": "Arturas Grauslys",
+      "affiliations": [
+        "Institute of Integrative Biology, University of Liverpool , Bioscience Building, Crown Street, Liverpool L69 7ZB, U.K."
+      ]
+    },
+    {
+      "last_name": "Larralde",
+      "fore_name": "Martin",
+      "initials": "M",
+      "name": "Martin Larralde",
+      "affiliations": [
+        "Ecole Normale Supérieure Paris-Saclay , 61 Avenue du Président Wilson, 94230 Cachan, France."
+      ]
+    },
+    {
+      "last_name": "Yokochi",
+      "fore_name": "Masashi",
+      "initials": "M",
+      "name": "Masashi Yokochi",
+      "affiliations": [
+        "Institute for Protein Research (IPR), Osaka University , 3-2 Yamadaoka, Suita-shi, Osaka, 565-0871, Japan."
+      ]
+    },
+    {
+      "last_name": "Kobayashi",
+      "fore_name": "Naohiro",
+      "initials": "N",
+      "name": "Naohiro Kobayashi",
+      "affiliations": [
+        "Institute for Protein Research (IPR), Osaka University , 3-2 Yamadaoka, Suita-shi, Osaka, 565-0871, Japan."
+      ]
+    },
+    {
+      "last_name": "Porzel",
+      "fore_name": "Andrea",
+      "initials": "A",
+      "name": "Andrea Porzel",
+      "affiliations": [
+        "Department of Bioorganic Chemistry, Leibniz Institute of Plant Biochemistry , 06120 Halle (Saale), Germany."
+      ]
+    },
+    {
+      "last_name": "Griffin",
+      "fore_name": "Julian L",
+      "initials": "JL",
+      "name": "Julian L Griffin",
+      "affiliations": [
+        "Department of Biochemistry, University of Cambridge , Downing Site, Cambridge CB2 1QW, U.K."
+      ],
+      "orcid": "0000-0003-1336-7744"
+    },
+    {
+      "last_name": "Viant",
+      "fore_name": "Mark R",
+      "initials": "MR",
+      "name": "Mark R Viant",
+      "affiliations": [
+        "School of Biosciences, University of Birmingham , Edgbaston, Birmingham B15 2TT, U.K."
+      ]
+    },
+    {
+      "last_name": "Wishart",
+      "fore_name": "David S",
+      "initials": "DS",
+      "name": "David S Wishart",
+      "affiliations": [
+        "Departments of Computing Sciences and Biological Sciences, University of Alberta , Edmonton, Canada T6G 2E8."
+      ]
+    },
+    {
+      "last_name": "Steinbeck",
+      "fore_name": "Christoph",
+      "initials": "C",
+      "name": "Christoph Steinbeck",
+      "affiliations": [
+        "European Bioinformatics Institute (EMBL-EBI), European Molecular Biology Laboratory , Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, U.K."
+      ]
+    },
+    {
+      "last_name": "Salek",
+      "fore_name": "Reza M",
+      "initials": "RM",
+      "name": "Reza M Salek",
+      "affiliations": [
+        "European Bioinformatics Institute (EMBL-EBI), European Molecular Biology Laboratory , Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, U.K."
+      ]
+    },
+    {
+      "last_name": "Neumann",
+      "fore_name": "Steffen",
+      "initials": "S",
+      "name": "Steffen Neumann",
+      "affiliations": [
+        "Leibniz Institute of Plant Biochemistry , Department of Stress and Developmental Biology, Weinberg 3, 06120 Halle, Germany."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Analytical chemistry",
+    "iso_abbreviation": "Anal Chem",
+    "issn": "1520-6882",
+    "issn_type": "Electronic",
+    "volume": "90",
+    "issue": "1",
+    "pub_year": "2018",
+    "pub_month": "Jan",
+    "pub_day": "02"
+  },
+  "start_page": "649",
+  "end_page": "656",
+  "pages": "649-656",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Databases, Chemical",
+    "Magnetic Resonance Spectroscopy",
+    "Metabolomics",
+    "Software"
+  ],
+  "article_ids": {
+    "pubmed": "29035042",
+    "doi": "10.1021/acs.analchem.7b02795"
+  },
+  "doi": "10.1021/acs.analchem.7b02795",
+  "dates": {
+    "completed": "2019-01-07",
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "BB/D01638X/1",
+      "agency": "Biotechnology and Biological Sciences Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MC_UP_A090_1006",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MR/L01632X/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MR/P011705/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.441347",
+    "pmid": "29035042"
+  }
+}

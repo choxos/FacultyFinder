@@ -1,0 +1,605 @@
+{
+  "openalex_id": "W3098891636",
+  "doi": "https://doi.org/10.1158/1538-7445.panca20-po-058",
+  "title": "Abstract PO-058: Transcriptional subtype-specific microenvironmental crosstalk and tumor cell plasticity in metastatic pancreatic cancer",
+  "abstract": "Abstract Metastatic pancreatic ductal adenocarcinoma (PDAC) is an aggressive and lethal malignancy with few therapeutic options. Tumor transcriptional state is a strong predictor of clinical outcome in PDAC, with two primary cell states, basal-like and classical, identified by bulk transcriptional profiling. Basal-like tumors carry a worse prognosis, but the mechanisms underlying this survival difference, the degree of cellular heterogeneity within a given tumor, and the subtype-specific contributions from the local immune microenvironment are not well understood. In addition, there are ongoing efforts to use patient-derived organoid models as functional surrogates for an individual patient’s disease, but the degree to which patient transcriptional phenotypes are preserved in their matched organoid models remains unclear. Here, we describe a pipeline that enables both direct characterization of the liver metastatic niche via single-cell RNA-sequencing and functional assessment of PDAC tumor biology in patient-matched organoid models. Starting from core needle biopsies of metastatic PDAC lesions, we applied this approach to profile 22 patient samples and their matched organoid models using single-cell RNA-sequencing with Seq-Well. We demonstrate significant heterogeneity at the single-cell level across the basal-like to classical transcriptional spectrum. Basal-like cells expressed more mesenchymal and stem-like features, while classical cells expressed features of epithelial and pancreatic progenitor transcriptional programs. A population of “hybrid” malignant cells co-expressed markers of both basal-like and classical states, suggesting that these phenotypes lie on a continuum rather than as discrete entities. Microenvironmental composition also differed by subtype across T/NK and macrophage populations. Specifically, basal-like tumors exhibited tumor cell crosstalk with specific macrophage subsets, while classical tumors harbored greater immune infiltration and a relatively pro-angiogenic microenvironment, raising important considerations for subtype-specific microenvironmental directed therapy. Finally, we found that matched organoids exhibited transcriptional drift along the basal-like to classical axis relative to their parent tumors, with evidence for selection against basal-like phenotypes in vitro. However, tumor cells in organoid culture exhibited remarkable plasticity and could recover in vivo basal-like phenotypes in response to changes in their growth conditions. Taken together, our work provides a framework for the analysis of human cancers and their matched models using single-cell methods to dissect tumor-intrinsic and extrinsic contributions, and reveals novel insights into the transcriptional heterogeneity and plasticity of PDAC. Citation Format: Srivatsan Raghavan, Peter S. Winter, Andrew W. Navia, Hannah L. Williams, Alan DenAdel, Radha L. Kalekar, Jennyfer Galvez-Reyes, Kristen E. Lowder, Nolawit Mulugeta, Manisha S. Raghavan, Ashir A. Borah, Sara A. Vayrynen, Andressa Dias Costa, Junning Wang, Emma Reilly, Dorisanne Y. Ragon, Lauren K. Brais, Alex M. Jaeger, James M. Cleary, Lorin Crawford, Jonathan A. Nowak, Brian M. Wolpin, William C. Hahn, Andrew J. Aguirre, Alex K. Shalek. Transcriptional subtype-specific microenvironmental crosstalk and tumor cell plasticity in metastatic pancreatic cancer [abstract]. In: Proceedings of the AACR Virtual Special Conference on Pancreatic Cancer; 2020 Sep 29-30. Philadelphia (PA): AACR; Cancer Res 2020;80(22 Suppl):Abstract nr PO-058.",
+  "authors": [
+    {
+      "display_name": "Srivatsan Raghavan",
+      "id": "A5027546748",
+      "orcid": "https://orcid.org/0000-0002-5374-9918",
+      "institutions": [
+        {
+          "id": "I4210119046",
+          "display_name": "Zero to Three",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Srivatsan Raghavan"
+    },
+    {
+      "display_name": "Peter Winter",
+      "id": "A5066983733",
+      "orcid": "https://orcid.org/0000-0002-6557-3219",
+      "institutions": [
+        {
+          "id": "I4210119046",
+          "display_name": "Zero to Three",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peter S. Winter"
+    },
+    {
+      "display_name": "Andrew W. Navia",
+      "id": "A5012084675",
+      "orcid": "https://orcid.org/0000-0002-5429-8012",
+      "institutions": [
+        {
+          "id": "I4210119046",
+          "display_name": "Zero to Three",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew W. Navia"
+    },
+    {
+      "display_name": "Hannah L. Williams",
+      "id": "A5020916284",
+      "orcid": "https://orcid.org/0000-0003-0434-3900",
+      "institutions": [
+        {
+          "id": "I4210119046",
+          "display_name": "Zero to Three",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hannah L. Williams"
+    },
+    {
+      "display_name": "Alan DenAdel",
+      "id": "A5010460466",
+      "orcid": "https://orcid.org/0000-0002-7985-6789",
+      "institutions": [
+        {
+          "id": "I27804330",
+          "display_name": "Brown University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alan DenAdel"
+    },
+    {
+      "display_name": "Radha L. Kalekar",
+      "id": "A5056045182",
+      "orcid": "https://orcid.org/0000-0002-1647-218X",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Radha L. Kalekar"
+    },
+    {
+      "display_name": "Jennyfer Galvez-Reyes",
+      "id": "A5114044754",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennyfer Galvez-Reyes"
+    },
+    {
+      "display_name": "Kristen E. Lowder",
+      "id": "A5017584320",
+      "orcid": "https://orcid.org/0000-0003-2615-4043",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kristen E. Lowder"
+    },
+    {
+      "display_name": "Nolawit Mulugeta",
+      "id": "A5084012367",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nolawit Mulugeta"
+    },
+    {
+      "display_name": "Manisha Raghavan",
+      "id": "A5071539796",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Manisha S. Raghavan"
+    },
+    {
+      "display_name": "Ashir A. Borah",
+      "id": "A5067996809",
+      "orcid": "https://orcid.org/0000-0003-1193-4987",
+      "institutions": [
+        {
+          "id": "I107606265",
+          "display_name": "Broad Institute",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ashir A. Borah"
+    },
+    {
+      "display_name": "Sara A. Väyrynen",
+      "id": "A5054541682",
+      "orcid": "https://orcid.org/0000-0003-1768-0471",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sara A. Vayrynen"
+    },
+    {
+      "display_name": "Andressa Dias Costa",
+      "id": "A5072851865",
+      "orcid": "https://orcid.org/0000-0003-1046-4899",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andressa Dias Costa"
+    },
+    {
+      "display_name": "Junning Wang",
+      "id": "A5051794852",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Junning Wang"
+    },
+    {
+      "display_name": "Emma Reilly",
+      "id": "A5113899866",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Emma Reilly"
+    },
+    {
+      "display_name": "Dorisanne Ragon",
+      "id": "A5025347801",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dorisanne Y. Ragon"
+    },
+    {
+      "display_name": "Lauren K. Brais",
+      "id": "A5028547202",
+      "orcid": "https://orcid.org/0000-0003-1069-0407",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lauren K. Brais"
+    },
+    {
+      "display_name": "Alex M. Jaeger",
+      "id": "A5045716415",
+      "orcid": "https://orcid.org/0000-0002-4319-4330",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alex M. Jaeger"
+    },
+    {
+      "display_name": "James M. Cleary",
+      "id": "A5018655814",
+      "orcid": "https://orcid.org/0000-0001-7213-3951",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James M. Cleary"
+    },
+    {
+      "display_name": "Lorin Crawford",
+      "id": "A5033244104",
+      "orcid": "https://orcid.org/0000-0003-0178-8242",
+      "institutions": [
+        {
+          "id": "I27804330",
+          "display_name": "Brown University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lorin Crawford"
+    },
+    {
+      "display_name": "Jonathan A. Nowak",
+      "id": "A5058614093",
+      "orcid": "https://orcid.org/0000-0002-0943-7407",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan A. Nowak"
+    },
+    {
+      "display_name": "Brian M. Wolpin",
+      "id": "A5047496278",
+      "orcid": "https://orcid.org/0000-0002-0455-1032",
+      "institutions": [
+        {
+          "id": "I4210108542",
+          "display_name": "Schlumberger (Ireland)",
+          "country_code": "IE",
+          "type": "company"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brian M. Wolpin"
+    },
+    {
+      "display_name": "William C. Hahn",
+      "id": "A5063875415",
+      "orcid": "https://orcid.org/0000-0003-2840-9791",
+      "institutions": [
+        {
+          "id": "I4210108542",
+          "display_name": "Schlumberger (Ireland)",
+          "country_code": "IE",
+          "type": "company"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William C. Hahn"
+    },
+    {
+      "display_name": "Andrew J. Aguirre",
+      "id": "A5079764447",
+      "orcid": "https://orcid.org/0000-0002-0701-6203",
+      "institutions": [
+        {
+          "id": "I4210108542",
+          "display_name": "Schlumberger (Ireland)",
+          "country_code": "IE",
+          "type": "company"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew J. Aguirre"
+    },
+    {
+      "display_name": "Alex K. Shalek",
+      "id": "A5083743078",
+      "orcid": "https://orcid.org/0000-0001-5670-8778",
+      "institutions": [
+        {
+          "id": "I4210108542",
+          "display_name": "Schlumberger (Ireland)",
+          "country_code": "IE",
+          "type": "company"
+        },
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alex K. Shalek"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-11-13",
+  "type": "article",
+  "cited_by_count": 2,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S168522863",
+    "display_name": "Cancer Research",
+    "issn_l": "0008-5472",
+    "issn": [
+      "0008-5472",
+      "1538-7445"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320273"
+  },
+  "volume": "80",
+  "issue": "22_Supplement",
+  "first_page": "PO",
+  "last_page": "058",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.67845386
+    },
+    {
+      "id": "C2780210213",
+      "display_name": "Pancreatic cancer",
+      "level": 3,
+      "score": 0.5691133
+    },
+    {
+      "id": "C31695470",
+      "display_name": "Organoid",
+      "level": 2,
+      "score": 0.5668226
+    },
+    {
+      "id": "C162317418",
+      "display_name": "Transcriptome",
+      "level": 4,
+      "score": 0.51085824
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.50980467
+    },
+    {
+      "id": "C55427017",
+      "display_name": "Cancer stem cell",
+      "level": 3,
+      "score": 0.48626888
+    },
+    {
+      "id": "C201750760",
+      "display_name": "Progenitor cell",
+      "level": 3,
+      "score": 0.47902408
+    },
+    {
+      "id": "C2776107976",
+      "display_name": "Tumor microenvironment",
+      "level": 3,
+      "score": 0.459016
+    },
+    {
+      "id": "C2908647359",
+      "display_name": "Population",
+      "level": 2,
+      "score": 0.45750287
+    },
+    {
+      "id": "C127716648",
+      "display_name": "Phenotype",
+      "level": 3,
+      "score": 0.44675162
+    },
+    {
+      "id": "C2779013556",
+      "display_name": "Metastasis",
+      "level": 3,
+      "score": 0.4438662
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.34454703
+    },
+    {
+      "id": "C28328180",
+      "display_name": "Stem cell",
+      "level": 2,
+      "score": 0.34445035
+    },
+    {
+      "id": "C150194340",
+      "display_name": "Gene expression",
+      "level": 3,
+      "score": 0.22979221
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.2120986
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.17130297
+    },
+    {
+      "id": "C95444343",
+      "display_name": "Cell biology",
+      "level": 1,
+      "score": 0.17027017
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.13623598
+    },
+    {
+      "id": "C3020616263",
+      "display_name": "Tumor cells",
+      "level": 2,
+      "score": 0.11929506
+    },
+    {
+      "id": "C99454951",
+      "display_name": "Environmental health",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10231",
+      "display_name": "Pancreatic and Hepatic Oncology Research",
+      "score": 0.9971
+    },
+    {
+      "id": "T11287",
+      "display_name": "Cancer Genomics and Diagnostics",
+      "score": 0.9922
+    },
+    {
+      "id": "T10336",
+      "display_name": "Cancer Cells and Metastasis",
+      "score": 0.986
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1158/1538-7445.panca20-po-058",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:29:32.322433",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,81 @@
+{
+  "pmid": "39308484",
+  "uid": "39308484",
+  "title": "Cross-validation: what does it estimate and how well does it do it?",
+  "abstract": "Cross-validation is a widely-used technique to estimate prediction error, but its behavior is complex and not fully understood. Ideally, one would like to think that cross-validation estimates the prediction error for the model at hand, fit to the training data. We prove that this is not the case for the linear model fit by ordinary least squares; rather it estimates the average prediction error of models fit on other unseen training sets drawn from the same population. We further show that this phenomenon occurs for most popular estimates of prediction error, including data splitting, bootstrapping, and Mallow's C p . Next, the standard confidence intervals for prediction error derived from cross-validation may have coverage far below the desired level. Because each data point is used for both training and testing, there are correlations among the measured accuracies for each fold, and so the usual estimate of variance is too small. We introduce a nested cross-validation scheme to estimate this variance more accurately, and show empirically that this modification leads to intervals with approximately correct coverage in many examples where traditional cross-validation intervals fail. Lastly, our analysis also shows that when producing confidence intervals for prediction accuracy with simple data splitting, one should not re-fit the model on the combined data, since this invalidates the confidence intervals.",
+  "authors": [
+    {
+      "last_name": "Bates",
+      "fore_name": "Stephen",
+      "initials": "S",
+      "name": "Stephen Bates",
+      "affiliations": [
+        "Depts. of Statistics and EECS, Univ. of California, Berkeley."
+      ]
+    },
+    {
+      "last_name": "Hastie",
+      "fore_name": "Trevor",
+      "initials": "T",
+      "name": "Trevor Hastie",
+      "affiliations": [
+        "Depts. of Statistics and Biomedical Data Science, Stanford Univ."
+      ]
+    },
+    {
+      "last_name": "Tibshirani",
+      "fore_name": "Robert",
+      "initials": "R",
+      "name": "Robert Tibshirani",
+      "affiliations": [
+        "Depts. of Biomedical Data Science and Statistics, Stanford Univ."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Journal of the American Statistical Association",
+    "iso_abbreviation": "J Am Stat Assoc",
+    "issn": "0162-1459",
+    "issn_type": "Print",
+    "volume": "119",
+    "issue": "546",
+    "pub_year": "2024"
+  },
+  "start_page": "1434",
+  "end_page": "1445",
+  "pages": "1434-1445",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "39308484",
+    "mid": "NIHMS1897212",
+    "pmc": "PMC11412612",
+    "doi": "10.1080/01621459.2023.2197686"
+  },
+  "doi": "10.1080/01621459.2023.2197686",
+  "pmc_id": "PMC11412612",
+  "dates": {
+    "revised": "2025-07-21"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 EB001988",
+      "agency": "NIBIB NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 GM134483",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:07:16.805642",
+    "pmid": "39308484"
+  }
+}

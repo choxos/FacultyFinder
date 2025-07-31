@@ -1,0 +1,788 @@
+{
+  "pmid": "35709760",
+  "uid": "35709760",
+  "title": "eQTL Set-Based Association Analysis Identifies Novel Susceptibility Loci for Barrett Esophagus and Esophageal Adenocarcinoma.",
+  "abstract": "BACKGROUND: Over 20 susceptibility single-nucleotide polymorphisms (SNP) have been identified for esophageal adenocarcinoma (EAC) and its precursor, Barrett esophagus (BE), explaining a small portion of heritability. METHODS: Using genetic data from 4,323 BE and 4,116 EAC patients aggregated by international consortia including the Barrett's and Esophageal Adenocarcinoma Consortium (BEACON), we conducted a comprehensive transcriptome-wide association study (TWAS) for BE/EAC, leveraging Genotype Tissue Expression (GTEx) gene-expression data from six tissue types of plausible relevance to EAC etiology: mucosa and muscularis from the esophagus, gastroesophageal (GE) junction, stomach, whole blood, and visceral adipose. Two analytical approaches were taken: standard TWAS using the predicted gene expression from local expression quantitative trait loci (eQTL), and set-based SKAT association using selected eQTLs that predict the gene expression. RESULTS: Although the standard approach did not identify significant signals, the eQTL set-based approach identified eight novel associations, three of which were validated in independent external data (eQTL SNP sets for EXOC3, ZNF641, and HSP90AA1). CONCLUSIONS: This study identified novel genetic susceptibility loci for EAC and BE using an eQTL set-based genetic association approach. IMPACT: This study expanded the pool of genetic susceptibility loci for EAC and BE, suggesting the potential of the eQTL set-based genetic association approach as an alternative method for TWAS analysis.",
+  "authors": [
+    {
+      "last_name": "Wang",
+      "fore_name": "Xiaoyu",
+      "initials": "X",
+      "name": "Xiaoyu Wang",
+      "affiliations": [
+        "Division of Public Health Sciences, Fred Hutchinson Cancer Research Center, Seattle, Washington."
+      ],
+      "orcid": "0000-0002-4504-7799"
+    },
+    {
+      "last_name": "Gharahkhani",
+      "fore_name": "Puya",
+      "initials": "P",
+      "name": "Puya Gharahkhani",
+      "affiliations": [
+        "QIMR Berghofer Medical Research Institute, Brisbane, Queensland, Australia."
+      ],
+      "orcid": "0000-0002-4203-5952"
+    },
+    {
+      "last_name": "Levine",
+      "fore_name": "David M",
+      "initials": "DM",
+      "name": "David M Levine",
+      "affiliations": [
+        "Department of Biostatistics, University of Washington, School of Public Health, Seattle, Washington."
+      ],
+      "orcid": "0000-0002-9292-570X"
+    },
+    {
+      "last_name": "Fitzgerald",
+      "fore_name": "Rebecca C",
+      "initials": "RC",
+      "name": "Rebecca C Fitzgerald",
+      "affiliations": [
+        "Medical Research Council (MRC) Cancer Unit, Hutchison-MRC Research, Centre, University of Cambridge, Cambridge, UK."
+      ],
+      "orcid": "0000-0002-3434-3568"
+    },
+    {
+      "last_name": "Gockel",
+      "fore_name": "Ines",
+      "initials": "I",
+      "name": "Ines Gockel",
+      "affiliations": [
+        "Department of Visceral, Transplant, Thoracic and Vascular Surgery, University Hospital of Leipzig, Leipzig, Germany."
+      ],
+      "orcid": "0000-0001-7423-713X"
+    },
+    {
+      "last_name": "Corley",
+      "fore_name": "Douglas A",
+      "initials": "DA",
+      "name": "Douglas A Corley",
+      "affiliations": [
+        "Division of Research, Kaiser Permanente Northern California, Oakland, California.",
+        "San Francisco Medical Center, Kaiser Permanente Northern California, San Francisco, California."
+      ],
+      "orcid": "0000-0001-6132-5165"
+    },
+    {
+      "last_name": "Risch",
+      "fore_name": "Harvey A",
+      "initials": "HA",
+      "name": "Harvey A Risch",
+      "affiliations": [
+        "Department of Chronic Disease Epidemiology, Yale School of Public Health, New Haven, Connecticut."
+      ],
+      "orcid": "0000-0001-5337-3941"
+    },
+    {
+      "last_name": "Bernstein",
+      "fore_name": "Leslie",
+      "initials": "L",
+      "name": "Leslie Bernstein",
+      "affiliations": [
+        "Department of Population Sciences, Beckman Research Institute and City of Hope Comprehensive Cancer Center, Duarte, California."
+      ],
+      "orcid": "0000-0002-7692-6518"
+    },
+    {
+      "last_name": "Chow",
+      "fore_name": "Wong-Ho",
+      "initials": "WH",
+      "name": "Wong-Ho Chow",
+      "affiliations": [
+        "Department of Epidemiology, MD Anderson Cancer Center, Houston, Texas."
+      ],
+      "orcid": "0000-0001-6076-0405"
+    },
+    {
+      "last_name": "Onstad",
+      "fore_name": "Lynn",
+      "initials": "L",
+      "name": "Lynn Onstad",
+      "affiliations": [
+        "Division of Public Health Sciences, Fred Hutchinson Cancer Research Center, Seattle, Washington."
+      ],
+      "orcid": "0000-0003-0039-7143"
+    },
+    {
+      "last_name": "Shaheen",
+      "fore_name": "Nicholas J",
+      "initials": "NJ",
+      "name": "Nicholas J Shaheen",
+      "affiliations": [
+        "Division of Gastroenterology and Hepatology, University of North Carolina School of Medicine, University of North Carolina, Chapel Hill, North Carolina."
+      ],
+      "orcid": "0000-0001-6602-5647"
+    },
+    {
+      "last_name": "Lagergren",
+      "fore_name": "Jesper",
+      "initials": "J",
+      "name": "Jesper Lagergren",
+      "affiliations": [
+        "Department of Molecular Medicine and Surgery, Karolinska Institute, Stockholm, Sweden.",
+        "School of Cancer and Pharmaceutical Sciences, King's College London, London, UK."
+      ],
+      "orcid": "0000-0002-5143-5448"
+    },
+    {
+      "last_name": "Hardie",
+      "fore_name": "Laura J",
+      "initials": "LJ",
+      "name": "Laura J Hardie",
+      "affiliations": [
+        "Division of Epidemiology, University of Leeds, Leeds, UK."
+      ],
+      "orcid": "0000-0001-5039-2100"
+    },
+    {
+      "last_name": "Wu",
+      "fore_name": "Anna H",
+      "initials": "AH",
+      "name": "Anna H Wu",
+      "affiliations": [
+        "Department of Population and Public Health Sciences, University of Southern California/Norris Comprehensive Cancer Center, Los Angeles, California."
+      ],
+      "orcid": "0000-0003-0546-902X"
+    },
+    {
+      "last_name": "Pharoah",
+      "fore_name": "Paul D P",
+      "initials": "PDP",
+      "name": "Paul D P Pharoah",
+      "affiliations": [
+        "Department of Oncology, University of Cambridge, Cambridge, UK.",
+        "Department of Public Health and Primary Care, University of Cambridge, Cambridge, UK."
+      ],
+      "orcid": "0000-0001-8494-732X"
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Geoffrey",
+      "initials": "G",
+      "name": "Geoffrey Liu",
+      "affiliations": [
+        "Pharmacogenomic Epidemiology, Ontario Cancer Institute, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-2603-7296"
+    },
+    {
+      "last_name": "Anderson",
+      "fore_name": "Lesley A",
+      "initials": "LA",
+      "name": "Lesley A Anderson",
+      "affiliations": [
+        "Department of Epidemiology and Public Health, Queen's University of Belfast, Royal Group of Hospitals, Northern Ireland."
+      ],
+      "orcid": "0000-0002-1000-3649"
+    },
+    {
+      "last_name": "Iyer",
+      "fore_name": "Prasad G",
+      "initials": "PG",
+      "name": "Prasad G Iyer",
+      "affiliations": [
+        "Division of Gastroenterology and Hepatology, Mayo Clinic, Rochester, Minnesota."
+      ],
+      "orcid": "0000-0002-9822-1420"
+    },
+    {
+      "last_name": "Gammon",
+      "fore_name": "Marilie D",
+      "initials": "MD",
+      "name": "Marilie D Gammon",
+      "affiliations": [
+        "Department of Epidemiology, University of North Carolina, Chapel Hill, North Carolina."
+      ]
+    },
+    {
+      "last_name": "Caldas",
+      "fore_name": "Carlos",
+      "initials": "C",
+      "name": "Carlos Caldas",
+      "affiliations": [
+        "Cancer Research UK, Cambridge Institute, Cambridge, UK."
+      ],
+      "orcid": "0000-0003-3547-1489"
+    },
+    {
+      "last_name": "Ye",
+      "fore_name": "Weimin",
+      "initials": "W",
+      "name": "Weimin Ye",
+      "affiliations": [
+        "Department of Molecular Medicine and Surgery, Karolinska Institute, Stockholm, Sweden."
+      ],
+      "orcid": "0000-0002-6859-4648"
+    },
+    {
+      "last_name": "Barr",
+      "fore_name": "Hugh",
+      "initials": "H",
+      "name": "Hugh Barr",
+      "affiliations": [
+        "Department of Upper GI Surgery, Gloucestershire Royal Hospital, Gloucester, UK."
+      ],
+      "orcid": "0000-0002-2919-5660"
+    },
+    {
+      "last_name": "Moayyedi",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Moayyedi",
+      "affiliations": [
+        "Farncombe Family Digestive Health Research Institute, Department of Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-3616-9292"
+    },
+    {
+      "last_name": "Harrison",
+      "fore_name": "Rebecca",
+      "initials": "R",
+      "name": "Rebecca Harrison",
+      "affiliations": [
+        "Department of Pathology, Leicester Royal Infirmary, Leicester, UK."
+      ],
+      "orcid": "0000-0002-6370-2005"
+    },
+    {
+      "last_name": "Watson",
+      "fore_name": "R G Peter",
+      "initials": "RGP",
+      "name": "R G Peter Watson",
+      "affiliations": [
+        "Department of Medicine, Institute of Clinical Science, Royal Victoria Hospital, Belfast, UK."
+      ],
+      "orcid": "0000-0003-1703-1738"
+    },
+    {
+      "last_name": "Attwood",
+      "fore_name": "Stephen",
+      "initials": "S",
+      "name": "Stephen Attwood",
+      "affiliations": [
+        "Department of General Surgery, North Tyneside General Hospital, North Shields, UK."
+      ],
+      "orcid": "0000-0002-5761-157X"
+    },
+    {
+      "last_name": "Chegwidden",
+      "fore_name": "Laura",
+      "initials": "L",
+      "name": "Laura Chegwidden",
+      "affiliations": [
+        "University of Cambridge Metabolic Research Laboratories, Wellcome Trust-MRC Institute of Metabolic Science, Addenbrooke's Hospital, Cambridge, UK."
+      ],
+      "orcid": "0000-0001-5041-8163"
+    },
+    {
+      "last_name": "Love",
+      "fore_name": "Sharon B",
+      "initials": "SB",
+      "name": "Sharon B Love",
+      "affiliations": [
+        "Centre for Statistics in Medicine and Oxford Clinical Trials Research Unit, Oxford, UK."
+      ],
+      "orcid": "0000-0002-6695-5390"
+    },
+    {
+      "last_name": "MacDonald",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David MacDonald",
+      "affiliations": [
+        "Department of Oral Biological and Medical Sciences, University of British Columbia, Vancouver, British Columbia, Canada."
+      ],
+      "orcid": "0000-0002-6718-9296"
+    },
+    {
+      "last_name": "deCaestecker",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John deCaestecker",
+      "affiliations": [
+        "Digestive Diseases Centre, University Hospitals of Leicester, Leicester, UK."
+      ],
+      "orcid": "0000-0001-5526-8176"
+    },
+    {
+      "last_name": "Prenen",
+      "fore_name": "Hans",
+      "initials": "H",
+      "name": "Hans Prenen",
+      "affiliations": [
+        "Oncology Department, University Hospital Antwerp, Edegem, Belgium."
+      ],
+      "orcid": "0000-0001-8802-7352"
+    },
+    {
+      "last_name": "Ott",
+      "fore_name": "Katja",
+      "initials": "K",
+      "name": "Katja Ott",
+      "affiliations": [
+        "Department of General, Visceral and Transplantation Surgery, University of Heidelberg, Heidelberg, Germany.",
+        "Department of General, Visceral and Thorax Surgery, RoMed Klinikum Rosenheim, Rosenheim, Germany."
+      ],
+      "orcid": "0000-0002-9979-2460"
+    },
+    {
+      "last_name": "Moebus",
+      "fore_name": "Susanne",
+      "initials": "S",
+      "name": "Susanne Moebus",
+      "affiliations": [
+        "Institute for Urban Public Health, University Hospitals, University of Duisburg-Essen, Essen, Germany."
+      ],
+      "orcid": "0000-0002-0072-5410"
+    },
+    {
+      "last_name": "Venerito",
+      "fore_name": "Marino",
+      "initials": "M",
+      "name": "Marino Venerito",
+      "affiliations": [
+        "Department of Gastroenterology, Hepatology and Infectious Diseases, Otto-von-Guericke University Hospital, Magdeburg, Germany."
+      ],
+      "orcid": "0000-0001-8581-0974"
+    },
+    {
+      "last_name": "Lang",
+      "fore_name": "Hauke",
+      "initials": "H",
+      "name": "Hauke Lang",
+      "affiliations": [
+        "Department of General, Visceral and Transplant Surgery, University Medical Center, University of Mainz, Mainz, Germany."
+      ],
+      "orcid": "0000-0001-9303-2148"
+    },
+    {
+      "last_name": "Mayershofer",
+      "fore_name": "Rupert",
+      "initials": "R",
+      "name": "Rupert Mayershofer",
+      "affiliations": [
+        "Gastroenterologie am Burgweiher, Bonn, Germany."
+      ],
+      "orcid": "0000-0001-8310-1381"
+    },
+    {
+      "last_name": "Knapp",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Knapp",
+      "affiliations": [
+        "Institute for Medical Biometry, Informatics, and Epidemiology, University of Bonn, Bonn, Germany."
+      ],
+      "orcid": "0000-0002-6400-8568"
+    },
+    {
+      "last_name": "Veits",
+      "fore_name": "Lothar",
+      "initials": "L",
+      "name": "Lothar Veits",
+      "affiliations": [
+        "Institute of Pathology, Friedrich-Alexander-University Erlangen-Nuremberg, Klinikum Bayreuth, Bayreuth, Germany."
+      ],
+      "orcid": "0000-0003-1819-052X"
+    },
+    {
+      "last_name": "Gerges",
+      "fore_name": "Christian",
+      "initials": "C",
+      "name": "Christian Gerges",
+      "affiliations": [
+        "Department of Internal Medicine, Evangelisches Krankenhaus, Düsseldorf, Germany."
+      ],
+      "orcid": "0000-0001-8271-1102"
+    },
+    {
+      "last_name": "Weismüller",
+      "fore_name": "Josef",
+      "initials": "J",
+      "name": "Josef Weismüller",
+      "affiliations": [
+        "Gastroenterologische Gemeinschaftspraxis, Koblenz, Germany."
+      ],
+      "orcid": "0000-0002-4232-5562"
+    },
+    {
+      "last_name": "Reeh",
+      "fore_name": "Matthias",
+      "initials": "M",
+      "name": "Matthias Reeh",
+      "affiliations": [
+        "Department of General, Visceral and Thoracic Surgery, Asklepios Harzklinik Goslar, Goslar, Germany."
+      ],
+      "orcid": "0000-0001-9111-3905"
+    },
+    {
+      "last_name": "Nöthen",
+      "fore_name": "Markus M",
+      "initials": "MM",
+      "name": "Markus M Nöthen",
+      "affiliations": [
+        "Institute of Human Genetics, Medical Faculty, University of Bonn, Bonn, Germany."
+      ],
+      "orcid": "0000-0002-8770-2464"
+    },
+    {
+      "last_name": "Izbicki",
+      "fore_name": "Jakob R",
+      "initials": "JR",
+      "name": "Jakob R Izbicki",
+      "affiliations": [
+        "General, Visceral and Thoracic Surgery Department and Clinic, University Medical Center Hamburg-Eppendorf, Hamburg, Germany."
+      ],
+      "orcid": "0000-0001-6807-8224"
+    },
+    {
+      "last_name": "Manner",
+      "fore_name": "Hendrik",
+      "initials": "H",
+      "name": "Hendrik Manner",
+      "affiliations": [
+        "Department of Internal Medicine II, Frankfurt Hoechst Hospital, Frankfurt, Germany."
+      ],
+      "orcid": "0000-0003-0745-2336"
+    },
+    {
+      "last_name": "Neuhaus",
+      "fore_name": "Horst",
+      "initials": "H",
+      "name": "Horst Neuhaus",
+      "affiliations": [
+        "Department of Internal Medicine, Evangelisches Krankenhaus, Düsseldorf, Germany."
+      ],
+      "orcid": "0000-0001-6200-0688"
+    },
+    {
+      "last_name": "Rösch",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Rösch",
+      "affiliations": [
+        "Department of Interdisciplinary Endoscopy, University Hospital Hamburg-Eppendorf, Hamburg, Germany."
+      ],
+      "orcid": "0000-0003-2270-2495"
+    },
+    {
+      "last_name": "Böhmer",
+      "fore_name": "Anne C",
+      "initials": "AC",
+      "name": "Anne C Böhmer",
+      "affiliations": [
+        "Institute of Human Genetics, Medical Faculty, University of Bonn, Bonn, Germany."
+      ],
+      "orcid": "0000-0002-5716-786X"
+    },
+    {
+      "last_name": "Hölscher",
+      "fore_name": "Arnulf H",
+      "initials": "AH",
+      "name": "Arnulf H Hölscher",
+      "affiliations": [
+        "Clinic for General, Visceral and Trauma Surgery, Contilia Center for Esophageal Diseases, Elisabeth Hospital Essen, Germany."
+      ],
+      "orcid": "0000-0003-3400-6913"
+    },
+    {
+      "last_name": "Anders",
+      "fore_name": "Mario",
+      "initials": "M",
+      "name": "Mario Anders",
+      "affiliations": [
+        "Department of Interdisciplinary Endoscopy, University Hospital Hamburg-Eppendorf, Hamburg, Germany.",
+        "Department of Gastroenterology and Interdisciplinary Endoscopy, Vivantes Wenckebach-Klinikum, Berlin, Germany."
+      ],
+      "orcid": "0000-0003-1452-924X"
+    },
+    {
+      "last_name": "Pech",
+      "fore_name": "Oliver",
+      "initials": "O",
+      "name": "Oliver Pech",
+      "affiliations": [
+        "Department of Gastroenterology and Interventional Endoscopy, St. John of God Hospital, Regensburg, Germany."
+      ],
+      "orcid": "0000-0002-8272-2079"
+    },
+    {
+      "last_name": "Schumacher",
+      "fore_name": "Brigitte",
+      "initials": "B",
+      "name": "Brigitte Schumacher",
+      "affiliations": [
+        "Department of Internal Medicine, Evangelisches Krankenhaus, Düsseldorf, Germany.",
+        "Department of Internal Medicine and Gastroenterology, Elisabeth Hospital, Essen, Germany."
+      ],
+      "orcid": "0000-0001-7156-7141"
+    },
+    {
+      "last_name": "Schmidt",
+      "fore_name": "Claudia",
+      "initials": "C",
+      "name": "Claudia Schmidt",
+      "affiliations": [
+        "Department of General, Visceral and Cancer Surgery, University of Cologne, Cologne, Germany."
+      ],
+      "orcid": "0000-0002-6720-867X"
+    },
+    {
+      "last_name": "Schmidt",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Schmidt",
+      "affiliations": [
+        "Department of General, Visceral and Transplantation Surgery, University of Heidelberg, Heidelberg, Germany."
+      ],
+      "orcid": "0000-0002-7166-3675"
+    },
+    {
+      "last_name": "Noder",
+      "fore_name": "Tania",
+      "initials": "T",
+      "name": "Tania Noder",
+      "affiliations": [
+        "Department of Interdisciplinary Endoscopy, University Hospital Hamburg-Eppendorf, Hamburg, Germany."
+      ],
+      "orcid": "0000-0003-4100-8810"
+    },
+    {
+      "last_name": "Lorenz",
+      "fore_name": "Dietmar",
+      "initials": "D",
+      "name": "Dietmar Lorenz",
+      "affiliations": [
+        "Department of General and Visceral Surgery, Sana Klinikum, Offenbach, Germany."
+      ],
+      "orcid": "0000-0002-4541-590X"
+    },
+    {
+      "last_name": "Vieth",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Vieth",
+      "affiliations": [
+        "Institute of Pathology, Friedrich-Alexander-University Erlangen-Nuremberg, Klinikum Bayreuth, Bayreuth, Germany."
+      ],
+      "orcid": "0000-0002-4336-7721"
+    },
+    {
+      "last_name": "May",
+      "fore_name": "Andrea",
+      "initials": "A",
+      "name": "Andrea May",
+      "affiliations": [
+        "Department of Gastroenterology, Oncology and Pneumology, Asklepios Paulinen Klinik, Wiesbaden, Germany."
+      ],
+      "orcid": "0000-0002-1550-5074"
+    },
+    {
+      "last_name": "Hess",
+      "fore_name": "Timo",
+      "initials": "T",
+      "name": "Timo Hess",
+      "affiliations": [
+        "Center for Human Genetics, University Hospital of Marburg, Marburg, Germany."
+      ],
+      "orcid": "0000-0003-2778-4274"
+    },
+    {
+      "last_name": "Kreuser",
+      "fore_name": "Nicole",
+      "initials": "N",
+      "name": "Nicole Kreuser",
+      "affiliations": [
+        "Department of Visceral, Transplant, Thoracic and Vascular Surgery, University Hospital of Leipzig, Leipzig, Germany."
+      ],
+      "orcid": "0000-0002-0525-0426"
+    },
+    {
+      "last_name": "Becker",
+      "fore_name": "Jessica",
+      "initials": "J",
+      "name": "Jessica Becker",
+      "affiliations": [
+        "Institute of Human Genetics, Medical Faculty, University of Bonn, Bonn, Germany."
+      ],
+      "orcid": "0000-0001-7141-2991"
+    },
+    {
+      "last_name": "Ell",
+      "fore_name": "Christian",
+      "initials": "C",
+      "name": "Christian Ell",
+      "affiliations": [
+        "Department of Medicine II, Sana Klinikum, Offenbach, Germany."
+      ],
+      "orcid": "0000-0001-6454-9682"
+    },
+    {
+      "last_name": "Tomlinson",
+      "fore_name": "Ian",
+      "initials": "I",
+      "name": "Ian Tomlinson",
+      "affiliations": [
+        "Edinburgh Cancer Research Centre, IGMM, University of Edinburgh, Edinburgh, UK."
+      ],
+      "orcid": "0000-0003-3037-1470"
+    },
+    {
+      "last_name": "Palles",
+      "fore_name": "Claire",
+      "initials": "C",
+      "name": "Claire Palles",
+      "affiliations": [
+        "Institute of Cancer and Genomic Sciences, University of Birmingham, Birmingham, UK."
+      ],
+      "orcid": "0000-0002-9670-2263"
+    },
+    {
+      "last_name": "Jankowski",
+      "fore_name": "Janusz A",
+      "initials": "JA",
+      "name": "Janusz A Jankowski",
+      "affiliations": [
+        "Comprehensive Clinical Trials Unit, University College London, London, UK."
+      ],
+      "orcid": "0000-0003-2130-9181"
+    },
+    {
+      "last_name": "Whiteman",
+      "fore_name": "David C",
+      "initials": "DC",
+      "name": "David C Whiteman",
+      "affiliations": [
+        "Cancer Control, QIMR Berghofer Medical Research Institute, Brisbane, Australia."
+      ],
+      "orcid": "0000-0003-2563-9559"
+    },
+    {
+      "last_name": "MacGregor",
+      "fore_name": "Stuart",
+      "initials": "S",
+      "name": "Stuart MacGregor",
+      "affiliations": [
+        "QIMR Berghofer Medical Research Institute, Brisbane, Queensland, Australia."
+      ],
+      "orcid": "0000-0001-6731-8142"
+    },
+    {
+      "last_name": "Schumacher",
+      "fore_name": "Johannes",
+      "initials": "J",
+      "name": "Johannes Schumacher",
+      "affiliations": [
+        "Center for Human Genetics, University Hospital of Marburg, Marburg, Germany."
+      ],
+      "orcid": "0000-0001-9217-6457"
+    },
+    {
+      "last_name": "Vaughan",
+      "fore_name": "Thomas L",
+      "initials": "TL",
+      "name": "Thomas L Vaughan",
+      "affiliations": [
+        "Division of Public Health Sciences, Fred Hutchinson Cancer Research Center, Seattle, Washington.",
+        "Department of Epidemiology, University of Washington, School of Public Health, Seattle, Washington."
+      ],
+      "orcid": "0000-0003-1537-0242"
+    },
+    {
+      "last_name": "Buas",
+      "fore_name": "Matthew F",
+      "initials": "MF",
+      "name": "Matthew F Buas",
+      "affiliations": [
+        "Department of Cancer Prevention and Control, Roswell Park Comprehensive Cancer Center, Buffalo, New York."
+      ],
+      "orcid": "0000-0002-8524-3428"
+    },
+    {
+      "last_name": "Dai",
+      "fore_name": "James Y",
+      "initials": "JY",
+      "name": "James Y Dai",
+      "affiliations": [
+        "Division of Public Health Sciences, Fred Hutchinson Cancer Research Center, Seattle, Washington.",
+        "Department of Biostatistics, University of Washington, School of Public Health, Seattle, Washington."
+      ],
+      "orcid": "0000-0001-6479-9286"
+    }
+  ],
+  "journal": {
+    "title": "Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology",
+    "iso_abbreviation": "Cancer Epidemiol Biomarkers Prev",
+    "issn": "1538-7755",
+    "issn_type": "Electronic",
+    "volume": "31",
+    "issue": "9",
+    "pub_year": "2022",
+    "pub_month": "Sep",
+    "pub_day": "02"
+  },
+  "start_page": "1735",
+  "end_page": "1745",
+  "pages": "1735-1745",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Adenocarcinoma",
+    "Barrett Esophagus",
+    "Esophageal Neoplasms",
+    "Genetic Predisposition to Disease",
+    "Humans",
+    "Quantitative Trait Loci"
+  ],
+  "article_ids": {
+    "pubmed": "35709760",
+    "mid": "NIHMS1818205",
+    "pmc": "PMC9444939",
+    "doi": "10.1158/1055-9965.EPI-22-0096",
+    "pii": "704926"
+  },
+  "doi": "10.1158/1055-9965.EPI-22-0096",
+  "pmc_id": "PMC9444939",
+  "dates": {
+    "completed": "2022-09-08",
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R03 CA223731",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "S10 OD028685",
+      "agency": "NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "4584",
+      "agency": "Cancer Research UK",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "R01 CA222833",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "16942",
+      "agency": "Cancer Research UK",
+      "country": "United Kingdom"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:45:00.434178",
+    "pmid": "35709760"
+  }
+}

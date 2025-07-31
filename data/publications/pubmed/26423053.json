@@ -1,0 +1,718 @@
+{
+  "pmid": "26423053",
+  "uid": "26423053",
+  "title": "Concept and design of a genome-wide association genotyping array tailored for transplantation-specific studies.",
+  "abstract": "BACKGROUND: In addition to HLA genetic incompatibility, non-HLA difference between donor and recipients of transplantation leading to allograft rejection are now becoming evident. We aimed to create a unique genome-wide platform to facilitate genomic research studies in transplant-related studies. We designed a genome-wide genotyping tool based on the most recent human genomic reference datasets, and included customization for known and potentially relevant metabolic and pharmacological loci relevant to transplantation. METHODS: We describe here the design and implementation of a customized genome-wide genotyping array, the 'TxArray', comprising approximately 782,000 markers with tailored content for deeper capture of variants across HLA, KIR, pharmacogenomic, and metabolic loci important in transplantation. To test concordance and genotyping quality, we genotyped 85 HapMap samples on the array, including eight trios. RESULTS: We show low Mendelian error rates and high concordance rates for HapMap samples (average parent-parent-child heritability of 0.997, and concordance of 0.996). We performed genotype imputation across autosomal regions, masking directly genotyped SNPs to assess imputation accuracy and report an accuracy of >0.962 for directly genotyped SNPs. We demonstrate much higher capture of the natural killer cell immunoglobulin-like receptor (KIR) region versus comparable platforms. Overall, we show that the genotyping quality and coverage of the TxArray is very high when compared to reference samples and to other genome-wide genotyping platforms. CONCLUSIONS: We have designed a comprehensive genome-wide genotyping tool which enables accurate association testing and imputation of ungenotyped SNPs, facilitating powerful and cost-effective large-scale genotyping of transplant-related studies.",
+  "authors": [
+    {
+      "last_name": "Li",
+      "fore_name": "Yun R",
+      "initials": "YR",
+      "name": "Yun R Li",
+      "affiliations": [
+        "Medical Scientist Training Program, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA.",
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "van Setten",
+      "fore_name": "Jessica",
+      "initials": "J",
+      "name": "Jessica van Setten",
+      "affiliations": [
+        "Department of Cardiology, Division of Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Verma",
+      "fore_name": "Shefali S",
+      "initials": "SS",
+      "name": "Shefali S Verma",
+      "affiliations": [
+        "Center for Systems Genomics, The Pennsylvania State University, University Park, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Lu",
+      "fore_name": "Yontao",
+      "initials": "Y",
+      "name": "Yontao Lu",
+      "affiliations": [
+        "Affymetrix Incorporated, Santa Clara, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Holmes",
+      "fore_name": "Michael V",
+      "initials": "MV",
+      "name": "Michael V Holmes",
+      "affiliations": [
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Gao",
+      "fore_name": "Hui",
+      "initials": "H",
+      "name": "Hui Gao",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Lek",
+      "fore_name": "Monkol",
+      "initials": "M",
+      "name": "Monkol Lek",
+      "affiliations": [
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of Harvard and MIT, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Nair",
+      "fore_name": "Nikhil",
+      "initials": "N",
+      "name": "Nikhil Nair",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Chandrupatla",
+      "fore_name": "Hareesh",
+      "initials": "H",
+      "name": "Hareesh Chandrupatla",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Chang",
+      "fore_name": "Baoli",
+      "initials": "B",
+      "name": "Baoli Chang",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Karczewski",
+      "fore_name": "Konrad J",
+      "initials": "KJ",
+      "name": "Konrad J Karczewski",
+      "affiliations": [
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of Harvard and MIT, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Wong",
+      "fore_name": "Chanel",
+      "initials": "C",
+      "name": "Chanel Wong",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Mohebnasab",
+      "fore_name": "Maede",
+      "initials": "M",
+      "name": "Maede Mohebnasab",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Mukhtar",
+      "fore_name": "Eyas",
+      "initials": "E",
+      "name": "Eyas Mukhtar",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Phillips",
+      "fore_name": "Randy",
+      "initials": "R",
+      "name": "Randy Phillips",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Tragante",
+      "fore_name": "Vinicius",
+      "initials": "V",
+      "name": "Vinicius Tragante",
+      "affiliations": [
+        "Department of Cardiology, Division of Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Hou",
+      "fore_name": "Cuiping",
+      "initials": "C",
+      "name": "Cuiping Hou",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Steel",
+      "fore_name": "Laura",
+      "initials": "L",
+      "name": "Laura Steel",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Takesha",
+      "initials": "T",
+      "name": "Takesha Lee",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Garifallou",
+      "fore_name": "James",
+      "initials": "J",
+      "name": "James Garifallou",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Guettouche",
+      "fore_name": "Toumy",
+      "initials": "T",
+      "name": "Toumy Guettouche",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Cao",
+      "fore_name": "Hongzhi",
+      "initials": "H",
+      "name": "Hongzhi Cao",
+      "affiliations": [
+        "BGI-Shenzhen, Shenzhen, China.",
+        "Department of Biology, University of Copenhagen, Copenhagen, Denmark."
+      ]
+    },
+    {
+      "last_name": "Guan",
+      "fore_name": "Weihua",
+      "initials": "W",
+      "name": "Weihua Guan",
+      "affiliations": [
+        "Division of Biostatistics, University of Minnesota, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Himes",
+      "fore_name": "Aubree",
+      "initials": "A",
+      "name": "Aubree Himes",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "van Houten",
+      "fore_name": "Jacob",
+      "initials": "J",
+      "name": "Jacob van Houten",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Pasquier",
+      "fore_name": "Andrew",
+      "initials": "A",
+      "name": "Andrew Pasquier",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Yu",
+      "fore_name": "Reina",
+      "initials": "R",
+      "name": "Reina Yu",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Carrigan",
+      "fore_name": "Elena",
+      "initials": "E",
+      "name": "Elena Carrigan",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Miller",
+      "fore_name": "Michael B",
+      "initials": "MB",
+      "name": "Michael B Miller",
+      "affiliations": [
+        "Department of Psychology, University of Minnesota, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Schladt",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Schladt",
+      "affiliations": [
+        "Minneapolis Medical Research Foundation, Hennepin County Medical Center, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Akdere",
+      "fore_name": "Abdullah",
+      "initials": "A",
+      "name": "Abdullah Akdere",
+      "affiliations": [
+        "Medical Scientist Training Program, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Gonzalez",
+      "fore_name": "Ana",
+      "initials": "A",
+      "name": "Ana Gonzalez",
+      "affiliations": [
+        "Medical Scientist Training Program, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Llyod",
+      "fore_name": "Kelsey M",
+      "initials": "KM",
+      "name": "Kelsey M Llyod",
+      "affiliations": [
+        "Medical Scientist Training Program, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "McGinn",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel McGinn",
+      "affiliations": [
+        "Medical Scientist Training Program, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Gangasani",
+      "fore_name": "Abhinav",
+      "initials": "A",
+      "name": "Abhinav Gangasani",
+      "affiliations": [
+        "Medical Scientist Training Program, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Michaud",
+      "fore_name": "Zach",
+      "initials": "Z",
+      "name": "Zach Michaud",
+      "affiliations": [
+        "Medical Scientist Training Program, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Colasacco",
+      "fore_name": "Abigail",
+      "initials": "A",
+      "name": "Abigail Colasacco",
+      "affiliations": [
+        "Medical Scientist Training Program, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Snyder",
+      "fore_name": "James",
+      "initials": "J",
+      "name": "James Snyder",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Thomas",
+      "fore_name": "Kelly",
+      "initials": "K",
+      "name": "Kelly Thomas",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Tiancheng",
+      "initials": "T",
+      "name": "Tiancheng Wang",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Wu",
+      "fore_name": "Baolin",
+      "initials": "B",
+      "name": "Baolin Wu",
+      "affiliations": [
+        "Division of Biostatistics, University of Minnesota, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Alzahrani",
+      "fore_name": "Alhusain J",
+      "initials": "AJ",
+      "name": "Alhusain J Alzahrani",
+      "affiliations": [
+        "Department of Clinical Laboratories Sciences, College of Applied Medical Sciences, King Saud University, Riyadh, Saudi Arabia."
+      ]
+    },
+    {
+      "last_name": "Al-Ali",
+      "fore_name": "Amein K",
+      "initials": "AK",
+      "name": "Amein K Al-Ali",
+      "affiliations": [
+        "College of Medicine, University of Dammam, Dammam, Kingdom of Saudi Arabia."
+      ]
+    },
+    {
+      "last_name": "Al-Muhanna",
+      "fore_name": "Fahad A",
+      "initials": "FA",
+      "name": "Fahad A Al-Muhanna",
+      "affiliations": [
+        "College of Medicine, University of Dammam, Dammam, Kingdom of Saudi Arabia."
+      ]
+    },
+    {
+      "last_name": "Al-Rubaish",
+      "fore_name": "Abdullah M",
+      "initials": "AM",
+      "name": "Abdullah M Al-Rubaish",
+      "affiliations": [
+        "College of Medicine, University of Dammam, Dammam, Kingdom of Saudi Arabia."
+      ]
+    },
+    {
+      "last_name": "Al-Mueilo",
+      "fore_name": "Samir",
+      "initials": "S",
+      "name": "Samir Al-Mueilo",
+      "affiliations": [
+        "College of Medicine, University of Dammam, Dammam, Kingdom of Saudi Arabia."
+      ]
+    },
+    {
+      "last_name": "Monos",
+      "fore_name": "Dimitri S",
+      "initials": "DS",
+      "name": "Dimitri S Monos",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA.",
+        "Department of Pathology and Laboratory Medicine, Perelman School of Medicine, University of Pennsylvania and the Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Murphy",
+      "fore_name": "Barbara",
+      "initials": "B",
+      "name": "Barbara Murphy",
+      "affiliations": [
+        "Division of Nephrology and Department of Medicine, Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Olthoff",
+      "fore_name": "Kim M",
+      "initials": "KM",
+      "name": "Kim M Olthoff",
+      "affiliations": [
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Wijmenga",
+      "fore_name": "Cisca",
+      "initials": "C",
+      "name": "Cisca Wijmenga",
+      "affiliations": [
+        "Department of Genetics, The University Medical Center Groningen, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Webster",
+      "fore_name": "Teresa",
+      "initials": "T",
+      "name": "Teresa Webster",
+      "affiliations": [
+        "Affymetrix Incorporated, Santa Clara, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Kamoun",
+      "fore_name": "Malek",
+      "initials": "M",
+      "name": "Malek Kamoun",
+      "affiliations": [
+        "Department of Pathology and Laboratory Medicine, Perelman School of Medicine, University of Pennsylvania and the Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Balasubramanian",
+      "fore_name": "Suganthi",
+      "initials": "S",
+      "name": "Suganthi Balasubramanian",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, and Molecular Biophysics and Biochemistry Department, Yale University, New Haven, CT, 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Lanktree",
+      "fore_name": "Matthew B",
+      "initials": "MB",
+      "name": "Matthew B Lanktree",
+      "affiliations": [
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Oetting",
+      "fore_name": "William S",
+      "initials": "WS",
+      "name": "William S Oetting",
+      "affiliations": [
+        "Experimental and Clinical Pharmacology, University of Minnesota, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Garcia-Pavia",
+      "fore_name": "Pablo",
+      "initials": "P",
+      "name": "Pablo Garcia-Pavia",
+      "affiliations": [
+        "Heart Failure and Inherited Cardiac Diseases Unit, Department of Cardiology, Hospital Universitario Puerta de Hierro Majadahonda, Madrid, Spain."
+      ]
+    },
+    {
+      "last_name": "MacArthur",
+      "fore_name": "Daniel G",
+      "initials": "DG",
+      "name": "Daniel G MacArthur",
+      "affiliations": [
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of Harvard and MIT, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "de Bakker",
+      "fore_name": "Paul I W",
+      "initials": "PI",
+      "name": "Paul I W de Bakker",
+      "affiliations": [
+        "Department of Medical Genetics, Center for Molecular Medicine and Department of Epidemiology, Julius Center for Health Sciences and Primary Care, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Hakonarson",
+      "fore_name": "Hakon",
+      "initials": "H",
+      "name": "Hakon Hakonarson",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Birdwell",
+      "fore_name": "Kelly A",
+      "initials": "KA",
+      "name": "Kelly A Birdwell",
+      "affiliations": [
+        "School of Medicine, Vanderbilt University, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Jacobson",
+      "fore_name": "Pamala A",
+      "initials": "PA",
+      "name": "Pamala A Jacobson",
+      "affiliations": [
+        "College of Pharmacy, University of Minnesota, Minneapolis, USA."
+      ]
+    },
+    {
+      "last_name": "Ritchie",
+      "fore_name": "Marylyn D",
+      "initials": "MD",
+      "name": "Marylyn D Ritchie",
+      "affiliations": [
+        "Center for Systems Genomics, The Pennsylvania State University, University Park, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Asselbergs",
+      "fore_name": "Folkert W",
+      "initials": "FW",
+      "name": "Folkert W Asselbergs",
+      "affiliations": [
+        "Department of Cardiology, Division of Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands.",
+        "Durrer Center for Cardiogenetic Research, ICIN-Netherlands Heart Institute, Utrecht, The Netherlands.",
+        "Institute of Cardiovascular Science, faculty of Population Health Sciences, University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Israni",
+      "fore_name": "Ajay K",
+      "initials": "AK",
+      "name": "Ajay K Israni",
+      "affiliations": [
+        "Hennepin County Medical Center, University of Minneosta, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Shaked",
+      "fore_name": "Abraham",
+      "initials": "A",
+      "name": "Abraham Shaked",
+      "affiliations": [
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Keating",
+      "fore_name": "Brendan J",
+      "initials": "BJ",
+      "name": "Brendan J Keating",
+      "affiliations": [
+        "The Children's Hospital of Philadelphia, Philadelphia, PA, USA. bkeating@mail.med.upenn.edu.",
+        "Penn Transplant Institute, Hospital of the University of Pennsylvania, Philadelphia, PA, USA. bkeating@mail.med.upenn.edu.",
+        "Department of Pediatrics, University of Pennsylvania, Philadelphia, PA, USA. bkeating@mail.med.upenn.edu.",
+        "Division of Transplantation, 2 Dulles, Hospital of the University of Pennsylvania, 3400 Spruce Street, Philadelphia, PA, 19104, USA. bkeating@mail.med.upenn.edu."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Genome medicine",
+    "iso_abbreviation": "Genome Med",
+    "issn": "1756-994X",
+    "issn_type": "Electronic",
+    "volume": "7",
+    "pub_year": "2015",
+    "pub_month": "Oct",
+    "pub_day": "01"
+  },
+  "start_page": "90",
+  "pages": "90",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "DNA Copy Number Variations",
+    "Genome-Wide Association Study",
+    "Genotype",
+    "HLA Antigens",
+    "Humans",
+    "Polymorphism, Single Nucleotide",
+    "Receptors, KIR"
+  ],
+  "article_ids": {
+    "pubmed": "26423053",
+    "pmc": "PMC4589899",
+    "doi": "10.1186/s13073-015-0211-x",
+    "pii": "10.1186/s13073-015-0211-x"
+  },
+  "doi": "10.1186/s13073-015-0211-x",
+  "pmc_id": "PMC4589899",
+  "dates": {
+    "completed": "2016-05-19",
+    "revised": "2022-04-08"
+  },
+  "chemicals": [
+    "HLA Antigens",
+    "Receptors, KIR"
+  ],
+  "grants": [
+    {
+      "grant_id": "U01 AI063589",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UM1 AI109565",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01-AI63589",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI070119",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UM1AI109565",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01-DK062494",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 DK062494",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19-AI070119",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006830",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:34:39.066109",
+    "pmid": "26423053"
+  }
+}

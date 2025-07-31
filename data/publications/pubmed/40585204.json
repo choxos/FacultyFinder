@@ -1,0 +1,647 @@
+{
+  "pmid": "40585204",
+  "uid": "40585204",
+  "title": "Empiric Azithromycin in COVID-19 Impacts the Respiratory Microbiome and Antimicrobial Resistome without Anti-inflammatory Benefit.",
+  "abstract": "Azithromycin is often prescribed unnecessarily for respiratory infections, many of which are viral. During the COVID-19 pandemic, its use was widespread, in part due to alleged therapeutic benefits, which have since been disproven. Here, we sought to understand the impact of azithromycin exposure on the respiratory microbiome, antimicrobial resistome, and host immune response in a prospective multicenter cohort of 1164 patients hospitalized for SARS-CoV-2 infection. Using longitudinal nasal metatranscriptomics, we compared patients treated with azithromycin (n=366, 31.4%) to those who received no antibiotics (n=474, 40.7%) or antibiotics other than azithromycin (n=324, 27.8%). We found that azithromycin treatment altered the community composition of the nasal microbiome, reducing bacterial relative abundance, increasing fungal relative abundance, and increasing potentially pathogenic taxa such as Klebsiellaand Staphylococcus. Azithromycin treatment was most notably associated with increases in the number of detectably expressed macrolide/lincosamide/streptogramin (MLS) antimicrobial resistance genes, as well as their relative proportion in the resistome, with changes observable after one day of exposure. Of the MLS resistance genes, the expression of ermC, msrA and ermX increased the most in patients receiving azithromycin. Correlation analyses demonstrated that MLS resistance gene expression was significantly associated with the abundance of several taxa, including both commensal (e.g., Dolosigranulum, Corynebacterium) and potentially pathogenic genera (e.g., Streptococcus, Staphylococcus). Assessment of the peripheral blood and upper airway host transcriptome demonstrated no differences in the expression of inflammatory genes. Taken together, our findings demonstrate that azithromycin treatment in COVID-19 leads to dysbiosis of the upper respiratory microbiome and changes in the expression of MLS resistance genes, without apparent anti-inflammatory benefit.",
+  "authors": [
+    {
+      "last_name": "Langelier",
+      "fore_name": "Charles",
+      "initials": "C",
+      "name": "Charles Langelier",
+      "affiliations": [
+        "University of California, San Francisco."
+      ],
+      "orcid": "0000-0002-6708-4646"
+    },
+    {
+      "last_name": "Glascock",
+      "fore_name": "Abigail",
+      "initials": "A",
+      "name": "Abigail Glascock",
+      "affiliations": [
+        "Chan Zuckerberg Biohub."
+      ]
+    },
+    {
+      "last_name": "Maguire",
+      "fore_name": "Cole",
+      "initials": "C",
+      "name": "Cole Maguire",
+      "affiliations": [
+        "The University of Texas at Austin, Austin, TX 78712, USA."
+      ],
+      "orcid": "0000-0001-8986-9762"
+    },
+    {
+      "last_name": "Van Phan",
+      "fore_name": "Hoang",
+      "initials": "H",
+      "name": "Hoang Van Phan",
+      "affiliations": [
+        "UCSF."
+      ]
+    },
+    {
+      "last_name": "Lydon",
+      "fore_name": "Emily",
+      "initials": "E",
+      "name": "Emily Lydon",
+      "affiliations": [
+        "University of California San Francisco."
+      ]
+    },
+    {
+      "last_name": "Calfee",
+      "fore_name": "Carolyn",
+      "initials": "C",
+      "name": "Carolyn Calfee",
+      "affiliations": [
+        "University of California San Francisco.",
+        "IMPACC Network."
+      ]
+    },
+    {
+      "last_name": "Corry",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Corry",
+      "affiliations": [
+        "Baylor College of Medicine."
+      ],
+      "orcid": "0000-0001-9729-1016"
+    },
+    {
+      "last_name": "Kheradmand",
+      "fore_name": "Farrah",
+      "initials": "F",
+      "name": "Farrah Kheradmand",
+      "affiliations": [
+        "Baylor College of Medicine."
+      ],
+      "orcid": "0000-0001-5343-103X"
+    },
+    {
+      "last_name": "Baden",
+      "fore_name": "Lindsey",
+      "initials": "L",
+      "name": "Lindsey Baden",
+      "affiliations": [
+        "Brigham and Women's Hospital."
+      ],
+      "orcid": "0009-0004-1752-1926"
+    },
+    {
+      "last_name": "Sekaly",
+      "fore_name": "Rafick-Pierre",
+      "initials": "RP",
+      "name": "Rafick-Pierre Sekaly",
+      "affiliations": [
+        "Case Western Reserve University."
+      ]
+    },
+    {
+      "last_name": "McComsey",
+      "fore_name": "Grace",
+      "initials": "G",
+      "name": "Grace McComsey",
+      "affiliations": [
+        "Case Western Reserve University."
+      ],
+      "orcid": "0000-0003-2690-8888"
+    },
+    {
+      "last_name": "Haddad",
+      "fore_name": "Elias",
+      "initials": "E",
+      "name": "Elias Haddad",
+      "affiliations": [
+        "Drexel University."
+      ],
+      "orcid": "0000-0001-6924-4300"
+    },
+    {
+      "last_name": "Cairns",
+      "fore_name": "Charles",
+      "initials": "C",
+      "name": "Charles Cairns",
+      "affiliations": [
+        "Drexel University/Tower Health Hospital."
+      ],
+      "orcid": "0000-0003-2291-5415"
+    },
+    {
+      "last_name": "Pulendran",
+      "fore_name": "Bali",
+      "initials": "B",
+      "name": "Bali Pulendran",
+      "affiliations": [
+        "Stanford University School of Medicine."
+      ],
+      "orcid": "0000-0001-6517-4333"
+    },
+    {
+      "last_name": "Fernandez-Sesma",
+      "fore_name": "Ana",
+      "initials": "A",
+      "name": "Ana Fernandez-Sesma",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai."
+      ],
+      "orcid": "0000-0002-3405-6702"
+    },
+    {
+      "last_name": "Simon",
+      "fore_name": "Viviana",
+      "initials": "V",
+      "name": "Viviana Simon",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai."
+      ],
+      "orcid": "0000-0002-6416-5096"
+    },
+    {
+      "last_name": "Metcalf",
+      "fore_name": "Jordan",
+      "initials": "J",
+      "name": "Jordan Metcalf",
+      "affiliations": [
+        "University of Oklahoma Health Sciences Center."
+      ],
+      "orcid": "0000-0003-4359-5270"
+    },
+    {
+      "last_name": "Higuita",
+      "fore_name": "Nelson",
+      "initials": "N",
+      "name": "Nelson Higuita",
+      "affiliations": [
+        "U Oklahoma."
+      ]
+    },
+    {
+      "last_name": "Messer",
+      "fore_name": "William",
+      "initials": "W",
+      "name": "William Messer",
+      "affiliations": [
+        "OHSU."
+      ],
+      "orcid": "0000-0002-4381-6347"
+    },
+    {
+      "last_name": "Davis",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Davis",
+      "affiliations": [
+        "Stanford University School of Medicine."
+      ],
+      "orcid": "0000-0001-6868-657X"
+    },
+    {
+      "last_name": "Nadeau",
+      "fore_name": "Kari C",
+      "initials": "KC",
+      "name": "Kari C Nadeau",
+      "affiliations": [
+        "Stanford University."
+      ],
+      "orcid": "0000-0002-2146-2955"
+    },
+    {
+      "last_name": "Kraft",
+      "fore_name": "Monica",
+      "initials": "M",
+      "name": "Monica Kraft",
+      "affiliations": [
+        "University of Arizona."
+      ]
+    },
+    {
+      "last_name": "Bime",
+      "fore_name": "Chris",
+      "initials": "C",
+      "name": "Chris Bime",
+      "affiliations": [
+        "University of Arizona."
+      ]
+    },
+    {
+      "last_name": "Schaenman",
+      "fore_name": "Joanna",
+      "initials": "J",
+      "name": "Joanna Schaenman",
+      "affiliations": [
+        "UCLA."
+      ]
+    },
+    {
+      "last_name": "Erle",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Erle",
+      "affiliations": [
+        "UCSF."
+      ],
+      "orcid": "0000-0002-2171-0648"
+    },
+    {
+      "last_name": "Atkinson",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Atkinson",
+      "affiliations": [
+        "University of Florida."
+      ],
+      "orcid": "0000-0001-8489-4782"
+    },
+    {
+      "last_name": "Ehrlich",
+      "fore_name": "Lauren I R",
+      "initials": "LIR",
+      "name": "Lauren I R Ehrlich",
+      "affiliations": [
+        "University of Texas at Austin."
+      ],
+      "orcid": "0000-0002-1697-1755"
+    },
+    {
+      "last_name": "Melamed",
+      "fore_name": "Esther",
+      "initials": "E",
+      "name": "Esther Melamed",
+      "affiliations": [
+        "The University of Texas at Austin."
+      ]
+    },
+    {
+      "last_name": "Montgomery",
+      "fore_name": "Ruth",
+      "initials": "R",
+      "name": "Ruth Montgomery",
+      "affiliations": [
+        "Yale School of Medicine."
+      ],
+      "orcid": "0000-0002-8661-4454"
+    },
+    {
+      "last_name": "Shaw",
+      "fore_name": "Albert",
+      "initials": "A",
+      "name": "Albert Shaw",
+      "affiliations": [
+        "Yale University School of Medicine."
+      ]
+    },
+    {
+      "last_name": "Hough",
+      "fore_name": "Catherine",
+      "initials": "C",
+      "name": "Catherine Hough",
+      "affiliations": [
+        "Oregon Health Sciences University."
+      ]
+    },
+    {
+      "last_name": "Geng",
+      "fore_name": "Linda",
+      "initials": "L",
+      "name": "Linda Geng",
+      "affiliations": [
+        "Stanford University School of Medicine."
+      ],
+      "orcid": "0000-0002-9891-5705"
+    },
+    {
+      "last_name": "Hoch",
+      "fore_name": "Annmarie",
+      "initials": "A",
+      "name": "Annmarie Hoch",
+      "affiliations": [
+        "Harvard."
+      ],
+      "orcid": "0000-0003-0836-2164"
+    },
+    {
+      "last_name": "Hafler",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Hafler",
+      "affiliations": [
+        "Yale University."
+      ],
+      "orcid": "0000-0003-4664-535X"
+    },
+    {
+      "last_name": "Augustine",
+      "fore_name": "Alison",
+      "initials": "A",
+      "name": "Alison Augustine",
+      "affiliations": [
+        "National Institute of Allergy and Infectious Diseases/National Institutes of Health."
+      ]
+    },
+    {
+      "last_name": "Becker",
+      "fore_name": "Patrice",
+      "initials": "P",
+      "name": "Patrice Becker",
+      "affiliations": [
+        "National Institute of Allergy and Infectious Diseases/National Institutes of Health."
+      ],
+      "orcid": "0000-0002-1170-8587"
+    },
+    {
+      "last_name": "Peters",
+      "fore_name": "Bjoern",
+      "initials": "B",
+      "name": "Bjoern Peters",
+      "affiliations": [
+        "La Jolla Institute for Allergy and Immunology."
+      ],
+      "orcid": "0000-0002-8457-6693"
+    },
+    {
+      "last_name": "Ozonoff",
+      "fore_name": "Al",
+      "initials": "A",
+      "name": "Al Ozonoff",
+      "affiliations": [
+        "Boston Children's Hospital."
+      ],
+      "orcid": "0000-0003-4233-5899"
+    },
+    {
+      "last_name": "Kim-Schulze",
+      "fore_name": "Seunghee",
+      "initials": "S",
+      "name": "Seunghee Kim-Schulze",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai."
+      ],
+      "orcid": "0000-0003-0192-4400"
+    },
+    {
+      "last_name": "Krammer",
+      "fore_name": "Florian",
+      "initials": "F",
+      "name": "Florian Krammer",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai."
+      ],
+      "orcid": "0000-0003-4121-776X"
+    },
+    {
+      "last_name": "Bosinger",
+      "fore_name": "Steven",
+      "initials": "S",
+      "name": "Steven Bosinger",
+      "affiliations": [
+        "Emory University."
+      ],
+      "orcid": "0000-0002-2116-5061"
+    },
+    {
+      "last_name": "Eckalbar",
+      "fore_name": "Walter",
+      "initials": "W",
+      "name": "Walter Eckalbar",
+      "affiliations": [
+        "University of California, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Altman",
+      "fore_name": "Matthew",
+      "initials": "M",
+      "name": "Matthew Altman",
+      "affiliations": [
+        "Benaroya Research Institute."
+      ],
+      "orcid": "0000-0002-1784-8505"
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": [
+        "University of California, San Francisco."
+      ],
+      "orcid": "0000-0002-8705-5084"
+    },
+    {
+      "last_name": "Guan",
+      "fore_name": "Leying",
+      "initials": "L",
+      "name": "Leying Guan",
+      "affiliations": [
+        "Yale University."
+      ],
+      "orcid": "0000-0003-0609-1073"
+    },
+    {
+      "last_name": "Maecker",
+      "fore_name": "Holden",
+      "initials": "H",
+      "name": "Holden Maecker",
+      "affiliations": [
+        "Stanford University School of Medicine."
+      ],
+      "orcid": "0000-0003-0795-9946"
+    },
+    {
+      "last_name": "Steen",
+      "fore_name": "Hanno",
+      "initials": "H",
+      "name": "Hanno Steen",
+      "affiliations": [
+        "Boston Children's Hospital."
+      ],
+      "orcid": "0000-0003-0179-6648"
+    },
+    {
+      "last_name": "Diray-Arce",
+      "fore_name": "Joann",
+      "initials": "J",
+      "name": "Joann Diray-Arce",
+      "affiliations": [
+        "Harvard."
+      ],
+      "orcid": "0000-0003-2183-4269"
+    },
+    {
+      "last_name": "Rouphael",
+      "fore_name": "Nadine",
+      "initials": "N",
+      "name": "Nadine Rouphael",
+      "affiliations": [
+        "Emory University."
+      ]
+    },
+    {
+      "last_name": "Kleinstein",
+      "fore_name": "Steven",
+      "initials": "S",
+      "name": "Steven Kleinstein",
+      "affiliations": [
+        "Yale University."
+      ],
+      "orcid": "0000-0003-4957-1544"
+    },
+    {
+      "last_name": "Reed",
+      "fore_name": "Elaine",
+      "initials": "E",
+      "name": "Elaine Reed",
+      "affiliations": [
+        "University of California, Los Angeles."
+      ]
+    },
+    {
+      "last_name": "Levy",
+      "fore_name": "Ofer",
+      "initials": "O",
+      "name": "Ofer Levy",
+      "affiliations": [
+        "Boston Children's Hospital."
+      ],
+      "orcid": "0000-0002-5859-1945"
+    },
+    {
+      "last_name": "Chu",
+      "fore_name": "Victoria",
+      "initials": "V",
+      "name": "Victoria Chu",
+      "affiliations": [
+        "UCSF."
+      ],
+      "orcid": "0000-0002-7480-965X"
+    }
+  ],
+  "journal": {
+    "title": "Research square",
+    "iso_abbreviation": "Res Sq",
+    "issn": "2693-5015",
+    "issn_type": "Electronic",
+    "pub_year": "2025",
+    "pub_month": "Jun",
+    "pub_day": "20"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Preprint"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "40585204",
+    "pmc": "PMC12204364",
+    "doi": "10.21203/rs.3.rs-6875205/v1",
+    "pii": "rs.3.rs-6875205"
+  },
+  "doi": "10.21203/rs.3.rs-6875205/v1",
+  "pmc_id": "PMC12204364",
+  "dates": {
+    "revised": "2025-07-05"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "U19 AI090023",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI128913",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI118608",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U54 AI142766",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI057229",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI062629",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K23 AI185326",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI118610",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI128910",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI104870",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 DA018926",
+      "agency": "NIDA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI125357",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI145835",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI122220",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI077439",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI135803",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI089992",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UM1 TR004528",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:01.378177",
+    "pmid": "40585204"
+  }
+}

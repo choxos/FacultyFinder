@@ -1,0 +1,244 @@
+{
+  "openalex_id": "W3098997282",
+  "doi": "https://doi.org/10.1109/ius46767.2020.9251325",
+  "title": "Complex Convolutional Neural Networks for Fast Diverging Wave Imaging",
+  "abstract": "Single diverging wave (DW) imaging produces ultrasound (US) images at high frame rate (ultrafast) but of low quality. Conventional high-quality DW imaging relies on the coherent compounding of multiple consecutive steered emissions, which in turn reduces the gain in frame rate. Reconstructing high-quality US images for ultrafast imaging using deep learning techniques has recently raised a growing interest in the US community. We recently described a convolutional neural network (CNN) architecture called ID-Net, which exploited an inception layer devoted to the reconstruction of DW ultrasound images using radio frequency (RF) data. We derive in this work the complex equivalent of this network, i.e., the complex inception for DW network (CID-Net), operating on in-phase/quadrature (I/Q) data. We experimentally demonstrate that the CID-Net yields the same image quality as that obtained from the RF-trained CNN, i.e., using only three I/Q images, the CID-Net yields high-quality images competing with those obtained by coherently compounding 31 RF images.",
+  "authors": [
+    {
+      "display_name": "Jingfeng Lu",
+      "id": "A5058225813",
+      "orcid": "https://orcid.org/0000-0002-9391-1297",
+      "institutions": [
+        {
+          "id": "I24185976",
+          "display_name": "Sichuan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jingfeng Lu"
+    },
+    {
+      "display_name": "Fabien Millioz",
+      "id": "A5015338889",
+      "orcid": "https://orcid.org/0000-0001-9032-409X",
+      "institutions": [
+        {
+          "id": "I98677209",
+          "display_name": "University of Edinburgh",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fabien Millioz"
+    },
+    {
+      "display_name": "Damien Garcia",
+      "id": "A5019450139",
+      "orcid": "https://orcid.org/0000-0002-8552-1475",
+      "institutions": [
+        {
+          "id": "I4210138704",
+          "display_name": "Centre de Recherche en Acquisition et Traitement de l'Image pour la Santé",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Damien Garcia"
+    },
+    {
+      "display_name": "Sébastien Salles",
+      "id": "A5059069046",
+      "orcid": "https://orcid.org/0000-0002-4174-8248",
+      "institutions": [
+        {
+          "id": "I204778367",
+          "display_name": "Norwegian University of Science and Technology",
+          "country_code": "NO",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sebastien Salles"
+    },
+    {
+      "display_name": "Dong Ye",
+      "id": "A5100692750",
+      "orcid": "https://orcid.org/0000-0003-3715-5885",
+      "institutions": [
+        {
+          "id": "I4210155549",
+          "display_name": "Laboratoire de Mathématiques",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4387154170",
+          "display_name": "Laboratoire de Mathématiques et Applications",
+          "country_code": null,
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dong Ye"
+    },
+    {
+      "display_name": "Denis Friboulet",
+      "id": "A5026215878",
+      "orcid": "https://orcid.org/0000-0002-9166-7964",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Denis Friboulet"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-09-07",
+  "type": "article",
+  "cited_by_count": 8,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4363604678",
+    "display_name": "2017 IEEE International Ultrasonics Symposium (IUS)",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://hal.science/hal-02353669/document",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C81363708",
+      "display_name": "Convolutional neural network",
+      "level": 2,
+      "score": 0.7696694
+    },
+    {
+      "id": "C3261483",
+      "display_name": "Frame rate",
+      "level": 2,
+      "score": 0.7691048
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.70027524
+    },
+    {
+      "id": "C74064498",
+      "display_name": "Radio frequency",
+      "level": 2,
+      "score": 0.6100322
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.5777718
+    },
+    {
+      "id": "C55020928",
+      "display_name": "Image quality",
+      "level": 3,
+      "score": 0.5724527
+    },
+    {
+      "id": "C108583219",
+      "display_name": "Deep learning",
+      "level": 2,
+      "score": 0.5641637
+    },
+    {
+      "id": "C141379421",
+      "display_name": "Iterative reconstruction",
+      "level": 2,
+      "score": 0.42858976
+    },
+    {
+      "id": "C178596936",
+      "display_name": "Ultrashort pulse",
+      "level": 3,
+      "score": 0.4159167
+    },
+    {
+      "id": "C126042441",
+      "display_name": "Frame (networking)",
+      "level": 2,
+      "score": 0.41476735
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.3702005
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.26837352
+    },
+    {
+      "id": "C120665830",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.2560504
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.23908573
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.20259029
+    },
+    {
+      "id": "C520434653",
+      "display_name": "Laser",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10662",
+      "display_name": "Ultrasonics and Acoustic Wave Propagation",
+      "score": 0.9999
+    },
+    {
+      "id": "T12015",
+      "display_name": "Photoacoustic and Ultrasonic Imaging",
+      "score": 0.9998
+    },
+    {
+      "id": "T10727",
+      "display_name": "Ultrasound Imaging and Elastography",
+      "score": 0.9995
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/ius46767.2020.9251325",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:01:44.919791",
+  "source_database": "OpenAlex"
+}

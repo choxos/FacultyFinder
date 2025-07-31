@@ -1,0 +1,542 @@
+{
+  "openalex_id": "W2950171351",
+  "doi": "https://doi.org/10.1074/mcp.ra118.001243",
+  "title": "Regulated Phosphosignaling Associated with Breast Cancer Subtypes and Druggability*",
+  "abstract": "Aberrant phospho-signaling is a hallmark of cancer. We investigated kinase-substrate regulation of 33,239 phosphorylation sites (phosphosites) in 77 breast tumors and 24 breast cancer xenografts. Our search discovered 2134 quantitatively correlated kinase-phosphosite pairs, enriching for and extending experimental or binding-motif predictions. Among the 91 kinases with auto-phosphorylation, elevated EGFR, ERBB2, PRKG1, and WNK1 phosphosignaling were enriched in basal, HER2-E, Luminal A, and Luminal B breast cancers, respectively, revealing subtype-specific regulation. CDKs, MAPKs, and ataxia-telangiectasia proteins were dominant, master regulators of substrate-phosphorylation, whose activities are not captured by genomic evidence. We unveiled phospho-signaling and druggable targets from 113 kinase-substrate pairs and cascades downstream of kinases, including AKT1, BRAF and EGFR. We further identified kinase-substrate-pairs associated with clinical or immune signatures and experimentally validated activated phosphosites of ERBB2, EIF4EBP1, and EGFR. Overall, kinase-substrate regulation revealed by the largest unbiased global phosphorylation data to date connects driver events to their signaling effects. Aberrant phospho-signaling is a hallmark of cancer. We investigated kinase-substrate regulation of 33,239 phosphorylation sites (phosphosites) in 77 breast tumors and 24 breast cancer xenografts. Our search discovered 2134 quantitatively correlated kinase-phosphosite pairs, enriching for and extending experimental or binding-motif predictions. Among the 91 kinases with auto-phosphorylation, elevated EGFR, ERBB2, PRKG1, and WNK1 phosphosignaling were enriched in basal, HER2-E, Luminal A, and Luminal B breast cancers, respectively, revealing subtype-specific regulation. CDKs, MAPKs, and ataxia-telangiectasia proteins were dominant, master regulators of substrate-phosphorylation, whose activities are not captured by genomic evidence. We unveiled phospho-signaling and druggable targets from 113 kinase-substrate pairs and cascades downstream of kinases, including AKT1, BRAF and EGFR. We further identified kinase-substrate-pairs associated with clinical or immune signatures and experimentally validated activated phosphosites of ERBB2, EIF4EBP1, and EGFR. Overall, kinase-substrate regulation revealed by the largest unbiased global phosphorylation data to date connects driver events to their signaling effects. Mutations and alterations in cancer dysregulate kinases and signaling cascades. Large-scale studies of breast cancer have discovered drivers, with genomic and expression changes, in kinases of the PI3K/Akt signaling and TP53/RB signaling/cell-cycle checkpoint pathways (1TCGA Comprehensive molecular portraits of human breast tumours.Nature. 2012; 490: 61-70Crossref PubMed Scopus (8299) Google Scholar, 2Mertins P. Mani D.R. Ruggles K.V. Gillette M.A. Clauser K.R. Wang P. Wang X. Qiao J.W. Cao S. Petralia F. Kawaler E. Mundt F. Krug K. Tu Z. Lei J.T. Gatza M.L. Wilkerson M. Perou C.M. Yellapantula V. Huang K.-l. Lin C. McLellan M.D. Yan P. Davies S.R. Townsend R.R. Skates S.J. Wang J. Zhang B. Kinsinger C.R. Mesri M. Rodriguez H. Ding L. Paulovich A.G. Fenyö D. Ellis M.J. Carr S.A. Proteogenomics connects somatic mutations to signalling in breast cancer.Nature. 2016; 534: 55-62Crossref PubMed Scopus (641) Google Scholar). However, genomic findings provide only indirect inference of phosphorylation activity. Further, large-scale proteomic studies using reverse phase protein array (RPPA) 1The abbreviations used are:RPPAreverse-phase protein arrayLCliquid chromatographyPDXpatient-derived xenograft. 1The abbreviations used are:RPPAreverse-phase protein arrayLCliquid chromatographyPDXpatient-derived xenograft. are limited to coverages of ∼200 proteins and phosphoproteins with available antibodies (3Gujral T.S. Karp R.L. Finski A. Chan M. Schwartz P.E. MacBeath G. Sorger P. Profiling phospho-signaling networks in breast cancer using reverse-phase protein arrays.Oncogene. 2013; 32: 3470-3476Crossref PubMed Scopus (59) Google Scholar, 4Akbani R. Ng P.K.S. Werner H.M.J. Shahmoradgoli M. Zhang F. Ju Z. Liu W. Yang J.-Y. Yoshihara K. Li J. Ling S. Seviour E.G. Ram P.T. Minna J.D. Diao L. Tong P. Heymach J.V. Hill S.M. Dondelinger F. Städler N. Byers La Meric-Bernstam F. Weinstein J.N. Broom B.M. Verhaak R.G.W. Liang H. Mukherjee S. Lu Y. Mills G.B. A pan-cancer proteomic perspective on The Cancer Genome Atlas.Nat. Commun. 2014; 5: 3887Crossref PubMed Scopus (350) Google Scholar, 5Al-Ejeh F. Miranda M. Shi W. Simpson P.T. Song S. Vargas A.C. Saunus J.M. Smart C.E. Mariasegaram M. Wiegmans A.P. Chenevix-Trench G. Lakhani S.R. Khanna K.K. Kinome profiling reveals breast cancer heterogeneity and identifies targeted therapeutic opportunities for triple negative breast cancer.Oncotarget. 2014; 5: 3145-3158Crossref PubMed Scopus (36) Google Scholar). The impact of candidate driver events on direct signaling has therefore been seldomly explored in the corresponding tumors. Although functional experiments in in vivo systems or model organisms have enabled controlled assessment of downstream effects, they must be complemented by in vivo observations that account for the molecular complexity of each tumor. reverse-phase protein array liquid chromatography patient-derived xenograft. reverse-phase protein array liquid chromatography patient-derived xenograft. Mass spectrometry (MS) is evolving rapidly and has cataloged tens of thousands of phosphorylation sites (phosphosites). Recent studies by the Clinical Proteomic Tumor Analysis Consortium (CPTAC) using liquid chromatography (LC) MS/MS have generated proteomic/phosphoproteomic data sets that have more deeply profiled the cancer proteome (2Mertins P. Mani D.R. Ruggles K.V. Gillette M.A. Clauser K.R. Wang P. Wang X. Qiao J.W. Cao S. Petralia F. Kawaler E. Mundt F. Krug K. Tu Z. Lei J.T. Gatza M.L. Wilkerson M. Perou C.M. Yellapantula V. Huang K.-l. Lin C. McLellan M.D. Yan P. Davies S.R. Townsend R.R. Skates S.J. Wang J. Zhang B. Kinsinger C.R. Mesri M. Rodriguez H. Ding L. Paulovich A.G. Fenyö D. Ellis M.J. Carr S.A. Proteogenomics connects somatic mutations to signalling in breast cancer.Nature. 2016; 534: 55-62Crossref PubMed Scopus (641) Google Scholar, 6Zhang H. Liu T. Zhang Z. Payne Samuel H. Zhang B. McDermott Jason E. Zhou J.-Y. Petyuk Vladislav A. Chen L. Ray D. Sun S. Yang F. Chen L. Wang J. Shah P. Cha Seong W. Aiyetan P. Woo S. Tian Y. Gritsenko Marina A. Clauss Therese R. Choi C. Monroe Matthew E. Thomas S. Nie S. Wu C. Moore Ronald J. Yu K.-H. Tabb David L. Fenyö D. Bafna V. Wang Y. Rodriguez H. Boja Emily S. Hiltke T. Rivers Robert C. Sokoll L. Zhu H. Shih I.-M. Cope L. Pandey A. Zhang B. Snyder Michael P. Levine Douglas A. Smith Richard D. Chan Daniel W. Rodland Karin D. Carr Steven A. Gillette Michael A. Klauser Karl R. Kuhn E. Mani D.R. Mertins P. Ketchum Karen A. Thangudu R. Cai S. Oberti M. Paulovich Amanda G. Whiteaker Jeffrey R. Edwards Nathan J. McGarvey Peter B. Madhavan S. Wang P. Chan Daniel W. Pandey A. Shih I.-M. Zhang H. Zhang Z. Zhu H. Cope L. Whiteley Gordon A. Skates Steven J. White Forest M. Levine Douglas A. Boja Emily S. Kinsinger Christopher R. Hiltke T. Mesri M. Rivers Robert C. Rodriguez H. Shaw Kenna M. Stein Stephen E. Fenyo D. Liu T. McDermott Jason E. Payne Samuel H. Rodland Karin D. Smith Richard D. Rudnick P. Snyder M. Zhao Y. Chen X. Ransohoff David F. Hoofnagle Andrew N. Liebler Daniel C. Sanders Melinda E. Shi Z. Slebos Robbert J.C. Tabb David L. Zhang B. Zimmerman Lisa J. Wang Y. Davies Sherri R. Ding L. Ellis Matthew J.C. Townsend R.R. Barrès V. Ouellet V. Lafontaine J. Tonin P.N. Provencher D.M. Mes-Masson A.M. Cai R.L. Yan-Neale Y. Cueto M.A. Xu H. Cohen D. Network CGAR, Network CGAR Collins B.C. Gillet L.C. Rosenberger G. Röst H.L. Vichalkovski A. Gstaiger M. Aebersold R. Cope L. Wu R.C. Shih I. Wang T.L. Creighton C.J. Hernandez-Herrera A. Jacobsen A. Levine D.A. Mankoo P. Schultz N. Du Y. Zhang Y. Larsson E. Sheridan R. Network CGAR, al. e Dizon D.S. Damstrup L. Finkler N.J. Lassen U. Celano P. Glasspool R. Crowley E. Lichenstein H.S. Knoblach P. Penson R.T. Fanjul-Fernández M. Quesada V. Cabanillas R. Cadiñanos J. Fontanil T. Obaya A. Ramsay A.J. Llorente J.L. Astudillo A. Cal S. López-Otín C. Farmer H. McCabe N. Lord C.J. Tutt A.N. Johnson D.A. Richardson T.B. Santarosa M. Dillon K.J. Hickson I. Knights al. e, C. Gadducci A. Lanfredini N. Sergiampietri C. Gong F. Miller K.M. Hanahan D. Weinberg R.A. Jovanovic M. Rooney M.S. Mertins P. Przybylski D. Chevrier N. Satija R. Rodriguez E.H. Fields A.P. Schwartz S. Raychowdhury al. e, R. Kislinger T. Cox B. Kannan A. Chung C. Hu P. Ignatchenko A. Scott M.S. Gramolini A.O. Morris Q. Hallett al. e, M.T. Köbel M. Huntsman D. Gilks C.B. Komili S. Silver P.A. Kuo K.T. Guan B. Feng Y. Mao T.L. Chen X. Jinawath N. Wang Y. Kurman R.J. Shih I. Wang T.L. Langfelder P. Horvath S. Liu J. Matulonis U.A. Lu P. Vogel C. Wang R. Yao X. Marcotte E.M. Mackay H.J. Hirte H. Colgan T. Covens A. MacAlpine K. Grenci P. Wang L. Mason J. Pham P.A. Tsao al. e, M.S. Marguerat S. Schmidt A. Codlin S. Chen W. Aebersold R. Bähler J. McEllin B. Camacho C.V. Mukherjee B. Hahm B. Tomimatsu N. Bachoo R.M. Burma S. Meng H. Tian L. Zhou J. Li Z. Jiao X. Li W.W. Plomann M. Xu Z. Lisanti M.P. Wang C. Pestell R.G. Mertins P. Yang F. Liu T. Mani D.R. Petyuk V.A. Gillette M.A. Clauser K.R. Qiao J.W. Gritsenko M.A. Moore al. e, R.J. Mertins P. Mani D.R. Ruggles K.V. Gillette M.A. Clauser K.R. Wang P. Wang X. Qiao J.W. Cao S. Petralia F. CPTAC N, al. e Mielcarek M. Zielonka D. Carnemolla A. Marcinkowski J.T. Guidez F. Modesitt S.C. Sill M. Hoffman J.S. Bender D.P. Group G.O. Pradeep S. Kim S.W. Wu S.Y. Nishimura M. Chaluvally-Raghavan P. Miyake T. Pecot C.V. Kim S.J. Choi H.J. Bischoff al. e, F.Z. Ross P.L. Huang Y.N. Marchese J.N. Williamson B. Parker K. Hattan S. Khainovski N. Pillai S. Dey S. Daniels al. e, S. Ruggles K.V. Tang Z. Wang X. Grover H. Askenazi M. Teubl J. Cao S. McLellan M.D. Clauser K.R. Tabb al. e, D.L. Tang J. Cho N.W. Cui G. Manion E.M. Shanbhag N.M. Botuyan M.V. Mer G. Greenberg R.A. Vang R. Levine D.A. Soslow R.A. Zaloudek C. Shih I. Kurman R.J. Verhaak R.G. Tamayo P. Yang J.Y. Hubbard D. Zhang H. Creighton C.J. Fereday S. Lawrence M. Carter S.L. Mermel al. e, C.H. Vogel C. Marcotte E.M. Woo S. Cha S.W. Na S. Guest C. Liu T. Smith R.D. Rodland K.D. Payne S. Bafna V. Woodbine L. Gennery A.R. Jeggo P.A. Wu L. Candille S.I. Choi Y. Xie D. Jiang L. Li-Pook-Than J. Tang H. Snyder M. Yang L. Duff M.O. Graveley B.R. Carmichael G.G. Chen L.L. Yang J.Y. Yoshihara K. Tanaka K. Hatae M. Masuzaki H. Itamochi H. Takano M. Ushijima K. Tanyi J.L. Coukos G. Network CGATR, al. e Yi B. Zhang Y. Zhu D. Zhang L. Song S. He S. Zhang B. Li D. Zhou J. Yu G. Zhang B. Bova G.S. Xu J. Shih I. Wang Y. Zhang B. Li H. Riggins R.B. Zhan M. Xuan J. Zhang Z. Hoffman E.P. Clarke R. Wang Y. Zhang B. Wang J. Wang X. Zhu J. Liu Q. Shi Z. Chambers M.C. Zimmerman L.J. Shaddox K.F. Kim S. CPTAC N Integrated proteogenomic characterization of human high-grade serous ovarian cancer.Cell. 2016; 166: 755-765Abstract Full Text Full Text PDF PubMed Scopus (557) Google Scholar, 7Zhang B. Wang J. Wang X. Zhu J. Liu Q. Shi Z. Chambers M.C. Zimmerman L.J. Shaddox K.F. Kim S. Davies S.R. Wang S. Wang P. Kinsinger C.R. Rivers R.C. Rodriguez H. Townsend R.R. Ellis M.J.C. Carr S.A. Tabb D.L. Coffey R.J. Slebos R.J.C. Liebler D.C. Proteogenomic characterization of human colon and rectal cancer.Nature. 2014; 513: 382-387Crossref PubMed Scopus (937) Google Scholar), providing an opportunity to evaluate regulation of phospho-signaling in cancer. Other MS-based studies focusing on the kinome have highlighted kinases that are disrupted in cancer (8Duncan J.S. Whittle M.C. Nakamura K. Abell A.N. Midland A.A. Zawistowski J.S. Johnson N.L. Granger D.A. Jordan N.V. Darr D.B. Usary J. Kuan P.F. Smalley D.M. Major B. He X. Hoadley K.A. Zhou B. Sharpless N.E. Perou C.M. Kim W.Y. Gomez S.M. Chen X. Jin J. Frye S.V. Earp H.S. Graves L.M. Johnson G.L. Dynamic reprogramming of the kinome in response to targeted MEK inhibition in triple-negative breast cancer.Cell. 2012; 149: 307-321Abstract Full Text Full Text PDF PubMed Scopus (547) Google Scholar) and identified complementary genomic and proteomic alterations in a handful of signaling pathways (9Fleuren E.D. Zhang L. Wu J. Daly R.J. The kinome ‘at large’ in cancer.Nat. Rev. Cancer. 2016; 16: 83-98Crossref PubMed Scopus (175) Google Scholar). However, characterization of kinase-substrate interaction at a single-residue level has been largely limited to in vitro and in silico predictions using sequence-based analysis of kinase binding motifs (10Newman R.H. Hu J. Rho H.S. Xie Z. Woodard C. Neiswinger J. Cooper C. Shirley M. Clark H.M. Hu S. Hwang W. Jeong J.S. Wu G. Lin J. Gao X. Ni Q. Goel R. Xia S. Ji H. Dalby K.N. Birnbaum M.J. Cole P.A. Knapp S. Ryazanov A.G. Zack D.J. Blackshaw S. Pawson T. Gingras A.C. Desiderio S. Pandey A. Turk B.E. Zhang J. Zhu H. Qian J. Construction of human activity-based phosphorylation networks.Mol. Syst. Biol. 2013; 9: 655Crossref PubMed Scopus (135) Google Scholar, 11Linding R. Jensen L.J. Ostheimer G.J. van Vugt M.A. Jorgensen C. Miron I.M. Diella F. Colwill K. Taylor L. Elder K. Metalnikov P. Nguyen V. Pasculescu A. Jin J. Park J.G. Samson L.D. Woodgett J.R. Russell R.B. Bork P. Yaffe M.B. Pawson T. Systematic discovery of in vivo phosphorylation networks.Cell. 2007; 129: 1415-1426Abstract Full Text Full Text PDF PubMed Scopus (610) Google Scholar, 12Horn H. Schoof E.M. Kim J. Robin X. Miller M.L. Diella F. Palma A. Cesareni G. Jensen L.J. Linding R. KinomeXplorer: an integrated platform for kinome biology studies.Nat. Methods. 2014; 11: 603-604Crossref PubMed Scopus (209) Google Scholar, 13Ochoa D. Jonikas M. Lawrence R.T. El Debs B. Selkrig J. Typas A. Villen J. Santos S.D. Beltrao P. An atlas of human kinase regulation.Mol. Syst. Biol. 2016; 12: 888Crossref PubMed Scopus (50) Google Scholar, 14Creixell P. Schoof E.M. Simpson C.D. Longden J. Miller C.J. Lou H.J. Perryman L. Cox T.R. Zivanovic N. Palmeri A. Wesolowska-Andersen A. Helmer-Citterich M. Ferkinghoff-Borg J. Itamochi H. Bodenmiller B. Erler J.T. Turk B.E. Linding R. Kinome-wide decoding of network-attacking mutations rewiring cancer signaling.Cell. 2015; 163: 202-217Abstract Full Text Full Text PDF PubMed Scopus (119) Google Scholar). Direct observation of kinase-substrate associations in patient tumors can complement these studies to help reveal their regulation mechanisms. In this study, we characterized phospho-signaling in cancer by analyzing the phosphoproteomic profiles of 77 human breast tumors characterized in TCGA and CPTAC projects (1TCGA Comprehensive molecular portraits of human breast tumours.Nature. 2012; 490: 61-70Crossref PubMed Scopus (8299) Google Scholar, 2Mertins P. Mani D.R. Ruggles K.V. Gillette M.A. Clauser K.R. Wang P. Wang X. Qiao J.W. Cao S. Petralia F. Kawaler E. Mundt F. Krug K. Tu Z. Lei J.T. Gatza M.L. Wilkerson M. Perou C.M. Yellapantula V. Huang K.-l. Lin C. McLellan M.D. Yan P. Davies S.R. Townsend R.R. Skates S.J. Wang J. Zhang B. Kinsinger C.R. Mesri M. Rodriguez H. Ding L. Paulovich A.G. Fenyö D. Ellis M.J. Carr S.A. Proteogenomics connects somatic mutations to signalling in breast cancer.Nature. 2016; 534: 55-62Crossref PubMed Scopus (641) Google Scholar) and validating predictions using an independent cohort of 24 breast cancer patient-derived xenografts (PDXs). Approximately 60% (387/630) of phosphosites are significantly associated with expression of their respective proteins across 91 unique kinases in EGFR, PKC, STE20, and other families. MAP kinases and CDKs are involved in wide-spread trans-correlations with downstream substrates. Only selected substrate phosphosites (∼5%, 1747/38,710) are associated by kinases in this breast cancer cohort, suggesting cancer-specific usage of signaling modules. Notably, our analysis revealed 806 potentially associated phosphosites by protein kinases not captured by current experimental or motif-based predictions, including ERBB2, EGFR, MAPKs, and CDKs. Landscapes of associations revealed adjacent phosphosites showing similar or distinct regulations. Finally, druggable kinase-substrate pair analysis validated singleton driver events of AKT1, ERBB2, and RAF1, while exposing potentially druggable pairs and cascades downstream of several MAP kinases not apparent at the genomic level. Overall, our findings emphasize that evaluating signaling effects in patients' tumor through a systematic, high-throughput manner could ultimately prove clinically useful. Samples of human breast cancer have been described in CPTAC marker papers (2Mertins P. Mani D.R. Ruggles K.V. Gillette M.A. Clauser K.R. Wang P. Wang X. Qiao J.W. Cao S. Petralia F. Kawaler E. Mundt F. Krug K. Tu Z. Lei J.T. Gatza M.L. Wilkerson M. Perou C.M. Yellapantula V. Huang K.-l. Lin C. McLellan M.D. Yan P. Davies S.R. Townsend R.R. Skates S.J. Wang J. Zhang B. Kinsinger C.R. Mesri M. Rodriguez H. Ding L. Paulovich A.G. Fenyö D. Ellis M.J. Carr S.A. Proteogenomics connects somatic mutations to signalling in breast cancer.Nature. 2016; 534: 55-62Crossref PubMed Scopus (641) Google Scholar, 6Zhang H. Liu T. Zhang Z. Payne Samuel H. Zhang B. McDermott Jason E. Zhou J.-Y. Petyuk Vladislav A. Chen L. Ray D. Sun S. Yang F. Chen L. Wang J. Shah P. Cha Seong W. Aiyetan P. Woo S. Tian Y. Gritsenko Marina A. Clauss Therese R. Choi C. Monroe Matthew E. Thomas S. Nie S. Wu C. Moore Ronald J. Yu K.-H. Tabb David L. Fenyö D. Bafna V. Wang Y. Rodriguez H. Boja Emily S. Hiltke T. Rivers Robert C. Sokoll L. Zhu H. Shih I.-M. Cope L. Pandey A. Zhang B. Snyder Michael P. Levine Douglas A. Smith Richard D. Chan Daniel W. Rodland Karin D. Carr Steven A. Gillette Michael A. Klauser Karl R. Kuhn E. Mani D.R. Mertins P. Ketchum Karen A. Thangudu R. Cai S. Oberti M. Paulovich Amanda G. Whiteaker Jeffrey R. Edwards Nathan J. McGarvey Peter B. Madhavan S. Wang P. Chan Daniel W. Pandey A. Shih I.-M. Zhang H. Zhang Z. Zhu H. Cope L. Whiteley Gordon A. Skates Steven J. White Forest M. Levine Douglas A. Boja Emily S. Kinsinger Christopher R. Hiltke T. Mesri M. Rivers Robert C. Rodriguez H. Shaw Kenna M. Stein Stephen E. Fenyo D. Liu T. McDermott Jason E. Payne Samuel H. Rodland Karin D. Smith Richard D. Rudnick P. Snyder M. Zhao Y. Chen X. Ransohoff David F. Hoofnagle Andrew N. Liebler Daniel C. Sanders Melinda E. Shi Z. Slebos Robbert J.C. Tabb David L. Zhang B. Zimmerman Lisa J. Wang Y. Davies Sherri R. Ding L. Ellis Matthew J.C. Townsend R.R. Barrès V. Ouellet V. Lafontaine J. Tonin P.N. Provencher D.M. Mes-Masson A.M. Cai R.L. Yan-Neale Y. Cueto M.A. Xu H. Cohen D. Network CGAR, Network CGAR Collins B.C. Gillet L.C. Rosenberger G. Röst H.L. Vichalkovski A. Gstaiger M. Aebersold R. Cope L. Wu R.C. Shih I. Wang T.L. Creighton C.J. Hernandez-Herrera A. Jacobsen A. Levine D.A. Mankoo P. Schultz N. Du Y. Zhang Y. Larsson E. Sheridan R. Network CGAR, al. e Dizon D.S. Damstrup L. Finkler N.J. Lassen U. Celano P. Glasspool R. Crowley E. Lichenstein H.S. Knoblach P. Penson R.T. Fanjul-Fernández M. Quesada V. Cabanillas R. Cadiñanos J. Fontanil T. Obaya A. Ramsay A.J. Llorente J.L. Astudillo A. Cal S. López-Otín C. Farmer H. McCabe N. Lord C.J. Tutt A.N. Johnson D.A. Richardson T.B. Santarosa M. Dillon K.J. Hickson I. Knights al. e, C. Gadducci A. Lanfredini N. Sergiampietri C. Gong F. Miller K.M. Hanahan D. Weinberg R.A. Jovanovic M. Rooney M.S. Mertins P. Przybylski D. Chevrier N. Satija R. Rodriguez E.H. Fields A.P. Schwartz S. Raychowdhury al. e, R. Kislinger T. Cox B. Kannan A. Chung C. Hu P. Ignatchenko A. Scott M.S. Gramolini A.O. Morris Q. Hallett al. e, M.T. Köbel M. Huntsman D. Gilks C.B. Komili S. Silver P.A. Kuo K.T. Guan B. Feng Y. Mao T.L. Chen X. Jinawath N. Wang Y. Kurman R.J. Shih I. Wang T.L. Langfelder P. Horvath S. Liu J. Matulonis U.A. Lu P. Vogel C. Wang R. Yao X. Marcotte E.M. Mackay H.J. Hirte H. Colgan T. Covens A. MacAlpine K. Grenci P. Wang L. Mason J. Pham P.A. Tsao al. e, M.S. Marguerat S. Schmidt A. Codlin S. Chen W. Aebersold R. Bähler J. McEllin B. Camacho C.V. Mukherjee B. Hahm B. Tomimatsu N. Bachoo R.M. Burma S. Meng H. Tian L. Zhou J. Li Z. Jiao X. Li W.W. Plomann M. Xu Z. Lisanti M.P. Wang C. Pestell R.G. Mertins P. Yang F. Liu T. Mani D.R. Petyuk V.A. Gillette M.A. Clauser K.R. Qiao J.W. Gritsenko M.A. Moore al. e, R.J. Mertins P. Mani D.R. Ruggles K.V. Gillette M.A. Clauser K.R. Wang P. Wang X. Qiao J.W. Cao S. Petralia F. CPTAC N, al. e Mielcarek M. Zielonka D. Carnemolla A. Marcinkowski J.T. Guidez F. Modesitt S.C. Sill M. Hoffman J.S. Bender D.P. Group G.O. Pradeep S. Kim S.W. Wu S.Y. Nishimura M. Chaluvally-Raghavan P. Miyake T. Pecot C.V. Kim S.J. Choi H.J. Bischoff al. e, F.Z. Ross P.L. Huang Y.N. Marchese J.N. Williamson B. Parker K. Hattan S. Khainovski N. Pillai S. Dey S. Daniels al. e, S. Ruggles K.V. Tang Z. Wang X. Grover H. Askenazi M. Teubl J. Cao S. McLellan M.D. Clauser K.R. Tabb al. e, D.L. Tang J. Cho N.W. Cui G. Manion E.M. Shanbhag N.M. Botuyan M.V. Mer G. Greenberg R.A. Vang R. Levine D.A. Soslow R.A. Zaloudek C. Shih I. Kurman R.J. Verhaak R.G. Tamayo P. Yang J.Y. Hubbard D. Zhang H. Creighton C.J. Fereday S. Lawrence M. Carter S.L. Mermel al. e, C.H. Vogel C. Marcotte E.M. Woo S. Cha S.W. Na S. Guest C. Liu T. Smith R.D. Rodland K.D. Payne S. Bafna V. Woodbine L. Gennery A.R. Jeggo P.A. Wu L. Candille S.I. Choi Y. Xie D. Jiang L. Li-Pook-Than J. Tang H. Snyder M. Yang L. Duff M.O. Graveley B.R. Carmichael G.G. Chen L.L. Yang J.Y. Yoshihara K. Tanaka K. Hatae M. Masuzaki H. Itamochi H. Takano M. Ushijima K. Tanyi J.L. Coukos G. Network CGATR, al. e Yi B. Zhang Y. Zhu D. Zhang L. Song S. He S. Zhang B. Li D. Zhou J. Yu G. Zhang B. Bova G.S. Xu J. Shih I. Wang Y. Zhang B. Li H. Riggins R.B. Zhan M. Xuan J. Zhang Z. Hoffman E.P. Clarke R. Wang Y. Zhang B. Wang J. Wang X. Zhu J. Liu Q. Shi Z. Chambers M.C. Zimmerman L.J. Shaddox K.F. Kim S. CPTAC N Integrated proteogenomic characterization of human high-grade serous ovarian cancer.Cell. 2016; 166: 755-765Abstract Full Text Full Text PDF PubMed Scopus (557) Google Scholar). The corpus is comprised of 77 breast cancer samples showing unimodal distribution in proteomes, their 3 technical replicates, and 3 normal breast samples. Samples of the 24 PDX breast cancer were as described previously (15Huang K.L. Li S. Mertins P. Cao S. Gunawardena H.P. Ruggles K.V. Mani D.R. Clauser K.R. Tanioka M. Usary J. Kavuri S.M. Xie L. Yoon C. Qiao J.W. Wrobel J. Wyczalkowski M.A. Erdmann-Gilmore P. Snider J.E. Hoog J. Singh P. Niu B. Guo Z. Sun S.Q. Sanati S. Kawaler E. Wang X. Scott A. Ye K. McLellan M.D. Wendl M.C. Malovannaya A. Held J.M. Gillette M.A. Fenyo D. Kinsinger C.R. Mesri M. Rodriguez H. Davies S.R. Perou C.M. Ma C. Reid Townsend R. Chen X. Carr S.A. Ellis M.J. Ding L. Proteogenomic integration reveals therapeutic targets in breast cancer xenografts.Nat. Commun. 2017; 8: 14864Crossref PubMed Scopus (87) Google Scholar). The TCGA somatic mutation data, level-3 segment-based copy number data, and level-3 normalized RNA expression data were downloaded from firehose (archive date October 17, 2014). We then converted the segment-based copy number data to the gene-based copy number data by using the RefSeq database (version 20130727). The CNV ploidy number is divided by 2 and then log2-transformed to obtain the final CNV levels for analysis. We also log2-transformed the RSEM values of RNA expression data. Normalized RPPA data of TCGA tumors were downloaded from The Cancer Protein Atlas (TCPA, archive date 2015–10−30). The RPPA data were normalized across batches using replicates-based normalization (RBN) as previously described (16Li J. Lu Y. Akbani R. Ju Z. Roebuck P.L. Liu W. Yang J.Y. Broom B.M. Verhaak R.G. Kane D.W. Wakefield C. Weinstein J.N. Mills G.B. Liang H. TCPA: a resource for cancer functional proteomics data.Nat. Methods. 2013; 10: 1046-1047Crossref PubMed Scopus (312) Google Scholar). Global proteomics data for the human samples were downloaded from the Mertins et al. breast cancer study (2Mertins P. Mani D.R. Ruggles K.V. Gillette M.A. Clauser K.R. Wang P. Wang X. Qiao J.W. Cao S. Petralia F. Kawaler E. Mundt F. Krug K. Tu Z. Lei J.T. Gatza M.L. Wilkerson M. Perou C.M. Yellapantula V. Huang K.-l. Lin C. McLellan M.D. Yan P. Davies S.R. Townsend R.R. Skates S.J. Wang J. Zhang B. Kinsinger C.R. Mesri M. Rodriguez H. Ding L. Paulovich A.G. Fenyö D. Ellis M.J. Carr S.A. Proteogenomics connects somatic mutations to signalling in breast cancer.Nature. 2016; 534: 55-62Crossref PubMed Scopus (641) Google Scholar). Global proteomics data for the PDX samples were downloaded from the Huang et al. breast cancer PDX study (15Huang K.L. Li S. Mertins P. Cao S. Gunawardena H.P. Ruggles K.V. Mani D.R. Clauser K.R. Tanioka M. Usary J. Kavuri S.M. Xie L. Yoon C. Qiao J.W. Wrobel J. Wyczalkowski M.A. Erdmann-Gilmore P. Snider J.E. Hoog J. Singh P. Niu B. Guo Z. Sun S.Q. Sanati S. Kawaler E. Wang X. Scott A. Ye K. McLellan M.D. Wendl M.C. Malovannaya A. Held J.M. Gillette M.A. Fenyo D. Kinsinger C.R. Mesri M. Rodriguez H. Davies S.R. Perou C.M. Ma C. Reid Townsend R. Chen X. Carr S.A. Ellis M.J. Ding L. Proteogenomic integration reveals therapeutic targets in breast cancer xenografts.Nat. Commun. 2017; 8: 14864Crossref PubMed Scopus (87) Google Scholar). As previously described, 2-component Gaussian mixture model-based normalization algorithm was used to normalize the data and accomandate both consistently and differentially-expressed proteins and phosphosites within each sample. Further, proteins and phosphosites used in this study were required to have observed (nonmissing) iTRAQ ratios in at least 30 samples and an overall standard deviation larger than 0.5 (across all samples where they were observed). To obtain phosphoprotein level used in our kinase-substrate analysis, we used the WGCNA package (17Langfelder P. Horvath S. WGCNA: an R package for weighted correlation network analysis.BMC Bioinformatics. 2008; 9: 559Crossref PubMed Scopus (10265) Google Scholar) to collapse phosphosite expression level within each protein. For proteins with three or more phosphosites, we used connectivity based collapsing using the phosphosite with the highest connectivity according to a signed weighted correlation network adjacency matrix. For proteins with two phosphosites, we select the phosphosites with the highest mean value. We applied HotSpot3D (v1.1.1) which accesses crystal structures from RCSB Protein Data Bank (PDB) and calculates residue distances using the average distance-measure option in preprocessing (structures processed January 2017) (18Niu B. Scott A.D. Sengupta S. Bailey M.H. Batra P. Ning J. Wyczalkowski M.A. Liang W.W. Zhang Q. McLellan M.D. Sun S.Q. Tripathi P. Lou C. Ye K. Mashl R.J. Wallis J. Wendl M.C. Chen F. Ding L. Protein-structure-guided discovery of functional mutations across 19 cancer types.Nat. Genet. 2016; 48: 827-837Crossref PubMed Scopus (87) Google Scholar). We used a custom Perl script to retrieve phosphosites, active sites, and binding sites (i.e. features matching MOD_RES, ACT_SITE, BINDING, or SITE) from UniProt (date accessed 1/30/2017) (19The UniProt Consortium UniProt: the universal protein knowledgebase.Nucleic Acids Res. 2017; 45: D158-D169Crossref PubMed Scopus (3122) Google Scholar). For phosphosite comparison, we downloaded the data from file Phosphorylation_site_dataset.gz (Downloaded: 2/13/2019) to extract phosphosite mapping to human proteins and reverse-translated to their unique genomic positions using transvar (22Zhou W. Chen T. Chong Z. Rohrdanz M.A. Melott J.M. Wakefield C. Zeng J. Weinstein J.N. Meric-Bernstam F. Mills G.B. Chen K. TransVar: a multilevel variant annotator for precision genomics.Nat. Methods. 2015; 12: 1002-1003Crossref PubMed Scopus (40) Google Scholar). For kinase-substrate pair analysis, we downloaded the file Kinase_Substrate_Dataset.gz (Downloaded: 2/11/2016) and extracted the kinase-substrate proteins pairs. To identify phosphosites known in cancer, we filtered the disease-associated sites database for cancer terms (ex. cancer, *oma, and leukemia) using the file Disease-associated_sites.gz (Downloaded: 2/11/2016). The sites that were not matched to a valid genomic coordinate by TransVar (22Zhou W. Chen T. Chong Z. Rohrdanz M.A. Melott J.M. Wakefield C. Zeng J. Weinstein J.N. Meric-Bernstam F. Mills G.B. Chen K. TransVar: a multilevel variant annotator for precision genomics.Nat. Methods. 2015; 12: 1002-1003Crossref PubMed Scopus (40) Google Scholar) were excluded and the remainder sites were further reviewed. We ultimately retained 261 sites, where 84 unique sites were quantified in our dataset. We downloaded the phospho.ELM database from PhosphositePlus (2/11/2016). We then extracted the phosphosites mapping to human proteins and reverse-translated to their unique genomic positions using transvar (22Zhou W. Chen T. Chong Z. Rohrdanz M.A. Melott J.M. Wakefield C. Zeng J. Weinstein J.N. Meric-Bernstam F. Mills G.B. Chen K. TransVar: a multilevel variant annotator for precision genomics.Nat. Methods. 2015; 12: 1002-1003Crossref PubMed Scopus (40) Google Scholar). We downloaded the Supplementary Tables from Newman et al. (10Newman R.H. Hu J. Rho H.S. Xie Z. Woodard C. Neiswinger J. Cooper C. Shirley M. Clark H.M. Hu S. Hwang W. Jeong J.S. Wu G. Lin J. Gao X. Ni Q. Goel R. Xia S. Ji H. Dalby K.N. Birnbaum M.J. Cole P.A. Knapp S. Ryazanov A.G. Zack D.J. Blackshaw S. Pawson T. Gingras A.C. Desiderio S. Pandey A. Turk B.E. Zhang J. Zhu H. Qian J. Construction of human activity-based phosphorylation networks.Mol. Syst. Biol. 2013; 9: 655Crossref PubMed Scopus (135) Google Scholar) and derived the predicted kinase-substrate pairs from the file comKSI.csv, this file combined refined kinase-substrate p",
+  "authors": [
+    {
+      "display_name": "Kuan-lin Huang",
+      "id": "A5102225309",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Kuan-lin Huang"
+    },
+    {
+      "display_name": "Yige Wu",
+      "id": "A5014396575",
+      "orcid": "https://orcid.org/0000-0001-7727-901X",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yige Wu"
+    },
+    {
+      "display_name": "Tina Primeau",
+      "id": "A5008339153",
+      "orcid": "https://orcid.org/0009-0005-8106-4798",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tina Primeau"
+    },
+    {
+      "display_name": "Yi-Ting Wang",
+      "id": "A5016758654",
+      "orcid": "https://orcid.org/0000-0003-2637-680X",
+      "institutions": [
+        {
+          "id": "I142606810",
+          "display_name": "Pacific Northwest National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yi-Ting Wang"
+    },
+    {
+      "display_name": "Yuqian Gao",
+      "id": "A5053873608",
+      "orcid": "https://orcid.org/0000-0003-1646-4515",
+      "institutions": [
+        {
+          "id": "I142606810",
+          "display_name": "Pacific Northwest National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuqian Gao"
+    },
+    {
+      "display_name": "Joshua F. McMichael",
+      "id": "A5078124570",
+      "orcid": "https://orcid.org/0000-0002-0197-2245",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joshua F. McMichael"
+    },
+    {
+      "display_name": "Adam Scott",
+      "id": "A5044908269",
+      "orcid": "https://orcid.org/0000-0003-4066-6053",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Adam D. Scott"
+    },
+    {
+      "display_name": "Song Cao",
+      "id": "A5022452561",
+      "orcid": "https://orcid.org/0000-0003-2965-5855",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Song Cao"
+    },
+    {
+      "display_name": "Michael C. Wendl",
+      "id": "A5033154286",
+      "orcid": "https://orcid.org/0000-0002-5694-2668",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Michael C. Wendl"
+    },
+    {
+      "display_name": "Kimberly Johnson",
+      "id": "A5081080746",
+      "orcid": "https://orcid.org/0000-0002-8152-7319",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kimberly J. Johnson"
+    },
+    {
+      "display_name": "Kelly V. Ruggles",
+      "id": "A5026122878",
+      "orcid": "https://orcid.org/0000-0002-0152-0863",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kelly Ruggles"
+    },
+    {
+      "display_name": "Jason M. Held",
+      "id": "A5045772780",
+      "orcid": "https://orcid.org/0000-0001-8024-2736",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jason Held"
+    },
+    {
+      "display_name": "Samuel Payne",
+      "id": "A5040201243",
+      "orcid": "https://orcid.org/0000-0002-8351-1994",
+      "institutions": [
+        {
+          "id": "I142606810",
+          "display_name": "Pacific Northwest National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Samuel H. Payne"
+    },
+    {
+      "display_name": "Sherri R. Davies",
+      "id": "A5064321807",
+      "orcid": "https://orcid.org/0000-0002-7141-8354",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sherri Davies"
+    },
+    {
+      "display_name": "Arvin C. Dar",
+      "id": "A5033817692",
+      "orcid": "https://orcid.org/0000-0003-0318-4848",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Arvin Dar"
+    },
+    {
+      "display_name": "Christopher R. Kinsinger",
+      "id": "A5088616370",
+      "orcid": "https://orcid.org/0000-0001-5015-4428",
+      "institutions": [
+        {
+          "id": "I1299303238",
+          "display_name": "National Institutes of Health",
+          "country_code": "US",
+          "type": "government"
+        },
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher R. Kinsinger"
+    },
+    {
+      "display_name": "Mehdi Mesri",
+      "id": "A5041485823",
+      "orcid": "https://orcid.org/0000-0001-7295-9673",
+      "institutions": [
+        {
+          "id": "I1299303238",
+          "display_name": "National Institutes of Health",
+          "country_code": "US",
+          "type": "government"
+        },
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mehdi Mesri"
+    },
+    {
+      "display_name": "Henry Rodriguez",
+      "id": "A5077231429",
+      "orcid": "https://orcid.org/0000-0002-4593-4232",
+      "institutions": [
+        {
+          "id": "I1299303238",
+          "display_name": "National Institutes of Health",
+          "country_code": "US",
+          "type": "government"
+        },
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Henry Rodriguez"
+    },
+    {
+      "display_name": "Matthew J. Ellis",
+      "id": "A5057135409",
+      "orcid": "https://orcid.org/0000-0002-8467-8534",
+      "institutions": [
+        {
+          "id": "I181547552",
+          "display_name": "Baylor College of Medicine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthew J. Ellis"
+    },
+    {
+      "display_name": "R. Reid Townsend",
+      "id": "A5044189301",
+      "orcid": "https://orcid.org/0000-0002-0753-7594",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Reid Townsend"
+    },
+    {
+      "display_name": "Feng Chen",
+      "id": "A5100352749",
+      "orcid": "https://orcid.org/0000-0003-3508-8834",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Feng Chen"
+    },
+    {
+      "display_name": "David Fenyö",
+      "id": "A5065792746",
+      "orcid": "https://orcid.org/0000-0001-5049-3825",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Fenyö"
+    },
+    {
+      "display_name": "Shunqiang Li",
+      "id": "A5034234418",
+      "orcid": "https://orcid.org/0000-0001-9508-7249",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shunqiang Li"
+    },
+    {
+      "display_name": "Tao Liu",
+      "id": "A5043928018",
+      "orcid": "https://orcid.org/0000-0001-9529-6550",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tao Liu"
+    },
+    {
+      "display_name": "Steven A. Carr",
+      "id": "A5036255260",
+      "orcid": "https://orcid.org/0000-0002-7203-4299",
+      "institutions": [
+        {
+          "id": "I107606265",
+          "display_name": "Broad Institute",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven A. Carr"
+    },
+    {
+      "display_name": "Li Ding",
+      "id": "A5100449520",
+      "orcid": "https://orcid.org/0000-0003-1517-2975",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Li Ding"
+    }
+  ],
+  "publication_year": 2019,
+  "publication_date": "2019-06-13",
+  "type": "article",
+  "cited_by_count": 18,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S104550190",
+    "display_name": "Molecular & Cellular Proteomics",
+    "issn_l": "1535-9476",
+    "issn": [
+      "1535-9476",
+      "1535-9484"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "18",
+  "issue": "8",
+  "first_page": "1630",
+  "last_page": "1650",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://www.mcponline.org/content/mcprot/18/8/1630.full.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C54174078",
+      "display_name": "Kinome",
+      "level": 3,
+      "score": 0.7566188
+    },
+    {
+      "id": "C11960822",
+      "display_name": "Phosphorylation",
+      "level": 2,
+      "score": 0.7369371
+    },
+    {
+      "id": "C184235292",
+      "display_name": "Kinase",
+      "level": 2,
+      "score": 0.7189975
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.5721187
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.5496819
+    },
+    {
+      "id": "C95444343",
+      "display_name": "Cell biology",
+      "level": 1,
+      "score": 0.45469373
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10492",
+      "display_name": "Microtubule and mitosis dynamics",
+      "score": 0.999
+    },
+    {
+      "id": "T10583",
+      "display_name": "Cancer-related Molecular Pathways",
+      "score": 0.9987
+    },
+    {
+      "id": "T10952",
+      "display_name": "PI3K/AKT/mTOR signaling in cancer",
+      "score": 0.9973
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1074/mcp.ra118.001243",
+  "pdf_url": "https://www.mcponline.org/content/mcprot/18/8/1630.full.pdf",
+  "retrieved_date": "2025-07-30T14:45:06.765594",
+  "source_database": "OpenAlex"
+}

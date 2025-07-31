@@ -1,0 +1,482 @@
+{
+  "openalex_id": "W2161624575",
+  "doi": "https://doi.org/10.1109/tbme.2005.845371",
+  "title": "Estimation of the Cortical Connectivity by High-Resolution EEG and Structural Equation Modeling: Simulations and Application to Finger Tapping Data",
+  "abstract": "Today, the concept of brain connectivity plays a central role in the neuroscience. While functional connectivity is defined as the temporal coherence between the activities of different brain areas, the effective connectivity is defined as the simplest brain circuit that would produce the same temporal relationship as observed experimentally between cortical sites. The most used method to estimate effective connectivity in neuroscience is the structural equation modeling (SEM), typically used on data related to the brain hemodynamic behavior. However, the use of hemodynamic measures limits the temporal resolution on which the brain process can be followed. The present research proposes the use of the SEM approach on the cortical waveforms estimated from the high-resolution EEG data, which exhibits a good spatial resolution and a higher temporal resolution than hemodynamic measures. We performed a simulation study, in which different main factors were systematically manipulated in the generation of test signals, and the errors in the estimated connectivity were evaluated by the analysis of variance (ANOVA). Such factors were the signal-to-noise ratio and the duration of the simulated cortical activity. Since SEM technique is based on the use of a model formulated on the basis of anatomical and physiological constraints, different experimental conditions were analyzed, in order to evaluate the effect of errors made in the a priori model formulation on its performances. The feasibility of the proposed approach has been shown in a human study using high-resolution EEG recordings related to finger tapping movements.",
+  "authors": [
+    {
+      "display_name": "Laura Astolfi",
+      "id": "A5005627910",
+      "orcid": "https://orcid.org/0000-0002-1025-7526",
+      "institutions": [
+        {
+          "id": "I861853513",
+          "display_name": "Sapienza University of Rome",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Astolfi"
+    },
+    {
+      "display_name": "Febo Cincotti",
+      "id": "A5017862794",
+      "orcid": "https://orcid.org/0000-0003-1898-6480",
+      "institutions": [
+        {
+          "id": "I4210150112",
+          "display_name": "Fondazione Santa Lucia",
+          "country_code": "IT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210153126",
+          "display_name": "Istituti di Ricovero e Cura a Carattere Scientifico",
+          "country_code": "IT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Cincotti"
+    },
+    {
+      "display_name": "Claudio Babiloni",
+      "id": "A5024471384",
+      "orcid": "https://orcid.org/0000-0002-5245-9839",
+      "institutions": [
+        {
+          "id": "I861853513",
+          "display_name": "Sapienza University of Rome",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Babiloni"
+    },
+    {
+      "display_name": "Filippo Carducci",
+      "id": "A5011204360",
+      "orcid": "https://orcid.org/0000-0003-4795-0970",
+      "institutions": [
+        {
+          "id": "I861853513",
+          "display_name": "Sapienza University of Rome",
+          "country_code": "IT",
+          "type": "funder"
+        },
+        {
+          "id": "I4210114614",
+          "display_name": "Centro San Giovanni di Dio Fatebenefratelli",
+          "country_code": "IT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210153126",
+          "display_name": "Istituti di Ricovero e Cura a Carattere Scientifico",
+          "country_code": "IT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Carducci"
+    },
+    {
+      "display_name": "A. Basilisco",
+      "id": "A5078155216",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I861853513",
+          "display_name": "Sapienza University of Rome",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Basilisco"
+    },
+    {
+      "display_name": "Paolo Maria Rossini",
+      "id": "A5035394476",
+      "orcid": "https://orcid.org/0000-0003-2665-534X",
+      "institutions": [
+        {
+          "id": "I155125353",
+          "display_name": "Università Campus Bio-Medico",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P.M. Rossini"
+    },
+    {
+      "display_name": "S. Salinari",
+      "id": "A5111585002",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I861853513",
+          "display_name": "Sapienza University of Rome",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Salinari"
+    },
+    {
+      "display_name": "Donatella Mattia",
+      "id": "A5069173153",
+      "orcid": "https://orcid.org/0000-0002-3092-2511",
+      "institutions": [
+        {
+          "id": "I4210153126",
+          "display_name": "Istituti di Ricovero e Cura a Carattere Scientifico",
+          "country_code": "IT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210150112",
+          "display_name": "Fondazione Santa Lucia",
+          "country_code": "IT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Mattia"
+    },
+    {
+      "display_name": "S. Cerutti",
+      "id": "A5017502703",
+      "orcid": "https://orcid.org/0000-0002-9607-8755",
+      "institutions": [
+        {
+          "id": "I93860229",
+          "display_name": "Politecnico di Milano",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Cerutti"
+    },
+    {
+      "display_name": "D. BenDayan",
+      "id": "A5097884980",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I93860229",
+          "display_name": "Politecnico di Milano",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. BenDayan"
+    },
+    {
+      "display_name": "Ling Ding",
+      "id": "A5100456729",
+      "orcid": "https://orcid.org/0000-0002-3208-2528",
+      "institutions": [
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I130238516",
+          "display_name": "University of Minnesota",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Ding"
+    },
+    {
+      "display_name": "Y. Ni",
+      "id": "A5114140507",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Ni"
+    },
+    {
+      "display_name": "Bin He",
+      "id": "A5100671882",
+      "orcid": "https://orcid.org/0000-0003-2944-8602",
+      "institutions": [
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I130238516",
+          "display_name": "University of Minnesota",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. He"
+    },
+    {
+      "display_name": "Fabio Babiloni",
+      "id": "A5010366936",
+      "orcid": "https://orcid.org/0000-0002-4962-176X",
+      "institutions": [
+        {
+          "id": "I4210153126",
+          "display_name": "Istituti di Ricovero e Cura a Carattere Scientifico",
+          "country_code": "IT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210150112",
+          "display_name": "Fondazione Santa Lucia",
+          "country_code": "IT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I861853513",
+          "display_name": "Sapienza University of Rome",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Babiloni"
+    }
+  ],
+  "publication_year": 2005,
+  "publication_date": "2005-04-19",
+  "type": "article",
+  "cited_by_count": 72,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S5240358",
+    "display_name": "IEEE Transactions on Biomedical Engineering",
+    "issn_l": "0018-9294",
+    "issn": [
+      "0018-9294",
+      "1558-2531"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "52",
+  "issue": "5",
+  "first_page": "757",
+  "last_page": "768",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C2992114214",
+      "display_name": "Finger tapping",
+      "level": 2,
+      "score": 0.66363597
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5855708
+    },
+    {
+      "id": "C119666444",
+      "display_name": "Temporal resolution",
+      "level": 2,
+      "score": 0.55914193
+    },
+    {
+      "id": "C2781181686",
+      "display_name": "Coherence (philosophical gambling strategy)",
+      "level": 2,
+      "score": 0.55120385
+    },
+    {
+      "id": "C522805319",
+      "display_name": "Electroencephalography",
+      "level": 2,
+      "score": 0.54994345
+    },
+    {
+      "id": "C75553542",
+      "display_name": "A priori and a posteriori",
+      "level": 2,
+      "score": 0.538883
+    },
+    {
+      "id": "C205372480",
+      "display_name": "Image resolution",
+      "level": 2,
+      "score": 0.4939924
+    },
+    {
+      "id": "C2779843651",
+      "display_name": "SIGNAL (programming language)",
+      "level": 2,
+      "score": 0.47551876
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.4582476
+    },
+    {
+      "id": "C197424946",
+      "display_name": "Waveform",
+      "level": 3,
+      "score": 0.45696798
+    },
+    {
+      "id": "C97820695",
+      "display_name": "Human Connectome Project",
+      "level": 3,
+      "score": 0.43646887
+    },
+    {
+      "id": "C120843803",
+      "display_name": "Brain activity and meditation",
+      "level": 3,
+      "score": 0.4153615
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.39475134
+    },
+    {
+      "id": "C169760540",
+      "display_name": "Neuroscience",
+      "level": 1,
+      "score": 0.27755255
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.23111987
+    },
+    {
+      "id": "C3018011982",
+      "display_name": "Functional connectivity",
+      "level": 2,
+      "score": 0.19807768
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.19203845
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.1443927
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.09768739
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C554190296",
+      "display_name": "Radar",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C111472728",
+      "display_name": "Epistemology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C548259974",
+      "display_name": "Audiology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10241",
+      "display_name": "Functional Brain Connectivity Studies",
+      "score": 0.9998
+    },
+    {
+      "id": "T10429",
+      "display_name": "EEG and Brain-Computer Interfaces",
+      "score": 0.9983
+    },
+    {
+      "id": "T10581",
+      "display_name": "Neural dynamics and brain function",
+      "score": 0.9983
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tbme.2005.845371",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:33:36.006899",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,646 @@
+{
+  "openalex_id": "W2781715103",
+  "doi": "https://doi.org/10.1038/s41467-018-05914-x",
+  "title": "The prognostic effects of somatic mutations in ER-positive breast cancer",
+  "abstract": "Here we report targeted sequencing of 83 genes using DNA from primary breast cancer samples from 625 postmenopausal (UBC-TAM series) and 328 premenopausal (MA12 trial) hormone receptor-positive (HR+) patients to determine interactions between somatic mutation and prognosis. Independent validation of prognostic interactions was achieved using data from the METABRIC study. Previously established associations between MAP3K1 and PIK3CA mutations with luminal A status/favorable prognosis and TP53 mutations with Luminal B/non-luminal tumors/poor prognosis were observed, validating the methodological approach. In UBC-TAM, NF1 frame-shift nonsense (FS/NS) mutations were also a poor outcome driver that was validated in METABRIC. For MA12, poor outcome associated with PIK3R1 mutation was also reproducible. DDR1 mutations were strongly associated with poor prognosis in UBC-TAM despite stringent false discovery correction (q = 0.0003). In conclusion, uncommon recurrent somatic mutations should be further explored to create a more complete explanation of the highly variable outcomes that typifies ER+ breast cancer.",
+  "authors": [
+    {
+      "display_name": "Obi L. Griffith",
+      "id": "A5001076376",
+      "orcid": "https://orcid.org/0000-0002-0843-4271",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Obi L. Griffith"
+    },
+    {
+      "display_name": "Nicholas C. Spies",
+      "id": "A5058907044",
+      "orcid": "https://orcid.org/0000-0002-5873-351X",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicholas C. Spies"
+    },
+    {
+      "display_name": "Meenakshi Anurag",
+      "id": "A5024724100",
+      "orcid": "https://orcid.org/0000-0003-4379-5192",
+      "institutions": [
+        {
+          "id": "I181547552",
+          "display_name": "Baylor College of Medicine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Meenakshi Anurag"
+    },
+    {
+      "display_name": "Malachi Griffith",
+      "id": "A5035700326",
+      "orcid": "https://orcid.org/0000-0002-6388-446X",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Malachi Griffith"
+    },
+    {
+      "display_name": "Jingqin Luo",
+      "id": "A5037696116",
+      "orcid": "https://orcid.org/0000-0003-2759-3072",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jingqin Luo"
+    },
+    {
+      "display_name": "Dongsheng Tu",
+      "id": "A5063121757",
+      "orcid": "https://orcid.org/0000-0003-4842-2184",
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dongsheng Tu"
+    },
+    {
+      "display_name": "Belinda Yeo",
+      "id": "A5012424242",
+      "orcid": "https://orcid.org/0000-0002-9218-9917",
+      "institutions": [
+        {
+          "id": "I142947616",
+          "display_name": "Institute of Cancer Research",
+          "country_code": "GB",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Belinda Yeo"
+    },
+    {
+      "display_name": "Jason Kunisaki",
+      "id": "A5036126324",
+      "orcid": "https://orcid.org/0000-0001-9133-2753",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jason Kunisaki"
+    },
+    {
+      "display_name": "Christopher A. Miller",
+      "id": "A5101442425",
+      "orcid": "https://orcid.org/0000-0003-4266-6700",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher A Miller"
+    },
+    {
+      "display_name": "Kilannin Krysiak",
+      "id": "A5067266092",
+      "orcid": "https://orcid.org/0000-0002-6299-9230",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kilannin Krysiak"
+    },
+    {
+      "display_name": "Jasreet Hundal",
+      "id": "A5052629830",
+      "orcid": "https://orcid.org/0000-0002-2584-5320",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jasreet Hundal"
+    },
+    {
+      "display_name": "Benjamin J. Ainscough",
+      "id": "A5003910116",
+      "orcid": "https://orcid.org/0000-0001-8340-514X",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Benjamin J Ainscough"
+    },
+    {
+      "display_name": "Zachary L. Skidmore",
+      "id": "A5049794515",
+      "orcid": "https://orcid.org/0000-0003-1928-7139",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zachary L. Skidmore"
+    },
+    {
+      "display_name": "Katie M. Campbell",
+      "id": "A5052134884",
+      "orcid": "https://orcid.org/0000-0001-6491-4432",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Katie Campbell"
+    },
+    {
+      "display_name": "Runjun D. Kumar",
+      "id": "A5029235574",
+      "orcid": "https://orcid.org/0000-0001-7369-5956",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Runjun Kumar"
+    },
+    {
+      "display_name": "Catrina C. Fronick",
+      "id": "A5051683931",
+      "orcid": "https://orcid.org/0000-0002-2766-9551",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Catrina Fronick"
+    },
+    {
+      "display_name": "Lisa Cook",
+      "id": "A5006577168",
+      "orcid": "https://orcid.org/0000-0001-7528-5870",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lisa Cook"
+    },
+    {
+      "display_name": "Jacqueline Snider",
+      "id": "A5110540982",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jacqueline E. Snider"
+    },
+    {
+      "display_name": "Sherri R. Davies",
+      "id": "A5064321807",
+      "orcid": "https://orcid.org/0000-0002-7141-8354",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sherri Davies"
+    },
+    {
+      "display_name": "Shyam M. Kavuri",
+      "id": "A5028471851",
+      "orcid": "https://orcid.org/0000-0002-3321-6727",
+      "institutions": [
+        {
+          "id": "I181547552",
+          "display_name": "Baylor College of Medicine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shyam M. Kavuri"
+    },
+    {
+      "display_name": "Eric C. Chang",
+      "id": "A5075269512",
+      "orcid": "https://orcid.org/0000-0002-1375-5088",
+      "institutions": [
+        {
+          "id": "I181547552",
+          "display_name": "Baylor College of Medicine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eric C. Chang"
+    },
+    {
+      "display_name": "Vincent Magrini",
+      "id": "A5069011886",
+      "orcid": "https://orcid.org/0000-0002-2019-4872",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vincent Magrini"
+    },
+    {
+      "display_name": "David E. Larson",
+      "id": "A5021913825",
+      "orcid": "https://orcid.org/0000-0001-7934-5906",
+      "institutions": [
+        {
+          "id": "I114277686",
+          "display_name": "James S. McDonnell Foundation",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David E. Larson"
+    },
+    {
+      "display_name": "Robert S. Fulton",
+      "id": "A5061026009",
+      "orcid": "https://orcid.org/0009-0006-6820-3404",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert S Fulton"
+    },
+    {
+      "display_name": "Shuzhen Liu",
+      "id": "A5101582939",
+      "orcid": "https://orcid.org/0000-0002-1859-1131",
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shuzhen Liu"
+    },
+    {
+      "display_name": "Samuel Leung",
+      "id": "A5039549626",
+      "orcid": "https://orcid.org/0000-0003-0138-7254",
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Samuel Leung"
+    },
+    {
+      "display_name": "David Voduc",
+      "id": "A5113804235",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Voduc"
+    },
+    {
+      "display_name": "Ron Bose",
+      "id": "A5001373717",
+      "orcid": "https://orcid.org/0000-0003-1977-8894",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ron Bose"
+    },
+    {
+      "display_name": "Mitch Dowsett",
+      "id": "A5057689412",
+      "orcid": "https://orcid.org/0000-0003-4122-744X",
+      "institutions": [
+        {
+          "id": "I142947616",
+          "display_name": "Institute of Cancer Research",
+          "country_code": "GB",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mitch Dowsett"
+    },
+    {
+      "display_name": "Richard K. Wilson",
+      "id": "A5014714324",
+      "orcid": "https://orcid.org/0000-0002-1992-1358",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard K. Wilson"
+    },
+    {
+      "display_name": "Torsten O. Nielsen",
+      "id": "A5065751654",
+      "orcid": "https://orcid.org/0000-0003-3769-2517",
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Torsten O. Nielsen"
+    },
+    {
+      "display_name": "Elaine R. Mardis",
+      "id": "A5054642128",
+      "orcid": "https://orcid.org/0000-0002-5892-1553",
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elaine R Mardis"
+    },
+    {
+      "display_name": "Matthew J. Ellis",
+      "id": "A5057135409",
+      "orcid": "https://orcid.org/0000-0002-8467-8534",
+      "institutions": [
+        {
+          "id": "I181547552",
+          "display_name": "Baylor College of Medicine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthew J. Ellis"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-08-22",
+  "type": "article",
+  "cited_by_count": 118,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S64187185",
+    "display_name": "Nature Communications",
+    "issn_l": "2041-1723",
+    "issn": [
+      "2041-1723"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319908"
+  },
+  "volume": "9",
+  "issue": "1",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.nature.com/articles/s41467-018-05914-x.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C530470458",
+      "display_name": "Breast cancer",
+      "level": 3,
+      "score": 0.75362
+    },
+    {
+      "id": "C134305767",
+      "display_name": "Somatic cell",
+      "level": 3,
+      "score": 0.6661043
+    },
+    {
+      "id": "C13514818",
+      "display_name": "Germline mutation",
+      "level": 4,
+      "score": 0.56290543
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.5542181
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.5497603
+    },
+    {
+      "id": "C501734568",
+      "display_name": "Mutation",
+      "level": 3,
+      "score": 0.53257614
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.5276514
+    },
+    {
+      "id": "C96777560",
+      "display_name": "Nonsense mutation",
+      "level": 5,
+      "score": 0.43779227
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.41151428
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.4111834
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.36738044
+    },
+    {
+      "id": "C60644358",
+      "display_name": "Bioinformatics",
+      "level": 1,
+      "score": 0.35840875
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.3359914
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.2996573
+    },
+    {
+      "id": "C75563809",
+      "display_name": "Missense mutation",
+      "level": 4,
+      "score": 0.13833928
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11287",
+      "display_name": "Cancer Genomics and Diagnostics",
+      "score": 0.9976
+    },
+    {
+      "id": "T10183",
+      "display_name": "Breast Cancer Treatment Studies",
+      "score": 0.9949
+    },
+    {
+      "id": "T10769",
+      "display_name": "BRCA gene mutations in cancer",
+      "score": 0.9905
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1038/s41467-018-05914-x",
+  "pdf_url": "https://www.nature.com/articles/s41467-018-05914-x.pdf",
+  "retrieved_date": "2025-07-30T14:37:57.132857",
+  "source_database": "OpenAlex"
+}

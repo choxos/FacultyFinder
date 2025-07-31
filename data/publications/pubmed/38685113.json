@@ -1,0 +1,807 @@
+{
+  "pmid": "38685113",
+  "uid": "38685113",
+  "title": "Critical assessment of variant prioritization methods for rare disease diagnosis within the rare genomes project.",
+  "abstract": "BACKGROUND: A major obstacle faced by families with rare diseases is obtaining a genetic diagnosis. The average \"diagnostic odyssey\" lasts over five years and causal variants are identified in under 50%, even when capturing variants genome-wide. To aid in the interpretation and prioritization of the vast number of variants detected, computational methods are proliferating. Knowing which tools are most effective remains unclear. To evaluate the performance of computational methods, and to encourage innovation in method development, we designed a Critical Assessment of Genome Interpretation (CAGI) community challenge to place variant prioritization models head-to-head in a real-life clinical diagnostic setting. METHODS: We utilized genome sequencing (GS) data from families sequenced in the Rare Genomes Project (RGP), a direct-to-participant research study on the utility of GS for rare disease diagnosis and gene discovery. Challenge predictors were provided with a dataset of variant calls and phenotype terms from 175 RGP individuals (65 families), including 35 solved training set families with causal variants specified, and 30 unlabeled test set families (14 solved, 16 unsolved). We tasked teams to identify causal variants in as many families as possible. Predictors submitted variant predictions with estimated probability of causal relationship (EPCR) values. Model performance was determined by two metrics, a weighted score based on the rank position of causal variants, and the maximum F-measure, based on precision and recall of causal variants across all EPCR values. RESULTS: Sixteen teams submitted predictions from 52 models, some with manual review incorporated. Top performers recalled causal variants in up to 13 of 14 solved families within the top 5 ranked variants. Newly discovered diagnostic variants were returned to two previously unsolved families following confirmatory RNA sequencing, and two novel disease gene candidates were entered into Matchmaker Exchange. In one example, RNA sequencing demonstrated aberrant splicing due to a deep intronic indel in ASNS, identified in trans with a frameshift variant in an unsolved proband with phenotypes consistent with asparagine synthetase deficiency. CONCLUSIONS: Model methodology and performance was highly variable. Models weighing call quality, allele frequency, predicted deleteriousness, segregation, and phenotype were effective in identifying causal variants, and models open to phenotype expansion and non-coding variants were able to capture more difficult diagnoses and discover new diagnoses. Overall, computational models can significantly aid variant prioritization. For use in diagnostics, detailed review and conservative assessment of prioritized variants against established criteria is needed.",
+  "authors": [
+    {
+      "last_name": "Stenton",
+      "fore_name": "Sarah L",
+      "initials": "SL",
+      "name": "Sarah L Stenton",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "O'Leary",
+      "fore_name": "Melanie C",
+      "initials": "MC",
+      "name": "Melanie C O'Leary",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Lemire",
+      "fore_name": "Gabrielle",
+      "initials": "G",
+      "name": "Gabrielle Lemire",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "VanNoy",
+      "fore_name": "Grace E",
+      "initials": "GE",
+      "name": "Grace E VanNoy",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "DiTroia",
+      "fore_name": "Stephanie",
+      "initials": "S",
+      "name": "Stephanie DiTroia",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Ganesh",
+      "fore_name": "Vijay S",
+      "initials": "VS",
+      "name": "Vijay S Ganesh",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Department of Neurology, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Groopman",
+      "fore_name": "Emily",
+      "initials": "E",
+      "name": "Emily Groopman",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "O'Heir",
+      "fore_name": "Emily",
+      "initials": "E",
+      "name": "Emily O'Heir",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Mangilog",
+      "fore_name": "Brian",
+      "initials": "B",
+      "name": "Brian Mangilog",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Osei-Owusu",
+      "fore_name": "Ikeoluwa",
+      "initials": "I",
+      "name": "Ikeoluwa Osei-Owusu",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Pais",
+      "fore_name": "Lynn S",
+      "initials": "LS",
+      "name": "Lynn S Pais",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Serrano",
+      "fore_name": "Jillian",
+      "initials": "J",
+      "name": "Jillian Serrano",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Singer-Berk",
+      "fore_name": "Moriel",
+      "initials": "M",
+      "name": "Moriel Singer-Berk",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Weisburd",
+      "fore_name": "Ben",
+      "initials": "B",
+      "name": "Ben Weisburd",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael W",
+      "initials": "MW",
+      "name": "Michael W Wilson",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Austin-Tse",
+      "fore_name": "Christina",
+      "initials": "C",
+      "name": "Christina Austin-Tse",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Abdelhakim",
+      "fore_name": "Marwa",
+      "initials": "M",
+      "name": "Marwa Abdelhakim",
+      "affiliations": [
+        "Computer, Electrical and Mathematical Sciences and Engineering Division (CEMSE), King Abdullah University of Science and Technology (KAUST), 23955-6900, Thuwal, Saudi Arabia.",
+        "Computational Bioscience Research Center (CBRC), King Abdullah University of Science and Technology (KAUST), 23955-6900, Thuwal, Saudi Arabia."
+      ]
+    },
+    {
+      "last_name": "Althagafi",
+      "fore_name": "Azza",
+      "initials": "A",
+      "name": "Azza Althagafi",
+      "affiliations": [
+        "Computer, Electrical and Mathematical Sciences and Engineering Division (CEMSE), King Abdullah University of Science and Technology (KAUST), 23955-6900, Thuwal, Saudi Arabia.",
+        "Computational Bioscience Research Center (CBRC), King Abdullah University of Science and Technology (KAUST), 23955-6900, Thuwal, Saudi Arabia.",
+        "Computer Science Department, College of Computers and Information Technology, Taif University, Taif, Saudi Arabia."
+      ]
+    },
+    {
+      "last_name": "Babbi",
+      "fore_name": "Giulia",
+      "initials": "G",
+      "name": "Giulia Babbi",
+      "affiliations": [
+        "Biocomputing Group, Department of Pharmacy and Biotechnology, University of Bologna, Bologna, Italy."
+      ]
+    },
+    {
+      "last_name": "Bellazzi",
+      "fore_name": "Riccardo",
+      "initials": "R",
+      "name": "Riccardo Bellazzi",
+      "affiliations": [
+        "enGenome Srl, Pavia, Italy.",
+        "Department of Electrical, Computer and Biomedical Engineering, University of Pavia, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Bovo",
+      "fore_name": "Samuele",
+      "initials": "S",
+      "name": "Samuele Bovo",
+      "affiliations": [
+        "Department of Agricultural and Food Sciences, University of Bologna, Bologna, Italy."
+      ]
+    },
+    {
+      "last_name": "Carta",
+      "fore_name": "Maria Giulia",
+      "initials": "MG",
+      "name": "Maria Giulia Carta",
+      "affiliations": [
+        "Department of Electrical, Computer and Biomedical Engineering, University of Pavia, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Casadio",
+      "fore_name": "Rita",
+      "initials": "R",
+      "name": "Rita Casadio",
+      "affiliations": [
+        "Biocomputing Group, Department of Pharmacy and Biotechnology, University of Bologna, Bologna, Italy."
+      ]
+    },
+    {
+      "last_name": "Coenen",
+      "fore_name": "Pieter-Jan",
+      "initials": "PJ",
+      "name": "Pieter-Jan Coenen",
+      "affiliations": [
+        "Invitae, San Francisco, CA, USA.",
+        "Codon One, Louvain, EU, Belgium."
+      ]
+    },
+    {
+      "last_name": "De Paoli",
+      "fore_name": "Federica",
+      "initials": "F",
+      "name": "Federica De Paoli",
+      "affiliations": [
+        "enGenome Srl, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Floris",
+      "fore_name": "Matteo",
+      "initials": "M",
+      "name": "Matteo Floris",
+      "affiliations": [
+        "Department of Biomedical Sciences, University of Sassari, Sassari, Italy."
+      ]
+    },
+    {
+      "last_name": "Gajapathy",
+      "fore_name": "Manavalan",
+      "initials": "M",
+      "name": "Manavalan Gajapathy",
+      "affiliations": [
+        "Center for Computational Genomics and Data Science, The University of Alabama at Birmingham, Birmingham, AL, USA.",
+        "Department of Genetics, Heersink School of Medicine, The University of Alabama at Birmingham, Birmingham, AL, USA.",
+        "Hugh Kaul Precision Medicine Institute, The University of Alabama at Birmingham, Birmingham, AL, USA."
+      ]
+    },
+    {
+      "last_name": "Hoehndorf",
+      "fore_name": "Robert",
+      "initials": "R",
+      "name": "Robert Hoehndorf",
+      "affiliations": [
+        "Computer, Electrical and Mathematical Sciences and Engineering Division (CEMSE), King Abdullah University of Science and Technology (KAUST), 23955-6900, Thuwal, Saudi Arabia.",
+        "Computational Bioscience Research Center (CBRC), King Abdullah University of Science and Technology (KAUST), 23955-6900, Thuwal, Saudi Arabia."
+      ]
+    },
+    {
+      "last_name": "Jacobsen",
+      "fore_name": "Julius O B",
+      "initials": "JOB",
+      "name": "Julius O B Jacobsen",
+      "affiliations": [
+        "William Harvey Research Institute, Barts & The London School of Medicine and Dentistry, Queen Mary University of London, Charterhouse Square, London, UK."
+      ]
+    },
+    {
+      "last_name": "Joseph",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Joseph",
+      "affiliations": [
+        "TCS Research, Tata Consultancy Services (TCS) Ltd, Deccan Park, Madhapur, Hyderabad, India."
+      ]
+    },
+    {
+      "last_name": "Kamandula",
+      "fore_name": "Akash",
+      "initials": "A",
+      "name": "Akash Kamandula",
+      "affiliations": [
+        "Khoury College of Computer Sciences, Northeastern University, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Katsonis",
+      "fore_name": "Panagiotis",
+      "initials": "P",
+      "name": "Panagiotis Katsonis",
+      "affiliations": [
+        "Department of Molecular and Human Genetics, Baylor College of Medicine, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Kint",
+      "fore_name": "Cyrielle",
+      "initials": "C",
+      "name": "Cyrielle Kint",
+      "affiliations": [
+        "Invitae, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Lichtarge",
+      "fore_name": "Olivier",
+      "initials": "O",
+      "name": "Olivier Lichtarge",
+      "affiliations": [
+        "Department of Molecular and Human Genetics, Baylor College of Medicine, Houston, TX, USA.",
+        "Structural and Computational Biology and Molecular Biophysics Program, Baylor College of Medicine, Houston, TX, USA.",
+        "Computational and Integrative Biomedical Research Center, Baylor College of Medicine, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Limongelli",
+      "fore_name": "Ivan",
+      "initials": "I",
+      "name": "Ivan Limongelli",
+      "affiliations": [
+        "enGenome Srl, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Lu",
+      "fore_name": "Yulan",
+      "initials": "Y",
+      "name": "Yulan Lu",
+      "affiliations": [
+        "Center for Molecular Medicine, Pediatric Research Institute, Children's Hospital of Fudan University, Shanghai, China."
+      ]
+    },
+    {
+      "last_name": "Magni",
+      "fore_name": "Paolo",
+      "initials": "P",
+      "name": "Paolo Magni",
+      "affiliations": [
+        "Department of Electrical, Computer and Biomedical Engineering, University of Pavia, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Mamidi",
+      "fore_name": "Tarun Karthik Kumar",
+      "initials": "TKK",
+      "name": "Tarun Karthik Kumar Mamidi",
+      "affiliations": [
+        "Center for Computational Genomics and Data Science, The University of Alabama at Birmingham, Birmingham, AL, USA.",
+        "Department of Genetics, Heersink School of Medicine, The University of Alabama at Birmingham, Birmingham, AL, USA.",
+        "Hugh Kaul Precision Medicine Institute, The University of Alabama at Birmingham, Birmingham, AL, USA."
+      ]
+    },
+    {
+      "last_name": "Martelli",
+      "fore_name": "Pier Luigi",
+      "initials": "PL",
+      "name": "Pier Luigi Martelli",
+      "affiliations": [
+        "Biocomputing Group, Department of Pharmacy and Biotechnology, University of Bologna, Bologna, Italy."
+      ]
+    },
+    {
+      "last_name": "Mulargia",
+      "fore_name": "Marta",
+      "initials": "M",
+      "name": "Marta Mulargia",
+      "affiliations": [
+        "Department of Biomedical Sciences, University of Sassari, Sassari, Italy."
+      ]
+    },
+    {
+      "last_name": "Nicora",
+      "fore_name": "Giovanna",
+      "initials": "G",
+      "name": "Giovanna Nicora",
+      "affiliations": [
+        "enGenome Srl, Pavia, Italy.",
+        "Department of Electrical, Computer and Biomedical Engineering, University of Pavia, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Nykamp",
+      "fore_name": "Keith",
+      "initials": "K",
+      "name": "Keith Nykamp",
+      "affiliations": [
+        "Invitae, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Pejaver",
+      "fore_name": "Vikas",
+      "initials": "V",
+      "name": "Vikas Pejaver",
+      "affiliations": [
+        "Institute for Genomic Health, Icahn School of Medicine at Mount Sinai, New York, NY, USA.",
+        "Department of Genetics and Genomic Sciences, Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Peng",
+      "fore_name": "Yisu",
+      "initials": "Y",
+      "name": "Yisu Peng",
+      "affiliations": [
+        "Khoury College of Computer Sciences, Northeastern University, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Pham",
+      "fore_name": "Thi Hong Cam",
+      "initials": "THC",
+      "name": "Thi Hong Cam Pham",
+      "affiliations": [
+        "University of Medicine and Pharmacy, Hue University, Hue, Vietnam."
+      ]
+    },
+    {
+      "last_name": "Podda",
+      "fore_name": "Maurizio S",
+      "initials": "MS",
+      "name": "Maurizio S Podda",
+      "affiliations": [
+        "Department of Biomedical Sciences, University of Sassari, Sassari, Italy.",
+        "Institute of Clinical Physiology (IFC), CNR, Via Moruzzi 1, 56124, Pisa, Italy.",
+        "University of Siena, Siena, Italy.",
+        "CTGLab, Institute of Informatics and Telematics (IIT), CNR, ViaMoruzzi 1, 56124, Pisa, Italy."
+      ]
+    },
+    {
+      "last_name": "Rao",
+      "fore_name": "Aditya",
+      "initials": "A",
+      "name": "Aditya Rao",
+      "affiliations": [
+        "TCS Research, Tata Consultancy Services (TCS) Ltd, Deccan Park, Madhapur, Hyderabad, India."
+      ]
+    },
+    {
+      "last_name": "Rizzo",
+      "fore_name": "Ettore",
+      "initials": "E",
+      "name": "Ettore Rizzo",
+      "affiliations": [
+        "enGenome Srl, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Saipradeep",
+      "fore_name": "Vangala G",
+      "initials": "VG",
+      "name": "Vangala G Saipradeep",
+      "affiliations": [
+        "TCS Research, Tata Consultancy Services (TCS) Ltd, Deccan Park, Madhapur, Hyderabad, India."
+      ]
+    },
+    {
+      "last_name": "Savojardo",
+      "fore_name": "Castrense",
+      "initials": "C",
+      "name": "Castrense Savojardo",
+      "affiliations": [
+        "Biocomputing Group, Department of Pharmacy and Biotechnology, University of Bologna, Bologna, Italy."
+      ]
+    },
+    {
+      "last_name": "Schols",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Schols",
+      "affiliations": [
+        "Invitae, San Francisco, CA, USA.",
+        "Codon One, Louvain, EU, Belgium."
+      ]
+    },
+    {
+      "last_name": "Shen",
+      "fore_name": "Yang",
+      "initials": "Y",
+      "name": "Yang Shen",
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Texas A&M University, College Station, TX, USA.",
+        "Department of Computer Science and Engineering, Texas A&M University, College Station, TX, USA.",
+        "Institute of Biosciences and Technology and Department of Translational Medical Sciences, College of Medicine, Texas A&M University, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Sivadasan",
+      "fore_name": "Naveen",
+      "initials": "N",
+      "name": "Naveen Sivadasan",
+      "affiliations": [
+        "TCS Research, Tata Consultancy Services (TCS) Ltd, Deccan Park, Madhapur, Hyderabad, India."
+      ]
+    },
+    {
+      "last_name": "Smedley",
+      "fore_name": "Damian",
+      "initials": "D",
+      "name": "Damian Smedley",
+      "affiliations": [
+        "William Harvey Research Institute, Barts & The London School of Medicine and Dentistry, Queen Mary University of London, Charterhouse Square, London, UK."
+      ]
+    },
+    {
+      "last_name": "Soru",
+      "fore_name": "Dorian",
+      "initials": "D",
+      "name": "Dorian Soru",
+      "affiliations": [
+        "Independent Consultant, Ovodda, Italy."
+      ]
+    },
+    {
+      "last_name": "Srinivasan",
+      "fore_name": "Rajgopal",
+      "initials": "R",
+      "name": "Rajgopal Srinivasan",
+      "affiliations": [
+        "TCS Research, Tata Consultancy Services (TCS) Ltd, Deccan Park, Madhapur, Hyderabad, India."
+      ]
+    },
+    {
+      "last_name": "Sun",
+      "fore_name": "Yuanfei",
+      "initials": "Y",
+      "name": "Yuanfei Sun",
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Texas A&M University, College Station, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Sunderam",
+      "fore_name": "Uma",
+      "initials": "U",
+      "name": "Uma Sunderam",
+      "affiliations": [
+        "TCS Research, Tata Consultancy Services (TCS) Ltd, Deccan Park, Madhapur, Hyderabad, India."
+      ]
+    },
+    {
+      "last_name": "Tan",
+      "fore_name": "Wuwei",
+      "initials": "W",
+      "name": "Wuwei Tan",
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Texas A&M University, College Station, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Tiwari",
+      "fore_name": "Naina",
+      "initials": "N",
+      "name": "Naina Tiwari",
+      "affiliations": [
+        "TCS Research, Tata Consultancy Services (TCS) Ltd, Deccan Park, Madhapur, Hyderabad, India."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Xiao",
+      "initials": "X",
+      "name": "Xiao Wang",
+      "affiliations": [
+        "Center for Molecular Medicine, Pediatric Research Institute, Children's Hospital of Fudan University, Shanghai, China."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Yaqiong",
+      "initials": "Y",
+      "name": "Yaqiong Wang",
+      "affiliations": [
+        "Center for Molecular Medicine, Pediatric Research Institute, Children's Hospital of Fudan University, Shanghai, China."
+      ]
+    },
+    {
+      "last_name": "Williams",
+      "fore_name": "Amanda",
+      "initials": "A",
+      "name": "Amanda Williams",
+      "affiliations": [
+        "Department of Molecular and Human Genetics, Baylor College of Medicine, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Worthey",
+      "fore_name": "Elizabeth A",
+      "initials": "EA",
+      "name": "Elizabeth A Worthey",
+      "affiliations": [
+        "Center for Computational Genomics and Data Science, The University of Alabama at Birmingham, Birmingham, AL, USA.",
+        "Department of Genetics, Heersink School of Medicine, The University of Alabama at Birmingham, Birmingham, AL, USA.",
+        "Hugh Kaul Precision Medicine Institute, The University of Alabama at Birmingham, Birmingham, AL, USA."
+      ]
+    },
+    {
+      "last_name": "Yin",
+      "fore_name": "Rujie",
+      "initials": "R",
+      "name": "Rujie Yin",
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Texas A&M University, College Station, TX, USA."
+      ]
+    },
+    {
+      "last_name": "You",
+      "fore_name": "Yuning",
+      "initials": "Y",
+      "name": "Yuning You",
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, Texas A&M University, College Station, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Zeiberg",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Zeiberg",
+      "affiliations": [
+        "Khoury College of Computer Sciences, Northeastern University, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Zucca",
+      "fore_name": "Susanna",
+      "initials": "S",
+      "name": "Susanna Zucca",
+      "affiliations": [
+        "enGenome Srl, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Bakolitsa",
+      "fore_name": "Constantina",
+      "initials": "C",
+      "name": "Constantina Bakolitsa",
+      "affiliations": [
+        "Department of Plant and Microbial Biology and Center for Computational Biology, University of California, Berkeley, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Brenner",
+      "fore_name": "Steven E",
+      "initials": "SE",
+      "name": "Steven E Brenner",
+      "affiliations": [
+        "Department of Plant and Microbial Biology and Center for Computational Biology, University of California, Berkeley, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Fullerton",
+      "fore_name": "Stephanie M",
+      "initials": "SM",
+      "name": "Stephanie M Fullerton",
+      "affiliations": [
+        "Department of Bioethics and Humanities, University of Washington School of Medicine, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Radivojac",
+      "fore_name": "Predrag",
+      "initials": "P",
+      "name": "Predrag Radivojac",
+      "affiliations": [
+        "Khoury College of Computer Sciences, Northeastern University, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Rehm",
+      "fore_name": "Heidi L",
+      "initials": "HL",
+      "name": "Heidi L Rehm",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "O'Donnell-Luria",
+      "fore_name": "Anne",
+      "initials": "A",
+      "name": "Anne O'Donnell-Luria",
+      "affiliations": [
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, MA, USA. odonnell@broadinstitute.org.",
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, MA, USA. odonnell@broadinstitute.org.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA. odonnell@broadinstitute.org."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Human genomics",
+    "iso_abbreviation": "Hum Genomics",
+    "issn": "1479-7364",
+    "issn_type": "Electronic",
+    "volume": "18",
+    "issue": "1",
+    "pub_year": "2024",
+    "pub_month": "Apr",
+    "pub_day": "29"
+  },
+  "start_page": "44",
+  "pages": "44",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Rare Diseases",
+    "Genome, Human",
+    "Genetic Variation",
+    "Computational Biology",
+    "Phenotype"
+  ],
+  "article_ids": {
+    "pubmed": "38685113",
+    "pmc": "PMC11057178",
+    "doi": "10.1186/s40246-024-00604-w",
+    "pii": "10.1186/s40246-024-00604-w"
+  },
+  "doi": "10.1186/s40246-024-00604-w",
+  "pmc_id": "PMC11057178",
+  "dates": {
+    "completed": "2024-04-30",
+    "revised": "2025-03-04"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "UM1HG008900, U01HG011755, R01HG009141",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U24 HG007346",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 HG010464",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HG009141",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R35 GM124952",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UM1 HG008900",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG012022",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HD103805",
+      "agency": "NICHD NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG011755",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R00 LM012992",
+      "agency": "NLM NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.856902",
+    "pmid": "38685113"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "pmid": "37936949",
+  "uid": "37936949",
+  "title": "Developing the surgeon-machine interface: using a novel instance-segmentation framework for intraoperative landmark labelling.",
+  "abstract": "INTRODUCTION: The utilisation of artificial intelligence (AI) augments intraoperative safety, surgical training, and patient outcomes. We introduce the term Surgeon-Machine Interface (SMI) to describe this innovative intersection between surgeons and machine inference. A custom deep computer vision (CV) architecture within a sparse labelling paradigm was developed, specifically tailored to conceptualise the SMI. This platform demonstrates the ability to perform instance segmentation on anatomical landmarks and tools from a single open spinal dural arteriovenous fistula (dAVF) surgery video dataset. METHODS: Our custom deep convolutional neural network was based on SOLOv2 architecture for precise, instance-level segmentation of surgical video data. Test video consisted of 8520 frames, with sparse labelling of only 133 frames annotated for training. Accuracy and inference time, assessed using F1-score and mean Average Precision (mAP), were compared against current state-of-the-art architectures on a separate test set of 85 additionally annotated frames. RESULTS: Our SMI demonstrated superior accuracy and computing speed compared to these frameworks. The F1-score and mAP achieved by our platform were 17% and 15.2% respectively, surpassing MaskRCNN (15.2%, 13.9%), YOLOv3 (5.4%, 11.9%), and SOLOv2 (3.1%, 10.4%). Considering detections that exceeded the Intersection over Union threshold of 50%, our platform achieved an impressive F1-score of 44.2% and mAP of 46.3%, outperforming MaskRCNN (41.3%, 43.5%), YOLOv3 (15%, 34.1%), and SOLOv2 (9%, 32.3%). Our platform demonstrated the fastest inference time (88ms), compared to MaskRCNN (90ms), SOLOV2 (100ms), and YOLOv3 (106ms). Finally, the minimal amount of training set demonstrated a good generalisation performance -our architecture successfully identified objects in a frame that were not included in the training or validation frames, indicating its ability to handle out-of-domain scenarios. DISCUSSION: We present our development of an innovative intraoperative SMI to demonstrate the future promise of advanced CV in the surgical domain. Through successful implementation in a microscopic dAVF surgery, our framework demonstrates superior performance over current state-of-the-art segmentation architectures in intraoperative landmark guidance with high sample efficiency, representing the most advanced AI-enabled surgical inference platform to date. Our future goals include transfer learning paradigms for scaling to additional surgery types, addressing clinical and technical limitations for performing real-time decoding, and ultimate enablement of a real-time neurosurgical guidance platform.",
+  "authors": [
+    {
+      "last_name": "Park",
+      "fore_name": "Jay J",
+      "initials": "JJ",
+      "name": "Jay J Park",
+      "affiliations": [
+        "Department of Neurosurgery, The Surgical Innovation and Machine Interfacing (SIMI) Lab, Stanford University School of Medicine, Stanford, CA, United States.",
+        "Centre for Global Health, Usher Institute, Edinburgh Medical School, The University of Edinburgh, Edinburgh, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Doiphode",
+      "fore_name": "Nehal",
+      "initials": "N",
+      "name": "Nehal Doiphode",
+      "affiliations": [
+        "Department of Neurosurgery, The Surgical Innovation and Machine Interfacing (SIMI) Lab, Stanford University School of Medicine, Stanford, CA, United States.",
+        "Department of Computer and Information Science, School of Engineering and Applied Science, University of Pennsylvania, Philadelphia, PA, United States."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Xiao",
+      "initials": "X",
+      "name": "Xiao Zhang",
+      "affiliations": [
+        "Department of Computer Science, University of Chicago, Chicago, IL, United States."
+      ]
+    },
+    {
+      "last_name": "Pan",
+      "fore_name": "Lishuo",
+      "initials": "L",
+      "name": "Lishuo Pan",
+      "affiliations": [
+        "Department of Computer Science, Brown University, Providence, RI, United States."
+      ]
+    },
+    {
+      "last_name": "Blue",
+      "fore_name": "Rachel",
+      "initials": "R",
+      "name": "Rachel Blue",
+      "affiliations": [
+        "Department of Neurosurgery, Perelman School of Medicine at The University of Pennsylvania, Philadelphia, PA, United States."
+      ]
+    },
+    {
+      "last_name": "Shi",
+      "fore_name": "Jianbo",
+      "initials": "J",
+      "name": "Jianbo Shi",
+      "affiliations": [
+        "Department of Computer and Information Science, School of Engineering and Applied Science, University of Pennsylvania, Philadelphia, PA, United States."
+      ]
+    },
+    {
+      "last_name": "Buch",
+      "fore_name": "Vivek P",
+      "initials": "VP",
+      "name": "Vivek P Buch",
+      "affiliations": [
+        "Department of Neurosurgery, The Surgical Innovation and Machine Interfacing (SIMI) Lab, Stanford University School of Medicine, Stanford, CA, United States."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Frontiers in surgery",
+    "iso_abbreviation": "Front Surg",
+    "issn": "2296-875X",
+    "issn_type": "Print",
+    "volume": "10",
+    "pub_year": "2023"
+  },
+  "start_page": "1259756",
+  "pages": "1259756",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "37936949",
+    "pmc": "PMC10626480",
+    "doi": "10.3389/fsurg.2023.1259756"
+  },
+  "doi": "10.3389/fsurg.2023.1259756",
+  "pmc_id": "PMC10626480",
+  "dates": {
+    "revised": "2023-11-09"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:51:10.680284",
+    "pmid": "37936949"
+  }
+}

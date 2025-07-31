@@ -1,0 +1,140 @@
+{
+  "pmid": "30570504",
+  "uid": "30570504",
+  "title": "Matching and Homogenizing Convolution Kernels for Quantitative Studies in Computed Tomography.",
+  "abstract": "The sharpness of the kernels used for image reconstruction in computed tomography affects the values of the quantitative image features. We sought to identify the kernels that produce similar feature values to enable a more effective comparison of images produced using scanners from different manufactures. We also investigated a new image filter designed to change the kernel-related component of the frequency spectrum of a postreconstruction image from that of the initial kernel to that of a preferred kernel. A radiomics texture phantom was imaged using scanners from GE, Philips, Siemens, and Toshiba. Images were reconstructed multiple times, varying the kernel from smooth to sharp. The phantom comprised 10 cartridges of various textures. A semiautomated method was used to produce 8 × 2 × 2 cm regions of interest for each cartridge and for all scans. For each region of interest, 38 radiomics features from the categories intensity direct (n = 12), gray-level co-occurrence matrix (n = 21), and neighborhood gray-tone difference matrix (n = 5) were extracted. We then calculated the fractional differences of the features from those of the baseline kernel (GE Standard). To gauge the importance of the differences, we scaled them by the coefficient of variation of the same feature from a cohort of patients with non-small cell lung cancer. The noise power spectra for each kernel were estimated from the phantom's solid acrylic cartridge, and kernel-homogenization filters were developed from these estimates. The Philips C, Siemens B30f, and Toshiba FC24 kernels produced feature values most similar to GE Standard. The kernel homogenization filters reduced the median differences from baseline to less than 1 coefficient of variation in the patient population for all of the GE, Philips, and Siemens kernels except for GE Edge and Toshiba kernels. For prospective computed tomographic radiomics studies, the scanning protocol should specify kernels that have been shown to produce similar feature values. For retrospective studies, kernel homogenization filters can be designed and applied to reduce the kernel-related differences in the feature values.",
+  "authors": [
+    {
+      "last_name": "Mackin",
+      "fore_name": "Dennis",
+      "initials": "D",
+      "name": "Dennis Mackin",
+      "affiliations": [
+        "Graduate School of Biomedical Sciences, The University of Texas Health Science Center at Houston."
+      ]
+    },
+    {
+      "last_name": "Ger",
+      "fore_name": "Rachel",
+      "initials": "R",
+      "name": "Rachel Ger",
+      "affiliations": [
+        "Graduate School of Biomedical Sciences, The University of Texas Health Science Center at Houston."
+      ]
+    },
+    {
+      "last_name": "Gay",
+      "fore_name": "Skylar",
+      "initials": "S",
+      "name": "Skylar Gay",
+      "affiliations": []
+    },
+    {
+      "last_name": "Dodge",
+      "fore_name": "Cristina",
+      "initials": "C",
+      "name": "Cristina Dodge",
+      "affiliations": [
+        "Department of Diagnostic Imaging, Texas Children's Hospital, Houston."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Lifei",
+      "initials": "L",
+      "name": "Lifei Zhang",
+      "affiliations": []
+    },
+    {
+      "last_name": "Yang",
+      "fore_name": "Jinzhong",
+      "initials": "J",
+      "name": "Jinzhong Yang",
+      "affiliations": []
+    },
+    {
+      "last_name": "Jones",
+      "fore_name": "Aaron Kyle",
+      "initials": "AK",
+      "name": "Aaron Kyle Jones",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston.",
+        "Radiation Oncology Department, Houston Methodist Hospital, Texas."
+      ]
+    },
+    {
+      "last_name": "Court",
+      "fore_name": "Laurence",
+      "initials": "L",
+      "name": "Laurence Court",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Investigative radiology",
+    "iso_abbreviation": "Invest Radiol",
+    "issn": "1536-0210",
+    "issn_type": "Electronic",
+    "volume": "54",
+    "issue": "5",
+    "pub_year": "2019",
+    "pub_month": "May"
+  },
+  "start_page": "288",
+  "end_page": "295",
+  "pages": "288-295",
+  "language": "eng",
+  "publication_types": [
+    "Evaluation Study",
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Carcinoma, Non-Small-Cell Lung",
+    "Evaluation Studies as Topic",
+    "Humans",
+    "Image Processing, Computer-Assisted",
+    "Lung",
+    "Lung Neoplasms",
+    "Phantoms, Imaging",
+    "Prospective Studies",
+    "Retrospective Studies",
+    "Tomography, X-Ray Computed"
+  ],
+  "article_ids": {
+    "pubmed": "30570504",
+    "mid": "NIHMS1511967",
+    "pmc": "PMC6449212",
+    "doi": "10.1097/RLI.0000000000000540"
+  },
+  "doi": "10.1097/RLI.0000000000000540",
+  "pmc_id": "PMC6449212",
+  "dates": {
+    "completed": "2019-12-23",
+    "revised": "2023-10-06"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "P30 CA016672",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R03 CA178495",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R21 CA216572",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:31:25.617971",
+    "pmid": "30570504"
+  }
+}

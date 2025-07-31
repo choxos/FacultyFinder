@@ -1,0 +1,459 @@
+{
+  "openalex_id": "W4409630346",
+  "doi": "https://doi.org/10.1158/1538-7445.am2025-3261",
+  "title": "Abstract 3261: Plasma whole-genome sequencing to monitor pancreatic cancer",
+  "abstract": "Abstract Pancreatic ductal adenocarcinoma (PDA) is a highly aggressive disease with a 5-year survival rate of 12%. Patients are typically diagnosed at the metastatic stage due to lack of symptoms and current treatment options do not effectively control the disease. There is an urgent need to develop sensitive strategies to detect PDA at an early stage before it spreads. Characterizing circulating tumor DNA (ctDNA) in plasma is an effective approach to detect and monitor cancer. Typically, cancer genomes contain thousands of mutations, but targeted sequencing approaches only focus on pre-determined diver genes, which largely limits its performance in detecting ctDNA. Whole-genome sequencing (WGS) however, tracks all the tumor mutations simultaneously, and has a higher sensitivity than targeted approaches, especially in low tumor burden samples. In this study, we aim to use plasma WGS to build a liquid biopsy platform for PDA detection and characterization. To date, we have established the largest plasma WGS (20-60x) cohort for PDA which consists of over 200 baseline and longitudinal plasma samples from patients, with additional 45 plasma samples from age-matched healthy individuals. Paired tumor tissue WGS and RNAseq are also available. We have developed and validated a bioinformatics tool to detect cancer mutations in plasma and estimate plasma tumor fraction (TFx) for tumor burden. In the PDA cohort, the median of plasma TFx was 1% with a wide range between statistically undetectable and 70%. Plasma TFx increased with clinical stages, from a median of 0.5% in resectable PDA to 5% in metastatic cases. Plasma TFx was positively correlated with liver metastasis size, but not with the primary pancreatic tumor size. These results suggest that in PDA, metastases are the major site to shed ctDNA, but not the primary tumors. A positive correlation between serum CA19-9 and plasma TFx was found in metastatic but not in resectable PDA. Higher baseline plasma TFx was associated with worse prognosis, which was more evident in the metastatic PDA. Using the paired tumor WGS and RNAseq, we found that higher ctDNA shedding was associated with higher cell cycle, lower immunity and polyploid genomes in the tumors. No difference was found in plasma TFx between Basal-like and Classical PDA subtypes. In summary, the current study provides insights of the interplay between ctDNA dynamics and clinical features in PDA. We aspire to deliver a freely accessible computational platform for cfDNA genomic profiling, PDA early detection and progression monitoring using plasma. Citation Format: Yuanchang Fang, Michelle Chan-Seng-Yue, Karen Ng, Amy Zhang, Nguyen Hoang, Gun Ho Jang, Sabiq Chaudhary, Eugenia Flores-Figueroa, Daniela Bevacqua, Stephanie Ramotar, Ayelet Borgida, Shawn Hutchinson, Anna Dodd, Julie Wilson, Barbara Grünwald, Robert Grant, Erica Tsang, George Zogopoulos, Jennifer Knox, Masoom Haider, Steven Gallinger, Faiyaz Notta. Plasma whole-genome sequencing to monitor pancreatic cancer [abstract]. In: Proceedings of the American Association for Cancer Research Annual Meeting 2025; Part 1 (Regular Abstracts); 2025 Apr 25-30; Chicago, IL. Philadelphia (PA): AACR; Cancer Res 2025;85(8_Suppl_1):Abstract nr 3261.",
+  "authors": [
+    {
+      "display_name": "Yuanchang Fang",
+      "id": "A5007678523",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuanchang Fang"
+    },
+    {
+      "display_name": "Michelle Chan‐Seng‐Yue",
+      "id": "A5031785087",
+      "orcid": "https://orcid.org/0000-0003-3773-9354",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michelle Chan-Seng-Yue"
+    },
+    {
+      "display_name": "K.T. Ng",
+      "id": "A5047240384",
+      "orcid": "https://orcid.org/0009-0007-2217-3446",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karen Ng"
+    },
+    {
+      "display_name": "Amy X. Zhang",
+      "id": "A5037569091",
+      "orcid": "https://orcid.org/0000-0001-9462-9835",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amy Zhang"
+    },
+    {
+      "display_name": "Nguyễn Xuân Cường",
+      "id": "A5035101973",
+      "orcid": "https://orcid.org/0000-0003-1855-6181",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nguyen Hoang"
+    },
+    {
+      "display_name": "Gun Ho Jang",
+      "id": "A5091747658",
+      "orcid": "https://orcid.org/0000-0001-8169-7011",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gun Ho Jang"
+    },
+    {
+      "display_name": "Sushil Kumar Chaudhary",
+      "id": "A5058681699",
+      "orcid": "https://orcid.org/0000-0002-7964-0021",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sabiq Chaudhary"
+    },
+    {
+      "display_name": "Eugenia Flores‐Figueroa",
+      "id": "A5077885814",
+      "orcid": "https://orcid.org/0000-0002-7453-1125",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eugenia Flores-Figueroa"
+    },
+    {
+      "display_name": "Daniela Bevacqua",
+      "id": "A5111155322",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daniela Bevacqua"
+    },
+    {
+      "display_name": "Stephanie Ramotar",
+      "id": "A5091767516",
+      "orcid": "https://orcid.org/0000-0001-7619-2684",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephanie Ramotar"
+    },
+    {
+      "display_name": "Ayelet Borgida",
+      "id": "A5079908963",
+      "orcid": "https://orcid.org/0000-0002-8058-8953",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ayelet Borgida"
+    },
+    {
+      "display_name": "Shawn Hutchinson",
+      "id": "A5012095302",
+      "orcid": "https://orcid.org/0000-0002-2435-7114",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shawn Hutchinson"
+    },
+    {
+      "display_name": "Anna Dodd",
+      "id": "A5031817257",
+      "orcid": "https://orcid.org/0000-0003-0649-0760",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anna Dodd"
+    },
+    {
+      "display_name": "Julie M. Wilson",
+      "id": "A5080925994",
+      "orcid": "https://orcid.org/0000-0003-2510-962X",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julie Wilson"
+    },
+    {
+      "display_name": "Barbara T. Grünwald",
+      "id": "A5047728701",
+      "orcid": "https://orcid.org/0000-0002-7541-5206",
+      "institutions": [
+        {
+          "id": "I4210119759",
+          "display_name": "Essen University Hospital",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Barbara Grünwald"
+    },
+    {
+      "display_name": "Robert C. Grant",
+      "id": "A5087178283",
+      "orcid": "https://orcid.org/0000-0002-9821-0377",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Grant"
+    },
+    {
+      "display_name": "Erica S. Tsang",
+      "id": "A5008869204",
+      "orcid": "https://orcid.org/0000-0003-2317-2721",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Erica Tsang"
+    },
+    {
+      "display_name": "George Zogopoulos",
+      "id": "A5032367500",
+      "orcid": "https://orcid.org/0000-0002-0482-7086",
+      "institutions": [
+        {
+          "id": "I60158472",
+          "display_name": "Concordia University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I5023651",
+          "display_name": "McGill University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "George Zogopoulos"
+    },
+    {
+      "display_name": "Jennifer J. Knox",
+      "id": "A5068644454",
+      "orcid": "https://orcid.org/0000-0003-3474-6647",
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennifer Knox"
+    },
+    {
+      "display_name": "Masoom A. Haider",
+      "id": "A5109392994",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Masoom Haider"
+    },
+    {
+      "display_name": "Steven Gallinger",
+      "id": "A5031580027",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1325899441",
+          "display_name": "University Health Network",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven Gallinger"
+    },
+    {
+      "display_name": "Faiyaz Notta",
+      "id": "A5061402791",
+      "orcid": "https://orcid.org/0000-0002-5748-3985",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Faiyaz Notta"
+    }
+  ],
+  "publication_year": 2025,
+  "publication_date": "2025-04-21",
+  "type": "article",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S168522863",
+    "display_name": "Cancer Research",
+    "issn_l": "0008-5472",
+    "issn": [
+      "0008-5472",
+      "1538-7445"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320273"
+  },
+  "volume": "85",
+  "issue": "8_Supplement_1",
+  "first_page": "3261",
+  "last_page": "3261",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C2780210213",
+      "display_name": "Pancreatic cancer",
+      "level": 3,
+      "score": 0.6271329
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.58905214
+    },
+    {
+      "id": "C24432333",
+      "display_name": "Whole genome sequencing",
+      "level": 4,
+      "score": 0.5007472
+    },
+    {
+      "id": "C141231307",
+      "display_name": "Genome",
+      "level": 3,
+      "score": 0.4949965
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.4585438
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.45569247
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.3705479
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.36058605
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.34932896
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.29069626
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.1696266
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11287",
+      "display_name": "Cancer Genomics and Diagnostics",
+      "score": 0.9896
+    },
+    {
+      "id": "T10231",
+      "display_name": "Pancreatic and Hepatic Oncology Research",
+      "score": 0.9796
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1158/1538-7445.am2025-3261",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:53:17.850906",
+  "source_database": "OpenAlex"
+}

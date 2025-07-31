@@ -1,0 +1,346 @@
+{
+  "openalex_id": "W4285225959",
+  "doi": "https://doi.org/10.18653/v1/2022.bigscience-1.9",
+  "title": "GPT-NeoX-20B: An Open-Source Autoregressive Language Model",
+  "abstract": "Sidney Black, Stella Biderman, Eric Hallahan, Quentin Anthony, Leo Gao, Laurence Golding, Horace He, Connor Leahy, Kyle McDonell, Jason Phang, Michael Pieler, Usvsn Sai Prashanth, Shivanshu Purohit, Laria Reynolds, Jonathan Tow, Ben Wang, Samuel Weinbach. Proceedings of BigScience Episode #5 -- Workshop on Challenges & Perspectives in Creating Large Language Models. 2022.",
+  "authors": [
+    {
+      "display_name": "Sidney Black",
+      "id": "A5007904723",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sidney Black"
+    },
+    {
+      "display_name": "Stella Biderman",
+      "id": "A5076733732",
+      "orcid": "https://orcid.org/0000-0001-8228-1042",
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stella Biderman"
+    },
+    {
+      "display_name": "Eric Hallahan",
+      "id": "A5046909218",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eric Hallahan"
+    },
+    {
+      "display_name": "Quentin Anthony",
+      "id": "A5015153122",
+      "orcid": "https://orcid.org/0000-0002-6823-9080",
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Quentin Anthony"
+    },
+    {
+      "display_name": "Leo Gao",
+      "id": "A5057062066",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Leo Gao"
+    },
+    {
+      "display_name": "Laurence Golding",
+      "id": "A5000713520",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laurence Golding"
+    },
+    {
+      "display_name": "Horace He",
+      "id": "A5008410925",
+      "orcid": "https://orcid.org/0009-0004-1133-816X",
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Horace He"
+    },
+    {
+      "display_name": "Connor Leahy",
+      "id": "A5060025182",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Connor Leahy"
+    },
+    {
+      "display_name": "Kyle McDonell",
+      "id": "A5016796548",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kyle McDonell"
+    },
+    {
+      "display_name": "Jason Phang",
+      "id": "A5047763717",
+      "orcid": "https://orcid.org/0000-0003-3522-1869",
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jason Phang"
+    },
+    {
+      "display_name": "Michael Pieler",
+      "id": "A5029968236",
+      "orcid": "https://orcid.org/0000-0001-9186-7045",
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Pieler"
+    },
+    {
+      "display_name": "Usvsn Sai Prashanth",
+      "id": "A5006736435",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Usvsn Sai Prashanth"
+    },
+    {
+      "display_name": "Shivanshu Purohit",
+      "id": "A5070613078",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shivanshu Purohit"
+    },
+    {
+      "display_name": "Laria Reynolds",
+      "id": "A5023660419",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laria Reynolds"
+    },
+    {
+      "display_name": "Jonathan Tow",
+      "id": "A5002088849",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan Tow"
+    },
+    {
+      "display_name": "Ben Wang",
+      "id": "A5100341628",
+      "orcid": "https://orcid.org/0000-0001-6484-1253",
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ben Wang"
+    },
+    {
+      "display_name": "Samuel Weinbach",
+      "id": "A5055789969",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210107658",
+          "display_name": "Machine Intelligence Research Labs",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Samuel Weinbach"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-01-01",
+  "type": "article",
+  "cited_by_count": 297,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2022.bigscience-1.9.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2776174103",
+      "display_name": "STELLA (programming language)",
+      "level": 2,
+      "score": 0.7537006
+    },
+    {
+      "id": "C3018397939",
+      "display_name": "Open source",
+      "level": 3,
+      "score": 0.493231
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.41169515
+    },
+    {
+      "id": "C52119013",
+      "display_name": "Art history",
+      "level": 1,
+      "score": 0.3943866
+    },
+    {
+      "id": "C142362112",
+      "display_name": "Art",
+      "level": 0,
+      "score": 0.32742822
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.22172618
+    },
+    {
+      "id": "C2777904410",
+      "display_name": "Software",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9533
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2022.bigscience-1.9",
+  "pdf_url": "https://aclanthology.org/2022.bigscience-1.9.pdf",
+  "retrieved_date": "2025-07-30T15:58:50.554821",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>The unifying REST API for all the OpenCitations Indexes</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&display=swap');
+        @media screen and (max-width: 850px) {
+              aside { display: none; }
+              main, #operations, .dashboard, body>footer {margin-left: 15% !important;}
+              #operations > ul:nth-of-type(1) li { display:block !important; max-width: 100% !important; }
+              h3 a[href] {display:block !important; float: none !important; font-size: 0.5em !important;}
+              a {overflow: hidden; text-overflow: ellipsis;}
+              .info_api, .api_calls {display: block !important; max-width: 100% !important;}
+            }
+
+        * {
+            font-family: 'Karla', Geneva, sans-serif;
+        }
+
+        body {
+          margin: 3% 15% 7% 0px;
+          line-height: 1.5em;
+          letter-spacing: 0.02em;
+          font-size : 1em;
+          font-weight:300;
+          color: #303030;
+          text-align: justify;
+          background-color: #edf0f2;
+        }
+
+        aside {
+            height : 100%;
+            width: 20%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            /*background-color: #404040;*/
+            overflow-x: hidden;
+            background-color: white;
+            box-shadow:0px 10px 30px 0px rgba(133,66,189,0.1);
+        }
+        p strong {
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+        aside h4 {
+            padding: 20px 9%;
+            margin: 0px !important;
+            color: #9931FC;
+            text-align: left !important;
+        }
+
+        .sidebar_menu , .sidebar_submenu {
+            list-style-type: none;
+            padding-left:0px !important;
+            margin-top: 10px;
+
+        }
+
+        .sidebar_menu > li {
+            padding: 2% 0px;
+            border-top : solid 0.7px grey;
+        }
+
+        .sidebar_menu a {
+            padding: 1% 9%;
+            background-image: none !important;
+            color: grey;
+            display: block;
+        }
+
+        .sidebar_menu a:hover {
+            border-left: solid 5px rgba(154, 49, 252,.5);
+            font-weight: 400;
+        }
+
+        .sidebar_submenu > li {
+            padding-left:0px !important;
+            background-color:#edf0f2;
+            font-size: 0.8em;
+        }
+
+        main , #operations , .dashboard, body>footer {
+            margin-left: 33%;
+        }
+        .dashboard {text-align: center;}
+        main h1+p , .info_api{
+
+            padding-left: 3%;
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+
+        main h1+p {border-left: solid 5px rgba(154, 49, 252,.5);}
+
+        #operations h3 {
+            color: #9931FC;
+            margin-bottom: 0px;
+            padding: 10px;
+        }
+
+        #operations > ul:nth-of-type(1) {
+            padding-left: 0px !important;
+            text-align: center;
+        }
+
+        #operations > ul:nth-of-type(1) li {
+            background-color: white;
+            text-align: left;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 35%;
+            height: 200px;
+            padding:4%;
+            margin: 1% 2% 1% 0px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px 0px rgba(133,66,189,0.1);
+            vertical-align:top;
+        }
+
+        #operations > div {
+            background-color: white;
+            margin-top: 20px;
+            padding: 2%;
+            border-radius: 18px;
+            box-shadow: 0px 10px 30px 0px rgba(133,66,189,0.1);
+        }
+
+        #operations > div > * {
+            padding: 0px 2%;
+        }
+
+        #operations > div ul, .params+ul{
+            list-style-type: none;
+            font-size: 0.85em;
+        }
+        #operations > div ul:nth-of-type(1) li, .params+ul li {
+            margin: 10px 0px;
+        }
+
+        #operations > div ul:nth-of-type(1) li em, .params+ul li em {
+            font-style: normal;
+            font-weight: 400;
+            color: #9931FC;
+            border-left: solid 2px #9931FC;
+            padding:5px;
+        }
+
+        .attr {
+            border-top: solid 1px rgba(133,66,189,0.1);
+            padding: 2% !important;
+            display:block;
+            vertical-align: top;
+            font-size: 0.8em;
+            text-align: left;
+        }
+
+        .attr strong {
+            width: 30%;
+            color: grey;
+            font-weight: 400;
+            font-style: normal;
+            display:inline-block;
+            vertical-align: top;
+        }
+
+        .attr_val {
+            max-width: 50%;
+            display:inline-table;
+            height: 100%;
+            vertical-align: top;
+        }
+
+        .method {
+            text-transform: uppercase;
+        }
+
+        .params {
+            margin-bottom: 0;
+        }
+
+        pre {
+            background-color: #f0f0f5;
+            padding: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+            border-radius: 0 0 14px 14px;
+            font-family: monospace !important;
+            overflow: scroll;
+            line-height: 1.2em;
+            height: 250px;
+        }
+
+        pre code {
+            font-family: monospace !important;
+        }
+
+        p.ex {
+            background-color: #f0f0f5;
+            margin-bottom: 0px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        h2:first-of-type {
+            margin-bottom: 15px;
+        }
+
+        ol:first-of-type {
+            margin-top: 0;
+        }
+
+        :not(pre) > code {
+            background-color:  #f0f0f5;
+            color: #8585ad;
+            padding: 0 2px 0 2px;
+            border-radius: 3px;
+            font-family : monospace;
+            font-size: 1.2em !important;
+        }
+
+        /**:not(div) > p {
+            margin-left: 1.2%;
+        }*/
+
+        h1 {font-size: 2.5em;}
+        h1, h2 {
+            text-transform: uppercase;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2em;
+            padding-top:1em;
+            text-align: left !important;
+            font-weight:400;
+        }
+
+        h2 ~ h2, section > h2 {
+
+            padding-top: 5px;
+            margin-top: 40px;
+        }
+
+        h2 a[href], h3 a[href] {
+            background-image: none;
+            text-transform:uppercase;
+            padding: 1px 3px 1px 3px;
+            font-size: 12pt;
+            float: right;
+            position:relative;
+            top: -3px;
+        }
+
+        h2 a[href]::before , h3 a[href]::before {
+            content: " ↑";
+            width: 20px;
+            height: 20px;
+            display:inline-block;
+            color: #9931FC;
+            text-align:center;
+            margin-right: 10px;
+        }
+
+        /*h3 a[href] {
+            color:white
+            background-image: none;
+            text-transform:uppercase;
+            padding: 1px 3px 1px 3px;
+            font-size: 8pt !important;
+            border: 1px solid #9931FC;
+            float: right;
+            position:relative;
+            top: -11px;
+            right: -11px;
+            border-radius: 0 14px 0 0;
+        }*/
+
+        p {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        a {
+            color : black;
+            text-decoration: none;
+            background-image: -webkit-gradient(linear,left top, left bottom,color-stop(50%, transparent),color-stop(0, rgba(154, 49, 252,.5)));
+            background-image: linear-gradient(180deg,transparent 50%,rgba(154, 49, 252,.5) 0);
+            background-position-y: 3px;
+            background-position-x: 0px;
+            background-repeat: no-repeat;
+            -webkit-transition: .15s ease;
+            transition: .15s ease;
+        }
+
+        a:hover {
+            color: #282828;
+            background-position: top 6px right 0px;
+            background-image: -webkit-gradient(linear,left top, left bottom,color-stop(60%, transparent),color-stop(0, #9931FC));
+            background-image: linear-gradient(180deg,transparent 60%,#9931FC 0);
+        }
+
+        footer {
+            margin-top: 20px;
+            border-top: 1px solid lightgrey;
+            text-align: center;
+            color: grey;
+            font-size: 9pt;
+        }
+        /* dashboard */
+
+        .info_api {
+            max-width: 35%;
+            border-radius: 15px;
+            text-align: left;
+            vertical-align: top;
+            background-color: #9931FC;
+            color: white;
+        }
+
+        .info_api, .api_calls {
+            display: inline-block;
+            text-align: left;
+            height: 200px;
+            padding:4%;
+            margin: 1% 2% 1% 0px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px 0px rgba(133,66,189,0.1);
+            vertical-align:top;
+        }
+
+        .api_calls {
+            max-width: 40%;
+            background-color: white;
+            scroll-behavior: smooth;
+            overflow: auto;
+            overflow-y: scroll;
+            scrollbar-color: #9931FC rgb(154, 49, 252);
+            border-radius: 10px;
+        }
+        .api_calls div {padding-bottom:2%;}
+
+        .api_calls:hover {
+          overflow-y: scroll;
+        }
+        .api_calls h4, .info_api h2 {padding-top: 0px !important; margin-top: 0px !important;}
+        .api_calls div p {
+          padding: 0.2em 0.5em;
+          border-top: solid 1px #F8F8F8;
+          }
+        }
+
+        .date_log , .method_log {
+          color: grey;
+          font-size: 0.8em;
+
+        }
+        .method_log {margin-left: 15px;}
+        .date_log {display:inline-grid;}
+
+        .group_log:nth-child(odd) {
+          margin-right:5px;
+          font-size: 0.9em;
+        }
+
+        .group_log:nth-child(even) {
+          display: inline-grid;
+          vertical-align: top;
+        }
+        .status_log {padding-right:15px;}
+        .status_log::before {
+          content: '';
+           display: inline-block;
+           width: 1em;
+           height: 1em;
+           vertical-align: middle;
+           -moz-border-radius: 50%;
+           -webkit-border-radius: 50%;
+           border-radius: 50%;
+           background-color: grey;
+           margin-right: 0.8em;
+        }
+
+        .code_200::before {
+          background-color: #00cc00;
+        }
+
+        .code_404::before {
+          background-color: #cccc00;
+        }
+
+        .code_500::before {
+          background-color: #cc0000;
+        }
+
+        </style>
+        
+    </head>
+    <body>
+        <aside>
+
+        <h4>The unifying REST API for all the OpenCitations Indexes</h4>
+        <ul id="sidebar_menu" class="sidebar_menu">
+            <li><a class="btn active" href="#description">DESCRIPTION</a></li>
+            <li><a class="btn" href="#parameters">PARAMETERS</a></li>
+            <li><a class="btn" href="#operations">OPERATIONS</a>
+                <ul class="sidebar_submenu"><li><a class='btn' href='#/citation/{oci}'>/citation/{oci}</a></li><li><a class='btn' href='#/citation-count/{doi}'>/citation-count/{doi}</a></li><li><a class='btn' href='#/reference-count/{doi}'>/reference-count/{doi}</a></li><li><a class='btn' href='#/metadata/{dois}'>/metadata/{dois}</a></li><li><a class='btn' href='#/citations/{doi}'>/citations/{doi}</a></li><li><a class='btn' href='#/references/{doi}'>/references/{doi}</a></li></ul>
+            </li>
+            <li><a class="btn active" href="/">HOME</a></li>
+        </ul>
+        </aside>
+        <main><p><a id='toc'></a></p>
+<h1>The unifying REST API for all the OpenCitations Indexes</h1>
+<p><strong>Version:</strong> Version 1.2.0 (2023-11-06) <br/>
+<strong>API URL:</strong> <a href="https://api.opencitations.net/index/v1">https://api.opencitations.net/index/v1</a><br/>
+<strong>Contact:</strong> <a href="mailto:contact@opencitations.net">contact@opencitations.net</a><br/>
+<strong>License:</strong> This document is licensed with a <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International License</a>, while the REST API itself has been created using <a href="https://github.com/opencitations/ramose">RAMOSE</a>, the <em>Restful API Manager Over SPARQL Endpoints</em> created by <a href="https://orcid.org/0000-0003-0530-4305">Silvio Peroni</a>, which is licensed with an <a href="https://opensource.org/licenses/ISC">ISC license</a>.<br/></p>
+<h2><a id="description"></a>Description <a href="#toc">back to top</a></h2>
+<p>This document describe the REST API for accessing the data stored in all the <a href="https://w3id.org/oc/index">OpenCitations Indexes</a> hosted by <a href="http://opencitations.net">OpenCitations</a>. This API implements operations to retrieve the citation data for all the references to other works appearing in a particular bibliographic entity, or the citation data for all the references appearing in other works to a particular bibliographic entity, given the DOI of a bibliographic entity, or to retrieve citation data about a particular citation identified by means of its <a href="https://opencitations.wordpress.com/2018/03/12/citations-as-first-class-data-entities-open-citation-identifiers/">Open Citation Identifier (OCI)</a>.</p>
+<p>All the present operations return either a JSON document (default) or a CSV document according to the mimetype specified in the <code>Accept</code> header of the request. If you would like to suggest an additional operation to be included in this API, please use the <a href="https://github.com/opencitations/api/issues">issue tracker</a> of the OpenCitations APIs available on GitHub.</p>
+<p>If you are going to use the REST APIs within an application/code, we encourage you to get the <a href="https://opencitations.net/accesstoken">OpenCitations Access Token</a> and specify it in the "authorization" header of your REST API call. Here is a usage example in Python:</p>
+<pre style="height: 150px"><code>
+from requests import get
+
+API_CALL = "https://api.opencitations.net/index/v1/references/10.1186/1756-8722-6-59"
+HTTP_HEADERS = {"authorization": "YOUR-OPENCITATIONS-ACCESS-TOKEN"}
+
+get(API_CALL, headers=HTTP_HEADERS)
+</code></pre>
+
+<p style="color: #CC0000"><strong>Note:</strong> we use certain legacy APIs for historical and compatibility reasons. While we encourage the use of our latest and more efficient <a href="https://api.opencitations.net/index/v2">V2 APIs</a>, we understand that some applications may still rely on these older endpoints. Please note that legacy APIs may not receive updates or support, and their use may be phased out in the future. We recommend transitioning to our current <a href="https://api.opencitations.net/index/v2">V2 APIs</a> for improved performance, security, and reliability.</p>
+
+<h2><a id="parameters"></a>Parameters <a href="#toc">back to top</a></h2>
+<p>Parameters can be used to filter and control the results returned by the API. They are passed as normal HTTP parameters in the URL of the call. They are:</p>
+<ol>
+<li>
+<p><code>require=&lt;field_name&gt;</code>: all the rows that have an empty value in the <code>&lt;field_name&gt;</code> specified are removed from the result set - e.g. <code>require=given_name</code> removes all the rows that do not have any string specified in the <code>given_name</code> field.</p>
+</li>
+<li>
+<p><code>filter=&lt;field_name&gt;:&lt;operator&gt;&lt;value&gt;</code>: only the rows compliant with <code>&lt;value&gt;</code> are kept in the result set. The parameter <code>&lt;operation&gt;</code> is not mandatory. If <code>&lt;operation&gt;</code> is not specified, <code>&lt;value&gt;</code> is interpreted as a regular expression, otherwise it is compared by means of the specified operation. Possible operators are "=", "&lt;", and "&gt;". For instance, <code>filter=title:semantics?</code> returns all the rows that contain the string "semantic" or "semantics" in the field <code>title</code>, while <code>filter=date:&gt;2016-05</code> returns all the rows that have a <code>date</code> greater than May 2016.</p>
+</li>
+<li>
+<p><code>sort=&lt;order&gt;(&lt;field_name&gt;)</code>: sort in ascending (<code>&lt;order&gt;</code> set to "asc") or descending (<code>&lt;order&gt;</code> set to "desc") order the rows in the result set according to the values in <code>&lt;field_name&gt;</code>. For instance, <code>sort=desc(date)</code> sorts all the rows according to the value specified in the field <code>date</code> in descending order.</p>
+</li>
+<li>
+<p><code>format=&lt;format_type&gt;</code>: the final table is returned in the format specified in <code>&lt;format_type&gt;</code> that can be either "csv" or "json" - e.g. <code>format=csv</code> returns the final table in CSV format. This parameter has higher priority of the type specified through the "Accept" header of the request. Thus, if the header of a request to the API specifies <code>Accept: text/csv</code> and the URL of such request includes <code>format=json</code>, the final table is returned in JSON.</p>
+</li>
+<li>
+<p><code>json=&lt;operation_type&gt;("&lt;separator&gt;",&lt;field&gt;,&lt;new_field_1&gt;,&lt;new_field_2&gt;,...)</code>: in case a JSON format is requested in return, tranform each row of the final JSON table according to the rule specified. If <code>&lt;operation_type&gt;</code> is set to "array", the string value associated to the field name <code>&lt;field&gt;</code> is converted into an array by splitting the various textual parts by means of <code>&lt;separator&gt;</code>. For instance, considering the JSON table <code>[ { "names": "Doe, John; Doe, Jane" }, ... ]</code>, the execution of <code>array("; ",names)</code> returns <code>[ { "names": [ "Doe, John", "Doe, Jane" ], ... ]</code>. Instead, if <code>&lt;operation_type&gt;</code> is set to "dict", the string value associated to the field name <code>&lt;field&gt;</code> is converted into a dictionary by splitting the various textual parts by means of <code>&lt;separator&gt;</code> and by associating the new fields <code>&lt;new_field_1&gt;</code>, <code>&lt;new_field_2&gt;</code>, etc., to these new parts. For instance, considering the JSON table <code>[ { "name": "Doe, John" }, ... ]</code>, the execution of <code>dict(", ",name,fname,gname)</code> returns <code>[ { "name": { "fname": "Doe", "gname": "John" }, ... ]</code>.</p>
+</li>
+</ol>
+<p>It is possible to specify one or more filtering operation of the same kind (e.g. <code>require=given_name&amp;require=family_name</code>). In addition, these filtering operations are applied in the order presented above - first all the <code>require</code> operation, then all the <code>filter</code> operations followed by all the <code>sort</code> operation, and finally the <code>format</code> and the <code>json</code> operation (if applicable). It is worth mentioning that each of the aforementioned rules is applied in order, and it works on the structure returned after the execution of the previous rule.</p>
+<p>Example: <code>&lt;api_operation_url&gt;?require=doi&amp;filter=date:&gt;2015&amp;sort=desc(date)</code>.</p></main>
+        <section id="operations"><h2>Operations <a href="#toc">back to top</a></h2>
+<p>The operations that this API implements are:</p>
+<ul>
+<li><a href="#/citation/{oci}">/citation/{oci}</a>: This operation retrieves the citation metadata for the citation identified by the input Open Citation Identifier (OCI).</li>
+<li><a href="#/citation-count/{doi}">/citation-count/{doi}</a>: This operation retrieves the number of incoming citations to the bibliographic entity identified by the input DOI.</li>
+<li><a href="#/reference-count/{doi}">/reference-count/{doi}</a>: This operation retrieves the number of outgoing citations from the bibliographic entity identified by the input DOI.</li>
+<li><a href="#/metadata/{dois}">/metadata/{dois}</a>: This operation retrieves the bibliographic metadata for each of the bibliographic entities identified by one or more input DOIs.</li>
+<li><a href="#/citations/{doi}">/citations/{doi}</a>: This operation retrieves the citation data for all the references appearing in the reference lists of other citing works to the bibliographic entity identified by the input DOI, that constitute the incoming citations of that identified bibliographic entity.</li>
+<li><a href="#/references/{doi}">/references/{doi}</a>: This operation retrieves the citation data for all the outgoing references to other cited works appearing in the reference list of the bibliographic entity identified by the input DOI.</li>
+</ul>
+<div id="/citation/{oci}">
+<h3>/citation/{oci} <a href="#operations">back to operations</a></h3>
+
+<p>This operation retrieves the citation metadata for the citation identified by the input Open Citation Identifier (OCI).</p>
+<p>The Open Citation Identifier is a globally unique persistent identifier for bibliographic citations, which has a simple structure: the lower-case letters "oci" followed by a colon, followed by two numbers separated by a dash. For example, <code>oci:1-18</code> is a valid OCI.</p>
+<p>It is worth mentioning that, in this REST operation, the prefix "oci:" <strong>should not</strong> be specified, and only the dash-separated numbers of the OCI should be provided, as shown in the example below.</p>
+<p>The fields returned by this operation are:</p>
+<ul>
+<li><em>oci</em>: the Open Citation Identifier (OCI) of the citation in consideration;</li>
+<li><em>citing</em>: the DOI of the citing entity;</li>
+<li><em>cited</em>: the DOI of the cited entity;</li>
+<li><em>creation</em>: the creation date of the citation according to the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO date format</a> <code>YYYY-MM-DD</code>, which corresponds to the publication date of the citing entity;</li>
+<li><em>timespan</em>: the interval between the publication date of the cited entity and the publication date of the citing entity, expressed using the <a href="https://www.w3.org/TR/xmlschema11-2/#duration">XSD duration format</a> <code>PnYnMnD</code>;</li>
+<li><em>journal_sc</em>: it records whether the citation is a journal self-citations (i.e. the citing and the cited entities are published in the same journal);</li>
+<li><em>author_sc</em>: it records whether the citation is an author self-citation (i.e. the citing and the cited entities have at least one author in common).</li>
+</ul>
+<p>The values of all the fields are prefixed with <code>[index name] =&gt;</code>, so as to cleary identify from where the related data is coming, and can contain one or more information, separated by <code>;</code>. This is particularly useful when a citation is actually contained in two or more OpenCitations Indexes. In this case, only one row will be returned, and the prefix used in the various data allows one to understand the source Index of such data.</p>
+
+<p class="attr"><strong>Accepted HTTP method(s)</strong> <span class="attr_val method">get</span></p>
+<p class="attr params"><strong>Parameter(s)</strong> <span class="attr_val"><em>oci</em>: type <em>str</em>, regular expression shape <code>[0-9]+-[0-9]+</code></span></p>
+<p class="attr"><strong>Result fields type</strong><span class="attr_val">oci <em>(str)</em>, citing <em>(str)</em>, cited <em>(str)</em></span></p>
+<p class="attr"><strong>Example</strong><span class="attr_val"><a target="_blank" href="https://api.opencitations.net/index/v1/citation/06101801781-06180334099">/citation/06101801781-06180334099</a></span></p>
+<p class="ex attr"><strong>Exemplar output (in JSON)</strong></p>
+<pre><code>[
+    {
+        "oci": "06101801781-06180334099",
+        "citing": "10.7717/peerj-cs.421",
+        "cited": "10.1108/jd-12-2013-0166",
+        "creation": "2021-03-10",
+        "timespan": "P6Y0M1D",
+        "journal_sc": "no",
+        "author_sc": "no"
+    }
+]</code></pre></div><div id="/citation-count/{doi}">
+<h3>/citation-count/{doi} <a href="#operations">back to operations</a></h3>
+
+<p>This operation retrieves the number of incoming citations to the bibliographic entity identified by the input DOI.</p>
+<p>The field returned by this operation is:</p>
+<ul>
+<li><em>count</em>: the number of incoming citations to the input bibliographic entity.</li>
+</ul>
+
+<p class="attr"><strong>Accepted HTTP method(s)</strong> <span class="attr_val method">get</span></p>
+<p class="attr params"><strong>Parameter(s)</strong> <span class="attr_val"><em>doi</em>: type <em>str</em>, regular expression shape <code>10\..+</code></span></p>
+<p class="attr"><strong>Result fields type</strong><span class="attr_val">count <em>(int)</em></span></p>
+<p class="attr"><strong>Example</strong><span class="attr_val"><a target="_blank" href="https://api.opencitations.net/index/v1/citation-count/10.1142/9789812701527_0009">/citation-count/10.1142/9789812701527_0009</a></span></p>
+<p class="ex attr"><strong>Exemplar output (in JSON)</strong></p>
+<pre><code>[
+    {
+        "count": "32"
+    }
+]</code></pre></div><div id="/reference-count/{doi}">
+<h3>/reference-count/{doi} <a href="#operations">back to operations</a></h3>
+
+<p>This operation retrieves the number of outgoing citations from the bibliographic entity identified by the input DOI.</p>
+<p>The field returned by this operation is:</p>
+<ul>
+<li><em>count</em>: the number of outgoing citations from the input bibliographic entity.</li>
+</ul>
+
+<p class="attr"><strong>Accepted HTTP method(s)</strong> <span class="attr_val method">get</span></p>
+<p class="attr params"><strong>Parameter(s)</strong> <span class="attr_val"><em>doi</em>: type <em>str</em>, regular expression shape <code>10\..+</code></span></p>
+<p class="attr"><strong>Result fields type</strong><span class="attr_val">count <em>(int)</em></span></p>
+<p class="attr"><strong>Example</strong><span class="attr_val"><a target="_blank" href="https://api.opencitations.net/index/v1/reference-count/10.1186/1756-8722-6-59">/reference-count/10.1186/1756-8722-6-59</a></span></p>
+<p class="ex attr"><strong>Exemplar output (in JSON)</strong></p>
+<pre><code>[
+    {
+        "count": "75"
+    }
+]</code></pre></div><div id="/metadata/{dois}">
+<h3>/metadata/{dois} <a href="#operations">back to operations</a></h3>
+
+<p>This operation retrieves the bibliographic metadata for each of the bibliographic entities identified by one or more input DOIs.</p>
+<p>It is possible to specify one or more DOIs as input of this operation. In this case, the DOI should be separated with a double underscore ("__") – e.g. "10.1108/jd-12-2013-0166__10.1016/j.websem.2012.08.001__...". The fields returned by this operation are:</p>
+<ul>
+<li><em>author</em>: the semicolon-separated list of authors of the bibliographic entity;</li>
+<li><em>year</em>: the year of publication of the bibliographic entity;</li>
+<li><em>title</em>: the title of the bibliographic entity;</li>
+<li><em>source_title</em>: the title of the venue where the bibliographic entity has been published;</li>
+<li><em>source_id</em>: the semicolon-separated list of identifiers referring to the source where the bibliographic entity has been published;</li>
+<li><em>volume</em>: the number of the volume in which the bibliographic entity has been published;</li>
+<li><em>issue</em>: the number of the issue in which the bibliographic entity has been published;</li>
+<li><em>page</em>: the starting and ending pages of the bibliographic entity in the context of the venue where it has been published;</li>
+<li><em>doi</em>: the DOI of the bibliographic entity;</li>
+<li><em>reference</em>: the semicolon-separated DOIs of all the entities cited by the bibliographic entity, according to the citation data available in all the OpenCitations Indexes;</li>
+<li><em>citation</em>: the semicolon-separated DOIs of all the entities that cite the bibliographic entity, according to the citation data available in all the OpenCitations Indexes;</li>
+<li><em>citation_count</em>: the number of citations received by the bibliographic entity;</li>
+<li><em>oa_link</em>: the link to the Open Access version of the bibliographic entity, if available.</li>
+</ul>
+<p>Note: this operation gathers all the metadata dynamically upon request from OpenCitations Meta.</p>
+
+<p class="attr"><strong>Accepted HTTP method(s)</strong> <span class="attr_val method">get</span></p>
+<p class="attr params"><strong>Parameter(s)</strong> <span class="attr_val"><em>dois</em>: type <em>str</em>, regular expression shape <code>\"?10\..+[^_\"]((__|\" \")10\..+[^_])*\"?</code></span></p>
+<p class="attr"><strong>Result fields type</strong><span class="attr_val">author <em>(str)</em>, year <em>(datetime)</em>, title <em>(str)</em>, source_title <em>(str)</em>, source_id <em>(str)</em>, volume <em>(str)</em>, issue <em>(str)</em>, page <em>(str)</em>, doi <em>(str)</em>, reference <em>(str)</em>, citation <em>(str)</em>, citation_count <em>(int)</em>, oa_link <em>(str)</em></span></p>
+<p class="attr"><strong>Example</strong><span class="attr_val"><a target="_blank" href="https://api.opencitations.net/index/v1/metadata/10.1007/s11192-019-03217-6">/metadata/10.1007/s11192-019-03217-6</a></span></p>
+<p class="ex attr"><strong>Exemplar output (in JSON)</strong></p>
+<pre><code>[
+    {
+        "doi": "10.1007/s11192-019-03217-6",
+        "citation_count": "43",
+        "citation": "10.1371/journal.pone.0270872; 10.1007/s11192-022-04581-6; ; ; 10.1007/978-3-030-96957-8_9; 10.2964/jsik_2020_003; 10.1093/reseval/rvac037; 10.1007/978-3-030-62466-8_28; 10.3897/rio.7.e66264; 10.1186/s12916-022-02644-2; 10.1093/gigascience/giab003; 10.3989/arbor.2021.799007; 10.1145/3540250.3549172; 10.1162/qss_a_00112; 10.1162/qss_a_00023; ; 10.1007/s11192-019-03311-9; ; ; ; ; ; 10.1007/978-3-031-06981-9_18; ; ; 10.1145/3383583.3398584; 10.1162/qss_a_00203; 10.1111/cts.13067; ; 10.5712/rbmfc15(42)2671; 10.1145/3529372.3530953; ; 10.7717/peerj-cs.421; 10.1016/b978-0-12-823723-6.00001-x; 10.3233/sw-210439; 10.3145/thinkepi.2021.e15e04; ; 10.1093/llc/fqac016; 10.1007/s11192-022-04367-w; 10.1007/s11192-021-04191-8; 10.1007/s11192-021-04097-5; 10.1007/s11192-020-03690-4; 10.7717/peerj.13712",
+        "reference": "10.6084/m9.figshare.7873559; 10.3233/sw-150197; 10.4103/0976-500x.85940; ; 10.1007/978-3-319-17966-7_10; 10.1007/s11192-009-0146-3; 10.1007/978-3-030-00668-6_8; 10.1007/978-3-319-53637-8_6; 10.6084/m9.figshare.7127816; 10.1016/j.websem.2012.08.001; 10.1007/978-3-319-11955-7_42; 10.1007/978-3-319-11964-9_4; 10.6084/m9.figshare.3443876; 10.1007/978-3-319-68204-4_19; 10.1007/978-3-319-46547-0_16; 10.7717/peerj.4201; 10.3233/ds-190016; 10.1038/nature.2017.21800; 10.1038/sdata.2016.18; 10.6084/m9.figshare.6683855",
+        "author": "Heibi, Ivan, 0000-0001-5366-5194; Peroni, Silvio, 0000-0003-0530-4305; Shotton, D M, 0000-0001-5506-523",
+        "year": "2019-09-14",
+        "title": "Software Review: COCI, The OpenCitations Index Of Crossref Open DOI-to-DOI Citations",
+        "source_title": "Scientometrics",
+        "volume": "121",
+        "issue": "2",
+        "page": "1213-1228",
+        "source_id": "issn:1588-2861",
+        "oa_link": ""
+    }
+]</code></pre></div><div id="/citations/{doi}">
+<h3>/citations/{doi} <a href="#operations">back to operations</a></h3>
+
+<p>This operation retrieves the citation data for all the references appearing in the reference lists of other citing works to the bibliographic entity identified by the input DOI, that constitute the incoming citations of that identified bibliographic entity.</p>
+<p>The fields returned by this operation are:</p>
+<ul>
+<li><em>oci</em>: the Open Citation Identifier (OCI) of the citation in consideration;</li>
+<li><em>citing</em>: the DOI of the citing entity;</li>
+<li><em>cited</em>: the DOI of the cited entity;</li>
+<li><em>creation</em>: the creation date of the citation according to the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO date format</a> <code>YYYY-MM-DD</code>, which corresponds to the publication date of the citing entity;</li>
+<li><em>timespan</em>: the interval between the publication date of the cited entity and the publication date of the citing entity, expressed using the <a href="https://www.w3.org/TR/xmlschema11-2/#duration">XSD duration format</a> <code>PnYnMnD</code>;</li>
+<li><em>journal_sc</em>: it records whether the citation is a journal self-citations (i.e. the citing and the cited entities are published in the same journal);</li>
+<li><em>author_sc</em>: it records whether the citation is an author self-citation (i.e. the citing and the cited entities have at least one author in common).</li>
+</ul>
+<p>The values of all the fields are prefixed with <code>[index name] =&gt;</code>, so as to cleary identify from where the related data is coming, and can contain one or more information, separated by <code>;</code>. This is particularly useful when a citation is actually contained in two or more OpenCitations Indexes. In this case, only one row will be returned, and the prefix used in the various data allows one to understand the source Index of such data.</p>
+
+<p class="attr"><strong>Accepted HTTP method(s)</strong> <span class="attr_val method">get</span></p>
+<p class="attr params"><strong>Parameter(s)</strong> <span class="attr_val"><em>doi</em>: type <em>str</em>, regular expression shape <code>10\..+</code></span></p>
+<p class="attr"><strong>Result fields type</strong><span class="attr_val">oci <em>(str)</em>, citing <em>(str)</em>, cited <em>(str)</em>, creation <em>(datetime)</em>, timespan <em>(duration)</em>, ?journal_sc <em>(str)</em>, ?author_sc <em>(str)</em></span></p>
+<p class="attr"><strong>Example</strong><span class="attr_val"><a target="_blank" href="https://api.opencitations.net/index/v1/citations/10.1186/1756-8722-6-59">/citations/10.1186/1756-8722-6-59</a></span></p>
+<p class="ex attr"><strong>Exemplar output (in JSON)</strong></p>
+<pre><code>[
+    {
+        "oci": "06101440095-06190834283",
+        "citing": "10.3390/molecules25092135",
+        "cited": "10.1186/1756-8722-6-59",
+        "creation": "2020-05-02",
+        "timespan": "P6Y8M13D",
+        "journal_sc": "no",
+        "author_sc": "no"
+    },
+    {
+        "oci": "06101524605-06190834283",
+        "citing": "10.1016/j.clim.2016.01.012",
+        "cited": "10.1186/1756-8722-6-59",
+        "creation": "2016-03",
+        "timespan": "P2Y6M",
+        "journal_sc": "no",
+        "author_sc": "no"
+    },
+    {
+        "oci": "06101763144-06190834283",
+        "citing": "10.3390/pharmaceutics13081222",
+        "cited": "10.1186/1756-8722-6-59",
+        "creation": "2021-08-07",
+        "timespan": "P7Y11M19D",
+        "journal_sc": "no",
+        "author_sc": "no"
+    },
+    ...
+]</code></pre></div><div id="/references/{doi}">
+<h3>/references/{doi} <a href="#operations">back to operations</a></h3>
+
+<p>This operation retrieves the citation data for all the outgoing references to other cited works appearing in the reference list of the bibliographic entity identified by the input DOI.</p>
+<p>The fields returned by this operation are:</p>
+<ul>
+<li><em>oci</em>: the Open Citation Identifier (OCI) of the citation in consideration;</li>
+<li><em>citing</em>: the DOI of the citing entity;</li>
+<li><em>cited</em>: the DOI of the cited entity;</li>
+<li><em>creation</em>: the creation date of the citation according to the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO date format</a> <code>YYYY-MM-DD</code>, which corresponds to the publication date of the citing entity;</li>
+<li><em>timespan</em>: the interval between the publication date of the cited entity and the publication date of the citing entity, expressed using the <a href="https://www.w3.org/TR/xmlschema11-2/#duration">XSD duration format</a> <code>PnYnMnD</code>;</li>
+<li><em>journal_sc</em>: it records whether the citation is a journal self-citations (i.e. the citing and the cited entities are published in the same journal);</li>
+<li><em>author_sc</em>: it records whether the citation is an author self-citation (i.e. the citing and the cited entities have at least one author in common).</li>
+</ul>
+<p>The values of all the fields are prefixed with <code>[index name] =&gt;</code>, so as to cleary identify from where the related data is coming, and can contain one or more information, separated by <code>;</code>. This is particularly useful when a citation is actually contained in two or more OpenCitations Indexes. In this case, only one row will be returned, and the prefix used in the various data allows one to understand the source Index of such data.</p>
+
+<p class="attr"><strong>Accepted HTTP method(s)</strong> <span class="attr_val method">get</span></p>
+<p class="attr params"><strong>Parameter(s)</strong> <span class="attr_val"><em>doi</em>: type <em>str</em>, regular expression shape <code>10\..+</code></span></p>
+<p class="attr"><strong>Result fields type</strong><span class="attr_val">oci <em>(str)</em>, citing <em>(str)</em>, cited <em>(str)</em>, creation <em>(datetime)</em>, timespan <em>(duration)</em>, ?journal_sc <em>(str)</em>, ?author_sc <em>(str)</em></span></p>
+<p class="attr"><strong>Example</strong><span class="attr_val"><a target="_blank" href="https://api.opencitations.net/index/v1/references/10.1186/1756-8722-6-59">/references/10.1186/1756-8722-6-59</a></span></p>
+<p class="ex attr"><strong>Exemplar output (in JSON)</strong></p>
+<pre><code>[
+      {
+          "oci": "06190834283-06101389277",
+          "citing": "10.1186/1756-8722-6-59",
+          "cited": "10.1124/dmd.111.040840",
+          "creation": "2013-08-19",
+          "timespan": "P2Y1M11D",
+          "journal_sc": "no",
+          "author_sc": "no"
+      },
+      {
+          "oci": "06190834283-06102258727",
+          "citing": "10.1186/1756-8722-6-59",
+          "cited": "10.1093/hmg/3.10.1743",
+          "creation": "2013-08-19",
+          "timespan": "P19Y",
+          "journal_sc": "no",
+          "author_sc": "no"
+      },
+      {
+          "oci": "06190834283-06103522789",
+          "citing": "10.1186/1756-8722-6-59",
+          "cited": "10.3109/08830185.2012.664797",
+          "creation": "2013-08-19",
+          "timespan": "P1Y4M29D",
+          "journal_sc": "no",
+          "author_sc": "no"
+      },
+      ...
+]</code></pre></div></section>
+        <footer><p>This API and the related documentation has been created with <a href="https://github.com/opencitations/ramose" target="_blank">RAMOSE</a>, the <em>Restful API Manager Over SPARQL Endpoints</em>, developed by <a href="http://orcid.org/0000-0003-0530-4305" target="_blank">Silvio Peroni</a> and <a href="https://marilenadaquino.github.io">Marilena Daquino</a>.</p></footer>
+    </body>
+</html>

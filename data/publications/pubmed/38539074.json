@@ -1,0 +1,148 @@
+{
+  "pmid": "38539074",
+  "uid": "38539074",
+  "title": "Evaluating methods for risk prediction of Covid-19 mortality in nursing home residents before and after vaccine availability: a retrospective cohort study.",
+  "abstract": "BACKGROUND: SARS-CoV-2 vaccines are effective in reducing hospitalization, COVID-19 symptoms, and COVID-19 mortality for nursing home (NH) residents. We sought to compare the accuracy of various machine learning models, examine changes to model performance, and identify resident characteristics that have the strongest associations with 30-day COVID-19 mortality, before and after vaccine availability. METHODS: We conducted a population-based retrospective cohort study analyzing data from all NH facilities across Ontario, Canada. We included all residents diagnosed with SARS-CoV-2 and living in NHs between March 2020 and July 2021. We employed five machine learning algorithms to predict COVID-19 mortality, including logistic regression, LASSO regression, classification and regression trees (CART), random forests, and gradient boosted trees. The discriminative performance of the models was evaluated using the area under the receiver operating characteristic curve (AUC) for each model using 10-fold cross-validation. Model calibration was determined through evaluation of calibration slopes. Variable importance was calculated by repeatedly and randomly permutating the values of each predictor in the dataset and re-evaluating the model's performance. RESULTS: A total of 14,977 NH residents and 20 resident characteristics were included in the model. The cross-validated AUCs were similar across algorithms and ranged from 0.64 to 0.67. Gradient boosted trees and logistic regression had an AUC of 0.67 pre- and post-vaccine availability. CART had the lowest discrimination ability with an AUC of 0.64 pre-vaccine availability, and 0.65 post-vaccine availability. The most influential resident characteristics, irrespective of vaccine availability, included advanced age (≥ 75 years), health instability, functional and cognitive status, sex (male), and polypharmacy. CONCLUSIONS: The predictive accuracy and discrimination exhibited by all five examined machine learning algorithms were similar. Both logistic regression and gradient boosted trees exhibit comparable performance and display slight superiority over other machine learning algorithms. We observed consistent model performance both before and after vaccine availability. The influence of resident characteristics on COVID-19 mortality remained consistent across time periods, suggesting that changes to pre-vaccination screening practices for high-risk individuals are effective in the post-vaccination era.",
+  "authors": [
+    {
+      "last_name": "Aryal",
+      "fore_name": "Komal",
+      "initials": "K",
+      "name": "Komal Aryal",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, 1280 Main St W, Hamilton, ON, L8S 4L8, Canada. aryalk@mcmaster.ca.",
+        "ICES, Hamilton, ON, Canada. aryalk@mcmaster.ca."
+      ]
+    },
+    {
+      "last_name": "Mowbray",
+      "fore_name": "Fabrice I",
+      "initials": "FI",
+      "name": "Fabrice I Mowbray",
+      "affiliations": [
+        "College of Nursing, Michigan State University, East Lansing, MI, USA."
+      ]
+    },
+    {
+      "last_name": "Miroshnychenko",
+      "fore_name": "Anna",
+      "initials": "A",
+      "name": "Anna Miroshnychenko",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, 1280 Main St W, Hamilton, ON, L8S 4L8, Canada."
+      ]
+    },
+    {
+      "last_name": "Strum",
+      "fore_name": "Ryan P",
+      "initials": "RP",
+      "name": "Ryan P Strum",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, 1280 Main St W, Hamilton, ON, L8S 4L8, Canada."
+      ]
+    },
+    {
+      "last_name": "Dash",
+      "fore_name": "Darly",
+      "initials": "D",
+      "name": "Darly Dash",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, 1280 Main St W, Hamilton, ON, L8S 4L8, Canada."
+      ]
+    },
+    {
+      "last_name": "Hillmer",
+      "fore_name": "Michael P",
+      "initials": "MP",
+      "name": "Michael P Hillmer",
+      "affiliations": [
+        "Institute of Health Policy, Management and Evaluation, University of Toronto, Toronto, Canada.",
+        "Capacity Planning and Analytics, Ontario Ministry of Health, Toronto, Canada."
+      ]
+    },
+    {
+      "last_name": "Malikov",
+      "fore_name": "Kamil",
+      "initials": "K",
+      "name": "Kamil Malikov",
+      "affiliations": [
+        "Capacity Planning and Analytics, Ontario Ministry of Health, Toronto, Canada."
+      ]
+    },
+    {
+      "last_name": "Costa",
+      "fore_name": "Andrew P",
+      "initials": "AP",
+      "name": "Andrew P Costa",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, 1280 Main St W, Hamilton, ON, L8S 4L8, Canada.",
+        "ICES, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Jones",
+      "fore_name": "Aaron",
+      "initials": "A",
+      "name": "Aaron Jones",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, 1280 Main St W, Hamilton, ON, L8S 4L8, Canada.",
+        "ICES, Hamilton, ON, Canada."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "BMC medical research methodology",
+    "iso_abbreviation": "BMC Med Res Methodol",
+    "issn": "1471-2288",
+    "issn_type": "Electronic",
+    "volume": "24",
+    "issue": "1",
+    "pub_year": "2024",
+    "pub_month": "Mar",
+    "pub_day": "27"
+  },
+  "start_page": "77",
+  "pages": "77",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Aged",
+    "Humans",
+    "COVID-19",
+    "COVID-19 Vaccines",
+    "Nursing Homes",
+    "Ontario",
+    "Retrospective Studies",
+    "SARS-CoV-2",
+    "Male",
+    "Female"
+  ],
+  "article_ids": {
+    "pubmed": "38539074",
+    "pmc": "PMC10976701",
+    "doi": "10.1186/s12874-024-02189-3",
+    "pii": "10.1186/s12874-024-02189-3"
+  },
+  "doi": "10.1186/s12874-024-02189-3",
+  "pmc_id": "PMC10976701",
+  "dates": {
+    "completed": "2024-03-29",
+    "revised": "2024-04-05"
+  },
+  "chemicals": [
+    "COVID-19 Vaccines"
+  ],
+  "grants": [
+    {
+      "grant_id": "2021-HQ-000138",
+      "agency": "COVID-19 Immunity Task Force and Public Health Agency of Canada (PHAC)"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T15:00:37.709288",
+    "pmid": "38539074"
+  }
+}

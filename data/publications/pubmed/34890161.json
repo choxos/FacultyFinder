@@ -1,0 +1,91 @@
+{
+  "pmid": "34890161",
+  "uid": "34890161",
+  "title": "CloudPred: Predicting Patient Phenotypes From Single-cell RNA-seq.",
+  "abstract": "Single-cell RNA sequencing (scRNA-seq) has the potential to provide powerful, high-resolution signatures to inform disease prognosis and precision medicine. This paper takes an important first step towards this goal by developing an interpretable machine learning algorithm, CloudPred, to predict individuals' disease phenotypes from their scRNA-seq data. Predicting phenotype from scRNA-seq is challenging for standard machine learning methods-the number of cells measured can vary by orders of magnitude across individuals and the cell populations are also highly heterogeneous. Typical analysis creates pseudo-bulk samples which are biased toward prior annotations and also lose the single cell resolution. CloudPred addresses these challenges via a novel end-to-end differentiable learning algorithm which is coupled with a biologically informed mixture of cell types model. CloudPred automatically infers the cell subpopulation that are salient for the phenotype without prior annotations. We developed a systematic simulation platform to evaluate the performance of CloudPred and several alternative methods we propose, and find that CloudPred outperforms the alternative methods across several settings. We further validated CloudPred on a real scRNA-seq dataset of 142 lupus patients and controls. CloudPred achieves AUROC of 0.98 while identifying a specific subpopulation of CD4 T cells whose presence is highly indicative of lupus. CloudPred is a powerful new framework to predict clinical phenotypes from scRNA-seq data and to identify relevant cells.",
+  "authors": [
+    {
+      "last_name": "He",
+      "fore_name": "Bryan",
+      "initials": "B",
+      "name": "Bryan He",
+      "affiliations": [
+        "Department of Computer Science, Stanford University, United States, bryanhe@stanford.edu."
+      ]
+    },
+    {
+      "last_name": "Thomson",
+      "fore_name": "Matthew",
+      "initials": "M",
+      "name": "Matthew Thomson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Subramaniam",
+      "fore_name": "Meena",
+      "initials": "M",
+      "name": "Meena Subramaniam",
+      "affiliations": []
+    },
+    {
+      "last_name": "Perez",
+      "fore_name": "Richard",
+      "initials": "R",
+      "name": "Richard Perez",
+      "affiliations": []
+    },
+    {
+      "last_name": "Ye",
+      "fore_name": "Chun Jimmie",
+      "initials": "CJ",
+      "name": "Chun Jimmie Ye",
+      "affiliations": []
+    },
+    {
+      "last_name": "Zou",
+      "fore_name": "James",
+      "initials": "J",
+      "name": "James Zou",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Pacific Symposium on Biocomputing. Pacific Symposium on Biocomputing",
+    "iso_abbreviation": "Pac Symp Biocomput",
+    "issn": "2335-6936",
+    "issn_type": "Electronic",
+    "volume": "27",
+    "pub_year": "2022"
+  },
+  "start_page": "337",
+  "end_page": "348",
+  "pages": "337-348",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Computational Biology",
+    "Gene Expression Profiling",
+    "Humans",
+    "Phenotype",
+    "RNA-Seq",
+    "Sequence Analysis, RNA",
+    "Single-Cell Analysis"
+  ],
+  "article_ids": {
+    "pubmed": "34890161",
+    "pii": "9789811250477_0031"
+  },
+  "dates": {
+    "completed": "2022-01-06",
+    "revised": "2022-01-06"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:51:49.735473",
+    "pmid": "34890161"
+  }
+}

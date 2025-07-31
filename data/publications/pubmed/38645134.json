@@ -1,0 +1,311 @@
+{
+  "pmid": "38645134",
+  "uid": "38645134",
+  "title": "The landscape of regional missense mutational intolerance quantified from 125,748 exomes.",
+  "abstract": "Missense variants can have a range of functional impacts depending on factors such as the specific amino acid substitution and location within the gene. To interpret their deleteriousness, studies have sought to identify regions within genes that are specifically intolerant of missense variation [1-12] . Here, we leverage the patterns of rare missense variation in 125,748 individuals in the Genome Aggregation Database (gnomAD) [13] against a null mutational model to identify transcripts that display regional differences in missense constraint. Missense-depleted regions are enriched for ClinVar [14] pathogenic variants, de novo missense variants from individuals with neurodevelopmental disorders (NDDs) [15,16] , and complex trait heritability. Following ClinGen calibration recommendations for the ACMG/AMP guidelines, we establish that regions with less than 20% of their expected missense variation achieve moderate support for pathogenicity. We create a missense deleteriousness metric (MPC) that incorporates regional constraint and outperforms other deleteriousness scores at stratifying case and control de novo missense variation, with a strong enrichment in NDDs. These results provide additional tools to aid in missense variant interpretation.",
+  "authors": [
+    {
+      "last_name": "Chao",
+      "fore_name": "Katherine R",
+      "initials": "KR",
+      "name": "Katherine R Chao",
+      "affiliations": [],
+      "orcid": "0000-0003-2897-2410"
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Lily",
+      "initials": "L",
+      "name": "Lily Wang",
+      "affiliations": [],
+      "orcid": "0000-0002-6630-8767"
+    },
+    {
+      "last_name": "Panchal",
+      "fore_name": "Ruchit",
+      "initials": "R",
+      "name": "Ruchit Panchal",
+      "affiliations": [],
+      "orcid": "0000-0002-4664-4501"
+    },
+    {
+      "last_name": "Liao",
+      "fore_name": "Calwing",
+      "initials": "C",
+      "name": "Calwing Liao",
+      "affiliations": [],
+      "orcid": "0000-0001-6169-7137"
+    },
+    {
+      "last_name": "Abderrazzaq",
+      "fore_name": "Haneen",
+      "initials": "H",
+      "name": "Haneen Abderrazzaq",
+      "affiliations": []
+    },
+    {
+      "last_name": "Ye",
+      "fore_name": "Robert",
+      "initials": "R",
+      "name": "Robert Ye",
+      "affiliations": [],
+      "orcid": "0009-0007-4947-9672"
+    },
+    {
+      "last_name": "Schultz",
+      "fore_name": "Patrick",
+      "initials": "P",
+      "name": "Patrick Schultz",
+      "affiliations": []
+    },
+    {
+      "last_name": "Compitello",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Compitello",
+      "affiliations": []
+    },
+    {
+      "last_name": "Grant",
+      "fore_name": "Riley H",
+      "initials": "RH",
+      "name": "Riley H Grant",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kosmicki",
+      "fore_name": "Jack A",
+      "initials": "JA",
+      "name": "Jack A Kosmicki",
+      "affiliations": []
+    },
+    {
+      "last_name": "Weisburd",
+      "fore_name": "Ben",
+      "initials": "B",
+      "name": "Ben Weisburd",
+      "affiliations": [],
+      "orcid": "0000-0001-9898-9109"
+    },
+    {
+      "last_name": "Phu",
+      "fore_name": "William",
+      "initials": "W",
+      "name": "William Phu",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael W",
+      "initials": "MW",
+      "name": "Michael W Wilson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Laricchia",
+      "fore_name": "Kristen M",
+      "initials": "KM",
+      "name": "Kristen M Laricchia",
+      "affiliations": [],
+      "orcid": "0000-0002-0733-8341"
+    },
+    {
+      "last_name": "Goodrich",
+      "fore_name": "Julia K",
+      "initials": "JK",
+      "name": "Julia K Goodrich",
+      "affiliations": []
+    },
+    {
+      "last_name": "Goldstein",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Goldstein",
+      "affiliations": []
+    },
+    {
+      "last_name": "Goldstein",
+      "fore_name": "Jacqueline I",
+      "initials": "JI",
+      "name": "Jacqueline I Goldstein",
+      "affiliations": []
+    },
+    {
+      "last_name": "Vittal",
+      "fore_name": "Christopher",
+      "initials": "C",
+      "name": "Christopher Vittal",
+      "affiliations": []
+    },
+    {
+      "last_name": "Poterba",
+      "fore_name": "Timothy",
+      "initials": "T",
+      "name": "Timothy Poterba",
+      "affiliations": []
+    },
+    {
+      "last_name": "Baxter",
+      "fore_name": "Samantha",
+      "initials": "S",
+      "name": "Samantha Baxter",
+      "affiliations": []
+    },
+    {
+      "last_name": "Watts",
+      "fore_name": "Nicholas A",
+      "initials": "NA",
+      "name": "Nicholas A Watts",
+      "affiliations": []
+    },
+    {
+      "last_name": "Solomonson",
+      "fore_name": "Matthew",
+      "initials": "M",
+      "name": "Matthew Solomonson",
+      "affiliations": [],
+      "orcid": "0000-0002-5344-9026"
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "last_name": "Tiao",
+      "fore_name": "Grace",
+      "initials": "G",
+      "name": "Grace Tiao",
+      "affiliations": []
+    },
+    {
+      "last_name": "Rehm",
+      "fore_name": "Heidi L",
+      "initials": "HL",
+      "name": "Heidi L Rehm",
+      "affiliations": [],
+      "orcid": "0000-0002-6025-0015"
+    },
+    {
+      "last_name": "Neale",
+      "fore_name": "Benjamin M",
+      "initials": "BM",
+      "name": "Benjamin M Neale",
+      "affiliations": [],
+      "orcid": "0000-0003-1513-6077"
+    },
+    {
+      "last_name": "Talkowski",
+      "fore_name": "Michael E",
+      "initials": "ME",
+      "name": "Michael E Talkowski",
+      "affiliations": [],
+      "orcid": "0000-0003-2889-0992"
+    },
+    {
+      "last_name": "MacArthur",
+      "fore_name": "Daniel G",
+      "initials": "DG",
+      "name": "Daniel G MacArthur",
+      "affiliations": [],
+      "orcid": "0000-0002-5771-2290"
+    },
+    {
+      "last_name": "O'Donnell-Luria",
+      "fore_name": "Anne",
+      "initials": "A",
+      "name": "Anne O'Donnell-Luria",
+      "affiliations": [],
+      "orcid": "0000-0001-6418-9592"
+    },
+    {
+      "last_name": "Karczewski",
+      "fore_name": "Konrad J",
+      "initials": "KJ",
+      "name": "Konrad J Karczewski",
+      "affiliations": [],
+      "orcid": "0000-0003-2878-4671"
+    },
+    {
+      "last_name": "Radivojac",
+      "fore_name": "Predrag",
+      "initials": "P",
+      "name": "Predrag Radivojac",
+      "affiliations": [],
+      "orcid": "0000-0002-6769-0793"
+    },
+    {
+      "last_name": "Daly",
+      "fore_name": "Mark J",
+      "initials": "MJ",
+      "name": "Mark J Daly",
+      "affiliations": [],
+      "orcid": "0000-0002-0949-8752"
+    },
+    {
+      "last_name": "Samocha",
+      "fore_name": "Kaitlin E",
+      "initials": "KE",
+      "name": "Kaitlin E Samocha",
+      "affiliations": [],
+      "orcid": "0000-0002-1704-3352"
+    }
+  ],
+  "journal": {
+    "title": "bioRxiv : the preprint server for biology",
+    "iso_abbreviation": "bioRxiv",
+    "issn": "2692-8205",
+    "issn_type": "Electronic",
+    "pub_year": "2024",
+    "pub_month": "May",
+    "pub_day": "03"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Preprint",
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "38645134",
+    "pmc": "PMC11030311",
+    "doi": "10.1101/2024.04.11.588920",
+    "pii": "2024.04.11.588920"
+  },
+  "doi": "10.1101/2024.04.11.588920",
+  "pmc_id": "PMC11030311",
+  "dates": {
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "U01 HG012022",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U24 HG011450",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 HG002295",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "F31 HD111109",
+      "agency": "NICHD NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG011755",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.854978",
+    "pmid": "38645134"
+  }
+}

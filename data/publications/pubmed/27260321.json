@@ -1,0 +1,509 @@
+{
+  "pmid": "27260321",
+  "uid": "27260321",
+  "title": "MACVIA clinical decision algorithm in adolescents and adults with allergic rhinitis.",
+  "abstract": "The selection of pharmacotherapy for patients with allergic rhinitis (AR) depends on several factors, including age, prominent symptoms, symptom severity, control of AR, patient preferences, and cost. Allergen exposure and the resulting symptoms vary, and treatment adjustment is required. Clinical decision support systems (CDSSs) might be beneficial for the assessment of disease control. CDSSs should be based on the best evidence and algorithms to aid patients and health care professionals to jointly determine treatment and its step-up or step-down strategy depending on AR control. Contre les MAladies Chroniques pour un VIeillissement Actif en Languedoc-Roussillon (MACVIA-LR [fighting chronic diseases for active and healthy ageing]), one of the reference sites of the European Innovation Partnership on Active and Healthy Ageing, has initiated an allergy sentinel network (the MACVIA-ARIA Sentinel Network). A CDSS is currently being developed to optimize AR control. An algorithm developed by consensus is presented in this article. This algorithm should be confirmed by appropriate trials.",
+  "authors": [
+    {
+      "last_name": "Bousquet",
+      "fore_name": "Jean",
+      "initials": "J",
+      "name": "Jean Bousquet",
+      "affiliations": [
+        "University Hospital, Montpellier, France; MACVIA-LR, Contre les MAladies Chroniques pour un VIeillissement Actif en Languedoc-Roussillon, European Innovation Partnership on Active and Healthy Ageing Reference Site, Montpellier, France; INSERM, VIMA: Ageing and Chronic Diseases, Epidemiological and Public Health approaches, Paris, and Université Versailles St-Quentin-en-Yvelines, St-Quentin-en-Yvelines, France. Electronic address: jean.bousquet@orange.fr."
+      ]
+    },
+    {
+      "last_name": "Schünemann",
+      "fore_name": "Holger J",
+      "initials": "HJ",
+      "name": "Holger J Schünemann",
+      "affiliations": [
+        "Departments of Clinical Epidemiology and Biostatistics and Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Hellings",
+      "fore_name": "Peter W",
+      "initials": "PW",
+      "name": "Peter W Hellings",
+      "affiliations": [
+        "Laboratory of Clinical Immunology, Department of Microbiology and Immunology, KU Leuven, Leuven, Belgium."
+      ]
+    },
+    {
+      "last_name": "Arnavielhe",
+      "fore_name": "Sylvie",
+      "initials": "S",
+      "name": "Sylvie Arnavielhe",
+      "affiliations": [
+        "Kyomed, Montpellier, France."
+      ]
+    },
+    {
+      "last_name": "Bachert",
+      "fore_name": "Claus",
+      "initials": "C",
+      "name": "Claus Bachert",
+      "affiliations": [
+        "Upper Airways Research Laboratory, ENT Department, Ghent University Hospital, Ghent, Belgium."
+      ]
+    },
+    {
+      "last_name": "Bedbrook",
+      "fore_name": "Anna",
+      "initials": "A",
+      "name": "Anna Bedbrook",
+      "affiliations": [
+        "MACVIA-LR, Contre les MAladies Chroniques pour un VIeillissement Actif en Languedoc-Roussillon, European Innovation Partnership on Active and Healthy Ageing Reference Site, Montpellier, France."
+      ]
+    },
+    {
+      "last_name": "Bergmann",
+      "fore_name": "Karl-Christian",
+      "initials": "KC",
+      "name": "Karl-Christian Bergmann",
+      "affiliations": [
+        "Allergy-Centre-Charité at the Department of Dermatology, Charité-Universitätsmedizin Berlin, and Secretary General of the Global Allergy and Asthma European Network (GA(2)LEN), Berlin, Germany."
+      ]
+    },
+    {
+      "last_name": "Bosnic-Anticevich",
+      "fore_name": "Sinthia",
+      "initials": "S",
+      "name": "Sinthia Bosnic-Anticevich",
+      "affiliations": [
+        "Woolcock Institute of Medical Research, University of Sydney and Sydney Local Health District, Glebe, Australia."
+      ]
+    },
+    {
+      "last_name": "Brozek",
+      "fore_name": "Jan",
+      "initials": "J",
+      "name": "Jan Brozek",
+      "affiliations": [
+        "Departments of Clinical Epidemiology and Biostatistics and Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Calderon",
+      "fore_name": "Moises",
+      "initials": "M",
+      "name": "Moises Calderon",
+      "affiliations": [
+        "Imperial College London-National Heart and Lung Institute, Royal Brompton Hospital NHS, London, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Canonica",
+      "fore_name": "G Walter",
+      "initials": "GW",
+      "name": "G Walter Canonica",
+      "affiliations": [
+        "Allergy and Respiratory Diseases Clinic, DIMI, University of Genoa, IRCCS AOU San Martino-IST, Genoa, Italy."
+      ]
+    },
+    {
+      "last_name": "Casale",
+      "fore_name": "Thomas B",
+      "initials": "TB",
+      "name": "Thomas B Casale",
+      "affiliations": [
+        "Division of Allergy/Immunology, University of South Florida, Tampa, Fla."
+      ]
+    },
+    {
+      "last_name": "Chavannes",
+      "fore_name": "Niels H",
+      "initials": "NH",
+      "name": "Niels H Chavannes",
+      "affiliations": [
+        "Department of Public Health and Primary Care, Leiden University Medical Center, Leiden, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Cox",
+      "fore_name": "Linda",
+      "initials": "L",
+      "name": "Linda Cox",
+      "affiliations": [
+        "Department of Medicine, Nova Southeastern University, Davie, Fla."
+      ]
+    },
+    {
+      "last_name": "Chrystyn",
+      "fore_name": "Henry",
+      "initials": "H",
+      "name": "Henry Chrystyn",
+      "affiliations": [
+        "RiRL, Cambridge, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Cruz",
+      "fore_name": "Alvaro A",
+      "initials": "AA",
+      "name": "Alvaro A Cruz",
+      "affiliations": [
+        "ProAR-Nucleo de Excelencia em Asma, Federal University of Bahia, and GARD Executive Committee, Bahia, Brazil."
+      ]
+    },
+    {
+      "last_name": "Dahl",
+      "fore_name": "Ronald",
+      "initials": "R",
+      "name": "Ronald Dahl",
+      "affiliations": [
+        "Department of Dermatology and Allergy Centre, Odense University Hospital, Odense, Denmark."
+      ]
+    },
+    {
+      "last_name": "De Carlo",
+      "fore_name": "Giuseppe",
+      "initials": "G",
+      "name": "Giuseppe De Carlo",
+      "affiliations": [
+        "EFA European Federation of Allergy and Airways Diseases Patients' Associations, Brussels, Belgium."
+      ]
+    },
+    {
+      "last_name": "Demoly",
+      "fore_name": "Pascal",
+      "initials": "P",
+      "name": "Pascal Demoly",
+      "affiliations": [
+        "EPAR U707 INSERM, Paris and EPAR UMR-S UPMC, Paris VI, Paris, France; Department of Respiratory Diseases, Montpellier University Hospital, Montpellier, France."
+      ]
+    },
+    {
+      "last_name": "Devillier",
+      "fore_name": "Phillipe",
+      "initials": "P",
+      "name": "Phillipe Devillier",
+      "affiliations": [
+        "Laboratoire de Pharmacologie Respiratoire UPRES EA220, Hôpital Foch, Suresnes Université Versailles Saint-Quentin, St-Quentin-en-Yvelines, France."
+      ]
+    },
+    {
+      "last_name": "Dray",
+      "fore_name": "Gérard",
+      "initials": "G",
+      "name": "Gérard Dray",
+      "affiliations": [
+        "Ecole des Mines, Alès, France."
+      ]
+    },
+    {
+      "last_name": "Fletcher",
+      "fore_name": "Monica",
+      "initials": "M",
+      "name": "Monica Fletcher",
+      "affiliations": [
+        "Education for Health, Warwick, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Fokkens",
+      "fore_name": "Wytske J",
+      "initials": "WJ",
+      "name": "Wytske J Fokkens",
+      "affiliations": [
+        "Department of Otorhinolaryngology, Academic Medical Centre, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Fonseca",
+      "fore_name": "Joao",
+      "initials": "J",
+      "name": "Joao Fonseca",
+      "affiliations": [
+        "Center for Research in Health Technologies and Information Systems-CINTESIS, Universidade do Porto; the Allergy Unit, Instituto CUF Porto e Hospital CUF Porto; the Health Information and Decision Sciences Department-CIDES, Faculdade de Medicina, Universidade do Porto; Faculdade de Medicina da Universidade do Porto, Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Gonzalez-Diaz",
+      "fore_name": "Sandra N",
+      "initials": "SN",
+      "name": "Sandra N Gonzalez-Diaz",
+      "affiliations": [
+        "Universidad Autónoma de Nuevo León, Nuevo León, Mexico."
+      ]
+    },
+    {
+      "last_name": "Grouse",
+      "fore_name": "Lawrence",
+      "initials": "L",
+      "name": "Lawrence Grouse",
+      "affiliations": [
+        "University of Washington School of Medicine, Faculty of the Department of Neurology, Seattle, Wash."
+      ]
+    },
+    {
+      "last_name": "Keil",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Keil",
+      "affiliations": [
+        "Institute of Social Medicine, Epidemiology and Health Economics, Charité-Universitätsmedizin Berlin, and the Institute for Clinical Epidemiology and Biometry, University of Wuerzburg, Wuerzburg, Germany."
+      ]
+    },
+    {
+      "last_name": "Kuna",
+      "fore_name": "Piotr",
+      "initials": "P",
+      "name": "Piotr Kuna",
+      "affiliations": [
+        "Division of Internal Medicine, Asthma and Allergy, Barlicki University Hospital, Medical University of Lodz, Lodz, Poland."
+      ]
+    },
+    {
+      "last_name": "Larenas-Linnemann",
+      "fore_name": "Désirée",
+      "initials": "D",
+      "name": "Désirée Larenas-Linnemann",
+      "affiliations": [
+        "Clínica de Alergia, Asma y Pediatría, Hospital Médica Sur, Mexico City, Mexico."
+      ]
+    },
+    {
+      "last_name": "Lodrup Carlsen",
+      "fore_name": "Karin C",
+      "initials": "KC",
+      "name": "Karin C Lodrup Carlsen",
+      "affiliations": [
+        "Department of Paediatrics, Oslo University Hospital, Oslo, and the Faculty of Medicine, Institute of Clinical Medicine, University of Oslo, Oslo, Norway."
+      ]
+    },
+    {
+      "last_name": "Meltzer",
+      "fore_name": "Eli O",
+      "initials": "EO",
+      "name": "Eli O Meltzer",
+      "affiliations": [
+        "Allergy and Asthma Medical Group and Research Center, San Diego, Calif."
+      ]
+    },
+    {
+      "last_name": "Mullol",
+      "fore_name": "Jaoquim",
+      "initials": "J",
+      "name": "Jaoquim Mullol",
+      "affiliations": [
+        "Unitat de Rinologia i Clínica de l'Olfacte, Servei d'ORL, Hospital Clínic, Clinical & Experimental Respiratory Immunoallergy, IDIBAPS, Barcelona, Spain."
+      ]
+    },
+    {
+      "last_name": "Muraro",
+      "fore_name": "Antonella",
+      "initials": "A",
+      "name": "Antonella Muraro",
+      "affiliations": [
+        "Food Allergy Referral Centre Veneto Region, Department of Women and Child Health, Padua General University Hospital, Padua, Italy."
+      ]
+    },
+    {
+      "last_name": "Naclerio",
+      "fore_name": "Robert N",
+      "initials": "RN",
+      "name": "Robert N Naclerio",
+      "affiliations": [
+        "Section of Otolaryngology-Head and Neck Surgery, University of Chicago Medical Center and Pritzker School of Medicine, University of Chicago, Chicago, Ill."
+      ]
+    },
+    {
+      "last_name": "Palkonen",
+      "fore_name": "Susanna",
+      "initials": "S",
+      "name": "Susanna Palkonen",
+      "affiliations": [
+        "EFA European Federation of Allergy and Airways Diseases Patients' Associations, Brussels, Belgium."
+      ]
+    },
+    {
+      "last_name": "Papadopoulos",
+      "fore_name": "Nikolaos G",
+      "initials": "NG",
+      "name": "Nikolaos G Papadopoulos",
+      "affiliations": [
+        "Center for Pediatrics and Child Health, Institute of Human Development, Royal Manchester Children's Hospital, University of Manchester, and the Allergy Department, 2nd Pediatric Clinic, Athens General Children's Hospital \"P&A Kyriakou\", University of Athens, Athens, Greece."
+      ]
+    },
+    {
+      "last_name": "Passalacqua",
+      "fore_name": "Giovanni",
+      "initials": "G",
+      "name": "Giovanni Passalacqua",
+      "affiliations": [
+        "Allergy and Respiratory Diseases Clinic, DIMI, University of Genoa, IRCCS AOU San Martino-IST, Genoa, Italy."
+      ]
+    },
+    {
+      "last_name": "Price",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Price",
+      "affiliations": [
+        "Academic Centre of Primary Care, University of Aberdeen, and Research in Real-Life, Cambridge, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Ryan",
+      "fore_name": "Dermot",
+      "initials": "D",
+      "name": "Dermot Ryan",
+      "affiliations": [
+        "Honorary Clinical Research Fellow, Allergy and Respiratory Research Group, University of Edinburgh, Edinburgh, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Samolinski",
+      "fore_name": "Boleslaw",
+      "initials": "B",
+      "name": "Boleslaw Samolinski",
+      "affiliations": [
+        "Department of Prevention of Envinronmental Hazards and Allergology, Medical University of Warsaw, Warsaw, Poland."
+      ]
+    },
+    {
+      "last_name": "Scadding",
+      "fore_name": "Glenis K",
+      "initials": "GK",
+      "name": "Glenis K Scadding",
+      "affiliations": [
+        "Royal National TNE Hospital, University College London, London, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Sheikh",
+      "fore_name": "Aziz",
+      "initials": "A",
+      "name": "Aziz Sheikh",
+      "affiliations": [
+        "Allergy and Respiratory Research Group, Centre for Population Health Sciences, University of Edinburgh, Edinburgh, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Spertini",
+      "fore_name": "François",
+      "initials": "F",
+      "name": "François Spertini",
+      "affiliations": [
+        "Service d'Immunologie et Allergie, Centre Hospitalier Universitaire Vaudois (CHUV), Lausanne, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Valiulis",
+      "fore_name": "Arunas",
+      "initials": "A",
+      "name": "Arunas Valiulis",
+      "affiliations": [
+        "Vilnius University Clinic of Children's Diseases, Vilnius, Lithuania."
+      ]
+    },
+    {
+      "last_name": "Valovirta",
+      "fore_name": "Erkka",
+      "initials": "E",
+      "name": "Erkka Valovirta",
+      "affiliations": [
+        "Department of Lung Diseases and Clinical Allergology, University of Turku, Turku, Finland."
+      ]
+    },
+    {
+      "last_name": "Walker",
+      "fore_name": "Samantha",
+      "initials": "S",
+      "name": "Samantha Walker",
+      "affiliations": [
+        "Asthma UK, London, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Wickman",
+      "fore_name": "Magnus",
+      "initials": "M",
+      "name": "Magnus Wickman",
+      "affiliations": [
+        "Sachs' Children's Hospital, Stockholm, and the Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+      ]
+    },
+    {
+      "last_name": "Yorgancioglu",
+      "fore_name": "Arzu",
+      "initials": "A",
+      "name": "Arzu Yorgancioglu",
+      "affiliations": [
+        "Department of Pulmonology, Celal Bayar University Manisa, Turkey, and GARD Executive Committee, Manisa, Turkey."
+      ]
+    },
+    {
+      "last_name": "Haahtela",
+      "fore_name": "Tari",
+      "initials": "T",
+      "name": "Tari Haahtela",
+      "affiliations": [
+        "Skin and Allergy Hospital, Helsinki University Hospital, Helsinki, Finland."
+      ]
+    },
+    {
+      "last_name": "Zuberbier",
+      "fore_name": "Torsten",
+      "initials": "T",
+      "name": "Torsten Zuberbier",
+      "affiliations": [
+        "Allergy-Centre-Charité at the Department of Dermatology, Charité-Universitätsmedizin Berlin, and Secretary General of the Global Allergy and Asthma European Network (GA(2)LEN), Berlin, Germany."
+      ]
+    },
+    {
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "The Journal of allergy and clinical immunology",
+    "iso_abbreviation": "J Allergy Clin Immunol",
+    "issn": "1097-6825",
+    "issn_type": "Electronic",
+    "volume": "138",
+    "issue": "2",
+    "pub_year": "2016",
+    "pub_month": "Aug"
+  },
+  "start_page": "367",
+  "end_page": "374.e2",
+  "pages": "367-374.e2",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Review",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Adolescent",
+    "Adult",
+    "Age Factors",
+    "Algorithms",
+    "Clinical Decision-Making",
+    "Conjunctivitis, Allergic",
+    "Disease Management",
+    "Humans",
+    "Patient Satisfaction",
+    "Rhinitis, Allergic"
+  ],
+  "article_ids": {
+    "pubmed": "27260321",
+    "doi": "10.1016/j.jaci.2016.03.025",
+    "pii": "S0091-6749(16)30148-8"
+  },
+  "doi": "10.1016/j.jaci.2016.03.025",
+  "dates": {
+    "completed": "2017-06-15",
+    "revised": "2022-04-08"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:56:42.626459",
+    "pmid": "27260321"
+  }
+}

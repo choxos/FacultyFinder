@@ -1,0 +1,170 @@
+{
+  "pmid": "26338778",
+  "uid": "26338778",
+  "title": "A predictive modeling approach for cell line-specific long-range regulatory interactions.",
+  "abstract": "Long range regulatory interactions among distal enhancers and target genes are important for tissue-specific gene expression. Genome-scale identification of these interactions in a cell line-specific manner, especially using the fewest possible datasets, is a significant challenge. We develop a novel computational approach, Regulatory Interaction Prediction for Promoters and Long-range Enhancers (RIPPLE), that integrates published Chromosome Conformation Capture (3C) data sets with a minimal set of regulatory genomic data sets to predict enhancer-promoter interactions in a cell line-specific manner. Our results suggest that CTCF, RAD21, a general transcription factor (TBP) and activating chromatin marks are important determinants of enhancer-promoter interactions. To predict interactions in a new cell line and to generate genome-wide interaction maps, we develop an ensemble version of RIPPLE and apply it to generate interactions in five human cell lines. Computational validation of these predictions using existing ChIA-PET and Hi-C data sets showed that RIPPLE accurately predicts interactions among enhancers and promoters. Enhancer-promoter interactions tend to be organized into subnetworks representing coordinately regulated sets of genes that are enriched for specific biological processes and cis-regulatory elements. Overall, our work provides a systematic approach to predict and interpret enhancer-promoter interactions in a genome-wide cell-type specific manner using a few experimentally tractable measurements.",
+  "authors": [
+    {
+      "last_name": "Roy",
+      "fore_name": "Sushmita",
+      "initials": "S",
+      "name": "Sushmita Roy",
+      "affiliations": [
+        "Department of Biostatistics and Medical Informatics, University of Wisconsin-Madison, Madison, WI, USA Wisconsin Institute for Discovery, 330 N. Orchard Street, Madison, WI, USA sroy@biostat.wisc.edu."
+      ]
+    },
+    {
+      "last_name": "Siahpirani",
+      "fore_name": "Alireza Fotuhi",
+      "initials": "AF",
+      "name": "Alireza Fotuhi Siahpirani",
+      "affiliations": [
+        "Department of Computer Sciences, University of Wisconsin-Madison, Madison, WI, USA."
+      ]
+    },
+    {
+      "last_name": "Chasman",
+      "fore_name": "Deborah",
+      "initials": "D",
+      "name": "Deborah Chasman",
+      "affiliations": [
+        "Wisconsin Institute for Discovery, 330 N. Orchard Street, Madison, WI, USA."
+      ]
+    },
+    {
+      "last_name": "Knaack",
+      "fore_name": "Sara",
+      "initials": "S",
+      "name": "Sara Knaack",
+      "affiliations": [
+        "Wisconsin Institute for Discovery, 330 N. Orchard Street, Madison, WI, USA."
+      ]
+    },
+    {
+      "last_name": "Ay",
+      "fore_name": "Ferhat",
+      "initials": "F",
+      "name": "Ferhat Ay",
+      "affiliations": [
+        "Department of Genome Sciences, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Stewart",
+      "fore_name": "Ron",
+      "initials": "R",
+      "name": "Ron Stewart",
+      "affiliations": [
+        "Morgridge Institute for Research, Madison, WI 53715, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": [
+        "Genetics & Genome Biology Program, Hospital for Sick Children (SickKids) and Department of Molecular Genetics, University of Toronto,Toronto, ON, Canada Department of Molecular Genetics, University of Toronto, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Sridharan",
+      "fore_name": "Rupa",
+      "initials": "R",
+      "name": "Rupa Sridharan",
+      "affiliations": [
+        "Department of Biostatistics and Medical Informatics, University of Wisconsin-Madison, Madison, WI, USA Department of Cell and Regenerative biology, University of Wisconsin, Madison, WI 53715, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Nucleic acids research",
+    "iso_abbreviation": "Nucleic Acids Res",
+    "issn": "1362-4962",
+    "issn_type": "Electronic",
+    "volume": "43",
+    "issue": "18",
+    "pub_year": "2015",
+    "pub_month": "Oct",
+    "pub_day": "15"
+  },
+  "start_page": "8694",
+  "end_page": "8712",
+  "pages": "8694-712",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Algorithms",
+    "CCCTC-Binding Factor",
+    "Cell Cycle Proteins",
+    "Cell Line",
+    "Chromatin",
+    "Chromosomal Proteins, Non-Histone",
+    "Enhancer Elements, Genetic",
+    "Genomics",
+    "Histone Code",
+    "Humans",
+    "Models, Genetic",
+    "Promoter Regions, Genetic",
+    "Repressor Proteins",
+    "TATA-Box Binding Protein",
+    "Cohesins"
+  ],
+  "article_ids": {
+    "pubmed": "26338778",
+    "pmc": "PMC4605315",
+    "doi": "10.1093/nar/gkv865",
+    "pii": "gkv865"
+  },
+  "doi": "10.1093/nar/gkv865",
+  "pmc_id": "PMC4605315",
+  "dates": {
+    "completed": "2016-05-07",
+    "revised": "2023-12-13"
+  },
+  "chemicals": [
+    "CCCTC-Binding Factor",
+    "CTCF protein, human",
+    "Cell Cycle Proteins",
+    "Chromatin",
+    "Chromosomal Proteins, Non-Histone",
+    "Repressor Proteins",
+    "TATA-Box Binding Protein"
+  ],
+  "grants": [
+    {
+      "grant_id": "U54 AI117924",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "5T15LM007359",
+      "agency": "NLM NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T15 LM007359",
+      "agency": "NLM NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U54AI117924",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 GM113033",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.358880",
+    "pmid": "26338778"
+  }
+}

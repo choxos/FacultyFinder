@@ -1,0 +1,164 @@
+{
+  "pmid": "38787617",
+  "uid": "38787617",
+  "title": "Derivation and Validation of a Machine Learning Model for the Prevention of Unplanned Dialysis.",
+  "abstract": "KEY POINTS: Nearly half of all patients with CKD who progress to kidney failure initiate dialysis in an unplanned fashion, which is associated with poor outcomes. Machine learning models using routinely collected data can accurately predict 6- to 12-month kidney failure risk among the population with advanced CKD. These machine learning models retrospectively deliver advanced warning on a substantial proportion of unplanned dialysis events. BACKGROUND: Approximately half of all patients with advanced CKD who progress to kidney failure initiate dialysis in an unplanned fashion, which is associated with high morbidity, mortality, and health care costs. A novel prediction model designed to identify patients with advanced CKD who are at high risk for developing kidney failure over short time frames (6–12 months) may help reduce the rates of unplanned dialysis and improve the quality of transitions from CKD to kidney failure. METHODS: We performed a retrospective study using machine learning random forest algorithms incorporating routinely collected age and sex data along with time-varying trends in laboratory measurements to derive and validate 6- and 12-month kidney failure risk prediction models in the population with advanced CKD. The models were comprehensively characterized in three independent cohorts in Ontario, Canada—derived in a cohort of 1849 consecutive patients with advanced CKD (mean [SD] age 66 [15] years, eGFR 19 [7] ml/min per 1.73 m[2]) and validated in two external advanced CKD cohorts (n=1356; age 69 [14] years, eGFR 22 [7] ml/min per 1.73 m[2]). RESULTS: Across all cohorts, 55% of patients experienced kidney failure, of whom 35% involved unplanned dialysis. The 6- and 12-month models demonstrated excellent discrimination with area under the receiver operating characteristic curve of 0.88 (95% confidence interval [CI], 0.87 to 0.89) and 0.87 (95% CI, 0.86 to 0.87) along with high probabilistic accuracy with the Brier scores of 0.10 (95% CI, 0.09 to 0.10) and 0.14 (95% CI, 0.13 to 0.14), respectively. The models were also well calibrated and delivered timely alerts on a significant number of patients who ultimately initiated dialysis in an unplanned fashion. Similar results were found upon external validation testing. CONCLUSIONS: These machine learning models using routinely collected patient data accurately predict near-future kidney failure risk among the population with advanced CKD and retrospectively deliver advanced warning on a substantial proportion of unplanned dialysis events. Optimal implementation strategies still need to be elucidated.",
+  "authors": [
+    {
+      "last_name": "Klamrowski",
+      "fore_name": "Martin M",
+      "initials": "MM",
+      "name": "Martin M Klamrowski",
+      "affiliations": [
+        "Department of Systems and Computer Engineering, Carleton University, Ottawa, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-7544-3135"
+    },
+    {
+      "last_name": "Klein",
+      "fore_name": "Ran",
+      "initials": "R",
+      "name": "Ran Klein",
+      "affiliations": [
+        "Department of Systems and Computer Engineering, Carleton University, Ottawa, Ontario, Canada.",
+        "Division of Nuclear Medicine, Department of Medicine, University of Ottawa, Ottawa, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-4357-3779"
+    },
+    {
+      "last_name": "McCudden",
+      "fore_name": "Christopher",
+      "initials": "C",
+      "name": "Christopher McCudden",
+      "affiliations": [
+        "Eastern Ontario Regional Laboratory Association, Ottawa, Ontario, Canada.",
+        "Division of Biochemistry, Department of Pathology and Laboratory Medicine, University of Ottawa, Ottawa, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Green",
+      "fore_name": "James R",
+      "initials": "JR",
+      "name": "James R Green",
+      "affiliations": [
+        "Department of Systems and Computer Engineering, Carleton University, Ottawa, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-6039-2355"
+    },
+    {
+      "last_name": "Rashidi",
+      "fore_name": "Babak",
+      "initials": "B",
+      "name": "Babak Rashidi",
+      "affiliations": [
+        "Division of General Internal Medicine, Department of Medicine, University of Ottawa, Ottawa, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-7273-8686"
+    },
+    {
+      "last_name": "White",
+      "fore_name": "Christine A",
+      "initials": "CA",
+      "name": "Christine A White",
+      "affiliations": [
+        "Division of Nephrology, Department of Medicine, Queen's University, Kingston, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Oliver",
+      "fore_name": "Matthew J",
+      "initials": "MJ",
+      "name": "Matthew J Oliver",
+      "affiliations": [
+        "Division of Nephrology, Department of Medicine, Sunnybrook Health Sciences Centre, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0003-3334-0581"
+    },
+    {
+      "last_name": "Molnar",
+      "fore_name": "Amber O",
+      "initials": "AO",
+      "name": "Amber O Molnar",
+      "affiliations": [
+        "Division of Nephrology, Department of Medicine, McMaster University, Hamilton Ontario, Canada."
+      ],
+      "orcid": "0000-0003-4549-0202"
+    },
+    {
+      "last_name": "Edwards",
+      "fore_name": "Cedric",
+      "initials": "C",
+      "name": "Cedric Edwards",
+      "affiliations": [
+        "Division of Nephrology, Department of Medicine, University of Ottawa, Ottawa, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Ramsay",
+      "fore_name": "Tim",
+      "initials": "T",
+      "name": "Tim Ramsay",
+      "affiliations": [
+        "Clinical Epidemiology Program, Ottawa Hospital Research Institute, University of Ottawa, Ottawa, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Akbari",
+      "fore_name": "Ayub",
+      "initials": "A",
+      "name": "Ayub Akbari",
+      "affiliations": [
+        "Division of Nephrology, Department of Medicine, University of Ottawa, Ottawa, Ontario, Canada.",
+        "Clinical Epidemiology Program, Ottawa Hospital Research Institute, University of Ottawa, Ottawa, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Hundemer",
+      "fore_name": "Gregory L",
+      "initials": "GL",
+      "name": "Gregory L Hundemer",
+      "affiliations": [
+        "Division of Nephrology, Department of Medicine, University of Ottawa, Ottawa, Ontario, Canada.",
+        "Clinical Epidemiology Program, Ottawa Hospital Research Institute, University of Ottawa, Ottawa, Ontario, Canada."
+      ],
+      "orcid": "0000-0003-3559-3531"
+    }
+  ],
+  "journal": {
+    "title": "Clinical journal of the American Society of Nephrology : CJASN",
+    "iso_abbreviation": "Clin J Am Soc Nephrol",
+    "issn": "1555-905X",
+    "issn_type": "Electronic",
+    "volume": "19",
+    "issue": "9",
+    "pub_year": "2024",
+    "pub_month": "Sep",
+    "pub_day": "01"
+  },
+  "start_page": "1098",
+  "end_page": "1108",
+  "pages": "1098-1108",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "38787617",
+    "pmc": "PMC11390024",
+    "doi": "10.2215/CJN.0000000000000489",
+    "pii": "01277230-990000000-00393"
+  },
+  "doi": "10.2215/CJN.0000000000000489",
+  "pmc_id": "PMC11390024",
+  "dates": {
+    "revised": "2025-07-08"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:45:13.476206",
+    "pmid": "38787617"
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "openalex_id": "W3169341408",
+  "doi": "https://doi.org/10.18653/v1/2022.acl-long.544",
+  "title": "CBLUE: A Chinese Biomedical Language Understanding Evaluation Benchmark",
+  "abstract": "Ningyu Zhang, Mosha Chen, Zhen Bi, Xiaozhuan Liang, Lei Li, Xin Shang, Kangping Yin, Chuanqi Tan, Jian Xu, Fei Huang, Luo Si, Yuan Ni, Guotong Xie, Zhifang Sui, Baobao Chang, Hui Zong, Zheng Yuan, Linfeng Li, Jun Yan, Hongying Zan, Kunli Zhang, Buzhou Tang, Qingcai Chen. Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2022.",
+  "authors": [
+    {
+      "display_name": "Ningyu Zhang",
+      "id": "A5076879698",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I76130692",
+          "display_name": "Zhejiang University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ningyu Zhang"
+    },
+    {
+      "display_name": "Mosha Chen",
+      "id": "A5017124285",
+      "orcid": "https://orcid.org/0000-0001-8815-6031",
+      "institutions": [
+        {
+          "id": "I4210095624",
+          "display_name": "Alibaba Group (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mosha Chen"
+    },
+    {
+      "display_name": "Zhen Bi",
+      "id": "A5102870881",
+      "orcid": "https://orcid.org/0000-0002-1979-5638",
+      "institutions": [
+        {
+          "id": "I76130692",
+          "display_name": "Zhejiang University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhen Bi"
+    },
+    {
+      "display_name": "Xiaozhuan Liang",
+      "id": "A5087553757",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I76130692",
+          "display_name": "Zhejiang University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaozhuan Liang"
+    },
+    {
+      "display_name": "Lei Li",
+      "id": "A5100440229",
+      "orcid": "https://orcid.org/0000-0001-5478-5681",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Lei Li"
+    },
+    {
+      "display_name": "Xin Shang",
+      "id": "A5028185085",
+      "orcid": "https://orcid.org/0000-0001-8620-8686",
+      "institutions": [
+        {
+          "id": "I76130692",
+          "display_name": "Zhejiang University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xin Shang"
+    },
+    {
+      "display_name": "Kangping Yin",
+      "id": "A5013974932",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210095624",
+          "display_name": "Alibaba Group (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kangping Yin"
+    },
+    {
+      "display_name": "Chuanqi Tan",
+      "id": "A5065907658",
+      "orcid": "https://orcid.org/0000-0002-6676-3057",
+      "institutions": [
+        {
+          "id": "I4210095624",
+          "display_name": "Alibaba Group (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chuanqi Tan"
+    },
+    {
+      "display_name": "Jian Xu",
+      "id": "A5031603082",
+      "orcid": "https://orcid.org/0000-0003-4886-4708",
+      "institutions": [
+        {
+          "id": "I4210095624",
+          "display_name": "Alibaba Group (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jian Xu"
+    },
+    {
+      "display_name": "Fei Huang",
+      "id": "A5101488344",
+      "orcid": "https://orcid.org/0000-0002-3709-5053",
+      "institutions": [
+        {
+          "id": "I4210095624",
+          "display_name": "Alibaba Group (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fei Huang"
+    },
+    {
+      "display_name": "Luo Si",
+      "id": "A5101718341",
+      "orcid": "https://orcid.org/0000-0002-3263-234X",
+      "institutions": [
+        {
+          "id": "I4210095624",
+          "display_name": "Alibaba Group (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Luo Si"
+    },
+    {
+      "display_name": "Yuan Ni",
+      "id": "A5112109363",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yuan Ni"
+    },
+    {
+      "display_name": "Guotong Xie",
+      "id": "A5023775139",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4401726822",
+          "display_name": "Ping An (China)",
+          "country_code": null,
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guotong Xie"
+    },
+    {
+      "display_name": "Zhifang Sui",
+      "id": "A5110285832",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I20231570",
+          "display_name": "Peking University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210136793",
+          "display_name": "Peng Cheng Laboratory",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhifang Sui"
+    },
+    {
+      "display_name": "Baobao Chang",
+      "id": "A5021459300",
+      "orcid": "https://orcid.org/0000-0003-2824-6750",
+      "institutions": [
+        {
+          "id": "I20231570",
+          "display_name": "Peking University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210136793",
+          "display_name": "Peng Cheng Laboratory",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Baobao Chang"
+    },
+    {
+      "display_name": "Hui Zong",
+      "id": "A5040755577",
+      "orcid": "https://orcid.org/0000-0002-9142-5017",
+      "institutions": [
+        {
+          "id": "I116953780",
+          "display_name": "Tongji University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210086647",
+          "display_name": "Philips (China)",
+          "country_code": "CN",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hui Zong"
+    },
+    {
+      "display_name": "Zheng Yuan",
+      "id": "A5020682113",
+      "orcid": "https://orcid.org/0000-0001-7179-2437",
+      "institutions": [
+        {
+          "id": "I99065089",
+          "display_name": "Tsinghua University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zheng Yuan"
+    },
+    {
+      "display_name": "Linfeng Li",
+      "id": "A5100343200",
+      "orcid": "https://orcid.org/0000-0001-6185-4999",
+      "institutions": [
+        {
+          "id": "I4210144487",
+          "display_name": "Cloud Computing Center",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Linfeng Li"
+    },
+    {
+      "display_name": "Jun Yan",
+      "id": "A5114549734",
+      "orcid": "https://orcid.org/0000-0003-3048-9604",
+      "institutions": [
+        {
+          "id": "I4210144487",
+          "display_name": "Cloud Computing Center",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jun Yan"
+    },
+    {
+      "display_name": "Hongying Zan",
+      "id": "A5062969664",
+      "orcid": "https://orcid.org/0000-0002-8874-1262",
+      "institutions": [
+        {
+          "id": "I38877650",
+          "display_name": "Zhengzhou University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210136793",
+          "display_name": "Peng Cheng Laboratory",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hongying Zan"
+    },
+    {
+      "display_name": "Kunli Zhang",
+      "id": "A5066262498",
+      "orcid": "https://orcid.org/0000-0002-9402-1560",
+      "institutions": [
+        {
+          "id": "I38877650",
+          "display_name": "Zhengzhou University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210136793",
+          "display_name": "Peng Cheng Laboratory",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kunli Zhang"
+    },
+    {
+      "display_name": "Buzhou Tang",
+      "id": "A5014238603",
+      "orcid": "https://orcid.org/0000-0003-0271-8246",
+      "institutions": [
+        {
+          "id": "I204983213",
+          "display_name": "Harbin Institute of Technology",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210136793",
+          "display_name": "Peng Cheng Laboratory",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Buzhou Tang"
+    },
+    {
+      "display_name": "Qingcai Chen",
+      "id": "A5101895423",
+      "orcid": "https://orcid.org/0000-0001-8473-7293",
+      "institutions": [
+        {
+          "id": "I204983213",
+          "display_name": "Harbin Institute of Technology",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210136793",
+          "display_name": "Peng Cheng Laboratory",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qingcai Chen"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-01-01",
+  "type": "article",
+  "cited_by_count": 95,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4363608652",
+    "display_name": "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2022.acl-long.544.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2777045944",
+      "display_name": "Zhàng",
+      "level": 3,
+      "score": 0.8389404
+    },
+    {
+      "id": "C2776085556",
+      "display_name": "Chen",
+      "level": 2,
+      "score": 0.79293424
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.41193584
+    },
+    {
+      "id": "C191935318",
+      "display_name": "China",
+      "level": 2,
+      "score": 0.40898496
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.401981
+    },
+    {
+      "id": "C15708023",
+      "display_name": "Humanities",
+      "level": 1,
+      "score": 0.36373186
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.3513289
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.3450277
+    },
+    {
+      "id": "C188147891",
+      "display_name": "Cognitive science",
+      "level": 1,
+      "score": 0.32017538
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.22757158
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.19671872
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.05667609
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.05282834
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11710",
+      "display_name": "Biomedical Text Mining and Ontologies",
+      "score": 0.998
+    },
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9939
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9627
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2022.acl-long.544",
+  "pdf_url": "https://aclanthology.org/2022.acl-long.544.pdf",
+  "retrieved_date": "2025-07-30T16:04:39.008603",
+  "source_database": "OpenAlex"
+}

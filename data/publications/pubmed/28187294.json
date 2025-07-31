@@ -1,0 +1,155 @@
+{
+  "pmid": "28187294",
+  "uid": "28187294",
+  "title": "Comprehensible knowledge model creation for cancer treatment decision making.",
+  "abstract": "BACKGROUND: A wealth of clinical data exists in clinical documents in the form of electronic health records (EHRs). This data can be used for developing knowledge-based recommendation systems that can assist clinicians in clinical decision making and education. One of the big hurdles in developing such systems is the lack of automated mechanisms for knowledge acquisition to enable and educate clinicians in informed decision making. MATERIALS AND METHODS: An automated knowledge acquisition methodology with a comprehensible knowledge model for cancer treatment (CKM-CT) is proposed. With the CKM-CT, clinical data are acquired automatically from documents. Quality of data is ensured by correcting errors and transforming various formats into a standard data format. Data preprocessing involves dimensionality reduction and missing value imputation. Predictive algorithm selection is performed on the basis of the ranking score of the weighted sum model. The knowledge builder prepares knowledge for knowledge-based services: clinical decisions and education support. RESULTS: Data is acquired from 13,788 head and neck cancer (HNC) documents for 3447 patients, including 1526 patients of the oral cavity site. In the data quality task, 160 staging values are corrected. In the preprocessing task, 20 attributes and 106 records are eliminated from the dataset. The Classification and Regression Trees (CRT) algorithm is selected and provides 69.0% classification accuracy in predicting HNC treatment plans, consisting of 11 decision paths that yield 11 decision rules. CONCLUSION: Our proposed methodology, CKM-CT, is helpful to find hidden knowledge in clinical documents. In CKM-CT, the prediction models are developed to assist and educate clinicians for informed decision making. The proposed methodology is generalizable to apply to data of other domains such as breast cancer with a similar objective to assist clinicians in decision making and education.",
+  "authors": [
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Afzal",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea; Department of Software, Sejong University, South Korea. Electronic address: muhammad.afzal@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Hussain",
+      "fore_name": "Maqbool",
+      "initials": "M",
+      "name": "Maqbool Hussain",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea; Department of Software, Sejong University, South Korea. Electronic address: maqbool.hussain@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Ali Khan",
+      "fore_name": "Wajahat",
+      "initials": "W",
+      "name": "Wajahat Ali Khan",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea. Electronic address: wajahat.alikhan@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Ali",
+      "fore_name": "Taqdir",
+      "initials": "T",
+      "name": "Taqdir Ali",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea. Electronic address: taqdir.ali@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Sungyoung",
+      "initials": "S",
+      "name": "Sungyoung Lee",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea. Electronic address: sylee@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Huh",
+      "fore_name": "Eui-Nam",
+      "initials": "EN",
+      "name": "Eui-Nam Huh",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea. Electronic address: johnhuh@khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Farooq Ahmad",
+      "fore_name": "Hafiz",
+      "initials": "H",
+      "name": "Hafiz Farooq Ahmad",
+      "affiliations": [
+        "College of Computer Sciences and Information Technology (CCSIT), King Faisal University, Alahsa, Saudi Arabia. Electronic address: hfahmad@kfu.edu.sa."
+      ]
+    },
+    {
+      "last_name": "Jamshed",
+      "fore_name": "Arif",
+      "initials": "A",
+      "name": "Arif Jamshed",
+      "affiliations": [
+        "Shaukat Khanum Memorial Cancer Hospital and Research Center, Lahore, Pakistan. Electronic address: arifj@skm.org.pk."
+      ]
+    },
+    {
+      "last_name": "Iqbal",
+      "fore_name": "Hassan",
+      "initials": "H",
+      "name": "Hassan Iqbal",
+      "affiliations": [
+        "Department of Otolaryngology and Head and Neck Surgery, The Ohio State University, USA. Electronic address: drhassaniqbal@gmail.com."
+      ]
+    },
+    {
+      "last_name": "Irfan",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Irfan",
+      "affiliations": [
+        "Shaukat Khanum Memorial Cancer Hospital and Research Center, Lahore, Pakistan. Electronic address: mirfan@skm.org.pk."
+      ]
+    },
+    {
+      "last_name": "Abbas Hydari",
+      "fore_name": "Manzar",
+      "initials": "M",
+      "name": "Manzar Abbas Hydari",
+      "affiliations": [
+        "Shaukat Khanum Memorial Cancer Hospital and Research Center, Lahore, Pakistan. Electronic address: Manzar@skm.org.pk."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Computers in biology and medicine",
+    "iso_abbreviation": "Comput Biol Med",
+    "issn": "1879-0534",
+    "issn_type": "Electronic",
+    "volume": "82",
+    "pub_year": "2017",
+    "pub_month": "Mar",
+    "pub_day": "01"
+  },
+  "start_page": "119",
+  "end_page": "129",
+  "pages": "119-129",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Clinical Decision-Making",
+    "Data Accuracy",
+    "Data Mining",
+    "Decision Support Systems, Clinical",
+    "Decision Support Techniques",
+    "Electronic Health Records",
+    "Humans",
+    "Knowledge Bases",
+    "Neoplasms",
+    "Reproducibility of Results",
+    "Sensitivity and Specificity"
+  ],
+  "article_ids": {
+    "pubmed": "28187294",
+    "doi": "10.1016/j.compbiomed.2017.01.010",
+    "pii": "S0010-4825(17)30009-4"
+  },
+  "doi": "10.1016/j.compbiomed.2017.01.010",
+  "dates": {
+    "completed": "2017-12-04",
+    "revised": "2017-12-18"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.779032",
+    "pmid": "28187294"
+  }
+}

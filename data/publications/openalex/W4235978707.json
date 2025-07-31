@@ -1,0 +1,103 @@
+{
+  "openalex_id": "W4235978707",
+  "doi": "https://doi.org/10.2307/2669471",
+  "title": "Fully Model-Based Approaches for Spatially Misaligned Data",
+  "abstract": "Abstract We consider inference using multivariate data that are spatially misaligned; that is, involving variables (typically counts or rates) that are aggregated over differing sets of regional boundaries. Geographic information systems enable the simultaneous display of such datasets, but their current capabilities are essentially only descriptive, not inferential. We describe a hierarchical modeling approach that provides a natural solution to this problem through its ability to sensibly combine information from several sources of data and available prior information. Illustrating in the context of counts, allocation under nonnested regional grids is handled using conditionally independent Poisson-mullinomial models. Explanatory covariales and multilevel responses are also easily accommodated, with spatial correlation modeled using a conditionally autoregressive prior structure. Methods for dealing with missing values in spatial \"edge zones\" are also discussed. Like many recent hierarchical Bayesian applications, computing is implemented via a carefully tailored Metropolis-Hastings algorithm. We illustrate our method with a complex dataset involving inhalation exposure to radon emanating from a depleted uranium fuel processing plant in southwestern Ohio. Structure counts (obtained from U.S. Geological Survey topographical maps) are used to realign sex- and age group-specific U.S. census block group population counts onto a 160-cell circular \"windrose\" centered at the plant.",
+  "authors": [
+    {
+      "display_name": "Andrew S. Mugglin",
+      "id": "A5051491214",
+      "orcid": "https://orcid.org/0000-0002-4862-8214",
+      "institutions": [
+        {
+          "id": "I52357470",
+          "display_name": "The Ohio State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew S. Mugglin"
+    },
+    {
+      "display_name": "Bradley P. Carlin",
+      "id": "A5012243539",
+      "orcid": "https://orcid.org/0000-0002-0684-8753",
+      "institutions": [
+        {
+          "id": "I130238516",
+          "display_name": "University of Minnesota",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bradley P. Carlin"
+    },
+    {
+      "display_name": "Alan E. Gelfand",
+      "id": "A5042522667",
+      "orcid": "https://orcid.org/0000-0002-5671-9212",
+      "institutions": [
+        {
+          "id": "I140172145",
+          "display_name": "University of Connecticut",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alan E. Gelfand"
+    }
+  ],
+  "publication_year": 2000,
+  "publication_date": "2000-09-01",
+  "type": "article",
+  "cited_by_count": 24,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4394736638",
+    "display_name": "Journal of the American Statistical Association",
+    "issn_l": "0162-1459",
+    "issn": [
+      "0162-1459",
+      "1537-274X"
+    ],
+    "type": "journal",
+    "host_organization": null
+  },
+  "volume": "95",
+  "issue": "451",
+  "first_page": "877",
+  "last_page": "877",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5290001
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10757",
+      "display_name": "Geographic Information Systems Studies",
+      "score": 0.9594
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.2307/2669471",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:58:47.519781",
+  "source_database": "OpenAlex"
+}

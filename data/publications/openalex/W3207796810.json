@@ -1,0 +1,326 @@
+{
+  "openalex_id": "W3207796810",
+  "doi": "https://doi.org/10.18653/v1/2022.acl-long.340",
+  "title": "KG-FiD: Infusing Knowledge Graph in Fusion-in-Decoder for Open-Domain Question Answering",
+  "abstract": "Donghan Yu, Chenguang Zhu, Yuwei Fang, Wenhao Yu, Shuohang Wang, Yichong Xu, Xiang Ren, Yiming Yang, Michael Zeng. Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2022.",
+  "authors": [
+    {
+      "display_name": "Donghan Yu",
+      "id": "A5102073967",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I74973139",
+          "display_name": "Carnegie Mellon University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Donghan Yu"
+    },
+    {
+      "display_name": "Chenguang Zhu",
+      "id": "A5034687114",
+      "orcid": "https://orcid.org/0000-0001-6955-8924",
+      "institutions": [
+        {
+          "id": "I1290206253",
+          "display_name": "Microsoft (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Chenguang Zhu"
+    },
+    {
+      "display_name": "Yuwei Fang",
+      "id": "A5102952667",
+      "orcid": "https://orcid.org/0000-0002-8684-089X",
+      "institutions": [
+        {
+          "id": "I1290206253",
+          "display_name": "Microsoft (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuwei Fang"
+    },
+    {
+      "display_name": "Wenhao Yu",
+      "id": "A5028597555",
+      "orcid": "https://orcid.org/0000-0002-4075-5980",
+      "institutions": [
+        {
+          "id": "I107639228",
+          "display_name": "University of Notre Dame",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wenhao Yu"
+    },
+    {
+      "display_name": "Shuohang Wang",
+      "id": "A5073404122",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1290206253",
+          "display_name": "Microsoft (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shuohang Wang"
+    },
+    {
+      "display_name": "Yichong Xu",
+      "id": "A5006654661",
+      "orcid": "https://orcid.org/0000-0002-1302-738X",
+      "institutions": [
+        {
+          "id": "I1290206253",
+          "display_name": "Microsoft (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yichong Xu"
+    },
+    {
+      "display_name": "Xiang Ren",
+      "id": "A5009408707",
+      "orcid": "https://orcid.org/0000-0001-8655-663X",
+      "institutions": [
+        {
+          "id": "I2800817003",
+          "display_name": "Southern California University for Professional Studies",
+          "country_code": "US",
+          "type": "education"
+        },
+        {
+          "id": "I1174212",
+          "display_name": "University of Southern California",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiang Ren"
+    },
+    {
+      "display_name": "Yiming Yang",
+      "id": "A5041434096",
+      "orcid": "https://orcid.org/0000-0003-1359-0364",
+      "institutions": [
+        {
+          "id": "I74973139",
+          "display_name": "Carnegie Mellon University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yiming Yang"
+    },
+    {
+      "display_name": "Michael Zeng",
+      "id": "A5089195158",
+      "orcid": "https://orcid.org/0000-0001-5302-5883",
+      "institutions": [
+        {
+          "id": "I1290206253",
+          "display_name": "Microsoft (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Zeng"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-01-01",
+  "type": "article",
+  "cited_by_count": 32,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4363608652",
+    "display_name": "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2022.acl-long.340.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.5696892
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.53125757
+    },
+    {
+      "id": "C44291984",
+      "display_name": "Question answering",
+      "level": 2,
+      "score": 0.52525324
+    },
+    {
+      "id": "C2987255567",
+      "display_name": "Knowledge graph",
+      "level": 2,
+      "score": 0.5225855
+    },
+    {
+      "id": "C2993776861",
+      "display_name": "Open domain",
+      "level": 3,
+      "score": 0.4966467
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.4730976
+    },
+    {
+      "id": "C155092808",
+      "display_name": "Computational linguistics",
+      "level": 2,
+      "score": 0.45596877
+    },
+    {
+      "id": "C2778774319",
+      "display_name": "Fang",
+      "level": 2,
+      "score": 0.43911073
+    },
+    {
+      "id": "C36503486",
+      "display_name": "Domain (mathematical analysis)",
+      "level": 2,
+      "score": 0.42948663
+    },
+    {
+      "id": "C20556612",
+      "display_name": "Volume (thermodynamics)",
+      "level": 2,
+      "score": 0.4220933
+    },
+    {
+      "id": "C132525143",
+      "display_name": "Graph",
+      "level": 2,
+      "score": 0.41859594
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.34823832
+    },
+    {
+      "id": "C23123220",
+      "display_name": "Information retrieval",
+      "level": 1,
+      "score": 0.3259359
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.24225554
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.24133989
+    },
+    {
+      "id": "C80444323",
+      "display_name": "Theoretical computer science",
+      "level": 1,
+      "score": 0.19883513
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.158301
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C18903297",
+      "display_name": "Ecology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9999
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9992
+    },
+    {
+      "id": "T11273",
+      "display_name": "Advanced Graph Neural Networks",
+      "score": 0.9923
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2022.acl-long.340",
+  "pdf_url": "https://aclanthology.org/2022.acl-long.340.pdf",
+  "retrieved_date": "2025-07-30T15:58:50.613492",
+  "source_database": "OpenAlex"
+}

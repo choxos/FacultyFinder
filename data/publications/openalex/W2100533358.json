@@ -1,0 +1,208 @@
+{
+  "openalex_id": "W2100533358",
+  "doi": "https://doi.org/10.1111/j.2041-210x.2010.00036.x",
+  "title": "The art of modelling range-shifting species",
+  "abstract": "1. Species are shifting their ranges at an unprecedented rate through human transportation and environmental change. Correlative species distribution models (SDMs) are frequently applied for predicting potential future distributions of range-shifting species, despite these models' assumptions that species are at equilibrium with the environments used to train (fit) the models, and that the training data are representative of conditions to which the models are predicted. Here we explore modelling approaches that aim to minimize extrapolation errors and assess predictions against prior biological knowledge. Our aim was to promote methods appropriate to range-shifting species. 2. We use an invasive species, the cane toad in Australia, as an example, predicting potential distributions under both current and climate change scenarios. We use four SDM methods, and trial weighting schemes and choice of background samples appropriate for species in a state of spread. We also test two methods for including information from a mechanistic model. Throughout, we explore graphical techniques for understanding model behaviour and reliability, including the extent of extrapolation. 3. Predictions varied with modelling method and data treatment, particularly with regard to the use and treatment of absence data. Models that performed similarly under current climatic conditions deviated widely when transferred to a novel climatic scenario. 4. The results highlight problems with using SDMs for extrapolation, and demonstrate the need for methods and tools to understand models and predictions. We have made progress in this direction and have implemented exploratory techniques as new options in the free modelling software, MaxEnt. Our results also show that deliberately controlling the fit of models and integrating information from mechanistic models can enhance the reliability of correlative predictions of species in non-equilibrium and novel settings. 5. Implications. The biodiversity of many regions in the world is experiencing novel threats created by species invasions and climate change. Predictions of future species distributions are required for management, but there are acknowledged problems with many current methods, and relatively few advances in techniques for understanding or overcoming these. The methods presented in this manuscript and made accessible in MaxEnt provide a forward step.",
+  "authors": [
+    {
+      "display_name": "Jane Elith",
+      "id": "A5032805182",
+      "orcid": "https://orcid.org/0000-0002-8706-0326",
+      "institutions": [
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jane Elith"
+    },
+    {
+      "display_name": "Michael Kearney",
+      "id": "A5066939927",
+      "orcid": "https://orcid.org/0000-0002-3349-8744",
+      "institutions": [
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Kearney"
+    },
+    {
+      "display_name": "Steven Phillips",
+      "id": "A5081838760",
+      "orcid": "https://orcid.org/0000-0002-5694-0670",
+      "institutions": [
+        {
+          "id": "I1283103587",
+          "display_name": "AT&T (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven Phillips"
+    }
+  ],
+  "publication_year": 2010,
+  "publication_date": "2010-05-24",
+  "type": "article",
+  "cited_by_count": 2558,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S1131227",
+    "display_name": "Methods in Ecology and Evolution",
+    "issn_l": "2041-210X",
+    "issn": [
+      "2041-210X"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "1",
+  "issue": "4",
+  "first_page": "330",
+  "last_page": "342",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C132459708",
+      "display_name": "Extrapolation",
+      "level": 2,
+      "score": 0.72018456
+    },
+    {
+      "id": "C132124917",
+      "display_name": "Species distribution",
+      "level": 3,
+      "score": 0.64115363
+    },
+    {
+      "id": "C204323151",
+      "display_name": "Range (aeronautics)",
+      "level": 2,
+      "score": 0.63484
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5772338
+    },
+    {
+      "id": "C132651083",
+      "display_name": "Climate change",
+      "level": 2,
+      "score": 0.48373917
+    },
+    {
+      "id": "C103215972",
+      "display_name": "Environmental niche modelling",
+      "level": 4,
+      "score": 0.4480029
+    },
+    {
+      "id": "C149782125",
+      "display_name": "Econometrics",
+      "level": 1,
+      "score": 0.4314284
+    },
+    {
+      "id": "C18903297",
+      "display_name": "Ecology",
+      "level": 1,
+      "score": 0.38004148
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.3276654
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.32173175
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.25100964
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.16338247
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.1539886
+    },
+    {
+      "id": "C185933670",
+      "display_name": "Habitat",
+      "level": 2,
+      "score": 0.108657956
+    },
+    {
+      "id": "C102715595",
+      "display_name": "Ecological niche",
+      "level": 3,
+      "score": 0.09819752
+    },
+    {
+      "id": "C192562407",
+      "display_name": "Materials science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C159985019",
+      "display_name": "Composite material",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10895",
+      "display_name": "Species Distribution and Climate Change",
+      "score": 1.0
+    },
+    {
+      "id": "T11691",
+      "display_name": "Forest Insect Ecology and Management",
+      "score": 0.9911
+    },
+    {
+      "id": "T10005",
+      "display_name": "Ecology and Vegetation Dynamics Studies",
+      "score": 0.9897
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1111/j.2041-210x.2010.00036.x",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:29:31.232849",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,207 @@
+{
+  "openalex_id": "W1992631884",
+  "doi": "https://doi.org/10.1109/tvcg.2011.26",
+  "title": "Restoration of Brick and Stone Relief from Single Rubbing Images",
+  "abstract": "We present a two-level approach for height map estimation from single images, aiming at restoring brick and stone relief(BSR) from their rubbing images in a visually plausible manner. In our approach, the base relief of the low frequency component is estimated automatically with a partial differential equation (PDE)-based mesh deformation scheme. A few vertices near the central area of the object region are selected and assigned with heights estimated by an erosion-based contour map. These vertices together with object boundary vertices, boundary normals as well as the partial differential properties of the mesh are taken as constraints to deform the mesh by minimizing a least-squares error functional. The high frequency detail is estimated directly from rubbing images automatically or optionally with minimal interactive processing. The final height map for a restored BSR is obtained by blending height maps of the base relief and high frequency detail. We demonstrate that our method can not only successfully restore several BSR maps from their rubbing images, but also restore some relief-like surfaces from photographic images.",
+  "authors": [
+    {
+      "display_name": "Zhuwen Li",
+      "id": "A5015831706",
+      "orcid": "https://orcid.org/0000-0001-6892-5788",
+      "institutions": [
+        {
+          "id": "I76130692",
+          "display_name": "Zhejiang University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Zhuwen Li"
+    },
+    {
+      "display_name": "Song Wang",
+      "id": "A5115695061",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I76130692",
+          "display_name": "Zhejiang University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Song Wang"
+    },
+    {
+      "display_name": "Jinhui Yu",
+      "id": "A5034398235",
+      "orcid": "https://orcid.org/0000-0002-9946-4854",
+      "institutions": [
+        {
+          "id": "I76130692",
+          "display_name": "Zhejiang University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Jinhui Yu"
+    },
+    {
+      "display_name": "Kwan-Liu Ma",
+      "id": "A5109229937",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I84218800",
+          "display_name": "University of California, Davis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Kwan-Liu Ma"
+    }
+  ],
+  "publication_year": 2011,
+  "publication_date": "2011-02-03",
+  "type": "article",
+  "cited_by_count": 51,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S84775595",
+    "display_name": "IEEE Transactions on Visualization and Computer Graphics",
+    "issn_l": "1077-2626",
+    "issn": [
+      "1077-2626",
+      "1941-0506",
+      "2160-9306"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "18",
+  "issue": "2",
+  "first_page": "177",
+  "last_page": "187",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C2777673350",
+      "display_name": "Rubbing",
+      "level": 2,
+      "score": 0.8718815
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.6605279
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.6333686
+    },
+    {
+      "id": "C62354387",
+      "display_name": "Boundary (topology)",
+      "level": 2,
+      "score": 0.59055257
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.5214383
+    },
+    {
+      "id": "C2781238097",
+      "display_name": "Object (grammar)",
+      "level": 2,
+      "score": 0.5181581
+    },
+    {
+      "id": "C154226666",
+      "display_name": "Brick",
+      "level": 2,
+      "score": 0.47130784
+    },
+    {
+      "id": "C42058472",
+      "display_name": "Base (topology)",
+      "level": 2,
+      "score": 0.457278
+    },
+    {
+      "id": "C36464697",
+      "display_name": "Visualization",
+      "level": 2,
+      "score": 0.417153
+    },
+    {
+      "id": "C121684516",
+      "display_name": "Computer graphics (images)",
+      "level": 1,
+      "score": 0.40554184
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.27822614
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.15016118
+    },
+    {
+      "id": "C192562407",
+      "display_name": "Materials science",
+      "level": 0,
+      "score": 0.09336889
+    },
+    {
+      "id": "C159985019",
+      "display_name": "Composite material",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10531",
+      "display_name": "Advanced Vision and Imaging",
+      "score": 0.9997
+    },
+    {
+      "id": "T10481",
+      "display_name": "Computer Graphics and Visualization Techniques",
+      "score": 0.999
+    },
+    {
+      "id": "T11211",
+      "display_name": "3D Surveying and Cultural Heritage",
+      "score": 0.9968
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tvcg.2011.26",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:05:08.476730",
+  "source_database": "OpenAlex"
+}

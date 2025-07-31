@@ -1,0 +1,219 @@
+{
+  "openalex_id": "W2075385817",
+  "doi": "https://doi.org/10.1137/090775622",
+  "title": "Parameter and State Model Reduction for Large-Scale Statistical Inverse Problems",
+  "abstract": "A greedy algorithm for the construction of a reduced model with reduction in both parameter and state is developed for an efficient solution of statistical inverse problems governed by partial differential equations with distributed parameters. Large-scale models are too costly to evaluate repeatedly, as is required in the statistical setting. Furthermore, these models often have high-dimensional parametric input spaces, which compounds the difficulty of effectively exploring the uncertainty space. We simultaneously address both challenges by constructing a projection-based reduced model that accepts low-dimensional parameter inputs and whose model evaluations are inexpensive. The associated parameter and state bases are obtained through a greedy procedure that targets the governing equations, model outputs, and prior information. The methodology and results are presented for groundwater inverse problems in one and two dimensions.",
+  "authors": [
+    {
+      "display_name": "Chad Lieberman",
+      "id": "A5014212692",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Chad Lieberman"
+    },
+    {
+      "display_name": "Karen Willcox",
+      "id": "A5017431306",
+      "orcid": "https://orcid.org/0000-0003-2156-9338",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karen Willcox"
+    },
+    {
+      "display_name": "Omar Ghattas",
+      "id": "A5049331711",
+      "orcid": "https://orcid.org/0000-0001-7742-2509",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Omar Ghattas"
+    }
+  ],
+  "publication_year": 2010,
+  "publication_date": "2010-01-01",
+  "type": "article",
+  "cited_by_count": 247,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S165512578",
+    "display_name": "SIAM Journal on Scientific Computing",
+    "issn_l": "1064-8275",
+    "issn": [
+      "1064-8275",
+      "1095-7197"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320508"
+  },
+  "volume": "32",
+  "issue": "5",
+  "first_page": "2523",
+  "last_page": "2542",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://dspace.mit.edu/bitstream/1721.1/60569/1/Lieberman-2010-PARAMETER%20AND%20STATE.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.6540053
+    },
+    {
+      "id": "C111335779",
+      "display_name": "Reduction (mathematics)",
+      "level": 2,
+      "score": 0.60573983
+    },
+    {
+      "id": "C135252773",
+      "display_name": "Inverse problem",
+      "level": 2,
+      "score": 0.5874587
+    },
+    {
+      "id": "C117251300",
+      "display_name": "Parametric statistics",
+      "level": 2,
+      "score": 0.5829606
+    },
+    {
+      "id": "C57493831",
+      "display_name": "Projection (relational algebra)",
+      "level": 2,
+      "score": 0.56027377
+    },
+    {
+      "id": "C207467116",
+      "display_name": "Inverse",
+      "level": 2,
+      "score": 0.5578013
+    },
+    {
+      "id": "C28826006",
+      "display_name": "Applied mathematics",
+      "level": 1,
+      "score": 0.53457695
+    },
+    {
+      "id": "C2778755073",
+      "display_name": "Scale (ratio)",
+      "level": 2,
+      "score": 0.53084624
+    },
+    {
+      "id": "C93779851",
+      "display_name": "Partial differential equation",
+      "level": 2,
+      "score": 0.5232336
+    },
+    {
+      "id": "C126255220",
+      "display_name": "Mathematical optimization",
+      "level": 1,
+      "score": 0.5154203
+    },
+    {
+      "id": "C72434380",
+      "display_name": "State space",
+      "level": 2,
+      "score": 0.49172357
+    },
+    {
+      "id": "C51823790",
+      "display_name": "Greedy algorithm",
+      "level": 2,
+      "score": 0.46751362
+    },
+    {
+      "id": "C114289077",
+      "display_name": "Statistical model",
+      "level": 2,
+      "score": 0.45077774
+    },
+    {
+      "id": "C73586568",
+      "display_name": "Parameter space",
+      "level": 2,
+      "score": 0.4360026
+    },
+    {
+      "id": "C48103436",
+      "display_name": "State (computer science)",
+      "level": 2,
+      "score": 0.42271036
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.33520567
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.14311847
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.13637155
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10928",
+      "display_name": "Probabilistic and Robust Engineering Design",
+      "score": 0.9993
+    },
+    {
+      "id": "T11206",
+      "display_name": "Model Reduction and Neural Networks",
+      "score": 0.9968
+    },
+    {
+      "id": "T12814",
+      "display_name": "Gaussian Processes and Bayesian Inference",
+      "score": 0.995
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1137/090775622",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:22:15.962563",
+  "source_database": "OpenAlex"
+}

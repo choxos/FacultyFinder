@@ -1,0 +1,268 @@
+{
+  "openalex_id": "W2149557440",
+  "doi": "https://doi.org/10.1162/tacl_a_00177",
+  "title": "Grounded Compositional Semantics for Finding and Describing Images with Sentences",
+  "abstract": "Previous work on Recursive Neural Networks (RNNs) shows that these models can produce compositional feature vectors for accurately representing and classifying sentences or images. However, the sentence vectors of previous models cannot accurately represent visually grounded meaning. We introduce the DT-RNN model which uses dependency trees to embed sentences into a vector space in order to retrieve images that are described by those sentences. Unlike previous RNN-based models which use constituency trees, DT-RNNs naturally focus on the action and agents in a sentence. They are better able to abstract from the details of word order and syntactic expression. DT-RNNs outperform other recursive and recurrent neural networks, kernelized CCA and a bag-of-words baseline on the tasks of finding an image that fits a sentence description and vice versa. They also give more similar representations to sentences that describe the same image.",
+  "authors": [
+    {
+      "display_name": "Richard Socher",
+      "id": "A5059955534",
+      "orcid": "https://orcid.org/0000-0002-3577-639X",
+      "institutions": [
+        {
+          "id": "I4210156583",
+          "display_name": "Laboratoire d'Informatique de Paris-Nord",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Richard Socher"
+    },
+    {
+      "display_name": "Andrej Karpathy",
+      "id": "A5009290031",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210156583",
+          "display_name": "Laboratoire d'Informatique de Paris-Nord",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Andrej Karpathy"
+    },
+    {
+      "display_name": "Quoc V. Le",
+      "id": "A5088551093",
+      "orcid": "https://orcid.org/0000-0002-1087-2844",
+      "institutions": [
+        {
+          "id": "I1291425158",
+          "display_name": "Google (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Quoc V. Le"
+    },
+    {
+      "display_name": "Christopher D. Manning",
+      "id": "A5046006076",
+      "orcid": "https://orcid.org/0000-0001-6155-649X",
+      "institutions": [
+        {
+          "id": "I4210156583",
+          "display_name": "Laboratoire d'Informatique de Paris-Nord",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Christopher D. Manning"
+    },
+    {
+      "display_name": "Andrew Y. Ng",
+      "id": "A5112456378",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210156583",
+          "display_name": "Laboratoire d'Informatique de Paris-Nord",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Andrew Y. Ng"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-12-01",
+  "type": "article",
+  "cited_by_count": 867,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2729999759",
+    "display_name": "Transactions of the Association for Computational Linguistics",
+    "issn_l": "2307-387X",
+    "issn": [
+      "2307-387X"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320244"
+  },
+  "volume": "2",
+  "issue": null,
+  "first_page": "207",
+  "last_page": "218",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "diamond",
+    "oa_url": "http://www.mitpressjournals.org/doi/pdf/10.1162/tacl_a_00177",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.84920573
+    },
+    {
+      "id": "C2777530160",
+      "display_name": "Sentence",
+      "level": 2,
+      "score": 0.80869186
+    },
+    {
+      "id": "C147168706",
+      "display_name": "Recurrent neural network",
+      "level": 3,
+      "score": 0.7933834
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.70030266
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.6167886
+    },
+    {
+      "id": "C19768560",
+      "display_name": "Dependency (UML)",
+      "level": 2,
+      "score": 0.5711451
+    },
+    {
+      "id": "C90805587",
+      "display_name": "Word (group theory)",
+      "level": 2,
+      "score": 0.56804216
+    },
+    {
+      "id": "C2776401178",
+      "display_name": "Feature (linguistics)",
+      "level": 2,
+      "score": 0.51117426
+    },
+    {
+      "id": "C83665646",
+      "display_name": "Feature vector",
+      "level": 2,
+      "score": 0.5085865
+    },
+    {
+      "id": "C184337299",
+      "display_name": "Semantics (computer science)",
+      "level": 2,
+      "score": 0.50201297
+    },
+    {
+      "id": "C192209626",
+      "display_name": "Focus (optics)",
+      "level": 2,
+      "score": 0.4771868
+    },
+    {
+      "id": "C70777604",
+      "display_name": "Word order",
+      "level": 2,
+      "score": 0.42321754
+    },
+    {
+      "id": "C50644808",
+      "display_name": "Artificial neural network",
+      "level": 2,
+      "score": 0.29006937
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.115128934
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C120665830",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11714",
+      "display_name": "Multimodal Machine Learning Applications",
+      "score": 0.9997
+    },
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9979
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9976
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1162/tacl_a_00177",
+  "pdf_url": "http://www.mitpressjournals.org/doi/pdf/10.1162/tacl_a_00177",
+  "retrieved_date": "2025-07-30T14:29:32.300922",
+  "source_database": "OpenAlex"
+}

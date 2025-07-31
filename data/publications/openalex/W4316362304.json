@@ -1,0 +1,281 @@
+{
+  "openalex_id": "W4316362304",
+  "doi": "https://doi.org/10.1111/1753-0407.13354",
+  "title": "Nailfold capillaroscopy and deep learning in diabetes",
+  "abstract": "To determine whether nailfold capillary images, acquired using video capillaroscopy, can provide diagnostic information about diabetes and its complications.Nailfold video capillaroscopy was performed in 120 adult patients with and without type 1 or type 2 diabetes, and with and without cardiovascular disease. Nailfold images were analyzed using convolutional neural networks, a deep learning technique. Cross-validation was used to develop and test the ability of models to predict five5 prespecified states (diabetes, high glycosylated hemoglobin, cardiovascular event, retinopathy, albuminuria, and hypertension). The performance of each model for a particular state was assessed by estimating areas under the receiver operating characteristics curves (AUROC) and precision recall curves (AUPR).A total of 5236 nailfold images were acquired from 120 participants (mean 44 images per participant) and were all available for analysis. Models were able to accurately identify the presence of diabetes, with AUROC 0.84 (95% confidence interval [CI] 0.76, 0.91) and AUPR 0.84 (95% CI 0.78, 0.93), respectively. Models were also able to predict a history of cardiovascular events in patients with diabetes, with AUROC 0.65 (95% CI 0.51, 0.78) and AUPR 0.72 (95% CI 0.62, 0.88) respectively.This proof-of-concept study demonstrates the potential of machine learning for identifying people with microvascular capillary changes from diabetes based on nailfold images, and for possibly identifying those most likely to have diabetes-related complications.目的:探讨视频毛细血管镜获取的甲襞毛细血管图像能否提供糖尿病及其并发症的诊断信息。 方法:对120例成人患者进行视频甲襞毛细血管镜检查, 患者有或无1型或2型糖尿病, 有或无心血管疾病。使用卷积神经网络(CNNs), 一种深度学习技术对甲襞图像进行分析。交叉验证用于开发和检验模型预测5种预设状态(糖尿病、高HbA1c 、心血管事件、视网膜病变、白蛋白尿和高血压)的能力。通过评估受试者工作特征曲线下面积(AUROC)和精确召回曲线(AUPR)来评估每个模型对特定状态的性能。 结果:120名参与者共获得5,236张甲襞图像(平均每位参与者44张), 所有图像均可用于分析。模型能够准确识别糖尿病的存在, AUROC为0.84 (95% CI 0.76, 0.91), AUPR为0.84 (95% CI 0.78, 0.93)。模型还能够预测糖尿病患者的心血管事件史, AUROC为0.65 (95% CI 0.51, 0.78), AUPR为0.72 (95% CI 0.62, 0.88)。 结论:这项概念验证研究证明了机器学习在基于甲襞图像从糖尿病中识别微血管毛细血管改变人群的潜力, 并可能识别出最有可能发生糖尿病相关并发症的人群。.",
+  "authors": [
+    {
+      "display_name": "Reema Shah",
+      "id": "A5015131000",
+      "orcid": "https://orcid.org/0000-0002-3350-6206",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I2802834092",
+          "display_name": "Population Health Research Institute",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I76442945",
+          "display_name": "Hamilton Health Sciences",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Reema Shah"
+    },
+    {
+      "display_name": "Jeremy Petch",
+      "id": "A5022356009",
+      "orcid": "https://orcid.org/0000-0003-1614-1046",
+      "institutions": [
+        {
+          "id": "I2802834092",
+          "display_name": "Population Health Research Institute",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I76442945",
+          "display_name": "Hamilton Health Sciences",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeremy Petch"
+    },
+    {
+      "display_name": "Walter Nelson",
+      "id": "A5018904375",
+      "orcid": "https://orcid.org/0000-0002-5216-7617",
+      "institutions": [
+        {
+          "id": "I76442945",
+          "display_name": "Hamilton Health Sciences",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Walter Nelson"
+    },
+    {
+      "display_name": "Karsten Roth",
+      "id": "A5103125177",
+      "orcid": "https://orcid.org/0000-0003-1510-7217",
+      "institutions": [
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karsten Roth"
+    },
+    {
+      "display_name": "Michael D. Noseworthy",
+      "id": "A5074228294",
+      "orcid": "https://orcid.org/0000-0003-1464-159X",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael D. Noseworthy"
+    },
+    {
+      "display_name": "Marzyeh Ghassemi",
+      "id": "A5070063054",
+      "orcid": "https://orcid.org/0000-0001-6349-7251",
+      "institutions": [
+        {
+          "id": "I4210127509",
+          "display_name": "Vector Institute",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marzyeh Ghassemi"
+    },
+    {
+      "display_name": "Hertzel C. Gerstein",
+      "id": "A5024577116",
+      "orcid": "https://orcid.org/0000-0001-8072-2836",
+      "institutions": [
+        {
+          "id": "I2802834092",
+          "display_name": "Population Health Research Institute",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I76442945",
+          "display_name": "Hamilton Health Sciences",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Hertzel C. Gerstein"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-01-15",
+  "type": "article",
+  "cited_by_count": 18,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S181994529",
+    "display_name": "Journal of Diabetes",
+    "issn_l": "1753-0407",
+    "issn": [
+      "1753-0407",
+      "1753-0393"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "15",
+  "issue": "2",
+  "first_page": "145",
+  "last_page": "151",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1753-0407.13354",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.9194759
+    },
+    {
+      "id": "C555293320",
+      "display_name": "Diabetes mellitus",
+      "level": 2,
+      "score": 0.72529805
+    },
+    {
+      "id": "C58471807",
+      "display_name": "Receiver operating characteristic",
+      "level": 2,
+      "score": 0.60166806
+    },
+    {
+      "id": "C2777180221",
+      "display_name": "Type 2 diabetes",
+      "level": 3,
+      "score": 0.5753126
+    },
+    {
+      "id": "C44249647",
+      "display_name": "Confidence interval",
+      "level": 2,
+      "score": 0.54385734
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.52360326
+    },
+    {
+      "id": "C2778313320",
+      "display_name": "Retinopathy",
+      "level": 3,
+      "score": 0.5001726
+    },
+    {
+      "id": "C2776174234",
+      "display_name": "Albuminuria",
+      "level": 3,
+      "score": 0.4782623
+    },
+    {
+      "id": "C76318530",
+      "display_name": "Area under the curve",
+      "level": 2,
+      "score": 0.4577725
+    },
+    {
+      "id": "C2779829184",
+      "display_name": "Diabetic retinopathy",
+      "level": 3,
+      "score": 0.43481213
+    },
+    {
+      "id": "C134018914",
+      "display_name": "Endocrinology",
+      "level": 1,
+      "score": 0.09573951
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11330",
+      "display_name": "Systemic Sclerosis and Related Diseases",
+      "score": 0.9828
+    },
+    {
+      "id": "T12433",
+      "display_name": "Skin Diseases and Diabetes",
+      "score": 0.9784
+    },
+    {
+      "id": "T11227",
+      "display_name": "Diabetic Foot Ulcer Assessment and Management",
+      "score": 0.971
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1111/1753-0407.13354",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1753-0407.13354",
+  "retrieved_date": "2025-07-30T14:35:20.380355",
+  "source_database": "OpenAlex"
+}

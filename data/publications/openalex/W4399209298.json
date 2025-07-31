@@ -1,0 +1,259 @@
+{
+  "openalex_id": "W4399209298",
+  "doi": "https://doi.org/10.1002/jeo2.12042",
+  "title": "Are orthopaedic randomized controlled trials as statistically fragile as portrayed? A call for improved interpretation of the statistical fragility index",
+  "abstract": "The fragility index (FI) was first proposed by Walsh et al. in 2014 as a statistical tool to augment p values and 95% confidence intervals and to facilitate the identification of trials with less robust results [10]. Specifically, in the context of increased criticism around threshold p-values as an overly simple concept to determine whether a treatment effect is truly present, the FI determines the minimum number of patients in a trial who would need to experience an alternative or 'flipped' outcome (such as a patient experiencing treatment success actually experiencing treatment failure) to reverse the significance of that trial. Calculation of the FI entails simultaneously adding and subtracting outcome events (i.e., treatment successes) and nonevents (i.e., treatment failures) in a sequential manner until the p-value of that trial rises above the commonly applied 0.05 threshold level, thus providing a measure of the trials' 'fragility' or 'robustness' to alternate patient outcomes [10]. Recently, the orthopaedic literature has experienced a surge in the number of publications applying the FI to study the fragility of randomized controlled trials (RCTs) in orthopaedics, with FI-based systematic reviews published across virtually all subspecialties [2-9]. Nevertheless, each of these seems to propose some form of the same conclusion: 'RCTs published on [insert topic] are frequently fragile and their significance can be flipped by changes in the outcomes of only a handful of patients'. This is regardless of whether the median FI was found to be just one patient or seven patients. This raises the question: if every treatment, subspecialty, or topic in orthopaedic surgery is characterized by fragile RCTs, are there any conclusions in which we can have confidence? Or is it actually the case that without official thresholds as to what constitutes a 'fragile' versus 'robust' RCT, authors feel pressured to come up with definitive and attention-grabbing conclusions regarding the statistical fragility of RCTs on their chosen topic, particularly in an era of 'publish or perish'? This 'gold-rush' for publications applying the FI has led to an abundance of studies that warn of RCT fragility, resulting in a positive feedback loop in which the latest FI-based review uses the claims and methodology of the previous FI-based review to support its own claims of trial fragility. While Xin and Lin have proposed guidelines for interpreting FIs based on an empirical analysis of studies in the Cochrane Library [11], these have yet to be validated and are rarely referenced. Instead, authors have frequently defaulted to direct comparisons between the FI and the number of patients lost to follow-up in an attempt to define a threshold by which an RCT can be considered 'fragile'. Thus, it is common to read conclusions like: 'Ten of the trials reported that the number of patients lost to follow-up exceeded the fragility index, meaning that results of the patients lost to follow-up could theoretically completely reverse the study conclusions'; or 'These figures are cause for significant concern, as it is possible that in approximately two-thirds of the RCTs, the significance could have been reversed had the trial had complete follow-up' or 'Significant outcomes reported in orthopaedic surgery RCTs are often fragile and outcomes of the patients lost to follow-up could alter the significance of the results and hence substantial caution is needed before translating their results into clinical practice'. The problem with such comparisons is that the FI and the number of patients lost to follow-up are fundamentally incomparable on a statistical level, despite the direct comparisons being made by a majority of FI-based systematic reviews. This leads to the potential for what are erroneous claims that the results of a statistically significant RCT could be flipped simply by maintaining study follow-up, as the statistical effect of a patient converting from one outcome group to the other may be drastically different from the effect of adding an additional patient to a specific outcome group. For example, take a theoretical RCT consisting of 100 patients (50 in each treatment arm), with 40 out of 50 patients in the experimental group experiencing treatment success and 26 out of 50 patients in the control group experiencing treatment success. This trial has a p value of 0.006 and an FI of 4, meaning that at least four patients included in the trial results would need to experience the opposite outcome for the trial to flip from significant to non-significant. If there were equivalency of statistical impact between the number of patients lost to follow-up and the FI, as the majority of FI-based studies seem to claim, adding four patients lost to follow-up back to the trial could theoretically result in a p value that exceeded 0.05. However, in practice, adding four patients to this trial in the distribution that maximizes the effect on the p value (maximally increases the p value) while assuming an equal chance that the patients lost to follow-up were from the control group as were from the experimental group is only able to increase the p value to 0.023, failing to demonstrate a reversal of significance (Figure 1). Regardless of the outcomes these four additional patients experience, there is no statistically feasible way for them to reverse the significance of the trial. In fact, a reversal of significance would not be achieved until eight patients lost to follow-up are added to the trial in the distribution of maximal significance reversal, assuming an equal distribution from experimental and control groups, which is twice the original trial's FI. Thus, comparisons between the number of patients lost to follow-up and the FI, specifically those misinterpreting the number of patients lost to follow-up as being equivalent to the FI, have resulted in an overabundance of claims of RCT fragility and perhaps unwarranted warnings of fragile conclusions around orthopaedic RCTs. So, in the absence of widely agreed-upon thresholds as to what constitutes a 'fragile' versus 'robust' RCT conclusion, how should the orthopaedic surgeon interpret fragility values, particularly as the number of studies applying the FI continues to rise? Just as a significant p value should not be treated as definitive evidence that a treatment effect truly exists, neither should a 'low' FI be treated as unshakeable evidence that an RCT's conclusions are irrelevant or prone to bias. While the number of patients lost to follow-up is, of course, an important metric to consider when evaluating the results of an RCT, direct comparisons with the FI should be avoided, as the commonly reported claim that the results of an RCT could be flipped simply by maintaining study follow-up is often inaccurate and misleading. In addition, a large gap has been identified between statistical methods research related to missing data and the use of these methods in application settings, including in RCTs published in the top medical journals [1]. Thus, there is also a need for improved use and reporting of appropriate methods to handle patients lost to follow-up, including intention-to-treat (ITT) and multiple imputation methods [1]. It is likely that RCTs with relatively 'low' FIs are not as sensitive to patients lost to follow-up as previously portrayed in the literature. Nevertheless, the demarcation between a 'fragile' and 'robust' RCT will likely remain unclear for the foreseeable future due to the sheer number of factors that contribute to the significance of a trial. Because it is difficult to account for all of these factors, including the sample size of the original trial, patients excluded, and patients lost to follow-up, in a single metric of fragility, it will be the responsibility of the orthopaedic surgeon to holistically evaluate the significance of each RCT in its own context to determine whether a treatment effect truly exists. Thus, when interpreted in its proper context, the FI can help surgeons better assess the robustness of RCT conclusions, but it should not be the sole determinant of fragility. p Values, 95% confidence intervals, and FIs all have a role in assisting surgeons in determining the validity of conclusions from RCTs; however, it is unlikely that a single metric alone will be able to definitively conclude whether a trial is truly 'fragile' or 'robust'. Jacob F. Oeding: Study design; data acquisition; data analysis; data interpretation; manuscript drafting and critical revision. Olufemi R. Ayeni, Eric Hamrin Senorski, Stefano Zaffagnini, Alberto Grassi and Kristian Samuelsson: Critical revision. The authors declare no conflict of interest. The ethics statement is not available.",
+  "authors": [
+    {
+      "display_name": "Jacob F. Oeding",
+      "id": "A5017889826",
+      "orcid": "https://orcid.org/0000-0002-4562-4373",
+      "institutions": [
+        {
+          "id": "I2802423016",
+          "display_name": "WinnMed",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I881427289",
+          "display_name": "University of Gothenburg",
+          "country_code": "SE",
+          "type": "funder"
+        },
+        {
+          "id": "I1330342723",
+          "display_name": "Mayo Clinic",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Jacob F. Oeding"
+    },
+    {
+      "display_name": "Olufemi R. Ayeni",
+      "id": "A5048426258",
+      "orcid": "https://orcid.org/0000-0003-4219-8564",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Olufemi R. Ayeni"
+    },
+    {
+      "display_name": "Eric Hamrin Senorski",
+      "id": "A5078675172",
+      "orcid": "https://orcid.org/0000-0002-9340-0147",
+      "institutions": [
+        {
+          "id": "I881427289",
+          "display_name": "University of Gothenburg",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eric Hamrin Senorski"
+    },
+    {
+      "display_name": "Stefano Zaffagnini",
+      "id": "A5008161261",
+      "orcid": "https://orcid.org/0000-0002-2941-1407",
+      "institutions": [
+        {
+          "id": "I4210121742",
+          "display_name": "Istituto Ortopedico Rizzoli",
+          "country_code": "IT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stefano Zaffagnini"
+    },
+    {
+      "display_name": "Alberto Grassi",
+      "id": "A5041734695",
+      "orcid": "https://orcid.org/0000-0003-4236-1798",
+      "institutions": [
+        {
+          "id": "I4210121742",
+          "display_name": "Istituto Ortopedico Rizzoli",
+          "country_code": "IT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alberto Grassi"
+    },
+    {
+      "display_name": "Kristian Samuelsson",
+      "id": "A5053862149",
+      "orcid": "https://orcid.org/0000-0001-5383-3370",
+      "institutions": [
+        {
+          "id": "I881427289",
+          "display_name": "University of Gothenburg",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kristian Samuelsson"
+    }
+  ],
+  "publication_year": 2024,
+  "publication_date": "2024-05-31",
+  "type": "article",
+  "cited_by_count": 4,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2738219336",
+    "display_name": "Journal of Experimental Orthopaedics",
+    "issn_l": "2197-1153",
+    "issn": [
+      "2197-1153"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319965"
+  },
+  "volume": "11",
+  "issue": "3",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jeo2.12042",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C80191262",
+      "display_name": "Fragility",
+      "level": 2,
+      "score": 0.8114712
+    },
+    {
+      "id": "C2777382242",
+      "display_name": "Index (typography)",
+      "level": 2,
+      "score": 0.6659963
+    },
+    {
+      "id": "C527412718",
+      "display_name": "Interpretation (philosophy)",
+      "level": 2,
+      "score": 0.6403078
+    },
+    {
+      "id": "C168563851",
+      "display_name": "Randomized controlled trial",
+      "level": 2,
+      "score": 0.53618485
+    },
+    {
+      "id": "C68312169",
+      "display_name": "Orthopedic surgery",
+      "level": 2,
+      "score": 0.51552796
+    },
+    {
+      "id": "C2986587452",
+      "display_name": "Statistical analysis",
+      "level": 2,
+      "score": 0.43599275
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.3576898
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.32428452
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.30498752
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.19926432
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.15070012
+    },
+    {
+      "id": "C141071460",
+      "display_name": "Surgery",
+      "level": 1,
+      "score": 0.12036738
+    },
+    {
+      "id": "C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "score": 0.06759325
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C147789679",
+      "display_name": "Physical chemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10804",
+      "display_name": "Health Systems, Economic Evaluations, Quality of Life",
+      "score": 0.9939
+    },
+    {
+      "id": "T10206",
+      "display_name": "Meta-analysis and systematic reviews",
+      "score": 0.9908
+    },
+    {
+      "id": "T11509",
+      "display_name": "Hip and Femur Fractures",
+      "score": 0.9869
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1002/jeo2.12042",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jeo2.12042",
+  "retrieved_date": "2025-07-30T14:13:38.828878",
+  "source_database": "OpenAlex"
+}

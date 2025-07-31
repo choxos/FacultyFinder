@@ -1,0 +1,194 @@
+{
+  "openalex_id": "W2129826572",
+  "doi": "https://doi.org/10.14358/pers.75.7.819",
+  "title": "Forest Type Mapping using Object-specific Texture Measures from Multispectral Ikonos Imagery",
+  "abstract": "This study investigated the use of a geographic object-based image analysis (GEOBIA) approach with the incorporation of object-specific grey-level co-occurrence matrix (GLCM) texture measures from a multispectral Ikonos image for delineation of deciduous, evergreen, and mixed forest types in Guilford Courthouse National Military Park, North Carolina. A series of automated segmentations was produced at a range of scales, each resulting in an associated range of number and size of objects (or segments). Prior to classification, the spatial autocorrelation of each segmentation was evaluated by calculating Moran’s I using the average image digital numbers (DNs) per segment. An initial assumption was made that the optimal segmentation scales would have the lowest spatial autocorrelation, and conversely, that over- and under-segmentation would result in higher autocorrelation between segments. At these optimal segmentation scales, the automated segmentation was found to yield information comparable to manually interpreted stand-level forest maps in terms of the size and number of segments. A series of object-based classifications was carried out on the image at the entire range of segmentation scales. The results demonstrated that the scale of segmentation directly influenced the object-based forest type classification results. The accuracies were higher for classification of images identified from a spatial autocorrelation analysis to have an optimal segmentation, compared to those determined to have over- and under-segmentation. An overall accuracy of 79 percent with a Kappa of 0.65 was obtained at the optimal segmentation scale of 19. The addition of object-specific GLCM multiple texture analysis improved classification accuracies up to a value of 83 percent overall accuracy and a Kappa of 0.71 by reducing the confusion between evergreen and mixed forest types. Although some misclassification still remained because of local segmentation quality, a visual assessment of the texture-enhanced GEOBIA classification generally agreeable with manually interpreted forest types.",
+  "authors": [
+    {
+      "display_name": "Minho Kim",
+      "id": "A5100386965",
+      "orcid": "https://orcid.org/0000-0002-9504-5935",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Minho Kim"
+    },
+    {
+      "display_name": "Marguerite Madden",
+      "id": "A5086151328",
+      "orcid": "https://orcid.org/0000-0001-8519-6636",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Marguerite Madden"
+    },
+    {
+      "display_name": "Timothy A. Warner",
+      "id": "A5091637832",
+      "orcid": "https://orcid.org/0000-0002-0414-9748",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Timothy A. Warner"
+    }
+  ],
+  "publication_year": 2009,
+  "publication_date": "2009-07-01",
+  "type": "article",
+  "cited_by_count": 157,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S99003644",
+    "display_name": "Photogrammetric Engineering & Remote Sensing",
+    "issn_l": "0099-1112",
+    "issn": [
+      "0099-1112",
+      "2374-8079"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4320800734"
+  },
+  "volume": "75",
+  "issue": "7",
+  "first_page": "819",
+  "last_page": "829",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://doi.org/10.14358/pers.75.7.819",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C89600930",
+      "display_name": "Segmentation",
+      "level": 2,
+      "score": 0.7552252
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.6427093
+    },
+    {
+      "id": "C159620131",
+      "display_name": "Spatial analysis",
+      "level": 2,
+      "score": 0.6309763
+    },
+    {
+      "id": "C65885262",
+      "display_name": "Scale-space segmentation",
+      "level": 4,
+      "score": 0.601706
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.5844053
+    },
+    {
+      "id": "C173163844",
+      "display_name": "Multispectral image",
+      "level": 2,
+      "score": 0.57397854
+    },
+    {
+      "id": "C25694479",
+      "display_name": "Segmentation-based object categorization",
+      "level": 5,
+      "score": 0.5682539
+    },
+    {
+      "id": "C2778755073",
+      "display_name": "Scale (ratio)",
+      "level": 2,
+      "score": 0.50114584
+    },
+    {
+      "id": "C5297727",
+      "display_name": "Autocorrelation",
+      "level": 2,
+      "score": 0.4824346
+    },
+    {
+      "id": "C124504099",
+      "display_name": "Image segmentation",
+      "level": 3,
+      "score": 0.46397027
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.45206815
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.43574068
+    },
+    {
+      "id": "C2781238097",
+      "display_name": "Object (grammar)",
+      "level": 2,
+      "score": 0.41798612
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.37208822
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.33505017
+    },
+    {
+      "id": "C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "score": 0.32132003
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.26717436
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.19600776
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10111",
+      "display_name": "Remote Sensing in Agriculture",
+      "score": 0.9993
+    },
+    {
+      "id": "T12157",
+      "display_name": "Geochemistry and Geologic Mapping",
+      "score": 0.9976
+    },
+    {
+      "id": "T10226",
+      "display_name": "Land Use and Ecosystem Services",
+      "score": 0.9969
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.14358/pers.75.7.819",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:05:44.660426",
+  "source_database": "OpenAlex"
+}

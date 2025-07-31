@@ -1,0 +1,165 @@
+{
+  "openalex_id": "W2145452316",
+  "doi": "https://doi.org/10.1109/tpami.2007.70811",
+  "title": "Query by Transduction",
+  "abstract": "There has been recently a growing interest in the use of transductive inference for learning. We expand here the scope of transductive inference to active learning in a stream-based setting. Towards that end this paper proposes Query-by-Transduction (QBT) as a novel active learning algorithm. QBT queries the label of an example based on the p-values obtained using transduction. We show that QBT is closely related to Query-by-Committee (QBC) using relations between transduction, Bayesian statistical testing, Kullback-Leibler divergence, and Shannon information. The feasibility and utility of QBT is shown on both binary and multi-class classification tasks using SVM as the choice classifier. Our experimental results show that QBT compares favorably, in terms of mean generalization, against random sampling, committee-based active learning, margin-based active learning, and QBC in the stream-based setting.",
+  "authors": [
+    {
+      "display_name": "Shen-Shyang Ho",
+      "id": "A5049730546",
+      "orcid": "https://orcid.org/0000-0002-0353-7159",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Shen-Shyang Ho"
+    },
+    {
+      "display_name": "Harry Wechsler",
+      "id": "A5004114212",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I162714631",
+          "display_name": "George Mason University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Wechsler"
+    }
+  ],
+  "publication_year": 2008,
+  "publication_date": "2008-07-24",
+  "type": "article",
+  "cited_by_count": 56,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S199944782",
+    "display_name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "issn_l": "0162-8828",
+    "issn": [
+      "0162-8828",
+      "1939-3539",
+      "2160-9292"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320439"
+  },
+  "volume": "30",
+  "issue": "9",
+  "first_page": "1557",
+  "last_page": "1571",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C15152581",
+      "display_name": "Transduction (biophysics)",
+      "level": 2,
+      "score": 0.77098596
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.7316016
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.617934
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5909
+    },
+    {
+      "id": "C2776214188",
+      "display_name": "Inference",
+      "level": 2,
+      "score": 0.5337442
+    },
+    {
+      "id": "C12267149",
+      "display_name": "Support vector machine",
+      "level": 2,
+      "score": 0.4874077
+    },
+    {
+      "id": "C77967617",
+      "display_name": "Active learning (machine learning)",
+      "level": 2,
+      "score": 0.48010734
+    },
+    {
+      "id": "C95623464",
+      "display_name": "Classifier (UML)",
+      "level": 2,
+      "score": 0.45943898
+    },
+    {
+      "id": "C774472",
+      "display_name": "Margin (machine learning)",
+      "level": 2,
+      "score": 0.45406267
+    },
+    {
+      "id": "C107673813",
+      "display_name": "Bayesian probability",
+      "level": 2,
+      "score": 0.43488267
+    },
+    {
+      "id": "C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12072",
+      "display_name": "Machine Learning and Algorithms",
+      "score": 1.0
+    },
+    {
+      "id": "T12535",
+      "display_name": "Machine Learning and Data Classification",
+      "score": 0.9858
+    },
+    {
+      "id": "T11269",
+      "display_name": "Algorithms and Data Compression",
+      "score": 0.9833
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tpami.2007.70811",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:43:50.712154",
+  "source_database": "OpenAlex"
+}

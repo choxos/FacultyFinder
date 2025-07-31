@@ -1,0 +1,100 @@
+{
+  "pmid": "36256807",
+  "uid": "36256807",
+  "title": "Conformal prediction under feedback covariate shift for biomolecular design.",
+  "abstract": "Many applications of machine-learning methods involve an iterative protocol in which data are collected, a model is trained, and then outputs of that model are used to choose what data to consider next. For example, a data-driven approach for designing proteins is to train a regression model to predict the fitness of protein sequences and then use it to propose new sequences believed to exhibit greater fitness than observed in the training data. Since validating designed sequences in the wet laboratory is typically costly, it is important to quantify the uncertainty in the model's predictions. This is challenging because of a characteristic type of distribution shift between the training and test data that arises in the design setting-one in which the training and test data are statistically dependent, as the latter is chosen based on the former. Consequently, the model's error on the test data-that is, the designed sequences-has an unknown and possibly complex relationship with its error on the training data. We introduce a method to construct confidence sets for predictions in such settings, which account for the dependence between the training and test data. The confidence sets we construct have finite-sample guarantees that hold for any regression model, even when it is used to choose the test-time input distribution. As a motivating use case, we use real datasets to demonstrate how our method quantifies uncertainty for the predicted fitness of designed proteins and can therefore be used to select design algorithms that achieve acceptable tradeoffs between high predicted fitness and low predictive uncertainty.",
+  "authors": [
+    {
+      "last_name": "Fannjiang",
+      "fore_name": "Clara",
+      "initials": "C",
+      "name": "Clara Fannjiang",
+      "affiliations": [
+        "Department of Electrical Engineering and Computer Sciences, University of California, Berkeley, CA 94720."
+      ]
+    },
+    {
+      "last_name": "Bates",
+      "fore_name": "Stephen",
+      "initials": "S",
+      "name": "Stephen Bates",
+      "affiliations": [
+        "Department of Statistics, University of California, Berkeley, CA 94720."
+      ]
+    },
+    {
+      "last_name": "Angelopoulos",
+      "fore_name": "Anastasios N",
+      "initials": "AN",
+      "name": "Anastasios N Angelopoulos",
+      "affiliations": [
+        "Department of Electrical Engineering and Computer Sciences, University of California, Berkeley, CA 94720."
+      ]
+    },
+    {
+      "last_name": "Listgarten",
+      "fore_name": "Jennifer",
+      "initials": "J",
+      "name": "Jennifer Listgarten",
+      "affiliations": [
+        "Department of Electrical Engineering and Computer Sciences, University of California, Berkeley, CA 94720.",
+        "Center for Computational Biology, University of California, Berkeley, CA 94720."
+      ]
+    },
+    {
+      "last_name": "Jordan",
+      "fore_name": "Michael I",
+      "initials": "MI",
+      "name": "Michael I Jordan",
+      "affiliations": [
+        "Department of Electrical Engineering and Computer Sciences, University of California, Berkeley, CA 94720.",
+        "Department of Statistics, University of California, Berkeley, CA 94720."
+      ],
+      "orcid": "0000-0001-8935-817X"
+    }
+  ],
+  "journal": {
+    "title": "Proceedings of the National Academy of Sciences of the United States of America",
+    "iso_abbreviation": "Proc Natl Acad Sci U S A",
+    "issn": "1091-6490",
+    "issn_type": "Electronic",
+    "volume": "119",
+    "issue": "43",
+    "pub_year": "2022",
+    "pub_month": "Oct",
+    "pub_day": "25"
+  },
+  "start_page": "e2204569119",
+  "pages": "e2204569119",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+  ],
+  "keywords": [
+    "Feedback",
+    "Machine Learning",
+    "Algorithms",
+    "Uncertainty",
+    "Molecular Conformation"
+  ],
+  "article_ids": {
+    "pubmed": "36256807",
+    "pmc": "PMC9618043",
+    "doi": "10.1073/pnas.2204569119"
+  },
+  "doi": "10.1073/pnas.2204569119",
+  "pmc_id": "PMC9618043",
+  "dates": {
+    "completed": "2022-10-20",
+    "revised": "2024-09-06"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:07:16.804374",
+    "pmid": "36256807"
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "openalex_id": "W2013559603",
+  "doi": "https://doi.org/10.1152/jn.00360.2014",
+  "title": "Decoding stimulus duration from neural responses in the auditory midbrain",
+  "abstract": "Neurons with responses selective for the duration of an auditory stimulus are called duration-tuned neurons (DTNs). Temporal specificity in their spiking suggests that one function of DTNs is to encode stimulus duration; however, the efficacy of duration encoding by DTNs has yet to be investigated. Herein, we characterize the information content of individual cells and a population of DTNs from the mammalian inferior colliculus (IC) by measuring the stimulus-specific information (SSI) and estimated Fisher information (FI) of spike count responses. We found that SSI was typically greatest for those stimulus durations that evoked maximum spike counts, defined as best duration (BD) stimuli, and that FI was maximal for stimulus durations off BD where sensitivity to a change in duration was greatest. Using population data, we demonstrate that a maximum likelihood estimator (MLE) can accurately decode stimulus duration from evoked spike counts. We also simulated a two-alternative forced choice task by having MLE models decide whether two durations were the same or different. With this task we measured the just-noticeable difference threshold for stimulus duration and calculated the corresponding Weber fractions across the stimulus domain. Altogether, these results demonstrate that the spiking responses of DTNs from the mammalian IC contain sufficient information for the CNS to encode, decode, and discriminate behaviorally relevant auditory signal durations.",
+  "authors": [
+    {
+      "display_name": "Brandon Aubie",
+      "id": "A5064209781",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brandon Aubie"
+    },
+    {
+      "display_name": "Riziq Sayegh",
+      "id": "A5083656795",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Riziq Sayegh"
+    },
+    {
+      "display_name": "Thane Fremouw",
+      "id": "A5048236577",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I7947594",
+          "display_name": "University of Maine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thane Fremouw"
+    },
+    {
+      "display_name": "Ellen Covey",
+      "id": "A5014540459",
+      "orcid": "https://orcid.org/0000-0003-4239-2228",
+      "institutions": [
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ellen Covey"
+    },
+    {
+      "display_name": "Paul A. Faure",
+      "id": "A5079487217",
+      "orcid": "https://orcid.org/0000-0001-6221-5718",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul A. Faure"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-08-14",
+  "type": "article",
+  "cited_by_count": 9,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S142952003",
+    "display_name": "Journal of Neurophysiology",
+    "issn_l": "0022-3077",
+    "issn": [
+      "0022-3077",
+      "1522-1598"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320155"
+  },
+  "volume": "112",
+  "issue": "10",
+  "first_page": "2432",
+  "last_page": "2445",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://europepmc.org/articles/pmc4233269",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2779918689",
+      "display_name": "Stimulus (psychology)",
+      "level": 2,
+      "score": 0.8075924
+    },
+    {
+      "id": "C2908647359",
+      "display_name": "Population",
+      "level": 2,
+      "score": 0.52608573
+    },
+    {
+      "id": "C2775980177",
+      "display_name": "Inferior colliculus",
+      "level": 3,
+      "score": 0.46527502
+    },
+    {
+      "id": "C169760540",
+      "display_name": "Neuroscience",
+      "level": 1,
+      "score": 0.43991676
+    },
+    {
+      "id": "C40743351",
+      "display_name": "Neural decoding",
+      "level": 3,
+      "score": 0.4333465
+    },
+    {
+      "id": "C2909946758",
+      "display_name": "Spike train",
+      "level": 3,
+      "score": 0.4248251
+    },
+    {
+      "id": "C552161191",
+      "display_name": "Midbrain",
+      "level": 3,
+      "score": 0.41250128
+    },
+    {
+      "id": "C57273362",
+      "display_name": "Decoding methods",
+      "level": 2,
+      "score": 0.39542827
+    },
+    {
+      "id": "C548259974",
+      "display_name": "Audiology",
+      "level": 1,
+      "score": 0.36991948
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.34271395
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.16981944
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.14094818
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.111117035
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.10093281
+    },
+    {
+      "id": "C529278444",
+      "display_name": "Central nervous system",
+      "level": 2,
+      "score": 0.09158406
+    },
+    {
+      "id": "C180747234",
+      "display_name": "Cognitive psychology",
+      "level": 1,
+      "score": 0.08387351
+    },
+    {
+      "id": "C2781390188",
+      "display_name": "Spike (software development)",
+      "level": 2,
+      "score": 0.076731086
+    },
+    {
+      "id": "C99454951",
+      "display_name": "Environmental health",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C2780723820",
+      "display_name": "Nucleus",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C115903868",
+      "display_name": "Software engineering",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10581",
+      "display_name": "Neural dynamics and brain function",
+      "score": 0.9998
+    },
+    {
+      "id": "T10788",
+      "display_name": "Neuroscience and Music Perception",
+      "score": 0.9985
+    },
+    {
+      "id": "T10283",
+      "display_name": "Hearing Loss and Rehabilitation",
+      "score": 0.998
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1152/jn.00360.2014",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:02:12.934271",
+  "source_database": "OpenAlex"
+}

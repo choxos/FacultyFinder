@@ -1,0 +1,574 @@
+{
+  "openalex_id": "W2751635104",
+  "doi": "https://doi.org/10.18632/oncotarget.20677",
+  "title": "High-resolution microbiome profiling uncovers<i>Fusobacterium nucleatum</i>,<i>Lactobacillus gasseri/johnsonii</i>, and<i>Lactobacillus vaginalis</i>associated to oral and oropharyngeal cancer in saliva from HPV positive and HPV negative patients treated with surgery and chemo-radiation",
+  "abstract": "// Rafael Guerrero-Preston 1, 2 , James Robert White 3 , Filipa Godoy-Vitorino 4 , Arnold Rodríguez-Hilario 4 , Kelvin Navarro 4 , Herminio González 4 , Christina Michailidi 1 , Anne Jedlicka 5 , Sierra Canapp 1 , Jessica Bondy 1 , Amanda Dziedzic 5 , Barbara Mora-Lagos 1, 6 , Gustavo Rivera-Alvarez 1, 2 , Carmen Ili-Gangas 6, 7 , Priscilla Brebi-Mieville 6, 7 , William Westra 1 , Wayne Koch 1 , Hyunseok Kang 8 , Luigi Marchionni 8 , Young Kim 9 and David Sidransky 1 1 Department of Otolaryngology and Head and Neck Surgery, Johns Hopkins University, School of Medicine, Baltimore, Maryland, USA 2 Department of Obstetrics and Gynecology, University of Puerto Rico, School of Medicine, San Juan, Puerto Rico 3 Department of Computational Biology Resphera Biosciences, Baltimore, MD, USA 4 Natural Sciences Department, Microbial Ecology and Genomics Lab, Inter American University of Puerto Rico, Metropolitan Campus, San Juan, Puerto Rico 5 Department of Molecular Microbiology and Immunology, Johns Hopkins University, School of Public Health, Baltimore, Maryland, USA 6 Laboratory of Molecular Pathology, Department of Pathological Anatomy, School of Medicine, Universidad de La Frontera, Temuco, Chile 7 Center of Excellence in Translational Medicine - Scientific and Technological Bioresource Nucleus (CEMT-BIOREN), Universidad de La Frontera, Temuco, Chile 8 Department of Oncology, Johns Hopkins University, School of Medicine, Baltimore, Maryland, USA 9 Department of Otolaryngology, Vanderbilt University School of Medicine, Nashville, TN, USA Correspondence to: Rafael Guerrero-Preston, email: rafael.guerrero@upr.edu David Sidransky, email: dsidrans@jhmi.edu Keywords: microbiota, high-resolution microbiome profiling, oral cancer, oropharyngeal cancer, human microbiome project Received: April 27, 2017 Accepted: July 12, 2017 Published: September 07, 2017 ABSTRACT Microbiome studies show altered microbiota in head and neck squamous cell carcinoma (HNSCC), both in terms of taxonomic composition and metabolic capacity. These studies utilized a traditional bioinformatics methodology, which allows for accurate taxonomic assignment down to the genus level, but cannot accurately resolve species level membership. We applied Resphera Insight, a high-resolution methodology for 16S rRNA taxonomic assignment that is able to provide species-level context in its assignments of 16S rRNA next generation sequencing (NGS) data. Resphera Insight applied to saliva samples from HNSCC patients and healthy controls led to the discovery that a subset of HNSCC saliva samples is significantly enriched with commensal species from the vaginal flora, including Lactobacillus gasseri/johnsonii (710x higher in saliva) and Lactobacillus vaginalis (52x higher in saliva). These species were not observed in normal saliva from Johns Hopkins patients, nor in 16S rRNA NGS saliva samples from the Human Microbiome Project (HMP). Interestingly, both species were only observed in saliva from Human Papilloma Virus (HPV) positive and HPV negative oropharyngeal cancer patients. We confirmed the representation of both species in HMP data obtained from mid-vagina (n=128) and vaginal introitus (n=121) samples. Resphera Insight also led to the discovery that Fusobacterium nucleatum , an oral cavity flora commensal bacterium linked to colon cancer, is enriched (600x higher) in saliva from a subset of HNSCC patients with advanced tumors stages. Together, these high-resolution analyses on 583 samples suggest a possible role for bacterial species in the therapeutic outcome of HPV positive and HPV negative HNSCC patients.",
+  "authors": [
+    {
+      "display_name": "Rafael Guerrero‐Preston",
+      "id": "A5048533064",
+      "orcid": "https://orcid.org/0000-0002-6639-6488",
+      "institutions": [
+        {
+          "id": "I200399037",
+          "display_name": "University of Puerto Rico System",
+          "country_code": "PR",
+          "type": "funder"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rafael Guerrero-Preston"
+    },
+    {
+      "display_name": "James R. White",
+      "id": "A5048216930",
+      "orcid": "https://orcid.org/0000-0002-7535-9179",
+      "institutions": [
+        {
+          "id": "I4210158189",
+          "display_name": "Resphera Biosciences",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James Robert White"
+    },
+    {
+      "display_name": "Filipa Godoy‐Vitorino",
+      "id": "A5002671920",
+      "orcid": "https://orcid.org/0000-0003-1880-0498",
+      "institutions": [
+        {
+          "id": "I185665358",
+          "display_name": "InterAmerican University of Puerto Rico",
+          "country_code": "PR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Filipa Godoy-Vitorino"
+    },
+    {
+      "display_name": "Arnold Rodríguez-Hilario",
+      "id": "A5072020704",
+      "orcid": "https://orcid.org/0000-0002-7443-2549",
+      "institutions": [
+        {
+          "id": "I185665358",
+          "display_name": "InterAmerican University of Puerto Rico",
+          "country_code": "PR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Arnold Rodríguez-Hilario"
+    },
+    {
+      "display_name": "Kelvin Navarro",
+      "id": "A5071028902",
+      "orcid": "https://orcid.org/0000-0002-4371-9942",
+      "institutions": [
+        {
+          "id": "I185665358",
+          "display_name": "InterAmerican University of Puerto Rico",
+          "country_code": "PR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kelvin Navarro"
+    },
+    {
+      "display_name": "Herminio González",
+      "id": "A5083877673",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I185665358",
+          "display_name": "InterAmerican University of Puerto Rico",
+          "country_code": "PR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Herminio González"
+    },
+    {
+      "display_name": "Christina Michailidi",
+      "id": "A5026529867",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christina Michailidi"
+    },
+    {
+      "display_name": "Anne Jedlicka",
+      "id": "A5061316083",
+      "orcid": "https://orcid.org/0000-0003-3826-2973",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anne Jedlicka"
+    },
+    {
+      "display_name": "Sierra Canapp",
+      "id": "A5009557322",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sierra Canapp"
+    },
+    {
+      "display_name": "Jessica Bondy",
+      "id": "A5046031177",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jessica Bondy"
+    },
+    {
+      "display_name": "Amanda Dziedzic",
+      "id": "A5017787140",
+      "orcid": "https://orcid.org/0000-0002-2012-2035",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amanda Dziedzic"
+    },
+    {
+      "display_name": "Bárbara Mora‐Lagos",
+      "id": "A5014739532",
+      "orcid": "https://orcid.org/0000-0001-7477-1594",
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I11944219",
+          "display_name": "Universidad de La Frontera",
+          "country_code": "CL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Barbara Mora-Lagos"
+    },
+    {
+      "display_name": "Gustavo Rivera-Alvarez",
+      "id": "A5060357459",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I11944219",
+          "display_name": "Universidad de La Frontera",
+          "country_code": "CL",
+          "type": "funder"
+        },
+        {
+          "id": "I200399037",
+          "display_name": "University of Puerto Rico System",
+          "country_code": "PR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gustavo Rivera-Alvarez"
+    },
+    {
+      "display_name": "Carmen Ili",
+      "id": "A5043204404",
+      "orcid": "https://orcid.org/0000-0002-4009-4406",
+      "institutions": [
+        {
+          "id": "I11944219",
+          "display_name": "Universidad de La Frontera",
+          "country_code": "CL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Carmen Ili-Gangas"
+    },
+    {
+      "display_name": "Priscilla Brebi",
+      "id": "A5034276286",
+      "orcid": "https://orcid.org/0000-0002-3896-146X",
+      "institutions": [
+        {
+          "id": "I11944219",
+          "display_name": "Universidad de La Frontera",
+          "country_code": "CL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Priscilla Brebi-Mieville"
+    },
+    {
+      "display_name": "William H. Westra",
+      "id": "A5102839293",
+      "orcid": "https://orcid.org/0000-0003-0833-9554",
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William Westra"
+    },
+    {
+      "display_name": "Wayne M. Koch",
+      "id": "A5033853754",
+      "orcid": "https://orcid.org/0000-0002-9499-1516",
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wayne Koch"
+    },
+    {
+      "display_name": "Hyunseok Kang",
+      "id": "A5071669347",
+      "orcid": "https://orcid.org/0000-0001-5758-8202",
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hyunseok Kang"
+    },
+    {
+      "display_name": "Luigi Marchionni",
+      "id": "A5079978893",
+      "orcid": "https://orcid.org/0000-0002-7336-8071",
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Luigi Marchionni"
+    },
+    {
+      "display_name": "Young H. Kim",
+      "id": "A5101489080",
+      "orcid": "https://orcid.org/0000-0003-1095-2892",
+      "institutions": [
+        {
+          "id": "I200719446",
+          "display_name": "Vanderbilt University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Young Kim"
+    },
+    {
+      "display_name": "David Sidransky",
+      "id": "A5109152183",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Sidransky"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-09-07",
+  "type": "article",
+  "cited_by_count": 85,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S126644158",
+    "display_name": "Oncotarget",
+    "issn_l": "1949-2553",
+    "issn": [
+      "1949-2553"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310316297"
+  },
+  "volume": "8",
+  "issue": "67",
+  "first_page": "110931",
+  "last_page": "110948",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "http://www.oncotarget.com/index.php?journal=oncotarget&page=article&op=download&path%5B%5D=20677&path%5B%5D=65891",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2778536940",
+      "display_name": "Lactobacillus gasseri",
+      "level": 4,
+      "score": 0.9685056
+    },
+    {
+      "id": "C2777349128",
+      "display_name": "Fusobacterium nucleatum",
+      "level": 4,
+      "score": 0.9007176
+    },
+    {
+      "id": "C89423630",
+      "display_name": "Microbiology",
+      "level": 1,
+      "score": 0.6752782
+    },
+    {
+      "id": "C2780236403",
+      "display_name": "Lactobacillus crispatus",
+      "level": 4,
+      "score": 0.6346738
+    },
+    {
+      "id": "C2780206646",
+      "display_name": "Lactobacillus",
+      "level": 3,
+      "score": 0.6240309
+    },
+    {
+      "id": "C143121216",
+      "display_name": "Microbiome",
+      "level": 2,
+      "score": 0.6196983
+    },
+    {
+      "id": "C504460877",
+      "display_name": "Saliva",
+      "level": 2,
+      "score": 0.5761007
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.47970527
+    },
+    {
+      "id": "C2780960513",
+      "display_name": "Fusobacterium",
+      "level": 4,
+      "score": 0.44544286
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.35720772
+    },
+    {
+      "id": "C60644358",
+      "display_name": "Bioinformatics",
+      "level": 1,
+      "score": 0.1961739
+    },
+    {
+      "id": "C523546767",
+      "display_name": "Bacteria",
+      "level": 2,
+      "score": 0.19581112
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.19138005
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.11406422
+    },
+    {
+      "id": "C2780183776",
+      "display_name": "Porphyromonas gingivalis",
+      "level": 3,
+      "score": 0.11172965
+    },
+    {
+      "id": "C2778168646",
+      "display_name": "Bacteroides",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "C2780385504",
+      "display_name": "Periodontitis",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11521",
+      "display_name": "Salivary Gland Disorders and Functions",
+      "score": 0.998
+    },
+    {
+      "id": "T10066",
+      "display_name": "Gut microbiota and health",
+      "score": 0.9977
+    },
+    {
+      "id": "T10257",
+      "display_name": "Oral microbiology and periodontitis research",
+      "score": 0.9956
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18632/oncotarget.20677",
+  "pdf_url": "http://www.oncotarget.com/index.php?journal=oncotarget&page=article&op=download&path%5B%5D=20677&path%5B%5D=65891",
+  "retrieved_date": "2025-07-30T14:46:17.096769",
+  "source_database": "OpenAlex"
+}

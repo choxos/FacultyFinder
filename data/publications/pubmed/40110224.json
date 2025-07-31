@@ -1,0 +1,258 @@
+{
+  "pmid": "40110224",
+  "uid": "40110224",
+  "title": "Artificial intelligence for the analysis of intracoronary optical coherence tomography images: a systematic review.",
+  "abstract": "Intracoronary optical coherence tomography (OCT) is a valuable tool for, among others, periprocedural guidance of percutaneous coronary revascularization and the assessment of stent failure. However, manual OCT image interpretation is challenging and time-consuming, which limits widespread clinical adoption. Automated analysis of OCT frames using artificial intelligence (AI) offers a potential solution. For example, AI can be employed for automated OCT image interpretation, plaque quantification, and clinical event prediction. Many AI models for these purposes have been proposed in recent years. However, these models have not been systematically evaluated in terms of model characteristics, performances, and bias. We performed a systematic review of AI models developed for OCT analysis to evaluate the trends and performances, including a systematic evaluation of potential sources of bias in model development and evaluation.",
+  "authors": [
+    {
+      "last_name": "van der Waerden",
+      "fore_name": "Ruben G A",
+      "initials": "RGA",
+      "name": "Ruben G A van der Waerden",
+      "affiliations": [
+        "Department of Cardiology, Radboud University Medical Center, Geert Grooteplein Zuid 10, Nijmegen 6525 GA, The Netherlands.",
+        "Diagnostic Image Analysis Group, Radboud University Medical Center, Geert Grooteplein 10, Nijmegen 6525 GA, The Netherlands."
+      ],
+      "orcid": "0009-0007-8462-1216"
+    },
+    {
+      "last_name": "Volleberg",
+      "fore_name": "Rick H J A",
+      "initials": "RHJA",
+      "name": "Rick H J A Volleberg",
+      "affiliations": [
+        "Department of Cardiology, Radboud University Medical Center, Geert Grooteplein Zuid 10, Nijmegen 6525 GA, The Netherlands."
+      ],
+      "orcid": "0000-0001-7471-1006"
+    },
+    {
+      "last_name": "Luttikholt",
+      "fore_name": "Thijs J",
+      "initials": "TJ",
+      "name": "Thijs J Luttikholt",
+      "affiliations": [
+        "Department of Cardiology, Radboud University Medical Center, Geert Grooteplein Zuid 10, Nijmegen 6525 GA, The Netherlands.",
+        "Diagnostic Image Analysis Group, Radboud University Medical Center, Geert Grooteplein 10, Nijmegen 6525 GA, The Netherlands."
+      ],
+      "orcid": "0000-0002-7706-5000"
+    },
+    {
+      "last_name": "Cancian",
+      "fore_name": "Pierandrea",
+      "initials": "P",
+      "name": "Pierandrea Cancian",
+      "affiliations": [
+        "Diagnostic Image Analysis Group, Radboud University Medical Center, Geert Grooteplein 10, Nijmegen 6525 GA, The Netherlands.",
+        "Quantitative Healthcare Analysis (qurAI) Group, Informatics Institute, University of Amsterdam, Amsterdam, The Netherlands."
+      ],
+      "orcid": "0000-0001-5191-6180"
+    },
+    {
+      "last_name": "van der Zande",
+      "fore_name": "Joske L",
+      "initials": "JL",
+      "name": "Joske L van der Zande",
+      "affiliations": [
+        "Department of Cardiology, Radboud University Medical Center, Geert Grooteplein Zuid 10, Nijmegen 6525 GA, The Netherlands.",
+        "Diagnostic Image Analysis Group, Radboud University Medical Center, Geert Grooteplein 10, Nijmegen 6525 GA, The Netherlands."
+      ],
+      "orcid": "0000-0002-4998-6363"
+    },
+    {
+      "last_name": "Stone",
+      "fore_name": "Gregg W",
+      "initials": "GW",
+      "name": "Gregg W Stone",
+      "affiliations": [
+        "The Zena and Michael A Wiener Cardiovascular Institute, Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ],
+      "orcid": "0000-0002-3416-8210"
+    },
+    {
+      "last_name": "Holm",
+      "fore_name": "Niels R",
+      "initials": "NR",
+      "name": "Niels R Holm",
+      "affiliations": [
+        "Department of Cardiology, Aarhus University Hospital, Aarhus, Denmark."
+      ],
+      "orcid": "0000-0002-2316-3107"
+    },
+    {
+      "last_name": "Kedhi",
+      "fore_name": "Elvin",
+      "initials": "E",
+      "name": "Elvin Kedhi",
+      "affiliations": [
+        "McGill University Health Center, Royal Victoria Hospital, Montreal, Canada."
+      ],
+      "orcid": "0000-0001-6930-0085"
+    },
+    {
+      "last_name": "Escaned",
+      "fore_name": "Javier",
+      "initials": "J",
+      "name": "Javier Escaned",
+      "affiliations": [
+        "Hospital Clinico San Carlos IdISSC, Complutense University of Madrid, Madrid, Spain."
+      ],
+      "orcid": "0000-0003-4932-0112"
+    },
+    {
+      "last_name": "Pellegrini",
+      "fore_name": "Dario",
+      "initials": "D",
+      "name": "Dario Pellegrini",
+      "affiliations": [
+        "U.O. Cardiologia Ospedaliera, IRCCS Ospedale Galeazzi Sant'Ambrogio, Milan, Italy."
+      ],
+      "orcid": "0000-0002-5545-585X"
+    },
+    {
+      "last_name": "Guagliumi",
+      "fore_name": "Giulio",
+      "initials": "G",
+      "name": "Giulio Guagliumi",
+      "affiliations": [
+        "U.O. Cardiologia Ospedaliera, IRCCS Ospedale Galeazzi Sant'Ambrogio, Milan, Italy."
+      ],
+      "orcid": "0000-0001-6814-2003"
+    },
+    {
+      "last_name": "Mehta",
+      "fore_name": "Shamir R",
+      "initials": "SR",
+      "name": "Shamir R Mehta",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University and Hamilton Health Sciences, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Pinilla-Echeverri",
+      "fore_name": "Natalia",
+      "initials": "N",
+      "name": "Natalia Pinilla-Echeverri",
+      "affiliations": [
+        "Division of Cardiology, Hamilton General Hospital, Hamilton Health Sciences, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Moreno",
+      "fore_name": "Raúl",
+      "initials": "R",
+      "name": "Raúl Moreno",
+      "affiliations": [
+        "Interventional Cardiology, University Hospital La Paz, Madrid, Spain."
+      ]
+    },
+    {
+      "last_name": "Räber",
+      "fore_name": "Lorenz",
+      "initials": "L",
+      "name": "Lorenz Räber",
+      "affiliations": [
+        "Department of Cardiology, Bern University Hospital Inselspital, Bern, Switzerland."
+      ],
+      "orcid": "0000-0003-0824-3026"
+    },
+    {
+      "last_name": "Roleder",
+      "fore_name": "Tomasz",
+      "initials": "T",
+      "name": "Tomasz Roleder",
+      "affiliations": [
+        "Faculty of Medicine, Wrocław University of Science and Technology, Wrocław, Poland."
+      ],
+      "orcid": "0000-0002-1370-7369"
+    },
+    {
+      "last_name": "van Ginneken",
+      "fore_name": "Bram",
+      "initials": "B",
+      "name": "Bram van Ginneken",
+      "affiliations": [
+        "Diagnostic Image Analysis Group, Radboud University Medical Center, Geert Grooteplein 10, Nijmegen 6525 GA, The Netherlands."
+      ],
+      "orcid": "0000-0003-2028-8972"
+    },
+    {
+      "last_name": "Sánchez",
+      "fore_name": "Clara I",
+      "initials": "CI",
+      "name": "Clara I Sánchez",
+      "affiliations": [
+        "Quantitative Healthcare Analysis (qurAI) Group, Informatics Institute, University of Amsterdam, Amsterdam, The Netherlands.",
+        "Department of Biomedical Engineering and Physics, Amsterdam University Medical Center University of Amsterdam, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Išgum",
+      "fore_name": "Ivana",
+      "initials": "I",
+      "name": "Ivana Išgum",
+      "affiliations": [
+        "Quantitative Healthcare Analysis (qurAI) Group, Informatics Institute, University of Amsterdam, Amsterdam, The Netherlands.",
+        "Department of Biomedical Engineering and Physics, Amsterdam University Medical Center University of Amsterdam, Amsterdam, The Netherlands.",
+        "Department of Radiology and Nuclear Medicine, Amsterdam University Medical Center University of Amsterdam, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "van Royen",
+      "fore_name": "Niels",
+      "initials": "N",
+      "name": "Niels van Royen",
+      "affiliations": [
+        "Department of Cardiology, Radboud University Medical Center, Geert Grooteplein Zuid 10, Nijmegen 6525 GA, The Netherlands."
+      ],
+      "orcid": "0000-0001-6136-8640"
+    },
+    {
+      "last_name": "Thannhauser",
+      "fore_name": "Jos",
+      "initials": "J",
+      "name": "Jos Thannhauser",
+      "affiliations": [
+        "Department of Cardiology, Radboud University Medical Center, Geert Grooteplein Zuid 10, Nijmegen 6525 GA, The Netherlands.",
+        "Diagnostic Image Analysis Group, Radboud University Medical Center, Geert Grooteplein 10, Nijmegen 6525 GA, The Netherlands."
+      ],
+      "orcid": "0000-0001-8605-0436"
+    }
+  ],
+  "journal": {
+    "title": "European heart journal. Digital health",
+    "iso_abbreviation": "Eur Heart J Digit Health",
+    "issn": "2634-3916",
+    "issn_type": "Electronic",
+    "volume": "6",
+    "issue": "2",
+    "pub_year": "2025",
+    "pub_month": "Mar"
+  },
+  "start_page": "270",
+  "end_page": "284",
+  "pages": "270-284",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Review"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "40110224",
+    "pmc": "PMC11914731",
+    "doi": "10.1093/ehjdh/ztaf005",
+    "pii": "ztaf005"
+  },
+  "doi": "10.1093/ehjdh/ztaf005",
+  "pmc_id": "PMC11914731",
+  "dates": {
+    "revised": "2025-03-21"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:43:18.844681",
+    "pmid": "40110224"
+  }
+}

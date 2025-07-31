@@ -1,0 +1,352 @@
+{
+  "pmid": "30482864",
+  "uid": "30482864",
+  "title": "Integrating host response and unbiased microbe detection for lower respiratory tract infection diagnosis in critically ill adults.",
+  "abstract": "Lower respiratory tract infections (LRTIs) lead to more deaths each year than any other infectious disease category. Despite this, etiologic LRTI pathogens are infrequently identified due to limitations of existing microbiologic tests. In critically ill patients, noninfectious inflammatory syndromes resembling LRTIs further complicate diagnosis. To address the need for improved LRTI diagnostics, we performed metagenomic next-generation sequencing (mNGS) on tracheal aspirates from 92 adults with acute respiratory failure and simultaneously assessed pathogens, the airway microbiome, and the host transcriptome. To differentiate pathogens from respiratory commensals, we developed a rules-based model (RBM) and logistic regression model (LRM) in a derivation cohort of 20 patients with LRTIs or noninfectious acute respiratory illnesses. When tested in an independent validation cohort of 24 patients, both models achieved accuracies of 95.5%. We next developed pathogen, microbiome diversity, and host gene expression metrics to identify LRTI-positive patients and differentiate them from critically ill controls with noninfectious acute respiratory illnesses. When tested in the validation cohort, the pathogen metric performed with an area under the receiver-operating curve (AUC) of 0.96 (95% CI, 0.86-1.00), the diversity metric with an AUC of 0.80 (95% CI, 0.63-0.98), and the host transcriptional classifier with an AUC of 0.88 (95% CI, 0.75-1.00). Combining these achieved a negative predictive value of 100%. This study suggests that a single streamlined protocol offering an integrated genomic portrait of pathogen, microbiome, and host transcriptome may hold promise as a tool for LRTI diagnosis.",
+  "authors": [
+    {
+      "last_name": "Langelier",
+      "fore_name": "Charles",
+      "initials": "C",
+      "name": "Charles Langelier",
+      "affiliations": [
+        "Division of Infectious Diseases, Department of Medicine, University of California, San Francisco, CA 94143.",
+        "Chan Zuckerberg Biohub, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Kalantar",
+      "fore_name": "Katrina L",
+      "initials": "KL",
+      "name": "Katrina L Kalantar",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Moazed",
+      "fore_name": "Farzad",
+      "initials": "F",
+      "name": "Farzad Moazed",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael R",
+      "initials": "MR",
+      "name": "Michael R Wilson",
+      "affiliations": [
+        "Weill Institute for Neurosciences, University of California, San Francisco, CA 94143.",
+        "Department of Neurology, University of California, San Francisco, CA 94143."
+      ],
+      "orcid": "0000-0002-8705-5084"
+    },
+    {
+      "last_name": "Crawford",
+      "fore_name": "Emily D",
+      "initials": "ED",
+      "name": "Emily D Crawford",
+      "affiliations": [
+        "Chan Zuckerberg Biohub, San Francisco, CA 94158.",
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Deiss",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Deiss",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Belzer",
+      "fore_name": "Annika",
+      "initials": "A",
+      "name": "Annika Belzer",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Bolourchi",
+      "fore_name": "Samaneh",
+      "initials": "S",
+      "name": "Samaneh Bolourchi",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Caldera",
+      "fore_name": "Saharai",
+      "initials": "S",
+      "name": "Saharai Caldera",
+      "affiliations": [
+        "Division of Infectious Diseases, Department of Medicine, University of California, San Francisco, CA 94143.",
+        "Chan Zuckerberg Biohub, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Fung",
+      "fore_name": "Monica",
+      "initials": "M",
+      "name": "Monica Fung",
+      "affiliations": [
+        "Division of Infectious Diseases, Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Jauregui",
+      "fore_name": "Alejandra",
+      "initials": "A",
+      "name": "Alejandra Jauregui",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Malcolm",
+      "fore_name": "Katherine",
+      "initials": "K",
+      "name": "Katherine Malcolm",
+      "affiliations": [
+        "Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Lyden",
+      "fore_name": "Amy",
+      "initials": "A",
+      "name": "Amy Lyden",
+      "affiliations": [
+        "Chan Zuckerberg Biohub, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Khan",
+      "fore_name": "Lillian",
+      "initials": "L",
+      "name": "Lillian Khan",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Vessel",
+      "fore_name": "Kathryn",
+      "initials": "K",
+      "name": "Kathryn Vessel",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Quan",
+      "fore_name": "Jenai",
+      "initials": "J",
+      "name": "Jenai Quan",
+      "affiliations": [
+        "Chan Zuckerberg Biohub, San Francisco, CA 94158.",
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Zinter",
+      "fore_name": "Matt",
+      "initials": "M",
+      "name": "Matt Zinter",
+      "affiliations": [
+        "Division of Critical Care Medicine, Department of Pediatrics, School of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Chiu",
+      "fore_name": "Charles Y",
+      "initials": "CY",
+      "name": "Charles Y Chiu",
+      "affiliations": [
+        "Division of Infectious Diseases, Department of Medicine, University of California, San Francisco, CA 94143.",
+        "Department of Laboratory Medicine, School of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Chow",
+      "fore_name": "Eric D",
+      "initials": "ED",
+      "name": "Eric D Chow",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Jenny",
+      "initials": "J",
+      "name": "Jenny Wilson",
+      "affiliations": [
+        "Department of Emergency Medicine, Stanford University, Stanford, CA 94305."
+      ]
+    },
+    {
+      "last_name": "Miller",
+      "fore_name": "Steve",
+      "initials": "S",
+      "name": "Steve Miller",
+      "affiliations": [
+        "Department of Laboratory Medicine, School of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Matthay",
+      "fore_name": "Michael A",
+      "initials": "MA",
+      "name": "Michael A Matthay",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143.",
+        "Department of Anesthesia, University of California, San Francisco, CA 94143.",
+        "Cardiovascular Research Institute, University of California, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Pollard",
+      "fore_name": "Katherine S",
+      "initials": "KS",
+      "name": "Katherine S Pollard",
+      "affiliations": [
+        "Chan Zuckerberg Biohub, San Francisco, CA 94158.",
+        "Gladstone Institutes, San Francisco, CA 94158.",
+        "Department of Epidemiology and Biostatistics, University of California, San Francisco, CA 94143.",
+        "Institute for Human Genetics, University of California, San Francisco, CA 94143.",
+        "Quantitative Biology Institute, University of California, San Francisco, CA 94158.",
+        "Institute for Computational Health Sciences, University of California, San Francisco, CA 94158."
+      ]
+    },
+    {
+      "last_name": "Christenson",
+      "fore_name": "Stephanie",
+      "initials": "S",
+      "name": "Stephanie Christenson",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "Calfee",
+      "fore_name": "Carolyn S",
+      "initials": "CS",
+      "name": "Carolyn S Calfee",
+      "affiliations": [
+        "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Department of Medicine, University of California, San Francisco, CA 94143.",
+        "Division of Critical Care Medicine, Department of Pediatrics, School of Medicine, University of California, San Francisco, CA 94143."
+      ]
+    },
+    {
+      "last_name": "DeRisi",
+      "fore_name": "Joseph L",
+      "initials": "JL",
+      "name": "Joseph L DeRisi",
+      "affiliations": [
+        "Chan Zuckerberg Biohub, San Francisco, CA 94158; joe@derisilab.ucsf.edu.",
+        "Department of Biochemistry and Biophysics, University of California, San Francisco, CA 94158."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Proceedings of the National Academy of Sciences of the United States of America",
+    "iso_abbreviation": "Proc Natl Acad Sci U S A",
+    "issn": "1091-6490",
+    "issn_type": "Electronic",
+    "volume": "115",
+    "issue": "52",
+    "pub_year": "2018",
+    "pub_month": "Dec",
+    "pub_day": "26"
+  },
+  "start_page": "E12353",
+  "end_page": "E12362",
+  "pages": "E12353-E12362",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Adult",
+    "Aged",
+    "Aged, 80 and over",
+    "Area Under Curve",
+    "Case-Control Studies",
+    "Cohort Studies",
+    "Critical Illness",
+    "Female",
+    "Humans",
+    "Male",
+    "Microbiota",
+    "Middle Aged",
+    "Predictive Value of Tests",
+    "Respiratory Tract Infections",
+    "Sequence Analysis, DNA",
+    "Transcriptome",
+    "Whole Genome Sequencing"
+  ],
+  "article_ids": {
+    "pubmed": "30482864",
+    "pmc": "PMC6310811",
+    "doi": "10.1073/pnas.1809700115",
+    "pii": "1809700115"
+  },
+  "doi": "10.1073/pnas.1809700115",
+  "pmc_id": "PMC6310811",
+  "dates": {
+    "completed": "2019-03-22",
+    "revised": "2022-11-21"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "K23 HL136844",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R35 HL140026",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K23 HL123778",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K23 HL138461",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P01 AI091575",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K24 HL133390",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL110969",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.497501",
+    "pmid": "30482864"
+  }
+}

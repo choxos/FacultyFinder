@@ -1,0 +1,299 @@
+{
+  "openalex_id": "W2961396908",
+  "doi": "https://doi.org/10.1161/circoutcomes.118.005122",
+  "title": "Privacy-Preserving Generative Deep Neural Networks Support Clinical Data Sharing",
+  "abstract": "Background: Data sharing accelerates scientific progress but sharing individual-level data while preserving patient privacy presents a barrier. Methods and Results: Using pairs of deep neural networks, we generated simulated, synthetic participants that closely resemble participants of the SPRINT trial (Systolic Blood Pressure Trial). We showed that such paired networks can be trained with differential privacy, a formal privacy framework that limits the likelihood that queries of the synthetic participants’ data could identify a real a participant in the trial. Machine learning predictors built on the synthetic population generalize to the original data set. This finding suggests that the synthetic data can be shared with others, enabling them to perform hypothesis-generating analyses as though they had the original trial data. Conclusions: Deep neural networks that generate synthetic participants facilitate secondary analyses and reproducible investigation of clinical data sets by enhancing data sharing while preserving participant privacy.",
+  "authors": [
+    {
+      "display_name": "Brett K. Beaulieu‐Jones",
+      "id": "A5023428054",
+      "orcid": "https://orcid.org/0000-0002-6700-1468",
+      "institutions": [
+        {
+          "id": "I79576946",
+          "display_name": "University of Pennsylvania",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brett K. Beaulieu-Jones"
+    },
+    {
+      "display_name": "Zhiwei Steven Wu",
+      "id": "A5001070941",
+      "orcid": "https://orcid.org/0000-0002-8125-8227",
+      "institutions": [
+        {
+          "id": "I130238516",
+          "display_name": "University of Minnesota",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhiwei Steven Wu"
+    },
+    {
+      "display_name": "Chris Williams",
+      "id": "A5112084077",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I79576946",
+          "display_name": "University of Pennsylvania",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210125521",
+          "display_name": "Translational Therapeutics (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chris Williams"
+    },
+    {
+      "display_name": "Ran Lee",
+      "id": "A5019700608",
+      "orcid": "https://orcid.org/0000-0001-9869-1839",
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ran Lee"
+    },
+    {
+      "display_name": "Sanjeev P. Bhavnani",
+      "id": "A5010491671",
+      "orcid": "https://orcid.org/0000-0001-8161-9523",
+      "institutions": [
+        {
+          "id": "I1311914864",
+          "display_name": "Scripps Health",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210146328",
+          "display_name": "Scripps Clinic",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sanjeev P. Bhavnani"
+    },
+    {
+      "display_name": "James Brian Byrd",
+      "id": "A5065971122",
+      "orcid": "https://orcid.org/0000-0002-0509-3520",
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James Brian Byrd"
+    },
+    {
+      "display_name": "Casey S. Greene",
+      "id": "A5050692257",
+      "orcid": "https://orcid.org/0000-0001-8713-9213",
+      "institutions": [
+        {
+          "id": "I79576946",
+          "display_name": "University of Pennsylvania",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210125521",
+          "display_name": "Translational Therapeutics (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Casey S. Greene"
+    }
+  ],
+  "publication_year": 2019,
+  "publication_date": "2019-07-01",
+  "type": "article",
+  "cited_by_count": 299,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S52278559",
+    "display_name": "Circulation Cardiovascular Quality and Outcomes",
+    "issn_l": "1941-7713",
+    "issn": [
+      "1941-7713",
+      "1941-7705"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315671"
+  },
+  "volume": "12",
+  "issue": "7",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://doi.org/10.1161/circoutcomes.118.005122",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.6847945
+    },
+    {
+      "id": "C2779965156",
+      "display_name": "Data sharing",
+      "level": 3,
+      "score": 0.68177146
+    },
+    {
+      "id": "C160920958",
+      "display_name": "Synthetic data",
+      "level": 2,
+      "score": 0.61183846
+    },
+    {
+      "id": "C167966045",
+      "display_name": "Generative model",
+      "level": 3,
+      "score": 0.6008745
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.57360816
+    },
+    {
+      "id": "C50644808",
+      "display_name": "Artificial neural network",
+      "level": 2,
+      "score": 0.5677286
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.56177014
+    },
+    {
+      "id": "C58489278",
+      "display_name": "Data set",
+      "level": 2,
+      "score": 0.5472188
+    },
+    {
+      "id": "C177264268",
+      "display_name": "Set (abstract data type)",
+      "level": 2,
+      "score": 0.50271773
+    },
+    {
+      "id": "C23130292",
+      "display_name": "Differential privacy",
+      "level": 2,
+      "score": 0.49110222
+    },
+    {
+      "id": "C2908647359",
+      "display_name": "Population",
+      "level": 2,
+      "score": 0.46575385
+    },
+    {
+      "id": "C108583219",
+      "display_name": "Deep learning",
+      "level": 2,
+      "score": 0.4202373
+    },
+    {
+      "id": "C39890363",
+      "display_name": "Generative grammar",
+      "level": 2,
+      "score": 0.4186382
+    },
+    {
+      "id": "C124101348",
+      "display_name": "Data mining",
+      "level": 1,
+      "score": 0.3787005
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.12708563
+    },
+    {
+      "id": "C204787440",
+      "display_name": "Alternative medicine",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C99454951",
+      "display_name": "Environmental health",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10764",
+      "display_name": "Privacy-Preserving Technologies in Data",
+      "score": 0.9998
+    },
+    {
+      "id": "T13702",
+      "display_name": "Machine Learning in Healthcare",
+      "score": 0.9751
+    },
+    {
+      "id": "T11636",
+      "display_name": "Artificial Intelligence in Healthcare and Education",
+      "score": 0.9647
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1161/circoutcomes.118.005122",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:51:29.661245",
+  "source_database": "OpenAlex"
+}

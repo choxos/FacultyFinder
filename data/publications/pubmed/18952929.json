@@ -1,0 +1,95 @@
+{
+  "pmid": "18952929",
+  "uid": "18952929",
+  "title": "Towards automatic recognition of scientifically rigorous clinical research evidence.",
+  "abstract": "The growing numbers of topically relevant biomedical publications readily available due to advances in document retrieval methods pose a challenge to clinicians practicing evidence-based medicine. It is increasingly time consuming to acquire and critically appraise the available evidence. This problem could be addressed in part if methods were available to automatically recognize rigorous studies immediately applicable in a specific clinical situation. We approach the problem of recognizing studies containing useable clinical advice from retrieved topically relevant articles as a binary classification problem. The gold standard used in the development of PubMed clinical query filters forms the basis of our approach. We identify scientifically rigorous studies using supervised machine learning techniques (Naïve Bayes, support vector machine (SVM), and boosting) trained on high-level semantic features. We combine these methods using an ensemble learning method (stacking). The performance of learning methods is evaluated using precision, recall and F(1) score, in addition to area under the receiver operating characteristic (ROC) curve (AUC). Using a training set of 10,000 manually annotated MEDLINE citations, and a test set of an additional 2,000 citations, we achieve 73.7% precision and 61.5% recall in identifying rigorous, clinically relevant studies, with stacking over five feature-classifier combinations and 82.5% precision and 84.3% recall in recognizing rigorous studies with treatment focus using stacking over word + metadata feature vector. Our results demonstrate that a high quality gold standard and advanced classification methods can help clinicians acquire best evidence from the medical literature.",
+  "authors": [
+    {
+      "last_name": "Kilicoglu",
+      "fore_name": "Halil",
+      "initials": "H",
+      "name": "Halil Kilicoglu",
+      "affiliations": [
+        "Department of Computer Science and Software Engineering, Concordia University, 1515 Ste Catherine West, Montréal, QC, H3G 1M8, Canada. h_kilico@cse.concordia.ca"
+      ]
+    },
+    {
+      "last_name": "Demner-Fushman",
+      "fore_name": "Dina",
+      "initials": "D",
+      "name": "Dina Demner-Fushman",
+      "affiliations": []
+    },
+    {
+      "last_name": "Rindflesch",
+      "fore_name": "Thomas C",
+      "initials": "TC",
+      "name": "Thomas C Rindflesch",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wilczynski",
+      "fore_name": "Nancy L",
+      "initials": "NL",
+      "name": "Nancy L Wilczynski",
+      "affiliations": []
+    },
+    {
+      "last_name": "Haynes",
+      "fore_name": "R Brian",
+      "initials": "RB",
+      "name": "R Brian Haynes",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Journal of the American Medical Informatics Association : JAMIA",
+    "iso_abbreviation": "J Am Med Inform Assoc",
+    "issn": "1067-5027",
+    "issn_type": "Print",
+    "volume": "16",
+    "issue": "1",
+    "pub_year": "2009"
+  },
+  "start_page": "25",
+  "end_page": "31",
+  "pages": "25-31",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Intramural"
+  ],
+  "keywords": [
+    "Artificial Intelligence",
+    "Bayes Theorem",
+    "Biomedical Research",
+    "Evidence-Based Practice",
+    "Information Storage and Retrieval",
+    "MEDLINE",
+    "ROC Curve"
+  ],
+  "article_ids": {
+    "pubmed": "18952929",
+    "pmc": "PMC2605595",
+    "doi": "10.1197/jamia.M2996",
+    "pii": "M2996"
+  },
+  "doi": "10.1197/jamia.M2996",
+  "pmc_id": "PMC2605595",
+  "dates": {
+    "completed": "2009-01-27",
+    "revised": "2018-11-13"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "agency": "Intramural NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:26:25.395452",
+    "pmid": "18952929"
+  }
+}

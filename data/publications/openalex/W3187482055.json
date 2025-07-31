@@ -1,0 +1,503 @@
+{
+  "openalex_id": "W3187482055",
+  "doi": "https://doi.org/10.2139/ssrn.3900401",
+  "title": "Investigation of the Use of a Sensor Bracelet for the Pre-Symptomatic Detection of COVID-19: A National Cohort Study (COVI-Gapp)",
+  "abstract": "Background: We investigated machine learning based identification of the pre-symptomatic coronavirus disease 2019 (COVID-19) and detection of infection-related changes in physiology using a wearable device (the Ava bracelet).Methods: Participants from an ongoing cohort study (GAPP) of the general population in Liechtenstein were included in the current sub-study (COVI-GAPP). Nightly they wore the fertility bracelet that measured every ten seconds skin temperature, heart rate, respiratory rate, skin perfusion, and heart rate variability. Participants reported daily symptoms in a complementary app. Laboratory reverse transcription polymerase chain reaction (RT-PCR) and/or COVID-19 serology samples were collected from all participants. Long short-term memory (LSTM) based recurrent neural networks (RNN) were chosen for the binary classification of an individual as healthy or infected on a given day in a derivation and validation procedure.Findings: A total of 1ž5 million hours of physiological data were recorded from 1163 participants (mean age 44 +/- 5ž5 years). COVID-19 was confirmed in 127 participants. Of these, 66 (52%) had worn their device from baseline to symptom onset and were included in the analysis and RNN. Multi-level modelling revealed significantly different values in pre- versus post-symptomatic respiratory rate, temperature, heart rate, heart rate variability ratio, and skin perfusion. The developed RNN algorithm had a recall of 0ž73 in the training set and 0ž68 in the testing set (overall recall of 0ž71) when detecting COVID-19 up to two days prior to symptom onset.Interpretation: Our proposed RNN algorithm identified 71% of COVID-19 positive participants two days prior to symptom onset. Wearable sensor technology can therefore enable COVID-19' detection during the pre-symptomatic period.Funding: IMI grant agreement number 101005177, the Princely House of the Principality of Liechtenstein, the government of the Principality of Liechtenstein, and the Hanela Foundation in Switzerland.Declaration of Interest: Lorenz Risch, and Martin Risch are key shareholders of the Dr Risch Medical Laboratory. David Conen has received consulting fees from Roche Diagnostics, outside of the current work. The other authors have no financial or personal conflicts of interest to declare.Ethical Approval: The local ethics committee approved the study protocol, andwritten informed consent was obtained from each participant (BASEC 2020-00786).",
+  "authors": [
+    {
+      "display_name": "Martin Risch",
+      "id": "A5084754410",
+      "orcid": "https://orcid.org/0000-0003-4587-5639",
+      "institutions": [
+        {
+          "id": "I4210148531",
+          "display_name": "Kantonsspital Graubünden",
+          "country_code": "CH",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin Risch"
+    },
+    {
+      "display_name": "Kirsten Grossmann",
+      "id": "A5088324762",
+      "orcid": "https://orcid.org/0000-0002-0460-3736",
+      "institutions": [
+        {
+          "id": "I4210126374",
+          "display_name": "Labormedizinische Zentrum Dr Risch (Switzerland)",
+          "country_code": "CH",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kirsten Grossmann"
+    },
+    {
+      "display_name": "Stefanie Aeschbacher",
+      "id": "A5112570183",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3019692003",
+          "display_name": "Cardiovascular Institute Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I1850255",
+          "display_name": "University of Basel",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stefanie Aeschbacher"
+    },
+    {
+      "display_name": "Ornella C. Weideli",
+      "id": "A5006422866",
+      "orcid": "https://orcid.org/0000-0003-2339-9440",
+      "institutions": [
+        {
+          "id": "I4210126374",
+          "display_name": "Labormedizinische Zentrum Dr Risch (Switzerland)",
+          "country_code": "CH",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ornella C. Weideli"
+    },
+    {
+      "display_name": "Marc Kovac",
+      "id": "A5090205624",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126374",
+          "display_name": "Labormedizinische Zentrum Dr Risch (Switzerland)",
+          "country_code": "CH",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marc Kovac"
+    },
+    {
+      "display_name": "Fiona Pereira",
+      "id": "A5112483191",
+      "orcid": "https://orcid.org/0000-0001-6093-417X",
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fiona Pereira"
+    },
+    {
+      "display_name": "Nadia Wohlwend",
+      "id": "A5042732930",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126374",
+          "display_name": "Labormedizinische Zentrum Dr Risch (Switzerland)",
+          "country_code": "CH",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nadia Wohlwend"
+    },
+    {
+      "display_name": "Corina Risch",
+      "id": "A5057358090",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126374",
+          "display_name": "Labormedizinische Zentrum Dr Risch (Switzerland)",
+          "country_code": "CH",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Corina Risch"
+    },
+    {
+      "display_name": "Dorothea Hillmann",
+      "id": "A5026846457",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126374",
+          "display_name": "Labormedizinische Zentrum Dr Risch (Switzerland)",
+          "country_code": "CH",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dorothea Hillmann"
+    },
+    {
+      "display_name": "Thomas Lung",
+      "id": "A5103196061",
+      "orcid": "https://orcid.org/0000-0002-0341-0385",
+      "institutions": [
+        {
+          "id": "I4210126374",
+          "display_name": "Labormedizinische Zentrum Dr Risch (Switzerland)",
+          "country_code": "CH",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Lung"
+    },
+    {
+      "display_name": "Harald Renz",
+      "id": "A5053003825",
+      "orcid": "https://orcid.org/0000-0003-0602-7215",
+      "institutions": [
+        {
+          "id": "I161103922",
+          "display_name": "Philipps University of Marburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Harald Renz"
+    },
+    {
+      "display_name": "Raphael Twerenbold",
+      "id": "A5019039759",
+      "orcid": "https://orcid.org/0000-0003-3814-6542",
+      "institutions": [
+        {
+          "id": "I1850255",
+          "display_name": "University of Basel",
+          "country_code": "CH",
+          "type": "funder"
+        },
+        {
+          "id": "I3019692003",
+          "display_name": "Cardiovascular Institute Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Raphael Twerenbold"
+    },
+    {
+      "display_name": "Martina Rothenbühler",
+      "id": "A5053528722",
+      "orcid": "https://orcid.org/0000-0001-8009-4104",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Martina Rothenbühler"
+    },
+    {
+      "display_name": "Daniel Leibovitz",
+      "id": "A5077796593",
+      "orcid": "https://orcid.org/0000-0003-4512-2514",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel Leibovitz"
+    },
+    {
+      "display_name": "Vladimir Kovačević",
+      "id": "A5103233038",
+      "orcid": "https://orcid.org/0000-0002-9843-6261",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Vladimir Kovacevic"
+    },
+    {
+      "display_name": "Paul Klaver",
+      "id": "A5067032166",
+      "orcid": "https://orcid.org/0000-0003-2782-2867",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Paul Klaver"
+    },
+    {
+      "display_name": "Timo B. Brakenhoff",
+      "id": "A5023392745",
+      "orcid": "https://orcid.org/0000-0003-3543-6296",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Timo B. Brakenhoff"
+    },
+    {
+      "display_name": "Billy Franks",
+      "id": "A5084781293",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Billy Franks"
+    },
+    {
+      "display_name": "Marianna Mitratza",
+      "id": "A5033908989",
+      "orcid": "https://orcid.org/0000-0002-1573-2015",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Marianna Mitratza"
+    },
+    {
+      "display_name": "George S. Downward",
+      "id": "A5003510741",
+      "orcid": "https://orcid.org/0000-0001-6642-7048",
+      "institutions": [
+        {
+          "id": "I3018483916",
+          "display_name": "University Medical Center Utrecht",
+          "country_code": "NL",
+          "type": "healthcare"
+        },
+        {
+          "id": "I193662353",
+          "display_name": "Utrecht University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "George S. Downward"
+    },
+    {
+      "display_name": "Ariel Dowling",
+      "id": "A5065013640",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I44892455",
+          "display_name": "Takeda (Japan)",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ariel Dowling"
+    },
+    {
+      "display_name": "Santiago Montes",
+      "id": "A5009842497",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I118019719",
+          "display_name": "Roche (Switzerland)",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Santiago Montes"
+    },
+    {
+      "display_name": "Diederick E. Grobbee",
+      "id": "A5007679161",
+      "orcid": "https://orcid.org/0000-0003-4472-4468",
+      "institutions": [
+        {
+          "id": "I3018483916",
+          "display_name": "University Medical Center Utrecht",
+          "country_code": "NL",
+          "type": "healthcare"
+        },
+        {
+          "id": "I193662353",
+          "display_name": "Utrecht University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Diederick E. Grobbee"
+    },
+    {
+      "display_name": "Maureen Cronin",
+      "id": "A5104111148",
+      "orcid": "https://orcid.org/0000-0003-3208-829X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Maureen Cronin"
+    },
+    {
+      "display_name": "David Conen",
+      "id": "A5068858051",
+      "orcid": "https://orcid.org/0000-0002-2459-5251",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I2802834092",
+          "display_name": "Population Health Research Institute",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Conen"
+    },
+    {
+      "display_name": "Brianna M. Goodale",
+      "id": "A5010953207",
+      "orcid": "https://orcid.org/0000-0002-6450-123X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Brianna M. Goodale"
+    },
+    {
+      "display_name": "Lorenz Risch",
+      "id": "A5049354618",
+      "orcid": "https://orcid.org/0000-0003-2692-6699",
+      "institutions": [
+        {
+          "id": "I4210126374",
+          "display_name": "Labormedizinische Zentrum Dr Risch (Switzerland)",
+          "country_code": "CH",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lorenz Risch"
+    },
+    {
+      "display_name": "COVID- Remote Early Detection Consortium",
+      "id": "A5079392999",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "COVID-19 Remote Early Detection (COVID-RED) Consortium"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-01-01",
+  "type": "article",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210172589",
+    "display_name": "SSRN Electronic Journal",
+    "issn_l": "1556-5068",
+    "issn": [
+      "1556-5068"
+    ],
+    "type": "repository",
+    "host_organization": "https://openalex.org/I1318003438"
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C8213797",
+      "display_name": "Respiratory rate",
+      "level": 4,
+      "score": 0.6241633
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.5875322
+    },
+    {
+      "id": "C2777953023",
+      "display_name": "Heart rate",
+      "level": 3,
+      "score": 0.55382365
+    },
+    {
+      "id": "C2908647359",
+      "display_name": "Population",
+      "level": 2,
+      "score": 0.5365354
+    },
+    {
+      "id": "C72563966",
+      "display_name": "Cohort",
+      "level": 2,
+      "score": 0.52277297
+    },
+    {
+      "id": "C71635504",
+      "display_name": "Heart rate variability",
+      "level": 4,
+      "score": 0.45991603
+    },
+    {
+      "id": "C3008058167",
+      "display_name": "Coronavirus disease 2019 (COVID-19)",
+      "level": 4,
+      "score": 0.42980024
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.39775106
+    },
+    {
+      "id": "C2779134260",
+      "display_name": "Disease",
+      "level": 2,
+      "score": 0.18696141
+    },
+    {
+      "id": "C84393581",
+      "display_name": "Blood pressure",
+      "level": 2,
+      "score": 0.11848852
+    },
+    {
+      "id": "C524204448",
+      "display_name": "Infectious disease (medical specialty)",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "C99454951",
+      "display_name": "Environmental health",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11775",
+      "display_name": "COVID-19 diagnosis using AI",
+      "score": 0.9865
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.2139/ssrn.3900401",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:28:20.190485",
+  "source_database": "OpenAlex"
+}

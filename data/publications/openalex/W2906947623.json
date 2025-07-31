@@ -1,0 +1,316 @@
+{
+  "openalex_id": "W2906947623",
+  "doi": "https://doi.org/10.3390/rs11010069",
+  "title": "Arctic Vegetation Mapping Using Unsupervised Training Datasets and Convolutional Neural Networks",
+  "abstract": "Land cover datasets are essential for modeling and analysis of Arctic ecosystem structure and function and for understanding land–atmosphere interactions at high spatial resolutions. However, most Arctic land cover products are generated at a coarse resolution, often limited due to cloud cover, polar darkness, and poor availability of high-resolution imagery. A multi-sensor remote sensing-based deep learning approach was developed for generating high-resolution (5 m) vegetation maps for the western Alaskan Arctic on the Seward Peninsula, Alaska. The fusion of hyperspectral, multispectral, and terrain datasets was performed using unsupervised and supervised classification techniques over a ∼343 km2 area, and a high-resolution (5 m) vegetation classification map was generated. An unsupervised technique was developed to classify high-dimensional remote sensing datasets into cohesive clusters. We employed a quantitative method to add supervision to the unlabeled clusters, producing a fully labeled vegetation map. We then developed convolutional neural networks (CNNs) using the multi-sensor fusion datasets to map vegetation distributions using the original classes and the classes produced by the unsupervised classification method. To validate the resulting CNN maps, vegetation observations were collected at 30 field plots during the summer of 2016, and the resulting vegetation products developed were evaluated against them for accuracy. Our analysis indicates the CNN models based on the labels produced by the unsupervised classification method provided the most accurate mapping of vegetation types, increasing the validation score (i.e., precision) from 0.53 to 0.83 when evaluated against field vegetation observations.",
+  "authors": [
+    {
+      "display_name": "Zachary Langford",
+      "id": "A5078960014",
+      "orcid": "https://orcid.org/0000-0001-7574-4440",
+      "institutions": [
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Zachary L. Langford"
+    },
+    {
+      "display_name": "Jitendra Kumar",
+      "id": "A5038417949",
+      "orcid": "https://orcid.org/0000-0002-0159-0546",
+      "institutions": [
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jitendra Kumar"
+    },
+    {
+      "display_name": "Forrest M. Hoffman",
+      "id": "A5053220196",
+      "orcid": "https://orcid.org/0000-0001-5802-4134",
+      "institutions": [
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Forrest M. Hoffman"
+    },
+    {
+      "display_name": "Amy Breen",
+      "id": "A5042601693",
+      "orcid": "https://orcid.org/0000-0002-1109-3906",
+      "institutions": [
+        {
+          "id": "I4396570543",
+          "display_name": "International Arctic Research Center",
+          "country_code": null,
+          "type": "funder"
+        },
+        {
+          "id": "I141472210",
+          "display_name": "University of Alaska Fairbanks",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amy L. Breen"
+    },
+    {
+      "display_name": "Colleen M. Iversen",
+      "id": "A5047874160",
+      "orcid": "https://orcid.org/0000-0001-8293-3450",
+      "institutions": [
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Colleen M. Iversen"
+    }
+  ],
+  "publication_year": 2019,
+  "publication_date": "2019-01-02",
+  "type": "article",
+  "cited_by_count": 54,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S43295729",
+    "display_name": "Remote Sensing",
+    "issn_l": "2072-4292",
+    "issn": [
+      "2072-4292"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310310987"
+  },
+  "volume": "11",
+  "issue": "1",
+  "first_page": "69",
+  "last_page": "69",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.mdpi.com/2072-4292/11/1/69/pdf?version=1546418166",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2776133958",
+      "display_name": "Vegetation (pathology)",
+      "level": 2,
+      "score": 0.6761665
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.660793
+    },
+    {
+      "id": "C518008717",
+      "display_name": "Arctic",
+      "level": 2,
+      "score": 0.6007832
+    },
+    {
+      "id": "C159078339",
+      "display_name": "Hyperspectral imaging",
+      "level": 2,
+      "score": 0.58166444
+    },
+    {
+      "id": "C2776054349",
+      "display_name": "Vegetation classification",
+      "level": 3,
+      "score": 0.5803225
+    },
+    {
+      "id": "C2780648208",
+      "display_name": "Land cover",
+      "level": 3,
+      "score": 0.54421246
+    },
+    {
+      "id": "C81363708",
+      "display_name": "Convolutional neural network",
+      "level": 2,
+      "score": 0.5326148
+    },
+    {
+      "id": "C173163844",
+      "display_name": "Multispectral image",
+      "level": 2,
+      "score": 0.5291344
+    },
+    {
+      "id": "C30878456",
+      "display_name": "Arctic vegetation",
+      "level": 4,
+      "score": 0.46873814
+    },
+    {
+      "id": "C161840515",
+      "display_name": "Terrain",
+      "level": 2,
+      "score": 0.45574996
+    },
+    {
+      "id": "C9652623",
+      "display_name": "Field (mathematics)",
+      "level": 2,
+      "score": 0.44723725
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.42433882
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.38365257
+    },
+    {
+      "id": "C125069764",
+      "display_name": "Tundra",
+      "level": 3,
+      "score": 0.22179034
+    },
+    {
+      "id": "C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "score": 0.22035357
+    },
+    {
+      "id": "C4792198",
+      "display_name": "Land use",
+      "level": 2,
+      "score": 0.18916905
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.14799896
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.12703878
+    },
+    {
+      "id": "C18903297",
+      "display_name": "Ecology",
+      "level": 1,
+      "score": 0.079072356
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.07669014
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C111368507",
+      "display_name": "Oceanography",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C202444582",
+      "display_name": "Pure mathematics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11333",
+      "display_name": "Climate change and permafrost",
+      "score": 0.9947
+    },
+    {
+      "id": "T10111",
+      "display_name": "Remote Sensing in Agriculture",
+      "score": 0.9884
+    },
+    {
+      "id": "T10770",
+      "display_name": "Soil Geostatistics and Mapping",
+      "score": 0.976
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3390/rs11010069",
+  "pdf_url": "https://www.mdpi.com/2072-4292/11/1/69/pdf?version=1546418166",
+  "retrieved_date": "2025-07-30T14:58:47.496067",
+  "source_database": "OpenAlex"
+}

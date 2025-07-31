@@ -1,0 +1,728 @@
+{
+  "openalex_id": "W4392287257",
+  "doi": "https://doi.org/10.5194/acp-24-2651-2024",
+  "title": "The Puy de Dôme ICe Nucleation Intercomparison Campaign (PICNIC): comparison between online and offline methods in ambient air",
+  "abstract": "Abstract. Ice crystal formation in mixed-phase clouds is initiated by specific aerosol particles, termed ice-nucleating particles (INPs). Only a tiny fraction of all aerosol particles are INPs, providing a challenge for contemporary INP measurement techniques. Models have shown that the presence of INPs in clouds can impact their radiative properties and induce precipitation formation. However, for a qualified implementation of INPs in models, measurement techniques able to accurately detect the temperature-dependent INP concentration are needed. Here we present measurements of INP concentrations in ambient air under conditions relevant to mixed-phase clouds from a total of 10 INP methods over 2 weeks in October 2018 at the Puy de Dôme observatory in central France. A special focus in this intercomparison campaign was placed on having overlapping sampling periods. Although a variety of different measurement principles were used, the majority of the data show INP concentrations within a factor of 5 of one another, demonstrating the suitability of the instruments to derive model-relevant INP data. Lower values of comparability are likely due to instrument-specific features such as aerosol lamina spreading in continuous-flow diffusion chambers, demonstrating the need to account for such phenomena when interpreting INP concentration data from online instruments. Moreover, consistently higher INP concentrations were observed from aerosol filters collected on the rooftop at the Puy de Dôme station without the use of an aerosol inlet.",
+  "authors": [
+    {
+      "display_name": "Larissa Lacher",
+      "id": "A5002603341",
+      "orcid": "https://orcid.org/0000-0002-1601-0276",
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Larissa Lacher"
+    },
+    {
+      "display_name": "Michael P. Adams",
+      "id": "A5010215445",
+      "orcid": "https://orcid.org/0000-0002-9555-1264",
+      "institutions": [
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael P. Adams"
+    },
+    {
+      "display_name": "Kevin R. Barry",
+      "id": "A5079562458",
+      "orcid": "https://orcid.org/0000-0002-1896-1921",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kevin Barry"
+    },
+    {
+      "display_name": "Barbara Bertozzi",
+      "id": "A5048802141",
+      "orcid": "https://orcid.org/0000-0003-2571-6585",
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Barbara Bertozzi"
+    },
+    {
+      "display_name": "Heinz Bingemer",
+      "id": "A5060663399",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I114090438",
+          "display_name": "Goethe University Frankfurt",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Heinz Bingemer"
+    },
+    {
+      "display_name": "C. Boffo",
+      "id": "A5110220619",
+      "orcid": "https://orcid.org/0000-0002-2797-6500",
+      "institutions": [
+        {
+          "id": "I4210129403",
+          "display_name": "Bilfinger (Germany)",
+          "country_code": "DE",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cristian Boffo"
+    },
+    {
+      "display_name": "Yannick Bras",
+      "id": "A5066260897",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I198244214",
+          "display_name": "Université Clermont Auvergne",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210133081",
+          "display_name": "Laboratoire de Météorologie Physique",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yannick Bras"
+    },
+    {
+      "display_name": "Nicole Büttner",
+      "id": "A5066484556",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicole Büttner"
+    },
+    {
+      "display_name": "Dimitri Castarède",
+      "id": "A5028610631",
+      "orcid": "https://orcid.org/0000-0002-2812-6401",
+      "institutions": [
+        {
+          "id": "I881427289",
+          "display_name": "University of Gothenburg",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dimitri Castarede"
+    },
+    {
+      "display_name": "D. J. Cziczo",
+      "id": "A5012712457",
+      "orcid": "https://orcid.org/0000-0003-1851-8740",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I219193219",
+          "display_name": "Purdue University West Lafayette",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel J. Cziczo"
+    },
+    {
+      "display_name": "Paul J. DeMott",
+      "id": "A5090361945",
+      "orcid": "https://orcid.org/0000-0002-3719-1889",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul J. DeMott"
+    },
+    {
+      "display_name": "Romy Fösig",
+      "id": "A5114043327",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Romy Fösig"
+    },
+    {
+      "display_name": "Megan Goodell",
+      "id": "A5022350975",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Megan Goodell"
+    },
+    {
+      "display_name": "Kristina Höhler",
+      "id": "A5070773876",
+      "orcid": "https://orcid.org/0000-0001-5503-9816",
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kristina Höhler"
+    },
+    {
+      "display_name": "Thomas C. J. Hill",
+      "id": "A5062876456",
+      "orcid": "https://orcid.org/0000-0002-5293-3959",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas C. J. Hill"
+    },
+    {
+      "display_name": "Conrad Jentzsch",
+      "id": "A5018323827",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210117062",
+          "display_name": "Leibniz Institute for Tropospheric Research",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Conrad Jentzsch"
+    },
+    {
+      "display_name": "Luis A. Ladino",
+      "id": "A5016084791",
+      "orcid": "https://orcid.org/0000-0002-4941-7945",
+      "institutions": [
+        {
+          "id": "I8961855",
+          "display_name": "Universidad Nacional Autónoma de México",
+          "country_code": "MX",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Luis A. Ladino"
+    },
+    {
+      "display_name": "Ezra J. T. Levin",
+      "id": "A5085431646",
+      "orcid": "https://orcid.org/0000-0001-7390-4877",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ezra J. T. Levin"
+    },
+    {
+      "display_name": "Stephan Mertes",
+      "id": "A5006429684",
+      "orcid": "https://orcid.org/0000-0001-9549-8558",
+      "institutions": [
+        {
+          "id": "I4210117062",
+          "display_name": "Leibniz Institute for Tropospheric Research",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephan Mertes"
+    },
+    {
+      "display_name": "Ottmar Möhler",
+      "id": "A5089697844",
+      "orcid": "https://orcid.org/0000-0002-7551-9814",
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ottmar Möhler"
+    },
+    {
+      "display_name": "Kathryn A. Moore",
+      "id": "A5076570177",
+      "orcid": "https://orcid.org/0000-0002-9242-5422",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kathryn A. Moore"
+    },
+    {
+      "display_name": "Benjamin J. Murray",
+      "id": "A5031447909",
+      "orcid": "https://orcid.org/0000-0002-8198-8131",
+      "institutions": [
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Benjamin J. Murray"
+    },
+    {
+      "display_name": "Jens Nadolny",
+      "id": "A5050535381",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jens Nadolny"
+    },
+    {
+      "display_name": "Tatjana Pfeuffer",
+      "id": "A5017772003",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210129403",
+          "display_name": "Bilfinger (Germany)",
+          "country_code": "DE",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tatjana Pfeuffer"
+    },
+    {
+      "display_name": "David Picard",
+      "id": "A5101775789",
+      "orcid": "https://orcid.org/0000-0001-6257-8287",
+      "institutions": [
+        {
+          "id": "I4210133081",
+          "display_name": "Laboratoire de Météorologie Physique",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I198244214",
+          "display_name": "Université Clermont Auvergne",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Picard"
+    },
+    {
+      "display_name": "Carolina Ramírez-Romero",
+      "id": "A5002871932",
+      "orcid": "https://orcid.org/0000-0001-6821-1806",
+      "institutions": [
+        {
+          "id": "I8961855",
+          "display_name": "Universidad Nacional Autónoma de México",
+          "country_code": "MX",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Carolina Ramírez-Romero"
+    },
+    {
+      "display_name": "Mickaël Ribeiro",
+      "id": "A5012532664",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210133081",
+          "display_name": "Laboratoire de Météorologie Physique",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I198244214",
+          "display_name": "Université Clermont Auvergne",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mickael Ribeiro"
+    },
+    {
+      "display_name": "Sarah Richter",
+      "id": "A5078473574",
+      "orcid": "https://orcid.org/0000-0002-4906-0499",
+      "institutions": [
+        {
+          "id": "I114090438",
+          "display_name": "Goethe University Frankfurt",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sarah Richter"
+    },
+    {
+      "display_name": "Jann Schrod",
+      "id": "A5031032001",
+      "orcid": "https://orcid.org/0000-0003-0671-3469",
+      "institutions": [
+        {
+          "id": "I114090438",
+          "display_name": "Goethe University Frankfurt",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jann Schrod"
+    },
+    {
+      "display_name": "Karine Sellegri",
+      "id": "A5005650821",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210133081",
+          "display_name": "Laboratoire de Météorologie Physique",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I198244214",
+          "display_name": "Université Clermont Auvergne",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karine Sellegri"
+    },
+    {
+      "display_name": "Frank Stratmann",
+      "id": "A5044561727",
+      "orcid": "https://orcid.org/0000-0003-1977-1158",
+      "institutions": [
+        {
+          "id": "I4210117062",
+          "display_name": "Leibniz Institute for Tropospheric Research",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Frank Stratmann"
+    },
+    {
+      "display_name": "Benjamin E. Swanson",
+      "id": "A5102843740",
+      "orcid": "https://orcid.org/0000-0001-7565-2933",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Benjamin E. Swanson"
+    },
+    {
+      "display_name": "Erik S. Thomson",
+      "id": "A5073299906",
+      "orcid": "https://orcid.org/0000-0003-2428-7539",
+      "institutions": [
+        {
+          "id": "I881427289",
+          "display_name": "University of Gothenburg",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Erik S. Thomson"
+    },
+    {
+      "display_name": "Heike Wex",
+      "id": "A5088973180",
+      "orcid": "https://orcid.org/0000-0003-2129-9323",
+      "institutions": [
+        {
+          "id": "I4210117062",
+          "display_name": "Leibniz Institute for Tropospheric Research",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Heike Wex"
+    },
+    {
+      "display_name": "Martin J. Wolf",
+      "id": "A5056639757",
+      "orcid": "https://orcid.org/0000-0002-8553-8808",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin J. Wolf"
+    },
+    {
+      "display_name": "Evelyn Freney",
+      "id": "A5051193277",
+      "orcid": "https://orcid.org/0000-0002-9363-9115",
+      "institutions": [
+        {
+          "id": "I4210133081",
+          "display_name": "Laboratoire de Météorologie Physique",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I198244214",
+          "display_name": "Université Clermont Auvergne",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Evelyn Freney"
+    }
+  ],
+  "publication_year": 2024,
+  "publication_date": "2024-02-29",
+  "type": "article",
+  "cited_by_count": 11,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S162708223",
+    "display_name": "Atmospheric chemistry and physics",
+    "issn_l": "1680-7316",
+    "issn": [
+      "1680-7316",
+      "1680-7324"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310313756"
+  },
+  "volume": "24",
+  "issue": "4",
+  "first_page": "2651",
+  "last_page": "2678",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://doi.org/10.5194/acp-24-2651-2024",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2779345167",
+      "display_name": "Aerosol",
+      "level": 2,
+      "score": 0.86781263
+    },
+    {
+      "id": "C125388846",
+      "display_name": "Ice crystals",
+      "level": 2,
+      "score": 0.5628226
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.5074102
+    },
+    {
+      "id": "C153294291",
+      "display_name": "Meteorology",
+      "level": 1,
+      "score": 0.50368685
+    },
+    {
+      "id": "C91586092",
+      "display_name": "Atmospheric sciences",
+      "level": 1,
+      "score": 0.49800706
+    },
+    {
+      "id": "C104730834",
+      "display_name": "Firn",
+      "level": 3,
+      "score": 0.49767974
+    },
+    {
+      "id": "C197046000",
+      "display_name": "Snow",
+      "level": 2,
+      "score": 0.49546015
+    },
+    {
+      "id": "C122409099",
+      "display_name": "Ice nucleus",
+      "level": 3,
+      "score": 0.4306519
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.36064297
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.35079896
+    },
+    {
+      "id": "C199289684",
+      "display_name": "Mineralogy",
+      "level": 1,
+      "score": 0.32950485
+    },
+    {
+      "id": "C61048295",
+      "display_name": "Nucleation",
+      "level": 2,
+      "score": 0.32479042
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.16850123
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.1447419
+    },
+    {
+      "id": "C178790620",
+      "display_name": "Organic chemistry",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10347",
+      "display_name": "Atmospheric aerosols and clouds",
+      "score": 0.9999
+    },
+    {
+      "id": "T10075",
+      "display_name": "Atmospheric chemistry and aerosols",
+      "score": 0.9999
+    },
+    {
+      "id": "T11320",
+      "display_name": "Atmospheric Ozone and Climate",
+      "score": 0.9955
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.5194/acp-24-2651-2024",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:28:20.196762",
+  "source_database": "OpenAlex"
+}

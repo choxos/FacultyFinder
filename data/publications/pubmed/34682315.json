@@ -1,0 +1,116 @@
+{
+  "pmid": "34682315",
+  "uid": "34682315",
+  "title": "Clinical Concept Extraction with Lexical Semantics to Support Automatic Annotation.",
+  "abstract": "Extracting clinical concepts, such as problems, diagnosis, and treatment, from unstructured clinical narrative documents enables data-driven approaches such as machine and deep learning to support advanced applications such as clinical decision-support systems, the assessment of disease progression, and the intelligent analysis of treatment efficacy. Various tools such as cTAKES, Sophia, MetaMap, and other rules-based approaches and algorithms have been used for automatic concept extraction. Recently, machine- and deep-learning approaches have been used to extract, classify, and accurately annotate terms and phrases. However, the requirement of an annotated dataset, which is labor-intensive, impedes the success of data-driven approaches. A rule-based mechanism could support the process of annotation, but existing rule-based approaches fail to adequately capture contextual, syntactic, and semantic patterns. This study intends to introduce a comprehensive rule-based system that automatically extracts clinical concepts from unstructured narratives with higher accuracy and transparency. The proposed system is a pipelined approach, capable of recognizing clinical concepts of three types, problem, treatment, and test, in the dataset collected from a published repository as a part of the I2b2 challenge 2010. The system's performance is compared with that of three existing systems: Quick UMLS, BIO-CRF, and the Rules (i2b2) model. Compared to the baseline systems, the average F1-score of 72.94% was found to be 13% better than Quick UMLS, 3% better than BIO CRF, and 30.1% better than the Rules (i2b2) model. Individually, the system performance was noticeably higher for problem-related concepts, with an F1-score of 80.45%, followed by treatment-related concepts and test-related concepts, with F1-scores of 76.06% and 55.3%, respectively. The proposed methodology significantly improves the performance of concept extraction from unstructured clinical narratives by exploiting the linguistic and lexical semantic features. The approach can ease the automatic annotation process of clinical data, which ultimately improves the performance of supervised data-driven applications trained with these data.",
+  "authors": [
+    {
+      "last_name": "Abbas",
+      "fore_name": "Asim",
+      "initials": "A",
+      "name": "Asim Abbas",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Global Campus, Kyung Hee University, 1732 Deogyeong-daero, Giheung-gu, Yongin-si 17104, Korea."
+      ],
+      "orcid": "0000-0001-6374-0397"
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Afzal",
+      "affiliations": [
+        "Department of Software, Sejong University, Sejong 30019, Korea."
+      ],
+      "orcid": "0000-0002-7851-2327"
+    },
+    {
+      "last_name": "Hussain",
+      "fore_name": "Jamil",
+      "initials": "J",
+      "name": "Jamil Hussain",
+      "affiliations": [
+        "Department of Data Science, Sejong University, Sejong 30019, Korea."
+      ],
+      "orcid": "0000-0003-3862-8787"
+    },
+    {
+      "last_name": "Ali",
+      "fore_name": "Taqdir",
+      "initials": "T",
+      "name": "Taqdir Ali",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Global Campus, Kyung Hee University, 1732 Deogyeong-daero, Giheung-gu, Yongin-si 17104, Korea."
+      ]
+    },
+    {
+      "last_name": "Bilal",
+      "fore_name": "Hafiz Syed Muhammad",
+      "initials": "HSM",
+      "name": "Hafiz Syed Muhammad Bilal",
+      "affiliations": [
+        "Department of Computing, SEECS, NUST University, Islamabad 44000, Pakistan."
+      ],
+      "orcid": "0000-0002-8920-4231"
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Sungyoung",
+      "initials": "S",
+      "name": "Sungyoung Lee",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Global Campus, Kyung Hee University, 1732 Deogyeong-daero, Giheung-gu, Yongin-si 17104, Korea."
+      ]
+    },
+    {
+      "last_name": "Jeon",
+      "fore_name": "Seokhee",
+      "initials": "S",
+      "name": "Seokhee Jeon",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Global Campus, Kyung Hee University, 1732 Deogyeong-daero, Giheung-gu, Yongin-si 17104, Korea."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "International journal of environmental research and public health",
+    "iso_abbreviation": "Int J Environ Res Public Health",
+    "issn": "1660-4601",
+    "issn_type": "Electronic",
+    "volume": "18",
+    "issue": "20",
+    "pub_year": "2021",
+    "pub_month": "Oct",
+    "pub_day": "09"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Decision Support Systems, Clinical",
+    "Linguistics",
+    "Semantics"
+  ],
+  "article_ids": {
+    "pubmed": "34682315",
+    "pmc": "PMC8535468",
+    "doi": "10.3390/ijerph182010564",
+    "pii": "ijerph182010564"
+  },
+  "doi": "10.3390/ijerph182010564",
+  "pmc_id": "PMC8535468",
+  "dates": {
+    "completed": "2021-11-01",
+    "revised": "2021-11-01"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.980645",
+    "pmid": "34682315"
+  }
+}

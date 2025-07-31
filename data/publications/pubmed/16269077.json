@@ -1,0 +1,129 @@
+{
+  "pmid": "16269077",
+  "uid": "16269077",
+  "title": "maxdLoad2 and maxdBrowse: standards-compliant tools for microarray experimental annotation, data management and dissemination.",
+  "abstract": "BACKGROUND: maxdLoad2 is a relational database schema and Java application for microarray experimental annotation and storage. It is compliant with all standards for microarray meta-data capture; including the specification of what data should be recorded, extensive use of standard ontologies and support for data exchange formats. The output from maxdLoad2 is of a form acceptable for submission to the ArrayExpress microarray repository at the European Bioinformatics Institute. maxdBrowse is a PHP web-application that makes contents of maxdLoad2 databases accessible via web-browser, the command-line and web-service environments. It thus acts as both a dissemination and data-mining tool. RESULTS: maxdLoad2 presents an easy-to-use interface to an underlying relational database and provides a full complement of facilities for browsing, searching and editing. There is a tree-based visualization of data connectivity and the ability to explore the links between any pair of data elements, irrespective of how many intermediate links lie between them. Its principle novel features are: the flexibility of the meta-data that can be captured, the tools provided for importing data from spreadsheets and other tabular representations, the tools provided for the automatic creation of structured documents, the ability to browse and access the data via web and web-services interfaces. Within maxdLoad2 it is very straightforward to customise the meta-data that is being captured or change the definitions of the meta-data. These meta-data definitions are stored within the database itself allowing client software to connect properly to a modified database without having to be specially configured. The meta-data definitions (configuration file) can also be centralized allowing changes made in response to revisions of standards or terminologies to be propagated to clients without user intervention.maxdBrowse is hosted on a web-server and presents multiple interfaces to the contents of maxd databases. maxdBrowse emulates many of the browse and search features available in the maxdLoad2 application via a web-browser. This allows users who are not familiar with maxdLoad2 to browse and export microarray data from the database for their own analysis. The same browse and search features are also available via command-line and SOAP server interfaces. This both enables scripting of data export for use embedded in data repositories and analysis environments, and allows access to the maxd databases via web-service architectures. CONCLUSION: maxdLoad2 http://www.bioinf.man.ac.uk/microarray/maxd/ and maxdBrowse http://dbk.ch.umist.ac.uk/maxdBrowse are portable and compatible with all common operating systems and major database servers. They provide a powerful, flexible package for annotation of microarray experiments and a convenient dissemination environment. They are available for download and open sourced under the Artistic License.",
+  "authors": [
+    {
+      "last_name": "Hancock",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Hancock",
+      "affiliations": [
+        "School of Computer Science, The University of Manchester, Kilburn Building, Oxford Road, Manchester, UK. d.hancock@cs.man.ac.uk"
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Velarde",
+      "fore_name": "Giles",
+      "initials": "G",
+      "name": "Giles Velarde",
+      "affiliations": []
+    },
+    {
+      "last_name": "Morrison",
+      "fore_name": "Norman",
+      "initials": "N",
+      "name": "Norman Morrison",
+      "affiliations": []
+    },
+    {
+      "last_name": "Hayes",
+      "fore_name": "Andrew",
+      "initials": "A",
+      "name": "Andrew Hayes",
+      "affiliations": []
+    },
+    {
+      "last_name": "Hulme",
+      "fore_name": "Helen",
+      "initials": "H",
+      "name": "Helen Hulme",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wood",
+      "fore_name": "A Joseph",
+      "initials": "AJ",
+      "name": "A Joseph Wood",
+      "affiliations": []
+    },
+    {
+      "last_name": "Nashar",
+      "fore_name": "Karim",
+      "initials": "K",
+      "name": "Karim Nashar",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kell",
+      "fore_name": "Douglas B",
+      "initials": "DB",
+      "name": "Douglas B Kell",
+      "affiliations": []
+    },
+    {
+      "last_name": "Brass",
+      "fore_name": "Andy",
+      "initials": "A",
+      "name": "Andy Brass",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "BMC bioinformatics",
+    "iso_abbreviation": "BMC Bioinformatics",
+    "issn": "1471-2105",
+    "issn_type": "Electronic",
+    "volume": "6",
+    "pub_year": "2005",
+    "pub_month": "Nov",
+    "pub_day": "03"
+  },
+  "start_page": "264",
+  "pages": "264",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Data Interpretation, Statistical",
+    "Information Dissemination",
+    "Internet",
+    "Microarray Analysis",
+    "Software",
+    "User-Computer Interface"
+  ],
+  "article_ids": {
+    "pubmed": "16269077",
+    "pmc": "PMC1298287",
+    "doi": "10.1186/1471-2105-6-264",
+    "pii": "1471-2105-6-264"
+  },
+  "doi": "10.1186/1471-2105-6-264",
+  "pmc_id": "PMC1298287",
+  "dates": {
+    "completed": "2006-03-22",
+    "revised": "2025-05-29"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "G18886",
+      "agency": "Biotechnology and Biological Sciences Research Council",
+      "country": "United Kingdom"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:09:59.776187",
+    "pmid": "16269077"
+  }
+}

@@ -1,0 +1,1544 @@
+{
+  "openalex_id": "W3216138489",
+  "doi": "https://doi.org/10.3847/1538-4357/ac4d29",
+  "title": "Improved Characterization of the Astrophysical Muon–neutrino Flux with 9.5 Years of IceCube Data",
+  "abstract": "Abstract We present a measurement of the high-energy astrophysical muon–neutrino flux with the IceCube Neutrino Observatory. The measurement uses a high-purity selection of 650k neutrino-induced muon tracks from the northern celestial hemisphere, corresponding to 9.5 yr of experimental data. With respect to previous publications, the measurement is improved by the increased size of the event sample and the extended model testing beyond simple power-law hypotheses. An updated treatment of systematic uncertainties and atmospheric background fluxes has been implemented based on recent models. The best-fit single power-law parameterization for the astrophysical energy spectrum results in a normalization of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\"> <mml:msubsup> <mml:mrow> <mml:mi>ϕ</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>@</mml:mo> <mml:mn>100</mml:mn> <mml:mi>TeV</mml:mi> </mml:mrow> <mml:mrow> <mml:msub> <mml:mrow> <mml:mi>ν</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>μ</mml:mi> </mml:mrow> </mml:msub> <mml:mo>+</mml:mo> <mml:msub> <mml:mrow> <mml:mover accent=\"true\"> <mml:mrow> <mml:mi>ν</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>¯</mml:mo> </mml:mrow> </mml:mover> </mml:mrow> <mml:mrow> <mml:mi>μ</mml:mi> </mml:mrow> </mml:msub> </mml:mrow> </mml:msubsup> <mml:mo>=</mml:mo> <mml:msubsup> <mml:mrow> <mml:mn>1.44</mml:mn> </mml:mrow> <mml:mrow> <mml:mo>−</mml:mo> <mml:mn>0.26</mml:mn> </mml:mrow> <mml:mrow> <mml:mo>+</mml:mo> <mml:mn>0.25</mml:mn> </mml:mrow> </mml:msubsup> <mml:mo>×</mml:mo> <mml:msup> <mml:mrow> <mml:mn>10</mml:mn> </mml:mrow> <mml:mrow> <mml:mo>−</mml:mo> <mml:mn>18</mml:mn> </mml:mrow> </mml:msup> <mml:mspace width=\"0.25em\"/> <mml:msup> <mml:mrow> <mml:mi>GeV</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>−</mml:mo> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:msup> <mml:mrow> <mml:mi>cm</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>−</mml:mo> <mml:mn>2</mml:mn> </mml:mrow> </mml:msup> <mml:msup> <mml:mrow> <mml:mi mathvariant=\"normal\">s</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>−</mml:mo> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> <mml:msup> <mml:mrow> <mml:mi>sr</mml:mi> </mml:mrow> <mml:mrow> <mml:mo>−</mml:mo> <mml:mn>1</mml:mn> </mml:mrow> </mml:msup> </mml:math> and a spectral index <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" overflow=\"scroll\"> <mml:msub> <mml:mrow> <mml:mi>γ</mml:mi> </mml:mrow> <mml:mrow> <mml:mi>SPL</mml:mi> </mml:mrow> </mml:msub> <mml:mo>=</mml:mo> <mml:msubsup> <mml:mrow> <mml:mn>2.37</mml:mn> </mml:mrow> <mml:mrow> <mml:mo>−</mml:mo> <mml:mn>0.09</mml:mn> </mml:mrow> <mml:mrow> <mml:mo>+</mml:mo> <mml:mn>0.09</mml:mn> </mml:mrow> </mml:msubsup> </mml:math> , constrained in the energy range from 15 TeV to 5 PeV. The model tests include a single power law with a spectral cutoff at high energies, a log-parabola model, several source-class-specific flux predictions from the literature, and a model-independent spectral unfolding. The data are consistent with a single power-law hypothesis, however, spectra with softening above one PeV are statistically more favorable at a two-sigma level.",
+  "authors": [
+    {
+      "display_name": "Rasha Abbasi",
+      "id": "A5077087174",
+      "orcid": "https://orcid.org/0000-0001-6141-4205",
+      "institutions": [
+        {
+          "id": "I1925986",
+          "display_name": "Loyola University Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Abbasi"
+    },
+    {
+      "display_name": "M. Ackermann",
+      "id": "A5054355866",
+      "orcid": "https://orcid.org/0000-0001-8952-588X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M. Ackermann"
+    },
+    {
+      "display_name": "J. Adams",
+      "id": "A5109989748",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I185492890",
+          "display_name": "University of Canterbury",
+          "country_code": "NZ",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Adams"
+    },
+    {
+      "display_name": "J. A. Aguilar",
+      "id": "A5100607430",
+      "orcid": "https://orcid.org/0000-0003-2252-9514",
+      "institutions": [
+        {
+          "id": "I132053463",
+          "display_name": "Université Libre de Bruxelles",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. A. Aguilar"
+    },
+    {
+      "display_name": "M. Ahlers",
+      "id": "A5085798900",
+      "orcid": "https://orcid.org/0000-0003-0709-5631",
+      "institutions": [
+        {
+          "id": "I124055696",
+          "display_name": "University of Copenhagen",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Ahlers"
+    },
+    {
+      "display_name": "M. Ahrens",
+      "id": "A5107888754",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I161593684",
+          "display_name": "Stockholm University",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Ahrens"
+    },
+    {
+      "display_name": "Jean-Marco Alameddine",
+      "id": "A5070726351",
+      "orcid": "https://orcid.org/0000-0002-9534-9189",
+      "institutions": [
+        {
+          "id": "I200332995",
+          "display_name": "TU Dortmund University",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. M. Alameddine"
+    },
+    {
+      "display_name": "Cyril Martin Alispach",
+      "id": "A5026540486",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I114457229",
+          "display_name": "University of Geneva",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Alispach"
+    },
+    {
+      "display_name": "A. A. Alves",
+      "id": "A5033109855",
+      "orcid": "https://orcid.org/0000-0003-0073-3231",
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. A. Alves Jr."
+    },
+    {
+      "display_name": "N. M. Amin",
+      "id": "A5037493220",
+      "orcid": "https://orcid.org/0000-0003-3659-0850",
+      "institutions": [
+        {
+          "id": "I86501945",
+          "display_name": "University of Delaware",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. M. Amin"
+    },
+    {
+      "display_name": "K. Andeen",
+      "id": "A5066147982",
+      "orcid": "https://orcid.org/0000-0001-9394-0007",
+      "institutions": [
+        {
+          "id": "I102461120",
+          "display_name": "Marquette University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Andeen"
+    },
+    {
+      "display_name": "T. Anderson",
+      "id": "A5108111476",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I130769515",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Anderson"
+    },
+    {
+      "display_name": "G. Anton",
+      "id": "A5004470421",
+      "orcid": "https://orcid.org/0000-0003-2039-4724",
+      "institutions": [
+        {
+          "id": "I181369854",
+          "display_name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Anton"
+    },
+    {
+      "display_name": "C. Argüelles",
+      "id": "A5033296927",
+      "orcid": "https://orcid.org/0000-0003-4186-4182",
+      "institutions": [
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Argüelles"
+    },
+    {
+      "display_name": "Yosuke Ashida",
+      "id": "A5060636446",
+      "orcid": "https://orcid.org/0000-0003-4136-2086",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Ashida"
+    },
+    {
+      "display_name": "Spencer Axani",
+      "id": "A5112661396",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Axani"
+    },
+    {
+      "display_name": "X. Bai",
+      "id": "A5036147792",
+      "orcid": "https://orcid.org/0000-0002-1827-9121",
+      "institutions": [
+        {
+          "id": "I184647316",
+          "display_name": "South Dakota School of Mines and Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "X. Bai"
+    },
+    {
+      "display_name": "A. Balagopal V.",
+      "id": "A5022417813",
+      "orcid": "https://orcid.org/0000-0001-5367-8876",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Balagopal V."
+    },
+    {
+      "display_name": "Anastasia Maria Barbano",
+      "id": "A5030442680",
+      "orcid": "https://orcid.org/0000-0002-4836-7093",
+      "institutions": [
+        {
+          "id": "I114457229",
+          "display_name": "University of Geneva",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Barbano"
+    },
+    {
+      "display_name": "S. W. Barwick",
+      "id": "A5002615312",
+      "orcid": "https://orcid.org/0000-0003-2050-6714",
+      "institutions": [
+        {
+          "id": "I204250578",
+          "display_name": "University of California, Irvine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. W. Barwick"
+    },
+    {
+      "display_name": "Benjamin Bastian",
+      "id": "A5058354316",
+      "orcid": "https://orcid.org/0000-0002-8549-2264",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "B. Bastian"
+    },
+    {
+      "display_name": "Vedant Basu",
+      "id": "A5037840572",
+      "orcid": "https://orcid.org/0000-0002-9528-2009",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Basu"
+    },
+    {
+      "display_name": "S. Baur",
+      "id": "A5045271336",
+      "orcid": "https://orcid.org/0000-0002-3329-1276",
+      "institutions": [
+        {
+          "id": "I132053463",
+          "display_name": "Université Libre de Bruxelles",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Baur"
+    },
+    {
+      "display_name": "R. Bay",
+      "id": "A5107897747",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Bay"
+    },
+    {
+      "display_name": "J. J. Beatty",
+      "id": "A5075296538",
+      "orcid": "https://orcid.org/0000-0003-0481-4952",
+      "institutions": [
+        {
+          "id": "I52357470",
+          "display_name": "The Ohio State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. J. Beatty"
+    },
+    {
+      "display_name": "Karl H. Becker",
+      "id": "A5107835521",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I167360494",
+          "display_name": "University of Wuppertal",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K.-H. Becker"
+    },
+    {
+      "display_name": "J. Becker Tjus",
+      "id": "A5102814208",
+      "orcid": "https://orcid.org/0000-0002-1748-7367",
+      "institutions": [
+        {
+          "id": "I904495901",
+          "display_name": "Ruhr University Bochum",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Becker Tjus"
+    },
+    {
+      "display_name": "Chiara Bellenghi",
+      "id": "A5074722842",
+      "orcid": "https://orcid.org/0000-0001-8525-7515",
+      "institutions": [
+        {
+          "id": "I62916508",
+          "display_name": "Technical University of Munich",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Bellenghi"
+    },
+    {
+      "display_name": "S. BenZvi",
+      "id": "A5058862798",
+      "orcid": "https://orcid.org/0000-0001-5537-4710",
+      "institutions": [
+        {
+          "id": "I5388228",
+          "display_name": "University of Rochester",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. BenZvi"
+    },
+    {
+      "display_name": "D. Berley",
+      "id": "A5107924340",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I66946132",
+          "display_name": "University of Maryland, College Park",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Berley"
+    },
+    {
+      "display_name": "E. Bernardini",
+      "id": "A5024933526",
+      "orcid": "https://orcid.org/0000-0003-3108-1141",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "E. Bernardini"
+    },
+    {
+      "display_name": "D. Besson",
+      "id": "A5078764668",
+      "orcid": "https://orcid.org/0000-0001-6733-963X",
+      "institutions": [
+        {
+          "id": "I146416000",
+          "display_name": "University of Kansas",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Z. Besson"
+    },
+    {
+      "display_name": "G. Binder",
+      "id": "A5057941456",
+      "orcid": "https://orcid.org/0000-0003-4912-7013",
+      "institutions": [
+        {
+          "id": "I148283060",
+          "display_name": "Lawrence Berkeley National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Binder"
+    },
+    {
+      "display_name": "D. Bindig",
+      "id": "A5031252386",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I167360494",
+          "display_name": "University of Wuppertal",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Bindig"
+    },
+    {
+      "display_name": "E. Blaufuss",
+      "id": "A5036657757",
+      "orcid": "https://orcid.org/0000-0001-5450-1757",
+      "institutions": [
+        {
+          "id": "I66946132",
+          "display_name": "University of Maryland, College Park",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Blaufuss"
+    },
+    {
+      "display_name": "S. Blot",
+      "id": "A5091558452",
+      "orcid": "https://orcid.org/0000-0003-1089-3001",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Blot"
+    },
+    {
+      "display_name": "Matthias Boddenberg",
+      "id": "A5040124201",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887968799",
+          "display_name": "RWTH Aachen University",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Boddenberg"
+    },
+    {
+      "display_name": "Federico Bontempo",
+      "id": "A5010124378",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Bontempo"
+    },
+    {
+      "display_name": "Jürgen Borowka",
+      "id": "A5111413044",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887968799",
+          "display_name": "RWTH Aachen University",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Borowka"
+    },
+    {
+      "display_name": "S. Böser",
+      "id": "A5016212376",
+      "orcid": "https://orcid.org/0000-0002-5918-4890",
+      "institutions": [
+        {
+          "id": "I197323543",
+          "display_name": "Johannes Gutenberg University Mainz",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Böser"
+    },
+    {
+      "display_name": "O. Botner",
+      "id": "A5039666021",
+      "orcid": "https://orcid.org/0000-0001-8588-7306",
+      "institutions": [
+        {
+          "id": "I123387679",
+          "display_name": "Uppsala University",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "O. Botner"
+    },
+    {
+      "display_name": "J. Böttcher",
+      "id": "A5040934587",
+      "orcid": "https://orcid.org/0000-0002-3387-4236",
+      "institutions": [
+        {
+          "id": "I887968799",
+          "display_name": "RWTH Aachen University",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Böttcher"
+    },
+    {
+      "display_name": "Etienne Bourbeau",
+      "id": "A5038582346",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I124055696",
+          "display_name": "University of Copenhagen",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Bourbeau"
+    },
+    {
+      "display_name": "F. Bradascio",
+      "id": "A5001964430",
+      "orcid": "https://orcid.org/0000-0002-7750-5256",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "F. Bradascio"
+    },
+    {
+      "display_name": "J. Braun",
+      "id": "A5017179292",
+      "orcid": "https://orcid.org/0009-0006-5485-5436",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Braun"
+    },
+    {
+      "display_name": "Bennett Brinson",
+      "id": "A5023621125",
+      "orcid": "https://orcid.org/0000-0001-9128-1159",
+      "institutions": [
+        {
+          "id": "I130701444",
+          "display_name": "Georgia Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Brinson"
+    },
+    {
+      "display_name": "S. Bron",
+      "id": "A5019785464",
+      "orcid": "https://orcid.org/0000-0002-6305-3041",
+      "institutions": [
+        {
+          "id": "I114457229",
+          "display_name": "University of Geneva",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Bron"
+    },
+    {
+      "display_name": "Jannes Brostean-Kaiser",
+      "id": "A5014969791",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "J. Brostean-Kaiser"
+    },
+    {
+      "display_name": "Sally-Ann Browne",
+      "id": "A5041241900",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Browne"
+    },
+    {
+      "display_name": "A. Burgman",
+      "id": "A5042400350",
+      "orcid": "https://orcid.org/0000-0003-1276-676X",
+      "institutions": [
+        {
+          "id": "I123387679",
+          "display_name": "Uppsala University",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Burgman"
+    },
+    {
+      "display_name": "Ryan T. Burley",
+      "id": "A5040682419",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I5681781",
+          "display_name": "The University of Adelaide",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. T. Burley"
+    },
+    {
+      "display_name": "Raffaela Busse",
+      "id": "A5088747304",
+      "orcid": "https://orcid.org/0000-0002-4808-291X",
+      "institutions": [
+        {
+          "id": "I22465464",
+          "display_name": "University of Münster",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. S. Busse"
+    },
+    {
+      "display_name": "Michael Campana",
+      "id": "A5006406960",
+      "orcid": "https://orcid.org/0000-0003-4162-5739",
+      "institutions": [
+        {
+          "id": "I72816309",
+          "display_name": "Drexel University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. A. Campana"
+    },
+    {
+      "display_name": "Erin Carnie-Bronca",
+      "id": "A5054449926",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I5681781",
+          "display_name": "The University of Adelaide",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. G. Carnie-Bronca"
+    },
+    {
+      "display_name": "C. Chen",
+      "id": "A5055501020",
+      "orcid": "https://orcid.org/0000-0002-8139-4106",
+      "institutions": [
+        {
+          "id": "I130701444",
+          "display_name": "Georgia Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Chen"
+    },
+    {
+      "display_name": "Z. Chen",
+      "id": "A5041332127",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I59553526",
+          "display_name": "Stony Brook University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Z. Chen"
+    },
+    {
+      "display_name": "D. Chirkin",
+      "id": "A5037551752",
+      "orcid": "https://orcid.org/0000-0003-4911-1345",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Chirkin"
+    },
+    {
+      "display_name": "K. Choi",
+      "id": "A5008395491",
+      "orcid": "https://orcid.org/0000-0002-0932-9123",
+      "institutions": [
+        {
+          "id": "I848706",
+          "display_name": "Sungkyunkwan University",
+          "country_code": "KR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Choi"
+    },
+    {
+      "display_name": "Brian Clark",
+      "id": "A5054619434",
+      "orcid": "https://orcid.org/0000-0003-4089-2245",
+      "institutions": [
+        {
+          "id": "I87216513",
+          "display_name": "Michigan State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. A. Clark"
+    },
+    {
+      "display_name": "K. Clark",
+      "id": "A5085926133",
+      "orcid": "https://orcid.org/0000-0003-2467-6825",
+      "institutions": [
+        {
+          "id": "I204722609",
+          "display_name": "Queen's University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Clark"
+    },
+    {
+      "display_name": "Lew Classen",
+      "id": "A5083137949",
+      "orcid": "https://orcid.org/0000-0001-9495-5892",
+      "institutions": [
+        {
+          "id": "I22465464",
+          "display_name": "University of Münster",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Classen"
+    },
+    {
+      "display_name": "Alan Coleman",
+      "id": "A5026599729",
+      "orcid": "https://orcid.org/0000-0003-1510-1712",
+      "institutions": [
+        {
+          "id": "I86501945",
+          "display_name": "University of Delaware",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Coleman"
+    },
+    {
+      "display_name": "G. H. Collin",
+      "id": "A5110820488",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. H. Collin"
+    },
+    {
+      "display_name": "J. M. Conrad",
+      "id": "A5021088707",
+      "orcid": "https://orcid.org/0000-0002-6393-0438",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. M. Conrad"
+    },
+    {
+      "display_name": "Paul Coppin",
+      "id": "A5041205714",
+      "orcid": "https://orcid.org/0000-0001-6869-1280",
+      "institutions": [
+        {
+          "id": "I13469542",
+          "display_name": "Vrije Universiteit Brussel",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Coppin"
+    },
+    {
+      "display_name": "Pablo Correa",
+      "id": "A5080596702",
+      "orcid": "https://orcid.org/0000-0002-1158-6735",
+      "institutions": [
+        {
+          "id": "I13469542",
+          "display_name": "Vrije Universiteit Brussel",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Correa"
+    },
+    {
+      "display_name": "D. F. Cowen",
+      "id": "A5022413032",
+      "orcid": "https://orcid.org/0000-0003-4738-0787",
+      "institutions": [
+        {
+          "id": "I130769515",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. F. Cowen"
+    },
+    {
+      "display_name": "R. Cross",
+      "id": "A5010958238",
+      "orcid": "https://orcid.org/0000-0003-0081-8024",
+      "institutions": [
+        {
+          "id": "I5388228",
+          "display_name": "University of Rochester",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Cross"
+    },
+    {
+      "display_name": "Christian Dappen",
+      "id": "A5114030860",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887968799",
+          "display_name": "RWTH Aachen University",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Dappen"
+    },
+    {
+      "display_name": "Pranav Dave",
+      "id": "A5005390519",
+      "orcid": "https://orcid.org/0000-0002-3879-5115",
+      "institutions": [
+        {
+          "id": "I130701444",
+          "display_name": "Georgia Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Dave"
+    },
+    {
+      "display_name": "C. De Clercq",
+      "id": "A5008310294",
+      "orcid": "https://orcid.org/0000-0001-5266-7059",
+      "institutions": [
+        {
+          "id": "I13469542",
+          "display_name": "Vrije Universiteit Brussel",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. De Clercq"
+    },
+    {
+      "display_name": "James DeLaunay",
+      "id": "A5006632406",
+      "orcid": "https://orcid.org/0000-0001-5229-1995",
+      "institutions": [
+        {
+          "id": "I17301866",
+          "display_name": "University of Alabama",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. J. DeLaunay"
+    },
+    {
+      "display_name": "D. Delgado López",
+      "id": "A5018833440",
+      "orcid": "https://orcid.org/0000-0002-4306-8828",
+      "institutions": [
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Delgado López"
+    },
+    {
+      "display_name": "H.-P. Dembinski",
+      "id": "A5001896607",
+      "orcid": "https://orcid.org/0000-0003-3337-3850",
+      "institutions": [
+        {
+          "id": "I86501945",
+          "display_name": "University of Delaware",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Dembinski"
+    },
+    {
+      "display_name": "Kunal Deoskar",
+      "id": "A5051884575",
+      "orcid": "https://orcid.org/0000-0002-1668-2347",
+      "institutions": [
+        {
+          "id": "I161593684",
+          "display_name": "Stockholm University",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Deoskar"
+    },
+    {
+      "display_name": "Abhishek Desai",
+      "id": "A5055656922",
+      "orcid": "https://orcid.org/0000-0001-7405-9994",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Desai"
+    },
+    {
+      "display_name": "P. Desiati",
+      "id": "A5007723773",
+      "orcid": "https://orcid.org/0000-0001-9768-1858",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Desiati"
+    },
+    {
+      "display_name": "K. D. de Vries",
+      "id": "A5009257226",
+      "orcid": "https://orcid.org/0000-0002-9842-4068",
+      "institutions": [
+        {
+          "id": "I13469542",
+          "display_name": "Vrije Universiteit Brussel",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. D. de Vries"
+    },
+    {
+      "display_name": "G. de Wasseige",
+      "id": "A5012719048",
+      "orcid": "https://orcid.org/0000-0002-1010-5100",
+      "institutions": [
+        {
+          "id": "I95674353",
+          "display_name": "UCLouvain",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. de Wasseige"
+    },
+    {
+      "display_name": "M. de With",
+      "id": "A5107832984",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I39343248",
+          "display_name": "Humboldt-Universität zu Berlin",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. de With"
+    },
+    {
+      "display_name": "T. DeYoung",
+      "id": "A5106496862",
+      "orcid": "https://orcid.org/0000-0003-4873-3783",
+      "institutions": [
+        {
+          "id": "I87216513",
+          "display_name": "Michigan State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. DeYoung"
+    },
+    {
+      "display_name": "A. Diaz",
+      "id": "A5066565831",
+      "orcid": "https://orcid.org/0000-0001-7206-8336",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Diaz"
+    },
+    {
+      "display_name": "J. C. Díaz–Vélez",
+      "id": "A5016254887",
+      "orcid": "https://orcid.org/0000-0002-0087-0693",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. C. Díaz-Vélez"
+    },
+    {
+      "display_name": "Markus Dittmer",
+      "id": "A5020889941",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I22465464",
+          "display_name": "University of Münster",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Dittmer"
+    },
+    {
+      "display_name": "Hrvoje Dujmović",
+      "id": "A5017243710",
+      "orcid": "https://orcid.org/0000-0003-1891-0718",
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Dujmovic"
+    },
+    {
+      "display_name": "M. Dunkman",
+      "id": "A5111480765",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I130769515",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Dunkman"
+    },
+    {
+      "display_name": "M. A. DuVernois",
+      "id": "A5064093554",
+      "orcid": "https://orcid.org/0000-0002-2987-9691",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. A. DuVernois"
+    },
+    {
+      "display_name": "Emily Dvorak",
+      "id": "A5082796977",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I184647316",
+          "display_name": "South Dakota School of Mines and Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Dvorak"
+    },
+    {
+      "display_name": "Thomas Ehrhardt",
+      "id": "A5028159141",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I197323543",
+          "display_name": "Johannes Gutenberg University Mainz",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Ehrhardt"
+    },
+    {
+      "display_name": "P. Eller",
+      "id": "A5021192031",
+      "orcid": "https://orcid.org/0000-0001-6354-5209",
+      "institutions": [
+        {
+          "id": "I62916508",
+          "display_name": "Technical University of Munich",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Eller"
+    },
+    {
+      "display_name": "R. Engel",
+      "id": "A5107877747",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I102335020",
+          "display_name": "Karlsruhe Institute of Technology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Engel"
+    },
+    {
+      "display_name": "Hannah Erpenbeck",
+      "id": "A5043726191",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887968799",
+          "display_name": "RWTH Aachen University",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Erpenbeck"
+    },
+    {
+      "display_name": "John Evans",
+      "id": "A5008494200",
+      "orcid": "https://orcid.org/0000-0002-6619-4245",
+      "institutions": [
+        {
+          "id": "I66946132",
+          "display_name": "University of Maryland, College Park",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Evans"
+    },
+    {
+      "display_name": "P. A. Evenson",
+      "id": "A5067904044",
+      "orcid": "https://orcid.org/0000-0001-7929-810X",
+      "institutions": [
+        {
+          "id": "I86501945",
+          "display_name": "University of Delaware",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. A. Evenson"
+    },
+    {
+      "display_name": "Kwok Lung Fan",
+      "id": "A5086203323",
+      "orcid": "https://orcid.org/0000-0002-8246-4751",
+      "institutions": [
+        {
+          "id": "I66946132",
+          "display_name": "University of Maryland, College Park",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. L. Fan"
+    },
+    {
+      "display_name": "A. R. Fazely",
+      "id": "A5023588072",
+      "orcid": "https://orcid.org/0000-0002-6907-8020",
+      "institutions": [
+        {
+          "id": "I145610796",
+          "display_name": "Southern University and Agricultural and Mechanical College",
+          "country_code": "US",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. R. Fazely"
+    },
+    {
+      "display_name": "Nora Feigl",
+      "id": "A5112710508",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I39343248",
+          "display_name": "Humboldt-Universität zu Berlin",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Feigl"
+    },
+    {
+      "display_name": "Sebastian Fiedlschuster",
+      "id": "A5038059035",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I181369854",
+          "display_name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Fiedlschuster"
+    },
+    {
+      "display_name": "Aaron Fienberg",
+      "id": "A5012838114",
+      "orcid": "https://orcid.org/0000-0002-9472-3597",
+      "institutions": [
+        {
+          "id": "I130769515",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. T. Fienberg"
+    },
+    {
+      "display_name": "K. Filimonov",
+      "id": "A5107862986",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Filimonov"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-03-01",
+  "type": "article",
+  "cited_by_count": 168,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S1980519",
+    "display_name": "The Astrophysical Journal",
+    "issn_l": "0004-637X",
+    "issn": [
+      "0004-637X",
+      "1538-4357"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320083"
+  },
+  "volume": "928",
+  "issue": "1",
+  "first_page": "50",
+  "last_page": "50",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://doi.org/10.3847/1538-4357/ac4d29",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.44967914
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.33329722
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.1332491
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10818",
+      "display_name": "Astrophysics and Cosmic Phenomena",
+      "score": 0.9999
+    },
+    {
+      "id": "T10921",
+      "display_name": "Neutrino Physics Research",
+      "score": 0.9941
+    },
+    {
+      "id": "T11090",
+      "display_name": "Dark Matter and Cosmic Phenomena",
+      "score": 0.9356
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3847/1538-4357/ac4d29",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:04:45.784331",
+  "source_database": "OpenAlex"
+}

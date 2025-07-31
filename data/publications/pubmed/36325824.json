@@ -1,0 +1,766 @@
+{
+  "pmid": "36325824",
+  "uid": "36325824",
+  "title": "Consistent trajectories of rhinitis control and treatment in 16,177 weeks: The MASK-air® longitudinal study.",
+  "abstract": "INTRODUCTION: Data from mHealth apps can provide valuable information on rhinitis control and treatment patterns. However, in MASK-air®, these data have only been analyzed cross-sectionally, without considering the changes of symptoms over time. We analyzed data from MASK-air® longitudinally, clustering weeks according to reported rhinitis symptoms. METHODS: We analyzed MASK-air® data, assessing the weeks for which patients had answered a rhinitis daily questionnaire on all 7 days. We firstly used k-means clustering algorithms for longitudinal data to define clusters of weeks according to the trajectories of reported daily rhinitis symptoms. Clustering was applied separately for weeks when medication was reported or not. We compared obtained clusters on symptoms and rhinitis medication patterns. We then used the latent class mixture model to assess the robustness of results. RESULTS: We analyzed 113,239 days (16,177 complete weeks) from 2590 patients (mean age ± SD = 39.1 ± 13.7 years). The first clustering algorithm identified ten clusters among weeks with medication use: seven with low variability in rhinitis control during the week and three with highly-variable control. Clusters with poorly-controlled rhinitis displayed a higher frequency of rhinitis co-medication, a more frequent change of medication schemes and more pronounced seasonal patterns. Six clusters were identified in weeks when no rhinitis medication was used, displaying similar control patterns. The second clustering method provided similar results. Moreover, patients displayed consistent levels of rhinitis control, reporting several weeks with similar levels of control. CONCLUSIONS: We identified 16 patterns of weekly rhinitis control. Co-medication and medication change schemes were common in uncontrolled weeks, reinforcing the hypothesis that patients treat themselves according to their symptoms.",
+  "authors": [
+    {
+      "last_name": "Sousa-Pinto",
+      "fore_name": "Bernardo",
+      "initials": "B",
+      "name": "Bernardo Sousa-Pinto",
+      "affiliations": [
+        "MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, Faculty of Medicine, University of Porto, Porto, Portugal.",
+        "CINTESIS - Center for Health Technology and Services Research, University of Porto, Porto, Portugal.",
+        "RISE - Health Research Network, University of Porto, Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Schünemann",
+      "fore_name": "Holger J",
+      "initials": "HJ",
+      "name": "Holger J Schünemann",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact & Department of Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Sá-Sousa",
+      "fore_name": "Ana",
+      "initials": "A",
+      "name": "Ana Sá-Sousa",
+      "affiliations": [
+        "MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, Faculty of Medicine, University of Porto, Porto, Portugal.",
+        "CINTESIS - Center for Health Technology and Services Research, University of Porto, Porto, Portugal.",
+        "RISE - Health Research Network, University of Porto, Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Vieira",
+      "fore_name": "Rafael José",
+      "initials": "RJ",
+      "name": "Rafael José Vieira",
+      "affiliations": [
+        "MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, Faculty of Medicine, University of Porto, Porto, Portugal.",
+        "CINTESIS - Center for Health Technology and Services Research, University of Porto, Porto, Portugal.",
+        "RISE - Health Research Network, University of Porto, Porto, Portugal."
+      ],
+      "orcid": "0000-0003-1834-3055"
+    },
+    {
+      "last_name": "Amaral",
+      "fore_name": "Rita",
+      "initials": "R",
+      "name": "Rita Amaral",
+      "affiliations": [
+        "MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, Faculty of Medicine, University of Porto, Porto, Portugal.",
+        "CINTESIS - Center for Health Technology and Services Research, University of Porto, Porto, Portugal.",
+        "RISE - Health Research Network, University of Porto, Porto, Portugal."
+      ],
+      "orcid": "0000-0002-0233-830X"
+    },
+    {
+      "last_name": "Anto",
+      "fore_name": "Josep M",
+      "initials": "JM",
+      "name": "Josep M Anto",
+      "affiliations": [
+        "ISGlobal, Barcelona Institute for Global Health, Barcelona, Spain.",
+        "IMIM (Hospital del Mar Medical Research Institute), Barcelona, Spain.",
+        "Universitat Pompeu Fabra (UPF), Barcelona, Spain.",
+        "CIBER Epidemiología y Salud Pública (CIBERESP), Barcelona, Spain."
+      ]
+    },
+    {
+      "last_name": "Klimek",
+      "fore_name": "Ludger",
+      "initials": "L",
+      "name": "Ludger Klimek",
+      "affiliations": [
+        "Department of Otolaryngology, Head and Neck Surgery, Universitätsmedizin Mainz, Mainz, Germany.",
+        "Center for Rhinology and Allergology, Wiesbaden, Germany."
+      ],
+      "orcid": "0000-0002-2455-0192"
+    },
+    {
+      "last_name": "Czarlewski",
+      "fore_name": "Wienczyslawa",
+      "initials": "W",
+      "name": "Wienczyslawa Czarlewski",
+      "affiliations": [
+        "Medical Consulting Czarlewski, Levallois, France."
+      ]
+    },
+    {
+      "last_name": "Mullol",
+      "fore_name": "Joaquim",
+      "initials": "J",
+      "name": "Joaquim Mullol",
+      "affiliations": [
+        "Rhinology Unit & Smell Clinic, ENT Department, Hospital Clínic, Clinical & Experimental Respiratory Immunoallergy, IDIBAPS, CIBERES, University of Barcelona, Barcelona, Spain."
+      ]
+    },
+    {
+      "last_name": "Pfaar",
+      "fore_name": "Oliver",
+      "initials": "O",
+      "name": "Oliver Pfaar",
+      "affiliations": [
+        "Section of Rhinology and Allergy, Department of Otorhinolaryngology, Head and Neck Surgery, University Hospital Marburg, Philipps-Universität Marburg, Marburg, Germany."
+      ],
+      "orcid": "0000-0003-4374-9639"
+    },
+    {
+      "last_name": "Bedbrook",
+      "fore_name": "Anna",
+      "initials": "A",
+      "name": "Anna Bedbrook",
+      "affiliations": [
+        "ARIA, Montpellier, France."
+      ]
+    },
+    {
+      "last_name": "Brussino",
+      "fore_name": "Luisa",
+      "initials": "L",
+      "name": "Luisa Brussino",
+      "affiliations": [
+        "Department of Medical Sciences, Allergy and Clinical Immunology Unit, University of Torino & Mauriziano Hospital, Torino, Italy."
+      ]
+    },
+    {
+      "last_name": "Kvedariene",
+      "fore_name": "Violeta",
+      "initials": "V",
+      "name": "Violeta Kvedariene",
+      "affiliations": [
+        "Institute of Biomedical Sciences, Department of Pathology, Faculty of Medicine, Vilnius University, Vilnius, Lithuania.",
+        "Institute of Clinical medicine, Clinic of Chest diseases and Allergology, Faculty of Medicine, Vilnius University, Vilnius, Lithuania."
+      ]
+    },
+    {
+      "last_name": "Larenas-Linnemann",
+      "fore_name": "Désirée E",
+      "initials": "DE",
+      "name": "Désirée E Larenas-Linnemann",
+      "affiliations": [
+        "Center of Excellence in Asthma and Allergy, Médica Sur Clinical Foundation and Hospital, México City, Mexico."
+      ]
+    },
+    {
+      "last_name": "Okamoto",
+      "fore_name": "Yoshitaka",
+      "initials": "Y",
+      "name": "Yoshitaka Okamoto",
+      "affiliations": [
+        "Chiba University Hospital and Chiba Rosai Hospital, Chiba, Japan."
+      ]
+    },
+    {
+      "last_name": "Ventura",
+      "fore_name": "Maria Teresa",
+      "initials": "MT",
+      "name": "Maria Teresa Ventura",
+      "affiliations": [
+        "Unit of Geriatric Immunoallergology, University of Bari Medical School, Bari, Italy."
+      ]
+    },
+    {
+      "last_name": "Agache",
+      "fore_name": "Ioana",
+      "initials": "I",
+      "name": "Ioana Agache",
+      "affiliations": [
+        "Transylvania University Brasov, Brasov, Romania."
+      ],
+      "orcid": "0000-0001-7994-364X"
+    },
+    {
+      "last_name": "Ansotegui",
+      "fore_name": "Ignacio J",
+      "initials": "IJ",
+      "name": "Ignacio J Ansotegui",
+      "affiliations": [
+        "Department of Allergy and Immunology, Hospital Quironsalud Bizkaia, Bilbao, Spain."
+      ]
+    },
+    {
+      "last_name": "Bergmann",
+      "fore_name": "Karl C",
+      "initials": "KC",
+      "name": "Karl C Bergmann",
+      "affiliations": [
+        "Institute of Allergology, Charité - Universitätsmedizin Berlin, Corporate Member of Freie Universität Berlin and Humboldt-Universität zu Berlin, Berlin, Germany.",
+        "Fraunhofer Institute for Translational Medicine and Pharmacology ITMP, Allergology and Immunology, Berlin, Germany."
+      ],
+      "orcid": "0000-0002-0306-9922"
+    },
+    {
+      "last_name": "Bosnic-Anticevich",
+      "fore_name": "Sinthia",
+      "initials": "S",
+      "name": "Sinthia Bosnic-Anticevich",
+      "affiliations": [
+        "Quality Use of Respiratory Medicine Group, Woolcock Institute of Medical Research, The University of Sydney and Sydney Local Health District, Sydney, New South Wales, Australia."
+      ]
+    },
+    {
+      "last_name": "Canonica",
+      "fore_name": "G Walter",
+      "initials": "GW",
+      "name": "G Walter Canonica",
+      "affiliations": [
+        "Department of Biomedical Sciences, Humanitas University, Pieve Emanuele, Italy.",
+        "Personalized Medicine, Asthma and Allergy, Humanitas Clinical and Research Center IRCCS, Rozzano, Italy."
+      ]
+    },
+    {
+      "last_name": "Cardona",
+      "fore_name": "Victoria",
+      "initials": "V",
+      "name": "Victoria Cardona",
+      "affiliations": [
+        "Allergy Section, Department of Internal Medicine, Hospital Vall d'Hebron & ARADyAL research network, Barcelona, Spain."
+      ]
+    },
+    {
+      "last_name": "Carreiro-Martins",
+      "fore_name": "Pedro",
+      "initials": "P",
+      "name": "Pedro Carreiro-Martins",
+      "affiliations": [
+        "Serviço de Imunoalergologia, Hospital de Dona Estefânia, Centro Hospitalar Universitário de Lisboa Central, Lisbon, Portugal.",
+        "NOVA Medical School/Comprehensive Health Research Centre (CHRC), Lisbon, Portugal."
+      ],
+      "orcid": "0000-0002-4129-133X"
+    },
+    {
+      "last_name": "Casale",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Casale",
+      "affiliations": [
+        "Division of Allergy/immunology, University of South Florida, Tampa, Florida, USA."
+      ]
+    },
+    {
+      "last_name": "Cecchi",
+      "fore_name": "Lorenzo",
+      "initials": "L",
+      "name": "Lorenzo Cecchi",
+      "affiliations": [
+        "SOS Allergology and Clinical Immunology, USL Toscana Centro, Prato, Italy."
+      ],
+      "orcid": "0000-0002-0658-2449"
+    },
+    {
+      "last_name": "Chivato",
+      "fore_name": "Tomas",
+      "initials": "T",
+      "name": "Tomas Chivato",
+      "affiliations": [
+        "School of Medicine, University CEU San Pablo, Madrid, Spain."
+      ]
+    },
+    {
+      "last_name": "Chu",
+      "fore_name": "Derek K",
+      "initials": "DK",
+      "name": "Derek K Chu",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact & Department of Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Cingi",
+      "fore_name": "Cemal",
+      "initials": "C",
+      "name": "Cemal Cingi",
+      "affiliations": [
+        "ENT Department, Medical Faculty, Eskisehir Osmangazi University, Eskisehir, Turkey."
+      ],
+      "orcid": "0000-0003-3934-5092"
+    },
+    {
+      "last_name": "Costa",
+      "fore_name": "Elísio M",
+      "initials": "EM",
+      "name": "Elísio M Costa",
+      "affiliations": [
+        "UCIBIO, REQUINTE, Faculty of Pharmacy and Competence Center on Active and Healthy Ageing of University of Porto (Porto4Ageing), Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Cruz",
+      "fore_name": "Alvaro A",
+      "initials": "AA",
+      "name": "Alvaro A Cruz",
+      "affiliations": [
+        "Fundaçao ProAR, Federal University of Bahia and GARD/WHO Planning Group, Salvador, Brazil."
+      ],
+      "orcid": "0000-0002-7403-3871"
+    },
+    {
+      "last_name": "Del Giacco",
+      "fore_name": "Stefano",
+      "initials": "S",
+      "name": "Stefano Del Giacco",
+      "affiliations": [
+        "Department of Medical Sciences and Public Health and Unit of Allergy and Clinical Immunology, University Hospital \"Duilio Casula\", University of Cagliari, Cagliari, Italy."
+      ],
+      "orcid": "0000-0002-4517-1749"
+    },
+    {
+      "last_name": "Devillier",
+      "fore_name": "Philippe",
+      "initials": "P",
+      "name": "Philippe Devillier",
+      "affiliations": [
+        "VIM Suresnes, UMR 0892, Pôle des Maladies des Voies Respiratoires, Hôpital Foch, Université Paris-Saclay, Suresnes, France."
+      ]
+    },
+    {
+      "last_name": "Eklund",
+      "fore_name": "Patrik",
+      "initials": "P",
+      "name": "Patrik Eklund",
+      "affiliations": [
+        "Department of Computing Science, Umeå University, Umeå, Sweden."
+      ]
+    },
+    {
+      "last_name": "Fokkens",
+      "fore_name": "Wytske J",
+      "initials": "WJ",
+      "name": "Wytske J Fokkens",
+      "affiliations": [
+        "Department of Otorhinolaryngology, Amsterdam University Medical Centres, location AMC, Amsterdam, The Netherlands."
+      ],
+      "orcid": "0000-0003-4852-229X"
+    },
+    {
+      "last_name": "Gemicioglu",
+      "fore_name": "Bilun",
+      "initials": "B",
+      "name": "Bilun Gemicioglu",
+      "affiliations": [
+        "Department of Pulmonary Diseases, Cerrahpasa Faculty of Medicine, Istanbul University-Cerrahpasa, Istanbul, Turkey."
+      ]
+    },
+    {
+      "last_name": "Haahtela",
+      "fore_name": "Tari",
+      "initials": "T",
+      "name": "Tari Haahtela",
+      "affiliations": [
+        "Skin and Allergy Hospital, Helsinki University Hospital, University of Helsinki, Helsinki, Finland."
+      ],
+      "orcid": "0000-0003-4757-2156"
+    },
+    {
+      "last_name": "Ivancevich",
+      "fore_name": "Juan Carlos",
+      "initials": "JC",
+      "name": "Juan Carlos Ivancevich",
+      "affiliations": [
+        "Servicio de Alergia e Immunologia, Clinica Santa Isabel, Buenos Aires, Argentina."
+      ]
+    },
+    {
+      "last_name": "Ispayeva",
+      "fore_name": "Zhanat",
+      "initials": "Z",
+      "name": "Zhanat Ispayeva",
+      "affiliations": [
+        "Kazakhstan Association of Allergology and Clinical Immunology, Department of Allergology and Clinical Immunology of the Kazakh National Medical University, Almaty, Kazakhstan."
+      ]
+    },
+    {
+      "last_name": "Jutel",
+      "fore_name": "Marek",
+      "initials": "M",
+      "name": "Marek Jutel",
+      "affiliations": [
+        "Department of Clinical Immunology, Wrocław Medical University, and ALL-MED Medical Research Institute, Wroclaw, Poland."
+      ]
+    },
+    {
+      "last_name": "Kuna",
+      "fore_name": "Piotr",
+      "initials": "P",
+      "name": "Piotr Kuna",
+      "affiliations": [
+        "Division of Internal Medicine, Asthma and Allergy, Barlicki University Hospital, Medical University of Lodz, Lodz, Poland."
+      ]
+    },
+    {
+      "last_name": "Kaidashev",
+      "fore_name": "Igor",
+      "initials": "I",
+      "name": "Igor Kaidashev",
+      "affiliations": [
+        "Poltava State Medical University, Poltava, Ukraine."
+      ]
+    },
+    {
+      "last_name": "Khaitov",
+      "fore_name": "Musa",
+      "initials": "M",
+      "name": "Musa Khaitov",
+      "affiliations": [
+        "Laboratory of Molecular immunology, National Research Center, Institute of Immunology, Federal Medicobiological Agency, Moscow, Russian Federation.",
+        "Pirogov Russian National Research Medical University, Moscow, Russian Federation."
+      ],
+      "orcid": "0000-0003-4961-9640"
+    },
+    {
+      "last_name": "Kraxner",
+      "fore_name": "Helga",
+      "initials": "H",
+      "name": "Helga Kraxner",
+      "affiliations": [
+        "Department of Otorhinolaryngology, Head and Neck Surgery, Semmelweis University, Budapest, Hungary."
+      ]
+    },
+    {
+      "last_name": "Laune",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Laune",
+      "affiliations": [
+        "KYomed INNOV, Montpellier, France."
+      ]
+    },
+    {
+      "last_name": "Lipworth",
+      "fore_name": "Brian",
+      "initials": "B",
+      "name": "Brian Lipworth",
+      "affiliations": [
+        "Scottish Centre for Respiratory Research, Cardiovascular & Diabetes Medicine, Medical Research Institute, Ninewells Hospital, University of Dundee, Dundee, UK."
+      ]
+    },
+    {
+      "last_name": "Louis",
+      "fore_name": "Renaud",
+      "initials": "R",
+      "name": "Renaud Louis",
+      "affiliations": [
+        "Department of Pulmonary Medicine, CHU Liège and GIGA I3 research group, University of Liège, Liege, Belgium."
+      ]
+    },
+    {
+      "last_name": "Makris",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Makris",
+      "affiliations": [
+        "Allergy Unit \"D Kalogeromitros\", 2nd Department of Dermatology and Venereology, \"Attikon\" University Hospital, National & Kapodistrian University of Athens, Athens, Greece."
+      ]
+    },
+    {
+      "last_name": "Monti",
+      "fore_name": "Riccardo",
+      "initials": "R",
+      "name": "Riccardo Monti",
+      "affiliations": [
+        "Department of Cardiovascular and Thoracic Sciences, Fondazione Policlinico Universitario A Gemelli IRCCS, Università Cattolica del Sacro Cuore, Rome, Italy."
+      ]
+    },
+    {
+      "last_name": "Morais-Almeida",
+      "fore_name": "Mario",
+      "initials": "M",
+      "name": "Mario Morais-Almeida",
+      "affiliations": [
+        "Allergy Center, CUF Descobertas Hospital, Lisbon, Portugal."
+      ],
+      "orcid": "0000-0003-1837-2980"
+    },
+    {
+      "last_name": "Mösges",
+      "fore_name": "Ralph",
+      "initials": "R",
+      "name": "Ralph Mösges",
+      "affiliations": [
+        "IMSB, Medical Faculty, University at Cologne, and ClinCompetence Cologne GmbH, Cologne, Germany."
+      ]
+    },
+    {
+      "last_name": "Niedoszytko",
+      "fore_name": "Marek",
+      "initials": "M",
+      "name": "Marek Niedoszytko",
+      "affiliations": [
+        "Department of Allergology, Medical University of Gdańsk, Gdansk, Poland."
+      ]
+    },
+    {
+      "last_name": "Papadopoulos",
+      "fore_name": "Nikolaos G",
+      "initials": "NG",
+      "name": "Nikolaos G Papadopoulos",
+      "affiliations": [
+        "Allergy Department, 2nd Pediatric Clinic, University of Athens, Athens, Greece."
+      ],
+      "orcid": "0000-0002-4448-3468"
+    },
+    {
+      "last_name": "Patella",
+      "fore_name": "Vincenzo",
+      "initials": "V",
+      "name": "Vincenzo Patella",
+      "affiliations": [
+        "Division of Allergy and Clinical Immunology, Department of Medicine, \"Santa Maria della Speranza\" Hospital, Battipaglia and Agency of Health ASL, Salerno, Italy."
+      ],
+      "orcid": "0000-0001-5640-6446"
+    },
+    {
+      "last_name": "Pham-Thi",
+      "fore_name": "Nhân",
+      "initials": "N",
+      "name": "Nhân Pham-Thi",
+      "affiliations": [
+        "Ecole Polytechnique Palaiseau, IRBA (Institut de Recherche bio-Médicale des Armées), Bretigny, France."
+      ]
+    },
+    {
+      "last_name": "Regateiro",
+      "fore_name": "Frederico S",
+      "initials": "FS",
+      "name": "Frederico S Regateiro",
+      "affiliations": [
+        "Allergy and Clinical Immunology Unit, Centro Hospitalar e Universitário de Coimbra, Coimbra, Portugal.",
+        "Faculty of Medicine, Institute of Immunology, University of Coimbra, Coimbra, Portugal.",
+        "Faculty of Medicine, Coimbra Institute for Clinical and Biomedical Research (iCBR), University of Coimbra, Coimbra, Portugal."
+      ]
+    },
+    {
+      "last_name": "Reitsma",
+      "fore_name": "Sietze",
+      "initials": "S",
+      "name": "Sietze Reitsma",
+      "affiliations": [
+        "Department of Otorhinolaryngology, Amsterdam University Medical Centres, AMC, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Rouadi",
+      "fore_name": "Philip W",
+      "initials": "PW",
+      "name": "Philip W Rouadi",
+      "affiliations": [
+        "Department of Otolaryngology-Head and Neck Surgery, Eye and Ear University Hospital, Beirut, Lebanon.",
+        "Department of Otorhinolaryngology-Head and Neck Surgery, Dar Al Shifa Hospital, Salmiya, Kuwait."
+      ],
+      "orcid": "0000-0002-5365-9568"
+    },
+    {
+      "last_name": "Samolinski",
+      "fore_name": "Boleslaw",
+      "initials": "B",
+      "name": "Boleslaw Samolinski",
+      "affiliations": [
+        "Department of Prevention of Environmental Hazards, Allergology and Immunology, Medical University of Warsaw, Warsaw, Poland."
+      ]
+    },
+    {
+      "last_name": "Sheikh",
+      "fore_name": "Aziz",
+      "initials": "A",
+      "name": "Aziz Sheikh",
+      "affiliations": [
+        "Usher Institute, The University of Edinburgh, Edinburgh, UK."
+      ]
+    },
+    {
+      "last_name": "Sova",
+      "fore_name": "Milan",
+      "initials": "M",
+      "name": "Milan Sova",
+      "affiliations": [
+        "Department of Respiratory Medicine and Tuberculosis, University Hospital, Brno, Czech Republic."
+      ]
+    },
+    {
+      "last_name": "Todo-Bom",
+      "fore_name": "Ana",
+      "initials": "A",
+      "name": "Ana Todo-Bom",
+      "affiliations": [
+        "Imunoalergologia, Centro Hospitalar Universitário de Coimbra, Faculty of Medicine, University of Coimbra, Coimbra, Portugal."
+      ]
+    },
+    {
+      "last_name": "Taborda-Barata",
+      "fore_name": "Luis",
+      "initials": "L",
+      "name": "Luis Taborda-Barata",
+      "affiliations": [
+        "CICS-UBI Health Sciences Research Centre, University of Beira Interior, Covilhã, Portugal.",
+        "UBIAir - Clinical & Experimental Lung Centre, University of Beira Interior, Covilhã, Portugal.",
+        "Department of Immunoallergology, Cova da Beira University Hospital Centre, Covilhã, Portugal."
+      ]
+    },
+    {
+      "last_name": "Toppila-Salmi",
+      "fore_name": "Sanna",
+      "initials": "S",
+      "name": "Sanna Toppila-Salmi",
+      "affiliations": [
+        "Skin and Allergy Hospital, Helsinki University Hospital, University of Helsinki, Helsinki, Finland."
+      ],
+      "orcid": "0000-0003-0890-6686"
+    },
+    {
+      "last_name": "Sastre",
+      "fore_name": "Joaquin",
+      "initials": "J",
+      "name": "Joaquin Sastre",
+      "affiliations": [
+        "Fundacion Jimenez Diaz, CIBERES, Faculty of Medicine, Autonoma University of Madrid, Madrid, Spain."
+      ]
+    },
+    {
+      "last_name": "Tsiligianni",
+      "fore_name": "Ioanna",
+      "initials": "I",
+      "name": "Ioanna Tsiligianni",
+      "affiliations": [
+        "Health Planning Unit, Department of Social Medicine, Faculty of Medicine, University of Crete, Iraklio, Greece.",
+        "International Primary Care Respiratory Group IPCRG, Aberdeen, UK."
+      ]
+    },
+    {
+      "last_name": "Valiulis",
+      "fore_name": "Arunas",
+      "initials": "A",
+      "name": "Arunas Valiulis",
+      "affiliations": [
+        "Institute of Clinical Medicine and Institute of Health Sciences, Vilnius and Medical Faculty of Vilnius University, Vilnius, Lithuania."
+      ]
+    },
+    {
+      "last_name": "Vandenplas",
+      "fore_name": "Olivier",
+      "initials": "O",
+      "name": "Olivier Vandenplas",
+      "affiliations": [
+        "Department of Chest Medicine, Centre Hospitalier Universitaire UCL, Namur, and Université Catholique de Louvain, Yvoir, Belgium."
+      ],
+      "orcid": "0000-0002-4608-3310"
+    },
+    {
+      "last_name": "Wallace",
+      "fore_name": "Dana",
+      "initials": "D",
+      "name": "Dana Wallace",
+      "affiliations": [
+        "Nova Southeastern University, Fort Lauderdale, Florida, USA."
+      ]
+    },
+    {
+      "last_name": "Waserman",
+      "fore_name": "Susan",
+      "initials": "S",
+      "name": "Susan Waserman",
+      "affiliations": [
+        "Department of Medicine, Clinical Immunology and Allergy, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Yorgancioglu",
+      "fore_name": "Arzu",
+      "initials": "A",
+      "name": "Arzu Yorgancioglu",
+      "affiliations": [
+        "Department of Pulmonary Diseases, Celal Bayar University, Faculty of Medicine, Manisa, Turkey."
+      ]
+    },
+    {
+      "last_name": "Zidarn",
+      "fore_name": "Mihaela",
+      "initials": "M",
+      "name": "Mihaela Zidarn",
+      "affiliations": [
+        "University Clinic of Respiratory and Allergic Diseases, Golnick, Slovenia.",
+        "Faculty of Medicine, University of Ljubljana, Ljubljana, Slovenia."
+      ]
+    },
+    {
+      "last_name": "Zuberbier",
+      "fore_name": "Torsten",
+      "initials": "T",
+      "name": "Torsten Zuberbier",
+      "affiliations": [
+        "Institute of Allergology, Charité - Universitätsmedizin Berlin, Corporate Member of Freie Universität Berlin and Humboldt-Universität zu Berlin, Berlin, Germany.",
+        "Fraunhofer Institute for Translational Medicine and Pharmacology ITMP, Allergology and Immunology, Berlin, Germany."
+      ],
+      "orcid": "0000-0002-1466-8875"
+    },
+    {
+      "last_name": "Fonseca",
+      "fore_name": "Joao A",
+      "initials": "JA",
+      "name": "Joao A Fonseca",
+      "affiliations": [
+        "MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, Faculty of Medicine, University of Porto, Porto, Portugal.",
+        "CINTESIS - Center for Health Technology and Services Research, University of Porto, Porto, Portugal.",
+        "RISE - Health Research Network, University of Porto, Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Bousquet",
+      "fore_name": "Jean",
+      "initials": "J",
+      "name": "Jean Bousquet",
+      "affiliations": [
+        "Institute of Allergology, Charité - Universitätsmedizin Berlin, Corporate Member of Freie Universität Berlin and Humboldt-Universität zu Berlin, Berlin, Germany.",
+        "Fraunhofer Institute for Translational Medicine and Pharmacology ITMP, Allergology and Immunology, Berlin, Germany.",
+        "University Hospital Montpellier, Montpellier, France."
+      ],
+      "orcid": "0000-0002-4061-4766"
+    }
+  ],
+  "journal": {
+    "title": "Allergy",
+    "iso_abbreviation": "Allergy",
+    "issn": "1398-9995",
+    "issn_type": "Electronic",
+    "volume": "78",
+    "issue": "4",
+    "pub_year": "2023",
+    "pub_month": "Apr"
+  },
+  "start_page": "968",
+  "end_page": "983",
+  "pages": "968-983",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Longitudinal Studies",
+    "Rhinitis",
+    "Surveys and Questionnaires",
+    "Telemedicine"
+  ],
+  "article_ids": {
+    "pubmed": "36325824",
+    "doi": "10.1111/all.15574"
+  },
+  "doi": "10.1111/all.15574",
+  "dates": {
+    "completed": "2023-04-04",
+    "revised": "2023-05-04"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:56:42.772625",
+    "pmid": "36325824"
+  }
+}

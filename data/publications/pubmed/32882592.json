@@ -1,0 +1,117 @@
+{
+  "pmid": "32882592",
+  "uid": "32882592",
+  "title": "Acquiring guideline-enabled data driven clinical knowledge model using formally verified refined knowledge acquisition method.",
+  "abstract": "BACKGROUND AND OBJECTIVE: Validation and verification are the critical requirements for the knowledge acquisition method of the clinical decision support system (CDSS). After acquiring the medical knowledge from diverse sources, the rigorous validation and formal verification process are required before creating the final knowledge model. Previously, we have proposed a hybrid knowledge acquisition method with the support of a rigorous validation process for acquiring medical knowledge from clinical practice guidelines (CPGs) and patient data for the treatment of oral cavity cancer. However, due to lack of formal verification process, it involves various inconsistencies in knowledge relevant to the formalism of knowledge, conformance to CPGs, quality of knowledge, and complexities of knowledge acquisition artifacts. METHODS: This paper presents the refined knowledge acquisition (ReKA) method, which uses the Z formal verification process. The ReKA method adopts the verification method and explores the mechanism of theorem proving using the Z notation. It enhances a hybrid knowledge acquisition method to thwart the inconsistencies using formal verification. RESULTS: ReKA adds a set of nine additional criteria to be used to have a final valid refined clinical knowledge model. These criteria ensure the validity of the final knowledge model concerning formalism of knowledge, conformance to GPGs, quality of the knowledge, usage of stringent conditions and treatment plans, and inconsistencies possibly resulting from the complexities. Evaluation, using four medical knowledge acquisition scenarios, shows that newly added knowledge in CDSS due to the additional criteria by the ReKA method always produces a valid knowledge model. The final knowledge model was also evaluated with 1229 oral cavity patient cases, which outperformed with an accuracy of 72.57% compared to a similar approach with an accuracy of 69.7%. Furthermore, the ReKA method identified a set of decision paths (about 47.8%) in the existing approach, which results in a final knowledge model with low quality, non-conformed from standard CPGs. CONCLUSION: ReKA refined the hybrid knowledge acquisition method by discovering the missing steps in the current validation process at the acquisition stage. As a formally proven method, it always yields a valid knowledge model having high quality, supporting local practices, and influenced by standard CPGs. Furthermore, the final knowledge model obtained from ReKA also preserves the performance such as the accuracy of the individual source knowledge models.",
+  "authors": [
+    {
+      "last_name": "Hussain",
+      "fore_name": "Maqbool",
+      "initials": "M",
+      "name": "Maqbool Hussain",
+      "affiliations": [
+        "Department of Software, Sejong University, 209 Neungdong-ro, Gwangjin-gu, Seoul 143-747(05006) Republic of Korea; Department of Computer Science and Engineering, Oakland University, Rochester, MI, USA. Electronic address: maqbool.hussain@sejong.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Afzal",
+      "affiliations": [
+        "Department of Software, Sejong University, 209 Neungdong-ro, Gwangjin-gu, Seoul 143-747(05006) Republic of Korea. Electronic address: mafzal@sejong.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Malik",
+      "fore_name": "Khalid M",
+      "initials": "KM",
+      "name": "Khalid M Malik",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Oakland University, Rochester, MI, USA. Electronic address: mahmood@oakland.edu."
+      ]
+    },
+    {
+      "last_name": "Ali",
+      "fore_name": "Taqdir",
+      "initials": "T",
+      "name": "Taqdir Ali",
+      "affiliations": [
+        "Department of Computer Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, Yongin-si, Gyeonggi-do 446-701, Republic of Korea. Electronic address: taqdir.ali@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Ali Khan",
+      "fore_name": "Wajahat",
+      "initials": "W",
+      "name": "Wajahat Ali Khan",
+      "affiliations": [
+        "College of Engineering and Technology, University of Derby, Markeaton Street, Derby DE223AW, United Kingdom. Electronic address: w.khan@derby.ac.uk."
+      ]
+    },
+    {
+      "last_name": "Irfan",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Irfan",
+      "affiliations": [
+        "Department of Radiation Oncology, Shaukat Khanum Memorial Cancer Hospital and Research Centre, 7A Block R-3, M.A.Johar Town, Lahore 54782, Pakistan; Department of Radiation Oncology, National Guard-Health Affairs, King Abdulaziz Medical City Riyadh, Kingdom of Saudi Arabia. Electronic address: drmhammadirfan@gmail.com."
+      ]
+    },
+    {
+      "last_name": "Jamshed",
+      "fore_name": "Arif",
+      "initials": "A",
+      "name": "Arif Jamshed",
+      "affiliations": [
+        "Department of Radiation Oncology, Shaukat Khanum Memorial Cancer Hospital and Research Centre, 7A Block R-3, M.A.Johar Town, Lahore 54782, Pakistan. Electronic address: arifj@skm.org.pk."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Sungyoung",
+      "initials": "S",
+      "name": "Sungyoung Lee",
+      "affiliations": [
+        "Department of Computer Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, Yongin-si, Gyeonggi-do 446-701, Republic of Korea. Electronic address: sylee@oslab.khu.ac.kr."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Computer methods and programs in biomedicine",
+    "iso_abbreviation": "Comput Methods Programs Biomed",
+    "issn": "1872-7565",
+    "issn_type": "Electronic",
+    "volume": "197",
+    "pub_year": "2020",
+    "pub_month": "Dec"
+  },
+  "start_page": "105701",
+  "pages": "105701",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Decision Support Systems, Clinical",
+    "Humans",
+    "Research Design"
+  ],
+  "article_ids": {
+    "pubmed": "32882592",
+    "doi": "10.1016/j.cmpb.2020.105701",
+    "pii": "S0169-2607(20)31534-0"
+  },
+  "doi": "10.1016/j.cmpb.2020.105701",
+  "dates": {
+    "completed": "2021-05-10",
+    "revised": "2021-05-10"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.914763",
+    "pmid": "32882592"
+  }
+}

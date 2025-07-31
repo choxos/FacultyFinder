@@ -1,0 +1,255 @@
+{
+  "openalex_id": "W4377097161",
+  "doi": "https://doi.org/10.1016/j.adro.2023.101272",
+  "title": "A Tool to Integrate Electrophysiological Mapping for Cardiac Radioablation of Ventricular Tachycardia",
+  "abstract": "Cardiac radioablation is an emerging therapy for recurrent ventricular tachycardia. Electrophysiology (EP) data, including electroanatomic maps (EAM) and electrocardiographic imaging (ECGI), provide crucial information for defining the arrhythmogenic target volume. The absence of standardized workflows and software tools to integrate the EP maps into a radiation planning system limits their use. This study developed a comprehensive software tool to enable efficient utilization of the mapping for cardiac radioablation treatment planning.The tool, HeaRTmap, is a Python-scripted plug-in module on the open-source 3D Slicer software platform. HeaRTmap is able to import EAM and ECGI data and visualize the maps in 3D Slicer. The EAM is translated into a 3D space by registration with cardiac magnetic resonance images (MRI) or computed tomography (CT). After the scar area is outlined on the mapping surface, the tool extracts and extends the annotated patch into a closed surface and converts it into a structure set associated with the anatomic images. The tool then exports the structure set and the images as The Digital Imaging and Communications in Medicine Standard in Radiotherapy for a radiation treatment planning system to import. Overlapping the scar structure on simulation CT, a transmural target volume is delineated for treatment planning.The tool has been used to transfer Ensite NavX EAM data into the Varian Eclipse treatment planning system in radioablation on 2 patients with ventricular tachycardia. The ECGI data from CardioInsight was retrospectively evaluated using the tool to derive the target volume for a patient with left ventricular assist device, showing volumetric matching with the clinically used target with a Dice coefficient of 0.71.HeaRTmap smoothly fuses EP information from different mapping systems with simulation CT for accurate definition of radiation target volume. The efficient integration of EP data into treatment planning potentially facilitates the study and adoption of the technique.",
+  "authors": [
+    {
+      "display_name": "Hesheng Wang",
+      "id": "A5101771284",
+      "orcid": "https://orcid.org/0000-0003-2313-1823",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Hesheng Wang"
+    },
+    {
+      "display_name": "Chirag R. Barbhaiya",
+      "id": "A5002599414",
+      "orcid": "https://orcid.org/0000-0003-3479-936X",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chirag R. Barbhaiya"
+    },
+    {
+      "display_name": "Ye Yuan",
+      "id": "A5100337340",
+      "orcid": "https://orcid.org/0000-0002-1796-8347",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Ye Yuan"
+    },
+    {
+      "display_name": "David Barbee",
+      "id": "A5113558619",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Barbee"
+    },
+    {
+      "display_name": "Ting Chen",
+      "id": "A5091980809",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ting Chen"
+    },
+    {
+      "display_name": "Leon Axel",
+      "id": "A5077956588",
+      "orcid": "https://orcid.org/0000-0003-0608-4690",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Leon Axel"
+    },
+    {
+      "display_name": "Larry A. Chinitz",
+      "id": "A5091807315",
+      "orcid": "https://orcid.org/0000-0003-4454-6761",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Larry A. Chinitz"
+    },
+    {
+      "display_name": "Andrew Evans",
+      "id": "A5036500538",
+      "orcid": "https://orcid.org/0000-0002-3524-1571",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew J. Evans"
+    },
+    {
+      "display_name": "David J. Byun",
+      "id": "A5045742575",
+      "orcid": "https://orcid.org/0000-0003-2160-8616",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David J. Byun"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-05-19",
+  "type": "article",
+  "cited_by_count": 10,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2765008485",
+    "display_name": "Advances in Radiation Oncology",
+    "issn_l": "2452-1094",
+    "issn": [
+      "2452-1094"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "8",
+  "issue": "6",
+  "first_page": "101272",
+  "last_page": "101272",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "http://www.advancesradonc.org/article/S245210942300101X/pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.8373239
+    },
+    {
+      "id": "C2776331378",
+      "display_name": "Ventricular tachycardia",
+      "level": 2,
+      "score": 0.74102664
+    },
+    {
+      "id": "C201645570",
+      "display_name": "Radiation treatment planning",
+      "level": 3,
+      "score": 0.5162275
+    },
+    {
+      "id": "C143409427",
+      "display_name": "Magnetic resonance imaging",
+      "level": 2,
+      "score": 0.46361145
+    },
+    {
+      "id": "C2780283014",
+      "display_name": "Tachycardia",
+      "level": 2,
+      "score": 0.4287493
+    },
+    {
+      "id": "C2777904410",
+      "display_name": "Software",
+      "level": 2,
+      "score": 0.41729885
+    },
+    {
+      "id": "C509974204",
+      "display_name": "Radiation therapy",
+      "level": 2,
+      "score": 0.4135972
+    },
+    {
+      "id": "C126838900",
+      "display_name": "Radiology",
+      "level": 1,
+      "score": 0.39111227
+    },
+    {
+      "id": "C164705383",
+      "display_name": "Cardiology",
+      "level": 1,
+      "score": 0.19151956
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.17712203
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10217",
+      "display_name": "Cardiac electrophysiology and arrhythmias",
+      "score": 0.9999
+    },
+    {
+      "id": "T11217",
+      "display_name": "Cardiac Arrhythmias and Treatments",
+      "score": 0.9999
+    },
+    {
+      "id": "T10598",
+      "display_name": "Cardiac pacing and defibrillation studies",
+      "score": 0.9989
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.adro.2023.101272",
+  "pdf_url": "http://www.advancesradonc.org/article/S245210942300101X/pdf",
+  "retrieved_date": "2025-07-30T14:23:51.029314",
+  "source_database": "OpenAlex"
+}

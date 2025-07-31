@@ -1,0 +1,254 @@
+{
+  "openalex_id": "W4381250174",
+  "doi": "https://doi.org/10.1016/j.annepidem.2023.06.004",
+  "title": "Application of targeted maximum likelihood estimation in public health and epidemiological studies: a systematic review",
+  "abstract": "The Targeted Maximum Likelihood Estimation (TMLE) statistical data analysis framework integrates machine learning, statistical theory, and statistical inference to provide a least biased, efficient and robust strategy for estimation and inference of a variety of statistical and causal parameters. We describe and evaluate the epidemiological applications that have benefited from recent methodological developments. We conducted a systematic literature review in PubMed for articles that applied any form of TMLE in observational studies. We summarised the epidemiological discipline, geographical location, expertise of the authors, and TMLE methods over time. We used the Roadmap of Targeted Learning and Causal Inference to extract key methodological aspects of the publications. We showcase the contributions to the literature of these TMLE results. Of the 89 publications included, 33% originated from the University of California at Berkeley, where the framework was first developed by Professor Mark van der Laan. By 2022, 59% of the publications originated from outside the United States and explored up to 7 different epidemiological disciplines in 2021–22. Double-robustness, bias reduction and model misspecification were the main motivations that drew researchers towards the TMLE framework. Through time, a wide variety of methodological, tutorial and software-specific articles were cited, owing to the constant growth of methodological developments around TMLE. There is a clear dissemination trend of the TMLE framework to various epidemiological disciplines and to increasing numbers of geographical areas. The availability of R packages, publication of tutorial papers, and involvement of methodological experts in applied publications have contributed to an exponential increase in the number of studies that understood the benefits, and adoption, of TMLE.",
+  "authors": [
+    {
+      "display_name": "Matthew J. Smith",
+      "id": "A5072422517",
+      "orcid": "https://orcid.org/0000-0002-8502-0056",
+      "institutions": [
+        {
+          "id": "I4210089966",
+          "display_name": "London School of Hygiene & Tropical Medicine",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Matthew J. Smith"
+    },
+    {
+      "display_name": "Rachael V. Phillips",
+      "id": "A5016848069",
+      "orcid": "https://orcid.org/0000-0002-8474-591X",
+      "institutions": [
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rachael V. Phillips"
+    },
+    {
+      "display_name": "Miguel Ángel Luque-Fernández",
+      "id": "A5037433599",
+      "orcid": "https://orcid.org/0000-0001-6683-5164",
+      "institutions": [
+        {
+          "id": "I4210089966",
+          "display_name": "London School of Hygiene & Tropical Medicine",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I173304897",
+          "display_name": "Universidad de Granada",
+          "country_code": "ES",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Miguel Angel Luque-Fernandez"
+    },
+    {
+      "display_name": "Camille Maringe",
+      "id": "A5014509120",
+      "orcid": "https://orcid.org/0000-0002-8739-9565",
+      "institutions": [
+        {
+          "id": "I4210089966",
+          "display_name": "London School of Hygiene & Tropical Medicine",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Camille Maringe"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-06-19",
+  "type": "review",
+  "cited_by_count": 19,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S40844199",
+    "display_name": "Annals of Epidemiology",
+    "issn_l": "1047-2797",
+    "issn": [
+      "1047-2797",
+      "1873-2585"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "86",
+  "issue": null,
+  "first_page": "34",
+  "last_page": "48.e28",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://doi.org/10.1016/j.annepidem.2023.06.004",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C158600405",
+      "display_name": "Causal inference",
+      "level": 2,
+      "score": 0.66651905
+    },
+    {
+      "id": "C2776214188",
+      "display_name": "Inference",
+      "level": 2,
+      "score": 0.5854338
+    },
+    {
+      "id": "C2522767166",
+      "display_name": "Data science",
+      "level": 1,
+      "score": 0.53810936
+    },
+    {
+      "id": "C23131810",
+      "display_name": "Observational study",
+      "level": 2,
+      "score": 0.5294917
+    },
+    {
+      "id": "C136197465",
+      "display_name": "Variety (cybernetics)",
+      "level": 2,
+      "score": 0.50887513
+    },
+    {
+      "id": "C134261354",
+      "display_name": "Statistical inference",
+      "level": 2,
+      "score": 0.49157748
+    },
+    {
+      "id": "C96250715",
+      "display_name": "Estimation",
+      "level": 2,
+      "score": 0.46965376
+    },
+    {
+      "id": "C189708586",
+      "display_name": "Systematic review",
+      "level": 3,
+      "score": 0.42204374
+    },
+    {
+      "id": "C107130276",
+      "display_name": "Epidemiology",
+      "level": 2,
+      "score": 0.41834855
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.41343138
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.38272798
+    },
+    {
+      "id": "C539667460",
+      "display_name": "Management science",
+      "level": 1,
+      "score": 0.3517974
+    },
+    {
+      "id": "C2779473830",
+      "display_name": "MEDLINE",
+      "level": 2,
+      "score": 0.32839587
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.3152794
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.25462082
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.13802141
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.09666622
+    },
+    {
+      "id": "C187736073",
+      "display_name": "Management",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C162324750",
+      "display_name": "Economics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10845",
+      "display_name": "Advanced Causal Inference Techniques",
+      "score": 0.9989
+    },
+    {
+      "id": "T10243",
+      "display_name": "Statistical Methods and Bayesian Inference",
+      "score": 0.9924
+    },
+    {
+      "id": "T10235",
+      "display_name": "Health disparities and outcomes",
+      "score": 0.9913
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.annepidem.2023.06.004",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:30:10.200180",
+  "source_database": "OpenAlex"
+}

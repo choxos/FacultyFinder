@@ -1,0 +1,962 @@
+{
+  "openalex_id": "W2056076677",
+  "doi": "https://doi.org/10.1086/671138",
+  "title": "An Overview of the Dwarf Galaxy Survey",
+  "abstract": "The Dwarf Galaxy Survey (DGS) program is studying low-metallicity galaxies using 230h of far-infrared (FIR) and submillimetre (submm) photometric and spectroscopic observations of the Herschel Space Observatory and draws to this a rich database of a wide range of wavelengths tracing the dust, gas and stars. This sample of 50 galaxies includes the largest metallicity range achievable in the local Universe including the lowest metallicity (Z) galaxies, 1/50 Zsun, and spans 4 orders of magnitude in star formation rates. The survey is designed to get a handle on the physics of the interstellar medium (ISM) of low metallicity dwarf galaxies, especially on their dust and gas properties and the ISM heating and cooling processes. The DGS produces PACS and SPIRE maps of low-metallicity galaxies observed at 70, 100, 160, 250, 350, and 500 mic with the highest sensitivity achievable to date in the FIR and submm. The FIR fine-structure lines, [CII] 158 mic, [OI] 63 mic, [OI] 145 mic, [OIII] 88 mic, [NIII] 57 mic and [NII] 122 and 205 mic have also been observed with the aim of studying the gas cooling in the neutral and ionized phases. The SPIRE FTS observations include many CO lines (J=4-3 to J=13-12), [NII] 205 mic and [CI] lines at 370 and 609 mic. This paper describes the sample selection and global properties of the galaxies, the observing strategy as well as the vast ancillary database available to complement the Herschel observations. The scientific potential of the full DGS survey is described with some example results included.",
+  "authors": [
+    {
+      "display_name": "S. C. Madden",
+      "id": "A5086494315",
+      "orcid": "https://orcid.org/0000-0003-3229-2899",
+      "institutions": [
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210165232",
+          "display_name": "Institut de Recherche sur les Lois Fondamentales de l'Univers",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. C. Madden"
+    },
+    {
+      "display_name": "A. Rémy-Ruyer",
+      "id": "A5035438409",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210165232",
+          "display_name": "Institut de Recherche sur les Lois Fondamentales de l'Univers",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Rémy-Ruyer"
+    },
+    {
+      "display_name": "M. Galametz",
+      "id": "A5107414303",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I241749",
+          "display_name": "University of Cambridge",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Galametz"
+    },
+    {
+      "display_name": "D. Cormier",
+      "id": "A5087041838",
+      "orcid": "https://orcid.org/0000-0002-1046-2685",
+      "institutions": [
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210165232",
+          "display_name": "Institut de Recherche sur les Lois Fondamentales de l'Univers",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Cormier"
+    },
+    {
+      "display_name": "V. Lebouteiller",
+      "id": "A5017619493",
+      "orcid": "https://orcid.org/0000-0002-7716-6223",
+      "institutions": [
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210165232",
+          "display_name": "Institut de Recherche sur les Lois Fondamentales de l'Univers",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Lebouteiller"
+    },
+    {
+      "display_name": "F. Galliano",
+      "id": "A5025202674",
+      "orcid": "https://orcid.org/0000-0002-4414-3367",
+      "institutions": [
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210165232",
+          "display_name": "Institut de Recherche sur les Lois Fondamentales de l'Univers",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Galliano"
+    },
+    {
+      "display_name": "S. Hony",
+      "id": "A5002739725",
+      "orcid": "https://orcid.org/0000-0003-4358-0925",
+      "institutions": [
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210165232",
+          "display_name": "Institut de Recherche sur les Lois Fondamentales de l'Univers",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Hony"
+    },
+    {
+      "display_name": "G. J. Bendo",
+      "id": "A5066534644",
+      "orcid": "https://orcid.org/0000-0001-9250-713X",
+      "institutions": [
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. J. Bendo"
+    },
+    {
+      "display_name": "M. W. L. Smith",
+      "id": "A5078712693",
+      "orcid": "https://orcid.org/0000-0002-3532-6970",
+      "institutions": [
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. W. L. Smith"
+    },
+    {
+      "display_name": "M. Pohlen",
+      "id": "A5082549234",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Pohlen"
+    },
+    {
+      "display_name": "H. Roussel",
+      "id": "A5101672705",
+      "orcid": "https://orcid.org/0000-0001-5617-7129",
+      "institutions": [
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I2801766991",
+          "display_name": "Institut d'Astrophysique de Paris",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Roussel"
+    },
+    {
+      "display_name": "M. Sauvage",
+      "id": "A5073579416",
+      "orcid": "https://orcid.org/0000-0002-0809-2574",
+      "institutions": [
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210165232",
+          "display_name": "Institut de Recherche sur les Lois Fondamentales de l'Univers",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Sauvage"
+    },
+    {
+      "display_name": "R. Wu",
+      "id": "A5037773419",
+      "orcid": "https://orcid.org/0000-0002-3736-5391",
+      "institutions": [
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210165232",
+          "display_name": "Institut de Recherche sur les Lois Fondamentales de l'Univers",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Wu"
+    },
+    {
+      "display_name": "E. Sturm",
+      "id": "A5108465193",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210091772",
+          "display_name": "Max Planck Institute for Extraterrestrial Physics",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I149899117",
+          "display_name": "Max Planck Society",
+          "country_code": "DE",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Sturm"
+    },
+    {
+      "display_name": "A. Poglitsch",
+      "id": "A5005321160",
+      "orcid": "https://orcid.org/0000-0002-6414-9408",
+      "institutions": [
+        {
+          "id": "I4210091772",
+          "display_name": "Max Planck Institute for Extraterrestrial Physics",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I149899117",
+          "display_name": "Max Planck Society",
+          "country_code": "DE",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Poglitsch"
+    },
+    {
+      "display_name": "A. Contursi",
+      "id": "A5004404122",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210091772",
+          "display_name": "Max Planck Institute for Extraterrestrial Physics",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I149899117",
+          "display_name": "Max Planck Society",
+          "country_code": "DE",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Contursi"
+    },
+    {
+      "display_name": "V. Doublier",
+      "id": "A5012560990",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I149899117",
+          "display_name": "Max Planck Society",
+          "country_code": "DE",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210091772",
+          "display_name": "Max Planck Institute for Extraterrestrial Physics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Doublier"
+    },
+    {
+      "display_name": "M. Baes",
+      "id": "A5032719578",
+      "orcid": "https://orcid.org/0000-0002-3930-2757",
+      "institutions": [
+        {
+          "id": "I32597200",
+          "display_name": "Ghent University",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Baes"
+    },
+    {
+      "display_name": "M. J. Barlow",
+      "id": "A5016300535",
+      "orcid": "https://orcid.org/0000-0002-3875-1171",
+      "institutions": [
+        {
+          "id": "I45129253",
+          "display_name": "University College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. J. Barlow"
+    },
+    {
+      "display_name": "A. Boselli",
+      "id": "A5107860530",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210097422",
+          "display_name": "Laboratoire d’Astrophysique de Marseille",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Boselli"
+    },
+    {
+      "display_name": "M. Boquien",
+      "id": "A5010717725",
+      "orcid": "https://orcid.org/0000-0003-0946-6176",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M. Boquien"
+    },
+    {
+      "display_name": "L. R. Carlson",
+      "id": "A5035350458",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I121797337",
+          "display_name": "Leiden University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. R. Carlson"
+    },
+    {
+      "display_name": "L. Ciesla",
+      "id": "A5056216981",
+      "orcid": "https://orcid.org/0000-0003-0541-2891",
+      "institutions": [
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Ciesla"
+    },
+    {
+      "display_name": "A. Cooray",
+      "id": "A5108087595",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210114008",
+          "display_name": "Laboratory for Atmospheric and Space Physics",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Cooray"
+    },
+    {
+      "display_name": "L. Cortese",
+      "id": "A5025377130",
+      "orcid": "https://orcid.org/0000-0002-7422-9823",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "L. Cortese"
+    },
+    {
+      "display_name": "I. De Looze",
+      "id": "A5011335986",
+      "orcid": "https://orcid.org/0000-0001-9419-6355",
+      "institutions": [
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. de Looze"
+    },
+    {
+      "display_name": "J. Irwin",
+      "id": "A5003745554",
+      "orcid": "https://orcid.org/0000-0003-0073-0903",
+      "institutions": [
+        {
+          "id": "I204722609",
+          "display_name": "Queen's University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. A. Irwin"
+    },
+    {
+      "display_name": "K. G. Isaak",
+      "id": "A5050357870",
+      "orcid": "https://orcid.org/0000-0001-8585-1717",
+      "institutions": [
+        {
+          "id": "I44377176",
+          "display_name": "European Space Research and Technology Centre",
+          "country_code": "NL",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Isaak"
+    },
+    {
+      "display_name": "J. Kamenetzky",
+      "id": "A5051547324",
+      "orcid": "https://orcid.org/0000-0001-7877-7942",
+      "institutions": [
+        {
+          "id": "I204250578",
+          "display_name": "University of California, Irvine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Kamenetzky"
+    },
+    {
+      "display_name": "O. Ł. Karczewski",
+      "id": "A5028588360",
+      "orcid": "https://orcid.org/0000-0003-0812-5425",
+      "institutions": [
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "O. Ł. Karczewski"
+    },
+    {
+      "display_name": "N. Lu",
+      "id": "A5108092665",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I122411786",
+          "display_name": "California Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210167273",
+          "display_name": "Infrared Processing and Analysis Center",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Lu"
+    },
+    {
+      "display_name": "Jeremy A. MacHattie",
+      "id": "A5019671073",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. A. MacHattie"
+    },
+    {
+      "display_name": "B. O’Halloran",
+      "id": "A5108146557",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. O’Halloran"
+    },
+    {
+      "display_name": "T. J. Parkin",
+      "id": "A5051687465",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. J. Parkin"
+    },
+    {
+      "display_name": "Naseem Rangwala",
+      "id": "A5046114706",
+      "orcid": "https://orcid.org/0000-0001-9920-7391",
+      "institutions": [
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Rangwala"
+    },
+    {
+      "display_name": "M. R. P. Schirm",
+      "id": "A5107901556",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. R. P. Schirm"
+    },
+    {
+      "display_name": "B. Schulz",
+      "id": "A5111820083",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Schulz"
+    },
+    {
+      "display_name": "L. Spinoglio",
+      "id": "A5025592914",
+      "orcid": "https://orcid.org/0000-0001-8840-1551",
+      "institutions": [
+        {
+          "id": "I4210100742",
+          "display_name": "Institute for Space Astrophysics and Planetology",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Spinoglio"
+    },
+    {
+      "display_name": "M. Vaccari",
+      "id": "A5006179100",
+      "orcid": "https://orcid.org/0000-0002-6748-0577",
+      "institutions": [
+        {
+          "id": "I869660684",
+          "display_name": "University of the Western Cape",
+          "country_code": "ZA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Vaccari"
+    },
+    {
+      "display_name": "C. D. Wilson",
+      "id": "A5012045154",
+      "orcid": "https://orcid.org/0000-0001-5817-0991",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "C. D. Wilson"
+    },
+    {
+      "display_name": "H. Wozniak",
+      "id": "A5081152143",
+      "orcid": "https://orcid.org/0000-0001-5691-247X",
+      "institutions": [
+        {
+          "id": "I4210156381",
+          "display_name": "Kingston Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I1321434546",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Wozniak"
+    }
+  ],
+  "publication_year": 2013,
+  "publication_date": "2013-06-01",
+  "type": "article",
+  "cited_by_count": 216,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S82835231",
+    "display_name": "Publications of the Astronomical Society of the Pacific",
+    "issn_l": "0004-6280",
+    "issn": [
+      "0004-6280",
+      "1538-3873"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311669"
+  },
+  "volume": "125",
+  "issue": "928",
+  "first_page": "600",
+  "last_page": "635",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://doi.org/10.1086/671138",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.894238
+    },
+    {
+      "id": "C99465377",
+      "display_name": "Metallicity",
+      "level": 3,
+      "score": 0.79921407
+    },
+    {
+      "id": "C98444146",
+      "display_name": "Galaxy",
+      "level": 2,
+      "score": 0.79485
+    },
+    {
+      "id": "C44870925",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.7828221
+    },
+    {
+      "id": "C37119246",
+      "display_name": "Dwarf galaxy",
+      "level": 3,
+      "score": 0.6151375
+    },
+    {
+      "id": "C1276947",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.57772547
+    },
+    {
+      "id": "C196939603",
+      "display_name": "Interstellar medium",
+      "level": 3,
+      "score": 0.52740043
+    },
+    {
+      "id": "C125857072",
+      "display_name": "Star formation",
+      "level": 3,
+      "score": 0.51111466
+    },
+    {
+      "id": "C150846664",
+      "display_name": "Stars",
+      "level": 2,
+      "score": 0.5003352
+    },
+    {
+      "id": "C84999194",
+      "display_name": "Universe",
+      "level": 2,
+      "score": 0.42946303
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10477",
+      "display_name": "Astrophysics and Star Formation Studies",
+      "score": 0.9999
+    },
+    {
+      "id": "T10026",
+      "display_name": "Galaxies: Formation, Evolution, Phenomena",
+      "score": 0.9999
+    },
+    {
+      "id": "T10039",
+      "display_name": "Stellar, planetary, and galactic studies",
+      "score": 0.9998
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1086/671138",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:05:44.652076",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,453 @@
+{
+  "pmid": "23445061",
+  "uid": "23445061",
+  "title": "Variability of computational fluid dynamics solutions for pressure and flow in a giant aneurysm: the ASME 2012 Summer Bioengineering Conference CFD Challenge.",
+  "abstract": "Stimulated by a recent controversy regarding pressure drops predicted in a giant aneurysm with a proximal stenosis, the present study sought to assess variability in the prediction of pressures and flow by a wide variety of research groups. In phase I, lumen geometry, flow rates, and fluid properties were specified, leaving each research group to choose their solver, discretization, and solution strategies. Variability was assessed by having each group interpolate their results onto a standardized mesh and centerline. For phase II, a physical model of the geometry was constructed, from which pressure and flow rates were measured. Groups repeated their simulations using a geometry reconstructed from a micro-computed tomography (CT) scan of the physical model with the measured flow rates and fluid properties. Phase I results from 25 groups demonstrated remarkable consistency in the pressure patterns, with the majority predicting peak systolic pressure drops within 8% of each other. Aneurysm sac flow patterns were more variable with only a few groups reporting peak systolic flow instabilities owing to their use of high temporal resolutions. Variability for phase II was comparable, and the median predicted pressure drops were within a few millimeters of mercury of the measured values but only after accounting for submillimeter errors in the reconstruction of the life-sized flow model from micro-CT. In summary, pressure can be predicted with consistency by CFD across a wide range of solvers and solution strategies, but this may not hold true for specific flow patterns or derived quantities. Future challenges are needed and should focus on hemodynamic quantities thought to be of clinical interest.",
+  "authors": [
+    {
+      "last_name": "Steinman",
+      "fore_name": "David A",
+      "initials": "DA",
+      "name": "David A Steinman",
+      "affiliations": [
+        "University of Toronto, Toronto, Ontario, Canada. steinman@mie.utoronto.ca"
+      ]
+    },
+    {
+      "last_name": "Hoi",
+      "fore_name": "Yiemeng",
+      "initials": "Y",
+      "name": "Yiemeng Hoi",
+      "affiliations": []
+    },
+    {
+      "last_name": "Fahy",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Fahy",
+      "affiliations": []
+    },
+    {
+      "last_name": "Morris",
+      "fore_name": "Liam",
+      "initials": "L",
+      "name": "Liam Morris",
+      "affiliations": []
+    },
+    {
+      "last_name": "Walsh",
+      "fore_name": "Michael T",
+      "initials": "MT",
+      "name": "Michael T Walsh",
+      "affiliations": []
+    },
+    {
+      "last_name": "Aristokleous",
+      "fore_name": "Nicolas",
+      "initials": "N",
+      "name": "Nicolas Aristokleous",
+      "affiliations": []
+    },
+    {
+      "last_name": "Anayiotos",
+      "fore_name": "Andreas S",
+      "initials": "AS",
+      "name": "Andreas S Anayiotos",
+      "affiliations": []
+    },
+    {
+      "last_name": "Papaharilaou",
+      "fore_name": "Yannis",
+      "initials": "Y",
+      "name": "Yannis Papaharilaou",
+      "affiliations": []
+    },
+    {
+      "last_name": "Arzani",
+      "fore_name": "Amirhossein",
+      "initials": "A",
+      "name": "Amirhossein Arzani",
+      "affiliations": []
+    },
+    {
+      "last_name": "Shadden",
+      "fore_name": "Shawn C",
+      "initials": "SC",
+      "name": "Shawn C Shadden",
+      "affiliations": []
+    },
+    {
+      "last_name": "Berg",
+      "fore_name": "Philipp",
+      "initials": "P",
+      "name": "Philipp Berg",
+      "affiliations": []
+    },
+    {
+      "last_name": "Janiga",
+      "fore_name": "Gábor",
+      "initials": "G",
+      "name": "Gábor Janiga",
+      "affiliations": []
+    },
+    {
+      "last_name": "Bols",
+      "fore_name": "Joris",
+      "initials": "J",
+      "name": "Joris Bols",
+      "affiliations": []
+    },
+    {
+      "last_name": "Segers",
+      "fore_name": "Patrick",
+      "initials": "P",
+      "name": "Patrick Segers",
+      "affiliations": []
+    },
+    {
+      "last_name": "Bressloff",
+      "fore_name": "Neil W",
+      "initials": "NW",
+      "name": "Neil W Bressloff",
+      "affiliations": []
+    },
+    {
+      "last_name": "Cibis",
+      "fore_name": "Merih",
+      "initials": "M",
+      "name": "Merih Cibis",
+      "affiliations": []
+    },
+    {
+      "last_name": "Gijsen",
+      "fore_name": "Frank H",
+      "initials": "FH",
+      "name": "Frank H Gijsen",
+      "affiliations": []
+    },
+    {
+      "last_name": "Cito",
+      "fore_name": "Salvatore",
+      "initials": "S",
+      "name": "Salvatore Cito",
+      "affiliations": []
+    },
+    {
+      "last_name": "Pallarés",
+      "fore_name": "Jordi",
+      "initials": "J",
+      "name": "Jordi Pallarés",
+      "affiliations": []
+    },
+    {
+      "last_name": "Browne",
+      "fore_name": "Leonard D",
+      "initials": "LD",
+      "name": "Leonard D Browne",
+      "affiliations": []
+    },
+    {
+      "last_name": "Costelloe",
+      "fore_name": "Jennifer A",
+      "initials": "JA",
+      "name": "Jennifer A Costelloe",
+      "affiliations": []
+    },
+    {
+      "last_name": "Lynch",
+      "fore_name": "Adrian G",
+      "initials": "AG",
+      "name": "Adrian G Lynch",
+      "affiliations": []
+    },
+    {
+      "last_name": "Degroote",
+      "fore_name": "Joris",
+      "initials": "J",
+      "name": "Joris Degroote",
+      "affiliations": []
+    },
+    {
+      "last_name": "Vierendeels",
+      "fore_name": "Jan",
+      "initials": "J",
+      "name": "Jan Vierendeels",
+      "affiliations": []
+    },
+    {
+      "last_name": "Fu",
+      "fore_name": "Wenyu",
+      "initials": "W",
+      "name": "Wenyu Fu",
+      "affiliations": []
+    },
+    {
+      "last_name": "Qiao",
+      "fore_name": "Aike",
+      "initials": "A",
+      "name": "Aike Qiao",
+      "affiliations": []
+    },
+    {
+      "last_name": "Hodis",
+      "fore_name": "Simona",
+      "initials": "S",
+      "name": "Simona Hodis",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kallmes",
+      "fore_name": "David F",
+      "initials": "DF",
+      "name": "David F Kallmes",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kalsi",
+      "fore_name": "Hardeep",
+      "initials": "H",
+      "name": "Hardeep Kalsi",
+      "affiliations": []
+    },
+    {
+      "last_name": "Long",
+      "fore_name": "Quan",
+      "initials": "Q",
+      "name": "Quan Long",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kheyfets",
+      "fore_name": "Vitaly O",
+      "initials": "VO",
+      "name": "Vitaly O Kheyfets",
+      "affiliations": []
+    },
+    {
+      "last_name": "Finol",
+      "fore_name": "Ender A",
+      "initials": "EA",
+      "name": "Ender A Finol",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kono",
+      "fore_name": "Kenichi",
+      "initials": "K",
+      "name": "Kenichi Kono",
+      "affiliations": []
+    },
+    {
+      "last_name": "Malek",
+      "fore_name": "Adel M",
+      "initials": "AM",
+      "name": "Adel M Malek",
+      "affiliations": []
+    },
+    {
+      "last_name": "Lauric",
+      "fore_name": "Alexandra",
+      "initials": "A",
+      "name": "Alexandra Lauric",
+      "affiliations": []
+    },
+    {
+      "last_name": "Menon",
+      "fore_name": "Prahlad G",
+      "initials": "PG",
+      "name": "Prahlad G Menon",
+      "affiliations": []
+    },
+    {
+      "last_name": "Pekkan",
+      "fore_name": "Kerem",
+      "initials": "K",
+      "name": "Kerem Pekkan",
+      "affiliations": []
+    },
+    {
+      "last_name": "Esmaily Moghadam",
+      "fore_name": "Mahdi",
+      "initials": "M",
+      "name": "Mahdi Esmaily Moghadam",
+      "affiliations": []
+    },
+    {
+      "last_name": "Marsden",
+      "fore_name": "Alison L",
+      "initials": "AL",
+      "name": "Alison L Marsden",
+      "affiliations": []
+    },
+    {
+      "last_name": "Oshima",
+      "fore_name": "Marie",
+      "initials": "M",
+      "name": "Marie Oshima",
+      "affiliations": []
+    },
+    {
+      "last_name": "Katagiri",
+      "fore_name": "Kengo",
+      "initials": "K",
+      "name": "Kengo Katagiri",
+      "affiliations": []
+    },
+    {
+      "last_name": "Peiffer",
+      "fore_name": "Véronique",
+      "initials": "V",
+      "name": "Véronique Peiffer",
+      "affiliations": []
+    },
+    {
+      "last_name": "Mohamied",
+      "fore_name": "Yumnah",
+      "initials": "Y",
+      "name": "Yumnah Mohamied",
+      "affiliations": []
+    },
+    {
+      "last_name": "Sherwin",
+      "fore_name": "Spencer J",
+      "initials": "SJ",
+      "name": "Spencer J Sherwin",
+      "affiliations": []
+    },
+    {
+      "last_name": "Schaller",
+      "fore_name": "Jens",
+      "initials": "J",
+      "name": "Jens Schaller",
+      "affiliations": []
+    },
+    {
+      "last_name": "Goubergrits",
+      "fore_name": "Leonid",
+      "initials": "L",
+      "name": "Leonid Goubergrits",
+      "affiliations": []
+    },
+    {
+      "last_name": "Usera",
+      "fore_name": "Gabriel",
+      "initials": "G",
+      "name": "Gabriel Usera",
+      "affiliations": []
+    },
+    {
+      "last_name": "Mendina",
+      "fore_name": "Mariana",
+      "initials": "M",
+      "name": "Mariana Mendina",
+      "affiliations": []
+    },
+    {
+      "last_name": "Valen-Sendstad",
+      "fore_name": "Kristian",
+      "initials": "K",
+      "name": "Kristian Valen-Sendstad",
+      "affiliations": []
+    },
+    {
+      "last_name": "Habets",
+      "fore_name": "Damiaan F",
+      "initials": "DF",
+      "name": "Damiaan F Habets",
+      "affiliations": []
+    },
+    {
+      "last_name": "Xiang",
+      "fore_name": "Jianping",
+      "initials": "J",
+      "name": "Jianping Xiang",
+      "affiliations": []
+    },
+    {
+      "last_name": "Meng",
+      "fore_name": "Hui",
+      "initials": "H",
+      "name": "Hui Meng",
+      "affiliations": []
+    },
+    {
+      "last_name": "Yu",
+      "fore_name": "Yue",
+      "initials": "Y",
+      "name": "Yue Yu",
+      "affiliations": []
+    },
+    {
+      "last_name": "Karniadakis",
+      "fore_name": "George E",
+      "initials": "GE",
+      "name": "George E Karniadakis",
+      "affiliations": []
+    },
+    {
+      "last_name": "Shaffer",
+      "fore_name": "Nicholas",
+      "initials": "N",
+      "name": "Nicholas Shaffer",
+      "affiliations": []
+    },
+    {
+      "last_name": "Loth",
+      "fore_name": "Francis",
+      "initials": "F",
+      "name": "Francis Loth",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Journal of biomechanical engineering",
+    "iso_abbreviation": "J Biomech Eng",
+    "issn": "1528-8951",
+    "issn_type": "Electronic",
+    "volume": "135",
+    "issue": "2",
+    "pub_year": "2013",
+    "pub_month": "Feb"
+  },
+  "start_page": "021016",
+  "pages": "021016",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Aneurysm",
+    "Bioengineering",
+    "Blood Circulation",
+    "Computer Simulation",
+    "Congresses as Topic",
+    "Humans",
+    "Hydrodynamics",
+    "Kinetics",
+    "Pressure",
+    "Societies, Scientific"
+  ],
+  "article_ids": {
+    "pubmed": "23445061",
+    "doi": "10.1115/1.4023382"
+  },
+  "doi": "10.1115/1.4023382",
+  "dates": {
+    "completed": "2013-08-28",
+    "revised": "2013-02-28"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "MOP-62934",
+      "agency": "Canadian Institutes of Health Research",
+      "country": "Canada"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:05:22.781120",
+    "pmid": "23445061"
+  }
+}

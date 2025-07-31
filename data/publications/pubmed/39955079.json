@@ -1,0 +1,183 @@
+{
+  "pmid": "39955079",
+  "uid": "39955079",
+  "title": "Quantitative assessment of inconsistency in meta-analysis using decision thresholds with two new indices.",
+  "abstract": "OBJECTIVES: In evidence synthesis, inconsistency is typically assessed visually and with the I[2] and the Q statistics. However, these measures have important limitations (i) if there are few primary studies of small sample sizes or (ii) if there are multiple studies with precise estimates. In addition, with the increasing use of decision thresholds (DT), for example in Grading of Recommendations Assessment, Development and Evaluation evidence to decision (EtD) frameworks, inconsistency judgments can be anchored around DTs. In this article, we developed quantitative measures to assess inconsistency based on DTs. STUDY DESIGN AND SETTING: We developed two measures to quantify inconsistency based on DTs - the decision inconsistency (DI) and the across-studies inconsistency (ASI) indices. The DI and the ASI are based on the distribution of the posterior samples studies' effect sizes (ES) across interpretation categories defined by DTs. We developed these indices for the Bayesian context, followed by a frequentist extension. RESULTS: The DI informs on the overall inconsistency of ESs across interpretation categories, while the ASI quantifies how different studies are compared to each other (in relation to interpretation categories) based on absolute effects. A DI ≥ 50% and an ASI ≥ 25% are suggestive of important inconsistency. We provide an R package (metainc) and a web tool (https://metainc.med.up.pt/) to support the computation of the DI and ASI, including in the context of sensitivity analyses assessing the impact of potential uncertainty in inconsistency. CONCLUSION: The DI and the ASI can contribute to quantitatively assess inconsistency, particularly as DTs are gaining recognition in evidence synthesis and health decision-making.",
+  "authors": [
+    {
+      "last_name": "Sousa-Pinto",
+      "fore_name": "Bernardo",
+      "initials": "B",
+      "name": "Bernardo Sousa-Pinto",
+      "affiliations": [
+        "Faculty of Medicine, MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, University of Porto, Porto, Portugal; CINTESIS@RISE - Health Research Network, Faculty of Medicine, MEDCIDS, University of Porto, Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Neumann",
+      "fore_name": "Ignacio",
+      "initials": "I",
+      "name": "Ignacio Neumann",
+      "affiliations": [
+        "School of Medicine, Universidad San Sebastián, Santiago, Chile."
+      ]
+    },
+    {
+      "last_name": "Vieira",
+      "fore_name": "Rafael José",
+      "initials": "RJ",
+      "name": "Rafael José Vieira",
+      "affiliations": [
+        "Faculty of Medicine, MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, University of Porto, Porto, Portugal; CINTESIS@RISE - Health Research Network, Faculty of Medicine, MEDCIDS, University of Porto, Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Bognanni",
+      "fore_name": "Antonio",
+      "initials": "A",
+      "name": "Antonio Bognanni",
+      "affiliations": [
+        "Clinical and Epidemiology and Research Center (CERC), Department of Biomedical Sciences, IRCCS Humanitas Research Hospital, Humanitas University, Milan, Italy."
+      ]
+    },
+    {
+      "last_name": "Marques-Cruz",
+      "fore_name": "Manuel",
+      "initials": "M",
+      "name": "Manuel Marques-Cruz",
+      "affiliations": [
+        "Faculty of Medicine, MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, University of Porto, Porto, Portugal; CINTESIS@RISE - Health Research Network, Faculty of Medicine, MEDCIDS, University of Porto, Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Gil-Mata",
+      "fore_name": "Sara",
+      "initials": "S",
+      "name": "Sara Gil-Mata",
+      "affiliations": [
+        "Faculty of Medicine, MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, University of Porto, Porto, Portugal; CINTESIS@RISE - Health Research Network, Faculty of Medicine, MEDCIDS, University of Porto, Porto, Portugal."
+      ]
+    },
+    {
+      "last_name": "Mordue",
+      "fore_name": "Simone",
+      "initials": "S",
+      "name": "Simone Mordue",
+      "affiliations": [
+        "Centre for Conservation Science, Cambridge, UK."
+      ]
+    },
+    {
+      "last_name": "Nevill",
+      "fore_name": "Clareece",
+      "initials": "C",
+      "name": "Clareece Nevill",
+      "affiliations": [
+        "Department of Population Health Sciences, University of Leicester, Leicester, UK."
+      ]
+    },
+    {
+      "last_name": "Baio",
+      "fore_name": "Gianluca",
+      "initials": "G",
+      "name": "Gianluca Baio",
+      "affiliations": [
+        "Department of Statistical Science, University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Whaley",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Whaley",
+      "affiliations": [
+        "Lancaster Environment Centre, Lancaster University, Lancaster, UK; Evidence-Based Toxicology Collaboration (EBTC), Johns Hopkins Bloomberg School of Public Health, Johns Hopkins University, Baltimore, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Schwarzer",
+      "fore_name": "Guido",
+      "initials": "G",
+      "name": "Guido Schwarzer",
+      "affiliations": [
+        "Faculty of Medicine and Medical Center - University of Freiburg, Institute of Medical Biometry and Statistics, Freiburg, Germany."
+      ]
+    },
+    {
+      "last_name": "Steele",
+      "fore_name": "James",
+      "initials": "J",
+      "name": "James Steele",
+      "affiliations": [
+        "Department of Sport and Health, Solent University, Southampton, UK."
+      ]
+    },
+    {
+      "last_name": "Stewart",
+      "fore_name": "Gavin",
+      "initials": "G",
+      "name": "Gavin Stewart",
+      "affiliations": [
+        "Evidence Synthesis Lab, School of Natural and Environmental Science, University of Newcastle, Newcastle-upon-Tyne, UK."
+      ]
+    },
+    {
+      "last_name": "Schünemann",
+      "fore_name": "Holger J",
+      "initials": "HJ",
+      "name": "Holger J Schünemann",
+      "affiliations": [
+        "Clinical and Epidemiology and Research Center (CERC), Department of Biomedical Sciences, IRCCS Humanitas Research Hospital, Humanitas University, Milan, Italy; Fraunhofer Institute for Translational Medicine and Pharmacology ITMP, Allergology and Immunology, Berlin, Germany. Electronic address: schuneh@mcmaster.ca."
+      ]
+    },
+    {
+      "last_name": "Azevedo",
+      "fore_name": "Luís Filipe",
+      "initials": "LF",
+      "name": "Luís Filipe Azevedo",
+      "affiliations": [
+        "Faculty of Medicine, MEDCIDS - Department of Community Medicine, Information and Health Decision Sciences, University of Porto, Porto, Portugal; CINTESIS@RISE - Health Research Network, Faculty of Medicine, MEDCIDS, University of Porto, Porto, Portugal."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Journal of clinical epidemiology",
+    "iso_abbreviation": "J Clin Epidemiol",
+    "issn": "1878-5921",
+    "issn_type": "Electronic",
+    "volume": "181",
+    "pub_year": "2025",
+    "pub_month": "May"
+  },
+  "start_page": "111725",
+  "pages": "111725",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Meta-Analysis as Topic",
+    "Bayes Theorem",
+    "Decision Making",
+    "Data Interpretation, Statistical",
+    "Research Design"
+  ],
+  "article_ids": {
+    "pubmed": "39955079",
+    "doi": "10.1016/j.jclinepi.2025.111725",
+    "pii": "S0895-4356(25)00058-7"
+  },
+  "doi": "10.1016/j.jclinepi.2025.111725",
+  "dates": {
+    "completed": "2025-05-24",
+    "revised": "2025-06-11"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:56:31.856885",
+    "pmid": "39955079"
+  }
+}

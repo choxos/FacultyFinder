@@ -1,0 +1,392 @@
+{
+  "pmid": "31648317",
+  "uid": "31648317",
+  "title": "ClinGen Myeloid Malignancy Variant Curation Expert Panel recommendations for germline RUNX1 variants.",
+  "abstract": "Standardized variant curation is essential for clinical care recommendations for patients with inherited disorders. Clinical Genome Resource (ClinGen) variant curation expert panels are developing disease-associated gene specifications using the 2015 American College of Medical Genetics and Genomics (ACMG) and Association for Molecular Pathology (AMP) guidelines to reduce curation discrepancies. The ClinGen Myeloid Malignancy Variant Curation Expert Panel (MM-VCEP) was created collaboratively between the American Society of Hematology and ClinGen to perform gene- and disease-specific modifications for inherited myeloid malignancies. The MM-VCEP began optimizing ACMG/AMP rules for RUNX1 because many germline variants have been described in patients with familial platelet disorder with a predisposition to acute myeloid leukemia, characterized by thrombocytopenia, platelet functional/ultrastructural defects, and a predisposition to hematologic malignancies. The 28 ACMG/AMP codes were tailored for RUNX1 variants by modifying gene/disease specifications, incorporating strength adjustments of existing rules, or both. Key specifications included calculation of minor allele frequency thresholds, formulating a semi-quantitative approach to counting multiple independent variant occurrences, identifying functional domains and mutational hotspots, establishing functional assay thresholds, and characterizing phenotype-specific guidelines. Preliminary rules were tested by using a pilot set of 52 variants; among these, 50 were previously classified as benign/likely benign, pathogenic/likely pathogenic, variant of unknown significance (VUS), or conflicting interpretations (CONF) in ClinVar. The application of RUNX1-specific criteria resulted in a reduction in CONF and VUS variants by 33%, emphasizing the benefit of gene-specific criteria and sharing internal laboratory data.",
+  "authors": [
+    {
+      "last_name": "Luo",
+      "fore_name": "Xi",
+      "initials": "X",
+      "name": "Xi Luo",
+      "affiliations": [
+        "Department of Pediatrics/Hematology-Oncology, Baylor College of Medicine, Houston, TX."
+      ]
+    },
+    {
+      "last_name": "Feurstein",
+      "fore_name": "Simone",
+      "initials": "S",
+      "name": "Simone Feurstein",
+      "affiliations": [
+        "Section of Hematology/Oncology and Center for Clinical Cancer Genetics, The University of Chicago, Chicago, IL."
+      ]
+    },
+    {
+      "last_name": "Mohan",
+      "fore_name": "Shruthi",
+      "initials": "S",
+      "name": "Shruthi Mohan",
+      "affiliations": [
+        "Department of Genetics, University of North Carolina School of Medicine, Chapel Hill, NC."
+      ]
+    },
+    {
+      "last_name": "Porter",
+      "fore_name": "Christopher C",
+      "initials": "CC",
+      "name": "Christopher C Porter",
+      "affiliations": [
+        "Department of Pediatrics, Emory University School of Medicine, Atlanta, GA."
+      ]
+    },
+    {
+      "last_name": "Jackson",
+      "fore_name": "Sarah A",
+      "initials": "SA",
+      "name": "Sarah A Jackson",
+      "affiliations": [
+        "GeneDx, Gaithersburg, MD."
+      ]
+    },
+    {
+      "last_name": "Keel",
+      "fore_name": "Sioban",
+      "initials": "S",
+      "name": "Sioban Keel",
+      "affiliations": [
+        "Division of Hematology, Department of Medicine, University of Washington, Seattle, WA."
+      ]
+    },
+    {
+      "last_name": "Chicka",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Chicka",
+      "affiliations": [
+        "PreventionGenetics, Marshfield, WI."
+      ]
+    },
+    {
+      "last_name": "Brown",
+      "fore_name": "Anna L",
+      "initials": "AL",
+      "name": "Anna L Brown",
+      "affiliations": [
+        "Centre for Cancer Biology, SA Pathology & University of South Australia, Adelaide, Australia."
+      ]
+    },
+    {
+      "last_name": "Kesserwan",
+      "fore_name": "Chimene",
+      "initials": "C",
+      "name": "Chimene Kesserwan",
+      "affiliations": [
+        "Department of Oncology, St. Jude Children's Research Hospital, Memphis, TN."
+      ]
+    },
+    {
+      "last_name": "Agarwal",
+      "fore_name": "Anupriya",
+      "initials": "A",
+      "name": "Anupriya Agarwal",
+      "affiliations": [
+        "Knight Cancer Institute, Oregon Health & Science University, Portland, OR."
+      ]
+    },
+    {
+      "last_name": "Luo",
+      "fore_name": "Minjie",
+      "initials": "M",
+      "name": "Minjie Luo",
+      "affiliations": [
+        "Department of Pathology and Laboratory Medicine, The Children's Hospital of Philadelphia, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Zejuan",
+      "initials": "Z",
+      "name": "Zejuan Li",
+      "affiliations": [
+        "Department of Pathology and Genomic Medicine, Houston Methodist Research Institute and Houston Methodist Hospital, Houston, TX.",
+        "Department of Pathology and Laboratory Medicine, Weill Cornell Medical College, New York, NY."
+      ]
+    },
+    {
+      "last_name": "Ross",
+      "fore_name": "Justyne E",
+      "initials": "JE",
+      "name": "Justyne E Ross",
+      "affiliations": [
+        "Department of Genetics, University of North Carolina School of Medicine, Chapel Hill, NC."
+      ]
+    },
+    {
+      "last_name": "Baliakas",
+      "fore_name": "Panagiotis",
+      "initials": "P",
+      "name": "Panagiotis Baliakas",
+      "affiliations": [
+        "Department of Immunology, Genetics, and Pathology, Science for Life Laboratory, Uppsala University, Uppsala, Sweden."
+      ]
+    },
+    {
+      "last_name": "Pineda-Alvarez",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Pineda-Alvarez",
+      "affiliations": [
+        "Invitae, San Francisco, CA."
+      ]
+    },
+    {
+      "last_name": "DiNardo",
+      "fore_name": "Courtney D",
+      "initials": "CD",
+      "name": "Courtney D DiNardo",
+      "affiliations": [
+        "Department of Leukemia, University of Texas MD Anderson Cancer Center, Houston, TX."
+      ]
+    },
+    {
+      "last_name": "Bertuch",
+      "fore_name": "Alison A",
+      "initials": "AA",
+      "name": "Alison A Bertuch",
+      "affiliations": [
+        "Department of Pediatrics/Hematology-Oncology, Baylor College of Medicine, Houston, TX."
+      ]
+    },
+    {
+      "last_name": "Mehta",
+      "fore_name": "Nikita",
+      "initials": "N",
+      "name": "Nikita Mehta",
+      "affiliations": [
+        "Hematopathology Division, Department of Laboratory Medicine & Pathology, Mayo Clinic, Rochester, MN."
+      ]
+    },
+    {
+      "last_name": "Vulliamy",
+      "fore_name": "Tom",
+      "initials": "T",
+      "name": "Tom Vulliamy",
+      "affiliations": [
+        "Blizard Institute, Barts and The London School of Medicine and Dentistry, Queen Mary University London, London, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Ying",
+      "initials": "Y",
+      "name": "Ying Wang",
+      "affiliations": [
+        "Department of Pathology and Genetic Medicine, Johns Hopkins University School of Medicine, Baltimore, MD."
+      ]
+    },
+    {
+      "last_name": "Nichols",
+      "fore_name": "Kim E",
+      "initials": "KE",
+      "name": "Kim E Nichols",
+      "affiliations": [
+        "Department of Oncology, St. Jude Children's Research Hospital, Memphis, TN."
+      ]
+    },
+    {
+      "last_name": "Malcovati",
+      "fore_name": "Luca",
+      "initials": "L",
+      "name": "Luca Malcovati",
+      "affiliations": [
+        "Department of Molecular Medicine, University of Pavia and Istituto di Ricovero e Cura a Carattere Scientifico Policlinico S. Matteo Foundation, Pavia, Italy."
+      ]
+    },
+    {
+      "last_name": "Walsh",
+      "fore_name": "Michael F",
+      "initials": "MF",
+      "name": "Michael F Walsh",
+      "affiliations": [
+        "Department of Pediatrics, Memorial Sloan Kettering Cancer Center, New York, NY."
+      ]
+    },
+    {
+      "last_name": "Rawlings",
+      "fore_name": "Lesley H",
+      "initials": "LH",
+      "name": "Lesley H Rawlings",
+      "affiliations": [
+        "Department of Genetics and Molecular Pathology, SA Pathology, Adelaide, Australia."
+      ]
+    },
+    {
+      "last_name": "McWeeney",
+      "fore_name": "Shannon K",
+      "initials": "SK",
+      "name": "Shannon K McWeeney",
+      "affiliations": [
+        "Division of Biostatistics, Department of Public Health and Preventive Medicine, Oregon Health & Science University, Portland, OR."
+      ]
+    },
+    {
+      "last_name": "Soulier",
+      "fore_name": "Jean",
+      "initials": "J",
+      "name": "Jean Soulier",
+      "affiliations": [
+        "INSERM/CNRS U944/7212, Université de Paris and Hematology Laboratory Assistance Publique-Hôpitaux de Paris, Hôpital Saint-Louis, Paris, France."
+      ]
+    },
+    {
+      "last_name": "Raimbault",
+      "fore_name": "Anna",
+      "initials": "A",
+      "name": "Anna Raimbault",
+      "affiliations": [
+        "INSERM/CNRS U944/7212, Université de Paris and Hematology Laboratory Assistance Publique-Hôpitaux de Paris, Hôpital Saint-Louis, Paris, France."
+      ]
+    },
+    {
+      "last_name": "Routbort",
+      "fore_name": "Mark J",
+      "initials": "MJ",
+      "name": "Mark J Routbort",
+      "affiliations": [
+        "Department of Hematopathology, University of Texas MD Anderson Cancer Center, Houston, TX."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Liying",
+      "initials": "L",
+      "name": "Liying Zhang",
+      "affiliations": [
+        "Department of Pathology, Memorial Sloan Kettering Cancer Center, New York, NY."
+      ]
+    },
+    {
+      "last_name": "Ryan",
+      "fore_name": "Gabriella",
+      "initials": "G",
+      "name": "Gabriella Ryan",
+      "affiliations": [
+        "Department of Scientific Affairs, American Society of Hematology, Washington, DC."
+      ]
+    },
+    {
+      "last_name": "Speck",
+      "fore_name": "Nancy A",
+      "initials": "NA",
+      "name": "Nancy A Speck",
+      "affiliations": [
+        "Department of Cell and Developmental Biology, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA; and."
+      ]
+    },
+    {
+      "last_name": "Plon",
+      "fore_name": "Sharon E",
+      "initials": "SE",
+      "name": "Sharon E Plon",
+      "affiliations": [
+        "Department of Pediatrics/Hematology-Oncology, Baylor College of Medicine, Houston, TX."
+      ]
+    },
+    {
+      "last_name": "Wu",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Wu",
+      "affiliations": [
+        "Department of Laboratory Medicine, University of Washington, Seattle, WA."
+      ]
+    },
+    {
+      "last_name": "Godley",
+      "fore_name": "Lucy A",
+      "initials": "LA",
+      "name": "Lucy A Godley",
+      "affiliations": [
+        "Section of Hematology/Oncology and Center for Clinical Cancer Genetics, The University of Chicago, Chicago, IL."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Blood advances",
+    "iso_abbreviation": "Blood Adv",
+    "issn": "2473-9537",
+    "issn_type": "Electronic",
+    "volume": "3",
+    "issue": "20",
+    "pub_year": "2019",
+    "pub_month": "Oct",
+    "pub_day": "22"
+  },
+  "start_page": "2962",
+  "end_page": "2979",
+  "pages": "2962-2979",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Clinical Decision-Making",
+    "Core Binding Factor Alpha 2 Subunit",
+    "Disease Management",
+    "Genetic Association Studies",
+    "Genetic Predisposition to Disease",
+    "Genetic Testing",
+    "Genetic Variation",
+    "Genomics",
+    "Germ-Line Mutation",
+    "Humans",
+    "Leukemia, Myeloid",
+    "Phenotype",
+    "Reproducibility of Results"
+  ],
+  "article_ids": {
+    "pubmed": "31648317",
+    "pmc": "PMC6849945",
+    "doi": "10.1182/bloodadvances.2019000644",
+    "pii": "381153"
+  },
+  "doi": "10.1182/bloodadvances.2019000644",
+  "pmc_id": "PMC6849945",
+  "dates": {
+    "completed": "2020-08-17",
+    "revised": "2021-12-22"
+  },
+  "chemicals": [
+    "Core Binding Factor Alpha 2 Subunit",
+    "RUNX1 protein, human"
+  ],
+  "grants": [
+    {
+      "grant_id": "R01 CA229875",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U41 HG009649",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U41 HG009650",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P50 CA100632",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:05:22.967038",
+    "pmid": "31648317"
+  }
+}

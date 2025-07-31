@@ -1,0 +1,236 @@
+{
+  "openalex_id": "W2077515295",
+  "doi": "https://doi.org/10.1198/016214506000001031",
+  "title": "Spatial Bayesian Variable Selection With Application to Functional Magnetic Resonance Imaging",
+  "abstract": "We propose a procedure to undertake Bayesian variable selection and model averaging for a series of regressions located on a lattice. For those regressors that are in common in the regressions, we consider using an Ising prior to smooth spatially the indicator variables representing whether or not the variable is zero or nonzero in each regression. This smooths spatially the probabilities that each independent variable is nonzero in each regression and indirectly smooths spatially the regression coefficients. We discuss how single-site sampling schemes can be used to evaluate the joint posterior distribution. The approach is applied to the problem of functional magnetic resonance imaging in medical statistics, where massive datasets arise that require prompt processing. Here the Ising prior with a three-dimensional neighborhood structure is used to smooth spatially activation maps from regression models of blood oxygenation. The Ising prior also has the advantage of allowing incorporation of anatomic prior information through the external field. Using a visual experiment, we show how a single-site sampling scheme can provide rapid evaluation of the posterior activation maps and activation amplitudes. The approach is shown to result in maps that are superior to those produced by a recent Bayesian approach using a continuous Markov random field for the activation amplitude.",
+  "authors": [
+    {
+      "display_name": "Michael S. Smith",
+      "id": "A5050357458",
+      "orcid": "https://orcid.org/0000-0002-7589-2037",
+      "institutions": [
+        {
+          "id": "I8204097",
+          "display_name": "Ludwig-Maximilians-Universität München",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I129604602",
+          "display_name": "The University of Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I1337719021",
+          "display_name": "Australian Research Council",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Smith"
+    },
+    {
+      "display_name": "Ludwig Fahrmeir",
+      "id": "A5088639152",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I8204097",
+          "display_name": "Ludwig-Maximilians-Universität München",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I129604602",
+          "display_name": "The University of Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I1337719021",
+          "display_name": "Australian Research Council",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ludwig Fahrmeir"
+    }
+  ],
+  "publication_year": 2007,
+  "publication_date": "2007-05-16",
+  "type": "article",
+  "cited_by_count": 141,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4394736638",
+    "display_name": "Journal of the American Statistical Association",
+    "issn_l": "0162-1459",
+    "issn": [
+      "0162-1459",
+      "1537-274X"
+    ],
+    "type": "journal",
+    "host_organization": null
+  },
+  "volume": "102",
+  "issue": "478",
+  "first_page": "417",
+  "last_page": "431",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C107673813",
+      "display_name": "Bayesian probability",
+      "level": 2,
+      "score": 0.5909627
+    },
+    {
+      "id": "C51329190",
+      "display_name": "Ising model",
+      "level": 2,
+      "score": 0.5766393
+    },
+    {
+      "id": "C140779682",
+      "display_name": "Sampling (signal processing)",
+      "level": 3,
+      "score": 0.5255008
+    },
+    {
+      "id": "C57830394",
+      "display_name": "Posterior probability",
+      "level": 3,
+      "score": 0.4808484
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.46440104
+    },
+    {
+      "id": "C2778045648",
+      "display_name": "Markov random field",
+      "level": 4,
+      "score": 0.42656747
+    },
+    {
+      "id": "C37903108",
+      "display_name": "Bayesian linear regression",
+      "level": 4,
+      "score": 0.41419268
+    },
+    {
+      "id": "C83546350",
+      "display_name": "Regression",
+      "level": 2,
+      "score": 0.41321352
+    },
+    {
+      "id": "C160234255",
+      "display_name": "Bayesian inference",
+      "level": 3,
+      "score": 0.4088607
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.39550257
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.35469365
+    },
+    {
+      "id": "C121864883",
+      "display_name": "Statistical physics",
+      "level": 1,
+      "score": 0.34599817
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.27076864
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.17413005
+    },
+    {
+      "id": "C106131492",
+      "display_name": "Filter (signal processing)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C89600930",
+      "display_name": "Segmentation",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C124504099",
+      "display_name": "Image segmentation",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10136",
+      "display_name": "Statistical Methods and Inference",
+      "score": 0.9952
+    },
+    {
+      "id": "T10243",
+      "display_name": "Statistical Methods and Bayesian Inference",
+      "score": 0.9887
+    },
+    {
+      "id": "T11901",
+      "display_name": "Bayesian Methods and Mixture Models",
+      "score": 0.9674
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1198/016214506000001031",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:59:11.019345",
+  "source_database": "OpenAlex"
+}

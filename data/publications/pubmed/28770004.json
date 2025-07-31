@@ -1,0 +1,898 @@
+{
+  "pmid": "28770004",
+  "uid": "28770004",
+  "title": "Discovery and replication of SNP-SNP interactions for quantitative lipid traits in over 60,000 individuals.",
+  "abstract": "BACKGROUND: The genetic etiology of human lipid quantitative traits is not fully elucidated, and interactions between variants may play a role. We performed a gene-centric interaction study for four different lipid traits: low-density lipoprotein cholesterol (LDL-C), high-density lipoprotein cholesterol (HDL-C), total cholesterol (TC), and triglycerides (TG). RESULTS: Our analysis consisted of a discovery phase using a merged dataset of five different cohorts (n = 12,853 to n = 16,849 depending on lipid phenotype) and a replication phase with ten independent cohorts totaling up to 36,938 additional samples. Filters are often applied before interaction testing to correct for the burden of testing all pairwise interactions. We used two different filters: 1. A filter that tested only single nucleotide polymorphisms (SNPs) with a main effect of p < 0.001 in a previous association study. 2. A filter that only tested interactions identified by Biofilter 2.0. Pairwise models that reached an interaction significance level of p < 0.001 in the discovery dataset were tested for replication. We identified thirteen SNP-SNP models that were significant in more than one replication cohort after accounting for multiple testing. CONCLUSIONS: These results may reveal novel insights into the genetic etiology of lipid levels. Furthermore, we developed a pipeline to perform a computationally efficient interaction analysis with multi-cohort replication.",
+  "authors": [
+    {
+      "last_name": "Holzinger",
+      "fore_name": "Emily R",
+      "initials": "ER",
+      "name": "Emily R Holzinger",
+      "affiliations": [
+        "Computational and Statistical Genomics Branch, National Human Genome Research Institute, National Institute for General Medical Sciences, National Institutes of Health, Baltimore, MD USA."
+      ]
+    },
+    {
+      "last_name": "Verma",
+      "fore_name": "Shefali S",
+      "initials": "SS",
+      "name": "Shefali S Verma",
+      "affiliations": [
+        "The Center for Systems Genomics, The Pennsylvania State University, University Park, State College, PA USA."
+      ]
+    },
+    {
+      "last_name": "Moore",
+      "fore_name": "Carrie B",
+      "initials": "CB",
+      "name": "Carrie B Moore",
+      "affiliations": [
+        "Department of Surgery, Duke University, Durham, NC USA."
+      ]
+    },
+    {
+      "last_name": "Hall",
+      "fore_name": "Molly",
+      "initials": "M",
+      "name": "Molly Hall",
+      "affiliations": [
+        "The Center for Systems Genomics, The Pennsylvania State University, University Park, State College, PA USA."
+      ]
+    },
+    {
+      "last_name": "De",
+      "fore_name": "Rishika",
+      "initials": "R",
+      "name": "Rishika De",
+      "affiliations": [
+        "Department of Genetics, Geisel School of Medicine at Dartmouth, Hanover, NH USA."
+      ]
+    },
+    {
+      "last_name": "Gilbert-Diamond",
+      "fore_name": "Diane",
+      "initials": "D",
+      "name": "Diane Gilbert-Diamond",
+      "affiliations": [
+        "Department of Epidemiology, Geisel School of Medicine at Dartmouth, Hanover, NH USA."
+      ]
+    },
+    {
+      "last_name": "Lanktree",
+      "fore_name": "Matthew B",
+      "initials": "MB",
+      "name": "Matthew B Lanktree",
+      "affiliations": [
+        "Department of Medicine, McMaster University, Hamilton, ON Canada."
+      ]
+    },
+    {
+      "last_name": "Pankratz",
+      "fore_name": "Nathan",
+      "initials": "N",
+      "name": "Nathan Pankratz",
+      "affiliations": [
+        "Department of Lab Medicine and Pathology, University of Minnesota, Minneapolis, MN USA."
+      ]
+    },
+    {
+      "last_name": "Amuzu",
+      "fore_name": "Antoinette",
+      "initials": "A",
+      "name": "Antoinette Amuzu",
+      "affiliations": [
+        "London School of Hygiene and Tropical Medicine, London, UK."
+      ]
+    },
+    {
+      "last_name": "Burt",
+      "fore_name": "Amber",
+      "initials": "A",
+      "name": "Amber Burt",
+      "affiliations": [
+        "Division of Medical Genetics, Department of Medicine, University of Washington, Seattle, WA USA."
+      ]
+    },
+    {
+      "last_name": "Dale",
+      "fore_name": "Caroline",
+      "initials": "C",
+      "name": "Caroline Dale",
+      "affiliations": [
+        "London School of Hygiene and Tropical Medicine, London, UK."
+      ]
+    },
+    {
+      "last_name": "Dudek",
+      "fore_name": "Scott",
+      "initials": "S",
+      "name": "Scott Dudek",
+      "affiliations": [
+        "The Center for Systems Genomics, The Pennsylvania State University, University Park, State College, PA USA."
+      ]
+    },
+    {
+      "last_name": "Furlong",
+      "fore_name": "Clement E",
+      "initials": "CE",
+      "name": "Clement E Furlong",
+      "affiliations": [
+        "Division of Medical Genetics, Department of Medicine, University of Washington, Seattle, WA USA."
+      ]
+    },
+    {
+      "last_name": "Gaunt",
+      "fore_name": "Tom R",
+      "initials": "TR",
+      "name": "Tom R Gaunt",
+      "affiliations": [
+        "MRC Integrative Epidemiology Unit, University of Bristol, Oakfield House, Oakfield Grove, Bristol, UK."
+      ]
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Daniel Seung",
+      "initials": "DS",
+      "name": "Daniel Seung Kim",
+      "affiliations": [
+        "Division of Medical Genetics, Department of Medicine, University of Washington, Seattle, WA USA."
+      ]
+    },
+    {
+      "last_name": "Riess",
+      "fore_name": "Helene",
+      "initials": "H",
+      "name": "Helene Riess",
+      "affiliations": [
+        "Institute of Epidemiology II, Helmholtz Zentrum München, German Research Center for Environmental Health, Neuherberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Sivapalaratnam",
+      "fore_name": "Suthesh",
+      "initials": "S",
+      "name": "Suthesh Sivapalaratnam",
+      "affiliations": [
+        "Department of Vascular Medicine, Academic Medical Center, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Tragante",
+      "fore_name": "Vinicius",
+      "initials": "V",
+      "name": "Vinicius Tragante",
+      "affiliations": [
+        "Department of Cardiology, Division Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands.",
+        "Department of Medical Genetics, Biomedical Genetics, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "van Iperen",
+      "fore_name": "Erik P A",
+      "initials": "EPA",
+      "name": "Erik P A van Iperen",
+      "affiliations": [
+        "Durrer Center for Cardiogenetic Research, ICIN-Netherlands Heart Institute, Utrecht, The Netherlands.",
+        "Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Academic Medical Center, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Brautbar",
+      "fore_name": "Ariel",
+      "initials": "A",
+      "name": "Ariel Brautbar",
+      "affiliations": [
+        "Department of Medical Genetics, Marshfield Clinic, Marshfield, WI USA."
+      ]
+    },
+    {
+      "last_name": "Carrell",
+      "fore_name": "David S",
+      "initials": "DS",
+      "name": "David S Carrell",
+      "affiliations": [
+        "Group Health Research Institute, Group Health Cooperative, Seattle, WA USA."
+      ]
+    },
+    {
+      "last_name": "Crosslin",
+      "fore_name": "David R",
+      "initials": "DR",
+      "name": "David R Crosslin",
+      "affiliations": [
+        "Division of Medical Genetics, Department of Medicine, University of Washington, Seattle, WA USA."
+      ]
+    },
+    {
+      "last_name": "Jarvik",
+      "fore_name": "Gail P",
+      "initials": "GP",
+      "name": "Gail P Jarvik",
+      "affiliations": [
+        "Division of Medical Genetics, Department of Medicine, University of Washington, Seattle, WA USA."
+      ]
+    },
+    {
+      "last_name": "Kuivaniemi",
+      "fore_name": "Helena",
+      "initials": "H",
+      "name": "Helena Kuivaniemi",
+      "affiliations": [
+        "Division of Molecular Biology and Human Genetics, Department of Biomedical Sciences, Stellenbosch University, Tygerberg, South Africa."
+      ]
+    },
+    {
+      "last_name": "Kullo",
+      "fore_name": "Iftikhar J",
+      "initials": "IJ",
+      "name": "Iftikhar J Kullo",
+      "affiliations": [
+        "Division of Cardiovascular Diseases, Mayo Clinic, Rochester, MN USA."
+      ]
+    },
+    {
+      "last_name": "Larson",
+      "fore_name": "Eric B",
+      "initials": "EB",
+      "name": "Eric B Larson",
+      "affiliations": [
+        "Group Health Research Institute, Group Health Cooperative, Seattle, WA USA."
+      ]
+    },
+    {
+      "last_name": "Rasmussen-Torvik",
+      "fore_name": "Laura J",
+      "initials": "LJ",
+      "name": "Laura J Rasmussen-Torvik",
+      "affiliations": [
+        "Department of Preventive Medicine, Northwestern University Feinberg School of Medicine, Chicago, IL USA."
+      ]
+    },
+    {
+      "last_name": "Tromp",
+      "fore_name": "Gerard",
+      "initials": "G",
+      "name": "Gerard Tromp",
+      "affiliations": [
+        "Division of Molecular Biology and Human Genetics, Department of Biomedical Sciences, Stellenbosch University, Tygerberg, South Africa."
+      ]
+    },
+    {
+      "last_name": "Baumert",
+      "fore_name": "Jens",
+      "initials": "J",
+      "name": "Jens Baumert",
+      "affiliations": [
+        "Institute of Epidemiology II, Helmholtz Zentrum München, German Research Center for Environmental Health, Neuherberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Cruickshanks",
+      "fore_name": "Karen J",
+      "initials": "KJ",
+      "name": "Karen J Cruickshanks",
+      "affiliations": [
+        "Department of Population Health Sciences, Department of Ophthalmology and Visual Sciences, University of Wisconsin-Madison, Madison, WI USA."
+      ]
+    },
+    {
+      "last_name": "Farrall",
+      "fore_name": "Martin",
+      "initials": "M",
+      "name": "Martin Farrall",
+      "affiliations": [
+        "Department of Cardiovascular Medicine, The Wellcome Trust Centre for Human Genetics, University of Oxford, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "Hingorani",
+      "fore_name": "Aroon D",
+      "initials": "AD",
+      "name": "Aroon D Hingorani",
+      "affiliations": [
+        "Department of Epidemiology and Public Health, UCL Institute of Epidemiology & Health Care, University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Hovingh",
+      "fore_name": "G K",
+      "initials": "GK",
+      "name": "G K Hovingh",
+      "affiliations": [
+        "Department of Vascular Medicine, Academic Medical Center, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Kleber",
+      "fore_name": "Marcus E",
+      "initials": "ME",
+      "name": "Marcus E Kleber",
+      "affiliations": [
+        "Vth Department of Medicine, Medical Faculty Mannheim, Heidelberg University, Heidelberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Klein",
+      "fore_name": "Barbara E",
+      "initials": "BE",
+      "name": "Barbara E Klein",
+      "affiliations": [
+        "Department of Population Health Sciences, Department of Ophthalmology and Visual Sciences, University of Wisconsin-Madison, Madison, WI USA."
+      ]
+    },
+    {
+      "last_name": "Klein",
+      "fore_name": "Ronald",
+      "initials": "R",
+      "name": "Ronald Klein",
+      "affiliations": [
+        "Department of Population Health Sciences, Department of Ophthalmology and Visual Sciences, University of Wisconsin-Madison, Madison, WI USA."
+      ]
+    },
+    {
+      "last_name": "Koenig",
+      "fore_name": "Wolfgang",
+      "initials": "W",
+      "name": "Wolfgang Koenig",
+      "affiliations": [
+        "Department of Internal Medicine II - Cardiology, University of Ulm Medical Centre, Ulm, Germany."
+      ]
+    },
+    {
+      "last_name": "Lange",
+      "fore_name": "Leslie A",
+      "initials": "LA",
+      "name": "Leslie A Lange",
+      "affiliations": [
+        "Department of Genetics, University of North Carolina School of Medicine at Chapel Hill, Chapel Hill, NC USA."
+      ]
+    },
+    {
+      "last_name": "Mӓrz",
+      "fore_name": "Winfried",
+      "initials": "W",
+      "name": "Winfried Mӓrz",
+      "affiliations": [
+        "Vth Department of Medicine, Medical Faculty Mannheim, Heidelberg University, Heidelberg, Germany.",
+        "Synlab Academy, Synlab Services GmbH, Mannheim, Germany."
+      ]
+    },
+    {
+      "last_name": "North",
+      "fore_name": "Kari E",
+      "initials": "KE",
+      "name": "Kari E North",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, University of North Carolina at Chapel Hill, Chapel Hill, NC USA."
+      ]
+    },
+    {
+      "last_name": "Charlotte Onland-Moret",
+      "fore_name": "N",
+      "initials": "N",
+      "name": "N Charlotte Onland-Moret",
+      "affiliations": [
+        "Julius Center for Health Sciences and Primary Care, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Reiner",
+      "fore_name": "Alex P",
+      "initials": "AP",
+      "name": "Alex P Reiner",
+      "affiliations": [
+        "Division of Public Health Sciences, Fred Hutchinson Cancer Research Center, Seattle, WA USA."
+      ]
+    },
+    {
+      "last_name": "Talmud",
+      "fore_name": "Philippa J",
+      "initials": "PJ",
+      "name": "Philippa J Talmud",
+      "affiliations": [
+        "MRC Integrative Epidemiology Unit, School of Social and Community Medicine, University of Bristol, Bristol, UK."
+      ]
+    },
+    {
+      "last_name": "van der Schouw",
+      "fore_name": "Yvonne T",
+      "initials": "YT",
+      "name": "Yvonne T van der Schouw",
+      "affiliations": [
+        "Julius Center for Health Sciences and Primary Care, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "James G",
+      "initials": "JG",
+      "name": "James G Wilson",
+      "affiliations": [
+        "Department of Physiology and Biophysics, University of Mississippi Medical Center, Jackson, MS USA."
+      ]
+    },
+    {
+      "last_name": "Kivimaki",
+      "fore_name": "Mika",
+      "initials": "M",
+      "name": "Mika Kivimaki",
+      "affiliations": [
+        "Department of Epidemiology and Public Health, UCL Institute of Epidemiology & Health Care, University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Kumari",
+      "fore_name": "Meena",
+      "initials": "M",
+      "name": "Meena Kumari",
+      "affiliations": [
+        "Department of Epidemiology and Public Health, UCL Institute of Epidemiology & Health Care, University College London, London, UK.",
+        "ISER, University of Essex, Essex, UK."
+      ]
+    },
+    {
+      "last_name": "Moore",
+      "fore_name": "Jason H",
+      "initials": "JH",
+      "name": "Jason H Moore",
+      "affiliations": [
+        "Institute for Biomedical Informatics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA USA."
+      ]
+    },
+    {
+      "last_name": "Drenos",
+      "fore_name": "Fotios",
+      "initials": "F",
+      "name": "Fotios Drenos",
+      "affiliations": [
+        "MRC Integrative Epidemiology Unit, School of Social and Community Medicine, University of Bristol, Bristol, UK.",
+        "Centre of Cardiovascular Genetics, Institute of Cardiovascular Science, Faculty of Population Health Sciences, University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Asselbergs",
+      "fore_name": "Folkert W",
+      "initials": "FW",
+      "name": "Folkert W Asselbergs",
+      "affiliations": [
+        "Department of Cardiology, Division Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands.",
+        "Durrer Center for Cardiogenetic Research, ICIN-Netherlands Heart Institute, Utrecht, The Netherlands.",
+        "Centre of Cardiovascular Genetics, Institute of Cardiovascular Science, Faculty of Population Health Sciences, University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Keating",
+      "fore_name": "Brendan J",
+      "initials": "BJ",
+      "name": "Brendan J Keating",
+      "affiliations": [
+        "Division of Genetics, The Children's Hospital of Philadelphia, Philadelphia, PA USA.",
+        "Division of Transplantation, Department of Surgery, University of Pennsylvania, Philadelphia, PA USA."
+      ]
+    },
+    {
+      "last_name": "Ritchie",
+      "fore_name": "Marylyn D",
+      "initials": "MD",
+      "name": "Marylyn D Ritchie",
+      "affiliations": [
+        "Biomedical and Translational Informatics, Geisinger Clinic, Danville, PA USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "BioData mining",
+    "iso_abbreviation": "BioData Min",
+    "issn": "1756-0381",
+    "issn_type": "Print",
+    "volume": "10",
+    "pub_year": "2017"
+  },
+  "start_page": "25",
+  "pages": "25",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "28770004",
+    "pmc": "PMC5525436",
+    "doi": "10.1186/s13040-017-0145-5",
+    "pii": "145"
+  },
+  "doi": "10.1186/s13040-017-0145-5",
+  "pmc_id": "PMC5525436",
+  "dates": {
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "U01 HG006385",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095169",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R56 AG020098",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HHSN268201300027C",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC025195",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 LM010098",
+      "agency": "NLM NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC085079",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055018",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AG013196",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG004610",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095166",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MC_UU_12013/8",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "K013351",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "P30 AG024827",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055016",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL075366",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095161",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG004438",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HHSN268201300026C",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006375",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095168",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055019",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL036310",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "Z01 HG000153",
+      "agency": "Intramural NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AG015928",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HL080295",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U10 EY006594",
+      "agency": "NEI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG008657",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL059367",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055021",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006382",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL095603",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC015103",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R37 AG011099",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC085086",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AG021917",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG004603",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055015",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095167",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG004424",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HHSN268201300025C",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095159",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "Z01 HG200327",
+      "agency": "Intramural NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG004609",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006389",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055020",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG004599",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R37 AG013196",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UL1 TR001422",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HHSN268200900041C",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HHSN268201300028C",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055222",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL067406",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AG032136",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006380",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL080295",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095163",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006388",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AG020098",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 LM009012",
+      "agency": "NLM NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006378",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095162",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006379",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC075150",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HHSN268201300029C",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC065226",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AG027058",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095165",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC045133",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095164",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U54 GM115428",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG004608",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC035129",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "RG/10/12/28456",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "PG/07/131/24254",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01 HC095160",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:34:45.713511",
+    "pmid": "28770004"
+  }
+}

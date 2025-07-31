@@ -1,0 +1,102 @@
+{
+  "pmid": "21815370",
+  "uid": "21815370",
+  "title": "Investigation of effective decision criteria for multiobjective optimization in IMRT.",
+  "abstract": "PURPOSE: To investigate how using different sets of decision criteria impacts the quality of intensity modulated radiation therapy (IMRT) plans obtained by multiobjective optimization. METHODS: A multiobjective optimization evolutionary algorithm (MOEA) was used to produce sets of IMRT plans. The MOEA consisted of two interacting algorithms: (i) a deterministic inverse planning optimization of beamlet intensities that minimizes a weighted sum of quadratic penalty objectives to generate IMRT plans and (ii) an evolutionary algorithm that selects the superior IMRT plans using decision criteria and uses those plans to determine the new weights and penalty objectives of each new plan. Plans resulting from the deterministic algorithm were evaluated by the evolutionary algorithm using a set of decision criteria for both targets and organs at risk (OARs). Decision criteria used included variation in the target dose distribution, mean dose, maximum dose, generalized equivalent uniform dose (gEUD), an equivalent uniform dose (EUD(alpha,beta) formula derived from the linear-quadratic survival model, and points on dose volume histograms (DVHs). In order to quantatively compare results from trials using different decision criteria, a neutral set of comparison metrics was used. For each set of decision criteria investigated, IMRT plans were calculated for four different cases: two simple prostate cases, one complex prostate Case, and one complex head and neck Case. RESULTS: When smaller numbers of decision criteria, more descriptive decision criteria, or less anti-correlated decision criteria were used to characterize plan quality during multiobjective optimization, dose to OARs and target dose variation were reduced in the final population of plans. Mean OAR dose and gEUD (a = 4) decision criteria were comparable. Using maximum dose decision criteria for OARs near targets resulted in inferior populations that focused solely on low target variance at the expense of high OAR dose. Target dose range, (D(max) - D(min)), decision criteria were found to be most effective for keeping targets uniform. Using target gEUD decision criteria resulted in much lower OAR doses but much higher target dose variation. EUD(alpha,beta) based decision criteria focused on a region of plan space that was a compromise between target and OAR objectives. None of these target decision criteria dominated plans using other criteria, but only focused on approaching a different area of the Pareto front. CONCLUSIONS: The choice of decision criteria implemented in the MOEA had a significant impact on the region explored and the rate of convergence toward the Pareto front. When more decision criteria, anticorrelated decision criteria, or decision criteria with insufficient information were implemented, inferior populations are resulted. When more informative decision criteria were used, such as gEUD, EUD(alpha,beta), target dose range, and mean dose, MOEA optimizations focused on approaching different regions of the Pareto front, but did not dominate each other. Using simple OAR decision criteria and target EUD(alpha,beta) decision criteria demonstrated the potential to generate IMRT plans that significantly reduce dose to OARs while achieving the same or better tumor control when clinical requirements on target dose variance can be met or relaxed.",
+  "authors": [
+    {
+      "last_name": "Holdsworth",
+      "fore_name": "Clay",
+      "initials": "C",
+      "name": "Clay Holdsworth",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington, Box 356043, Seattle, Washington 98195-6043, USA. choldsw@u.washington.edu"
+      ]
+    },
+    {
+      "last_name": "Stewart",
+      "fore_name": "Robert D",
+      "initials": "RD",
+      "name": "Robert D Stewart",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Minsun",
+      "initials": "M",
+      "name": "Minsun Kim",
+      "affiliations": []
+    },
+    {
+      "last_name": "Liao",
+      "fore_name": "Jay",
+      "initials": "J",
+      "name": "Jay Liao",
+      "affiliations": []
+    },
+    {
+      "last_name": "Phillips",
+      "fore_name": "Mark H",
+      "initials": "MH",
+      "name": "Mark H Phillips",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Medical physics",
+    "iso_abbreviation": "Med Phys",
+    "issn": "0094-2405",
+    "issn_type": "Print",
+    "volume": "38",
+    "issue": "6",
+    "pub_year": "2011",
+    "pub_month": "Jun"
+  },
+  "start_page": "2964",
+  "end_page": "2974",
+  "pages": "2964-74",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Decision Making",
+    "Humans",
+    "Male",
+    "Organs at Risk",
+    "Prostatic Neoplasms",
+    "Radiotherapy Planning, Computer-Assisted",
+    "Radiotherapy, Intensity-Modulated"
+  ],
+  "article_ids": {
+    "pubmed": "21815370",
+    "pmc": "PMC3125078",
+    "doi": "10.1118/1.3589128"
+  },
+  "doi": "10.1118/1.3589128",
+  "pmc_id": "PMC3125078",
+  "dates": {
+    "completed": "2011-08-24",
+    "revised": "2024-03-14"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 CA112505",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "1-R01-CA112505",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:52:16.688123",
+    "pmid": "21815370"
+  }
+}

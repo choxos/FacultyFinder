@@ -1,0 +1,356 @@
+{
+  "openalex_id": "W4379875542",
+  "doi": "https://doi.org/10.1016/j.compenvurbsys.2023.101991",
+  "title": "City infrastructure ontologies",
+  "abstract": "Sustainable urban infrastructure planning and maintenance require an integrated approach that considers various infrastructure assets (e.g., the ground, roads, and buried pipes) and their inter-linkages as a holistic system. To facilitate the usage of this integrated approach, we propose a model of city infrastructure assets and their interdependencies, providing details on how asset properties and processes affect each other. This model is represented as ontologies in OWL 2 Web Ontology Language Manchester Syntax, which can be read and interpreted by machines automatically. These ontologies cover the classifications, properties and processes of the ground, roads and buried water pipes, as well as some related human activities and natural phenomena (e.g., precipitation). The ontologies not only provide a foundation for integrating various types of infrastructure and environmental data, but also for understanding the potential knock-on effects of asset failures. The ontologies have been utilised in a decision support system for integrated urban inter-asset management.",
+  "authors": [
+    {
+      "display_name": "Heshan Du",
+      "id": "A5013964678",
+      "orcid": "https://orcid.org/0000-0002-6300-3503",
+      "institutions": [
+        {
+          "id": "I13591777",
+          "display_name": "University of Nottingham Ningbo China",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Heshan Du"
+    },
+    {
+      "display_name": "Lijun Wei",
+      "id": "A5006283142",
+      "orcid": "https://orcid.org/0000-0002-5685-4940",
+      "institutions": [
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lijun Wei"
+    },
+    {
+      "display_name": "Vania Dimitrova",
+      "id": "A5084785996",
+      "orcid": "https://orcid.org/0000-0002-7001-0891",
+      "institutions": [
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vania Dimitrova"
+    },
+    {
+      "display_name": "Derek Magee",
+      "id": "A5017891661",
+      "orcid": "https://orcid.org/0000-0003-2170-3103",
+      "institutions": [
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Derek Magee"
+    },
+    {
+      "display_name": "Barry Clarke",
+      "id": "A5043775451",
+      "orcid": "https://orcid.org/0000-0001-9493-9200",
+      "institutions": [
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Barry Clarke"
+    },
+    {
+      "display_name": "Richard Collins",
+      "id": "A5100699495",
+      "orcid": "https://orcid.org/0000-0001-5449-8535",
+      "institutions": [
+        {
+          "id": "I91136226",
+          "display_name": "University of Sheffield",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard Collins"
+    },
+    {
+      "display_name": "David Entwisle",
+      "id": "A5042209634",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I139290333",
+          "display_name": "British Geological Survey",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Entwisle"
+    },
+    {
+      "display_name": "Mehran Eskandari Torbaghan",
+      "id": "A5081564002",
+      "orcid": "https://orcid.org/0000-0001-6069-6108",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mehran Eskandari Torbaghan"
+    },
+    {
+      "display_name": "Giulio Curioni",
+      "id": "A5038792738",
+      "orcid": "https://orcid.org/0000-0002-9243-5436",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Giulio Curioni"
+    },
+    {
+      "display_name": "Ross Stirling",
+      "id": "A5068629704",
+      "orcid": "https://orcid.org/0000-0002-0069-6621",
+      "institutions": [
+        {
+          "id": "I84884186",
+          "display_name": "Newcastle University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ross Stirling"
+    },
+    {
+      "display_name": "Helen Reeves",
+      "id": "A5022802790",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210149862",
+          "display_name": "Jacobs (United Kingdom)",
+          "country_code": "GB",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Helen Reeves"
+    },
+    {
+      "display_name": "Anthony G. Cohn",
+      "id": "A5024409281",
+      "orcid": "https://orcid.org/0000-0002-7652-8907",
+      "institutions": [
+        {
+          "id": "I80143920",
+          "display_name": "Shandong University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I116953780",
+          "display_name": "Tongji University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Anthony G. Cohn"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-06-08",
+  "type": "article",
+  "cited_by_count": 8,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S60115552",
+    "display_name": "Computers Environment and Urban Systems",
+    "issn_l": "0198-9715",
+    "issn": [
+      "0198-9715",
+      "1873-7587"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "104",
+  "issue": null,
+  "first_page": "101991",
+  "last_page": "101991",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://doi.org/10.1016/j.compenvurbsys.2023.101991",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C76178495",
+      "display_name": "Asset (computer security)",
+      "level": 2,
+      "score": 0.6620735
+    },
+    {
+      "id": "C25810664",
+      "display_name": "Ontology",
+      "level": 2,
+      "score": 0.65864825
+    },
+    {
+      "id": "C2776517139",
+      "display_name": "Asset management",
+      "level": 2,
+      "score": 0.62654865
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.6125856
+    },
+    {
+      "id": "C185874996",
+      "display_name": "Interdependence",
+      "level": 2,
+      "score": 0.6043066
+    },
+    {
+      "id": "C101230327",
+      "display_name": "Web Ontology Language",
+      "level": 3,
+      "score": 0.47067767
+    },
+    {
+      "id": "C29852176",
+      "display_name": "Critical infrastructure",
+      "level": 2,
+      "score": 0.46063814
+    },
+    {
+      "id": "C2129575",
+      "display_name": "Semantic Web",
+      "level": 2,
+      "score": 0.4440809
+    },
+    {
+      "id": "C112930515",
+      "display_name": "Risk analysis (engineering)",
+      "level": 1,
+      "score": 0.3320868
+    },
+    {
+      "id": "C144133560",
+      "display_name": "Business",
+      "level": 0,
+      "score": 0.23276237
+    },
+    {
+      "id": "C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "score": 0.20485377
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.113829285
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C111472728",
+      "display_name": "Epistemology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C10138342",
+      "display_name": "Finance",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10757",
+      "display_name": "Geographic Information Systems Studies",
+      "score": 0.9787
+    },
+    {
+      "id": "T10215",
+      "display_name": "Semantic Web and Ontologies",
+      "score": 0.9754
+    },
+    {
+      "id": "T13689",
+      "display_name": "Underground infrastructure and sustainability",
+      "score": 0.9627
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.compenvurbsys.2023.101991",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:25:53.591091",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,543 @@
+{
+  "pmid": "40687705",
+  "uid": "40687705",
+  "title": "Baseline predictors for 28-day COVID-19 severity and mortality among hospitalized patients: results from the IMPACC study.",
+  "abstract": "INTRODUCTION: The coronavirus disease 2019 (COVID-19) pandemic threatened public health and placed a significant burden on medical resources. The Immunophenotyping Assessment in a COVID-19 Cohort (IMPACC) study collected clinical, demographic, blood cytometry, serum receptor-binding domain (RBD) antibody titers, metabolomics, targeted proteomics, nasal metagenomics, Olink, nasal viral load, autoantibody, SARS-CoV-2 antibody titers, and nasal and peripheral blood mononuclear cell (PBMC) transcriptomics data from patients hospitalized with COVID-19. The aim of this study is to select baseline biomarkers and build predictive models for 28-day in-hospital COVID-19 severity and mortality with most predictive variables while prioritizing routinely collected variables. METHODS: We analyzed 1102 hospitalized COVID-19 participants. We used the lasso and forward selection to select top predictors for severity and mortality, and built predictive models based on balanced training data. We then validated the models on testing data. RESULTS: Severity was best predicted by the baseline SpO2/FiO2 ratio obtained from COVID-19 patients (test AUC: 0.874). Adding patient age, BMI, FGF23, IL-6, and LTA to the disease severity prediction model improves the test AUC by an additional 3%. The clinical mortality prediction model using SpO2/FiO2 ratio, age, and BMI resulted in a test AUC of 0.83. Adding laboratory results such as TNFRSF11B and plasma ribitol count increased the prediction model by 3.5%. The severity and mortality prediction models developed outperform the Sequential Organ Failure Assessment (SOFA) score among inpatients and perform similarly to the SOFA score among ICU patients. CONCLUSION: This study identifies clinical data and laboratory biomarkers of COVID-19 severity and mortality using machine learning models. The study identifies SpO2/FiO2 ratio to be the most important predictor for both severity and mortality. Several biomarkers were identified to modestly improve the predictions. The results also provide a baseline of SARS-CoV-2 infection during the early stages of the coronavirus emergence and can serve as a baseline for future studies that inform how the genetic evolution of the coronavirus affects the host response to new variants.",
+  "authors": [
+    {
+      "last_name": "Hou",
+      "fore_name": "Jintong",
+      "initials": "J",
+      "name": "Jintong Hou",
+      "affiliations": [
+        "Department of Microbiology and Immunology/Department of Medicine/Department of Epidemiology & Biostatistics, Drexel University, Philadelphia, PA, United States."
+      ]
+    },
+    {
+      "last_name": "Haslund-Gourley",
+      "fore_name": "Benjamin",
+      "initials": "B",
+      "name": "Benjamin Haslund-Gourley",
+      "affiliations": [
+        "Department of Microbiology and Immunology/Department of Medicine/Department of Epidemiology & Biostatistics, Drexel University, Philadelphia, PA, United States."
+      ]
+    },
+    {
+      "last_name": "Diray-Arce",
+      "fore_name": "Joann",
+      "initials": "J",
+      "name": "Joann Diray-Arce",
+      "affiliations": [
+        "Clinical and Data Coordinating Center (CDCC) Precision Vaccines Program, Boston Children's Hospital, Boston, MA, United States."
+      ]
+    },
+    {
+      "last_name": "Hoch",
+      "fore_name": "Annmarie",
+      "initials": "A",
+      "name": "Annmarie Hoch",
+      "affiliations": [
+        "Clinical and Data Coordinating Center (CDCC) Precision Vaccines Program, Boston Children's Hospital, Boston, MA, United States."
+      ]
+    },
+    {
+      "last_name": "Rouphael",
+      "fore_name": "Nadine",
+      "initials": "N",
+      "name": "Nadine Rouphael",
+      "affiliations": [
+        "Emory School of Medicine, Atlanta, GA, United States."
+      ]
+    },
+    {
+      "last_name": "Becker",
+      "fore_name": "Patrice M",
+      "initials": "PM",
+      "name": "Patrice M Becker",
+      "affiliations": [
+        "National Institute of Allergy and Infectious Diseases, National Institute of Health, Bethesda, MD, United States."
+      ]
+    },
+    {
+      "last_name": "Augustine",
+      "fore_name": "Alison D",
+      "initials": "AD",
+      "name": "Alison D Augustine",
+      "affiliations": [
+        "National Institute of Allergy and Infectious Diseases, National Institute of Health, Bethesda, MD, United States."
+      ]
+    },
+    {
+      "last_name": "Ozonoff",
+      "fore_name": "Al",
+      "initials": "A",
+      "name": "Al Ozonoff",
+      "affiliations": [
+        "Clinical and Data Coordinating Center (CDCC) Precision Vaccines Program, Boston Children's Hospital, Boston, MA, United States."
+      ]
+    },
+    {
+      "last_name": "Guan",
+      "fore_name": "Leying",
+      "initials": "L",
+      "name": "Leying Guan",
+      "affiliations": [
+        "Yale School of Public Health, and Yale School of Medicine, New Haven, CT, United States."
+      ]
+    },
+    {
+      "last_name": "Kleinstein",
+      "fore_name": "Steven H",
+      "initials": "SH",
+      "name": "Steven H Kleinstein",
+      "affiliations": [
+        "Yale School of Public Health, and Yale School of Medicine, New Haven, CT, United States."
+      ]
+    },
+    {
+      "last_name": "Peters",
+      "fore_name": "Bjoern",
+      "initials": "B",
+      "name": "Bjoern Peters",
+      "affiliations": [
+        "La Jolla Institute for Immunology, La Jolla, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Reed",
+      "fore_name": "Elaine",
+      "initials": "E",
+      "name": "Elaine Reed",
+      "affiliations": [
+        "David Geffen School of Medicine at the University of California Los Angeles, Los Angeles, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Altman",
+      "fore_name": "Matt",
+      "initials": "M",
+      "name": "Matt Altman",
+      "affiliations": [
+        "Department of Medicine, Benaroya Research Institute, University of Washington, Seattle, WA, United States."
+      ]
+    },
+    {
+      "last_name": "Langelier",
+      "fore_name": "Charles R",
+      "initials": "CR",
+      "name": "Charles R Langelier",
+      "affiliations": [
+        "School of Medicine, University of California San Francisco, San Francisco, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Maecker",
+      "fore_name": "Holden",
+      "initials": "H",
+      "name": "Holden Maecker",
+      "affiliations": [
+        "Stanford University School of Medicine, Palo Alto, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Seunghee",
+      "initials": "S",
+      "name": "Seunghee Kim",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, NY, United States."
+      ]
+    },
+    {
+      "last_name": "Montgomery",
+      "fore_name": "Ruth R",
+      "initials": "RR",
+      "name": "Ruth R Montgomery",
+      "affiliations": [
+        "Yale School of Public Health, and Yale School of Medicine, New Haven, CT, United States."
+      ]
+    },
+    {
+      "last_name": "Krammer",
+      "fore_name": "Florian",
+      "initials": "F",
+      "name": "Florian Krammer",
+      "affiliations": [
+        "Stanford University School of Medicine, Palo Alto, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": [
+        "School of Medicine, University of California San Francisco, San Francisco, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Eckalbar",
+      "fore_name": "Walter",
+      "initials": "W",
+      "name": "Walter Eckalbar",
+      "affiliations": [
+        "School of Medicine, University of California San Francisco, San Francisco, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Bosinger",
+      "fore_name": "Steven E",
+      "initials": "SE",
+      "name": "Steven E Bosinger",
+      "affiliations": [
+        "Emory School of Medicine, Atlanta, GA, United States."
+      ]
+    },
+    {
+      "last_name": "Levy",
+      "fore_name": "Ofer",
+      "initials": "O",
+      "name": "Ofer Levy",
+      "affiliations": [
+        "Precision Vaccines Program, Boston Children's Hospital, Harvard Medical School, Boston, MA, United States."
+      ]
+    },
+    {
+      "last_name": "Steen",
+      "fore_name": "Hanno",
+      "initials": "H",
+      "name": "Hanno Steen",
+      "affiliations": [
+        "Precision Vaccines Program, Boston Children's Hospital, Harvard Medical School, Boston, MA, United States."
+      ]
+    },
+    {
+      "last_name": "Rosen",
+      "fore_name": "Lindsey B",
+      "initials": "LB",
+      "name": "Lindsey B Rosen",
+      "affiliations": [
+        "National Institute of Allergy and Infectious Diseases, National Institute of Health, Bethesda, MD, United States."
+      ]
+    },
+    {
+      "last_name": "Baden",
+      "fore_name": "Lindsey R",
+      "initials": "LR",
+      "name": "Lindsey R Baden",
+      "affiliations": [
+        "Brigham and Women's Hospital, Harvard Medical School, Boston, MA, United States."
+      ]
+    },
+    {
+      "last_name": "Melamed",
+      "fore_name": "Esther",
+      "initials": "E",
+      "name": "Esther Melamed",
+      "affiliations": [
+        "Department of Neurology/Department of Molecular Biosciences, University of Texas, Austin, TX, United States."
+      ]
+    },
+    {
+      "last_name": "Ehrlich",
+      "fore_name": "Lauren I R",
+      "initials": "LIR",
+      "name": "Lauren I R Ehrlich",
+      "affiliations": [
+        "Department of Neurology/Department of Molecular Biosciences, University of Texas, Austin, TX, United States."
+      ]
+    },
+    {
+      "last_name": "McComsey",
+      "fore_name": "Grace A",
+      "initials": "GA",
+      "name": "Grace A McComsey",
+      "affiliations": [
+        "Case Western Reserve University and University Hospitals of Cleveland, Cleveland, OH, United States."
+      ]
+    },
+    {
+      "last_name": "Sekaly",
+      "fore_name": "Rafick P",
+      "initials": "RP",
+      "name": "Rafick P Sekaly",
+      "affiliations": [
+        "Case Western Reserve University and University Hospitals of Cleveland, Cleveland, OH, United States."
+      ]
+    },
+    {
+      "last_name": "Schaenman",
+      "fore_name": "Joanna",
+      "initials": "J",
+      "name": "Joanna Schaenman",
+      "affiliations": [
+        "David Geffen School of Medicine at the University of California Los Angeles, Los Angeles, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Shaw",
+      "fore_name": "Albert C",
+      "initials": "AC",
+      "name": "Albert C Shaw",
+      "affiliations": [
+        "Yale School of Public Health, and Yale School of Medicine, New Haven, CT, United States."
+      ]
+    },
+    {
+      "last_name": "Hafler",
+      "fore_name": "David A",
+      "initials": "DA",
+      "name": "David A Hafler",
+      "affiliations": [
+        "Yale School of Public Health, and Yale School of Medicine, New Haven, CT, United States."
+      ]
+    },
+    {
+      "last_name": "Corry",
+      "fore_name": "David B",
+      "initials": "DB",
+      "name": "David B Corry",
+      "affiliations": [
+        "Baylor College of Medicine and the Center for Translational Research on Inflammatory Diseases, Houston, TX, United States."
+      ]
+    },
+    {
+      "last_name": "Kheradmand",
+      "fore_name": "Farrah",
+      "initials": "F",
+      "name": "Farrah Kheradmand",
+      "affiliations": [
+        "Baylor College of Medicine and the Center for Translational Research on Inflammatory Diseases, Houston, TX, United States."
+      ]
+    },
+    {
+      "last_name": "Atkinson",
+      "fore_name": "Mark A",
+      "initials": "MA",
+      "name": "Mark A Atkinson",
+      "affiliations": [
+        "Department of Pathology, Immunology and Laboratory Medicine/Department of Surgery, University of Florida, Gainesville, FL, United States."
+      ]
+    },
+    {
+      "last_name": "Brakenridge",
+      "fore_name": "Scott C",
+      "initials": "SC",
+      "name": "Scott C Brakenridge",
+      "affiliations": [
+        "Department of Pathology, Immunology and Laboratory Medicine/Department of Surgery, University of Florida, Gainesville, FL, United States."
+      ]
+    },
+    {
+      "last_name": "Agudelo Higuita",
+      "fore_name": "Nelson I",
+      "initials": "NI",
+      "name": "Nelson I Agudelo Higuita",
+      "affiliations": [
+        "Oklahoma University Health Sciences Center, Oklahoma City, OK, United States."
+      ]
+    },
+    {
+      "last_name": "Metcalf",
+      "fore_name": "Jordan P",
+      "initials": "JP",
+      "name": "Jordan P Metcalf",
+      "affiliations": [
+        "Oklahoma University Health Sciences Center, Oklahoma City, OK, United States."
+      ]
+    },
+    {
+      "last_name": "Hough",
+      "fore_name": "Catherine L",
+      "initials": "CL",
+      "name": "Catherine L Hough",
+      "affiliations": [
+        "Department of Medicine, Oregon Health Sciences University, Portland, OR, United States."
+      ]
+    },
+    {
+      "last_name": "Messer",
+      "fore_name": "William B",
+      "initials": "WB",
+      "name": "William B Messer",
+      "affiliations": [
+        "Department of Medicine, Oregon Health Sciences University, Portland, OR, United States."
+      ]
+    },
+    {
+      "last_name": "Pulendran",
+      "fore_name": "Bali",
+      "initials": "B",
+      "name": "Bali Pulendran",
+      "affiliations": [
+        "Stanford University School of Medicine, Palo Alto, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Nadeau",
+      "fore_name": "Kari C",
+      "initials": "KC",
+      "name": "Kari C Nadeau",
+      "affiliations": [
+        "Stanford University School of Medicine, Palo Alto, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Davis",
+      "fore_name": "Mark M",
+      "initials": "MM",
+      "name": "Mark M Davis",
+      "affiliations": [
+        "Stanford University School of Medicine, Palo Alto, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Fernandez Sesma",
+      "fore_name": "Ana",
+      "initials": "A",
+      "name": "Ana Fernandez Sesma",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, NY, United States."
+      ]
+    },
+    {
+      "last_name": "Simon",
+      "fore_name": "Viviana",
+      "initials": "V",
+      "name": "Viviana Simon",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, NY, United States."
+      ]
+    },
+    {
+      "last_name": "Kraft",
+      "fore_name": "Monica",
+      "initials": "M",
+      "name": "Monica Kraft",
+      "affiliations": [
+        "Department of Medicine, University of Arizona, Tucson, AZ, United States."
+      ]
+    },
+    {
+      "last_name": "Bime",
+      "fore_name": "Chris",
+      "initials": "C",
+      "name": "Chris Bime",
+      "affiliations": [
+        "Department of Medicine, Oregon Health Sciences University, Portland, OR, United States."
+      ]
+    },
+    {
+      "last_name": "Calfee",
+      "fore_name": "Carolyn S",
+      "initials": "CS",
+      "name": "Carolyn S Calfee",
+      "affiliations": [
+        "School of Medicine, University of California San Francisco, San Francisco, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Erle",
+      "fore_name": "David J",
+      "initials": "DJ",
+      "name": "David J Erle",
+      "affiliations": [
+        "School of Medicine, University of California San Francisco, San Francisco, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Impacc Network",
+      "name": "Impacc Network",
+      "affiliations": [
+        "Department of Microbiology and Immunology/Department of Medicine/Department of Epidemiology & Biostatistics, Drexel University, Philadelphia, PA, United States.",
+        "Clinical and Data Coordinating Center (CDCC) Precision Vaccines Program, Boston Children's Hospital, Boston, MA, United States.",
+        "Emory School of Medicine, Atlanta, GA, United States.",
+        "National Institute of Allergy and Infectious Diseases, National Institute of Health, Bethesda, MD, United States.",
+        "Yale School of Public Health, and Yale School of Medicine, New Haven, CT, United States.",
+        "La Jolla Institute for Immunology, La Jolla, CA, United States.",
+        "David Geffen School of Medicine at the University of California Los Angeles, Los Angeles, CA, United States.",
+        "Department of Medicine, Benaroya Research Institute, University of Washington, Seattle, WA, United States.",
+        "School of Medicine, University of California San Francisco, San Francisco, CA, United States.",
+        "Stanford University School of Medicine, Palo Alto, CA, United States.",
+        "Icahn School of Medicine at Mount Sinai, New York, NY, United States.",
+        "Precision Vaccines Program, Boston Children's Hospital, Harvard Medical School, Boston, MA, United States.",
+        "Brigham and Women's Hospital, Harvard Medical School, Boston, MA, United States.",
+        "Department of Neurology/Department of Molecular Biosciences, University of Texas, Austin, TX, United States.",
+        "Case Western Reserve University and University Hospitals of Cleveland, Cleveland, OH, United States.",
+        "Baylor College of Medicine and the Center for Translational Research on Inflammatory Diseases, Houston, TX, United States.",
+        "Department of Pathology, Immunology and Laboratory Medicine/Department of Surgery, University of Florida, Gainesville, FL, United States.",
+        "Oklahoma University Health Sciences Center, Oklahoma City, OK, United States.",
+        "Department of Medicine, Oregon Health Sciences University, Portland, OR, United States.",
+        "Department of Medicine, University of Arizona, Tucson, AZ, United States."
+      ]
+    },
+    {
+      "last_name": "Robinson",
+      "fore_name": "Lucy F",
+      "initials": "LF",
+      "name": "Lucy F Robinson",
+      "affiliations": [
+        "Department of Microbiology and Immunology/Department of Medicine/Department of Epidemiology & Biostatistics, Drexel University, Philadelphia, PA, United States."
+      ]
+    },
+    {
+      "last_name": "Cairns",
+      "fore_name": "Charles B",
+      "initials": "CB",
+      "name": "Charles B Cairns",
+      "affiliations": [
+        "Department of Microbiology and Immunology/Department of Medicine/Department of Epidemiology & Biostatistics, Drexel University, Philadelphia, PA, United States."
+      ]
+    },
+    {
+      "last_name": "Haddad",
+      "fore_name": "Elias K",
+      "initials": "EK",
+      "name": "Elias K Haddad",
+      "affiliations": [
+        "Department of Microbiology and Immunology/Department of Medicine/Department of Epidemiology & Biostatistics, Drexel University, Philadelphia, PA, United States."
+      ]
+    },
+    {
+      "last_name": "Comunale",
+      "fore_name": "Mary Ann",
+      "initials": "MA",
+      "name": "Mary Ann Comunale",
+      "affiliations": [
+        "Department of Microbiology and Immunology/Department of Medicine/Department of Epidemiology & Biostatistics, Drexel University, Philadelphia, PA, United States."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Frontiers in medicine",
+    "iso_abbreviation": "Front Med (Lausanne)",
+    "issn": "2296-858X",
+    "issn_type": "Print",
+    "volume": "12",
+    "pub_year": "2025"
+  },
+  "start_page": "1604388",
+  "pages": "1604388",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "40687705",
+    "pmc": "PMC12271175",
+    "doi": "10.3389/fmed.2025.1604388"
+  },
+  "doi": "10.3389/fmed.2025.1604388",
+  "pmc_id": "PMC12271175",
+  "dates": {
+    "revised": "2025-07-23"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:01.383250",
+    "pmid": "40687705"
+  }
+}

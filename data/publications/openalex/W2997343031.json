@@ -1,0 +1,227 @@
+{
+  "openalex_id": "W2997343031",
+  "doi": "https://doi.org/10.2514/6.2020-1694",
+  "title": "Low-Thrust Trajectory Design Using Closed-Loop Feedback-Driven Control Laws and State-Dependent Parameters",
+  "abstract": "Low-thrust many-revolution trajectory design and orbit transfers are becoming increasingly important with the development of high specific impulse, low-thrust engines. Closed-loop feedback-driven (CLFD) control laws can be used to solve these trajectory design problems with minimal computational cost and offer potential for autonomous guidance. However, they have user-defined parameters which limit their optimality. In this work, an actor-critic reinforcement learning framework is proposed to make the parameters of the Lyapunov-based Q-law state-dependent, ensuring the controller can adapt as the dynamics evolve during a transfer. The proposed framework should be independent of the particular CLFD control law and provides improved solutions for mission analysis. There is also potential for future on-board autonomous use, as trajectories are closed-form and can be generated without an initial guess. The current results focus on GTO-GEO transfers in Keplerian dynamics and later with eclipse and J2 effects. Both time-optimal and mass-optimal transfers are presented, and the stability to uncertainties in orbit determination are discussed. The task of handling orbit perturbations is left to future work.",
+  "authors": [
+    {
+      "display_name": "Harry Holt",
+      "id": "A5042911712",
+      "orcid": "https://orcid.org/0000-0002-2035-2949",
+      "institutions": [
+        {
+          "id": "I28290843",
+          "display_name": "University of Surrey",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Harry Holt"
+    },
+    {
+      "display_name": "Roberto Armellin",
+      "id": "A5050067041",
+      "orcid": "https://orcid.org/0000-0002-3516-6428",
+      "institutions": [
+        {
+          "id": "I193033237",
+          "display_name": "Institut Superieur de l'Aeronautique et de l'Espace (ISAE-SUPAERO)",
+          "country_code": "FR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Roberto Armellin"
+    },
+    {
+      "display_name": "Andrea Scorsoglio",
+      "id": "A5030446067",
+      "orcid": "https://orcid.org/0000-0001-5875-3804",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrea Scorsoglio"
+    },
+    {
+      "display_name": "Roberto Furfaro",
+      "id": "A5068335450",
+      "orcid": "https://orcid.org/0000-0001-6076-8992",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Roberto Furfaro"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-01-05",
+  "type": "article",
+  "cited_by_count": 16,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4363604160",
+    "display_name": "AIAA SCITECH 2022 Forum",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://openresearch.surrey.ac.uk/view/delivery/44SUR_INST/12138745880002346/13140688390002346",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C47446073",
+      "display_name": "Control theory (sociology)",
+      "level": 3,
+      "score": 0.72775614
+    },
+    {
+      "id": "C79420006",
+      "display_name": "Thrust",
+      "level": 2,
+      "score": 0.7219404
+    },
+    {
+      "id": "C13662910",
+      "display_name": "Trajectory",
+      "level": 2,
+      "score": 0.682151
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5887797
+    },
+    {
+      "id": "C196644772",
+      "display_name": "Orbit (dynamics)",
+      "level": 2,
+      "score": 0.4965971
+    },
+    {
+      "id": "C60640748",
+      "display_name": "Lyapunov function",
+      "level": 3,
+      "score": 0.46274143
+    },
+    {
+      "id": "C2776829284",
+      "display_name": "Lyapunov stability",
+      "level": 3,
+      "score": 0.42420396
+    },
+    {
+      "id": "C133731056",
+      "display_name": "Control engineering",
+      "level": 1,
+      "score": 0.385959
+    },
+    {
+      "id": "C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "score": 0.33942765
+    },
+    {
+      "id": "C2775924081",
+      "display_name": "Control (management)",
+      "level": 2,
+      "score": 0.26754612
+    },
+    {
+      "id": "C146978453",
+      "display_name": "Aerospace engineering",
+      "level": 1,
+      "score": 0.23108783
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.19472781
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.112939686
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.11284122
+    },
+    {
+      "id": "C158622935",
+      "display_name": "Nonlinear system",
+      "level": 2,
+      "score": 0.08294678
+    },
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C1276947",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10791",
+      "display_name": "Advanced Control Systems Optimization",
+      "score": 0.9865
+    },
+    {
+      "id": "T11082",
+      "display_name": "Spacecraft Dynamics and Control",
+      "score": 0.9777
+    },
+    {
+      "id": "T10325",
+      "display_name": "Astro and Planetary Science",
+      "score": 0.9688
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.2514/6.2020-1694",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:43:50.716358",
+  "source_database": "OpenAlex"
+}

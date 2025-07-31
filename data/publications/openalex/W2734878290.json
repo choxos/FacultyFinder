@@ -1,0 +1,514 @@
+{
+  "openalex_id": "W2734878290",
+  "doi": "https://doi.org/10.1136/bmjopen-2017-016847",
+  "title": "Corticosteroids in sepsis: an updated systematic review and meta-analysis (protocol)",
+  "abstract": "Sepsis is associated with a dysregulated host response to infection and impaired endogenous corticosteroid metabolism. As such, therapeutic use of exogenous corticosteroids is a promising adjunctive intervention. Despite a large number of trials examining this research question, uncertainty persists regarding the effect of corticosteroids on survival in sepsis. Several large randomised controlled trials have been published recently prompting a re-evaluation of the available literature.",
+  "authors": [
+    {
+      "display_name": "Bram Rochwerg",
+      "id": "A5048385516",
+      "orcid": "https://orcid.org/0000-0002-8293-7061",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210161256",
+          "display_name": "Impact",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Bram Rochwerg"
+    },
+    {
+      "display_name": "Simon Oczkowski",
+      "id": "A5088664027",
+      "orcid": "https://orcid.org/0000-0002-2874-8948",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Simon Oczkowski"
+    },
+    {
+      "display_name": "Reed Siemieniuk",
+      "id": "A5072226388",
+      "orcid": "https://orcid.org/0000-0002-3725-3031",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210161256",
+          "display_name": "Impact",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Reed Alexander Siemieniuk"
+    },
+    {
+      "display_name": "Kusum Menon",
+      "id": "A5023037123",
+      "orcid": "https://orcid.org/0000-0003-0932-9243",
+      "institutions": [
+        {
+          "id": "I153718931",
+          "display_name": "University of Ottawa",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kusum Menon"
+    },
+    {
+      "display_name": "Wojciech Szczeklik",
+      "id": "A5040649960",
+      "orcid": "https://orcid.org/0000-0002-1349-1123",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I126596746",
+          "display_name": "Jagiellonian University",
+          "country_code": "PL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wojciech Szczeklik"
+    },
+    {
+      "display_name": "Shane English",
+      "id": "A5013690676",
+      "orcid": "https://orcid.org/0000-0002-9477-6146",
+      "institutions": [
+        {
+          "id": "I153718931",
+          "display_name": "University of Ottawa",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4388482656",
+          "display_name": "Ottawa Hospital Research Institute",
+          "country_code": null,
+          "type": "healthcare"
+        },
+        {
+          "id": "I2800722420",
+          "display_name": "Ottawa Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shane English"
+    },
+    {
+      "display_name": "Thomas Agoritsas",
+      "id": "A5010837310",
+      "orcid": "https://orcid.org/0000-0002-6182-9969",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210161256",
+          "display_name": "Impact",
+          "country_code": "CA",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210106256",
+          "display_name": "University Hospital of Geneva",
+          "country_code": "CH",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Agoritsas"
+    },
+    {
+      "display_name": "Emilie P. Belley‐Côté",
+      "id": "A5019000744",
+      "orcid": "https://orcid.org/0000-0002-5071-076X",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210161256",
+          "display_name": "Impact",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Emilie Belley-Cote"
+    },
+    {
+      "display_name": "Frédérick D’Aragon",
+      "id": "A5041580507",
+      "orcid": "https://orcid.org/0000-0003-1323-0449",
+      "institutions": [
+        {
+          "id": "I2801825082",
+          "display_name": "Centre Hospitalier Universitaire de Sherbrooke",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I135117807",
+          "display_name": "Université de Sherbrooke",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Frédérick D’Aragon"
+    },
+    {
+      "display_name": "Waleed Alhazzani",
+      "id": "A5020157030",
+      "orcid": "https://orcid.org/0000-0001-8076-9626",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210161256",
+          "display_name": "Impact",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Waleed Alhazzani"
+    },
+    {
+      "display_name": "Erick Duan",
+      "id": "A5067944803",
+      "orcid": "https://orcid.org/0009-0008-3573-7754",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210161256",
+          "display_name": "Impact",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Erick Duan"
+    },
+    {
+      "display_name": "Kira Gossack‐Keenan",
+      "id": "A5061397857",
+      "orcid": "https://orcid.org/0000-0002-7631-1652",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kira Gossack-Keenan"
+    },
+    {
+      "display_name": "Jon Sevransky",
+      "id": "A5085624634",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I150468666",
+          "display_name": "Emory University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jon Sevransky"
+    },
+    {
+      "display_name": "Per Olav Vandvik",
+      "id": "A5017952355",
+      "orcid": "https://orcid.org/0000-0001-8958-2710",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I2269089",
+          "display_name": "Innlandet Hospital Trust",
+          "country_code": "NO",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Per Vandvik"
+    },
+    {
+      "display_name": "Balasubramanian Venkatesh",
+      "id": "A5085914190",
+      "orcid": "https://orcid.org/0000-0002-3234-5244",
+      "institutions": [
+        {
+          "id": "I165143802",
+          "display_name": "The University of Queensland",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I2800284578",
+          "display_name": "Wesley Hospital",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I2801814493",
+          "display_name": "Princess Alexandra Hospital",
+          "country_code": "AU",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bala Venkatesh"
+    },
+    {
+      "display_name": "Gordon Guyatt",
+      "id": "A5031717153",
+      "orcid": "https://orcid.org/0000-0003-2352-5718",
+      "institutions": [
+        {
+          "id": "I129604602",
+          "display_name": "The University of Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gordon Guyatt"
+    },
+    {
+      "display_name": "Djillali Annane",
+      "id": "A5068616089",
+      "orcid": "https://orcid.org/0000-0001-6805-8944",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210134648",
+          "display_name": "Hôpital Raymond-Poincaré",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Djillali Annane"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-06-01",
+  "type": "article",
+  "cited_by_count": 10,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S79054089",
+    "display_name": "BMJ Open",
+    "issn_l": "2044-6055",
+    "issn": [
+      "2044-6055"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319945"
+  },
+  "volume": "7",
+  "issue": "6",
+  "first_page": "e016847",
+  "last_page": "e016847",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://bmjopen.bmj.com/content/bmjopen/7/6/e016847.full.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.9162769
+    },
+    {
+      "id": "C2779343474",
+      "display_name": "Context (archaeology)",
+      "level": 2,
+      "score": 0.66917187
+    },
+    {
+      "id": "C2779473830",
+      "display_name": "MEDLINE",
+      "level": 2,
+      "score": 0.65813106
+    },
+    {
+      "id": "C168563851",
+      "display_name": "Randomized controlled trial",
+      "level": 2,
+      "score": 0.6186808
+    },
+    {
+      "id": "C2780385302",
+      "display_name": "Protocol (science)",
+      "level": 3,
+      "score": 0.6017723
+    },
+    {
+      "id": "C95190672",
+      "display_name": "Meta-analysis",
+      "level": 2,
+      "score": 0.5999746
+    },
+    {
+      "id": "C2778384902",
+      "display_name": "Sepsis",
+      "level": 2,
+      "score": 0.5611157
+    },
+    {
+      "id": "C177713679",
+      "display_name": "Intensive care medicine",
+      "level": 1,
+      "score": 0.5131536
+    },
+    {
+      "id": "C2780182762",
+      "display_name": "Guideline",
+      "level": 2,
+      "score": 0.4482022
+    },
+    {
+      "id": "C535046627",
+      "display_name": "Clinical trial",
+      "level": 2,
+      "score": 0.44456902
+    },
+    {
+      "id": "C189708586",
+      "display_name": "Systematic review",
+      "level": 3,
+      "score": 0.4160921
+    },
+    {
+      "id": "C204787440",
+      "display_name": "Alternative medicine",
+      "level": 2,
+      "score": 0.30432916
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.2734537
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.0934625
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12421",
+      "display_name": "Adrenal Hormones and Disorders",
+      "score": 0.9996
+    },
+    {
+      "id": "T10218",
+      "display_name": "Sepsis Diagnosis and Treatment",
+      "score": 0.999
+    },
+    {
+      "id": "T10867",
+      "display_name": "Intensive Care Unit Cognitive Disorders",
+      "score": 0.9936
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1136/bmjopen-2017-016847",
+  "pdf_url": "https://bmjopen.bmj.com/content/bmjopen/7/6/e016847.full.pdf",
+  "retrieved_date": "2025-07-30T15:20:45.841120",
+  "source_database": "OpenAlex"
+}

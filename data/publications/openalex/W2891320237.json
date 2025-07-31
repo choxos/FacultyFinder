@@ -1,0 +1,179 @@
+{
+  "openalex_id": "W2891320237",
+  "doi": "https://doi.org/10.1111/tgis.12461",
+  "title": "Detecting outdated POI relations via web‐derived features",
+  "abstract": "Abstract With the increasing popularity of mobile devices and wireless networks, location‐based services have become widely adopted by consumers. As business points of interest (POIs) and associated information are subject to change over time, it is critical to ensure the correctness of data with a reasonable cost of data verification. In this article, we propose new machine learning approaches for detecting outdated POI information (e.g., location/address and POI name) via web‐derived features. We represent POI information by &lt;address, name&gt; pairs and formulate the problem of detecting the outdated POI pairs in two forms: a classification problem and a ranking problem. We evaluate the proposed methods using a real‐world dataset crawled from Yellow Pages websites. For POI pairs with a one‐to‐one relationship between addresses and names ( Address‐to‐one‐POI ), the supervised approaches achieve 95.7% accuracy. For POI pairs with a one‐to‐many relationship between addresses and names ( Address‐to‐many‐POIs ), the best accuracy is 65.8%. By exploiting the strengths of different classifiers, we improve performance by tri‐training to achieve an accuracy of 72.8%.",
+  "authors": [
+    {
+      "display_name": "Hsiu‐Min Chuang",
+      "id": "A5048934265",
+      "orcid": "https://orcid.org/0000-0002-1646-5190",
+      "institutions": [
+        {
+          "id": "I4210094862",
+          "display_name": "National Defense University",
+          "country_code": "TW",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hsiu‐Min Chuang"
+    },
+    {
+      "display_name": "Chia‐Hui Chang",
+      "id": "A5078524542",
+      "orcid": "https://orcid.org/0000-0002-1101-6337",
+      "institutions": [
+        {
+          "id": "I22265921",
+          "display_name": "National Central University",
+          "country_code": "TW",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Chia‐Hui Chang"
+    },
+    {
+      "display_name": "Wang‐Chien Lee",
+      "id": "A5088328946",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I130769515",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wang‐Chien Lee"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-09-17",
+  "type": "article",
+  "cited_by_count": 4,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S859791518",
+    "display_name": "Transactions in GIS",
+    "issn_l": "1361-1682",
+    "issn": [
+      "1361-1682",
+      "1467-9671"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "22",
+  "issue": "5",
+  "first_page": "1238",
+  "last_page": "1256",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C55439883",
+      "display_name": "Correctness",
+      "level": 2,
+      "score": 0.82345235
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.8165966
+    },
+    {
+      "id": "C150140777",
+      "display_name": "Point of interest",
+      "level": 2,
+      "score": 0.71560705
+    },
+    {
+      "id": "C189430467",
+      "display_name": "Ranking (information retrieval)",
+      "level": 2,
+      "score": 0.7098802
+    },
+    {
+      "id": "C2780586970",
+      "display_name": "Popularity",
+      "level": 2,
+      "score": 0.5556844
+    },
+    {
+      "id": "C23123220",
+      "display_name": "Information retrieval",
+      "level": 1,
+      "score": 0.5324166
+    },
+    {
+      "id": "C124101348",
+      "display_name": "Data mining",
+      "level": 1,
+      "score": 0.48897183
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.43143284
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.38772658
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C77805123",
+      "display_name": "Social psychology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11719",
+      "display_name": "Data Quality and Management",
+      "score": 0.9972
+    },
+    {
+      "id": "T10757",
+      "display_name": "Geographic Information Systems Studies",
+      "score": 0.9956
+    },
+    {
+      "id": "T12016",
+      "display_name": "Web Data Mining and Analysis",
+      "score": 0.9907
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1111/tgis.12461",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:58:16.690310",
+  "source_database": "OpenAlex"
+}

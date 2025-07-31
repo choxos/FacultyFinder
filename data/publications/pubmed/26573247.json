@@ -1,0 +1,136 @@
+{
+  "pmid": "26573247",
+  "uid": "26573247",
+  "title": "Data-driven knowledge acquisition, validation, and transformation into HL7 Arden Syntax.",
+  "abstract": "OBJECTIVE: The objective of this study is to help a team of physicians and knowledge engineers acquire clinical knowledge from existing practices datasets for treatment of head and neck cancer, to validate the knowledge against published guidelines, to create refined rules, and to incorporate these rules into clinical workflow for clinical decision support. METHODS AND MATERIALS: A team of physicians (clinical domain experts) and knowledge engineers adapt an approach for modeling existing treatment practices into final executable clinical models. For initial work, the oral cavity is selected as the candidate target area for the creation of rules covering a treatment plan for cancer. The final executable model is presented in HL7 Arden Syntax, which helps the clinical knowledge be shared among organizations. We use a data-driven knowledge acquisition approach based on analysis of real patient datasets to generate a predictive model (PM). The PM is converted into a refined-clinical knowledge model (R-CKM), which follows a rigorous validation process. The validation process uses a clinical knowledge model (CKM), which provides the basis for defining underlying validation criteria. The R-CKM is converted into a set of medical logic modules (MLMs) and is evaluated using real patient data from a hospital information system. RESULTS: We selected the oral cavity as the intended site for derivation of all related clinical rules for possible associated treatment plans. A team of physicians analyzed the National Comprehensive Cancer Network (NCCN) guidelines for the oral cavity and created a common CKM. Among the decision tree algorithms, chi-squared automatic interaction detection (CHAID) was applied to a refined dataset of 1229 patients to generate the PM. The PM was tested on a disjoint dataset of 739 patients, which gives 59.0% accuracy. Using a rigorous validation process, the R-CKM was created from the PM as the final model, after conforming to the CKM. The R-CKM was converted into four candidate MLMs, and was used to evaluate real data from 739 patients, yielding efficient performance with 53.0% accuracy. CONCLUSION: Data-driven knowledge acquisition and validation against published guidelines were used to help a team of physicians and knowledge engineers create executable clinical knowledge. The advantages of the R-CKM are twofold: it reflects real practices and conforms to standard guidelines, while providing optimal accuracy comparable to that of a PM. The proposed approach yields better insight into the steps of knowledge acquisition and enhances collaboration efforts of the team of physicians and knowledge engineers.",
+  "authors": [
+    {
+      "last_name": "Hussain",
+      "fore_name": "Maqbool",
+      "initials": "M",
+      "name": "Maqbool Hussain",
+      "affiliations": [
+        "Department of Computer Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, Yongin-si 446-701, Gyeonggi-do, Republic of Korea. Electronic address: maqbool.hussain@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Afzal",
+      "affiliations": [
+        "Department of Computer Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, Yongin-si 446-701, Gyeonggi-do, Republic of Korea. Electronic address: muhammad.afzal@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Ali",
+      "fore_name": "Taqdir",
+      "initials": "T",
+      "name": "Taqdir Ali",
+      "affiliations": [
+        "Department of Computer Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, Yongin-si 446-701, Gyeonggi-do, Republic of Korea. Electronic address: taqdir.ali@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Ali",
+      "fore_name": "Rahman",
+      "initials": "R",
+      "name": "Rahman Ali",
+      "affiliations": [
+        "Department of Computer Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, Yongin-si 446-701, Gyeonggi-do, Republic of Korea. Electronic address: rahmanali@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Khan",
+      "fore_name": "Wajahat Ali",
+      "initials": "WA",
+      "name": "Wajahat Ali Khan",
+      "affiliations": [
+        "Department of Computer Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, Yongin-si 446-701, Gyeonggi-do, Republic of Korea. Electronic address: wajahat.alikhan@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Jamshed",
+      "fore_name": "Arif",
+      "initials": "A",
+      "name": "Arif Jamshed",
+      "affiliations": [
+        "Department of Radiation Oncology, Shaukat Khanum Memorial Cancer Hospital and Research Centre, 7A Block R-3, M.A. Johar Town, Lahore 54782, Pakistan. Electronic address: arifj@skm.org.pk."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Sungyoung",
+      "initials": "S",
+      "name": "Sungyoung Lee",
+      "affiliations": [
+        "Department of Computer Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, Yongin-si 446-701, Gyeonggi-do, Republic of Korea. Electronic address: sylee@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Kang",
+      "fore_name": "Byeong Ho",
+      "initials": "BH",
+      "name": "Byeong Ho Kang",
+      "affiliations": [
+        "Computing and Information Systems, University of Tasmania, Hobart 7001, Tasmania, Australia. Electronic address: byeong.Kang@utas.edu.au."
+      ]
+    },
+    {
+      "last_name": "Latif",
+      "fore_name": "Khalid",
+      "initials": "K",
+      "name": "Khalid Latif",
+      "affiliations": [
+        "Department of Computer Science, COMSATS Institute of Information Technology, Park Road, Islamabad 45550, Pakistan. Electronic address: khalid.latif@comsats.edu.pk."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Artificial intelligence in medicine",
+    "iso_abbreviation": "Artif Intell Med",
+    "issn": "1873-2860",
+    "issn_type": "Electronic",
+    "volume": "92",
+    "pub_year": "2018",
+    "pub_month": "Nov"
+  },
+  "start_page": "51",
+  "end_page": "70",
+  "pages": "51-70",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Artificial Intelligence",
+    "Decision Support Systems, Clinical",
+    "Expert Systems",
+    "Head and Neck Neoplasms",
+    "Humans",
+    "Information Systems",
+    "Medical Informatics",
+    "Practice Guidelines as Topic",
+    "Programming Languages",
+    "Workflow"
+  ],
+  "article_ids": {
+    "pubmed": "26573247",
+    "doi": "10.1016/j.artmed.2015.09.008",
+    "pii": "S0933-3657(15)00125-6"
+  },
+  "doi": "10.1016/j.artmed.2015.09.008",
+  "dates": {
+    "completed": "2019-11-01",
+    "revised": "2019-11-01"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.761593",
+    "pmid": "26573247"
+  }
+}

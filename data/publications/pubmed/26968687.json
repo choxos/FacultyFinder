@@ -1,0 +1,123 @@
+{
+  "pmid": "26968687",
+  "uid": "26968687",
+  "title": "Personalized treatment planning with a model of radiation therapy outcomes for use in multiobjective optimization of IMRT plans for prostate cancer.",
+  "abstract": "PURPOSE: To build a new treatment planning approach that extends beyond radiation transport and IMRT optimization by modeling the radiation therapy process and prognostic indicators for more outcome-focused decision making. METHODS: An in-house treatment planning system was modified to include multiobjective inverse planning, a probabilistic outcome model, and a multi-attribute decision aid. A genetic algorithm generated a set of plans embodying trade-offs between the separate objectives. An influence diagram network modeled the radiation therapy process of prostate cancer using expert opinion, results of clinical trials, and published research. A Markov model calculated a quality adjusted life expectancy (QALE), which was the endpoint for ranking plans. RESULTS: The Multiobjective Evolutionary Algorithm (MOEA) was designed to produce an approximation of the Pareto Front representing optimal tradeoffs for IMRT plans. Prognostic information from the dosimetrics of the plans, and from patient-specific clinical variables were combined by the influence diagram. QALEs were calculated for each plan for each set of patient characteristics. Sensitivity analyses were conducted to explore changes in outcomes for variations in patient characteristics and dosimetric variables. The model calculated life expectancies that were in agreement with an independent clinical study. CONCLUSIONS: The radiation therapy model proposed has integrated a number of different physical, biological and clinical models into a more comprehensive model. It illustrates a number of the critical aspects of treatment planning that can be improved and represents a more detailed description of the therapy process. A Markov model was implemented to provide a stronger connection between dosimetric variables and clinical outcomes and could provide a practical, quantitative method for making difficult clinical decisions.",
+  "authors": [
+    {
+      "last_name": "Smith",
+      "fore_name": "Wade P",
+      "initials": "WP",
+      "name": "Wade P Smith",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington Medical Center, 1959 NE Pacific St, Box 356043, Seattle, 98115, WA, USA. wpsmith@u.washington.edu."
+      ]
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Minsun",
+      "initials": "M",
+      "name": "Minsun Kim",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington Medical Center, 1959 NE Pacific St, Box 356043, Seattle, 98115, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Holdsworth",
+      "fore_name": "Clay",
+      "initials": "C",
+      "name": "Clay Holdsworth",
+      "affiliations": [
+        "Brigham and Women's Hospital, 75 Francis St., Boston, 02115, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Liao",
+      "fore_name": "Jay",
+      "initials": "J",
+      "name": "Jay Liao",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington Medical Center, 1959 NE Pacific St, Box 356043, Seattle, 98115, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Phillips",
+      "fore_name": "Mark H",
+      "initials": "MH",
+      "name": "Mark H Phillips",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington Medical Center, 1959 NE Pacific St, Box 356043, Seattle, 98115, WA, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Radiation oncology (London, England)",
+    "iso_abbreviation": "Radiat Oncol",
+    "issn": "1748-717X",
+    "issn_type": "Electronic",
+    "volume": "11",
+    "pub_year": "2016",
+    "pub_month": "Mar",
+    "pub_day": "11"
+  },
+  "start_page": "38",
+  "pages": "38",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Bayes Theorem",
+    "Cohort Studies",
+    "Decision Making",
+    "Decision Support Systems, Clinical",
+    "Humans",
+    "Life Expectancy",
+    "Linear Models",
+    "Male",
+    "Markov Chains",
+    "Middle Aged",
+    "Patient Care Planning",
+    "Prognosis",
+    "Program Development",
+    "Prostatic Neoplasms",
+    "Quality of Life",
+    "Radiometry",
+    "Radiotherapy Dosage",
+    "Radiotherapy Planning, Computer-Assisted",
+    "Radiotherapy, Intensity-Modulated",
+    "Treatment Outcome"
+  ],
+  "article_ids": {
+    "pubmed": "26968687",
+    "pmc": "PMC4788837",
+    "doi": "10.1186/s13014-016-0609-7",
+    "pii": "10.1186/s13014-016-0609-7"
+  },
+  "doi": "10.1186/s13014-016-0609-7",
+  "pmc_id": "PMC4788837",
+  "dates": {
+    "completed": "2016-11-03",
+    "revised": "2023-11-11"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 CA112505",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "1-R01-CA112505",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:52:16.703646",
+    "pmid": "26968687"
+  }
+}

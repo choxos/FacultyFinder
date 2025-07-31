@@ -1,0 +1,197 @@
+{
+  "openalex_id": "W2035163341",
+  "doi": "https://doi.org/10.1117/12.2082519",
+  "title": "OpenID connect as a security service in Cloud-based diagnostic imaging systems",
+  "abstract": "The evolution of cloud computing is driving the next generation of diagnostic imaging (DI) systems. Cloud-based DI systems are able to deliver better services to patients without constraining to their own physical facilities. However, privacy and security concerns have been consistently regarded as the major obstacle for adoption of cloud computing by healthcare domains. Furthermore, traditional computing models and interfaces employed by DI systems are not ready for accessing diagnostic images through mobile devices. RESTful is an ideal technology for provisioning both mobile services and cloud computing. OpenID Connect, combining OpenID and OAuth together, is an emerging REST-based federated identity solution. It is one of the most perspective open standards to potentially become the de-facto standard for securing cloud computing and mobile applications, which has ever been regarded as \"Kerberos of Cloud\". We introduce OpenID Connect as an identity and authentication service in cloud-based DI systems and propose enhancements that allow for incorporating this technology within distributed enterprise environment. The objective of this study is to offer solutions for secure radiology image sharing among DI-r (Diagnostic Imaging Repository) and heterogeneous PACS (Picture Archiving and Communication Systems) as well as mobile clients in the cloud ecosystem. Through using OpenID Connect as an open-source identity and authentication service, deploying DI-r and PACS to private or community clouds should obtain equivalent security level to traditional computing model.",
+  "authors": [
+    {
+      "display_name": "MA Wei-na",
+      "id": "A5101534785",
+      "orcid": "https://orcid.org/0000-0001-7864-0081",
+      "institutions": [
+        {
+          "id": "I39470171",
+          "display_name": "University of Ontario Institute of Technology",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Weina Ma"
+    },
+    {
+      "display_name": "Kamran Sartipi",
+      "id": "A5055220196",
+      "orcid": "https://orcid.org/0000-0002-3588-5991",
+      "institutions": [
+        {
+          "id": "I39470171",
+          "display_name": "University of Ontario Institute of Technology",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kamran Sartipi"
+    },
+    {
+      "display_name": "Hassan Sharghi",
+      "id": "A5004525103",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I39470171",
+          "display_name": "University of Ontario Institute of Technology",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hassan Sharghi"
+    },
+    {
+      "display_name": "David Koff",
+      "id": "A5060166021",
+      "orcid": "https://orcid.org/0000-0002-8654-9568",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Koff"
+    },
+    {
+      "display_name": "Peter Bak",
+      "id": "A5044417026",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peter Bak"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-03-17",
+  "type": "article",
+  "cited_by_count": 2,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S183492911",
+    "display_name": "Proceedings of SPIE, the International Society for Optical Engineering/Proceedings of SPIE",
+    "issn_l": "0277-786X",
+    "issn": [
+      "0277-786X",
+      "1996-756X"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315543"
+  },
+  "volume": "9418",
+  "issue": null,
+  "first_page": "94180J",
+  "last_page": "94180J",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C79974875",
+      "display_name": "Cloud computing",
+      "level": 2,
+      "score": 0.86537564
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.83260715
+    },
+    {
+      "id": "C172191483",
+      "display_name": "Provisioning",
+      "level": 2,
+      "score": 0.66206026
+    },
+    {
+      "id": "C148417208",
+      "display_name": "Authentication (law)",
+      "level": 2,
+      "score": 0.60769093
+    },
+    {
+      "id": "C184842701",
+      "display_name": "Cloud computing security",
+      "level": 3,
+      "score": 0.5328306
+    },
+    {
+      "id": "C555379026",
+      "display_name": "Identity management",
+      "level": 3,
+      "score": 0.47649473
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.46837267
+    },
+    {
+      "id": "C120115606",
+      "display_name": "Cloud testing",
+      "level": 4,
+      "score": 0.42006794
+    },
+    {
+      "id": "C31258907",
+      "display_name": "Computer network",
+      "level": 1,
+      "score": 0.13786641
+    },
+    {
+      "id": "C111919701",
+      "display_name": "Operating system",
+      "level": 1,
+      "score": 0.0925979
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11986",
+      "display_name": "Scientific Computing and Data Management",
+      "score": 0.983
+    },
+    {
+      "id": "T11614",
+      "display_name": "Cloud Data Security Solutions",
+      "score": 0.9821
+    },
+    {
+      "id": "T10350",
+      "display_name": "Electronic Health Records Systems",
+      "score": 0.9813
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1117/12.2082519",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:14:14.808521",
+  "source_database": "OpenAlex"
+}

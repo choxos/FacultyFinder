@@ -1,0 +1,127 @@
+{
+  "pmid": "35753057",
+  "uid": "35753057",
+  "title": "A Bayesian hierarchical model for improving measurement of 5mC and 5hmC levels: Toward revealing associations between phenotypes and methylation states.",
+  "abstract": "5-hydroxymethylcytosine (5hmC) is a methylation state linked with gene regulation, commonly found in cells of the central nervous system. 5hmC is associated with demethylation of cytosines from 5-methylcytosine (5mC) to the unmethylated state. The presence of 5hmC can be inferred by a paired experiment involving bisulfite and oxidation-bisulfite treatments on the same sample, followed by a methylation assay using a platform such as the Illumina Infinium MethylationEPIC BeadChip (EPIC). Existing methods for analysis of the resulting EPIC data are not ideal. Most approaches ignore the correlation between the two experiments and any imprecision associated with DNA damage from the additional treatment. Estimates of 5mC/5hmC levels free from these limitations are desirable to reveal associations between methylation states and phenotypes. We propose a hierarchical Bayesian method called Constrained HYdroxy Methylation Estimation (CHYME) to simultaneously estimate 5mC/5hmC signals as well as any associations between these signals and covariates or phenotypes, while accounting for the potential impact of DNA damage and dependencies induced by the experimental design. Simulations show that CHYME has valid type 1 error and better power than a range of alternative methods, including the popular OxyBS method and linear models on transformed proportions. Other methods we examined suffer from hugely inflated type 1 error for inference on 5hmC proportions. We use CHYME to explore genome-wide associations between 5mC/5hmC levels and cause of death in postmortem prefrontal cortex brain tissue samples. These analyses indicate that CHYME is a useful tool to reveal phenotypic associations with 5mC/5hmC levels.",
+  "authors": [
+    {
+      "last_name": "Jiang",
+      "fore_name": "Lai",
+      "initials": "L",
+      "name": "Lai Jiang",
+      "affiliations": [
+        "Lady Davis Institute for Medical Research, Jewish General Hospital, Montréal, Québec, Canada."
+      ],
+      "orcid": "0000-0002-0244-4620"
+    },
+    {
+      "last_name": "Greenlaw",
+      "fore_name": "Keelin",
+      "initials": "K",
+      "name": "Keelin Greenlaw",
+      "affiliations": [
+        "Lady Davis Institute for Medical Research, Jewish General Hospital, Montréal, Québec, Canada."
+      ]
+    },
+    {
+      "last_name": "Ciampi",
+      "fore_name": "Antonio",
+      "initials": "A",
+      "name": "Antonio Ciampi",
+      "affiliations": [
+        "Department of Epidemiology, Biostatistics and Occupational Health, McGill University, Montréal, Québec, Canada."
+      ]
+    },
+    {
+      "last_name": "Canty",
+      "fore_name": "Angelo J",
+      "initials": "AJ",
+      "name": "Angelo J Canty",
+      "affiliations": [
+        "Department of Mathematics and Statistics, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Gross",
+      "fore_name": "Jeffrey",
+      "initials": "J",
+      "name": "Jeffrey Gross",
+      "affiliations": [
+        "Department of Psychiatry, Douglas Institute, McGill University, Montréal, Québec, Canada."
+      ]
+    },
+    {
+      "last_name": "Turecki",
+      "fore_name": "Gustavo",
+      "initials": "G",
+      "name": "Gustavo Turecki",
+      "affiliations": [
+        "Department of Psychiatry, Douglas Institute, McGill University, Montréal, Québec, Canada."
+      ],
+      "orcid": "0000-0003-4075-2736"
+    },
+    {
+      "last_name": "Greenwood",
+      "fore_name": "Celia M T",
+      "initials": "CMT",
+      "name": "Celia M T Greenwood",
+      "affiliations": [
+        "Lady Davis Institute for Medical Research, Jewish General Hospital, Montréal, Québec, Canada.",
+        "Department of Epidemiology, Biostatistics and Occupational Health, McGill University, Montréal, Québec, Canada.",
+        "Gerald Bronfman Department of Oncology, McGill University, Montréal, Québec, Canada.",
+        "Department of Human Genetics, McGill University, Montréal, Québec, Canada."
+      ],
+      "orcid": "0000-0002-2427-5696"
+    }
+  ],
+  "journal": {
+    "title": "Genetic epidemiology",
+    "iso_abbreviation": "Genet Epidemiol",
+    "issn": "1098-2272",
+    "issn_type": "Electronic",
+    "volume": "46",
+    "issue": "7",
+    "pub_year": "2022",
+    "pub_month": "Oct"
+  },
+  "start_page": "446",
+  "end_page": "462",
+  "pages": "446-462",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Bayes Theorem",
+    "Cytosine",
+    "DNA Methylation",
+    "Humans",
+    "Models, Genetic",
+    "Phenotype"
+  ],
+  "article_ids": {
+    "pubmed": "35753057",
+    "doi": "10.1002/gepi.22489"
+  },
+  "doi": "10.1002/gepi.22489",
+  "dates": {
+    "completed": "2022-09-08",
+    "revised": "2022-09-22"
+  },
+  "chemicals": [
+    "Cytosine"
+  ],
+  "grants": [
+    {
+      "grant_id": "FRN130344",
+      "agency": "CIHR",
+      "country": "Canada"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:12:33.654959",
+    "pmid": "35753057"
+  }
+}

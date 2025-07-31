@@ -1,0 +1,363 @@
+{
+  "pmid": "33602918",
+  "uid": "33602918",
+  "title": "Tumour gene expression signature in primary melanoma predicts long-term outcomes.",
+  "abstract": "Adjuvant systemic therapies are now routinely used following resection of stage III melanoma, however accurate prognostic information is needed to better stratify patients. We use differential expression analyses of primary tumours from 204 RNA-sequenced melanomas within a large adjuvant trial, identifying a 121 metastasis-associated gene signature. This signature strongly associated with progression-free (HR = 1.63, p = 5.24 × 10[-5]) and overall survival (HR = 1.61, p = 1.67 × 10[-4]), was validated in 175 regional lymph nodes metastasis as well as two externally ascertained datasets. The machine learning classification models trained using the signature genes performed significantly better in predicting metastases than models trained with clinical covariates (pAUROC = 7.03 × 10[-4]), or published prognostic signatures (pAUROC < 0.05). The signature score negatively correlated with measures of immune cell infiltration (ρ = -0.75, p < 2.2 × 10[-16]), with a higher score representing reduced lymphocyte infiltration and a higher 5-year risk of death in stage II melanoma. Our expression signature identifies melanoma patients at higher risk of metastases and warrants further evaluation in adjuvant clinical trials.",
+  "authors": [
+    {
+      "last_name": "Garg",
+      "fore_name": "Manik",
+      "initials": "M",
+      "name": "Manik Garg",
+      "affiliations": [
+        "European Molecular Biology Laboratory, European Bioinformatics Institute (EMBL-EBI), Hinxton, Cambridgeshire, UK."
+      ],
+      "orcid": "0000-0003-0453-2058"
+    },
+    {
+      "last_name": "Couturier",
+      "fore_name": "Dominique-Laurent",
+      "initials": "DL",
+      "name": "Dominique-Laurent Couturier",
+      "affiliations": [
+        "Cancer Research UK Cambridge Institute, University of Cambridge, Li Ka Shing Centre, Robinson Way, Cambridge, UK."
+      ],
+      "orcid": "0000-0001-5774-5036"
+    },
+    {
+      "last_name": "Nsengimana",
+      "fore_name": "Jérémie",
+      "initials": "J",
+      "name": "Jérémie Nsengimana",
+      "affiliations": [
+        "University of Leeds School of Medicine, Leeds, United Kingdom.",
+        "Biostatistics Research Group, Population Health Sciences Institute, Faculty of Medical Sciences, Newcastle University, Newcastle upon Tyne, UK."
+      ],
+      "orcid": "0000-0002-3603-4208"
+    },
+    {
+      "last_name": "Fonseca",
+      "fore_name": "Nuno A",
+      "initials": "NA",
+      "name": "Nuno A Fonseca",
+      "affiliations": [
+        "CIBIO/InBIO-Centro de Investigação em Biodiversidade e Recursos Genéticos, Universidade do Porto, Rua Padre Armando Quintas, 4485-601, Vairão, Portugal."
+      ],
+      "orcid": "0000-0003-4832-578X"
+    },
+    {
+      "last_name": "Wongchenko",
+      "fore_name": "Matthew",
+      "initials": "M",
+      "name": "Matthew Wongchenko",
+      "affiliations": [
+        "Oncology Biomarker Development, Genentech Inc., 1 DNA Way, South San Francisco, CA, 94080, USA."
+      ],
+      "orcid": "0000-0003-1230-7117"
+    },
+    {
+      "last_name": "Yan",
+      "fore_name": "Yibing",
+      "initials": "Y",
+      "name": "Yibing Yan",
+      "affiliations": [
+        "Oncology Biomarker Development, Genentech Inc., 1 DNA Way, South San Francisco, CA, 94080, USA."
+      ]
+    },
+    {
+      "last_name": "Lauss",
+      "fore_name": "Martin",
+      "initials": "M",
+      "name": "Martin Lauss",
+      "affiliations": [
+        "Lund University Cancer Center, Lund University, Lund, Sweden."
+      ]
+    },
+    {
+      "last_name": "Jönsson",
+      "fore_name": "Göran B",
+      "initials": "GB",
+      "name": "Göran B Jönsson",
+      "affiliations": [
+        "Lund University Cancer Center, Lund University, Lund, Sweden."
+      ]
+    },
+    {
+      "last_name": "Newton-Bishop",
+      "fore_name": "Julia",
+      "initials": "J",
+      "name": "Julia Newton-Bishop",
+      "affiliations": [
+        "University of Leeds School of Medicine, Leeds, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Parkinson",
+      "fore_name": "Christine",
+      "initials": "C",
+      "name": "Christine Parkinson",
+      "affiliations": [
+        "Cambridge Cancer Centre, Cambridge University Hospitals NHS Foundation Trust, Cambridge, UK."
+      ]
+    },
+    {
+      "last_name": "Middleton",
+      "fore_name": "Mark R",
+      "initials": "MR",
+      "name": "Mark R Middleton",
+      "affiliations": [
+        "Oxford NIHR Biomedical Research Centre and Department of Oncology, University of Oxford, Oxford, UK."
+      ],
+      "orcid": "0000-0003-0167-1685"
+    },
+    {
+      "last_name": "Bishop",
+      "fore_name": "D Timothy",
+      "initials": "DT",
+      "name": "D Timothy Bishop",
+      "affiliations": [
+        "University of Leeds School of Medicine, Leeds, United Kingdom."
+      ],
+      "orcid": "0000-0002-8752-8785"
+    },
+    {
+      "last_name": "McDonald",
+      "fore_name": "Sarah",
+      "initials": "S",
+      "name": "Sarah McDonald",
+      "affiliations": [
+        "Department of Pathology, Cambridge University Hospitals NHS Foundation Trust, Cambridge, UK."
+      ]
+    },
+    {
+      "last_name": "Stefanos",
+      "fore_name": "Nikki",
+      "initials": "N",
+      "name": "Nikki Stefanos",
+      "affiliations": [
+        "Department of Pathology, Cambridge University Hospitals NHS Foundation Trust, Cambridge, UK."
+      ]
+    },
+    {
+      "last_name": "Tadross",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Tadross",
+      "affiliations": [
+        "Department of Pathology, Cambridge University Hospitals NHS Foundation Trust, Cambridge, UK."
+      ],
+      "orcid": "0000-0002-8424-1252"
+    },
+    {
+      "last_name": "Vergara",
+      "fore_name": "Ismael A",
+      "initials": "IA",
+      "name": "Ismael A Vergara",
+      "affiliations": [
+        "Melanoma Institute Australia, The University of Sydney, North Sydney, NSW, Australia.",
+        "Faculty of Medicine and Health, The University of Sydney, Sydney, NSW, Australia."
+      ],
+      "orcid": "0000-0002-2960-2967"
+    },
+    {
+      "last_name": "Lo",
+      "fore_name": "Serigne",
+      "initials": "S",
+      "name": "Serigne Lo",
+      "affiliations": [
+        "Melanoma Institute Australia, The University of Sydney, North Sydney, NSW, Australia.",
+        "Faculty of Medicine and Health, The University of Sydney, Sydney, NSW, Australia.",
+        "Institute for Research and Medical Consultations (IRMC), Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia."
+      ],
+      "orcid": "0000-0001-5092-5544"
+    },
+    {
+      "last_name": "Newell",
+      "fore_name": "Felicity",
+      "initials": "F",
+      "name": "Felicity Newell",
+      "affiliations": [
+        "QIMR Berghofer Medical Research Institute, Brisbane, QLD, Australia."
+      ],
+      "orcid": "0000-0003-0469-2705"
+    },
+    {
+      "last_name": "Wilmott",
+      "fore_name": "James S",
+      "initials": "JS",
+      "name": "James S Wilmott",
+      "affiliations": [
+        "Melanoma Institute Australia, The University of Sydney, North Sydney, NSW, Australia.",
+        "Faculty of Medicine and Health, The University of Sydney, Sydney, NSW, Australia."
+      ]
+    },
+    {
+      "last_name": "Thompson",
+      "fore_name": "John F",
+      "initials": "JF",
+      "name": "John F Thompson",
+      "affiliations": [
+        "Melanoma Institute Australia, The University of Sydney, North Sydney, NSW, Australia.",
+        "Faculty of Medicine and Health, The University of Sydney, Sydney, NSW, Australia.",
+        "Discipline of Surgery, Faculty of Medicine and Health, The University of Sydney, Sydney, NSW, Australia."
+      ],
+      "orcid": "0000-0002-2816-2496"
+    },
+    {
+      "last_name": "Long",
+      "fore_name": "Georgina V",
+      "initials": "GV",
+      "name": "Georgina V Long",
+      "affiliations": [
+        "Melanoma Institute Australia, The University of Sydney, North Sydney, NSW, Australia.",
+        "Faculty of Medicine and Health, The University of Sydney, Sydney, NSW, Australia.",
+        "Royal North Shore and Mater Hospitals, Sydney, Australia."
+      ]
+    },
+    {
+      "last_name": "Scolyer",
+      "fore_name": "Richard A",
+      "initials": "RA",
+      "name": "Richard A Scolyer",
+      "affiliations": [
+        "Melanoma Institute Australia, The University of Sydney, North Sydney, NSW, Australia.",
+        "Faculty of Medicine and Health, The University of Sydney, Sydney, NSW, Australia.",
+        "Tissue Pathology and Diagnostic Oncology, Royal Prince Alfred Hospital and New South Wales Health Pathology, Sydney, NSW, Australia."
+      ],
+      "orcid": "0000-0002-8991-0013"
+    },
+    {
+      "last_name": "Corrie",
+      "fore_name": "Pippa",
+      "initials": "P",
+      "name": "Pippa Corrie",
+      "affiliations": [
+        "Cambridge Cancer Centre, Cambridge University Hospitals NHS Foundation Trust, Cambridge, UK."
+      ]
+    },
+    {
+      "last_name": "Adams",
+      "fore_name": "David J",
+      "initials": "DJ",
+      "name": "David J Adams",
+      "affiliations": [
+        "Experimental Cancer Genetics, The Wellcome Sanger Institute, Hinxton, Cambridgeshire, UK."
+      ],
+      "orcid": "0000-0001-9490-0306"
+    },
+    {
+      "last_name": "Brazma",
+      "fore_name": "Alvis",
+      "initials": "A",
+      "name": "Alvis Brazma",
+      "affiliations": [
+        "European Molecular Biology Laboratory, European Bioinformatics Institute (EMBL-EBI), Hinxton, Cambridgeshire, UK."
+      ],
+      "orcid": "0000-0001-5988-7409"
+    },
+    {
+      "last_name": "Rabbie",
+      "fore_name": "Roy",
+      "initials": "R",
+      "name": "Roy Rabbie",
+      "affiliations": [
+        "Cambridge Cancer Centre, Cambridge University Hospitals NHS Foundation Trust, Cambridge, UK. rr13@sanger.ac.uk.",
+        "Experimental Cancer Genetics, The Wellcome Sanger Institute, Hinxton, Cambridgeshire, UK. rr13@sanger.ac.uk."
+      ],
+      "orcid": "0000-0002-9195-5659"
+    }
+  ],
+  "journal": {
+    "title": "Nature communications",
+    "iso_abbreviation": "Nat Commun",
+    "issn": "2041-1723",
+    "issn_type": "Electronic",
+    "volume": "12",
+    "issue": "1",
+    "pub_year": "2021",
+    "pub_month": "Feb",
+    "pub_day": "18"
+  },
+  "start_page": "1137",
+  "pages": "1137",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Databases, Genetic",
+    "Gene Expression Profiling",
+    "Gene Expression Regulation, Neoplastic",
+    "Humans",
+    "Machine Learning",
+    "Melanoma",
+    "Multivariate Analysis",
+    "Neoplasm Staging",
+    "Prognosis",
+    "Progression-Free Survival",
+    "Proportional Hazards Models",
+    "Reproducibility of Results",
+    "Time Factors",
+    "Treatment Outcome"
+  ],
+  "article_ids": {
+    "pubmed": "33602918",
+    "pmc": "PMC7893180",
+    "doi": "10.1038/s41467-021-21207-2",
+    "pii": "10.1038/s41467-021-21207-2"
+  },
+  "doi": "10.1038/s41467-021-21207-2",
+  "pmc_id": "PMC7893180",
+  "dates": {
+    "completed": "2021-04-02",
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 CA083115",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "C8216/A6129",
+      "agency": "Cancer Research UK",
+      "country": "United Kingdom"
+    },
+    {
+      "agency": "Department of Health",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "19167",
+      "agency": "Cancer Research UK",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "C588/A10721",
+      "agency": "Cancer Research UK",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "8466",
+      "agency": "Cancer Research UK",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "C588/A19167",
+      "agency": "Cancer Research UK",
+      "country": "United Kingdom"
+    },
+    {
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:42:00.541084",
+    "pmid": "33602918"
+  }
+}

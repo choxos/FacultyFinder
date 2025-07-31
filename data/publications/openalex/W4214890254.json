@@ -1,0 +1,271 @@
+{
+  "openalex_id": "W4214890254",
+  "doi": "https://doi.org/10.1016/j.egyr.2022.01.122",
+  "title": "Improved power quality operation of symmetrical and asymmetrical multilevel inverter using invasive weed optimization technique",
+  "abstract": "Low switching frequency pulse width modulation (PWM) technique for modulation and control of multilevel inverter in medium voltage high power applications is preferred in order to reduce the switching losses. In this context, a multilevel inverter operated with Selective harmonics minimization PWM technique offers better quality waveform at reduced switching losses. After the Fourier series analysis, the system of non-linear simultaneous transcendental equations is obtained. These equations are then solved to obtain switching angles to have certain low order harmonics at minimum value and regulation in the fundamental voltage magnitude. In this paper, a novel invasive weed optimization (IWO) technique is proposed to compute switching angles. The proposed technique can compute switching angles for both symmetrical and asymmetrical multilevel inverters. Thus it has superiority over well-known optimization techniques such as GA, PSO, DE, and ACO, etc. Moreover, in certain modulation index ranges, it provides faster convergence and accurate results which have been demonstrated in the paper. The computational results have been verified with the experimental result on the prototype developed in the laboratory. The field programming gate arrays (FPGA) based controller is used to implement the proposed technique. The hardware results have been found in close agreement with the computed results.",
+  "authors": [
+    {
+      "display_name": "Salman Ahmad",
+      "id": "A5006902649",
+      "orcid": "https://orcid.org/0000-0003-0281-8220",
+      "institutions": [
+        {
+          "id": "I4264650",
+          "display_name": "Islamic University of Science and Technology",
+          "country_code": "IN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Salman Ahmad"
+    },
+    {
+      "display_name": "Atif Iqbal",
+      "id": "A5006136125",
+      "orcid": "https://orcid.org/0000-0002-6932-4367",
+      "institutions": [
+        {
+          "id": "I60342839",
+          "display_name": "Qatar University",
+          "country_code": "QA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Atif Iqbal"
+    },
+    {
+      "display_name": "Imtiaz Ashraf",
+      "id": "A5069529014",
+      "orcid": "https://orcid.org/0000-0002-3176-8456",
+      "institutions": [
+        {
+          "id": "I171210897",
+          "display_name": "Aligarh Muslim University",
+          "country_code": "IN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Imtiaz Ashraf"
+    },
+    {
+      "display_name": "Mohammad Meraj",
+      "id": "A5048218229",
+      "orcid": "https://orcid.org/0000-0002-2035-5963",
+      "institutions": [
+        {
+          "id": "I60342839",
+          "display_name": "Qatar University",
+          "country_code": "QA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Mohammad Meraj"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-03-02",
+  "type": "article",
+  "cited_by_count": 20,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2898434319",
+    "display_name": "Energy Reports",
+    "issn_l": "2352-4847",
+    "issn": [
+      "2352-4847"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "8",
+  "issue": null,
+  "first_page": "3323",
+  "last_page": "3336",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://doi.org/10.1016/j.egyr.2022.01.122",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C92746544",
+      "display_name": "Pulse-width modulation",
+      "level": 3,
+      "score": 0.71868694
+    },
+    {
+      "id": "C188414643",
+      "display_name": "Harmonics",
+      "level": 3,
+      "score": 0.6653069
+    },
+    {
+      "id": "C2776635522",
+      "display_name": "Modulation index",
+      "level": 4,
+      "score": 0.6195965
+    },
+    {
+      "id": "C11190779",
+      "display_name": "Inverter",
+      "level": 3,
+      "score": 0.538482
+    },
+    {
+      "id": "C47446073",
+      "display_name": "Control theory (sociology)",
+      "level": 3,
+      "score": 0.5080724
+    },
+    {
+      "id": "C165801399",
+      "display_name": "Voltage",
+      "level": 2,
+      "score": 0.5074524
+    },
+    {
+      "id": "C197424946",
+      "display_name": "Waveform",
+      "level": 3,
+      "score": 0.5071542
+    },
+    {
+      "id": "C207864730",
+      "display_name": "Fourier series",
+      "level": 2,
+      "score": 0.48706272
+    },
+    {
+      "id": "C123079801",
+      "display_name": "Modulation (music)",
+      "level": 2,
+      "score": 0.4792183
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.46161473
+    },
+    {
+      "id": "C2777303404",
+      "display_name": "Convergence (economics)",
+      "level": 2,
+      "score": 0.4469402
+    },
+    {
+      "id": "C163258240",
+      "display_name": "Power (physics)",
+      "level": 2,
+      "score": 0.4444096
+    },
+    {
+      "id": "C24326235",
+      "display_name": "Electronic engineering",
+      "level": 1,
+      "score": 0.42994845
+    },
+    {
+      "id": "C42156128",
+      "display_name": "Total harmonic distortion",
+      "level": 3,
+      "score": 0.4141853
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.29535398
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.23302594
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.12463191
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C2775924081",
+      "display_name": "Control (management)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C50522688",
+      "display_name": "Economic growth",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C24890656",
+      "display_name": "Acoustics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C119599485",
+      "display_name": "Electrical engineering",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C162324750",
+      "display_name": "Economics",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10228",
+      "display_name": "Multilevel Inverters and Converters",
+      "score": 1.0
+    },
+    {
+      "id": "T10361",
+      "display_name": "Silicon Carbide Semiconductor Technologies",
+      "score": 0.9974
+    },
+    {
+      "id": "T10223",
+      "display_name": "Microgrid Control and Optimization",
+      "score": 0.9962
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.egyr.2022.01.122",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:02:22.807411",
+  "source_database": "OpenAlex"
+}

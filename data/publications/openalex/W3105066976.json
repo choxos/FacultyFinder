@@ -1,0 +1,236 @@
+{
+  "openalex_id": "W3105066976",
+  "doi": "https://doi.org/10.18653/v1/2020.emnlp-main.556",
+  "title": "“You are grounded!”: Latent Name Artifacts in Pre-trained Language Models",
+  "abstract": "Pre-trained language models (LMs) may perpetuate biases originating in their training corpus to downstream models. We focus on artifacts associated with the representation of given names (e.g., Donald), which, depending on the corpus, may be associated with specific entities, as indicated by next token prediction (e.g., Trump). While helpful in some contexts, grounding happens also in under-specified or inappropriate contexts. For example, endings generated for 'Donald is a' substantially differ from those of other names, and often have more-than-average negative sentiment. We demonstrate the potential effect on downstream tasks with reading comprehension probes where name perturbation changes the model answers. As a silver lining, our experiments suggest that additional pre-training on different corpora may mitigate this bias.",
+  "authors": [
+    {
+      "display_name": "Vered Shwartz",
+      "id": "A5006531172",
+      "orcid": "https://orcid.org/0000-0002-1151-4379",
+      "institutions": [
+        {
+          "id": "I4210156221",
+          "display_name": "Allen Institute for Artificial Intelligence",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vered Shwartz"
+    },
+    {
+      "display_name": "Rachel Rudinger",
+      "id": "A5082447472",
+      "orcid": "https://orcid.org/0000-0002-5506-4701",
+      "institutions": [
+        {
+          "id": "I4210156221",
+          "display_name": "Allen Institute for Artificial Intelligence",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I66946132",
+          "display_name": "University of Maryland, College Park",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rachel Rudinger"
+    },
+    {
+      "display_name": "Oyvind Tafjord",
+      "id": "A5071250061",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210156221",
+          "display_name": "Allen Institute for Artificial Intelligence",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Oyvind Tafjord"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-01-01",
+  "type": "article",
+  "cited_by_count": 46,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "6850",
+  "last_page": "6861",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://www.aclweb.org/anthology/2020.emnlp-main.556.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.7390512
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.6840761
+    },
+    {
+      "id": "C137293760",
+      "display_name": "Language model",
+      "level": 2,
+      "score": 0.63566715
+    },
+    {
+      "id": "C48145219",
+      "display_name": "Security token",
+      "level": 2,
+      "score": 0.6126238
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.5726005
+    },
+    {
+      "id": "C2778780117",
+      "display_name": "Reading comprehension",
+      "level": 3,
+      "score": 0.47967649
+    },
+    {
+      "id": "C2776359362",
+      "display_name": "Representation (politics)",
+      "level": 3,
+      "score": 0.46555406
+    },
+    {
+      "id": "C192209626",
+      "display_name": "Focus (optics)",
+      "level": 2,
+      "score": 0.46295363
+    },
+    {
+      "id": "C511192102",
+      "display_name": "Comprehension",
+      "level": 2,
+      "score": 0.41904026
+    },
+    {
+      "id": "C554936623",
+      "display_name": "Reading (process)",
+      "level": 2,
+      "score": 0.37417302
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.3584807
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C120665830",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C94625758",
+      "display_name": "Politics",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9997
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9984
+    },
+    {
+      "id": "T10201",
+      "display_name": "Speech Recognition and Synthesis",
+      "score": 0.9772
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2020.emnlp-main.556",
+  "pdf_url": "https://www.aclweb.org/anthology/2020.emnlp-main.556.pdf",
+  "retrieved_date": "2025-07-30T15:38:36.184503",
+  "source_database": "OpenAlex"
+}

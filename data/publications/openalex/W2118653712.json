@@ -1,0 +1,246 @@
+{
+  "openalex_id": "W2118653712",
+  "doi": "https://doi.org/10.1101/gr.092957.109",
+  "title": "DNA Sudoku—harnessing high-throughput sequencing for multiplexed specimen analysis",
+  "abstract": "Next-generation sequencers have sufficient power to analyze simultaneously DNAs from many different specimens, a practice known as multiplexing. Such schemes rely on the ability to associate each sequence read with the specimen from which it was derived. The current practice of appending molecular barcodes prior to pooling is practical for parallel analysis of up to many dozen samples. Here, we report a strategy that permits simultaneous analysis of tens of thousands of specimens. Our approach relies on the use of combinatorial pooling strategies in which pools rather than individual specimens are assigned barcodes. Thus, the identity of each specimen is encoded within the pooling pattern rather than by its association with a particular sequence tag. Decoding the pattern allows the sequence of an original specimen to be inferred with high confidence. We verified the ability of our encoding and decoding strategies to accurately report the sequence of individual samples within a large number of mixed specimens in two ways. First, we simulated data both from a clone library and from a human population in which a sequence variant associated with cystic fibrosis was present. Second, we actually pooled, sequenced, and decoded identities within two sets of 40,000 bacterial clones comprising approximately 20,000 different artificial microRNAs targeting Arabidopsis or human genes. We achieved greater than 97% accuracy in these trials. The strategies reported here can be applied to a wide variety of biological problems, including the determination of genotypic variation within large populations of individuals.",
+  "authors": [
+    {
+      "display_name": "Yaniv Erlich",
+      "id": "A5059774133",
+      "orcid": "https://orcid.org/0000-0003-3257-8387",
+      "institutions": [
+        {
+          "id": "I2750212522",
+          "display_name": "Cold Spring Harbor Laboratory",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I1344073410",
+          "display_name": "Howard Hughes Medical Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yaniv Erlich"
+    },
+    {
+      "display_name": "Kenneth Chang",
+      "id": "A5052225785",
+      "orcid": "https://orcid.org/0000-0002-5833-3655",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Kenneth Chang"
+    },
+    {
+      "display_name": "Assaf Gordon",
+      "id": "A5103711548",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Assaf Gordon"
+    },
+    {
+      "display_name": "Roy Ronen",
+      "id": "A5059290110",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Roy Ronen"
+    },
+    {
+      "display_name": "Oron Navon",
+      "id": "A5061408218",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2750212522",
+          "display_name": "Cold Spring Harbor Laboratory",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Oron Navon"
+    },
+    {
+      "display_name": "Michelle Rooks",
+      "id": "A5064786016",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Michelle Rooks"
+    },
+    {
+      "display_name": "Gregory J. Hannon",
+      "id": "A5047070448",
+      "orcid": "https://orcid.org/0000-0003-4021-3898",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Gregory J. Hannon"
+    }
+  ],
+  "publication_year": 2009,
+  "publication_date": "2009-05-15",
+  "type": "article",
+  "cited_by_count": 170,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S43092948",
+    "display_name": "Genome Research",
+    "issn_l": "1088-9051",
+    "issn": [
+      "1088-9051",
+      "1549-5469"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315909"
+  },
+  "volume": "19",
+  "issue": "7",
+  "first_page": "1243",
+  "last_page": "1253",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://genome.cshlp.org/content/19/7/1243.full.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.8011049
+    },
+    {
+      "id": "C70437156",
+      "display_name": "Pooling",
+      "level": 2,
+      "score": 0.68489045
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.609319
+    },
+    {
+      "id": "C2779927696",
+      "display_name": "Minion",
+      "level": 5,
+      "score": 0.5755605
+    },
+    {
+      "id": "C51679486",
+      "display_name": "DNA sequencing",
+      "level": 3,
+      "score": 0.5540966
+    },
+    {
+      "id": "C2778112365",
+      "display_name": "Sequence (biology)",
+      "level": 2,
+      "score": 0.5055189
+    },
+    {
+      "id": "C61053724",
+      "display_name": "Sequence analysis",
+      "level": 3,
+      "score": 0.4854084
+    },
+    {
+      "id": "C180384323",
+      "display_name": "Alignment-free sequence analysis",
+      "level": 5,
+      "score": 0.47450587
+    },
+    {
+      "id": "C2908647359",
+      "display_name": "Population",
+      "level": 2,
+      "score": 0.47135013
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.4640163
+    },
+    {
+      "id": "C45484198",
+      "display_name": "Sequence alignment",
+      "level": 4,
+      "score": 0.27507725
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.2636583
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.24963763
+    },
+    {
+      "id": "C126513998",
+      "display_name": "Nanopore sequencing",
+      "level": 4,
+      "score": 0.2061547
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.20341888
+    },
+    {
+      "id": "C167625842",
+      "display_name": "Peptide sequence",
+      "level": 3,
+      "score": 0.09799221
+    },
+    {
+      "id": "C149923435",
+      "display_name": "Demography",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C144024400",
+      "display_name": "Sociology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12029",
+      "display_name": "DNA and Biological Computing",
+      "score": 0.9749
+    },
+    {
+      "id": "T10434",
+      "display_name": "Chromosomal and Genetic Variations",
+      "score": 0.9656
+    },
+    {
+      "id": "T10240",
+      "display_name": "Plant tissue culture and regeneration",
+      "score": 0.965
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1101/gr.092957.109",
+  "pdf_url": "https://genome.cshlp.org/content/19/7/1243.full.pdf",
+  "retrieved_date": "2025-07-30T14:46:50.397663",
+  "source_database": "OpenAlex"
+}

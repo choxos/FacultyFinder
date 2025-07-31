@@ -1,0 +1,260 @@
+{
+  "openalex_id": "W2080197848",
+  "doi": "https://doi.org/10.1109/lgrs.2014.2323236",
+  "title": "A Robust Infrared Small Target Detection Algorithm Based on Human Visual System",
+  "abstract": "Robust human visual system (HVS) properties can effectively improve the infrared (IR) small target detection capabilities, such as detection rate, false alarm rate, speed, etc. However, current algorithms based on HVS usually improve one or two of the aforementioned detection capabilities while sacrificing the others. In this letter, a robust IR small target detection algorithm based on HVS is proposed to pursue good performance in detection rate, false alarm rate, and speed simultaneously. First, an HVS size-adaptation process is used, and the IR image after preprocessing is divided into subblocks to improve detection speed. Then, based on HVS contrast mechanism, the improved local contrast measure, which can improve detection rate and reduce false alarm rate, is proposed to calculate the saliency map, and a threshold operation along with a rapid traversal mechanism based on HVS attention shift mechanism is used to get the target subblocks quickly. Experimental results show the proposed algorithm has good robustness and efficiency for real IR small target detection applications.",
+  "authors": [
+    {
+      "display_name": "Jinhui Han",
+      "id": "A5071258855",
+      "orcid": "https://orcid.org/0000-0002-2149-5589",
+      "institutions": [
+        {
+          "id": "I47720641",
+          "display_name": "Huazhong University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Jinhui Han"
+    },
+    {
+      "display_name": "Yong Ma",
+      "id": "A5002618865",
+      "orcid": "https://orcid.org/0000-0002-1116-0662",
+      "institutions": [
+        {
+          "id": "I47720641",
+          "display_name": "Huazhong University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Yong Ma"
+    },
+    {
+      "display_name": "Bo Zhou",
+      "id": "A5100335237",
+      "orcid": "https://orcid.org/0000-0002-0793-3968",
+      "institutions": [
+        {
+          "id": "I47720641",
+          "display_name": "Huazhong University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Bo Zhou"
+    },
+    {
+      "display_name": "Fan Fan",
+      "id": "A5100366841",
+      "orcid": "https://orcid.org/0000-0002-7507-1810",
+      "institutions": [
+        {
+          "id": "I47720641",
+          "display_name": "Huazhong University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Fan Fan"
+    },
+    {
+      "display_name": "Kun Liang",
+      "id": "A5057047083",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I47720641",
+          "display_name": "Huazhong University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Kun Liang"
+    },
+    {
+      "display_name": "Yu Fang",
+      "id": "A5038431756",
+      "orcid": "https://orcid.org/0000-0003-1289-2504",
+      "institutions": [
+        {
+          "id": "I47720641",
+          "display_name": "Huazhong University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Yu Fang"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-05-22",
+  "type": "article",
+  "cited_by_count": 415,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S126920919",
+    "display_name": "IEEE Geoscience and Remote Sensing Letters",
+    "issn_l": "1545-598X",
+    "issn": [
+      "1545-598X",
+      "1558-0571"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "11",
+  "issue": "12",
+  "first_page": "2168",
+  "last_page": "2172",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://ieeexplore.ieee.org/ielx7/8859/6840877/06819810.pdf",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.77553576
+    },
+    {
+      "id": "C77052588",
+      "display_name": "Constant false alarm rate",
+      "level": 2,
+      "score": 0.73734105
+    },
+    {
+      "id": "C34736171",
+      "display_name": "Preprocessor",
+      "level": 2,
+      "score": 0.7309756
+    },
+    {
+      "id": "C160086991",
+      "display_name": "Human visual system model",
+      "level": 3,
+      "score": 0.7213732
+    },
+    {
+      "id": "C63479239",
+      "display_name": "Robustness (evolution)",
+      "level": 3,
+      "score": 0.714735
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.6856786
+    },
+    {
+      "id": "C2776836416",
+      "display_name": "False alarm",
+      "level": 2,
+      "score": 0.51218104
+    },
+    {
+      "id": "C95922358",
+      "display_name": "False positive rate",
+      "level": 2,
+      "score": 0.5104181
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.507133
+    },
+    {
+      "id": "C2776151529",
+      "display_name": "Object detection",
+      "level": 3,
+      "score": 0.47472867
+    },
+    {
+      "id": "C2776502983",
+      "display_name": "Contrast (vision)",
+      "level": 2,
+      "score": 0.45679593
+    },
+    {
+      "id": "C2779679900",
+      "display_name": "Saliency map",
+      "level": 3,
+      "score": 0.43827823
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.43777233
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.35789865
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.19657502
+    },
+    {
+      "id": "C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12389",
+      "display_name": "Infrared Target Detection Methodologies",
+      "score": 0.9997
+    },
+    {
+      "id": "T11605",
+      "display_name": "Visual Attention and Saliency Detection",
+      "score": 0.9971
+    },
+    {
+      "id": "T13869",
+      "display_name": "Ocular and Laser Science Research",
+      "score": 0.9933
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/lgrs.2014.2323236",
+  "pdf_url": "https://ieeexplore.ieee.org/ielx7/8859/6840877/06819810.pdf",
+  "retrieved_date": "2025-07-30T15:05:08.452508",
+  "source_database": "OpenAlex"
+}

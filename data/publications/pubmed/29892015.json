@@ -1,0 +1,2264 @@
+{
+  "pmid": "29892015",
+  "uid": "29892015",
+  "title": "Multi-ethnic genome-wide association study for atrial fibrillation.",
+  "abstract": "Atrial fibrillation (AF) affects more than 33 million individuals worldwide[1] and has a complex heritability[2]. We conducted the largest meta-analysis of genome-wide association studies (GWAS) for AF to date, consisting of more than half a million individuals, including 65,446 with AF. In total, we identified 97 loci significantly associated with AF, including 67 that were novel in a combined-ancestry analysis, and 3 that were novel in a European-specific analysis. We sought to identify AF-associated genes at the GWAS loci by performing RNA-sequencing and expression quantitative trait locus analyses in 101 left atrial samples, the most relevant tissue for AF. We also performed transcriptome-wide analyses that identified 57 AF-associated genes, 42 of which overlap with GWAS loci. The identified loci implicate genes enriched within cardiac developmental, electrophysiological, contractile and structural pathways. These results extend our understanding of the biological pathways underlying AF and may facilitate the development of therapeutics for AF.",
+  "authors": [
+    {
+      "last_name": "Roselli",
+      "fore_name": "Carolina",
+      "initials": "C",
+      "name": "Carolina Roselli",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ],
+      "orcid": "0000-0001-5267-6756"
+    },
+    {
+      "last_name": "Chaffin",
+      "fore_name": "Mark D",
+      "initials": "MD",
+      "name": "Mark D Chaffin",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ],
+      "orcid": "0000-0002-1234-5562"
+    },
+    {
+      "last_name": "Weng",
+      "fore_name": "Lu-Chen",
+      "initials": "LC",
+      "name": "Lu-Chen Weng",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Cardiovascular Research Center, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Aeschbacher",
+      "fore_name": "Stefanie",
+      "initials": "S",
+      "name": "Stefanie Aeschbacher",
+      "affiliations": [
+        "University Hospital Basel, Basel, Switzerland.",
+        "Cardiovascular Research Institute Basel, Basel, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Ahlberg",
+      "fore_name": "Gustav",
+      "initials": "G",
+      "name": "Gustav Ahlberg",
+      "affiliations": [
+        "Laboratory for Molecular Cardiology, The Heart Centre, Department of Cardiology, Copenhagen University Hospital, Rigshospitalet, Copenhagen, Denmark.",
+        "The Danish National Research Foundation Centre for Cardiac Arrhythmia, Department of Biomedical Sciences, University of Copenhagen, Copenhagen, Denmark.",
+        "Department of Clinical Medicine, Faculty of Health and Medical Sciences, University of Copenhagen, Copenhagen, Denmark."
+      ]
+    },
+    {
+      "last_name": "Albert",
+      "fore_name": "Christine M",
+      "initials": "CM",
+      "name": "Christine M Albert",
+      "affiliations": [
+        "Divisions of Preventive and Cardiovascular Medicine, Brigham and Women's Hospital & Harvard Medical School, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Almgren",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Almgren",
+      "affiliations": [
+        "Department of Clinical Sciences, Lund University, Malmo, Sweden."
+      ],
+      "orcid": "0000-0002-0473-0241"
+    },
+    {
+      "last_name": "Alonso",
+      "fore_name": "Alvaro",
+      "initials": "A",
+      "name": "Alvaro Alonso",
+      "affiliations": [
+        "Department of Epidemiology, Rollins School of Public Health, Emory University, Atlanta, GA, USA."
+      ],
+      "orcid": "0000-0002-2225-8323"
+    },
+    {
+      "last_name": "Anderson",
+      "fore_name": "Christopher D",
+      "initials": "CD",
+      "name": "Christopher D Anderson",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Aragam",
+      "fore_name": "Krishna G",
+      "initials": "KG",
+      "name": "Krishna G Aragam",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Arking",
+      "fore_name": "Dan E",
+      "initials": "DE",
+      "name": "Dan E Arking",
+      "affiliations": [
+        "McKusick-Nathans Institute of Genetic Medicine, Johns Hopkins University School of Medicine, Baltimore, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Barnard",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Barnard",
+      "affiliations": [
+        "Departments of Cardiovascular Medicine, Cellular and Molecular Medicine, Molecular Cardiology, and Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH, USA."
+      ],
+      "orcid": "0000-0003-2403-8268"
+    },
+    {
+      "last_name": "Bartz",
+      "fore_name": "Traci M",
+      "initials": "TM",
+      "name": "Traci M Bartz",
+      "affiliations": [
+        "Cardiovascular Health Research Unit, Departments of Medicine and Biostatistics, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Benjamin",
+      "fore_name": "Emelia J",
+      "initials": "EJ",
+      "name": "Emelia J Benjamin",
+      "affiliations": [
+        "NHLBI and Boston University's Framingham Heart Study, Framingham, MA, USA.",
+        "Department of Medicine, Boston University School of Medicine, Boston, MA, USA.",
+        "Department of Epidemiology, Boston University School of Public Health, Boston, MA, USA."
+      ],
+      "orcid": "0000-0003-4076-2336"
+    },
+    {
+      "last_name": "Bihlmeyer",
+      "fore_name": "Nathan A",
+      "initials": "NA",
+      "name": "Nathan A Bihlmeyer",
+      "affiliations": [
+        "Predoctoral Training Program in Human Genetics, McKusick-Nathans Institute of Genetic Medicine, Johns Hopkins University School of Medicine, Baltimore, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Bis",
+      "fore_name": "Joshua C",
+      "initials": "JC",
+      "name": "Joshua C Bis",
+      "affiliations": [
+        "Cardiovascular Health Research Unit, Department of Medicine, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Bloom",
+      "fore_name": "Heather L",
+      "initials": "HL",
+      "name": "Heather L Bloom",
+      "affiliations": [
+        "Division of Cardiology, Emory University and Atlanta VA Medical Center, Atlanta, GA, USA."
+      ]
+    },
+    {
+      "last_name": "Boerwinkle",
+      "fore_name": "Eric",
+      "initials": "E",
+      "name": "Eric Boerwinkle",
+      "affiliations": [
+        "Human Genome Sequencing Center, Baylor College of Medicine, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Bottinger",
+      "fore_name": "Erwin B",
+      "initials": "EB",
+      "name": "Erwin B Bottinger",
+      "affiliations": [
+        "The Charles Bronfman Institute for Personalized Medicine, Icahn School of Medicine at Mount Sinai, New York, NY, USA.",
+        "Department of Pharmacology and Systems Therapeutics, Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Brody",
+      "fore_name": "Jennifer A",
+      "initials": "JA",
+      "name": "Jennifer A Brody",
+      "affiliations": [
+        "Cardiovascular Health Research Unit, Department of Medicine, University of Washington, Seattle, WA, USA."
+      ],
+      "orcid": "0000-0001-8509-148X"
+    },
+    {
+      "last_name": "Calkins",
+      "fore_name": "Hugh",
+      "initials": "H",
+      "name": "Hugh Calkins",
+      "affiliations": [
+        "Johns Hopkins University, Baltimore, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Campbell",
+      "fore_name": "Archie",
+      "initials": "A",
+      "name": "Archie Campbell",
+      "affiliations": [
+        "Generation Scotland, Centre for Genomic and Experimental Medicine, Institute of Genetics and Molecular Medicine, University of Edinburgh, Edinburgh, UK."
+      ],
+      "orcid": "0000-0003-0198-5078"
+    },
+    {
+      "last_name": "Cappola",
+      "fore_name": "Thomas P",
+      "initials": "TP",
+      "name": "Thomas P Cappola",
+      "affiliations": [
+        "Penn Cardiovascular Institute and Department of Medicine, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Carlquist",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Carlquist",
+      "affiliations": [
+        "Intermountain Heart Institute, Intermountain Medical Center, Murray, UT, USA.",
+        "Division of Cardiovascular Medicine, University of Utah, Salt Lake City, UT, USA."
+      ]
+    },
+    {
+      "last_name": "Chasman",
+      "fore_name": "Daniel I",
+      "initials": "DI",
+      "name": "Daniel I Chasman",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Divisions of Preventive Medicine and Genetics, Brigham and Women's Hospital & Harvard Medical School, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Lin Y",
+      "initials": "LY",
+      "name": "Lin Y Chen",
+      "affiliations": [
+        "Cardiovascular Division, Department of Medicine, University of Minnesota Medical School, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Yii-Der Ida",
+      "initials": "YI",
+      "name": "Yii-Der Ida Chen",
+      "affiliations": [
+        "Institute for Translational Genomics and Population Sciences, Department of Pediatrics, LABioMed at Harbor-UCLA Medical Center, Torrance, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Choi",
+      "fore_name": "Eue-Keun",
+      "initials": "EK",
+      "name": "Eue-Keun Choi",
+      "affiliations": [
+        "Seoul National University Hospital, Seoul, Korea."
+      ]
+    },
+    {
+      "last_name": "Choi",
+      "fore_name": "Seung Hoan",
+      "initials": "SH",
+      "name": "Seung Hoan Choi",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Christophersen",
+      "fore_name": "Ingrid E",
+      "initials": "IE",
+      "name": "Ingrid E Christophersen",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Cardiovascular Research Center, Massachusetts General Hospital, Boston, MA, USA.",
+        "Department of Medical Research, Bærum Hospital, Vestre Viken Hospital Trust, Drammen, Norway."
+      ],
+      "orcid": "0000-0002-6141-4712"
+    },
+    {
+      "last_name": "Chung",
+      "fore_name": "Mina K",
+      "initials": "MK",
+      "name": "Mina K Chung",
+      "affiliations": [
+        "Departments of Cardiovascular Medicine, Cellular and Molecular Medicine, Molecular Cardiology, and Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH, USA."
+      ]
+    },
+    {
+      "last_name": "Cole",
+      "fore_name": "John W",
+      "initials": "JW",
+      "name": "John W Cole",
+      "affiliations": [
+        "Baltimore Veterans Affairs Medical Center, Department of Neurology, Baltimore, MD, USA.",
+        "University of Maryland School of Medicine, Department of Neurology, Baltimore, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Conen",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Conen",
+      "affiliations": [
+        "University Hospital Basel, Basel, Switzerland.",
+        "Cardiovascular Research Institute Basel, Basel, Switzerland.",
+        "Population Health Research Institute, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Cook",
+      "fore_name": "James",
+      "initials": "J",
+      "name": "James Cook",
+      "affiliations": [
+        "Department of Biostatistics, University of Liverpool, Liverpool, UK."
+      ]
+    },
+    {
+      "last_name": "Crijns",
+      "fore_name": "Harry J",
+      "initials": "HJ",
+      "name": "Harry J Crijns",
+      "affiliations": [
+        "Maastricht University Medical Center+ and Cardiovascular Research Institute Maastricht, Department of Cardiology, Maastricht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Cutler",
+      "fore_name": "Michael J",
+      "initials": "MJ",
+      "name": "Michael J Cutler",
+      "affiliations": [
+        "Intermountain Heart Institute, Intermountain Medical Center, Murray, UT, USA."
+      ]
+    },
+    {
+      "last_name": "Damrauer",
+      "fore_name": "Scott M",
+      "initials": "SM",
+      "name": "Scott M Damrauer",
+      "affiliations": [
+        "Department of Surgery, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA.",
+        "Department of Surgery, Corporal Michael Crescenz VA Medical Center, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Daniels",
+      "fore_name": "Brian R",
+      "initials": "BR",
+      "name": "Brian R Daniels",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Darbar",
+      "fore_name": "Dawood",
+      "initials": "D",
+      "name": "Dawood Darbar",
+      "affiliations": [
+        "University of Illinois Chicago, Chicago, IL, USA."
+      ]
+    },
+    {
+      "last_name": "Delgado",
+      "fore_name": "Graciela",
+      "initials": "G",
+      "name": "Graciela Delgado",
+      "affiliations": [
+        "Vth Department of Medicine, Medical Faculty Mannheim, Heidelberg University, Heidelberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Denny",
+      "fore_name": "Joshua C",
+      "initials": "JC",
+      "name": "Joshua C Denny",
+      "affiliations": [
+        "Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Dichgans",
+      "fore_name": "Martin",
+      "initials": "M",
+      "name": "Martin Dichgans",
+      "affiliations": [
+        "Institute for Stroke and Dementia Research (ISD), University Hospital, LMU Munich, Munich, Germany.",
+        "Munich Cluster for Systems Neurology (SyNergy), Munich, Germany.",
+        "German Center for Neurodegenerative Diseases (DZNE), Munich, Germany."
+      ],
+      "orcid": "0000-0002-0654-387X"
+    },
+    {
+      "last_name": "Dörr",
+      "fore_name": "Marcus",
+      "initials": "M",
+      "name": "Marcus Dörr",
+      "affiliations": [
+        "Department of Internal Medicine B, University Medicine Greifswald, Greifswald, Germany.",
+        "DZHK (German Centre for Cardiovascular Research), partner site: Greifswald, Greifswald, Germany."
+      ]
+    },
+    {
+      "last_name": "Dudink",
+      "fore_name": "Elton A",
+      "initials": "EA",
+      "name": "Elton A Dudink",
+      "affiliations": [
+        "Maastricht University Medical Center+ and Cardiovascular Research Institute Maastricht, Department of Cardiology, Maastricht, The Netherlands."
+      ],
+      "orcid": "0000-0003-4572-3969"
+    },
+    {
+      "last_name": "Dudley",
+      "fore_name": "Samuel C",
+      "initials": "SC",
+      "name": "Samuel C Dudley",
+      "affiliations": [
+        "Cardiovascular Division and Lillehei Heart Institute, University of Minnesota, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Esa",
+      "fore_name": "Nada",
+      "initials": "N",
+      "name": "Nada Esa",
+      "affiliations": [
+        "University of Massachusetts Medical School Worcester, Worcester, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Esko",
+      "fore_name": "Tonu",
+      "initials": "T",
+      "name": "Tonu Esko",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Estonian Genome Center, University of Tartu, Tartu, Estonia."
+      ],
+      "orcid": "0000-0003-1982-6569"
+    },
+    {
+      "last_name": "Eskola",
+      "fore_name": "Markku",
+      "initials": "M",
+      "name": "Markku Eskola",
+      "affiliations": [
+        "Heart Center, Department of Cardiology, Tampere University Hospital, Finland and Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland."
+      ]
+    },
+    {
+      "last_name": "Fatkin",
+      "fore_name": "Diane",
+      "initials": "D",
+      "name": "Diane Fatkin",
+      "affiliations": [
+        "Victor Chang Cardiac Research Institute, Darlinghurst, New South Wales, Australia.",
+        "St Vincent's Hospital, Darlinghurst, New South Wales, Australia.",
+        "Faculty of Medicine, University of New South Wales, Kensington, New South Wales, Australia."
+      ]
+    },
+    {
+      "last_name": "Felix",
+      "fore_name": "Stephan B",
+      "initials": "SB",
+      "name": "Stephan B Felix",
+      "affiliations": [
+        "Department of Internal Medicine B, University Medicine Greifswald, Greifswald, Germany.",
+        "DZHK (German Centre for Cardiovascular Research), partner site: Greifswald, Greifswald, Germany."
+      ]
+    },
+    {
+      "last_name": "Ford",
+      "fore_name": "Ian",
+      "initials": "I",
+      "name": "Ian Ford",
+      "affiliations": [
+        "Robertson Center for Biostatistics, University of Glasgow, Glasgow, UK."
+      ]
+    },
+    {
+      "last_name": "Franco",
+      "fore_name": "Oscar H",
+      "initials": "OH",
+      "name": "Oscar H Franco",
+      "affiliations": [
+        "Department of Epidemiology, Erasmus University Medical Center Rotterdam, Rotterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Geelhoed",
+      "fore_name": "Bastiaan",
+      "initials": "B",
+      "name": "Bastiaan Geelhoed",
+      "affiliations": [
+        "Department of Cardiology, University Medical Center Groningen, University of Groningen, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Grewal",
+      "fore_name": "Raji P",
+      "initials": "RP",
+      "name": "Raji P Grewal",
+      "affiliations": [
+        "Dept. of Neuroscience, Saint Francis Medical Center, Trenton, NJ, USA.",
+        "School of Health and Medical Sciences, Seton Hall University, South Orange, NJ, USA."
+      ]
+    },
+    {
+      "last_name": "Gudnason",
+      "fore_name": "Vilmundur",
+      "initials": "V",
+      "name": "Vilmundur Gudnason",
+      "affiliations": [
+        "Icelandic Heart Association, Kopavogur, Iceland.",
+        "Faculty of Medicine, University of Iceland, Reykavik, Iceland."
+      ]
+    },
+    {
+      "last_name": "Guo",
+      "fore_name": "Xiuqing",
+      "initials": "X",
+      "name": "Xiuqing Guo",
+      "affiliations": [
+        "Institute for Translational Genomics and Population Sciences, Department of Pediatrics, LABioMed at Harbor-UCLA Medical Center, Torrance, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Gupta",
+      "fore_name": "Namrata",
+      "initials": "N",
+      "name": "Namrata Gupta",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Gustafsson",
+      "fore_name": "Stefan",
+      "initials": "S",
+      "name": "Stefan Gustafsson",
+      "affiliations": [
+        "Department of Medical Sciences, Molecular Epidemiology and Science for Life Laboratory, Uppsala University, Uppsala, Sweden."
+      ],
+      "orcid": "0000-0001-5894-0351"
+    },
+    {
+      "last_name": "Gutmann",
+      "fore_name": "Rebecca",
+      "initials": "R",
+      "name": "Rebecca Gutmann",
+      "affiliations": [
+        "Division of Cardiovascular Medicine and Abboud Cardiovascular Research Center, University of Iowa, Iowa City, IA, USA."
+      ]
+    },
+    {
+      "last_name": "Hamsten",
+      "fore_name": "Anders",
+      "initials": "A",
+      "name": "Anders Hamsten",
+      "affiliations": [
+        "Cardiovascular Genetics and Genomics Group, Atherosclerosis Research Unit, Department of Medicine Solna, Karolinska Institutet, Stockholm, Sweden."
+      ]
+    },
+    {
+      "last_name": "Harris",
+      "fore_name": "Tamara B",
+      "initials": "TB",
+      "name": "Tamara B Harris",
+      "affiliations": [
+        "Laboratory of Epidemiology, Demography, and Biometry, National Institute on Aging, Bethesda, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Hayward",
+      "fore_name": "Caroline",
+      "initials": "C",
+      "name": "Caroline Hayward",
+      "affiliations": [
+        "MRC Human Genetics Unit, Institute of Genetics and Molecular Medicine, University of Edinburgh, Edinburgh, UK."
+      ],
+      "orcid": "0000-0002-9405-9550"
+    },
+    {
+      "last_name": "Heckbert",
+      "fore_name": "Susan R",
+      "initials": "SR",
+      "name": "Susan R Heckbert",
+      "affiliations": [
+        "Cardiovascular Health Research Unit and Department of Epidemiology, University of Washington, Seattle, WA, USA.",
+        "Kaiser Permanente Washington Health Research Institute, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Hernesniemi",
+      "fore_name": "Jussi",
+      "initials": "J",
+      "name": "Jussi Hernesniemi",
+      "affiliations": [
+        "Heart Center, Department of Cardiology, Tampere University Hospital, Finland and Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland.",
+        "Department of Clinical Chemistry, Fimlab Laboratories and Finnish Cardiovascular Research Center-Tampere, Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland."
+      ]
+    },
+    {
+      "last_name": "Hocking",
+      "fore_name": "Lynne J",
+      "initials": "LJ",
+      "name": "Lynne J Hocking",
+      "affiliations": [
+        "Institute of Medical Sciences, University of Aberdeen, Aberdeen, UK."
+      ]
+    },
+    {
+      "last_name": "Hofman",
+      "fore_name": "Albert",
+      "initials": "A",
+      "name": "Albert Hofman",
+      "affiliations": [
+        "Department of Epidemiology, Erasmus University Medical Center Rotterdam, Rotterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Horimoto",
+      "fore_name": "Andrea R V R",
+      "initials": "ARVR",
+      "name": "Andrea R V R Horimoto",
+      "affiliations": [
+        "Laboratory of Genetics and Molecular Cardiology, Heart Institute, University of São Paulo, São Paulo, Brazil."
+      ]
+    },
+    {
+      "last_name": "Huang",
+      "fore_name": "Jie",
+      "initials": "J",
+      "name": "Jie Huang",
+      "affiliations": [
+        "Boston VA Research Institute, Inc., Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Huang",
+      "fore_name": "Paul L",
+      "initials": "PL",
+      "name": "Paul L Huang",
+      "affiliations": [
+        "Cardiovascular Research Center, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Huffman",
+      "fore_name": "Jennifer",
+      "initials": "J",
+      "name": "Jennifer Huffman",
+      "affiliations": [
+        "MRC Human Genetics Unit, Institute of Genetics and Molecular Medicine, University of Edinburgh, Edinburgh, UK."
+      ],
+      "orcid": "0000-0002-9672-2491"
+    },
+    {
+      "last_name": "Ingelsson",
+      "fore_name": "Erik",
+      "initials": "E",
+      "name": "Erik Ingelsson",
+      "affiliations": [
+        "Department of Medical Sciences, Molecular Epidemiology and Science for Life Laboratory, Uppsala University, Uppsala, Sweden.",
+        "Division of Cardiovascular Medicine, Department of Medicine, Stanford University School of Medicine, Stanford, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Ipek",
+      "fore_name": "Esra Gucuk",
+      "initials": "EG",
+      "name": "Esra Gucuk Ipek",
+      "affiliations": [
+        "Johns Hopkins University, Baltimore, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Ito",
+      "fore_name": "Kaoru",
+      "initials": "K",
+      "name": "Kaoru Ito",
+      "affiliations": [
+        "Laboratory for Cardiovascular Diseases, RIKEN Center for Integrative Medical Sciences, Yokohama, Japan."
+      ]
+    },
+    {
+      "last_name": "Jimenez-Conde",
+      "fore_name": "Jordi",
+      "initials": "J",
+      "name": "Jordi Jimenez-Conde",
+      "affiliations": [
+        "Department of Neurology, Neurovascular Research Group IMIM-Hospital del Mar (Institut Hospital del Mar d'Investigacions Médiques), Barcelona, Spain.",
+        "Universitat Autònoma de Barcelona, Medicine Department, Barcelona, Spain."
+      ]
+    },
+    {
+      "last_name": "Johnson",
+      "fore_name": "Renee",
+      "initials": "R",
+      "name": "Renee Johnson",
+      "affiliations": [
+        "Victor Chang Cardiac Research Institute, Darlinghurst, New South Wales, Australia."
+      ]
+    },
+    {
+      "last_name": "Jukema",
+      "fore_name": "J Wouter",
+      "initials": "JW",
+      "name": "J Wouter Jukema",
+      "affiliations": [
+        "Department of Cardiology, Leiden University Medical Center, Leiden, The Netherlands.",
+        "Durrer Center for Cardiogenetic Research, Amsterdam, The Netherlands.",
+        "Interuniversity Cardiology Institute of the Netherlands, Utrecht, The Netherlands."
+      ],
+      "orcid": "0000-0002-3246-8359"
+    },
+    {
+      "last_name": "Kääb",
+      "fore_name": "Stefan",
+      "initials": "S",
+      "name": "Stefan Kääb",
+      "affiliations": [
+        "Department of Medicine I, University Hospital Munich, Ludwig-Maximilians-University, Munich, Germany.",
+        "DZHK (German Centre for Cardiovascular Research), partner site: Munich Heart Alliance, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Kähönen",
+      "fore_name": "Mika",
+      "initials": "M",
+      "name": "Mika Kähönen",
+      "affiliations": [
+        "Department of Clinical Physiology, Tampere University Hospital, and Finnish Cardiovascular Research Center-Tampere, Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland."
+      ]
+    },
+    {
+      "last_name": "Kamatani",
+      "fore_name": "Yoichiro",
+      "initials": "Y",
+      "name": "Yoichiro Kamatani",
+      "affiliations": [
+        "Laboratory for Statistical Analysis, RIKEN Center for Integrative Medical Sciences, Yokohama, Japan."
+      ],
+      "orcid": "0000-0001-8748-5597"
+    },
+    {
+      "last_name": "Kane",
+      "fore_name": "John P",
+      "initials": "JP",
+      "name": "John P Kane",
+      "affiliations": [
+        "Cardiovascular Research Institute, University of California, San Francisco, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Kastrati",
+      "fore_name": "Adnan",
+      "initials": "A",
+      "name": "Adnan Kastrati",
+      "affiliations": [
+        "DZHK (German Centre for Cardiovascular Research), partner site: Munich Heart Alliance, Munich, Germany.",
+        "Deutsches Herzzentrum München, Klinik für Herz- und Kreislauferkrankungen, Technische Universität München, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Kathiresan",
+      "fore_name": "Sekar",
+      "initials": "S",
+      "name": "Sekar Kathiresan",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ],
+      "orcid": "0000-0002-6724-032X"
+    },
+    {
+      "last_name": "Katschnig-Winter",
+      "fore_name": "Petra",
+      "initials": "P",
+      "name": "Petra Katschnig-Winter",
+      "affiliations": [
+        "Department of Neurology, Medical University of Graz, Graz, Austria."
+      ]
+    },
+    {
+      "last_name": "Kavousi",
+      "fore_name": "Maryam",
+      "initials": "M",
+      "name": "Maryam Kavousi",
+      "affiliations": [
+        "Department of Epidemiology, Erasmus University Medical Center Rotterdam, Rotterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Kessler",
+      "fore_name": "Thorsten",
+      "initials": "T",
+      "name": "Thorsten Kessler",
+      "affiliations": [
+        "Deutsches Herzzentrum München, Klinik für Herz- und Kreislauferkrankungen, Technische Universität München, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Kietselaer",
+      "fore_name": "Bas L",
+      "initials": "BL",
+      "name": "Bas L Kietselaer",
+      "affiliations": [
+        "Maastricht University Medical Center+ and Cardiovascular Research Institute Maastricht, Department of Cardiology, Maastricht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Kirchhof",
+      "fore_name": "Paulus",
+      "initials": "P",
+      "name": "Paulus Kirchhof",
+      "affiliations": [
+        "Institute of Cardiovascular Sciences, University of Birmingham, Birmingham, UK.",
+        "Sandwell and West Birmingham Hospitals NHS Trust and University Hospitals Birmingham NHS Foundation Trust, Birmingham, UK.",
+        "AFNET, Muenster, Germany."
+      ]
+    },
+    {
+      "last_name": "Kleber",
+      "fore_name": "Marcus E",
+      "initials": "ME",
+      "name": "Marcus E Kleber",
+      "affiliations": [
+        "Vth Department of Medicine, Medical Faculty Mannheim, Heidelberg University, Heidelberg, Germany."
+      ],
+      "orcid": "0000-0003-0663-7275"
+    },
+    {
+      "last_name": "Knight",
+      "fore_name": "Stacey",
+      "initials": "S",
+      "name": "Stacey Knight",
+      "affiliations": [
+        "Intermountain Heart Institute, Intermountain Medical Center, Murray, UT, USA.",
+        "Department of Medicine, University of Utah, Salt Lake City, UT, USA."
+      ]
+    },
+    {
+      "last_name": "Krieger",
+      "fore_name": "Jose E",
+      "initials": "JE",
+      "name": "Jose E Krieger",
+      "affiliations": [
+        "Laboratory of Genetics and Molecular Cardiology, Heart Institute, University of São Paulo, São Paulo, Brazil."
+      ],
+      "orcid": "0000-0001-5464-1792"
+    },
+    {
+      "last_name": "Kubo",
+      "fore_name": "Michiaki",
+      "initials": "M",
+      "name": "Michiaki Kubo",
+      "affiliations": [
+        "RIKEN Center for Integrative Medical Sciences, Yokohama, Japan."
+      ]
+    },
+    {
+      "last_name": "Launer",
+      "fore_name": "Lenore J",
+      "initials": "LJ",
+      "name": "Lenore J Launer",
+      "affiliations": [
+        "Laboratory of Epidemiology, Demography, and Biometry, National Institute on Aging, Bethesda, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Laurikka",
+      "fore_name": "Jari",
+      "initials": "J",
+      "name": "Jari Laurikka",
+      "affiliations": [
+        "Department of Cardio-Thoracic Surgery, Heart Center, Tampere University Hospital, and Finnish Cardiovascular Research Center-Tampere, Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland."
+      ]
+    },
+    {
+      "last_name": "Lehtimäki",
+      "fore_name": "Terho",
+      "initials": "T",
+      "name": "Terho Lehtimäki",
+      "affiliations": [
+        "Department of Clinical Chemistry, Fimlab Laboratories and Finnish Cardiovascular Research Center-Tampere, Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland."
+      ]
+    },
+    {
+      "last_name": "Leineweber",
+      "fore_name": "Kirsten",
+      "initials": "K",
+      "name": "Kirsten Leineweber",
+      "affiliations": [
+        "Dept. Disease Genomics, Bayer, Wuppertal, Germany."
+      ]
+    },
+    {
+      "last_name": "Lemaitre",
+      "fore_name": "Rozenn N",
+      "initials": "RN",
+      "name": "Rozenn N Lemaitre",
+      "affiliations": [
+        "Cardiovascular Health Research Unit, Department of Medicine, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Man",
+      "initials": "M",
+      "name": "Man Li",
+      "affiliations": [
+        "Department of Epidemiology, Johns Hopkins University, Baltimore, MD, USA.",
+        "Division of Nephrology & Hypertension, Internal Medicine, School of Medicine, University of Utah, Salt Lake City, UT, USA."
+      ],
+      "orcid": "0000-0002-3839-0281"
+    },
+    {
+      "last_name": "Lim",
+      "fore_name": "Hong Euy",
+      "initials": "HE",
+      "name": "Hong Euy Lim",
+      "affiliations": [
+        "Korea University Guro Hospital, Seoul, Korea."
+      ]
+    },
+    {
+      "last_name": "Lin",
+      "fore_name": "Henry J",
+      "initials": "HJ",
+      "name": "Henry J Lin",
+      "affiliations": [
+        "Institute for Translational Genomics and Population Sciences, Department of Pediatrics, LABioMed at Harbor-UCLA Medical Center, Torrance, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Lin",
+      "fore_name": "Honghuang",
+      "initials": "H",
+      "name": "Honghuang Lin",
+      "affiliations": [
+        "NHLBI and Boston University's Framingham Heart Study, Framingham, MA, USA.",
+        "Department of Medicine, Boston University School of Medicine, Boston, MA, USA."
+      ],
+      "orcid": "0000-0003-3043-3942"
+    },
+    {
+      "last_name": "Lind",
+      "fore_name": "Lars",
+      "initials": "L",
+      "name": "Lars Lind",
+      "affiliations": [
+        "Department of Medical Sciences, Cardiovascular Epidemiology, Uppsala University, Uppsala, Sweden."
+      ]
+    },
+    {
+      "last_name": "Lindgren",
+      "fore_name": "Cecilia M",
+      "initials": "CM",
+      "name": "Cecilia M Lindgren",
+      "affiliations": [
+        "Wellcome Trust Centre for Human Genetics, University of Oxford, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "Lokki",
+      "fore_name": "Marja-Liisa",
+      "initials": "ML",
+      "name": "Marja-Liisa Lokki",
+      "affiliations": [
+        "Transplantation Laboratory, Medicum, University of Helsinki, Helsinki, Finland."
+      ]
+    },
+    {
+      "last_name": "London",
+      "fore_name": "Barry",
+      "initials": "B",
+      "name": "Barry London",
+      "affiliations": [
+        "Division of Cardiovascular Medicine and Abboud Cardiovascular Research Center, University of Iowa, Iowa City, IA, USA."
+      ]
+    },
+    {
+      "last_name": "Loos",
+      "fore_name": "Ruth J F",
+      "initials": "RJF",
+      "name": "Ruth J F Loos",
+      "affiliations": [
+        "The Charles Bronfman Institute for Personalized Medicine, Icahn School of Medicine at Mount Sinai, New York, NY, USA.",
+        "The Genetics of Obesity and Related Metabolic Traits Program, Icahn School of Medicine at Mount Sinai, New York, New York, USA.",
+        "The Mindich Child Health and Development Institute, Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ],
+      "orcid": "0000-0002-8532-5087"
+    },
+    {
+      "last_name": "Low",
+      "fore_name": "Siew-Kee",
+      "initials": "SK",
+      "name": "Siew-Kee Low",
+      "affiliations": [
+        "Laboratory for Statistical Analysis, RIKEN Center for Integrative Medical Sciences, Yokohama, Japan."
+      ]
+    },
+    {
+      "last_name": "Lu",
+      "fore_name": "Yingchang",
+      "initials": "Y",
+      "name": "Yingchang Lu",
+      "affiliations": [
+        "The Charles Bronfman Institute for Personalized Medicine, Icahn School of Medicine at Mount Sinai, New York, NY, USA.",
+        "The Genetics of Obesity and Related Metabolic Traits Program, Icahn School of Medicine at Mount Sinai, New York, New York, USA."
+      ]
+    },
+    {
+      "last_name": "Lyytikäinen",
+      "fore_name": "Leo-Pekka",
+      "initials": "LP",
+      "name": "Leo-Pekka Lyytikäinen",
+      "affiliations": [
+        "Department of Clinical Chemistry, Fimlab Laboratories and Finnish Cardiovascular Research Center-Tampere, Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland."
+      ],
+      "orcid": "0000-0002-7200-5455"
+    },
+    {
+      "last_name": "Macfarlane",
+      "fore_name": "Peter W",
+      "initials": "PW",
+      "name": "Peter W Macfarlane",
+      "affiliations": [
+        "Institute of Health and Wellbeing, College of Medical, Veterinary and Life Sciences, University of Glasgow, Glasgow, UK."
+      ]
+    },
+    {
+      "last_name": "Magnusson",
+      "fore_name": "Patrik K",
+      "initials": "PK",
+      "name": "Patrik K Magnusson",
+      "affiliations": [
+        "Department of Medical Epidemiology and Biostatistics, Karolinska Institutet, Stockholm, Sweden."
+      ],
+      "orcid": "0000-0002-7315-7899"
+    },
+    {
+      "last_name": "Mahajan",
+      "fore_name": "Anubha",
+      "initials": "A",
+      "name": "Anubha Mahajan",
+      "affiliations": [
+        "Wellcome Trust Centre for Human Genetics, University of Oxford, Oxford, UK."
+      ],
+      "orcid": "0000-0001-5585-3420"
+    },
+    {
+      "last_name": "Malik",
+      "fore_name": "Rainer",
+      "initials": "R",
+      "name": "Rainer Malik",
+      "affiliations": [
+        "Institute for Stroke and Dementia Research (ISD), University Hospital, LMU Munich, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Mansur",
+      "fore_name": "Alfredo J",
+      "initials": "AJ",
+      "name": "Alfredo J Mansur",
+      "affiliations": [
+        "Heart Institute, University of São Paulo, São Paulo, Brazil."
+      ]
+    },
+    {
+      "last_name": "Marcus",
+      "fore_name": "Gregory M",
+      "initials": "GM",
+      "name": "Gregory M Marcus",
+      "affiliations": [
+        "Division of Cardiology, University of California, San Francisco, San Francisco, California, USA."
+      ]
+    },
+    {
+      "last_name": "Margolin",
+      "fore_name": "Lauren",
+      "initials": "L",
+      "name": "Lauren Margolin",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Margulies",
+      "fore_name": "Kenneth B",
+      "initials": "KB",
+      "name": "Kenneth B Margulies",
+      "affiliations": [
+        "Penn Cardiovascular Institute and Department of Medicine, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "März",
+      "fore_name": "Winfried",
+      "initials": "W",
+      "name": "Winfried März",
+      "affiliations": [
+        "Clinical Institute of Medical and Chemical Laboratory Diagnostics, Medical University of Graz, Graz, Austria.",
+        "Synlab Academy, Synlab Services GmbH, Mannheim, Germany."
+      ]
+    },
+    {
+      "last_name": "McManus",
+      "fore_name": "David D",
+      "initials": "DD",
+      "name": "David D McManus",
+      "affiliations": [
+        "University of Massachusetts Medical School Worcester, Worcester, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Melander",
+      "fore_name": "Olle",
+      "initials": "O",
+      "name": "Olle Melander",
+      "affiliations": [
+        "Department of Internal Medicine, Clinical Sciences, Lund University, Malmo, Sweden."
+      ]
+    },
+    {
+      "last_name": "Mohanty",
+      "fore_name": "Sanghamitra",
+      "initials": "S",
+      "name": "Sanghamitra Mohanty",
+      "affiliations": [
+        "Texas Cardiac Arrhythmia Institute, St David's Medical Center, Austin, TX, USA.",
+        "Dell Medical School, Austin, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Montgomery",
+      "fore_name": "Jay A",
+      "initials": "JA",
+      "name": "Jay A Montgomery",
+      "affiliations": [
+        "Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Morley",
+      "fore_name": "Michael P",
+      "initials": "MP",
+      "name": "Michael P Morley",
+      "affiliations": [
+        "Penn Cardiovascular Institute and Department of Medicine, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Morris",
+      "fore_name": "Andrew P",
+      "initials": "AP",
+      "name": "Andrew P Morris",
+      "affiliations": [
+        "Department of Biostatistics, University of Liverpool, Liverpool, UK."
+      ]
+    },
+    {
+      "last_name": "Müller-Nurasyid",
+      "fore_name": "Martina",
+      "initials": "M",
+      "name": "Martina Müller-Nurasyid",
+      "affiliations": [
+        "Department of Medicine I, University Hospital Munich, Ludwig-Maximilians-University, Munich, Germany.",
+        "DZHK (German Centre for Cardiovascular Research), partner site: Munich Heart Alliance, Munich, Germany.",
+        "Institute of Genetic Epidemiology, Helmholtz Zentrum München-German Research Center for Environmental Health, Neuherberg, Germany."
+      ],
+      "orcid": "0000-0003-3793-5910"
+    },
+    {
+      "last_name": "Natale",
+      "fore_name": "Andrea",
+      "initials": "A",
+      "name": "Andrea Natale",
+      "affiliations": [
+        "Texas Cardiac Arrhythmia Institute, St David's Medical Center, Austin, TX, USA.",
+        "Dell Medical School, Austin, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Nazarian",
+      "fore_name": "Saman",
+      "initials": "S",
+      "name": "Saman Nazarian",
+      "affiliations": [
+        "University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Neumann",
+      "fore_name": "Benjamin",
+      "initials": "B",
+      "name": "Benjamin Neumann",
+      "affiliations": [
+        "Department of Medicine I, University Hospital Munich, Ludwig-Maximilians-University, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Newton-Cheh",
+      "fore_name": "Christopher",
+      "initials": "C",
+      "name": "Christopher Newton-Cheh",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Niemeijer",
+      "fore_name": "Maartje N",
+      "initials": "MN",
+      "name": "Maartje N Niemeijer",
+      "affiliations": [
+        "Department of Epidemiology, Erasmus University Medical Center Rotterdam, Rotterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Nikus",
+      "fore_name": "Kjell",
+      "initials": "K",
+      "name": "Kjell Nikus",
+      "affiliations": [
+        "Heart Center, Department of Cardiology, Tampere University Hospital, Finland and Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland."
+      ]
+    },
+    {
+      "last_name": "Nilsson",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Nilsson",
+      "affiliations": [
+        "Department of Clinical Sciences, Lund University and Skåne University Hospital, Malmo, Sweden."
+      ]
+    },
+    {
+      "last_name": "Noordam",
+      "fore_name": "Raymond",
+      "initials": "R",
+      "name": "Raymond Noordam",
+      "affiliations": [
+        "Section of Gerontology and Geriatrics, Department of Internal Medicine, Leiden University Medical Center, Leiden, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Oellers",
+      "fore_name": "Heidi",
+      "initials": "H",
+      "name": "Heidi Oellers",
+      "affiliations": [
+        "Atrial Fibrillation NETwork, Muenster, Germany."
+      ]
+    },
+    {
+      "last_name": "Olesen",
+      "fore_name": "Morten S",
+      "initials": "MS",
+      "name": "Morten S Olesen",
+      "affiliations": [
+        "Laboratory for Molecular Cardiology, The Heart Centre, Department of Cardiology, Copenhagen University Hospital, Rigshospitalet, Copenhagen, Denmark.",
+        "The Danish National Research Foundation Centre for Cardiac Arrhythmia, Department of Biomedical Sciences, University of Copenhagen, Copenhagen, Denmark.",
+        "Department of Clinical Medicine, Faculty of Health and Medical Sciences, University of Copenhagen, Copenhagen, Denmark."
+      ]
+    },
+    {
+      "last_name": "Orho-Melander",
+      "fore_name": "Marju",
+      "initials": "M",
+      "name": "Marju Orho-Melander",
+      "affiliations": [
+        "Department of Clinical Sciences, Lund University, Malmo, Sweden."
+      ]
+    },
+    {
+      "last_name": "Padmanabhan",
+      "fore_name": "Sandosh",
+      "initials": "S",
+      "name": "Sandosh Padmanabhan",
+      "affiliations": [
+        "Institute of Cardiovascular and Medical Sciences, BHF Glasgow Cardiovascular Research Centre, University of Glasgow, Glasgow, UK."
+      ]
+    },
+    {
+      "last_name": "Pak",
+      "fore_name": "Hui-Nam",
+      "initials": "HN",
+      "name": "Hui-Nam Pak",
+      "affiliations": [
+        "Yonsei University Health System, Seoul, Korea."
+      ]
+    },
+    {
+      "last_name": "Paré",
+      "fore_name": "Guillaume",
+      "initials": "G",
+      "name": "Guillaume Paré",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Hamilton, Ontario, Canada.",
+        "Department of Pathology and Molecular Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Pedersen",
+      "fore_name": "Nancy L",
+      "initials": "NL",
+      "name": "Nancy L Pedersen",
+      "affiliations": [
+        "Department of Medical Epidemiology and Biostatistics, Karolinska Institutet, Stockholm, Sweden."
+      ]
+    },
+    {
+      "last_name": "Pera",
+      "fore_name": "Joanna",
+      "initials": "J",
+      "name": "Joanna Pera",
+      "affiliations": [
+        "Department of Neurology, Faculty of Medicine, Jagiellonian University Medical College, Krakow, Poland."
+      ]
+    },
+    {
+      "last_name": "Pereira",
+      "fore_name": "Alexandre",
+      "initials": "A",
+      "name": "Alexandre Pereira",
+      "affiliations": [
+        "Laboratory of Genetics and Molecular Biology, Heart Institute, University of São Paulo, São Paulo, Brazil.",
+        "Department of Genetics, Harvard Medical School, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Porteous",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Porteous",
+      "affiliations": [
+        "Generation Scotland, Centre for Genomic and Experimental Medicine, Institute of Genetics and Molecular Medicine, University of Edinburgh, Edinburgh, UK."
+      ]
+    },
+    {
+      "last_name": "Psaty",
+      "fore_name": "Bruce M",
+      "initials": "BM",
+      "name": "Bruce M Psaty",
+      "affiliations": [
+        "Kaiser Permanente Washington Health Research Institute, Seattle, WA, USA.",
+        "Cardiovascular Health Research Unit, Departments of Medicine, Epidemiology, and Health Services, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Pulit",
+      "fore_name": "Sara L",
+      "initials": "SL",
+      "name": "Sara L Pulit",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Department of Genetics, Center for Molecular Medicine, University Medical Centre Utrecht, Utrecht University, Utrecht, The Netherlands.",
+        "Li Ka Shing Center for Health Information and Discovery, Big Data Institute, Oxford University, Oxford, UK."
+      ],
+      "orcid": "0000-0002-2502-3669"
+    },
+    {
+      "last_name": "Pullinger",
+      "fore_name": "Clive R",
+      "initials": "CR",
+      "name": "Clive R Pullinger",
+      "affiliations": [
+        "Cardiovascular Research Institute, University of California, San Francisco, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Rader",
+      "fore_name": "Daniel J",
+      "initials": "DJ",
+      "name": "Daniel J Rader",
+      "affiliations": [
+        "Division of Cardiovascular Medicine, Department of Medicine, Perelman School of Medicine at the University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Refsgaard",
+      "fore_name": "Lena",
+      "initials": "L",
+      "name": "Lena Refsgaard",
+      "affiliations": [
+        "Laboratory for Molecular Cardiology, The Heart Centre, Department of Cardiology, Copenhagen University Hospital, Rigshospitalet, Copenhagen, Denmark.",
+        "The Danish National Research Foundation Centre for Cardiac Arrhythmia, Department of Biomedical Sciences, University of Copenhagen, Copenhagen, Denmark.",
+        "Department of Clinical Medicine, Faculty of Health and Medical Sciences, University of Copenhagen, Copenhagen, Denmark."
+      ]
+    },
+    {
+      "last_name": "Ribasés",
+      "fore_name": "Marta",
+      "initials": "M",
+      "name": "Marta Ribasés",
+      "affiliations": [
+        "Psychiatric Genetics Unit, Group of Psychiatry, Mental Health and Addiction, Vall d'Hebron Research Institute (VHIR), Universitat Autònoma de Barcelona, Barcelona, Spain.",
+        "Department of Psychiatry, Hospital Universitari Vall d'Hebron, Barcelona, Spain.",
+        "Biomedical Network Research Centre on Mental Health (CIBERSAM), Instituto de Salud Carlos III, Madrid, Spain."
+      ],
+      "orcid": "0000-0003-1039-1116"
+    },
+    {
+      "last_name": "Ridker",
+      "fore_name": "Paul M",
+      "initials": "PM",
+      "name": "Paul M Ridker",
+      "affiliations": [
+        "Divisions of Preventive and Cardiovascular Medicine, Brigham and Women's Hospital & Harvard Medical School, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Rienstra",
+      "fore_name": "Michiel",
+      "initials": "M",
+      "name": "Michiel Rienstra",
+      "affiliations": [
+        "Department of Cardiology, University Medical Center Groningen, University of Groningen, Groningen, The Netherlands."
+      ],
+      "orcid": "0000-0002-2581-070X"
+    },
+    {
+      "last_name": "Risch",
+      "fore_name": "Lorenz",
+      "initials": "L",
+      "name": "Lorenz Risch",
+      "affiliations": [
+        "University Institute of Clinical Chemistry, University of Bern, Bern, Switzerland.",
+        "Labormedizinisches Zentrum Dr. Risch, Schaan, Liechtenstein."
+      ]
+    },
+    {
+      "last_name": "Roden",
+      "fore_name": "Dan M",
+      "initials": "DM",
+      "name": "Dan M Roden",
+      "affiliations": [
+        "Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Rosand",
+      "fore_name": "Jonathan",
+      "initials": "J",
+      "name": "Jonathan Rosand",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Rosenberg",
+      "fore_name": "Michael A",
+      "initials": "MA",
+      "name": "Michael A Rosenberg",
+      "affiliations": [
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA.",
+        "University of Colorado School of Medicine, Aurora, CO, USA."
+      ]
+    },
+    {
+      "last_name": "Rost",
+      "fore_name": "Natalia",
+      "initials": "N",
+      "name": "Natalia Rost",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "J. Philip Kistler Stroke Research Center, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Rotter",
+      "fore_name": "Jerome I",
+      "initials": "JI",
+      "name": "Jerome I Rotter",
+      "affiliations": [
+        "Institute for Translational Genomics and Population Sciences, Departments of Pediatrics and Medicine, LABioMed at Harbor-UCLA Medical Center, Torrance, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Saba",
+      "fore_name": "Samir",
+      "initials": "S",
+      "name": "Samir Saba",
+      "affiliations": [
+        "Division of Cardiology, University of Pittsburgh, Pittsburgh, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Sandhu",
+      "fore_name": "Roopinder K",
+      "initials": "RK",
+      "name": "Roopinder K Sandhu",
+      "affiliations": [
+        "Division of Cardiology, University of Alberta, Edmonton, Alberta, Canada."
+      ]
+    },
+    {
+      "last_name": "Schnabel",
+      "fore_name": "Renate B",
+      "initials": "RB",
+      "name": "Renate B Schnabel",
+      "affiliations": [
+        "Department of General and Interventional Cardiology, University Heart Centre Hamburg, Hamburg, Germany.",
+        "DZHK (German Centre for Cardiovascular Research), partner site: Hamburg/Kiel/Lübeck, Hamburg, Germany."
+      ]
+    },
+    {
+      "last_name": "Schramm",
+      "fore_name": "Katharina",
+      "initials": "K",
+      "name": "Katharina Schramm",
+      "affiliations": [
+        "Department of Medicine I, University Hospital Munich, Ludwig-Maximilians-University, Munich, Germany.",
+        "Institute of Genetic Epidemiology, Helmholtz Zentrum München-German Research Center for Environmental Health, Neuherberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Schunkert",
+      "fore_name": "Heribert",
+      "initials": "H",
+      "name": "Heribert Schunkert",
+      "affiliations": [
+        "DZHK (German Centre for Cardiovascular Research), partner site: Munich Heart Alliance, Munich, Germany.",
+        "Deutsches Herzzentrum München, Klinik für Herz- und Kreislauferkrankungen, Technische Universität München, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Schurman",
+      "fore_name": "Claudia",
+      "initials": "C",
+      "name": "Claudia Schurman",
+      "affiliations": [
+        "The Charles Bronfman Institute for Personalized Medicine, Icahn School of Medicine at Mount Sinai, New York, NY, USA.",
+        "The Genetics of Obesity and Related Metabolic Traits Program, Icahn School of Medicine at Mount Sinai, New York, New York, USA."
+      ]
+    },
+    {
+      "last_name": "Scott",
+      "fore_name": "Stuart A",
+      "initials": "SA",
+      "name": "Stuart A Scott",
+      "affiliations": [
+        "Department of Genetics and Genomic Sciences, Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ],
+      "orcid": "0000-0001-5720-1864"
+    },
+    {
+      "last_name": "Seppälä",
+      "fore_name": "Ilkka",
+      "initials": "I",
+      "name": "Ilkka Seppälä",
+      "affiliations": [
+        "Department of Clinical Chemistry, Fimlab Laboratories and Finnish Cardiovascular Research Center-Tampere, Faculty of Medicine and Life Sciences, University of Tampere, Tampere, Finland."
+      ],
+      "orcid": "0000-0002-5595-2573"
+    },
+    {
+      "last_name": "Shaffer",
+      "fore_name": "Christian",
+      "initials": "C",
+      "name": "Christian Shaffer",
+      "affiliations": [
+        "Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Shah",
+      "fore_name": "Svati",
+      "initials": "S",
+      "name": "Svati Shah",
+      "affiliations": [
+        "Division of Cardiology, Department of Medicine, Duke University School of Medicine, Durham, North Carolina, USA."
+      ]
+    },
+    {
+      "last_name": "Shalaby",
+      "fore_name": "Alaa A",
+      "initials": "AA",
+      "name": "Alaa A Shalaby",
+      "affiliations": [
+        "Division of Cardiology, University of Pittsburgh, Pittsburgh, PA, USA.",
+        "Cardiology Division, Pittsburgh VA Healthcare System, Pittsburgh, Pennsylvania, USA."
+      ]
+    },
+    {
+      "last_name": "Shim",
+      "fore_name": "Jaemin",
+      "initials": "J",
+      "name": "Jaemin Shim",
+      "affiliations": [
+        "Korea University Anam Hospital, Seoul, Korea."
+      ]
+    },
+    {
+      "last_name": "Shoemaker",
+      "fore_name": "M Benjamin",
+      "initials": "MB",
+      "name": "M Benjamin Shoemaker",
+      "affiliations": [
+        "Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Siland",
+      "fore_name": "Joylene E",
+      "initials": "JE",
+      "name": "Joylene E Siland",
+      "affiliations": [
+        "Department of Cardiology, University Medical Center Groningen, University of Groningen, Groningen, The Netherlands."
+      ],
+      "orcid": "0000-0003-4404-1245"
+    },
+    {
+      "last_name": "Sinisalo",
+      "fore_name": "Juha",
+      "initials": "J",
+      "name": "Juha Sinisalo",
+      "affiliations": [
+        "Heart and Lung Center HUS, Helsinki University Central Hospital, Helsinki, Finland."
+      ],
+      "orcid": "0000-0002-0169-5137"
+    },
+    {
+      "last_name": "Sinner",
+      "fore_name": "Moritz F",
+      "initials": "MF",
+      "name": "Moritz F Sinner",
+      "affiliations": [
+        "Department of Medicine I, University Hospital Munich, Ludwig-Maximilians-University, Munich, Germany.",
+        "DZHK (German Centre for Cardiovascular Research), partner site: Munich Heart Alliance, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Slowik",
+      "fore_name": "Agnieszka",
+      "initials": "A",
+      "name": "Agnieszka Slowik",
+      "affiliations": [
+        "Department of Neurology, Faculty of Medicine, Jagiellonian University Medical College, Krakow, Poland."
+      ]
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "Albert V",
+      "initials": "AV",
+      "name": "Albert V Smith",
+      "affiliations": [
+        "Icelandic Heart Association, Kopavogur, Iceland.",
+        "Faculty of Medicine, University of Iceland, Reykavik, Iceland."
+      ],
+      "orcid": "0000-0003-1942-5845"
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "Blair H",
+      "initials": "BH",
+      "name": "Blair H Smith",
+      "affiliations": [
+        "Division of Population Health Sciences, University of Dundee, Dundee, UK."
+      ],
+      "orcid": "0000-0002-5362-9430"
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "J Gustav",
+      "initials": "JG",
+      "name": "J Gustav Smith",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Department of Cardiology, Clinical Sciences, Lund University and Skåne University Hospital, Lund, Sweden."
+      ]
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "Jonathan D",
+      "initials": "JD",
+      "name": "Jonathan D Smith",
+      "affiliations": [
+        "Departments of Cardiovascular Medicine, Cellular and Molecular Medicine, Molecular Cardiology, and Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH, USA."
+      ],
+      "orcid": "0000-0002-0415-386X"
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "Nicholas L",
+      "initials": "NL",
+      "name": "Nicholas L Smith",
+      "affiliations": [
+        "Cardiovascular Health Research Unit and Department of Epidemiology, University of Washington, Seattle, WA, USA.",
+        "Kaiser Permanente Washington Health Research Institute, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Soliman",
+      "fore_name": "Elsayed Z",
+      "initials": "EZ",
+      "name": "Elsayed Z Soliman",
+      "affiliations": [
+        "Epidemiological Cardiology Research Center (EPICARE), Wake Forest School of Medicine, Winston Salem, NC, USA."
+      ],
+      "orcid": "0000-0001-5632-8150"
+    },
+    {
+      "last_name": "Sotoodehnia",
+      "fore_name": "Nona",
+      "initials": "N",
+      "name": "Nona Sotoodehnia",
+      "affiliations": [
+        "Cardiovascular Health Research Unit, Departments of Medicine and Epidemiology, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Stricker",
+      "fore_name": "Bruno H",
+      "initials": "BH",
+      "name": "Bruno H Stricker",
+      "affiliations": [
+        "Department of Epidemiology and Internal Medicine, Erasmus University Medical Center Rotterdam, Rotterdam, The Netherlands.",
+        "Inspectorate of Health Care, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Sun",
+      "fore_name": "Albert",
+      "initials": "A",
+      "name": "Albert Sun",
+      "affiliations": [
+        "Division of Cardiology, Department of Medicine, Duke University School of Medicine, Durham, North Carolina, USA."
+      ]
+    },
+    {
+      "last_name": "Sun",
+      "fore_name": "Han",
+      "initials": "H",
+      "name": "Han Sun",
+      "affiliations": [
+        "Departments of Cardiovascular Medicine, Cellular and Molecular Medicine, Molecular Cardiology, and Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH, USA."
+      ]
+    },
+    {
+      "last_name": "Svendsen",
+      "fore_name": "Jesper H",
+      "initials": "JH",
+      "name": "Jesper H Svendsen",
+      "affiliations": [
+        "Laboratory for Molecular Cardiology, The Heart Centre, Department of Cardiology, Copenhagen University Hospital, Rigshospitalet, Copenhagen, Denmark.",
+        "Department of Clinical Medicine, Faculty of Health and Medical Sciences, University of Copenhagen, Copenhagen, Denmark."
+      ],
+      "orcid": "0000-0001-8466-8515"
+    },
+    {
+      "last_name": "Tanaka",
+      "fore_name": "Toshihiro",
+      "initials": "T",
+      "name": "Toshihiro Tanaka",
+      "affiliations": [
+        "Department of Human Genetics and Disease Diversity, Tokyo Medical and Dental University Graduate School of Medical and Dental Sciences, Tokyo, Japan."
+      ],
+      "orcid": "0000-0001-6201-9784"
+    },
+    {
+      "last_name": "Tanriverdi",
+      "fore_name": "Kahraman",
+      "initials": "K",
+      "name": "Kahraman Tanriverdi",
+      "affiliations": [
+        "University of Massachusetts Medical School Worcester, Worcester, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Taylor",
+      "fore_name": "Kent D",
+      "initials": "KD",
+      "name": "Kent D Taylor",
+      "affiliations": [
+        "Institute for Translational Genomics and Population Sciences, Department of Pediatrics, LABioMed at Harbor-UCLA Medical Center, Torrance, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Teder-Laving",
+      "fore_name": "Maris",
+      "initials": "M",
+      "name": "Maris Teder-Laving",
+      "affiliations": [
+        "Estonian Genome Center, University of Tartu, Tartu, Estonia."
+      ]
+    },
+    {
+      "last_name": "Teumer",
+      "fore_name": "Alexander",
+      "initials": "A",
+      "name": "Alexander Teumer",
+      "affiliations": [
+        "DZHK (German Centre for Cardiovascular Research), partner site: Greifswald, Greifswald, Germany.",
+        "Institute for Community Medicine, University Medicine Greifswald, Greifswald, Germany."
+      ],
+      "orcid": "0000-0002-8309-094X"
+    },
+    {
+      "last_name": "Thériault",
+      "fore_name": "Sébastien",
+      "initials": "S",
+      "name": "Sébastien Thériault",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Hamilton, Ontario, Canada.",
+        "Department of Pathology and Molecular Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Trompet",
+      "fore_name": "Stella",
+      "initials": "S",
+      "name": "Stella Trompet",
+      "affiliations": [
+        "Department of Cardiology, Leiden University Medical Center, Leiden, The Netherlands.",
+        "Section of Gerontology and Geriatrics, Department of Internal Medicine, Leiden University Medical Center, Leiden, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Tucker",
+      "fore_name": "Nathan R",
+      "initials": "NR",
+      "name": "Nathan R Tucker",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Cardiovascular Research Center, Massachusetts General Hospital, Boston, MA, USA."
+      ],
+      "orcid": "0000-0002-5071-4218"
+    },
+    {
+      "last_name": "Tveit",
+      "fore_name": "Arnljot",
+      "initials": "A",
+      "name": "Arnljot Tveit",
+      "affiliations": [
+        "Department of Medical Research, Bærum Hospital, Vestre Viken Hospital Trust, Drammen, Norway.",
+        "Institute of Clinical Medicine, University of Oslo, Oslo, Norway."
+      ]
+    },
+    {
+      "last_name": "Uitterlinden",
+      "fore_name": "Andre G",
+      "initials": "AG",
+      "name": "Andre G Uitterlinden",
+      "affiliations": [
+        "Department of Epidemiology and Internal Medicine, Erasmus University Medical Center Rotterdam, Rotterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Van Der Harst",
+      "fore_name": "Pim",
+      "initials": "P",
+      "name": "Pim Van Der Harst",
+      "affiliations": [
+        "Department of Cardiology, University Medical Center Groningen, University of Groningen, Groningen, The Netherlands."
+      ],
+      "orcid": "0000-0002-2713-686X"
+    },
+    {
+      "last_name": "Van Gelder",
+      "fore_name": "Isabelle C",
+      "initials": "IC",
+      "name": "Isabelle C Van Gelder",
+      "affiliations": [
+        "Department of Cardiology, University Medical Center Groningen, University of Groningen, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Van Wagoner",
+      "fore_name": "David R",
+      "initials": "DR",
+      "name": "David R Van Wagoner",
+      "affiliations": [
+        "Departments of Cardiovascular Medicine, Cellular and Molecular Medicine, Molecular Cardiology, and Quantitative Health Sciences, Cleveland Clinic, Cleveland, OH, USA."
+      ],
+      "orcid": "0000-0001-8250-9828"
+    },
+    {
+      "last_name": "Verweij",
+      "fore_name": "Niek",
+      "initials": "N",
+      "name": "Niek Verweij",
+      "affiliations": [
+        "Department of Cardiology, University Medical Center Groningen, University of Groningen, Groningen, The Netherlands."
+      ],
+      "orcid": "0000-0002-4303-7685"
+    },
+    {
+      "last_name": "Vlachopoulou",
+      "fore_name": "Efthymia",
+      "initials": "E",
+      "name": "Efthymia Vlachopoulou",
+      "affiliations": [
+        "Transplantation Laboratory, Medicum, University of Helsinki, Helsinki, Finland."
+      ]
+    },
+    {
+      "last_name": "Völker",
+      "fore_name": "Uwe",
+      "initials": "U",
+      "name": "Uwe Völker",
+      "affiliations": [
+        "DZHK (German Centre for Cardiovascular Research), partner site: Greifswald, Greifswald, Germany.",
+        "Interfaculty Institute for Genetics and Functional Genomics, University Medicine and Ernst-Moritz-Arndt-University Greifswald, Greifswald, Germany."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Biqi",
+      "initials": "B",
+      "name": "Biqi Wang",
+      "affiliations": [
+        "Department of Biostatistics, Boston University School of Public Health, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Weeke",
+      "fore_name": "Peter E",
+      "initials": "PE",
+      "name": "Peter E Weeke",
+      "affiliations": [
+        "Laboratory for Molecular Cardiology, The Heart Centre, Department of Cardiology, Copenhagen University Hospital, Rigshospitalet, Copenhagen, Denmark.",
+        "Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Weijs",
+      "fore_name": "Bob",
+      "initials": "B",
+      "name": "Bob Weijs",
+      "affiliations": [
+        "Maastricht University Medical Center+ and Cardiovascular Research Institute Maastricht, Department of Cardiology, Maastricht, The Netherlands."
+      ],
+      "orcid": "0000-0003-3202-4931"
+    },
+    {
+      "last_name": "Weiss",
+      "fore_name": "Raul",
+      "initials": "R",
+      "name": "Raul Weiss",
+      "affiliations": [
+        "Division of Cardiovascular Medicine, The Ohio State University, Columbus, OH, USA."
+      ]
+    },
+    {
+      "last_name": "Weiss",
+      "fore_name": "Stefan",
+      "initials": "S",
+      "name": "Stefan Weiss",
+      "affiliations": [
+        "DZHK (German Centre for Cardiovascular Research), partner site: Greifswald, Greifswald, Germany.",
+        "Interfaculty Institute for Genetics and Functional Genomics, University Medicine and Ernst-Moritz-Arndt-University Greifswald, Greifswald, Germany."
+      ],
+      "orcid": "0000-0002-3553-4315"
+    },
+    {
+      "last_name": "Wells",
+      "fore_name": "Quinn S",
+      "initials": "QS",
+      "name": "Quinn S Wells",
+      "affiliations": [
+        "Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Wiggins",
+      "fore_name": "Kerri L",
+      "initials": "KL",
+      "name": "Kerri L Wiggins",
+      "affiliations": [
+        "Cardiovascular Health Research Unit, Department of Medicine, University of Washington, Seattle, WA, USA."
+      ],
+      "orcid": "0000-0003-2749-1279"
+    },
+    {
+      "last_name": "Wong",
+      "fore_name": "Jorge A",
+      "initials": "JA",
+      "name": "Jorge A Wong",
+      "affiliations": [
+        "Division of Cardiology, Hamilton Health Sciences, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Woo",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Woo",
+      "affiliations": [
+        "University of Cincinnati College of Medicine, Cincinnati, OH, USA."
+      ]
+    },
+    {
+      "last_name": "Worrall",
+      "fore_name": "Bradford B",
+      "initials": "BB",
+      "name": "Bradford B Worrall",
+      "affiliations": [
+        "Departments of Neurology and Public Health Science, University of Virginia Health System, Charlottesville, VA, USA."
+      ]
+    },
+    {
+      "last_name": "Yang",
+      "fore_name": "Pil-Sung",
+      "initials": "PS",
+      "name": "Pil-Sung Yang",
+      "affiliations": [
+        "Yonsei University Health System, Seoul, Korea."
+      ]
+    },
+    {
+      "last_name": "Yao",
+      "fore_name": "Jie",
+      "initials": "J",
+      "name": "Jie Yao",
+      "affiliations": [
+        "Institute for Translational Genomics and Population Sciences, Department of Pediatrics, LABioMed at Harbor-UCLA Medical Center, Torrance, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Yoneda",
+      "fore_name": "Zachary T",
+      "initials": "ZT",
+      "name": "Zachary T Yoneda",
+      "affiliations": [
+        "Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Zeller",
+      "fore_name": "Tanja",
+      "initials": "T",
+      "name": "Tanja Zeller",
+      "affiliations": [
+        "Department of General and Interventional Cardiology, University Heart Centre Hamburg, Hamburg, Germany.",
+        "DZHK (German Centre for Cardiovascular Research), partner site: Hamburg/Kiel/Lübeck, Hamburg, Germany."
+      ]
+    },
+    {
+      "last_name": "Zeng",
+      "fore_name": "Lingyao",
+      "initials": "L",
+      "name": "Lingyao Zeng",
+      "affiliations": [
+        "Deutsches Herzzentrum München, Klinik für Herz- und Kreislauferkrankungen, Technische Universität München, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Lubitz",
+      "fore_name": "Steven A",
+      "initials": "SA",
+      "name": "Steven A Lubitz",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Cardiovascular Research Center, Massachusetts General Hospital, Boston, MA, USA.",
+        "Cardiac Arrhythmia Service, Massachusetts General Hospital, Boston, MA, USA."
+      ],
+      "orcid": "0000-0002-9599-4866"
+    },
+    {
+      "last_name": "Lunetta",
+      "fore_name": "Kathryn L",
+      "initials": "KL",
+      "name": "Kathryn L Lunetta",
+      "affiliations": [
+        "NHLBI and Boston University's Framingham Heart Study, Framingham, MA, USA.",
+        "Department of Biostatistics, Boston University School of Public Health, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Ellinor",
+      "fore_name": "Patrick T",
+      "initials": "PT",
+      "name": "Patrick T Ellinor",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA. ellinor@mgh.harvard.edu.",
+        "Cardiovascular Research Center, Massachusetts General Hospital, Boston, MA, USA. ellinor@mgh.harvard.edu.",
+        "Cardiac Arrhythmia Service, Massachusetts General Hospital, Boston, MA, USA. ellinor@mgh.harvard.edu."
+      ],
+      "orcid": "0000-0002-2067-0533"
+    }
+  ],
+  "journal": {
+    "title": "Nature genetics",
+    "iso_abbreviation": "Nat Genet",
+    "issn": "1546-1718",
+    "issn_type": "Electronic",
+    "volume": "50",
+    "issue": "9",
+    "pub_year": "2018",
+    "pub_month": "Jun",
+    "pub_day": "11"
+  },
+  "start_page": "1225",
+  "end_page": "1233",
+  "pages": "1225-1233",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Meta-Analysis"
+  ],
+  "keywords": [
+    "Atrial Fibrillation",
+    "Case-Control Studies",
+    "Ethnicity",
+    "Genetic Predisposition to Disease",
+    "Genome-Wide Association Study",
+    "Humans",
+    "Quantitative Trait Loci",
+    "Transcriptome"
+  ],
+  "article_ids": {
+    "pubmed": "29892015",
+    "mid": "NIHMS986675",
+    "pmc": "PMC6136836",
+    "doi": "10.1038/s41588-018-0133-9",
+    "pii": "10.1038/s41588-018-0133-9"
+  },
+  "doi": "10.1038/s41588-018-0133-9",
+  "pmc_id": "PMC6136836",
+  "dates": {
+    "completed": "2019-04-24",
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "U01 HG007417",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL139731",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL120393",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL138737",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL128914",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL111314",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K23 HL127296",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MC_PC_17228",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "2014105",
+      "agency": "Doris Duke Charitable Foundation",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL116747",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K24 HL105780",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL092217",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "L30 HL123413",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL092577",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 GM007569",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MC_QA137853",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "U01 HL130114",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HL120393",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "16EIA26410001",
+      "agency": "American Heart Association-American Stroke Association",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL090620",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL105756",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:15:03.385447",
+    "pmid": "29892015"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "pmid": "36339624",
+  "uid": "36339624",
+  "title": "An individualized medication model of sodium valproate for patients with bipolar disorder based on machine learning and deep learning techniques.",
+  "abstract": "Valproic acid/sodium valproate (VPA) is a widely used anticonvulsant drug for maintenance treatment of bipolar disorders. In order to balance the efficacy and adverse events of VPA treatment, an individualized dose regimen is necessary. This study aimed to establish an individualized medication model of VPA for patients with bipolar disorder based on machine learning and deep learning techniques. The sequential forward selection (SFS) algorithm was applied for selecting a feature subset, and random forest was used for interpolating missing values. Then, we compared nine models using XGBoost, LightGBM, CatBoost, random forest, GBDT, SVM, logistic regression, ANN, and TabNet, and CatBoost was chosen to establish the individualized medication model with the best performance (accuracy = 0.85, AUC = 0.91, sensitivity = 0.85, and specificity = 0.83). Three important variables that correlated with VPA daily dose included VPA TDM value, antipsychotics, and indirect bilirubin. SHapley Additive exPlanations was applied to visually interpret their impacts on VPA daily dose. Last, the confusion matrix presented that predicting a daily dose of 0.5 g VPA had a precision of 55.56% and recall rate of 83.33%, and predicting a daily dose of 1 g VPA had a precision of 95.83% and a recall rate of 85.19%. In conclusion, the individualized medication model of VPA for patients with bipolar disorder based on CatBoost had a good prediction ability, which provides guidance for clinicians to propose the optimal medication regimen.",
+  "authors": [
+    {
+      "last_name": "Zheng",
+      "fore_name": "Ping",
+      "initials": "P",
+      "name": "Ping Zheng",
+      "affiliations": [
+        "Department of Pharmacy, Nanfang Hospital, Southern Medical University, Guangzhou, China."
+      ]
+    },
+    {
+      "last_name": "Yu",
+      "fore_name": "Ze",
+      "initials": "Z",
+      "name": "Ze Yu",
+      "affiliations": [
+        "Institute of Interdisciplinary Integrative Medicine Research, Shanghai University of Traditional Chinese Medicine, Shanghai, China."
+      ]
+    },
+    {
+      "last_name": "Mo",
+      "fore_name": "Liqian",
+      "initials": "L",
+      "name": "Liqian Mo",
+      "affiliations": [
+        "Department of Pharmacy, Nanfang Hospital, Southern Medical University, Guangzhou, China."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "Zhongshan School of Medicine, SYSU, Guangzhou, China."
+      ]
+    },
+    {
+      "last_name": "Lyu",
+      "fore_name": "Chunming",
+      "initials": "C",
+      "name": "Chunming Lyu",
+      "affiliations": [
+        "Experiment Center for Science and Technology, Shanghai University of Traditional Chinese Medicine, Shanghai, China."
+      ]
+    },
+    {
+      "last_name": "Yu",
+      "fore_name": "Yongsheng",
+      "initials": "Y",
+      "name": "Yongsheng Yu",
+      "affiliations": [
+        "Beijing Medicinovo Technology Co., Ltd., Beijing, China."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Jinyuan",
+      "initials": "J",
+      "name": "Jinyuan Zhang",
+      "affiliations": [
+        "Beijing Medicinovo Technology Co., Ltd., Beijing, China."
+      ]
+    },
+    {
+      "last_name": "Hao",
+      "fore_name": "Xin",
+      "initials": "X",
+      "name": "Xin Hao",
+      "affiliations": [
+        "Dalian Medicinovo Technology Co., Ltd., Dalian, Liaoning, China."
+      ]
+    },
+    {
+      "last_name": "Wei",
+      "fore_name": "Hai",
+      "initials": "H",
+      "name": "Hai Wei",
+      "affiliations": [
+        "Institute of Interdisciplinary Integrative Medicine Research, Shanghai University of Traditional Chinese Medicine, Shanghai, China."
+      ]
+    },
+    {
+      "last_name": "Gao",
+      "fore_name": "Fei",
+      "initials": "F",
+      "name": "Fei Gao",
+      "affiliations": [
+        "Beijing Medicinovo Technology Co., Ltd., Beijing, China."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Yilei",
+      "initials": "Y",
+      "name": "Yilei Li",
+      "affiliations": [
+        "Department of Pharmacy, Nanfang Hospital, Southern Medical University, Guangzhou, China."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Frontiers in pharmacology",
+    "iso_abbreviation": "Front Pharmacol",
+    "issn": "1663-9812",
+    "issn_type": "Print",
+    "volume": "13",
+    "pub_year": "2022"
+  },
+  "start_page": "890221",
+  "pages": "890221",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "36339624",
+    "pmc": "PMC9627622",
+    "doi": "10.3389/fphar.2022.890221",
+    "pii": "890221"
+  },
+  "doi": "10.3389/fphar.2022.890221",
+  "pmc_id": "PMC9627622",
+  "dates": {
+    "revised": "2022-11-08"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.541340",
+    "pmid": "36339624"
+  }
+}

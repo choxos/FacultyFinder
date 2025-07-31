@@ -1,0 +1,83 @@
+{
+  "pmid": "38530738",
+  "uid": "38530738",
+  "title": "Multi-Label Conditional Generation From Pre-Trained Models.",
+  "abstract": "Although modern generative models achieve excellent quality in a variety of tasks, they often lack the essential ability to generate examples with requested properties, such as the age of the person in the photo or the weight of the generated molecule. To overcome these limitations we propose PluGeN (Plugin Generative Network), a simple yet effective generative technique that can be used as a plugin for pre-trained generative models. The idea behind our approach is to transform the entangled latent representation using a flow-based module into a multi-dimensional space where the values of each attribute are modeled as an independent one-dimensional distribution. In consequence, PluGeN can generate new samples with desired attributes as well as manipulate labeled attributes of existing examples. Due to the disentangling of the latent representation, we are even able to generate samples with rare or unseen combinations of attributes in the dataset, such as a young person with gray hair, men with make-up, or women with beards. In contrast to competitive approaches, PluGeN can be trained on partially labeled data. We combined PluGeN with GAN and VAE models and applied it to conditional generation and manipulation of images, chemical molecule modeling and 3D point clouds generation.",
+  "authors": [
+    {
+      "last_name": "Proszewska",
+      "fore_name": "Magdalena",
+      "initials": "M",
+      "name": "Magdalena Proszewska",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wolczyk",
+      "fore_name": "Maciej",
+      "initials": "M",
+      "name": "Maciej Wolczyk",
+      "affiliations": []
+    },
+    {
+      "last_name": "Zieba",
+      "fore_name": "Maciej",
+      "initials": "M",
+      "name": "Maciej Zieba",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wielopolski",
+      "fore_name": "Patryk",
+      "initials": "P",
+      "name": "Patryk Wielopolski",
+      "affiliations": []
+    },
+    {
+      "last_name": "Maziarka",
+      "fore_name": "Lukasz",
+      "initials": "L",
+      "name": "Lukasz Maziarka",
+      "affiliations": []
+    },
+    {
+      "last_name": "Smieja",
+      "fore_name": "Marek",
+      "initials": "M",
+      "name": "Marek Smieja",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "IEEE transactions on pattern analysis and machine intelligence",
+    "iso_abbreviation": "IEEE Trans Pattern Anal Mach Intell",
+    "issn": "1939-3539",
+    "issn_type": "Electronic",
+    "volume": "46",
+    "issue": "9",
+    "pub_year": "2024",
+    "pub_month": "Sep"
+  },
+  "start_page": "6185",
+  "end_page": "6198",
+  "pages": "6185-6198",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "38530738",
+    "doi": "10.1109/TPAMI.2024.3382008"
+  },
+  "doi": "10.1109/TPAMI.2024.3382008",
+  "dates": {
+    "revised": "2024-08-07"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:59:37.899829",
+    "pmid": "38530738"
+  }
+}

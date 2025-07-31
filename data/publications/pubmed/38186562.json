@@ -1,0 +1,132 @@
+{
+  "pmid": "38186562",
+  "uid": "38186562",
+  "title": "High-Throughput Computing to Automate Population-Based Studies to Detect the 30-Day Risk of Adverse Outcomes After New Outpatient Medication Use in Older Adults with Chronic Kidney Disease: A Clinical Research Protocol.",
+  "abstract": "BACKGROUND: Safety issues are detected in about one third of prescription drugs in the years following regulatory agency approval. Older adults, especially those with chronic kidney disease, are at particular risk of adverse reactions to prescription drugs. This protocol describes a new approach that may identify credible drug-safety signals more efficiently using administrative health care data. OBJECTIVE: To use high-throughput computing and automation to conduct 700+ drug-safety cohort studies in older adults in Ontario, Canada. Each study will compare 74 acute (30-day) outcomes in patients who start a new prescription drug (new users) to a group of nonusers with similar baseline health characteristics. Risks will be assessed within strata of baseline kidney function. DESIGN AND SETTING: The studies will be population-based, new-user cohort studies conducted using linked administrative health care databases in Ontario, Canada (January 1, 2008, to March 1, 2020). The source population for these studies will be residents of Ontario aged 66 years or older who filled at least one outpatient prescription through the Ontario Drug Benefit (ODB) program during the study period (all residents have universal health care, and those aged 65+ have universal prescription drug coverage through the ODB). PATIENTS: We identified 3.2 million older adults in the source population during the study period and built 700+ initial medication cohorts, each containing mutually exclusive groups of new users and nonusers. Nonusers were randomly assigned cohort entry dates that followed the same distribution of prescription start dates as new users. Eligibility criteria included a baseline estimated glomerular filtration rate (eGFR) measurement within 12 months before the cohort entry date (median time was 71 days before cohort entry in the new user group), no prior receipt of maintenance dialysis or a kidney transplant, and no prior prescriptions for drugs in the same subclass as the study drug. New users and nonusers will be balanced on ~400 baseline health characteristics using inverse probability of treatment weighting on propensity scores within 3 strata of baseline eGFR: ≥60, 45 to <60, <45 mL/min per 1.73 m[2]. OUTCOMES: We will compare new user and nonuser groups on 74 clinically relevant outcomes (17 composites and 57 individual outcomes) in the 30 days after cohort entry. We used a prespecified approach to identify these 74 outcomes. STATISTICAL ANALYSIS PLAN: In each cohort, we will obtain eGFR-stratum-specific weighted risk ratios and risk differences using modified Poisson regression and binomial regression, respectively. Additive and multiplicative interaction by eGFR category will be examined. Drug-outcome associations that meet prespecified criteria (identified signals) will be further examined in additional analyses (including survival, negative-control exposure, and E-value analyses) and visualizations. RESULTS: The initial medication cohorts had a median of 6120 new users per cohort (interquartile range: 1469-38 839) and a median of 1 088 301 nonusers (interquartile range: 751 697-1 267 009). Medications with the largest number of new users were amoxicillin trihydrate (n = 1 000 032), cephalexin (n = 571 566), prescription acetaminophen (n = 571 563), and ciprofloxacin (n = 504,374); 19% to 29% of new users in these cohorts had an eGFR <60 mL/min per 1.73 m[2]. LIMITATIONS: Despite our use of robust techniques to balance baseline indicators and to control for confounding by indication, residual confounding will remain a possibility. Only acute (30-day) outcomes will be examined. Our data sources do not include nonprescription (over-the-counter) drugs or drugs prescribed in hospitals and do not include outpatient prescription drug use in children or adults <65 years. CONCLUSION: This accelerated approach to conducting postmarket drug-safety studies has the potential to more efficiently detect drug-safety signals in a vulnerable population. The results of this protocol may ultimately help improve medication safety.",
+  "authors": [
+    {
+      "last_name": "Abdullah",
+      "fore_name": "Sheikh S",
+      "initials": "SS",
+      "name": "Sheikh S Abdullah",
+      "affiliations": [
+        "London Health Sciences Centre and ICES Western, London, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Rostamzadeh",
+      "fore_name": "Neda",
+      "initials": "N",
+      "name": "Neda Rostamzadeh",
+      "affiliations": [
+        "Insight Lab, Western University and ICES Western, London, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Muanda",
+      "fore_name": "Flory T",
+      "initials": "FT",
+      "name": "Flory T Muanda",
+      "affiliations": [
+        "London Health Sciences Centre, Western University and ICES Western, London, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "McArthur",
+      "fore_name": "Eric",
+      "initials": "E",
+      "name": "Eric McArthur",
+      "affiliations": [
+        "London Health Sciences Centre and ICES Western, London, ON, Canada."
+      ],
+      "orcid": "0009-0000-6944-6471"
+    },
+    {
+      "last_name": "Weir",
+      "fore_name": "Matthew A",
+      "initials": "MA",
+      "name": "Matthew A Weir",
+      "affiliations": [
+        "London Health Sciences Centre, Western University and ICES Western, London, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Sontrop",
+      "fore_name": "Jessica M",
+      "initials": "JM",
+      "name": "Jessica M Sontrop",
+      "affiliations": [
+        "London Health Sciences Centre, Western University, London, ON, Canada."
+      ],
+      "orcid": "0000-0001-7784-2028"
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Richard B",
+      "initials": "RB",
+      "name": "Richard B Kim",
+      "affiliations": [
+        "Western University, London, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Kamran",
+      "fore_name": "Sedig",
+      "initials": "S",
+      "name": "Sedig Kamran",
+      "affiliations": [
+        "Insight Lab, Western University, London, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Garg",
+      "fore_name": "Amit X",
+      "initials": "AX",
+      "name": "Amit X Garg",
+      "affiliations": [
+        "London Health Sciences Centre, Western University and ICES Western, London, ON, Canada.",
+        "Victoria Hospital, London Health Sciences Centre, London, ON, Canada."
+      ],
+      "orcid": "0000-0003-3398-3114"
+    }
+  ],
+  "journal": {
+    "title": "Canadian journal of kidney health and disease",
+    "iso_abbreviation": "Can J Kidney Health Dis",
+    "issn": "2054-3581",
+    "issn_type": "Print",
+    "volume": "11",
+    "pub_year": "2024"
+  },
+  "start_page": "20543581231221891",
+  "pages": "20543581231221891",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "38186562",
+    "pmc": "PMC10771740",
+    "doi": "10.1177/20543581231221891",
+    "pii": "10.1177_20543581231221891"
+  },
+  "doi": "10.1177/20543581231221891",
+  "pmc_id": "PMC10771740",
+  "dates": {
+    "revised": "2024-02-10"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "P20 GM139760",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:22:09.402206",
+    "pmid": "38186562"
+  }
+}

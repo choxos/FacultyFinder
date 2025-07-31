@@ -1,0 +1,245 @@
+{
+  "openalex_id": "W2130640900",
+  "doi": "https://doi.org/10.1109/tasl.2009.2017438",
+  "title": "Environmental Sound Recognition With Time–Frequency Audio Features",
+  "abstract": "The paper considers the task of recognizing environmental sounds for the understanding of a scene or context surrounding an audio sensor. A variety of features have been proposed for audio recognition, including the popular Mel-frequency cepstral coefficients (MFCCs) which describe the audio spectral shape. Environmental sounds, such as chirpings of insects and sounds of rain which are typically noise-like with a broad flat spectrum, may include strong temporal domain signatures. However, only few temporal-domain features have been developed to characterize such diverse audio signals previously. Here, we perform an empirical feature analysis for audio environment characterization and propose to use the matching pursuit (MP) algorithm to obtain effective time-frequency features. The MP-based method utilizes a dictionary of atoms for feature selection, resulting in a flexible, intuitive and physically interpretable set of features. The MP-based feature is adopted to supplement the MFCC features to yield higher recognition accuracy for environmental sounds. Extensive experiments are conducted to demonstrate the effectiveness of these joint features for unstructured environmental sound classification, including listening tests to study human recognition capabilities. Our recognition system has shown to produce comparable performance as human listeners.",
+  "authors": [
+    {
+      "display_name": "Selina Chu",
+      "id": "A5112776516",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1174212",
+          "display_name": "University of Southern California",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Selina Chu"
+    },
+    {
+      "display_name": "Shrikanth Narayanan",
+      "id": "A5103555640",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1174212",
+          "display_name": "University of Southern California",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shrikanth Narayanan"
+    },
+    {
+      "display_name": "C.‐C. Jay Kuo",
+      "id": "A5001082656",
+      "orcid": "https://orcid.org/0000-0001-9474-5035",
+      "institutions": [
+        {
+          "id": "I1174212",
+          "display_name": "University of Southern California",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C.-C. Jay Kuo"
+    }
+  ],
+  "publication_year": 2009,
+  "publication_date": "2009-06-25",
+  "type": "article",
+  "cited_by_count": 617,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S199497470",
+    "display_name": "IEEE Transactions on Audio Speech and Language Processing",
+    "issn_l": "1558-7916",
+    "issn": [
+      "1558-7916",
+      "1558-7924"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "17",
+  "issue": "6",
+  "first_page": "1142",
+  "last_page": "1158",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C151989614",
+      "display_name": "Mel-frequency cepstrum",
+      "level": 3,
+      "score": 0.8320706
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.7768763
+    },
+    {
+      "id": "C28490314",
+      "display_name": "Speech recognition",
+      "level": 1,
+      "score": 0.6447751
+    },
+    {
+      "id": "C86781634",
+      "display_name": "Environmental noise",
+      "level": 3,
+      "score": 0.5843034
+    },
+    {
+      "id": "C2776401178",
+      "display_name": "Feature (linguistics)",
+      "level": 2,
+      "score": 0.5748591
+    },
+    {
+      "id": "C2779343474",
+      "display_name": "Context (archaeology)",
+      "level": 2,
+      "score": 0.5034265
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.4966727
+    },
+    {
+      "id": "C177291462",
+      "display_name": "Active listening",
+      "level": 2,
+      "score": 0.48559207
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.48542818
+    },
+    {
+      "id": "C99498987",
+      "display_name": "Noise (video)",
+      "level": 3,
+      "score": 0.45976466
+    },
+    {
+      "id": "C19118579",
+      "display_name": "Frequency domain",
+      "level": 2,
+      "score": 0.4574217
+    },
+    {
+      "id": "C52622490",
+      "display_name": "Feature extraction",
+      "level": 2,
+      "score": 0.43303928
+    },
+    {
+      "id": "C203718221",
+      "display_name": "Sound (geography)",
+      "level": 2,
+      "score": 0.23707896
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.19197908
+    },
+    {
+      "id": "C24890656",
+      "display_name": "Acoustics",
+      "level": 1,
+      "score": 0.1442624
+    },
+    {
+      "id": "C46312422",
+      "display_name": "Communication",
+      "level": 1,
+      "score": 0.06861228
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C144024400",
+      "display_name": "Sociology",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11309",
+      "display_name": "Music and Audio Processing",
+      "score": 0.9998
+    },
+    {
+      "id": "T10860",
+      "display_name": "Speech and Audio Processing",
+      "score": 0.9993
+    },
+    {
+      "id": "T11665",
+      "display_name": "Animal Vocal Communication and Behavior",
+      "score": 0.9894
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tasl.2009.2017438",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:26:06.796541",
+  "source_database": "OpenAlex"
+}

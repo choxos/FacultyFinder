@@ -1,0 +1,604 @@
+{
+  "openalex_id": "W2193901525",
+  "doi": "https://doi.org/10.18632/oncotarget.6468",
+  "title": "Longer genotypically-estimated leukocyte telomere length is associated with increased adult glioma risk",
+  "abstract": "// Kyle M. Walsh 1,2 , Veryan Codd 3,4 , Terri Rice 1 , Christopher P. Nelson 3,4 , Ivan V. Smirnov 5 , Lucie S. McCoy 1 , Helen M. Hansen 1 , Edward Elhauge 1 , Juhi Ojha 1 , Stephen S. Francis 5 , Nils R. Madsen 1 , Paige M. Bracci 6 , Alexander R. Pico 7 , Annette M. Molinaro 5 , Tarik Tihan 8 , Mitchel S. Berger 5 , Susan M. Chang 5 , Michael D. Prados 5 , Robert B. Jenkins 9 , Joseph L. Wiemels 1,6,10 , ENGAGE Consortium Telomere Group 11 , Nilesh J. Samani 3,4 , John K. Wiencke 1,10 and Margaret R. Wrensch 1,10 1 Division of Neuroepidemiology, Department of Neurological Surgery, University of California, San Francisco, San Francisco, California, USA 2 Program in Neurologic Oncology, Helen Diller Family Comprehensive Cancer Center, University of California, San Francisco, San Francisco, California, USA 3 Department of Cardiovascular Sciences, University of Leicester, Leicester, UK 4 National Institute for Health Research Leicester Cardiovascular Biomedical Research Unit, Glenfield Hospital, Leicester, UK 5 Department of Neurological Surgery, University of California, San Francisco, San Francisco, California, USA 6 Department of Epidemiology and Biostatistics, University of California, San Francisco, San Francisco , California, USA 7 Gladstone Institutes, San Francisco, California, USA 8 Department of Pathology, University of California, San Francisco, San Francisco, California, USA 9 Department of Laboratory Medicine and Pathology, Mayo Clinic College of Medicine, Rochester, Minnesota, USA 10 Institute for Human Genetics, University of California, San Francisco, San Francisco , California, USA 11 Full lists of members and affiliations appear in the Supplementary Note Correspondence to: Kyle M. Walsh, email: // Keywords : single nucleotide polymorphism, telomerase, telomere, CST complex, glioma Received : November 15, 2015 Accepted : November 23, 2015 Published : December 04, 2015 Abstract Telomere maintenance has emerged as an important molecular feature with impacts on adult glioma susceptibility and prognosis. Whether longer or shorter leukocyte telomere length (LTL) is associated with glioma risk remains elusive and is often confounded by the effects of age and patient treatment. We sought to determine if genotypically-estimated LTL is associated with glioma risk and if inherited single nucleotide polymorphisms (SNPs) that are associated with LTL are glioma risk factors. Using a Mendelian randomization approach, we assessed differences in genotypically-estimated relative LTL in two independent glioma case-control datasets from the UCSF Adult Glioma Study (652 patients and 3735 controls) and The Cancer Genome Atlas (478 non-overlapping patients and 2559 controls). LTL estimates were based on a weighted linear combination of subject genotype at eight SNPs, previously associated with LTL in the ENGAGE Consortium Telomere Project. Mean estimated LTL was 31bp (5.7%) longer in glioma patients than controls in discovery analyses ( P = 7.82x10-8) and 27bp (5.0%) longer in glioma patients than controls in replication analyses (1.48x10-3). Glioma risk increased monotonically with each increasing septile of LTL (O.R.=1.12; P = 3.83x10-12). Four LTL-associated SNPs were significantly associated with glioma risk in pooled analyses, including those in the telomerase component genes TERC (O.R.=1.14; 95% C.I.=1.03-1.28) and TERT (O.R.=1.39; 95% C.I.=1.27-1.52), and those in the CST complex genes OBFC1 (O.R.=1.18; 95% C.I.=1.05-1.33) and CTC1 (O.R.=1.14; 95% C.I.=1.02-1.28). Future work is needed to characterize the role of the CST complex in gliomagenesis and further elucidate the complex balance between ageing, telomere length, and molecular carcinogenesis.",
+  "authors": [
+    {
+      "display_name": "Kyle M. Walsh",
+      "id": "A5050523491",
+      "orcid": "https://orcid.org/0000-0002-5879-9981",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210167126",
+          "display_name": "UCSF Helen Diller Family Comprehensive Cancer Center",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Kyle M. Walsh"
+    },
+    {
+      "display_name": "Veryan Codd",
+      "id": "A5083800393",
+      "orcid": "https://orcid.org/0000-0002-9430-8254",
+      "institutions": [
+        {
+          "id": "I34931013",
+          "display_name": "National Institute for Health Research",
+          "country_code": "GB",
+          "type": "government"
+        },
+        {
+          "id": "I153648349",
+          "display_name": "University of Leicester",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I2802040150",
+          "display_name": "Glenfield Hospital",
+          "country_code": "GB",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Veryan Codd"
+    },
+    {
+      "display_name": "Terri Rice",
+      "id": "A5111394137",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Terri Rice"
+    },
+    {
+      "display_name": "Christopher P. Nelson",
+      "id": "A5101712521",
+      "orcid": "https://orcid.org/0000-0001-8025-2897",
+      "institutions": [
+        {
+          "id": "I34931013",
+          "display_name": "National Institute for Health Research",
+          "country_code": "GB",
+          "type": "government"
+        },
+        {
+          "id": "I153648349",
+          "display_name": "University of Leicester",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I2802040150",
+          "display_name": "Glenfield Hospital",
+          "country_code": "GB",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher P. Nelson"
+    },
+    {
+      "display_name": "Ivan Smirnov",
+      "id": "A5107856338",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ivan V. Smirnov"
+    },
+    {
+      "display_name": "Lucie McCoy",
+      "id": "A5054987661",
+      "orcid": "https://orcid.org/0000-0002-2728-6083",
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lucie S. McCoy"
+    },
+    {
+      "display_name": "Helen M. Hansen",
+      "id": "A5038840836",
+      "orcid": "https://orcid.org/0000-0001-5456-4985",
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Helen M. Hansen"
+    },
+    {
+      "display_name": "Edward Elhauge",
+      "id": "A5058411119",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Edward Elhauge"
+    },
+    {
+      "display_name": "Juhi Ojha",
+      "id": "A5014031554",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Juhi Ojha"
+    },
+    {
+      "display_name": "Stephen Francis",
+      "id": "A5031603638",
+      "orcid": "https://orcid.org/0000-0002-6488-6272",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephen S. Francis"
+    },
+    {
+      "display_name": "Nils R. Madsen",
+      "id": "A5030080517",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nils R. Madsen"
+    },
+    {
+      "display_name": "Paige M. Bracci",
+      "id": "A5053290541",
+      "orcid": "https://orcid.org/0000-0001-9338-9307",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paige M. Bracci"
+    },
+    {
+      "display_name": "Alexander R. Pico",
+      "id": "A5070456387",
+      "orcid": "https://orcid.org/0000-0001-5706-2163",
+      "institutions": [
+        {
+          "id": "I1321430492",
+          "display_name": "Gladstone Institutes",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexander R. Pico"
+    },
+    {
+      "display_name": "Annette M. Molinaro",
+      "id": "A5107953209",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Annette M. Molinaro"
+    },
+    {
+      "display_name": "Tarık Tihan",
+      "id": "A5060842441",
+      "orcid": "https://orcid.org/0000-0003-4551-2555",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tarik Tihan"
+    },
+    {
+      "display_name": "Mitchel S. Berger",
+      "id": "A5006262715",
+      "orcid": "https://orcid.org/0000-0003-1983-4892",
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mitchel S. Berger"
+    },
+    {
+      "display_name": "Susan M. Chang",
+      "id": "A5111908438",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Susan M. Chang"
+    },
+    {
+      "display_name": "Michael D. Prados",
+      "id": "A5046264008",
+      "orcid": "https://orcid.org/0000-0002-9630-2075",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael D. Prados"
+    },
+    {
+      "display_name": "Robert B. Jenkins",
+      "id": "A5060720802",
+      "orcid": "https://orcid.org/0000-0002-4049-694X",
+      "institutions": [
+        {
+          "id": "I1330342723",
+          "display_name": "Mayo Clinic",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert B. Jenkins"
+    },
+    {
+      "display_name": "Joseph L. Wiemels",
+      "id": "A5043076766",
+      "orcid": "https://orcid.org/0000-0003-4838-9951",
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joseph L. Wiemels"
+    },
+    {
+      "display_name": "Nilesh J. Samani",
+      "id": "A5100614941",
+      "orcid": "https://orcid.org/0000-0002-3286-8133",
+      "institutions": [
+        {
+          "id": "I153648349",
+          "display_name": "University of Leicester",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I2802040150",
+          "display_name": "Glenfield Hospital",
+          "country_code": "GB",
+          "type": "healthcare"
+        },
+        {
+          "id": "I34931013",
+          "display_name": "National Institute for Health Research",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nilesh J. Samani"
+    },
+    {
+      "display_name": "John K. Wiencke",
+      "id": "A5023943352",
+      "orcid": "https://orcid.org/0000-0001-7101-6489",
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John K. Wiencke"
+    },
+    {
+      "display_name": "Margaret Wrensch",
+      "id": "A5069788891",
+      "orcid": "https://orcid.org/0000-0002-3070-7600",
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Margaret R. Wrensch"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-12-04",
+  "type": "article",
+  "cited_by_count": 90,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S126644158",
+    "display_name": "Oncotarget",
+    "issn_l": "1949-2553",
+    "issn": [
+      "1949-2553"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310316297"
+  },
+  "volume": "6",
+  "issue": "40",
+  "first_page": "42468",
+  "last_page": "42477",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.oncotarget.com/article/6468/pdf/",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C177336024",
+      "display_name": "Telomere",
+      "level": 3,
+      "score": 0.87129915
+    },
+    {
+      "id": "C2778227246",
+      "display_name": "Glioma",
+      "level": 2,
+      "score": 0.6157824
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.61307436
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.40675658
+    },
+    {
+      "id": "C203014093",
+      "display_name": "Immunology",
+      "level": 1,
+      "score": 0.38823587
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.36141276
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.32674372
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.32315856
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.32197633
+    },
+    {
+      "id": "C552990157",
+      "display_name": "DNA",
+      "level": 2,
+      "score": 0.19953868
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10937",
+      "display_name": "Telomeres, Telomerase, and Senescence",
+      "score": 0.9999
+    },
+    {
+      "id": "T11289",
+      "display_name": "Single-cell and spatial transcriptomics",
+      "score": 0.9919
+    },
+    {
+      "id": "T10269",
+      "display_name": "Epigenetics and DNA Methylation",
+      "score": 0.9896
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18632/oncotarget.6468",
+  "pdf_url": "https://www.oncotarget.com/article/6468/pdf/",
+  "retrieved_date": "2025-07-30T15:55:41.470843",
+  "source_database": "OpenAlex"
+}

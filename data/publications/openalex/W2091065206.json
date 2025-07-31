@@ -1,0 +1,248 @@
+{
+  "openalex_id": "W2091065206",
+  "doi": "https://doi.org/10.5194/gmd-8-533-2015",
+  "title": "Firedrake-Fluids v0.1: numerical modelling of shallow water flows using an automated solution framework",
+  "abstract": "Abstract. This model description paper introduces a new finite element model for the simulation of non-linear shallow water flows, called Firedrake-Fluids. Unlike traditional models that are written by hand in static, low-level programming languages such as Fortran or C, Firedrake-Fluids uses the Firedrake framework to automatically generate the model's code from a high-level abstract language called Unified Form Language (UFL). By coupling to the PyOP2 parallel unstructured mesh framework, Firedrake can then target the code towards a desired hardware architecture to enable the efficient parallel execution of the model over an arbitrary computational mesh. The description of the model includes the governing equations, the methods employed to discretise and solve the governing equations, and an outline of the automated solution process. The verification and validation of the model, performed using a set of well-defined test cases, is also presented along with a road map for future developments and the solution of more complex fluid dynamical systems.",
+  "authors": [
+    {
+      "display_name": "Christian T. Jacobs",
+      "id": "A5041279094",
+      "orcid": "https://orcid.org/0000-0002-0034-4650",
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. T. Jacobs"
+    },
+    {
+      "display_name": "Matthew D. Piggott",
+      "id": "A5010171659",
+      "orcid": "https://orcid.org/0000-0002-7526-6853",
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. D. Piggott"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-03-09",
+  "type": "article",
+  "cited_by_count": 15,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S60406085",
+    "display_name": "Geoscientific model development",
+    "issn_l": "1991-959X",
+    "issn": [
+      "1991-959X",
+      "1991-9603"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310313756"
+  },
+  "volume": "8",
+  "issue": "3",
+  "first_page": "533",
+  "last_page": "547",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://gmd.copernicus.org/articles/8/533/2015/gmd-8-533-2015.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2778241615",
+      "display_name": "Fortran",
+      "level": 2,
+      "score": 0.80972874
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.72126144
+    },
+    {
+      "id": "C177264268",
+      "display_name": "Set (abstract data type)",
+      "level": 2,
+      "score": 0.61714226
+    },
+    {
+      "id": "C2776760102",
+      "display_name": "Code (set theory)",
+      "level": 3,
+      "score": 0.61172426
+    },
+    {
+      "id": "C131584629",
+      "display_name": "Coupling (piping)",
+      "level": 2,
+      "score": 0.6005167
+    },
+    {
+      "id": "C98045186",
+      "display_name": "Process (computing)",
+      "level": 2,
+      "score": 0.5947018
+    },
+    {
+      "id": "C459310",
+      "display_name": "Computational science",
+      "level": 1,
+      "score": 0.54147726
+    },
+    {
+      "id": "C140295346",
+      "display_name": "Shallow water equations",
+      "level": 2,
+      "score": 0.5159493
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.4660861
+    },
+    {
+      "id": "C128942645",
+      "display_name": "Test case",
+      "level": 3,
+      "score": 0.45867285
+    },
+    {
+      "id": "C135628077",
+      "display_name": "Finite element method",
+      "level": 2,
+      "score": 0.44309536
+    },
+    {
+      "id": "C119049451",
+      "display_name": "Water model",
+      "level": 3,
+      "score": 0.41841865
+    },
+    {
+      "id": "C173608175",
+      "display_name": "Parallel computing",
+      "level": 1,
+      "score": 0.38382602
+    },
+    {
+      "id": "C28826006",
+      "display_name": "Applied mathematics",
+      "level": 1,
+      "score": 0.36538172
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.3547432
+    },
+    {
+      "id": "C80444323",
+      "display_name": "Theoretical computer science",
+      "level": 1,
+      "score": 0.3436641
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.1555017
+    },
+    {
+      "id": "C78519656",
+      "display_name": "Mechanical engineering",
+      "level": 1,
+      "score": 0.10751015
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.08576211
+    },
+    {
+      "id": "C66938386",
+      "display_name": "Structural engineering",
+      "level": 1,
+      "score": 0.08423814
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C152877465",
+      "display_name": "Regression analysis",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C147597530",
+      "display_name": "Computational chemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C59593255",
+      "display_name": "Molecular dynamics",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10173",
+      "display_name": "Computational Fluid Dynamics and Aerodynamics",
+      "score": 0.9986
+    },
+    {
+      "id": "T10339",
+      "display_name": "Advanced Numerical Methods in Computational Mathematics",
+      "score": 0.9963
+    },
+    {
+      "id": "T11694",
+      "display_name": "Fluid Dynamics Simulations and Interactions",
+      "score": 0.9852
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.5194/gmd-8-533-2015",
+  "pdf_url": "https://gmd.copernicus.org/articles/8/533/2015/gmd-8-533-2015.pdf",
+  "retrieved_date": "2025-07-30T15:31:26.500429",
+  "source_database": "OpenAlex"
+}

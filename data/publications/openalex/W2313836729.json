@@ -1,0 +1,219 @@
+{
+  "openalex_id": "W2313836729",
+  "doi": "https://doi.org/10.3389/conf.fninf.2014.18.00043",
+  "title": "The Flysim project – persistent simulation and real-time visualization of fruit fly whole-brain spiking neural network model",
+  "abstract": "Event Abstract Back to Event The Flysim project – persistent simulation and real-time visualization of fruit fly whole-brain spiking neural network model Yu-Chi Huang1, Cheng-Te Wang1, Guo-Tzau Wang2, Ta-Shun Su1, Pao-Yueh Hsiao1, Ching-Yao Lin2, Chang-Huain Hsieh2, Hsiu-Ming Chang3 and Chung-Chuan Lo1* 1 National Tsing Hua University, Institute of Systems Neuroscience, Taiwan 2 National Center for High-Performance Computing, Taiwan 3 National Tsing Hua University, Brain Research Center, Taiwan Computer simulations play an important role in testing hypotheses, integrating knowledge and providing predictions of neural circuit functions. While lots efforts have been put into simulating primate or rodent brains, fruit fly (Drosophila melanogaster) is becoming a promising model animal in computational neuroscience for its small brain size, complex cognitive behavior and abundant data from genes to circuits. With the expectation that most neurons in Drosophila brain will be mapped out in the next few years, we propose the Flysim project with an aim to establish a data-driven neural network model of Drosophila. The project consists of four components: 1) analyzing neuronal data from Flycircuit (http://www.flycircuit.tw/) (Chiang, et. al. Current Biology, 2011) database, 2) building a whole-brain spiking neural network model, 3) performing persistent neural network simulations and 4) visualizing the simulated brain activity in real time. To this end, we first developed computer algorithms to identify axonal and dendritic domain for each neuron in the database (the SPIN project)(Lee, et al. Neurinformatics, 2014), predicted potential synapses between neurons and constructed the brain-wide connectome. Next, we developed a highly flexible neural network simulator which is capable of receiving control comments online from remote users. Finally, we developed an interface to pass the simulated data to a webserver for live demonstration. Users can monitor the neural activity in a 3-D virtual fly brain (Figure 1) and issue control comments such as stimulus onset/offset in real time. Currently, the Flysim simulator supports the leaky integrate-and-fire neuron model and ionotropic synapses including Ach, AMPA, NMDA and GABAA. For the sake of flexibility, we used a modular design for the system and the current CPU-based simulation may be replaced by a GPU-based system such as Neurokernel. We have built a “primitive” Drosophila brain network of ~22,000 neurons, which account for roughly 20% of the fly brain. Despite being at its early stage, this cellular-level brain network model allows us to study some of the fundamental properties of neural networks including balance of excitation and inhibition, critical behavior, long-term stability and plasticity. Figure 1 Acknowledgements This work is supported by the National Science Council and by the Ministry of Education, Taiwan. We thank the National Center for High-performance Computing for providing computational recourses and Dr. Ann-Shyn Chiang for helpful comments. References Chiang, A.-S., Lin, C.-Y., Chuang, C.-C., Chang, H.-M., Hsieh, C.-H., Yeh, C.-W., Shih, C.-T., Wu, J.-J., Wang, G.-T., Chen, Y.-C., et al. (2011). Three-Dimensional Reconstruction of Brain-wide Wiring Networks in Drosophila at Single-Cell Resolution. Current Biology, 21(1), 1–11. doi:10.1016/j.cub.2010.11.056 Lee, Y.-H., Lin, Y.-N., Chuang, C.-C., Lo, C.-C. (2014) SPIN: A Method of Skeleton-Based Polarity Identification for Neurons. Neuroinformatics doi:10.1007/s12021-014-9225-6 Keywords: Drosohpila, Computer Simulation, spiking network model, connectome, neural circuit Conference: Neuroinformatics 2014, Leiden, Netherlands, 25 Aug - 27 Aug, 2014. Presentation Type: Demo, to be considered for oral presentation Topic: Large-scale modeling Citation: Huang Y, Wang C, Wang G, Su T, Hsiao P, Lin C, Hsieh C, Chang H and Lo C (2014). The Flysim project – persistent simulation and real-time visualization of fruit fly whole-brain spiking neural network model. Front. Neuroinform. Conference Abstract: Neuroinformatics 2014. doi: 10.3389/conf.fninf.2014.18.00043 Copyright: The abstracts in this collection have not been subject to any Frontiers peer review or checks, and are not endorsed by Frontiers. They are made available through the Frontiers publishing platform as a service to conference organizers and presenters. The copyright in the individual abstracts is owned by the author of each abstract or his/her employer unless otherwise stated. Each abstract, as well as the collection of abstracts, are published under a Creative Commons CC-BY 4.0 (attribution) licence (https://creativecommons.org/licenses/by/4.0/) and may thus be reproduced, translated, adapted and be the subject of derivative works provided the authors and Frontiers are attributed. For Frontiers’ terms and conditions please see https://www.frontiersin.org/legal/terms-and-conditions. Received: 27 Apr 2014; Published Online: 04 Jun 2014. * Correspondence: Prof. Chung-Chuan Lo, National Tsing Hua University, Institute of Systems Neuroscience, Hsinchu city, US & Canada only, 300, Taiwan, cclo@life.nthu.edu.tw Login Required This action requires you to be registered with Frontiers and logged in. To register or login click here. Abstract Info Abstract The Authors in Frontiers Yu-Chi Huang Cheng-Te Wang Guo-Tzau Wang Ta-Shun Su Pao-Yueh Hsiao Ching-Yao Lin Chang-Huain Hsieh Hsiu-Ming Chang Chung-Chuan Lo Google Yu-Chi Huang Cheng-Te Wang Guo-Tzau Wang Ta-Shun Su Pao-Yueh Hsiao Ching-Yao Lin Chang-Huain Hsieh Hsiu-Ming Chang Chung-Chuan Lo Google Scholar Yu-Chi Huang Cheng-Te Wang Guo-Tzau Wang Ta-Shun Su Pao-Yueh Hsiao Ching-Yao Lin Chang-Huain Hsieh Hsiu-Ming Chang Chung-Chuan Lo PubMed Yu-Chi Huang Cheng-Te Wang Guo-Tzau Wang Ta-Shun Su Pao-Yueh Hsiao Ching-Yao Lin Chang-Huain Hsieh Hsiu-Ming Chang Chung-Chuan Lo Related Article in Frontiers Google Scholar PubMed Abstract Close Back to top Javascript is disabled. Please enable Javascript in your browser settings in order to see all the content on this page.",
+  "authors": [
+    {
+      "display_name": "Yu-Chi Huang",
+      "id": "A5081652181",
+      "orcid": "https://orcid.org/0000-0002-8162-8478",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Huang Yu-Chi"
+    },
+    {
+      "display_name": "Cheng-Te Wang",
+      "id": "A5046674599",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Wang Cheng-Te"
+    },
+    {
+      "display_name": "Guo‐Tzau Wang",
+      "id": "A5048041308",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Wang Guo-Tzau"
+    },
+    {
+      "display_name": "Ta-Shun Su",
+      "id": "A5066782456",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Su Ta-Shun"
+    },
+    {
+      "display_name": "Pao-Yueh Hsiao",
+      "id": "A5015042990",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Hsiao Pao-Yueh"
+    },
+    {
+      "display_name": "Ching-Yao Lin",
+      "id": "A5100522251",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Lin Ching-Yao"
+    },
+    {
+      "display_name": "Chang-Huain Hsieh",
+      "id": "A5108717059",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Hsieh Chang-Huain"
+    },
+    {
+      "display_name": "Chang Hsiu-Ming",
+      "id": "A5110329777",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Chang Hsiu-Ming"
+    },
+    {
+      "display_name": "Lo Chung-Chuan",
+      "id": "A5041148611",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Lo Chung-Chuan"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-01-01",
+  "type": "article",
+  "cited_by_count": 2,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S179816892",
+    "display_name": "Frontiers in Neuroinformatics",
+    "issn_l": "1662-5196",
+    "issn": [
+      "1662-5196"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320527"
+  },
+  "volume": "8",
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://doi.org/10.3389/conf.fninf.2014.18.00043",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C11731999",
+      "display_name": "Spiking neural network",
+      "level": 3,
+      "score": 0.6327643
+    },
+    {
+      "id": "C36464697",
+      "display_name": "Visualization",
+      "level": 2,
+      "score": 0.59301674
+    },
+    {
+      "id": "C118403218",
+      "display_name": "Biological neural network",
+      "level": 2,
+      "score": 0.58775294
+    },
+    {
+      "id": "C50644808",
+      "display_name": "Artificial neural network",
+      "level": 2,
+      "score": 0.58513474
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.54142994
+    },
+    {
+      "id": "C2780104201",
+      "display_name": "Drosophila melanogaster",
+      "level": 3,
+      "score": 0.5332596
+    },
+    {
+      "id": "C2779662365",
+      "display_name": "Event (particle physics)",
+      "level": 2,
+      "score": 0.49946785
+    },
+    {
+      "id": "C15286952",
+      "display_name": "Computational neuroscience",
+      "level": 2,
+      "score": 0.45649946
+    },
+    {
+      "id": "C169760540",
+      "display_name": "Neuroscience",
+      "level": 1,
+      "score": 0.44087803
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.39496213
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.29321313
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.1976726
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10423",
+      "display_name": "Neurobiology and Insect Physiology Research",
+      "score": 0.9374
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3389/conf.fninf.2014.18.00043",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:59:57.446357",
+  "source_database": "OpenAlex"
+}

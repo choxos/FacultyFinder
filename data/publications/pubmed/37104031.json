@@ -1,0 +1,211 @@
+{
+  "pmid": "37104031",
+  "uid": "37104031",
+  "title": "The Development, Deployment, and Evaluation of the CLEFT-Q Computerized Adaptive Test: A Multimethods Approach Contributing to Personalized, Person-Centered Health Assessments in Plastic Surgery.",
+  "abstract": "BACKGROUND: Routine use of patient-reported outcome measures (PROMs) and computerized adaptive tests (CATs) may improve care in a range of surgical conditions. However, most available CATs are neither condition-specific nor coproduced with patients and lack clinically relevant score interpretation. Recently, a PROM called the CLEFT-Q has been developed for use in the treatment of cleft lip or palate (CL/P), but the assessment burden may be limiting its uptake into clinical practice. OBJECTIVE: We aimed to develop a CAT for the CLEFT-Q, which could facilitate the uptake of the CLEFT-Q PROM internationally. We aimed to conduct this work with a novel patient-centered approach and make source code available as an open-source framework for CAT development in other surgical conditions. METHODS: CATs were developed with the Rasch measurement theory, using full-length CLEFT-Q responses collected during the CLEFT-Q field test (this included 2434 patients across 12 countries). These algorithms were validated in Monte Carlo simulations involving full-length CLEFT-Q responses collected from 536 patients. In these simulations, the CAT algorithms approximated full-length CLEFT-Q scores iteratively, using progressively fewer items from the full-length PROM. Agreement between full-length CLEFT-Q score and CAT score at different assessment lengths was measured using the Pearson correlation coefficient, root-mean-square error (RMSE), and 95% limits of agreement. CAT settings, including the number of items to be included in the final assessments, were determined in a multistakeholder workshop that included patients and health care professionals. A user interface was developed for the platform, and it was prospectively piloted in the United Kingdom and the Netherlands. Interviews were conducted with 6 patients and 4 clinicians to explore end-user experience. RESULTS: The length of all 8 CLEFT-Q scales in the International Consortium for Health Outcomes Measurement (ICHOM) Standard Set combined was reduced from 76 to 59 items, and at this length, CAT assessments reproduced full-length CLEFT-Q scores accurately (with correlations between full-length CLEFT-Q score and CAT score exceeding 0.97, and the RMSE ranging from 2 to 5 out of 100). Workshop stakeholders considered this the optimal balance between accuracy and assessment burden. The platform was perceived to improve clinical communication and facilitate shared decision-making. CONCLUSIONS: Our platform is likely to facilitate routine CLEFT-Q uptake, and this may have a positive impact on clinical care. Our free source code enables other researchers to rapidly and economically reproduce this work for other PROMs.",
+  "authors": [
+    {
+      "last_name": "Harrison",
+      "fore_name": "Conrad",
+      "initials": "C",
+      "name": "Conrad Harrison",
+      "affiliations": [
+        "Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, United Kingdom."
+      ],
+      "orcid": "0000-0002-1428-5751"
+    },
+    {
+      "last_name": "Apon",
+      "fore_name": "Inge",
+      "initials": "I",
+      "name": "Inge Apon",
+      "affiliations": [
+        "Department of Oral and Maxillofacial Surgery, Dutch Craniofacial Center, Erasmus University Medical Center, Rotterdam, Netherlands."
+      ],
+      "orcid": "0000-0002-7323-2676"
+    },
+    {
+      "last_name": "Ardouin",
+      "fore_name": "Kenny",
+      "initials": "K",
+      "name": "Kenny Ardouin",
+      "affiliations": [
+        "Cleft Lip and Palate Association, London, United Kingdom.",
+        "Department of Psychology, Speech and Hearing, University of Canterbury, Christchurch, New Zealand."
+      ],
+      "orcid": "0000-0002-8105-3926"
+    },
+    {
+      "last_name": "Sidey-Gibbons",
+      "fore_name": "Chris",
+      "initials": "C",
+      "name": "Chris Sidey-Gibbons",
+      "affiliations": [
+        "MD Anderson Center for INSPiRED Cancer Care, University of Texas, Houston, TX, United States."
+      ],
+      "orcid": "0000-0002-4732-7305"
+    },
+    {
+      "last_name": "Klassen",
+      "fore_name": "Anne",
+      "initials": "A",
+      "name": "Anne Klassen",
+      "affiliations": [
+        "Department of Pediatrics, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0003-4720-0096"
+    },
+    {
+      "last_name": "Cano",
+      "fore_name": "Stefan",
+      "initials": "S",
+      "name": "Stefan Cano",
+      "affiliations": [
+        "Modus Outcomes, Letchworth Garden City, United Kingdom."
+      ],
+      "orcid": "0000-0001-9390-273X"
+    },
+    {
+      "last_name": "Wong Riff",
+      "fore_name": "Karen",
+      "initials": "K",
+      "name": "Karen Wong Riff",
+      "affiliations": [
+        "Department of Plastic and Reconstructive Surgery, Hospital for Sick Children, Toronto, ON, Canada."
+      ],
+      "orcid": "0000-0003-2031-7235"
+    },
+    {
+      "last_name": "Pusic",
+      "fore_name": "Andrea",
+      "initials": "A",
+      "name": "Andrea Pusic",
+      "affiliations": [
+        "Patient-Reported Outcomes, Values & Experience Center, Department of Surgery, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, United States."
+      ],
+      "orcid": "0000-0003-4352-9409"
+    },
+    {
+      "last_name": "Versnel",
+      "fore_name": "Sarah",
+      "initials": "S",
+      "name": "Sarah Versnel",
+      "affiliations": [
+        "Department of Plastic and Reconstructive Surgery, Dutch Craniofacial Center, Erasmus University Medical Center, Rotterdam, Netherlands."
+      ],
+      "orcid": "0000-0002-0507-6106"
+    },
+    {
+      "last_name": "Koudstaal",
+      "fore_name": "Maarten",
+      "initials": "M",
+      "name": "Maarten Koudstaal",
+      "affiliations": [
+        "Department of Oral and Maxillofacial Surgery, Dutch Craniofacial Center, Erasmus University Medical Center, Rotterdam, Netherlands."
+      ],
+      "orcid": "0000-0002-5060-7711"
+    },
+    {
+      "last_name": "Allori",
+      "fore_name": "Alexander C",
+      "initials": "AC",
+      "name": "Alexander C Allori",
+      "affiliations": [
+        "Division of Plastic, Maxillofacial & Oral Surgery, Duke University Hospital & Children's Health Center, Durham, NC, United States."
+      ],
+      "orcid": "0000-0003-3334-9877"
+    },
+    {
+      "last_name": "Rogers-Vizena",
+      "fore_name": "Carolyn",
+      "initials": "C",
+      "name": "Carolyn Rogers-Vizena",
+      "affiliations": [
+        "Department of Plastic and Oral Surgery, Boston Children's Hospital, Boston, MA, United States."
+      ],
+      "orcid": "0000-0002-2166-1209"
+    },
+    {
+      "last_name": "Swan",
+      "fore_name": "Marc C",
+      "initials": "MC",
+      "name": "Marc C Swan",
+      "affiliations": [
+        "The Spires Cleft Centre, John Radcliffe Hospital, Oxford University Hospitals, Oxford, United Kingdom."
+      ],
+      "orcid": "0000-0002-3110-5927"
+    },
+    {
+      "last_name": "Furniss",
+      "fore_name": "Dominic",
+      "initials": "D",
+      "name": "Dominic Furniss",
+      "affiliations": [
+        "Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, United Kingdom."
+      ],
+      "orcid": "0000-0003-2780-7173"
+    },
+    {
+      "last_name": "Rodrigues",
+      "fore_name": "Jeremy",
+      "initials": "J",
+      "name": "Jeremy Rodrigues",
+      "affiliations": [
+        "Warwick Clinical Trials Unit, Warwick Medical School, University of Warwick, Coventry, United Kingdom.",
+        "Department of Plastic Surgery, Stoke Mandeville Hospital, Buckinghamshire Healthcare NHS Trust, Aylesbury, United Kingdom."
+      ],
+      "orcid": "0000-0002-9347-5026"
+    }
+  ],
+  "journal": {
+    "title": "Journal of medical Internet research",
+    "iso_abbreviation": "J Med Internet Res",
+    "issn": "1438-8871",
+    "issn_type": "Electronic",
+    "volume": "25",
+    "pub_year": "2023",
+    "pub_month": "Apr",
+    "pub_day": "27"
+  },
+  "start_page": "e41870",
+  "pages": "e41870",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Cleft Lip",
+    "Cleft Palate",
+    "Patient Reported Outcome Measures",
+    "Plastic Surgery Procedures",
+    "Surgery, Plastic",
+    "Computerized Adaptive Testing"
+  ],
+  "article_ids": {
+    "pubmed": "37104031",
+    "pmc": "PMC10185334",
+    "doi": "10.2196/41870",
+    "pii": "v25i1e41870"
+  },
+  "doi": "10.2196/41870",
+  "pmc_id": "PMC10185334",
+  "dates": {
+    "completed": "2023-05-06",
+    "revised": "2023-05-17"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "FRN-130515",
+      "agency": "CIHR",
+      "country": "Canada"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:33:31.191536",
+    "pmid": "37104031"
+  }
+}

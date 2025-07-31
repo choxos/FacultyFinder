@@ -1,0 +1,110 @@
+{
+  "pmid": "39587801",
+  "uid": "39587801",
+  "title": "Detecting irregularities in randomized controlled trials using machine learning.",
+  "abstract": "BACKGROUND: Over the course of a clinical trial, irregularities may arise in the data. Trialists implement human-intensive, expensive central statistical monitoring procedures to identify and correct these irregularities before the results of the trial are analyzed and disseminated. Machine learning algorithms have shown promise for identifying center-level irregularities in multi-center clinical trials with minimal human intervention. We aimed to characterize the form-level data irregularities in several historical clinical trials and evaluate the ability of a machine learning-based outlier detection algorithm to identify them. METHODS: Data irregularities previously identified by humans in historical clinical trials were ascertained by comparing preliminary snapshots of the trial databases to the final, locked databases. We measured the ability of a machine learning based outlier detection algorithm to identify form-level irregularities using concordance (area under the receiver operator characteristic), positive predictive value (precision), and sensitivity (recall). RESULTS: We examined preliminary snapshots of seven historical clinical trials which randomized a total of 77,001 participants. We extracted a total of 1,267,484 completed entries from 358 case report forms containing irregularities from all snapshots across all trials, containing a total of 24,850 form-wide irregularities (median per-form form-level irregularity rate: 1.81%). Our proposed machine learning algorithm detects form-level irregularities with a median concordance of 0.74 (interquartile range = 0.57-0.89), slightly exceeding the performance of a previously proposed machine learning approach with a median area under the receiver operator characteristic of 0.73 (interquartile range = 0.54-0.88). CONCLUSION: Data irregularities in historical clinical trials were ascertained by comparing preliminary snapshots of the trial database to the final database. These irregularities can be categorized according to their scope. Irregularities can be successfully detected by a machine learning algorithm as early or earlier than a human can, without human intervention. Such an approach may complement existing techniques for central statistical monitoring in large multi-center randomized controlled trials and possibly improve the efficiency of costly data verification processes.",
+  "authors": [
+    {
+      "last_name": "Nelson",
+      "fore_name": "Walter",
+      "initials": "W",
+      "name": "Walter Nelson",
+      "affiliations": [
+        "Centre for Data Science and Digital Health, Hamilton Health Sciences, Hamilton, ON, Canada.",
+        "Department of Statistical Sciences, University of Toronto, Toronto, ON, Canada."
+      ],
+      "orcid": "0000-0002-5216-7617"
+    },
+    {
+      "last_name": "Petch",
+      "fore_name": "Jeremy",
+      "initials": "J",
+      "name": "Jeremy Petch",
+      "affiliations": [
+        "Centre for Data Science and Digital Health, Hamilton Health Sciences, Hamilton, ON, Canada.",
+        "Population Health Research Institute, Hamilton, ON, Canada.",
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada.",
+        "Institute of Health Policy, Management and Evaluation, University of Toronto, Toronto, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Ranisau",
+      "fore_name": "Jonathan",
+      "initials": "J",
+      "name": "Jonathan Ranisau",
+      "affiliations": [
+        "Centre for Data Science and Digital Health, Hamilton Health Sciences, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Zhao",
+      "fore_name": "Robin",
+      "initials": "R",
+      "name": "Robin Zhao",
+      "affiliations": [
+        "Population Health Research Institute, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Balasubramanian",
+      "fore_name": "Kumar",
+      "initials": "K",
+      "name": "Kumar Balasubramanian",
+      "affiliations": [
+        "Population Health Research Institute, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Bangdiwala",
+      "fore_name": "Shrikant I",
+      "initials": "SI",
+      "name": "Shrikant I Bangdiwala",
+      "affiliations": [
+        "Population Health Research Institute, Hamilton, ON, Canada.",
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-3111-0689"
+    }
+  ],
+  "journal": {
+    "title": "Clinical trials (London, England)",
+    "iso_abbreviation": "Clin Trials",
+    "issn": "1740-7753",
+    "issn_type": "Electronic",
+    "volume": "22",
+    "issue": "2",
+    "pub_year": "2025",
+    "pub_month": "Apr"
+  },
+  "start_page": "178",
+  "end_page": "187",
+  "pages": "178-187",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Machine Learning",
+    "Humans",
+    "Randomized Controlled Trials as Topic",
+    "Algorithms",
+    "Data Interpretation, Statistical",
+    "Multicenter Studies as Topic"
+  ],
+  "article_ids": {
+    "pubmed": "39587801",
+    "doi": "10.1177/17407745241297947"
+  },
+  "doi": "10.1177/17407745241297947",
+  "dates": {
+    "completed": "2025-04-11",
+    "revised": "2025-04-11"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:06:47.819858",
+    "pmid": "39587801"
+  }
+}

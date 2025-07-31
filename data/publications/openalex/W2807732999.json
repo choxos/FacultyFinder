@@ -1,0 +1,545 @@
+{
+  "openalex_id": "W2807732999",
+  "doi": "https://doi.org/10.1175/bams-d-15-00320.1",
+  "title": "The Benefits of Global High Resolution for Climate Simulation: Process Understanding and the Enabling of Stakeholder Decisions at the Regional Scale",
+  "abstract": "Abstract The time scales of the Paris Climate Agreement indicate urgent action is required on climate policies over the next few decades, in order to avoid the worst risks posed by climate change. On these relatively short time scales the combined effect of climate variability and change are both key drivers of extreme events, with decadal time scales also important for infrastructure planning. Hence, in order to assess climate risk on such time scales, we require climate models to be able to represent key aspects of both internally driven climate variability and the response to changing forcings. In this paper we argue that we now have the modeling capability to address these requirements—specifically with global models having horizontal resolutions considerably enhanced from those typically used in previous Intergovernmental Panel on Climate Change (IPCC) and Coupled Model Intercomparison Project (CMIP) exercises. The improved representation of weather and climate processes in such models underpins our enhanced confidence in predictions and projections, as well as providing improved forcing to regional models, which are better able to represent local-scale extremes (such as convective precipitation). We choose the global water cycle as an illustrative example because it is governed by a chain of processes for which there is growing evidence of the benefits of higher resolution. At the same time it comprises key processes involved in many of the expected future climate extremes (e.g., flooding, drought, tropical and midlatitude storms).",
+  "authors": [
+    {
+      "display_name": "Malcolm Roberts",
+      "id": "A5008188167",
+      "orcid": "https://orcid.org/0000-0001-6128-6979",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. J. Roberts"
+    },
+    {
+      "display_name": "Pier Luigi Vidale",
+      "id": "A5080210793",
+      "orcid": "https://orcid.org/0000-0002-1800-8460",
+      "institutions": [
+        {
+          "id": "I4210112368",
+          "display_name": "National Centre for Atmospheric Science",
+          "country_code": "GB",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I71052956",
+          "display_name": "University of Reading",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. L. Vidale"
+    },
+    {
+      "display_name": "C. A. Senior",
+      "id": "A5077264335",
+      "orcid": "https://orcid.org/0000-0002-4124-0612",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Senior"
+    },
+    {
+      "display_name": "Helene T. Hewitt",
+      "id": "A5072582147",
+      "orcid": "https://orcid.org/0000-0001-7432-6001",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. T. Hewitt"
+    },
+    {
+      "display_name": "C. P. Bates",
+      "id": "A5031156908",
+      "orcid": "https://orcid.org/0000-0002-7947-4457",
+      "institutions": [
+        {
+          "id": "I23923803",
+          "display_name": "University of Exeter",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Bates"
+    },
+    {
+      "display_name": "Ségolène Berthou",
+      "id": "A5064682240",
+      "orcid": "https://orcid.org/0000-0002-9164-0841",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Berthou"
+    },
+    {
+      "display_name": "Ping Chang",
+      "id": "A5025306705",
+      "orcid": "https://orcid.org/0000-0002-9085-0759",
+      "institutions": [
+        {
+          "id": "I91045830",
+          "display_name": "Texas A&M University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Chang"
+    },
+    {
+      "display_name": "Hannah M. Christensen",
+      "id": "A5016396243",
+      "orcid": "https://orcid.org/0000-0001-8244-0218",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. M. Christensen"
+    },
+    {
+      "display_name": "Sergey Danilov",
+      "id": "A5052372893",
+      "orcid": "https://orcid.org/0000-0001-8098-182X",
+      "institutions": [
+        {
+          "id": "I127251866",
+          "display_name": "Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Danilov"
+    },
+    {
+      "display_name": "Marie‐Estelle Demory",
+      "id": "A5083558468",
+      "orcid": "https://orcid.org/0000-0002-5764-3248",
+      "institutions": [
+        {
+          "id": "I4210112368",
+          "display_name": "National Centre for Atmospheric Science",
+          "country_code": "GB",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I71052956",
+          "display_name": "University of Reading",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I118564535",
+          "display_name": "University of Bern",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M.-E. Demory"
+    },
+    {
+      "display_name": "Stephen M. Griffies",
+      "id": "A5085415209",
+      "orcid": "https://orcid.org/0000-0002-3711-236X",
+      "institutions": [
+        {
+          "id": "I191217947",
+          "display_name": "NOAA Geophysical Fluid Dynamics Laboratory",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. M. Griffies"
+    },
+    {
+      "display_name": "Rein Haarsma",
+      "id": "A5003973791",
+      "orcid": "https://orcid.org/0000-0001-7171-2687",
+      "institutions": [
+        {
+          "id": "I1309140791",
+          "display_name": "Royal Netherlands Meteorological Institute",
+          "country_code": "NL",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Haarsma"
+    },
+    {
+      "display_name": "Thomas Jung",
+      "id": "A5013282968",
+      "orcid": "https://orcid.org/0000-0002-2651-1293",
+      "institutions": [
+        {
+          "id": "I180437899",
+          "display_name": "University of Bremen",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I127251866",
+          "display_name": "Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Jung"
+    },
+    {
+      "display_name": "Gill Martin",
+      "id": "A5077279145",
+      "orcid": "https://orcid.org/0000-0003-0851-6020",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Martin"
+    },
+    {
+      "display_name": "Shoshiro Minobe",
+      "id": "A5069361973",
+      "orcid": "https://orcid.org/0000-0002-9487-9006",
+      "institutions": [
+        {
+          "id": "I205349734",
+          "display_name": "Hokkaido University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Minobe"
+    },
+    {
+      "display_name": "Todd D. Ringler",
+      "id": "A5086366156",
+      "orcid": "https://orcid.org/0000-0003-4433-4320",
+      "institutions": [
+        {
+          "id": "I1343871089",
+          "display_name": "Los Alamos National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Ringler"
+    },
+    {
+      "display_name": "Masaki Satoh",
+      "id": "A5002954365",
+      "orcid": "https://orcid.org/0000-0003-3580-8897",
+      "institutions": [
+        {
+          "id": "I74801974",
+          "display_name": "The University of Tokyo",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Satoh"
+    },
+    {
+      "display_name": "R. Schiemann",
+      "id": "A5005356492",
+      "orcid": "https://orcid.org/0000-0003-3095-9856",
+      "institutions": [
+        {
+          "id": "I4210112368",
+          "display_name": "National Centre for Atmospheric Science",
+          "country_code": "GB",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I71052956",
+          "display_name": "University of Reading",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Schiemann"
+    },
+    {
+      "display_name": "Enrico Scoccimarro",
+      "id": "A5041348739",
+      "orcid": "https://orcid.org/0000-0001-7987-4744",
+      "institutions": [
+        {
+          "id": "I4210111827",
+          "display_name": "CMCC Foundation - Euro-Mediterranean Center on Climate Change",
+          "country_code": "IT",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Scoccimarro"
+    },
+    {
+      "display_name": "Graeme L. Stephens",
+      "id": "A5064606776",
+      "orcid": "https://orcid.org/0000-0002-9860-0287",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I71052956",
+          "display_name": "University of Reading",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I4210112368",
+          "display_name": "National Centre for Atmospheric Science",
+          "country_code": "GB",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Stephens"
+    },
+    {
+      "display_name": "Michael Wehner",
+      "id": "A5029017675",
+      "orcid": "https://orcid.org/0000-0001-5991-0082",
+      "institutions": [
+        {
+          "id": "I148283060",
+          "display_name": "Lawrence Berkeley National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. F. Wehner"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-06-14",
+  "type": "article",
+  "cited_by_count": 164,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S140302479",
+    "display_name": "Bulletin of the American Meteorological Society",
+    "issn_l": "0003-0007",
+    "issn": [
+      "0003-0007",
+      "1520-0477"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320260"
+  },
+  "volume": "99",
+  "issue": "11",
+  "first_page": "2341",
+  "last_page": "2359",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://zenodo.org/records/1341040/files/bams-d-15-00320.1.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C132651083",
+      "display_name": "Climate change",
+      "level": 2,
+      "score": 0.714393
+    },
+    {
+      "id": "C168754636",
+      "display_name": "Climate model",
+      "level": 3,
+      "score": 0.67243904
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.6303241
+    },
+    {
+      "id": "C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "score": 0.6051842
+    },
+    {
+      "id": "C2778755073",
+      "display_name": "Scale (ratio)",
+      "level": 2,
+      "score": 0.48073244
+    },
+    {
+      "id": "C25022447",
+      "display_name": "Coupled model intercomparison project",
+      "level": 4,
+      "score": 0.47489017
+    },
+    {
+      "id": "C107054158",
+      "display_name": "Precipitation",
+      "level": 2,
+      "score": 0.45023426
+    },
+    {
+      "id": "C48999079",
+      "display_name": "Climate commitment",
+      "level": 5,
+      "score": 0.4487169
+    },
+    {
+      "id": "C201305675",
+      "display_name": "Stakeholder",
+      "level": 2,
+      "score": 0.43396157
+    },
+    {
+      "id": "C197115733",
+      "display_name": "Forcing (mathematics)",
+      "level": 2,
+      "score": 0.42708236
+    },
+    {
+      "id": "C107826830",
+      "display_name": "Environmental resource management",
+      "level": 1,
+      "score": 0.39337298
+    },
+    {
+      "id": "C115343472",
+      "display_name": "Global warming",
+      "level": 3,
+      "score": 0.33442533
+    },
+    {
+      "id": "C153294291",
+      "display_name": "Meteorology",
+      "level": 1,
+      "score": 0.31687444
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.24478412
+    },
+    {
+      "id": "C114990195",
+      "display_name": "Effects of global warming",
+      "level": 4,
+      "score": 0.23168892
+    },
+    {
+      "id": "C162324750",
+      "display_name": "Economics",
+      "level": 0,
+      "score": 0.09596673
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.07969335
+    },
+    {
+      "id": "C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C187736073",
+      "display_name": "Management",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C111368507",
+      "display_name": "Oceanography",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10029",
+      "display_name": "Climate variability and models",
+      "score": 0.9998
+    },
+    {
+      "id": "T10466",
+      "display_name": "Meteorological Phenomena and Simulations",
+      "score": 0.9994
+    },
+    {
+      "id": "T11186",
+      "display_name": "Hydrology and Drought Analysis",
+      "score": 0.9965
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1175/bams-d-15-00320.1",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:18:26.048706",
+  "source_database": "OpenAlex"
+}

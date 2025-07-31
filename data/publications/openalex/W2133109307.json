@@ -1,0 +1,316 @@
+{
+  "openalex_id": "W2133109307",
+  "doi": "https://doi.org/10.1175/jcli-d-13-00497.1",
+  "title": "Process-Oriented MJO Simulation Diagnostic: Moisture Sensitivity of Simulated Convection",
+  "abstract": "Abstract Process-oriented diagnostics for Madden–Julian oscillation (MJO) simulations are being developed to facilitate improvements in the representation of the MJO in weather and climate models. These process-oriented diagnostics are intended to provide insights into how parameterizations of physical processes in climate models should be improved for a better MJO simulation. This paper proposes one such process-oriented diagnostic, which is designed to represent sensitivity of simulated convection to environmental moisture: composites of a relative humidity (RH) profile based on precipitation percentiles. The ability of the RH composite diagnostic to represent the diversity of MJO simulation skill is demonstrated using a group of climate model simulations participating in phases 3 and 5 of the Coupled Model Intercomparison Project (CMIP3 and CMIP5). A set of scalar process metrics that captures the key physical attributes of the RH diagnostic is derived and their statistical relationship with indices that quantify the fidelity of the MJO simulation is tested. It is found that a process metric that represents the amount of lower-tropospheric humidity increase required for a transition from weak to strong rain regimes has a robust statistical relationship with MJO simulation skill. The results herein suggest that moisture sensitivity of convection is closely related to a GCM’s ability to simulate the MJO.",
+  "authors": [
+    {
+      "display_name": "Daehyun Kim",
+      "id": "A5100374565",
+      "orcid": "https://orcid.org/0000-0001-9233-2747",
+      "institutions": [
+        {
+          "id": "I152304114",
+          "display_name": "Lamont-Doherty Earth Observatory",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I78577930",
+          "display_name": "Columbia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daehyun Kim"
+    },
+    {
+      "display_name": "Prince Xavier",
+      "id": "A5005320269",
+      "orcid": "https://orcid.org/0000-0002-1381-384X",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Prince Xavier"
+    },
+    {
+      "display_name": "Eric D. Maloney",
+      "id": "A5077450740",
+      "orcid": "https://orcid.org/0000-0002-2660-2611",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eric Maloney"
+    },
+    {
+      "display_name": "Matthew C. Wheeler",
+      "id": "A5044482097",
+      "orcid": "https://orcid.org/0000-0002-9769-1973",
+      "institutions": [
+        {
+          "id": "I4210109753",
+          "display_name": "Collaboration for Australian Weather and Climate Research",
+          "country_code": "AU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthew Wheeler"
+    },
+    {
+      "display_name": "Duane E. Waliser",
+      "id": "A5007801035",
+      "orcid": "https://orcid.org/0000-0003-4603-0494",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Duane Waliser"
+    },
+    {
+      "display_name": "Kenneth R. Sperber",
+      "id": "A5058631771",
+      "orcid": "https://orcid.org/0000-0001-8585-9786",
+      "institutions": [
+        {
+          "id": "I1282311441",
+          "display_name": "Lawrence Livermore National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kenneth Sperber"
+    },
+    {
+      "display_name": "Harry H. Hendon",
+      "id": "A5078085706",
+      "orcid": "https://orcid.org/0000-0002-4378-2263",
+      "institutions": [
+        {
+          "id": "I4210109753",
+          "display_name": "Collaboration for Australian Weather and Climate Research",
+          "country_code": "AU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Harry Hendon"
+    },
+    {
+      "display_name": "Chidong Zhang",
+      "id": "A5021249496",
+      "orcid": "https://orcid.org/0000-0001-9708-1561",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Chidong Zhang"
+    },
+    {
+      "display_name": "Richard Neale",
+      "id": "A5085295028",
+      "orcid": "https://orcid.org/0000-0003-4222-3918",
+      "institutions": [
+        {
+          "id": "I107766831",
+          "display_name": "NSF National Center for Atmospheric Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard Neale"
+    },
+    {
+      "display_name": "Yen‐Ting Hwang",
+      "id": "A5045864449",
+      "orcid": "https://orcid.org/0000-0002-4084-1408",
+      "institutions": [
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yen-Ting Hwang"
+    },
+    {
+      "display_name": "Haibo Liu",
+      "id": "A5008400083",
+      "orcid": "https://orcid.org/0000-0002-8555-8569",
+      "institutions": [
+        {
+          "id": "I152304114",
+          "display_name": "Lamont-Doherty Earth Observatory",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I78577930",
+          "display_name": "Columbia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Haibo Liu"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-04-15",
+  "type": "article",
+  "cited_by_count": 98,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S80591372",
+    "display_name": "Journal of Climate",
+    "issn_l": "0894-8755",
+    "issn": [
+      "0894-8755",
+      "1520-0442"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320260"
+  },
+  "volume": "27",
+  "issue": "14",
+  "first_page": "5379",
+  "last_page": "5395",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://journals.ametsoc.org/downloadpdf/journals/clim/27/14/jcli-d-13-00497.1.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C117381296",
+      "display_name": "Madden–Julian oscillation",
+      "level": 3,
+      "score": 0.9742783
+    },
+    {
+      "id": "C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "score": 0.62568784
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.61786306
+    },
+    {
+      "id": "C21200559",
+      "display_name": "Sensitivity (control systems)",
+      "level": 2,
+      "score": 0.48012376
+    },
+    {
+      "id": "C10899652",
+      "display_name": "Convection",
+      "level": 2,
+      "score": 0.45309997
+    },
+    {
+      "id": "C170061395",
+      "display_name": "Forecast skill",
+      "level": 2,
+      "score": 0.45128188
+    },
+    {
+      "id": "C168754636",
+      "display_name": "Climate model",
+      "level": 3,
+      "score": 0.43769088
+    },
+    {
+      "id": "C153294291",
+      "display_name": "Meteorology",
+      "level": 1,
+      "score": 0.40907326
+    },
+    {
+      "id": "C132651083",
+      "display_name": "Climate change",
+      "level": 2,
+      "score": 0.17874709
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.1324248
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.08762574
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.07714969
+    },
+    {
+      "id": "C111368507",
+      "display_name": "Oceanography",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C24326235",
+      "display_name": "Electronic engineering",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10029",
+      "display_name": "Climate variability and models",
+      "score": 0.9997
+    },
+    {
+      "id": "T10466",
+      "display_name": "Meteorological Phenomena and Simulations",
+      "score": 0.9987
+    },
+    {
+      "id": "T11186",
+      "display_name": "Hydrology and Drought Analysis",
+      "score": 0.9909
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1175/jcli-d-13-00497.1",
+  "pdf_url": "https://journals.ametsoc.org/downloadpdf/journals/clim/27/14/jcli-d-13-00497.1.pdf",
+  "retrieved_date": "2025-07-30T15:05:44.678894",
+  "source_database": "OpenAlex"
+}

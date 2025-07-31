@@ -1,0 +1,248 @@
+{
+  "openalex_id": "W2470342634",
+  "doi": "https://doi.org/10.1109/tbme.2016.2586891",
+  "title": "Full-Body Musculoskeletal Model for Muscle-Driven Simulation of Human Gait",
+  "abstract": "Musculoskeletal models provide a non-invasive means to study human movement and predict the effects of interventions on gait. Our goal was to create an open-source 3-D musculoskeletal model with high-fidelity representations of the lower limb musculature of healthy young individuals that can be used to generate accurate simulations of gait.Our model includes bony geometry for the full body, 37 degrees of freedom to define joint kinematics, Hill-type models of 80 muscle-tendon units actuating the lower limbs, and 17 ideal torque actuators driving the upper body. The model's musculotendon parameters are derived from previous anatomical measurements of 21 cadaver specimens and magnetic resonance images of 24 young healthy subjects. We tested the model by evaluating its computational time and accuracy of simulations of healthy walking and running.Generating muscle-driven simulations of normal walking and running took approximately 10 minutes on a typical desktop computer. The differences between our muscle-generated and inverse dynamics joint moments were within 3% (RMSE) of the peak inverse dynamics joint moments in both walking and running, and our simulated muscle activity showed qualitative agreement with salient features from experimental electromyography data.These results suggest that our model is suitable for generating muscle-driven simulations of healthy gait. We encourage other researchers to further validate and apply the model to study other motions of the lower extremity.The model is implemented in the open-source software platform OpenSim. The model and data used to create and test the simulations are freely available at https://simtk.org/home/full_body/, allowing others to reproduce these results and create their own simulations.",
+  "authors": [
+    {
+      "display_name": "Apoorva Rajagopal",
+      "id": "A5060500557",
+      "orcid": "https://orcid.org/0000-0002-7915-7048",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Apoorva Rajagopal"
+    },
+    {
+      "display_name": "Christopher L. Dembia",
+      "id": "A5066487446",
+      "orcid": "https://orcid.org/0000-0002-7759-7146",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher L. Dembia"
+    },
+    {
+      "display_name": "Matthew S. DeMers",
+      "id": "A5020097538",
+      "orcid": "https://orcid.org/0000-0002-3440-7066",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthew S. DeMers"
+    },
+    {
+      "display_name": "Denny D. Delp",
+      "id": "A5067634259",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Denny D. Delp"
+    },
+    {
+      "display_name": "Jennifer L. Hicks",
+      "id": "A5064748489",
+      "orcid": "https://orcid.org/0000-0002-2516-9334",
+      "institutions": [
+        {
+          "id": "I4210145583",
+          "display_name": "Bioengineering Center",
+          "country_code": "RU",
+          "type": "facility"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennifer L. Hicks"
+    },
+    {
+      "display_name": "Scott L. Delp",
+      "id": "A5044061507",
+      "orcid": "https://orcid.org/0000-0002-9643-7551",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Scott L. Delp"
+    }
+  ],
+  "publication_year": 2016,
+  "publication_date": "2016-07-07",
+  "type": "article",
+  "cited_by_count": 843,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S5240358",
+    "display_name": "IEEE Transactions on Biomedical Engineering",
+    "issn_l": "0018-9294",
+    "issn": [
+      "0018-9294",
+      "1558-2531"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "63",
+  "issue": "10",
+  "first_page": "2068",
+  "last_page": "2079",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://doi.org/10.1109/tbme.2016.2586891",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C39920418",
+      "display_name": "Kinematics",
+      "level": 2,
+      "score": 0.67870164
+    },
+    {
+      "id": "C187523126",
+      "display_name": "Inverse dynamics",
+      "level": 3,
+      "score": 0.65613556
+    },
+    {
+      "id": "C151800584",
+      "display_name": "Gait",
+      "level": 2,
+      "score": 0.6088787
+    },
+    {
+      "id": "C170700871",
+      "display_name": "Biomechanics",
+      "level": 2,
+      "score": 0.58817923
+    },
+    {
+      "id": "C144171764",
+      "display_name": "Torque",
+      "level": 2,
+      "score": 0.56561065
+    },
+    {
+      "id": "C44154836",
+      "display_name": "Simulation",
+      "level": 1,
+      "score": 0.5486621
+    },
+    {
+      "id": "C2777515770",
+      "display_name": "Electromyography",
+      "level": 2,
+      "score": 0.5417027
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.4729314
+    },
+    {
+      "id": "C173906292",
+      "display_name": "Gait analysis",
+      "level": 3,
+      "score": 0.41907623
+    },
+    {
+      "id": "C99508421",
+      "display_name": "Physical medicine and rehabilitation",
+      "level": 1,
+      "score": 0.40636683
+    },
+    {
+      "id": "C105702510",
+      "display_name": "Anatomy",
+      "level": 1,
+      "score": 0.20512617
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.15055883
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.11937368
+    },
+    {
+      "id": "C74650414",
+      "display_name": "Classical mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C97355855",
+      "display_name": "Thermodynamics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10784",
+      "display_name": "Muscle activation and electromyography studies",
+      "score": 0.9999
+    },
+    {
+      "id": "T11023",
+      "display_name": "Prosthetics and Rehabilitation Robotics",
+      "score": 0.9985
+    },
+    {
+      "id": "T10114",
+      "display_name": "Balance, Gait, and Falls Prevention",
+      "score": 0.9968
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tbme.2016.2586891",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:55:14.724795",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,293 @@
+{
+  "openalex_id": "W4304471262",
+  "doi": "https://doi.org/10.1101/2022.10.09.22280877",
+  "title": "COVID19 Diagnosis Using Chest X-rays and Transfer Learning",
+  "abstract": "ABSTRACT A pandemic of respiratory illnesses from a novel coronavirus known as Sars-CoV-2 has swept across the globe since December of 2019. This is calling upon the research community including medical imaging to provide effective tools for use in combating this virus. Research in biomedical imaging of viral patients is already very active with machine learning models being created for diagnosing Sars-CoV-2 infections in patients using CT scans and chest x-rays. We aim to build upon this research. Here we used a transfer-learning approach to develop models capable of diagnosing COVID19 from chest x-ray. For this work we compiled a dataset of 112120 negative images from the Chest X-Ray 14 and 2725 positive images from public repositories. We tested multiple models, including logistic regression and random forest and XGBoost with and without principal components analysis, using five-fold cross-validation to evaluate recall, precision, and f1-score. These models were compared to a pre-trained deep-learning model for evaluating chest x-rays called COVID-Net. Our best model was XGBoost with principal components with a recall, precision, and f1-score of 0.692, 0.960, 0.804 respectively. This model greatly outperformed COVID-Net which scored 0.987, 0.025, 0.048. This model, with its high precision and reasonable sensitivity, would be most useful as “rule-in” test for COVID19. Though it outperforms some chemical assays in sensitivity, this model should be studied in patients who would not ordinarily receive a chest x-ray before being used for screening. CCS CONCEPTS Life and Medical Sciences • Machine Learning • Artificial Intelligence Reference format Jonathan Stubblefield, Jason Causey, Dakota Dale, Jake Qualls, Emily Bellis, Jennifer Fowler, Karl Walker and Xiuzhen Huang. 2022. COVID19 Diagnosis Using Chest X-Rays and Transfer Learning.",
+  "authors": [
+    {
+      "display_name": "Jonathan Stubblefield",
+      "id": "A5055274320",
+      "orcid": "https://orcid.org/0000-0003-4755-3019",
+      "institutions": [
+        {
+          "id": "I4210152116",
+          "display_name": "Arkansas Biosciences Institute",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I125956826",
+          "display_name": "Arkansas State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan Stubblefield"
+    },
+    {
+      "display_name": "Jason Causey",
+      "id": "A5052275329",
+      "orcid": "https://orcid.org/0000-0002-3985-2919",
+      "institutions": [
+        {
+          "id": "I125956826",
+          "display_name": "Arkansas State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jason Causey"
+    },
+    {
+      "display_name": "Dakota S. Dale",
+      "id": "A5036450123",
+      "orcid": "https://orcid.org/0000-0002-4024-8030",
+      "institutions": [
+        {
+          "id": "I78715868",
+          "display_name": "University of Arkansas at Fayetteville",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dakota Dale"
+    },
+    {
+      "display_name": "Jake Qualls",
+      "id": "A5046821473",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I125956826",
+          "display_name": "Arkansas State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jake Qualls"
+    },
+    {
+      "display_name": "Emily S. Bellis",
+      "id": "A5008110973",
+      "orcid": "https://orcid.org/0000-0001-6066-1466",
+      "institutions": [
+        {
+          "id": "I125956826",
+          "display_name": "Arkansas State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Emily Bellis"
+    },
+    {
+      "display_name": "Jennifer Fowler",
+      "id": "A5007855797",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210152116",
+          "display_name": "Arkansas Biosciences Institute",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I125956826",
+          "display_name": "Arkansas State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennifer Fowler"
+    },
+    {
+      "display_name": "Karl Walker",
+      "id": "A5042171231",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I94525581",
+          "display_name": "University of Arkansas at Pine Bluff",
+          "country_code": "US",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karl Walker"
+    },
+    {
+      "display_name": "Xiuzhen Huang",
+      "id": "A5021456840",
+      "orcid": "https://orcid.org/0000-0003-0498-3131",
+      "institutions": [
+        {
+          "id": "I125956826",
+          "display_name": "Arkansas State University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1282927834",
+          "display_name": "Cedars-Sinai Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Xiuzhen Huang"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-10-11",
+  "type": "preprint",
+  "cited_by_count": 2,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4306400573",
+    "display_name": "medRxiv (Cold Spring Harbor Laboratory)",
+    "issn_l": null,
+    "issn": null,
+    "type": "repository",
+    "host_organization": "https://openalex.org/I2750212522"
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://www.medrxiv.org/content/medrxiv/early/2022/10/12/2022.10.09.22280877.full.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C150899416",
+      "display_name": "Transfer of learning",
+      "level": 2,
+      "score": 0.6749265
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.6198976
+    },
+    {
+      "id": "C3008058167",
+      "display_name": "Coronavirus disease 2019 (COVID-19)",
+      "level": 4,
+      "score": 0.5637209
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.5500136
+    },
+    {
+      "id": "C108583219",
+      "display_name": "Deep learning",
+      "level": 2,
+      "score": 0.50880605
+    },
+    {
+      "id": "C148524875",
+      "display_name": "F1 score",
+      "level": 2,
+      "score": 0.49154004
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.4813648
+    },
+    {
+      "id": "C100660578",
+      "display_name": "Recall",
+      "level": 2,
+      "score": 0.4812731
+    },
+    {
+      "id": "C169258074",
+      "display_name": "Random forest",
+      "level": 2,
+      "score": 0.4764752
+    },
+    {
+      "id": "C151956035",
+      "display_name": "Logistic regression",
+      "level": 2,
+      "score": 0.46564448
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.40854704
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.14181054
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.113918036
+    },
+    {
+      "id": "C2779134260",
+      "display_name": "Disease",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C524204448",
+      "display_name": "Infectious disease (medical specialty)",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "C180747234",
+      "display_name": "Cognitive psychology",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11775",
+      "display_name": "COVID-19 diagnosis using AI",
+      "score": 0.9999
+    },
+    {
+      "id": "T12422",
+      "display_name": "Radiomics and Machine Learning in Medical Imaging",
+      "score": 0.996
+    },
+    {
+      "id": "T11636",
+      "display_name": "Artificial Intelligence in Healthcare and Education",
+      "score": 0.9876
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1101/2022.10.09.22280877",
+  "pdf_url": "https://www.medrxiv.org/content/medrxiv/early/2022/10/12/2022.10.09.22280877.full.pdf",
+  "retrieved_date": "2025-07-30T15:55:14.739895",
+  "source_database": "OpenAlex"
+}

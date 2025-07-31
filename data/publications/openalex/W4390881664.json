@@ -1,0 +1,208 @@
+{
+  "openalex_id": "W4390881664",
+  "doi": "https://doi.org/10.3390/rs16020332",
+  "title": "Target Detection Method for High-Frequency Surface Wave Radar RD Spectrum Based on (VI)CFAR-CNN and Dual-Detection Maps Fusion Compensation",
+  "abstract": "This paper proposes a method for the intelligent detection of high-frequency surface wave radar (HFSWR) targets. This method cascades the adaptive constant false alarm (CFAR) detector variability index (VI) with the convolutional neural network (CNN) to form a cascade detector (VI)CFAR-CNN. First, the (VI)CFAR algorithm is used for the first-level detection of the range–Doppler (RD) spectrum; based on this result, the two-dimensional window slice data are extracted using the window with the position of the target on the RD spectrum as the center, and input into the CNN model to carry out further target and clutter identification. When the detection rate of the detector reaches a certain level and cannot be further improved due to the convergence of the CNN model, this paper uses a dual-detection maps fusion method to compensate for the loss of detection performance. First, the optimized parameters are used to perform the weighted fusion of the dual-detection maps, and then, the connected components in the fused detection map are further processed to achieve an independent (VI)CFAR to compensate for the (VI)CFAR-CNN detection results. Due to the difficulty in obtaining HFSWR data that include comprehensive and accurate target truth values, this paper adopts a method of embedding targets into the measured background to construct the RD spectrum dataset for HFSWR. At the same time, the proposed method is compared with various other methods to demonstrate its superiority. Additionally, a small amount of automatic identification system (AIS) and radar correlation data are used to verify the effectiveness and feasibility of this method on completely measured HFSWR data.",
+  "authors": [
+    {
+      "display_name": "Yuanzheng Ji",
+      "id": "A5089470554",
+      "orcid": "https://orcid.org/0000-0003-2556-4753",
+      "institutions": [
+        {
+          "id": "I204983213",
+          "display_name": "Harbin Institute of Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuanzheng Ji"
+    },
+    {
+      "display_name": "Aijun Liu",
+      "id": "A5100626358",
+      "orcid": "https://orcid.org/0000-0002-8179-7474",
+      "institutions": [
+        {
+          "id": "I204983213",
+          "display_name": "Harbin Institute of Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Aijun Liu"
+    },
+    {
+      "display_name": "Xuekun Chen",
+      "id": "A5019594027",
+      "orcid": "https://orcid.org/0000-0002-7306-4350",
+      "institutions": [
+        {
+          "id": "I204983213",
+          "display_name": "Harbin Institute of Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xuekun Chen"
+    },
+    {
+      "display_name": "Jiaqi Wang",
+      "id": "A5100365398",
+      "orcid": "https://orcid.org/0009-0007-9968-8755",
+      "institutions": [
+        {
+          "id": "I204983213",
+          "display_name": "Harbin Institute of Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jiaqi Wang"
+    },
+    {
+      "display_name": "Changjun Yu",
+      "id": "A5018315331",
+      "orcid": "https://orcid.org/0000-0001-5139-2911",
+      "institutions": [
+        {
+          "id": "I204983213",
+          "display_name": "Harbin Institute of Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Changjun Yu"
+    }
+  ],
+  "publication_year": 2024,
+  "publication_date": "2024-01-14",
+  "type": "article",
+  "cited_by_count": 5,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S43295729",
+    "display_name": "Remote Sensing",
+    "issn_l": "2072-4292",
+    "issn": [
+      "2072-4292"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310310987"
+  },
+  "volume": "16",
+  "issue": "2",
+  "first_page": "332",
+  "last_page": "332",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.mdpi.com/2072-4292/16/2/332/pdf?version=1705317640",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.7361284
+    },
+    {
+      "id": "C132094186",
+      "display_name": "Clutter",
+      "level": 3,
+      "score": 0.6504996
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.6197821
+    },
+    {
+      "id": "C77052588",
+      "display_name": "Constant false alarm rate",
+      "level": 2,
+      "score": 0.6124722
+    },
+    {
+      "id": "C94915269",
+      "display_name": "Detector",
+      "level": 2,
+      "score": 0.577514
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.48741034
+    },
+    {
+      "id": "C554190296",
+      "display_name": "Radar",
+      "level": 2,
+      "score": 0.46428692
+    },
+    {
+      "id": "C162416716",
+      "display_name": "Moving target indication",
+      "level": 5,
+      "score": 0.43422255
+    },
+    {
+      "id": "C81363708",
+      "display_name": "Convolutional neural network",
+      "level": 2,
+      "score": 0.42192185
+    },
+    {
+      "id": "C59584813",
+      "display_name": "Continuous-wave radar",
+      "level": 4,
+      "score": 0.19480154
+    },
+    {
+      "id": "C10929652",
+      "display_name": "Radar imaging",
+      "level": 3,
+      "score": 0.16140684
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.13660198
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10891",
+      "display_name": "Radar Systems and Signal Processing",
+      "score": 0.9913
+    },
+    {
+      "id": "T11038",
+      "display_name": "Advanced SAR Imaging Techniques",
+      "score": 0.9903
+    },
+    {
+      "id": "T11609",
+      "display_name": "Geophysical Methods and Applications",
+      "score": 0.9018
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3390/rs16020332",
+  "pdf_url": "https://www.mdpi.com/2072-4292/16/2/332/pdf?version=1705317640",
+  "retrieved_date": "2025-07-30T15:59:11.132308",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,112 @@
+{
+  "pmid": "40348915",
+  "uid": "40348915",
+  "title": "Research and application of deep learning object detection methods for forest fire smoke recognition.",
+  "abstract": "Forest fires are severe ecological disasters worldwide that cause extensive ecological destruction and economic losses while threatening biodiversity and human safety. With the escalation of climate change, the frequency and intensity of forest fires are increasing annually, underscoring the urgent need for effective monitoring and early warning systems. This study investigates the application effectiveness of deep learning-based object detection technology in forest fire smoke recognition by using the YOLOv11x algorithm to develop an efficient fire detection model. The objective is to enhance early fire detection capabilities and mitigate potential damage. To improve the model's applicability and generalizability, two publicly available fire image datasets, WD (Wildfire Dataset) and FFS (Forest Fire Smoke), encompassing various complex scenarios and external conditions, were employed. After 501 training epochs, the model's detection performance was comprehensively evaluated via multiple metrics, including precision, recall, and mean average precision (mAP50 and mAP50-95). The results demonstrate that YOLOv11x excels in bounding box loss (box loss), classification loss (cls loss), and distribution focal loss (dfl loss), indicating effective optimization of object detection performance across multiple dimensions. Specifically, the model achieved a precision of 0.949, a recall of 0.850, an mAP50 of 0.901, and an mAP50-95 of 0.786, highlighting its high detection accuracy and stability. Analysis of the precision‒recall (PR) curve revealed an average mAP@0.5 of 0.901, further confirming the effectiveness of YOLOv11x in fire smoke detection. Notably, the mAP@0.5 for the smoke category reached 0.962, whereas for the flame category, it was 0.841, indicating superior performance in smoke detection compared with flame detection. This disparity primarily arises from the distinct visual characteristics of flames and smoke; flames possess more vivid colors and defined shapes, facilitating easier recognition by the model, whereas smoke exhibits more ambiguous and variable textures and shapes, increasing detection difficulty. In the test set, 86.89% of the samples had confidence scores exceeding 0.85, further validating the model's reliability. In summary, the YOLOv11x algorithm demonstrates excellent performance and broad application potential in forest fire smoke recognition, providing robust technical support for early fire warning systems and offering valuable insights for the design of intelligent monitoring systems in related fields.",
+  "authors": [
+    {
+      "last_name": "He",
+      "fore_name": "Luhao",
+      "initials": "L",
+      "name": "Luhao He",
+      "affiliations": [
+        "Center for Earth Environment and Earth Resources, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China.",
+        "School of Earth Sciences and Engineering, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China.",
+        "Key Laboratory of Geological Processes and Mineral Resources Exploration, Zhuhai, 519000, Guangdong Province, China."
+      ]
+    },
+    {
+      "last_name": "Zhou",
+      "fore_name": "Yongzhang",
+      "initials": "Y",
+      "name": "Yongzhang Zhou",
+      "affiliations": [
+        "Center for Earth Environment and Earth Resources, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China. zhouyz@mail.sysu.edu.cn.",
+        "School of Earth Sciences and Engineering, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China. zhouyz@mail.sysu.edu.cn.",
+        "Key Laboratory of Geological Processes and Mineral Resources Exploration, Zhuhai, 519000, Guangdong Province, China. zhouyz@mail.sysu.edu.cn."
+      ]
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Lei",
+      "initials": "L",
+      "name": "Lei Liu",
+      "affiliations": [
+        "Center for Earth Environment and Earth Resources, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China.",
+        "School of Earth Sciences and Engineering, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China.",
+        "Key Laboratory of Geological Processes and Mineral Resources Exploration, Zhuhai, 519000, Guangdong Province, China."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "Center for Earth Environment and Earth Resources, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China.",
+        "School of Earth Sciences and Engineering, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China.",
+        "Key Laboratory of Geological Processes and Mineral Resources Exploration, Zhuhai, 519000, Guangdong Province, China."
+      ]
+    },
+    {
+      "last_name": "Ma",
+      "fore_name": "Jianhua",
+      "initials": "J",
+      "name": "Jianhua Ma",
+      "affiliations": [
+        "Center for Earth Environment and Earth Resources, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China. 05161935@cumt.edu.cn.",
+        "School of Earth Sciences and Engineering, Sun Yat-sen University, Zhuhai, 519000, Guangdong, China. 05161935@cumt.edu.cn.",
+        "Key Laboratory of Geological Processes and Mineral Resources Exploration, Zhuhai, 519000, Guangdong Province, China. 05161935@cumt.edu.cn."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Scientific reports",
+    "iso_abbreviation": "Sci Rep",
+    "issn": "2045-2322",
+    "issn_type": "Electronic",
+    "volume": "15",
+    "issue": "1",
+    "pub_year": "2025",
+    "pub_month": "May",
+    "pub_day": "10"
+  },
+  "start_page": "16328",
+  "pages": "16328",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "40348915",
+    "pmc": "PMC12065873",
+    "doi": "10.1038/s41598-025-98086-w",
+    "pii": "10.1038/s41598-025-98086-w"
+  },
+  "doi": "10.1038/s41598-025-98086-w",
+  "pmc_id": "PMC12065873",
+  "dates": {
+    "revised": "2025-05-13"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "2022YFF0801201",
+      "agency": "National Key Research and Development Plan"
+    },
+    {
+      "grant_id": "U1911202",
+      "agency": "National Natural Science Foundation of China"
+    },
+    {
+      "grant_id": "2020B1111370001",
+      "agency": "Guangdong Key Areas Research and Development Project"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.756366",
+    "pmid": "40348915"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "pmid": "40184460",
+  "uid": "40184460",
+  "title": "FairDiffusion: Enhancing equity in latent diffusion models via fair Bayesian perturbation.",
+  "abstract": "Recent advancements in generative AI, particularly diffusion models, have proven valuable for text-to-image synthesis. In health care, these models offer immense potential in generating synthetic datasets and aiding medical training. Despite these strong performances, it remains uncertain whether the image generation quality is consistent across different demographic subgroups. To address this, we conduct a comprehensive analysis of fairness in medical text-to-image diffusion models. Evaluations of the Stable Diffusion model reveal substantial disparities across gender, race, and ethnicity. To reduce these biases, we propose FairDiffusion, an equity-aware latent diffusion model that improves both image quality and the semantic alignment of clinical features. In addition, we design and curate FairGenMed, a dataset tailored for fairness studies in medical generative models. FairDiffusion is further assessed on HAM10000 (dermatoscopic images) and CheXpert (chest x-rays), demonstrating its effectiveness in diverse medical imaging modalities. Together, FairDiffusion and FairGenMed advance research in fair generative learning, promoting equitable benefits of generative AI in health care.",
+  "authors": [
+    {
+      "last_name": "Luo",
+      "fore_name": "Yan",
+      "initials": "Y",
+      "name": "Yan Luo",
+      "affiliations": [
+        "Harvard AI and Robotics Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114 USA.",
+        "Harvard Ophthalmology AI Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114, USA.",
+        "Broad Institute of MIT and Harvard, Cambridge, MA 02142, USA."
+      ],
+      "orcid": "0000-0001-5135-0316"
+    },
+    {
+      "last_name": "Khan",
+      "fore_name": "Muhammad Osama",
+      "initials": "MO",
+      "name": "Muhammad Osama Khan",
+      "affiliations": [
+        "Center for Artificial Intelligence and Robotics, New York University Abu Dhabi, Saadiyat Island, Abu Dhabi, 129188, United Arab Emirates."
+      ],
+      "orcid": "0009-0001-0897-3283"
+    },
+    {
+      "last_name": "Wen",
+      "fore_name": "Congcong",
+      "initials": "C",
+      "name": "Congcong Wen",
+      "affiliations": [
+        "Center for Artificial Intelligence and Robotics, New York University Abu Dhabi, Saadiyat Island, Abu Dhabi, 129188, United Arab Emirates.",
+        "Embodied AI and Robotics (AIR) Lab, New York University, 6 MetroTech Center, Brooklyn, 11201, NY, USA."
+      ],
+      "orcid": "0000-0001-6448-003X"
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad Muneeb",
+      "initials": "MM",
+      "name": "Muhammad Muneeb Afzal",
+      "affiliations": [
+        "Center for Artificial Intelligence and Robotics, New York University Abu Dhabi, Saadiyat Island, Abu Dhabi, 129188, United Arab Emirates."
+      ],
+      "orcid": "0009-0002-1950-0155"
+    },
+    {
+      "last_name": "Wuermeling",
+      "fore_name": "Titus Fidelis",
+      "initials": "TF",
+      "name": "Titus Fidelis Wuermeling",
+      "affiliations": [
+        "Harvard AI and Robotics Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114 USA.",
+        "Harvard Ophthalmology AI Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Shi",
+      "fore_name": "Min",
+      "initials": "M",
+      "name": "Min Shi",
+      "affiliations": [
+        "Harvard AI and Robotics Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114 USA.",
+        "Harvard Ophthalmology AI Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Tian",
+      "fore_name": "Yu",
+      "initials": "Y",
+      "name": "Yu Tian",
+      "affiliations": [
+        "Harvard AI and Robotics Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114 USA.",
+        "Harvard Ophthalmology AI Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Fang",
+      "fore_name": "Yi",
+      "initials": "Y",
+      "name": "Yi Fang",
+      "affiliations": [
+        "Center for Artificial Intelligence and Robotics, New York University Abu Dhabi, Saadiyat Island, Abu Dhabi, 129188, United Arab Emirates.",
+        "Embodied AI and Robotics (AIR) Lab, New York University, 6 MetroTech Center, Brooklyn, 11201, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Mengyu",
+      "initials": "M",
+      "name": "Mengyu Wang",
+      "affiliations": [
+        "Harvard AI and Robotics Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114 USA.",
+        "Harvard Ophthalmology AI Lab, Schepens Eye Research Institute of Massachusetts Eye and Ear, Harvard Medical School, Boston, MA 02114, USA.",
+        "Broad Institute of MIT and Harvard, Cambridge, MA 02142, USA.",
+        "Kempner Institute for the Study of Natural and Artificial Intelligence, Harvard University, Boston, MA 02134, USA."
+      ],
+      "orcid": "0000-0002-7188-7126"
+    }
+  ],
+  "journal": {
+    "title": "Science advances",
+    "iso_abbreviation": "Sci Adv",
+    "issn": "2375-2548",
+    "issn_type": "Electronic",
+    "volume": "11",
+    "issue": "14",
+    "pub_year": "2025",
+    "pub_month": "Apr",
+    "pub_day": "04"
+  },
+  "start_page": "eads4593",
+  "pages": "eads4593",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Bayes Theorem",
+    "Datasets as Topic",
+    "Image Interpretation, Computer-Assisted",
+    "Bias",
+    "Generative Artificial Intelligence"
+  ],
+  "article_ids": {
+    "pubmed": "40184460",
+    "doi": "10.1126/sciadv.ads4593"
+  },
+  "doi": "10.1126/sciadv.ads4593",
+  "dates": {
+    "completed": "2025-05-15",
+    "revised": "2025-07-20"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 EY036222",
+      "agency": "NEI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:15.229419",
+    "pmid": "40184460"
+  }
+}

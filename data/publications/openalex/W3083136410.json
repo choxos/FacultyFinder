@@ -1,0 +1,695 @@
+{
+  "openalex_id": "W3083136410",
+  "doi": "https://doi.org/10.1158/1538-7445.am2020-5056",
+  "title": "Abstract 5056: Quality control efforts in a large-scale, preclinical trial of rare cancer PDXs by the National Cancer Institute's patient-derived models repository (NCI PDMR)",
+  "abstract": "Abstract The National Cancer Institute's Patient-Derived Models Repository (NCI PDMR; https://pdmr.cancer.gov) is performing a large-scale multi-year preclinical study with 39 PDX models of rare cancers (mesothelioma, MPNST, osteosarcoma, Merkel cell carcinoma, etc) treated with 56 novel therapeutic combinations in an exploratory, n-of-4 arm, study design. Combinations that show promising responses (e.g., regression or durable inhibition of tumor growth) will be repeated along with the single agent arms to determine if the response is driven by the combination or only one of the agents. In order to do this in a timely fashion, relatively speaking, the PDX tumors are serially passaged and each passage is treated with a set of 8 combinations plus relevant vehicle control(s) while in parallel enough PDXs are retained to be expanded for the next passage and drug set. Every serial passage undergoes several quality control assessments that serve as go/no-go criteria including pathology assessment, human:mouse DNA content assessment, and low pass whole genome sequencing to determine the average fraction of genome changed compared to the original donor material. If there is a QC failure, the PDX model is restarted from early passage cryo-material (passage 1-2). An additional quality control effort is to bookend the combination studies with the first set of agents to see if tumor response is similar across passages. To date, most of the models have demonstrated a high degree of stability, though a couple of models have moved toward murine content and have been restarted from early passage material so all drug combinations can be tested. DNA and RNA are retained from all passages so a full NGS evaluation can be performed at a later date. This effort has been ongoing for over a year and the first bookend studies are beginning to be tested to determine if response at first and last passage of the study are consistent with each other, given the constraints of the inherent heterogeneity of the models themselves. Single agent studies of drug combinations that demonstrated a response in 30%-50% of the models tested are also underway to determine which combinations have a more than additive effect compared to the single agents. Promising combinations will be moved forward to early phase clinical trials for these rare cancers. Funded by NCI Contract No. HHSN261200800001E Citation Format: Yvonne A. Evrard, Biswajit Das, Sergio Y. Alcoser, Suzanne Borgel, Devynn Breen, John Carter, Tiffanie Chase, Alice Chen, Lily Chen, Kristen Cooley, Emily Delaney, Raymond Divelbiss, Lyndsay Dutko, Thomas Forbes, Kyle Georgius, Michelle Gottholm-Ahalt, Tara Grinnage-Pulley, Sierra Hoffman, Chris Karlovich, Shahanawaz Jiwani, Justine Mills, Malorie Morris, Michael Mullendore, Dianne Newton, Rajesh Patidar, Gloryvee Rivera, Howard Stotler, Jesse Stottlemyer, Savanna Styers, Debbie Trail, Shannon Uzelac, Thomas Vilimas, Abigail Walke, Thomas Walsh, Nicole Walters, Peng Wang, P. Mickey Williams, Melinda Hollingshead, James H. Doroshow. Quality control efforts in a large-scale, preclinical trial of rare cancer PDXs by the National Cancer Institute's patient-derived models repository (NCI PDMR) [abstract]. In: Proceedings of the Annual Meeting of the American Association for Cancer Research 2020; 2020 Apr 27-28 and Jun 22-24. Philadelphia (PA): AACR; Cancer Res 2020;80(16 Suppl):Abstract nr 5056.",
+  "authors": [
+    {
+      "display_name": "Yvonne A. Evrard",
+      "id": "A5044153234",
+      "orcid": "https://orcid.org/0000-0002-3475-4850",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yvonne A. Evrard"
+    },
+    {
+      "display_name": "Biswajit Das",
+      "id": "A5102827275",
+      "orcid": "https://orcid.org/0000-0001-7225-2926",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Biswajit Das"
+    },
+    {
+      "display_name": "Sergio Y. Alcoser",
+      "id": "A5014178153",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sergio Y. Alcoser"
+    },
+    {
+      "display_name": "Suzanne Borgel",
+      "id": "A5061830496",
+      "orcid": "https://orcid.org/0000-0002-2079-0500",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Suzanne Borgel"
+    },
+    {
+      "display_name": "Devynn Breen",
+      "id": "A5027594427",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Devynn Breen"
+    },
+    {
+      "display_name": "John Carter",
+      "id": "A5101497491",
+      "orcid": "https://orcid.org/0000-0002-0273-8987",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John Carter"
+    },
+    {
+      "display_name": "Tiffanie Chase",
+      "id": "A5022626853",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tiffanie Chase"
+    },
+    {
+      "display_name": "Alice P. Chen",
+      "id": "A5045409088",
+      "orcid": "https://orcid.org/0000-0002-1426-853X",
+      "institutions": [
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alice Chen"
+    },
+    {
+      "display_name": "Lily Chen",
+      "id": "A5005641340",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lily Chen"
+    },
+    {
+      "display_name": "Kristen Cooley",
+      "id": "A5046949668",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kristen Cooley"
+    },
+    {
+      "display_name": "Emily Delaney",
+      "id": "A5051773704",
+      "orcid": "https://orcid.org/0000-0003-3609-5702",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Emily Delaney"
+    },
+    {
+      "display_name": "Raymond Divelbiss",
+      "id": "A5057183081",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Raymond Divelbiss"
+    },
+    {
+      "display_name": "Lyndsay Dutko",
+      "id": "A5025635689",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lyndsay Dutko"
+    },
+    {
+      "display_name": "Thomas Forbes",
+      "id": "A5012791306",
+      "orcid": "https://orcid.org/0000-0001-6635-8855",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Forbes"
+    },
+    {
+      "display_name": "Kyle Georgius",
+      "id": "A5056163981",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kyle Georgius"
+    },
+    {
+      "display_name": "Michelle M. Gottholm-Ahalt",
+      "id": "A5071764105",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michelle Gottholm-Ahalt"
+    },
+    {
+      "display_name": "Tara Grinnage‐Pulley",
+      "id": "A5074807302",
+      "orcid": "https://orcid.org/0000-0002-7797-4642",
+      "institutions": [
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tara Grinnage-Pulley"
+    },
+    {
+      "display_name": "Sierra N. Hoffman",
+      "id": "A5051355171",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sierra Hoffman"
+    },
+    {
+      "display_name": "Chris Karlovich",
+      "id": "A5022166540",
+      "orcid": "https://orcid.org/0000-0002-4617-2161",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chris Karlovich"
+    },
+    {
+      "display_name": "Shahanawaz Jiwani",
+      "id": "A5053025161",
+      "orcid": "https://orcid.org/0000-0002-4717-8637",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shahanawaz Jiwani"
+    },
+    {
+      "display_name": "Justine Mills",
+      "id": "A5074842539",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Justine Mills"
+    },
+    {
+      "display_name": "Malorie Morris",
+      "id": "A5029945952",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Malorie Morris"
+    },
+    {
+      "display_name": "Michael E. Mullendore",
+      "id": "A5108232469",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Mullendore"
+    },
+    {
+      "display_name": "Dianne L. Newton",
+      "id": "A5016211896",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dianne Newton"
+    },
+    {
+      "display_name": "Rajesh Patidar",
+      "id": "A5069633741",
+      "orcid": "https://orcid.org/0000-0003-3578-8208",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rajesh Patidar"
+    },
+    {
+      "display_name": "Gloryvee Rivera",
+      "id": "A5038405039",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gloryvee Rivera"
+    },
+    {
+      "display_name": "Howard Stotler",
+      "id": "A5067549495",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Howard Stotler"
+    },
+    {
+      "display_name": "Jesse Stottlemyer",
+      "id": "A5014127208",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jesse Stottlemyer"
+    },
+    {
+      "display_name": "Savanna Styers",
+      "id": "A5076060609",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Savanna Styers"
+    },
+    {
+      "display_name": "Debbie Trail",
+      "id": "A5019087061",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Debbie Trail"
+    },
+    {
+      "display_name": "Shannon Uzelac",
+      "id": "A5022514080",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shannon Uzelac"
+    },
+    {
+      "display_name": "Thomas Vilimas",
+      "id": "A5045039332",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Vilimas"
+    },
+    {
+      "display_name": "Abigail J. Walke",
+      "id": "A5044559156",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Abigail Walke"
+    },
+    {
+      "display_name": "Thomas Walsh",
+      "id": "A5074997319",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Walsh"
+    },
+    {
+      "display_name": "Nicole Walters",
+      "id": "A5011170090",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicole Walters"
+    },
+    {
+      "display_name": "Peng Wang",
+      "id": "A5100395938",
+      "orcid": "https://orcid.org/0000-0001-8622-8767",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peng Wang"
+    },
+    {
+      "display_name": "P. Mickey Williams",
+      "id": "A5091723132",
+      "orcid": "https://orcid.org/0000-0002-3309-5988",
+      "institutions": [
+        {
+          "id": "I4210130649",
+          "display_name": "Frederick National Laboratory for Cancer Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Mickey Williams"
+    },
+    {
+      "display_name": "Melinda G. Hollingshead",
+      "id": "A5080778766",
+      "orcid": "https://orcid.org/0000-0002-1207-1397",
+      "institutions": [
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Melinda Hollingshead"
+    },
+    {
+      "display_name": "James H. Doroshow",
+      "id": "A5041200743",
+      "orcid": "https://orcid.org/0000-0002-4463-1790",
+      "institutions": [
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James H. Doroshow"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-08-15",
+  "type": "article",
+  "cited_by_count": 2,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S168522863",
+    "display_name": "Cancer Research",
+    "issn_l": "0008-5472",
+    "issn": [
+      "0008-5472",
+      "1538-7445"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320273"
+  },
+  "volume": "80",
+  "issue": "16_Supplement",
+  "first_page": "5056",
+  "last_page": "5056",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.67229867
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.52302754
+    },
+    {
+      "id": "C2778755073",
+      "display_name": "Scale (ratio)",
+      "level": 2,
+      "score": 0.44330528
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.38404843
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.34676594
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.3234805
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10207",
+      "display_name": "Advanced biosensing and bioanalysis techniques",
+      "score": 0.9819
+    },
+    {
+      "id": "T11827",
+      "display_name": "Polyomavirus and related diseases",
+      "score": 0.964
+    },
+    {
+      "id": "T10417",
+      "display_name": "Lung Cancer Treatments and Mutations",
+      "score": 0.9613
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1158/1538-7445.am2020-5056",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:46:50.392099",
+  "source_database": "OpenAlex"
+}

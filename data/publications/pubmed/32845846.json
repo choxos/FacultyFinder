@@ -1,0 +1,69 @@
+{
+  "pmid": "32845846",
+  "uid": "32845846",
+  "title": "SeGMA: Semi-Supervised Gaussian Mixture Autoencoder.",
+  "abstract": "We propose a semi-supervised generative model, SeGMA, which learns a joint probability distribution of data and their classes and is implemented in a typical Wasserstein autoencoder framework. We choose a mixture of Gaussians as a target distribution in latent space, which provides a natural splitting of data into clusters. To connect Gaussian components with correct classes, we use a small amount of labeled data and a Gaussian classifier induced by the target distribution. SeGMA is optimized efficiently due to the use of the Cramer-Wold distance as a maximum mean discrepancy penalty, which yields a closed-form expression for a mixture of spherical Gaussian components and, thus, obviates the need of sampling. While SeGMA preserves all properties of its semi-supervised predecessors and achieves at least as good generative performance on standard benchmark data sets, it presents additional features: 1) interpolation between any pair of points in the latent space produces realistically looking samples; 2) combining the interpolation property with disentangling of class and style information, SeGMA is able to perform continuous style transfer from one class to another; and 3) it is possible to change the intensity of class characteristics in a data point by moving the latent representation of the data point away from specific Gaussian components.",
+  "authors": [
+    {
+      "last_name": "Smieja",
+      "fore_name": "Marek",
+      "initials": "M",
+      "name": "Marek Smieja",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wolczyk",
+      "fore_name": "Maciej",
+      "initials": "M",
+      "name": "Maciej Wolczyk",
+      "affiliations": []
+    },
+    {
+      "last_name": "Tabor",
+      "fore_name": "Jacek",
+      "initials": "J",
+      "name": "Jacek Tabor",
+      "affiliations": []
+    },
+    {
+      "last_name": "Geiger",
+      "fore_name": "Bernhard C",
+      "initials": "BC",
+      "name": "Bernhard C Geiger",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "IEEE transactions on neural networks and learning systems",
+    "iso_abbreviation": "IEEE Trans Neural Netw Learn Syst",
+    "issn": "2162-2388",
+    "issn_type": "Electronic",
+    "volume": "32",
+    "issue": "9",
+    "pub_year": "2021",
+    "pub_month": "Sep"
+  },
+  "start_page": "3930",
+  "end_page": "3941",
+  "pages": "3930-3941",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "32845846",
+    "doi": "10.1109/TNNLS.2020.3016221"
+  },
+  "doi": "10.1109/TNNLS.2020.3016221",
+  "dates": {
+    "revised": "2021-09-01"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:59:37.879135",
+    "pmid": "32845846"
+  }
+}

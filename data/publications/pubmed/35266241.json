@@ -1,0 +1,334 @@
+{
+  "pmid": "35266241",
+  "uid": "35266241",
+  "title": "seqr: A web-based analysis and collaboration tool for rare disease genomics.",
+  "abstract": "Exome and genome sequencing have become the tools of choice for rare disease diagnosis, leading to large amounts of data available for analyses. To identify causal variants in these datasets, powerful filtering and decision support tools that can be efficiently used by clinicians and researchers are required. To address this need, we developed seqr - an open-source, web-based tool for family-based monogenic disease analysis that allows researchers to work collaboratively to search and annotate genomic callsets. To date, seqr is being used in several research pipelines and one clinical diagnostic lab. In our own experience through the Broad Institute Center for Mendelian Genomics, seqr has enabled analyses of over 10,000 families, supporting the diagnosis of more than 3,800 individuals with rare disease and discovery of over 300 novel disease genes. Here, we describe a framework for genomic analysis in rare disease that leverages seqr's capabilities for variant filtration, annotation, and causal variant identification, as well as support for research collaboration and data sharing. The seqr platform is available as open source software, allowing low-cost participation in rare disease research, and a community effort to support diagnosis and gene discovery in rare disease.",
+  "authors": [
+    {
+      "last_name": "Pais",
+      "fore_name": "Lynn S",
+      "initials": "LS",
+      "name": "Lynn S Pais",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ],
+      "orcid": "0000-0001-9673-4305"
+    },
+    {
+      "last_name": "Snow",
+      "fore_name": "Hana",
+      "initials": "H",
+      "name": "Hana Snow",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Weisburd",
+      "fore_name": "Ben",
+      "initials": "B",
+      "name": "Ben Weisburd",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Shifa",
+      "initials": "S",
+      "name": "Shifa Zhang",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Baxter",
+      "fore_name": "Samantha M",
+      "initials": "SM",
+      "name": "Samantha M Baxter",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "DiTroia",
+      "fore_name": "Stephanie",
+      "initials": "S",
+      "name": "Stephanie DiTroia",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "O'Heir",
+      "fore_name": "Emily",
+      "initials": "E",
+      "name": "Emily O'Heir",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "England",
+      "fore_name": "Eleina",
+      "initials": "E",
+      "name": "Eleina England",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Chao",
+      "fore_name": "Katherine R",
+      "initials": "KR",
+      "name": "Katherine R Chao",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Lemire",
+      "fore_name": "Gabrielle",
+      "initials": "G",
+      "name": "Gabrielle Lemire",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Osei-Owusu",
+      "fore_name": "Ikeoluwa",
+      "initials": "I",
+      "name": "Ikeoluwa Osei-Owusu",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "VanNoy",
+      "fore_name": "Grace E",
+      "initials": "GE",
+      "name": "Grace E VanNoy",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Nguyen",
+      "fore_name": "Kevin",
+      "initials": "K",
+      "name": "Kevin Nguyen",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Arachchi",
+      "fore_name": "Harindra",
+      "initials": "H",
+      "name": "Harindra Arachchi",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Phu",
+      "fore_name": "William",
+      "initials": "W",
+      "name": "William Phu",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Solomonson",
+      "fore_name": "Matthew",
+      "initials": "M",
+      "name": "Matthew Solomonson",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Mano",
+      "fore_name": "Stacy",
+      "initials": "S",
+      "name": "Stacy Mano",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "O'Leary",
+      "fore_name": "Melanie",
+      "initials": "M",
+      "name": "Melanie O'Leary",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Lovgren",
+      "fore_name": "Alysia",
+      "initials": "A",
+      "name": "Alysia Lovgren",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Babb",
+      "fore_name": "Lawrence",
+      "initials": "L",
+      "name": "Lawrence Babb",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Austin-Tse",
+      "fore_name": "Christina A",
+      "initials": "CA",
+      "name": "Christina A Austin-Tse",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Rehm",
+      "fore_name": "Heidi L",
+      "initials": "HL",
+      "name": "Heidi L Rehm",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ],
+      "orcid": "0000-0002-6025-0015"
+    },
+    {
+      "last_name": "MacArthur",
+      "fore_name": "Daniel G",
+      "initials": "DG",
+      "name": "Daniel G MacArthur",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Centre for Population Genomics, Garvan Institute of Medical Research and UNSW Sydney, Sydney, Australia.",
+        "Centre for Population Genomics, Murdoch Children's Research Institute, Melbourne, Australia."
+      ],
+      "orcid": "0000-0002-5771-2290"
+    },
+    {
+      "last_name": "O'Donnell-Luria",
+      "fore_name": "Anne",
+      "initials": "A",
+      "name": "Anne O'Donnell-Luria",
+      "affiliations": [
+        "Program in Medical and Population Genetics, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Division of Genetics and Genomics, Boston Children's Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ],
+      "orcid": "0000-0001-6418-9592"
+    }
+  ],
+  "journal": {
+    "title": "Human mutation",
+    "iso_abbreviation": "Hum Mutat",
+    "issn": "1098-1004",
+    "issn_type": "Electronic",
+    "volume": "43",
+    "issue": "6",
+    "pub_year": "2022",
+    "pub_month": "Jun"
+  },
+  "start_page": "698",
+  "end_page": "707",
+  "pages": "698-707",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Exome",
+    "Genomics",
+    "Humans",
+    "Internet",
+    "Rare Diseases",
+    "Software"
+  ],
+  "article_ids": {
+    "pubmed": "35266241",
+    "mid": "NIHMS1869185",
+    "pmc": "PMC9903206",
+    "doi": "10.1002/humu.24366"
+  },
+  "doi": "10.1002/humu.24366",
+  "pmc_id": "PMC9903206",
+  "dates": {
+    "completed": "2022-05-24",
+    "revised": "2023-06-02"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "UM1 HG008900",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HG009141",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01HG009141",
+      "agency": "NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG011755",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UM1HG008900",
+      "agency": "NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01HG011755",
+      "agency": "NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U24 HG010262",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U24HG010262",
+      "agency": "NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.745579",
+    "pmid": "35266241"
+  }
+}

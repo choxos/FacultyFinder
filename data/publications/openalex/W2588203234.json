@@ -1,0 +1,1752 @@
+{
+  "openalex_id": "W2588203234",
+  "doi": "https://doi.org/10.1186/s41512-016-0001-y",
+  "title": "Methods for Evaluating Medical Tests and Biomarkers",
+  "abstract": "The 90% CI of mean AUC differences between the exploratory sample and the validation sample corresponding to severe AKI. Dotted line are the equivalence margin with Δ = 20% (wider interval) and Δ = 10% (narrower interval)",
+  "authors": [
+    {
+      "display_name": "Gowri Gopalakrishna",
+      "id": "A5085311314",
+      "orcid": "https://orcid.org/0000-0003-3847-3906",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gowri Gopalakrishna"
+    },
+    {
+      "display_name": "Miranda Langendam",
+      "id": "A5059454433",
+      "orcid": "https://orcid.org/0000-0001-9038-3209",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Miranda Langendam"
+    },
+    {
+      "display_name": "Rob Scholten",
+      "id": "A5108431532",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3018483916",
+          "display_name": "University Medical Center Utrecht",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rob Scholten"
+    },
+    {
+      "display_name": "Patrick Bossuyt",
+      "id": "A5109850329",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patrick Bossuyt"
+    },
+    {
+      "display_name": "Mariska Leeflang",
+      "id": "A5066251369",
+      "orcid": "https://orcid.org/0000-0001-5960-0471",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mariska Leeflang"
+    },
+    {
+      "display_name": "Anna H Noel-Storr",
+      "id": "A5037108032",
+      "orcid": "https://orcid.org/0000-0003-3476-8432",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I72054575",
+          "display_name": "Cochrane",
+          "country_code": "GB",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Anna Noel-Storr"
+    },
+    {
+      "display_name": "James Thomas",
+      "id": "A5090183643",
+      "orcid": "https://orcid.org/0000-0003-4805-4190",
+      "institutions": [
+        {
+          "id": "I45129253",
+          "display_name": "University College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James Thomas"
+    },
+    {
+      "display_name": "Iain Marshall",
+      "id": "A5036860076",
+      "orcid": "https://orcid.org/0000-0003-2594-2654",
+      "institutions": [
+        {
+          "id": "I183935753",
+          "display_name": "King's College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Iain Marshall"
+    },
+    {
+      "display_name": "Byron Wallace",
+      "id": "A5036790226",
+      "orcid": "https://orcid.org/0000-0003-2409-7735",
+      "institutions": [
+        {
+          "id": "I12912129",
+          "display_name": "Northeastern University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Byron Wallace"
+    },
+    {
+      "display_name": "Penny Whiting",
+      "id": "A5077388783",
+      "orcid": "https://orcid.org/0000-0003-1138-5682",
+      "institutions": [
+        {
+          "id": "I2800789647",
+          "display_name": "University Hospitals Bristol NHS Foundation Trust",
+          "country_code": "GB",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Penny Whiting"
+    },
+    {
+      "display_name": "Clare Davenport",
+      "id": "A5081258369",
+      "orcid": "https://orcid.org/0000-0001-5659-4889",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Clare Davenport"
+    },
+    {
+      "display_name": "Mariska Leeflang",
+      "id": "A5066251369",
+      "orcid": "https://orcid.org/0000-0001-5960-0471",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mariska Leeflang"
+    },
+    {
+      "display_name": "Gowri Gopalakrishna",
+      "id": "A5085311314",
+      "orcid": "https://orcid.org/0000-0003-3847-3906",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gowri GopalaKrishna"
+    },
+    {
+      "display_name": "Isabel de Salis",
+      "id": "A5008971030",
+      "orcid": "https://orcid.org/0000-0002-2402-1194",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Isabel de Salis"
+    },
+    {
+      "display_name": "Susan Mallett",
+      "id": "A5089744545",
+      "orcid": "https://orcid.org/0000-0002-0596-8200",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Sue Mallett"
+    },
+    {
+      "display_name": "Robert Wolff",
+      "id": "A5090941567",
+      "orcid": "https://orcid.org/0000-0003-3270-7791",
+      "institutions": [
+        {
+          "id": "I4210088647",
+          "display_name": "Kleijnen Systematic Reviews (United Kingdom)",
+          "country_code": "GB",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Wolff"
+    },
+    {
+      "display_name": "Penny Whiting",
+      "id": "A5077388783",
+      "orcid": "https://orcid.org/0000-0003-1138-5682",
+      "institutions": [
+        {
+          "id": "I2800789647",
+          "display_name": "University Hospitals Bristol NHS Foundation Trust",
+          "country_code": "GB",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Penny Whiting"
+    },
+    {
+      "display_name": "Richard D Riley",
+      "id": "A5040942978",
+      "orcid": "https://orcid.org/0000-0001-8699-0735",
+      "institutions": [
+        {
+          "id": "I56007636",
+          "display_name": "Keele University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Richard Riley"
+    },
+    {
+      "display_name": "Angela Wood",
+      "id": "A5005247953",
+      "orcid": "https://orcid.org/0000-0002-7937-304X",
+      "institutions": [
+        {
+          "id": "I4210088647",
+          "display_name": "Kleijnen Systematic Reviews (United Kingdom)",
+          "country_code": "GB",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marie Westwood"
+    },
+    {
+      "display_name": "Jos Kleinen",
+      "id": "A5082207298",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210088647",
+          "display_name": "Kleijnen Systematic Reviews (United Kingdom)",
+          "country_code": "GB",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jos Kleinen"
+    },
+    {
+      "display_name": "Gary S. Collins",
+      "id": "A5060891981",
+      "orcid": "https://orcid.org/0000-0002-2772-2316",
+      "institutions": [
+        {
+          "id": "I2801809904",
+          "display_name": "Nuffield Orthopaedic Centre",
+          "country_code": "GB",
+          "type": "healthcare"
+        },
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Gary Collins"
+    },
+    {
+      "display_name": "Hans Reitsma",
+      "id": "A5069094432",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3018483916",
+          "display_name": "University Medical Center Utrecht",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hans Reitsma"
+    },
+    {
+      "display_name": "Karel G.M. Moons",
+      "id": "A5083104697",
+      "orcid": "https://orcid.org/0000-0003-2118-004X",
+      "institutions": [
+        {
+          "id": "I3018483916",
+          "display_name": "University Medical Center Utrecht",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karel Moons"
+    },
+    {
+      "display_name": "Antonia Zapf",
+      "id": "A5062434872",
+      "orcid": "https://orcid.org/0000-0002-8467-0508",
+      "institutions": [
+        {
+          "id": "I4210116730",
+          "display_name": "Universitätsmedizin Göttingen",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Antonia Zapf"
+    },
+    {
+      "display_name": "Annika Hoyer",
+      "id": "A5056925919",
+      "orcid": "https://orcid.org/0000-0002-0241-9951",
+      "institutions": [
+        {
+          "id": "I4210152419",
+          "display_name": "Deutsches Diabetes-Zentrum e.V.",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I44260953",
+          "display_name": "Heinrich Heine University Düsseldorf",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Annika Hoyer"
+    },
+    {
+      "display_name": "Katharina Kramer",
+      "id": "A5103060354",
+      "orcid": "https://orcid.org/0000-0002-9734-0065",
+      "institutions": [
+        {
+          "id": "I4210116730",
+          "display_name": "Universitätsmedizin Göttingen",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Katharina Kramer"
+    },
+    {
+      "display_name": "Oliver Kuß",
+      "id": "A5067796093",
+      "orcid": "https://orcid.org/0000-0003-3301-5869",
+      "institutions": [
+        {
+          "id": "I4210152419",
+          "display_name": "Deutsches Diabetes-Zentrum e.V.",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I44260953",
+          "display_name": "Heinrich Heine University Düsseldorf",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Oliver Kuss"
+    },
+    {
+      "display_name": "Joie Ensor",
+      "id": "A5009368181",
+      "orcid": "https://orcid.org/0000-0001-7481-0282",
+      "institutions": [
+        {
+          "id": "I56007636",
+          "display_name": "Keele University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Ensor"
+    },
+    {
+      "display_name": "Jonathan J Deeks",
+      "id": "A5009420648",
+      "orcid": "https://orcid.org/0000-0002-8850-1971",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. J. Deeks"
+    },
+    {
+      "display_name": "Estelle Martin",
+      "id": "A5107867336",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. C. Martin"
+    },
+    {
+      "display_name": "Richard D Riley",
+      "id": "A5040942978",
+      "orcid": "https://orcid.org/0000-0001-8699-0735",
+      "institutions": [
+        {
+          "id": "I56007636",
+          "display_name": "Keele University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. D. Riley"
+    },
+    {
+      "display_name": "Gerta Rücker",
+      "id": "A5019261801",
+      "orcid": "https://orcid.org/0000-0002-2192-2560",
+      "institutions": [
+        {
+          "id": "I161046081",
+          "display_name": "University of Freiburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gerta Rücker"
+    },
+    {
+      "display_name": "Susanne Steinhauser",
+      "id": "A5005912776",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I180923762",
+          "display_name": "University of Cologne",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Susanne Steinhauser"
+    },
+    {
+      "display_name": "M. Schumacher",
+      "id": "A5059659054",
+      "orcid": "https://orcid.org/0000-0001-9538-8682",
+      "institutions": [
+        {
+          "id": "I161046081",
+          "display_name": "University of Freiburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin Schumacher"
+    },
+    {
+      "display_name": "Richard D Riley",
+      "id": "A5040942978",
+      "orcid": "https://orcid.org/0000-0001-8699-0735",
+      "institutions": [
+        {
+          "id": "I56007636",
+          "display_name": "Keele University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard Riley"
+    },
+    {
+      "display_name": "Joie Ensor",
+      "id": "A5009368181",
+      "orcid": "https://orcid.org/0000-0001-7481-0282",
+      "institutions": [
+        {
+          "id": "I56007636",
+          "display_name": "Keele University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joie Ensor"
+    },
+    {
+      "display_name": "Kym I E Snell",
+      "id": "A5049252097",
+      "orcid": "https://orcid.org/0000-0001-9373-6591",
+      "institutions": [
+        {
+          "id": "I56007636",
+          "display_name": "Keele University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kym Snell"
+    },
+    {
+      "display_name": "Brian H Willis",
+      "id": "A5046753910",
+      "orcid": "https://orcid.org/0000-0002-0821-8624",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brian Willis"
+    },
+    {
+      "display_name": "Thomas P. A. Debray",
+      "id": "A5002390430",
+      "orcid": "https://orcid.org/0000-0002-1790-2719",
+      "institutions": [
+        {
+          "id": "I193662353",
+          "display_name": "Utrecht University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Debray"
+    },
+    {
+      "display_name": "Karel G.M. Moons",
+      "id": "A5083104697",
+      "orcid": "https://orcid.org/0000-0003-2118-004X",
+      "institutions": [
+        {
+          "id": "I3018483916",
+          "display_name": "University Medical Center Utrecht",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karel Moons"
+    },
+    {
+      "display_name": "Jonathan J Deeks",
+      "id": "A5009420648",
+      "orcid": "https://orcid.org/0000-0002-8850-1971",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jon Deeks"
+    },
+    {
+      "display_name": "Gary S. Collins",
+      "id": "A5060891981",
+      "orcid": "https://orcid.org/0000-0002-2772-2316",
+      "institutions": [
+        {
+          "id": "I2801809904",
+          "display_name": "Nuffield Orthopaedic Centre",
+          "country_code": "GB",
+          "type": "healthcare"
+        },
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Gary Collins"
+    },
+    {
+      "display_name": "Lavinia Ferrante di Ruffano",
+      "id": "A5020757995",
+      "orcid": "https://orcid.org/0000-0002-2004-0638",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Lavinia Ferrante di Ruffano"
+    },
+    {
+      "display_name": "Brian H Willis",
+      "id": "A5046753910",
+      "orcid": "https://orcid.org/0000-0002-0821-8624",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brian Willis"
+    },
+    {
+      "display_name": "Clare Davenport",
+      "id": "A5081258369",
+      "orcid": "https://orcid.org/0000-0001-5659-4889",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Clare Davenport"
+    },
+    {
+      "display_name": "Susan Mallett",
+      "id": "A5089744545",
+      "orcid": "https://orcid.org/0000-0002-0596-8200",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Sue Mallett"
+    },
+    {
+      "display_name": "Siân Taylor-Phillips",
+      "id": "A5075245317",
+      "orcid": "https://orcid.org/0000-0002-1841-4346",
+      "institutions": [
+        {
+          "id": "I39555362",
+          "display_name": "University of Warwick",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Sian Taylor-Phillips"
+    },
+    {
+      "display_name": "Chris Hyde",
+      "id": "A5112834543",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I23923803",
+          "display_name": "University of Exeter",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Chris Hyde"
+    },
+    {
+      "display_name": "Jonathan J Deeks",
+      "id": "A5009420648",
+      "orcid": "https://orcid.org/0000-0002-8850-1971",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jon Deeks"
+    },
+    {
+      "display_name": "Susan Mallett",
+      "id": "A5089744545",
+      "orcid": "https://orcid.org/0000-0002-0596-8200",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Sue Mallett"
+    },
+    {
+      "display_name": "Stuart A. Taylor",
+      "id": "A5012764146",
+      "orcid": "https://orcid.org/0000-0002-6765-8806",
+      "institutions": [
+        {
+          "id": "I45129253",
+          "display_name": "University College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stuart A. Taylor"
+    },
+    {
+      "display_name": "Gauraang Batnagar",
+      "id": "A5083597075",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I45129253",
+          "display_name": "University College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gauraang Batnagar"
+    },
+    {
+      "display_name": "Siân Taylor-Phillips",
+      "id": "A5075245317",
+      "orcid": "https://orcid.org/0000-0002-1841-4346",
+      "institutions": [
+        {
+          "id": "I39555362",
+          "display_name": "University of Warwick",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Sian Taylor-Phillips"
+    },
+    {
+      "display_name": "Lavinia Ferrante di Ruffano",
+      "id": "A5020757995",
+      "orcid": "https://orcid.org/0000-0002-2004-0638",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lavinia Ferrante Di Ruffano"
+    },
+    {
+      "display_name": "Farah Seedat",
+      "id": "A5064208155",
+      "orcid": "https://orcid.org/0000-0002-3563-7875",
+      "institutions": [
+        {
+          "id": "I39555362",
+          "display_name": "University of Warwick",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Farah Seedat"
+    },
+    {
+      "display_name": "Aileen Clarke",
+      "id": "A5086633752",
+      "orcid": "https://orcid.org/0000-0001-8299-3146",
+      "institutions": [
+        {
+          "id": "I39555362",
+          "display_name": "University of Warwick",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Aileen Clarke"
+    },
+    {
+      "display_name": "Jonathan J Deeks",
+      "id": "A5009420648",
+      "orcid": "https://orcid.org/0000-0002-8850-1971",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jon Deeks"
+    },
+    {
+      "display_name": "Sarah Byron",
+      "id": "A5013854415",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I332035737",
+          "display_name": "National Institute for Health and Care Excellence",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sarah Byron"
+    },
+    {
+      "display_name": "Frances Nixon",
+      "id": "A5060572143",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I332035737",
+          "display_name": "National Institute for Health and Care Excellence",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Frances Nixon"
+    },
+    {
+      "display_name": "Rebecca Albrow",
+      "id": "A5002897768",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I332035737",
+          "display_name": "National Institute for Health and Care Excellence",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rebecca Albrow"
+    },
+    {
+      "display_name": "Thomas Walker",
+      "id": "A5050284438",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I332035737",
+          "display_name": "National Institute for Health and Care Excellence",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Walker"
+    },
+    {
+      "display_name": "Carla Deakin",
+      "id": "A5023107311",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I332035737",
+          "display_name": "National Institute for Health and Care Excellence",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Carla Deakin"
+    },
+    {
+      "display_name": "Chris Hyde",
+      "id": "A5112834543",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I23923803",
+          "display_name": "University of Exeter",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Chris Hyde"
+    },
+    {
+      "display_name": "Zhivko Zhelev",
+      "id": "A5078458496",
+      "orcid": "https://orcid.org/0000-0002-0106-2401",
+      "institutions": [
+        {
+          "id": "I23923803",
+          "display_name": "University of Exeter",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhivko Zhelev"
+    },
+    {
+      "display_name": "Harriet Hunt",
+      "id": "A5043939882",
+      "orcid": "https://orcid.org/0000-0003-1254-0568",
+      "institutions": [
+        {
+          "id": "I23923803",
+          "display_name": "University of Exeter",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Harriet Hunt"
+    },
+    {
+      "display_name": "Lavinia Ferrante di Ruffano",
+      "id": "A5020757995",
+      "orcid": "https://orcid.org/0000-0002-2004-0638",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Lavinia Ferrante di Ruffano"
+    },
+    {
+      "display_name": "Ya‐Ling Yang",
+      "id": "A5027721376",
+      "orcid": "https://orcid.org/0000-0002-7540-3301",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Yaling Yang"
+    },
+    {
+      "display_name": "Lucy Abel",
+      "id": "A5090429566",
+      "orcid": "https://orcid.org/0000-0001-5857-1269",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lucy Abel"
+    },
+    {
+      "display_name": "James Buchanan",
+      "id": "A5063188212",
+      "orcid": "https://orcid.org/0000-0003-2528-0638",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James Buchanan"
+    },
+    {
+      "display_name": "Thomas Fanshawe",
+      "id": "A5055232373",
+      "orcid": "https://orcid.org/0000-0002-9928-8934",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Fanshawe"
+    },
+    {
+      "display_name": "Bethany Shinkins",
+      "id": "A5060521987",
+      "orcid": "https://orcid.org/0000-0001-5350-1018",
+      "institutions": [
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Bethany Shinkins"
+    },
+    {
+      "display_name": "Laure Wynants",
+      "id": "A5069906805",
+      "orcid": "https://orcid.org/0000-0002-3037-122X",
+      "institutions": [
+        {
+          "id": "I99464096",
+          "display_name": "KU Leuven",
+          "country_code": "BE",
+          "type": "funder"
+        },
+        {
+          "id": "I39327780",
+          "display_name": "iMinds",
+          "country_code": "BE",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laure Wynants"
+    },
+    {
+      "display_name": "Jan Y Verbakel",
+      "id": "A5058597472",
+      "orcid": "https://orcid.org/0000-0002-7166-7211",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jan Verbakel"
+    },
+    {
+      "display_name": "Sabine Van Huffel",
+      "id": "A5049055621",
+      "orcid": "https://orcid.org/0000-0001-5939-0996",
+      "institutions": [
+        {
+          "id": "I99464096",
+          "display_name": "KU Leuven",
+          "country_code": "BE",
+          "type": "funder"
+        },
+        {
+          "id": "I39327780",
+          "display_name": "iMinds",
+          "country_code": "BE",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sabine Van Huffel"
+    },
+    {
+      "display_name": "D. Timmerman",
+      "id": "A5002144411",
+      "orcid": "https://orcid.org/0000-0002-3707-6645",
+      "institutions": [
+        {
+          "id": "I99464096",
+          "display_name": "KU Leuven",
+          "country_code": "BE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dirk Timmerman"
+    },
+    {
+      "display_name": "Ben Van Calster",
+      "id": "A5086320066",
+      "orcid": "https://orcid.org/0000-0003-1613-7450",
+      "institutions": [
+        {
+          "id": "I2801952686",
+          "display_name": "Erasmus MC",
+          "country_code": "NL",
+          "type": "healthcare"
+        },
+        {
+          "id": "I913958620",
+          "display_name": "Erasmus University Rotterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Ben Van Calster"
+    },
+    {
+      "display_name": "Mariska Leeflang",
+      "id": "A5066251369",
+      "orcid": "https://orcid.org/0000-0001-5960-0471",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Mariska Leeflang"
+    },
+    {
+      "display_name": "A. H. Koos Zwinderman",
+      "id": "A5110483906",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Aeliko Zwinderman"
+    },
+    {
+      "display_name": "Patrick Bossuyt",
+      "id": "A5109850329",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I2802928900",
+          "display_name": "Amsterdam UMC Location University of Amsterdam",
+          "country_code": "NL",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patrick Bossuyt"
+    },
+    {
+      "display_name": "Jason Oke",
+      "id": "A5011416204",
+      "orcid": "https://orcid.org/0000-0003-3467-6677",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Jason Oke"
+    },
+    {
+      "display_name": "Jack W. O’Sullivan",
+      "id": "A5058259199",
+      "orcid": "https://orcid.org/0000-0003-3629-2546",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jack O’Sullivan"
+    },
+    {
+      "display_name": "Rafael Perera",
+      "id": "A5032430339",
+      "orcid": "https://orcid.org/0000-0003-2418-2091",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rafael Perera"
+    },
+    {
+      "display_name": "Brian D Nicholson",
+      "id": "A5019968434",
+      "orcid": "https://orcid.org/0000-0003-0661-7362",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brian Nicholson"
+    },
+    {
+      "display_name": "Hannah L. Bromley",
+      "id": "A5090266066",
+      "orcid": "https://orcid.org/0000-0002-6650-1639",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hannah L. Bromley"
+    },
+    {
+      "display_name": "Tracy Roberts",
+      "id": "A5029342829",
+      "orcid": "https://orcid.org/0000-0002-0624-0537",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tracy E. Roberts"
+    },
+    {
+      "display_name": "Adele Francis",
+      "id": "A5112262829",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Adele Francis"
+    },
+    {
+      "display_name": "Denniis Petrie",
+      "id": "A5057084528",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Denniis Petrie"
+    },
+    {
+      "display_name": "G. Bruce Mann",
+      "id": "A5076639901",
+      "orcid": "https://orcid.org/0000-0002-2508-9203",
+      "institutions": [
+        {
+          "id": "I1331142282",
+          "display_name": "Royal Women's Hospital",
+          "country_code": "AU",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Bruce Mann"
+    },
+    {
+      "display_name": "K Malottki",
+      "id": "A5040933447",
+      "orcid": "https://orcid.org/0000-0003-2285-3584",
+      "institutions": [
+        {
+          "id": "I4210135017",
+          "display_name": "Cancer Research UK Clinical Trials Unit",
+          "country_code": "GB",
+          "type": "facility"
+        },
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Kinga Malottki"
+    },
+    {
+      "display_name": "Holly Smith",
+      "id": "A5059143936",
+      "orcid": "https://orcid.org/0009-0008-5588-4970",
+      "institutions": [
+        {
+          "id": "I4210135017",
+          "display_name": "Cancer Research UK Clinical Trials Unit",
+          "country_code": "GB",
+          "type": "facility"
+        },
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Holly Smith"
+    },
+    {
+      "display_name": "Jonathan J Deeks",
+      "id": "A5009420648",
+      "orcid": "https://orcid.org/0000-0002-8850-1971",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jon Deeks"
+    },
+    {
+      "display_name": "Lucinda Billingham",
+      "id": "A5001518016",
+      "orcid": "https://orcid.org/0000-0001-8581-4262",
+      "institutions": [
+        {
+          "id": "I4210135017",
+          "display_name": "Cancer Research UK Clinical Trials Unit",
+          "country_code": "GB",
+          "type": "facility"
+        },
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lucinda Billingham"
+    },
+    {
+      "display_name": "Alice Sitch",
+      "id": "A5071562926",
+      "orcid": "https://orcid.org/0000-0001-7727-4497",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Alice Sitch"
+    },
+    {
+      "display_name": "Susan Mallett",
+      "id": "A5089744545",
+      "orcid": "https://orcid.org/0000-0002-0596-8200",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sue Mallett"
+    },
+    {
+      "display_name": "Jonathan J Deeks",
+      "id": "A5009420648",
+      "orcid": "https://orcid.org/0000-0002-8850-1971",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jon Deeks"
+    },
+    {
+      "display_name": "Oke Gerke",
+      "id": "A5003446044",
+      "orcid": "https://orcid.org/0000-0001-6335-3303",
+      "institutions": [
+        {
+          "id": "I2801498763",
+          "display_name": "Odense University Hospital",
+          "country_code": "DK",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Oke Gerke"
+    },
+    {
+      "display_name": "Mie Holm Vilstrup",
+      "id": "A5019169779",
+      "orcid": "https://orcid.org/0000-0002-4760-0068",
+      "institutions": [
+        {
+          "id": "I2801498763",
+          "display_name": "Odense University Hospital",
+          "country_code": "DK",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mie Holm-Vilstrup"
+    },
+    {
+      "display_name": "Eivind Antonsen Segtnan",
+      "id": "A5003053305",
+      "orcid": "https://orcid.org/0000-0002-4668-0967",
+      "institutions": [
+        {
+          "id": "I2801498763",
+          "display_name": "Odense University Hospital",
+          "country_code": "DK",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eivind Antonsen Segtnan"
+    },
+    {
+      "display_name": "Ulrich Halekoh",
+      "id": "A5048061624",
+      "orcid": "https://orcid.org/0000-0003-3679-8424",
+      "institutions": [
+        {
+          "id": "I177969490",
+          "display_name": "University of Southern Denmark",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ulrich Halekoh"
+    },
+    {
+      "display_name": "Poul Flemming Høilund‐Carlsen",
+      "id": "A5026820656",
+      "orcid": "https://orcid.org/0000-0001-7420-2367",
+      "institutions": [
+        {
+          "id": "I177969490",
+          "display_name": "University of Southern Denmark",
+          "country_code": "DK",
+          "type": "funder"
+        },
+        {
+          "id": "I2801498763",
+          "display_name": "Odense University Hospital",
+          "country_code": "DK",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Poul Flemming Høilund-Carlsen"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-02-01",
+  "type": "article",
+  "cited_by_count": 1,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210227620",
+    "display_name": "Diagnostic and Prognostic Research",
+    "issn_l": "2397-7523",
+    "issn": [
+      "2397-7523"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320256"
+  },
+  "volume": "1",
+  "issue": "S1",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://diagnprognres.biomedcentral.com/track/pdf/10.1186/s41512-016-0001-y",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2780069185",
+      "display_name": "Equivalence (formal languages)",
+      "level": 2,
+      "score": 0.64692914
+    },
+    {
+      "id": "C44249647",
+      "display_name": "Confidence interval",
+      "level": 2,
+      "score": 0.59386414
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.56109715
+    },
+    {
+      "id": "C774472",
+      "display_name": "Margin (machine learning)",
+      "level": 2,
+      "score": 0.47889724
+    },
+    {
+      "id": "C198531522",
+      "display_name": "Sample (material)",
+      "level": 2,
+      "score": 0.45525512
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.44499576
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.39411375
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.23313946
+    },
+    {
+      "id": "C43617362",
+      "display_name": "Chromatography",
+      "level": 1,
+      "score": 0.10062033
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.099870265
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.09880313
+    },
+    {
+      "id": "C118615104",
+      "display_name": "Discrete mathematics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11700",
+      "display_name": "Hemodynamic Monitoring and Therapy",
+      "score": 0.9982
+    },
+    {
+      "id": "T10804",
+      "display_name": "Health Systems, Economic Evaluations, Quality of Life",
+      "score": 0.9667
+    },
+    {
+      "id": "T10144",
+      "display_name": "Blood Pressure and Hypertension Studies",
+      "score": 0.9654
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1186/s41512-016-0001-y",
+  "pdf_url": "https://diagnprognres.biomedcentral.com/track/pdf/10.1186/s41512-016-0001-y",
+  "retrieved_date": "2025-07-30T14:42:31.595557",
+  "source_database": "OpenAlex"
+}

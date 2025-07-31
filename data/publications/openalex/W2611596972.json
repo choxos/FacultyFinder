@@ -1,0 +1,581 @@
+{
+  "openalex_id": "W2611596972",
+  "doi": "https://doi.org/10.1016/j.cell.2017.04.014",
+  "title": "Innate Immune Landscape in Early Lung Adenocarcinoma by Paired Single-Cell Analyses",
+  "abstract": "",
+  "authors": [
+    {
+      "display_name": "Yonit Lavin",
+      "id": "A5073819212",
+      "orcid": "https://orcid.org/0000-0003-0593-3910",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yonit Lavin"
+    },
+    {
+      "display_name": "Soma Kobayashi",
+      "id": "A5023347218",
+      "orcid": "https://orcid.org/0000-0002-0470-4027",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Soma Kobayashi"
+    },
+    {
+      "display_name": "Andrew M. Leader",
+      "id": "A5047579647",
+      "orcid": "https://orcid.org/0000-0003-3738-7109",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew Leader"
+    },
+    {
+      "display_name": "El-ad David Amir",
+      "id": "A5080001526",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "El-ad David Amir"
+    },
+    {
+      "display_name": "Naama Elefant",
+      "id": "A5075349126",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I53964585",
+          "display_name": "Weizmann Institute of Science",
+          "country_code": "IL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Naama Elefant"
+    },
+    {
+      "display_name": "Camille Bigenwald",
+      "id": "A5079074289",
+      "orcid": "https://orcid.org/0000-0003-2714-2087",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Camille Bigenwald"
+    },
+    {
+      "display_name": "Romain Remark",
+      "id": "A5090256483",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Romain Remark"
+    },
+    {
+      "display_name": "Robert E. Sweeney",
+      "id": "A5082116183",
+      "orcid": "https://orcid.org/0000-0003-4781-3685",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Sweeney"
+    },
+    {
+      "display_name": "Christian Becker",
+      "id": "A5030959848",
+      "orcid": "https://orcid.org/0000-0002-1716-7208",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christian D. Becker"
+    },
+    {
+      "display_name": "Jacob Levine",
+      "id": "A5037800668",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I39965400",
+          "display_name": "Kettering University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jacob H. Levine"
+    },
+    {
+      "display_name": "Klaus Meinhof",
+      "id": "A5059624920",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Klaus Meinhof"
+    },
+    {
+      "display_name": "Andrew Chow",
+      "id": "A5065367954",
+      "orcid": "https://orcid.org/0000-0003-1151-2450",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew Chow"
+    },
+    {
+      "display_name": "Seunghee Kim-Shulze",
+      "id": "A5018464199",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Seunghee Kim-Shulze"
+    },
+    {
+      "display_name": "Andrea Wolf",
+      "id": "A5090913228",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrea Wolf"
+    },
+    {
+      "display_name": "Chiara Medaglia",
+      "id": "A5043502449",
+      "orcid": "https://orcid.org/0000-0003-1719-764X",
+      "institutions": [
+        {
+          "id": "I53964585",
+          "display_name": "Weizmann Institute of Science",
+          "country_code": "IL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chiara Medaglia"
+    },
+    {
+      "display_name": "Hanjie Li",
+      "id": "A5087773227",
+      "orcid": "https://orcid.org/0000-0002-4052-8366",
+      "institutions": [
+        {
+          "id": "I53964585",
+          "display_name": "Weizmann Institute of Science",
+          "country_code": "IL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hanjie Li"
+    },
+    {
+      "display_name": "Julie Rytlewski",
+      "id": "A5002278734",
+      "orcid": "https://orcid.org/0000-0001-5244-6790",
+      "institutions": [
+        {
+          "id": "I4210106996",
+          "display_name": "Adaptive Biotechnologies (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julie A. Rytlewski"
+    },
+    {
+      "display_name": "Ryan Emerson",
+      "id": "A5076836211",
+      "orcid": "https://orcid.org/0000-0003-0241-3709",
+      "institutions": [
+        {
+          "id": "I4210106996",
+          "display_name": "Adaptive Biotechnologies (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ryan O. Emerson"
+    },
+    {
+      "display_name": "Alexander Solovyov",
+      "id": "A5114046213",
+      "orcid": "https://orcid.org/0000-0002-7682-4706",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexander Solovyov"
+    },
+    {
+      "display_name": "Benjamin D. Greenbaum",
+      "id": "A5063215100",
+      "orcid": "https://orcid.org/0000-0001-6153-8793",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Benjamin D. Greenbaum"
+    },
+    {
+      "display_name": "Catherine Sanders",
+      "id": "A5089581942",
+      "orcid": "https://orcid.org/0000-0001-5058-0486",
+      "institutions": [
+        {
+          "id": "I4210106996",
+          "display_name": "Adaptive Biotechnologies (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Catherine Sanders"
+    },
+    {
+      "display_name": "Marissa Vignali",
+      "id": "A5079949582",
+      "orcid": "https://orcid.org/0000-0002-7319-3371",
+      "institutions": [
+        {
+          "id": "I4210106996",
+          "display_name": "Adaptive Biotechnologies (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marissa Vignali"
+    },
+    {
+      "display_name": "Mary Beth Beasley",
+      "id": "A5020295260",
+      "orcid": "https://orcid.org/0000-0003-2340-1897",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mary Beth Beasley"
+    },
+    {
+      "display_name": "Raja M. Flores",
+      "id": "A5060347349",
+      "orcid": "https://orcid.org/0000-0001-7718-7422",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Raja Flores"
+    },
+    {
+      "display_name": "Sacha Gnjatic",
+      "id": "A5078046623",
+      "orcid": "https://orcid.org/0000-0001-5643-9520",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sacha Gnjatic"
+    },
+    {
+      "display_name": "Dana Pe’er",
+      "id": "A5074451448",
+      "orcid": "https://orcid.org/0000-0002-9259-8817",
+      "institutions": [
+        {
+          "id": "I39965400",
+          "display_name": "Kettering University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dana Pe’er"
+    },
+    {
+      "display_name": "Adeeb Rahman",
+      "id": "A5020454256",
+      "orcid": "https://orcid.org/0000-0002-8620-3161",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Adeeb Rahman"
+    },
+    {
+      "display_name": "Ido Amit",
+      "id": "A5048280875",
+      "orcid": "https://orcid.org/0000-0003-2968-877X",
+      "institutions": [
+        {
+          "id": "I53964585",
+          "display_name": "Weizmann Institute of Science",
+          "country_code": "IL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ido Amit"
+    },
+    {
+      "display_name": "Miriam Mérad",
+      "id": "A5070354041",
+      "orcid": "https://orcid.org/0000-0002-4481-7827",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Miriam Merad"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-05-01",
+  "type": "article",
+  "cited_by_count": 1077,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S110447773",
+    "display_name": "Cell",
+    "issn_l": "0092-8674",
+    "issn": [
+      "0092-8674",
+      "1097-4172"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315673"
+  },
+  "volume": "169",
+  "issue": "4",
+  "first_page": "750",
+  "last_page": "765.e17",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://doi.org/10.1016/j.cell.2017.04.014",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.8249493
+    },
+    {
+      "id": "C8891405",
+      "display_name": "Immune system",
+      "level": 2,
+      "score": 0.7762253
+    },
+    {
+      "id": "C2777701055",
+      "display_name": "Immunotherapy",
+      "level": 3,
+      "score": 0.61703885
+    },
+    {
+      "id": "C2781182431",
+      "display_name": "Adenocarcinoma",
+      "level": 3,
+      "score": 0.6051523
+    },
+    {
+      "id": "C1491633281",
+      "display_name": "Cell",
+      "level": 2,
+      "score": 0.55593467
+    },
+    {
+      "id": "C136449434",
+      "display_name": "Innate immune system",
+      "level": 3,
+      "score": 0.5001657
+    },
+    {
+      "id": "C2777714996",
+      "display_name": "Lung",
+      "level": 2,
+      "score": 0.49967384
+    },
+    {
+      "id": "C2779282312",
+      "display_name": "Myeloid",
+      "level": 2,
+      "score": 0.48629817
+    },
+    {
+      "id": "C203014093",
+      "display_name": "Immunology",
+      "level": 1,
+      "score": 0.4451305
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.3922059
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.13675955
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.10135144
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.081507
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11313",
+      "display_name": "Immune cells in cancer",
+      "score": 0.9999
+    },
+    {
+      "id": "T11289",
+      "display_name": "Single-cell and spatial transcriptomics",
+      "score": 0.9991
+    },
+    {
+      "id": "T10158",
+      "display_name": "Cancer Immunotherapy and Biomarkers",
+      "score": 0.999
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.cell.2017.04.014",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:01:19.062460",
+  "source_database": "OpenAlex"
+}

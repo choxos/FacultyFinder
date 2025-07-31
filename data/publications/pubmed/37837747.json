@@ -1,0 +1,136 @@
+{
+  "pmid": "37837747",
+  "uid": "37837747",
+  "title": "Zero time waste in pre-trained early exit neural networks.",
+  "abstract": "The problem of reducing processing time of large deep learning models is a fundamental challenge in many real-world applications. Early exit methods strive towards this goal by attaching additional Internal Classifiers (ICs) to intermediate layers of a neural network. ICs can quickly return predictions for easy examples and, as a result, reduce the average inference time of the whole model. However, if a particular IC does not decide to return an answer early, its predictions are discarded, with its computations effectively being wasted. To solve this issue, we introduce Zero Time Waste (ZTW), a novel approach in which each IC reuses predictions returned by its predecessors by (1) adding direct connections between ICs and (2) combining previous outputs in an ensemble-like manner. We conduct extensive experiments across various multiple modes, datasets, and architectures to demonstrate that ZTW achieves a significantly better accuracy vs. inference time trade-off than other early exit methods. On the ImageNet dataset, it obtains superior results over the best baseline method in 11 out of 16 cases, reaching up to 5 percentage points of improvement on low computational budgets.",
+  "authors": [
+    {
+      "last_name": "Wójcik",
+      "fore_name": "Bartosz",
+      "initials": "B",
+      "name": "Bartosz Wójcik",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Poland; Doctoral School of Exact and Natural Sciences, Jagiellonian University, Poland; IDEAS NCBR, Poland. Electronic address: b.wojcik@doctoral.uj.edu.pl."
+      ]
+    },
+    {
+      "last_name": "Przewiȩźlikowski",
+      "fore_name": "Marcin",
+      "initials": "M",
+      "name": "Marcin Przewiȩźlikowski",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Poland; Doctoral School of Exact and Natural Sciences, Jagiellonian University, Poland; IDEAS NCBR, Poland."
+      ]
+    },
+    {
+      "last_name": "Szatkowski",
+      "fore_name": "Filip",
+      "initials": "F",
+      "name": "Filip Szatkowski",
+      "affiliations": [
+        "Warsaw University of Technology, Poland; IDEAS NCBR, Poland."
+      ]
+    },
+    {
+      "last_name": "Wołczyk",
+      "fore_name": "Maciej",
+      "initials": "M",
+      "name": "Maciej Wołczyk",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Poland; Doctoral School of Exact and Natural Sciences, Jagiellonian University, Poland."
+      ]
+    },
+    {
+      "last_name": "Bałazy",
+      "fore_name": "Klaudia",
+      "initials": "K",
+      "name": "Klaudia Bałazy",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Poland; Doctoral School of Exact and Natural Sciences, Jagiellonian University, Poland."
+      ]
+    },
+    {
+      "last_name": "Krzepkowski",
+      "fore_name": "Bartłomiej",
+      "initials": "B",
+      "name": "Bartłomiej Krzepkowski",
+      "affiliations": [
+        "University of Warsaw, Poland; IDEAS NCBR, Poland."
+      ]
+    },
+    {
+      "last_name": "Podolak",
+      "fore_name": "Igor",
+      "initials": "I",
+      "name": "Igor Podolak",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Poland."
+      ]
+    },
+    {
+      "last_name": "Tabor",
+      "fore_name": "Jacek",
+      "initials": "J",
+      "name": "Jacek Tabor",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Poland."
+      ]
+    },
+    {
+      "last_name": "Śmieja",
+      "fore_name": "Marek",
+      "initials": "M",
+      "name": "Marek Śmieja",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Poland."
+      ]
+    },
+    {
+      "last_name": "Trzciński",
+      "fore_name": "Tomasz",
+      "initials": "T",
+      "name": "Tomasz Trzciński",
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Poland; Warsaw University of Technology, Poland; IDEAS NCBR, Poland; Tooploox, Poland."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Neural networks : the official journal of the International Neural Network Society",
+    "iso_abbreviation": "Neural Netw",
+    "issn": "1879-2782",
+    "issn_type": "Electronic",
+    "volume": "168",
+    "pub_year": "2023",
+    "pub_month": "Nov"
+  },
+  "start_page": "580",
+  "end_page": "601",
+  "pages": "580-601",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Neural Networks, Computer",
+    "Databases, Factual",
+    "Motivation"
+  ],
+  "article_ids": {
+    "pubmed": "37837747",
+    "doi": "10.1016/j.neunet.2023.10.003",
+    "pii": "S0893-6080(23)00555-5"
+  },
+  "doi": "10.1016/j.neunet.2023.10.003",
+  "dates": {
+    "completed": "2023-11-13",
+    "revised": "2023-11-13"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:59:37.897629",
+    "pmid": "37837747"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "openalex_id": "W2023738812",
+  "doi": "https://doi.org/10.1109/bsn.2010.49",
+  "title": "Online Data and Execution Profiling for Dynamic Energy-Fidelity Optimization in Body Sensor Networks",
+  "abstract": "Power consumption in many BSN devices is dominated by the wireless transmission of raw sensed data. On-node data reduction techniques can be employed to enhance energy efficiency but often come at the expense of application fidelity. This energy-fidelity relationship, however, is subject to both inter- and intra-individual variations, calling for dynamically adaptable on-node signal processing techniques that adjust key parameters based on real-time phenomena. This work presents the tools, methods, and framework for dynamic energy-fidelity optimization, including online data profiling for information content, on-node data rate reduction techniques, energy and resource profiling for executing those techniques, and application fidelity assessment. This approach is demonstrated on an inertial BSN platform using data collected in a clinical study of tremor. Compared to static data reduction settings that are based on patient-specific data profiling, dynamic energy-fidelity optimization through online profiling is shown to reduce energy by 76% for a given data distortion or reduce distortion by 90% for a given energy.",
+  "authors": [
+    {
+      "display_name": "Adam T. Barth",
+      "id": "A5036829241",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I51556381",
+          "display_name": "University of Virginia",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Adam T. Barth"
+    },
+    {
+      "display_name": "Mark Hanson",
+      "id": "A5047188593",
+      "orcid": "https://orcid.org/0000-0002-8403-6275",
+      "institutions": [
+        {
+          "id": "I51556381",
+          "display_name": "University of Virginia",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mark A. Hanson"
+    },
+    {
+      "display_name": "Harry Powell",
+      "id": "A5112235876",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I51556381",
+          "display_name": "University of Virginia",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Harry C. Powell Jr."
+    },
+    {
+      "display_name": "John Lach",
+      "id": "A5079544668",
+      "orcid": "https://orcid.org/0000-0002-7105-9996",
+      "institutions": [
+        {
+          "id": "I51556381",
+          "display_name": "University of Virginia",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John Lach"
+    }
+  ],
+  "publication_year": 2010,
+  "publication_date": "2010-06-01",
+  "type": "article",
+  "cited_by_count": 11,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "213",
+  "last_page": "218",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C187191949",
+      "display_name": "Profiling (computer programming)",
+      "level": 2,
+      "score": 0.8381097
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.789221
+    },
+    {
+      "id": "C2776459999",
+      "display_name": "Fidelity",
+      "level": 2,
+      "score": 0.66571516
+    },
+    {
+      "id": "C2780165032",
+      "display_name": "Energy consumption",
+      "level": 2,
+      "score": 0.6547449
+    },
+    {
+      "id": "C79403827",
+      "display_name": "Real-time computing",
+      "level": 1,
+      "score": 0.5449523
+    },
+    {
+      "id": "C24590314",
+      "display_name": "Wireless sensor network",
+      "level": 2,
+      "score": 0.5420516
+    },
+    {
+      "id": "C557945733",
+      "display_name": "Data transmission",
+      "level": 2,
+      "score": 0.42567354
+    },
+    {
+      "id": "C2742236",
+      "display_name": "Efficient energy use",
+      "level": 2,
+      "score": 0.41032034
+    },
+    {
+      "id": "C149635348",
+      "display_name": "Embedded system",
+      "level": 1,
+      "score": 0.36191934
+    },
+    {
+      "id": "C120314980",
+      "display_name": "Distributed computing",
+      "level": 1,
+      "score": 0.3408335
+    },
+    {
+      "id": "C31258907",
+      "display_name": "Computer network",
+      "level": 1,
+      "score": 0.16498104
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.11649138
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C111919701",
+      "display_name": "Operating system",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C119599485",
+      "display_name": "Electrical engineering",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11932",
+      "display_name": "Wireless Body Area Networks",
+      "score": 0.9999
+    },
+    {
+      "id": "T13052",
+      "display_name": "Molecular Communication and Nanonetworks",
+      "score": 0.9995
+    },
+    {
+      "id": "T10080",
+      "display_name": "Energy Efficient Wireless Sensor Networks",
+      "score": 0.9929
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/bsn.2010.49",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:43:50.717707",
+  "source_database": "OpenAlex"
+}

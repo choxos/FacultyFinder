@@ -1,0 +1,92 @@
+{
+  "pmid": "33095174",
+  "uid": "33095174",
+  "title": "Clinical Context-Aware Biomedical Text Summarization Using Deep Neural Network: Model Development and Validation.",
+  "abstract": "BACKGROUND: Automatic text summarization (ATS) enables users to retrieve meaningful evidence from big data of biomedical repositories to make complex clinical decisions. Deep neural and recurrent networks outperform traditional machine-learning techniques in areas of natural language processing and computer vision; however, they are yet to be explored in the ATS domain, particularly for medical text summarization. OBJECTIVE: Traditional approaches in ATS for biomedical text suffer from fundamental issues such as an inability to capture clinical context, quality of evidence, and purpose-driven selection of passages for the summary. We aimed to circumvent these limitations through achieving precise, succinct, and coherent information extraction from credible published biomedical resources, and to construct a simplified summary containing the most informative content that can offer a review particular to clinical needs. METHODS: In our proposed approach, we introduce a novel framework, termed Biomed-Summarizer, that provides quality-aware Patient/Problem, Intervention, Comparison, and Outcome (PICO)-based intelligent and context-enabled summarization of biomedical text. Biomed-Summarizer integrates the prognosis quality recognition model with a clinical context-aware model to locate text sequences in the body of a biomedical article for use in the final summary. First, we developed a deep neural network binary classifier for quality recognition to acquire scientifically sound studies and filter out others. Second, we developed a bidirectional long-short term memory recurrent neural network as a clinical context-aware classifier, which was trained on semantically enriched features generated using a word-embedding tokenizer for identification of meaningful sentences representing PICO text sequences. Third, we calculated the similarity between query and PICO text sequences using Jaccard similarity with semantic enrichments, where the semantic enrichments are obtained using medical ontologies. Last, we generated a representative summary from the high-scoring PICO sequences aggregated by study type, publication credibility, and freshness score. RESULTS: Evaluation of the prognosis quality recognition model using a large dataset of biomedical literature related to intracranial aneurysm showed an accuracy of 95.41% (2562/2686) in terms of recognizing quality articles. The clinical context-aware multiclass classifier outperformed the traditional machine-learning algorithms, including support vector machine, gradient boosted tree, linear regression, K-nearest neighbor, and naïve Bayes, by achieving 93% (16127/17341) accuracy for classifying five categories: aim, population, intervention, results, and outcome. The semantic similarity algorithm achieved a significant Pearson correlation coefficient of 0.61 (0-1 scale) on a well-known BIOSSES dataset (with 100 pair sentences) after semantic enrichment, representing an improvement of 8.9% over baseline Jaccard similarity. Finally, we found a highly positive correlation among the evaluations performed by three domain experts concerning different metrics, suggesting that the automated summarization is satisfactory. CONCLUSIONS: By employing the proposed method Biomed-Summarizer, high accuracy in ATS was achieved, enabling seamless curation of research evidence from the biomedical literature to use for clinical decision-making.",
+  "authors": [
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Afzal",
+      "affiliations": [
+        "Department of Software, Sejong University, Seoul, Republic of Korea.",
+        "Department of Computer Science & Engineering, School of Engineering and Computer Science, Oakland University, Rochester, MI, United States."
+      ],
+      "orcid": "0000-0002-7851-2327"
+    },
+    {
+      "last_name": "Alam",
+      "fore_name": "Fakhare",
+      "initials": "F",
+      "name": "Fakhare Alam",
+      "affiliations": [
+        "Department of Computer Science & Engineering, School of Engineering and Computer Science, Oakland University, Rochester, MI, United States."
+      ],
+      "orcid": "0000-0002-9495-7051"
+    },
+    {
+      "last_name": "Malik",
+      "fore_name": "Khalid Mahmood",
+      "initials": "KM",
+      "name": "Khalid Mahmood Malik",
+      "affiliations": [
+        "Department of Computer Science & Engineering, School of Engineering and Computer Science, Oakland University, Rochester, MI, United States."
+      ],
+      "orcid": "0000-0002-7927-3436"
+    },
+    {
+      "last_name": "Malik",
+      "fore_name": "Ghaus M",
+      "initials": "GM",
+      "name": "Ghaus M Malik",
+      "affiliations": [
+        "Department of Neurosurgery, Henry Ford Hospital, Detroit, MI, United States."
+      ],
+      "orcid": "0000-0002-1877-7024"
+    }
+  ],
+  "journal": {
+    "title": "Journal of medical Internet research",
+    "iso_abbreviation": "J Med Internet Res",
+    "issn": "1438-8871",
+    "issn_type": "Electronic",
+    "volume": "22",
+    "issue": "10",
+    "pub_year": "2020",
+    "pub_month": "Oct",
+    "pub_day": "23"
+  },
+  "start_page": "e19810",
+  "pages": "e19810",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Information Storage and Retrieval",
+    "Neural Networks, Computer",
+    "Reproducibility of Results"
+  ],
+  "article_ids": {
+    "pubmed": "33095174",
+    "pmc": "PMC7647812",
+    "doi": "10.2196/19810",
+    "pii": "v22i10e19810"
+  },
+  "doi": "10.2196/19810",
+  "pmc_id": "PMC7647812",
+  "dates": {
+    "completed": "2021-01-29",
+    "revised": "2021-01-29"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.920931",
+    "pmid": "33095174"
+  }
+}

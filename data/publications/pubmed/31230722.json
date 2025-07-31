@@ -1,0 +1,392 @@
+{
+  "pmid": "31230722",
+  "uid": "31230722",
+  "title": "Bioinformatics-Based Identification of Expanded Repeats: A Non-reference Intronic Pentamer Expansion in RFC1 Causes CANVAS.",
+  "abstract": "Genomic technologies such as next-generation sequencing (NGS) are revolutionizing molecular diagnostics and clinical medicine. However, these approaches have proven inefficient at identifying pathogenic repeat expansions. Here, we apply a collection of bioinformatics tools that can be utilized to identify either known or novel expanded repeat sequences in NGS data. We performed genetic studies of a cohort of 35 individuals from 22 families with a clinical diagnosis of cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome (CANVAS). Analysis of whole-genome sequence (WGS) data with five independent algorithms identified a recessively inherited intronic repeat expansion [(AAGGG)exp] in the gene encoding Replication Factor C1 (RFC1). This motif, not reported in the reference sequence, localized to an Alu element and replaced the reference (AAAAG)11 short tandem repeat. Genetic analyses confirmed the pathogenic expansion in 18 of 22 CANVAS-affected families and identified a core ancestral haplotype, estimated to have arisen in Europe more than twenty-five thousand years ago. WGS of the four RFC1-negative CANVAS-affected families identified plausible variants in three, with genomic re-diagnosis of SCA3, spastic ataxia of the Charlevoix-Saguenay type, and SCA45. This study identified the genetic basis of CANVAS and demonstrated that these improved bioinformatics tools increase the diagnostic utility of WGS to determine the genetic basis of a heterogeneous group of clinically overlapping neurogenetic disorders.",
+  "authors": [
+    {
+      "last_name": "Rafehi",
+      "fore_name": "Haloom",
+      "initials": "H",
+      "name": "Haloom Rafehi",
+      "affiliations": [
+        "Population Health and Immunity Division, The Walter and Eliza Hall Institute of Medical Research, 1G Royal Parade, Parkville, VIC 3052, Australia; Department of Medical Biology, University of Melbourne, 1G Royal Parade, Parkville, VIC 3052, Australia."
+      ]
+    },
+    {
+      "last_name": "Szmulewicz",
+      "fore_name": "David J",
+      "initials": "DJ",
+      "name": "David J Szmulewicz",
+      "affiliations": [
+        "Cerebellar Ataxia Clinic, Neuroscience Department, Alfred Health, Melbourne, VIC 3004, Australia; Balance Disorders and Ataxia Service, Royal Victorian Eye & Ear Hospital, East Melbourne, VIC 3002, Australia."
+      ]
+    },
+    {
+      "last_name": "Bennett",
+      "fore_name": "Mark F",
+      "initials": "MF",
+      "name": "Mark F Bennett",
+      "affiliations": [
+        "Population Health and Immunity Division, The Walter and Eliza Hall Institute of Medical Research, 1G Royal Parade, Parkville, VIC 3052, Australia; Department of Medical Biology, University of Melbourne, 1G Royal Parade, Parkville, VIC 3052, Australia; Epilepsy Research Centre, Department of Medicine, University of Melbourne, Austin Health, 245 Burgundy Street, Heidelberg, VIC 3084, Australia."
+      ]
+    },
+    {
+      "last_name": "Sobreira",
+      "fore_name": "Nara L M",
+      "initials": "NLM",
+      "name": "Nara L M Sobreira",
+      "affiliations": [
+        "McKusick-Nathans Institute of Genetic Medicine, Johns Hopkins University School of Medicine, Baltimore, MD 21205, USA."
+      ]
+    },
+    {
+      "last_name": "Pope",
+      "fore_name": "Kate",
+      "initials": "K",
+      "name": "Kate Pope",
+      "affiliations": [
+        "Bruce Lefroy Centre, Murdoch Children's Research Institute, Flemington Rd, Parkville, VIC 3052, Australia."
+      ]
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "Katherine R",
+      "initials": "KR",
+      "name": "Katherine R Smith",
+      "affiliations": [
+        "Population Health and Immunity Division, The Walter and Eliza Hall Institute of Medical Research, 1G Royal Parade, Parkville, VIC 3052, Australia."
+      ]
+    },
+    {
+      "last_name": "Gillies",
+      "fore_name": "Greta",
+      "initials": "G",
+      "name": "Greta Gillies",
+      "affiliations": [
+        "Bruce Lefroy Centre, Murdoch Children's Research Institute, Flemington Rd, Parkville, VIC 3052, Australia."
+      ]
+    },
+    {
+      "last_name": "Diakumis",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Diakumis",
+      "affiliations": [
+        "University of Melbourne Centre for Cancer Research, Victorian Comprehensive Cancer Centre, 305 Grattan Street, Melbourne, VIC 3000, Australia."
+      ]
+    },
+    {
+      "last_name": "Dolzhenko",
+      "fore_name": "Egor",
+      "initials": "E",
+      "name": "Egor Dolzhenko",
+      "affiliations": [
+        "Illumina Inc, 5200 Illumina Way, San Diego, CA 92122, USA."
+      ]
+    },
+    {
+      "last_name": "Eberle",
+      "fore_name": "Michael A",
+      "initials": "MA",
+      "name": "Michael A Eberle",
+      "affiliations": [
+        "Illumina Inc, 5200 Illumina Way, San Diego, CA 92122, USA."
+      ]
+    },
+    {
+      "last_name": "Barcina",
+      "fore_name": "María García",
+      "initials": "MG",
+      "name": "María García Barcina",
+      "affiliations": [
+        "Genetic Unit, Basurto University Hospital, OSI Bilbao-Basurto, avenida Montevideo 18, 48013 Bilbao, Spain."
+      ]
+    },
+    {
+      "last_name": "Breen",
+      "fore_name": "David P",
+      "initials": "DP",
+      "name": "David P Breen",
+      "affiliations": [
+        "Centre for Clinical Brain Sciences, University of Edinburgh, Edinburgh EH16 4SB, Scotland; Anne Rowling Regenerative Neurology Clinic, University of Edinburgh, Edinburgh EH16 4SB, Scotland; Usher Institute of Population Health Sciences and Informatics, University of Edinburgh, Edinburgh EH16 4UX, Scotland."
+      ]
+    },
+    {
+      "last_name": "Chancellor",
+      "fore_name": "Andrew M",
+      "initials": "AM",
+      "name": "Andrew M Chancellor",
+      "affiliations": [
+        "Department of Neurology, Tauranga Hospital, Private Bag, Cameron Road, Tauranga 3171, New Zealand."
+      ]
+    },
+    {
+      "last_name": "Cremer",
+      "fore_name": "Phillip D",
+      "initials": "PD",
+      "name": "Phillip D Cremer",
+      "affiliations": [
+        "University of Sydney, Camperdown, NSW 2006, Australia; Royal North Shore Hospital, Pacific Hwy, St Leonards, NSW 2065, Australia."
+      ]
+    },
+    {
+      "last_name": "Delatycki",
+      "fore_name": "Martin B",
+      "initials": "MB",
+      "name": "Martin B Delatycki",
+      "affiliations": [
+        "Bruce Lefroy Centre, Murdoch Children's Research Institute, Flemington Rd, Parkville, VIC 3052, Australia; Department of Paediatrics, University of Melbourne, Royal Children's Hospital, Flemington Rd, Parkville, VIC 3052, Australia."
+      ]
+    },
+    {
+      "last_name": "Fogel",
+      "fore_name": "Brent L",
+      "initials": "BL",
+      "name": "Brent L Fogel",
+      "affiliations": [
+        "Departments of Neurology and Human Genetics, David Geffen School of Medicine, University of California, Los Angeles, CA 90095, USA."
+      ]
+    },
+    {
+      "last_name": "Hackett",
+      "fore_name": "Anna",
+      "initials": "A",
+      "name": "Anna Hackett",
+      "affiliations": [
+        "Hunter Genetics, Hunter New England Health Service, Waratah, Newcastle, NSW 2300, Australia; University of Newcastle, Newcastle, NSW 2300, Australia."
+      ]
+    },
+    {
+      "last_name": "Halmagyi",
+      "fore_name": "G Michael",
+      "initials": "GM",
+      "name": "G Michael Halmagyi",
+      "affiliations": [
+        "Neurology Department, Royal Prince Alfred Hospital, Camperdown, NSW 2050, Australia; Central Clinical School, University of Sydney, Camperdown, NSW 2050, Australia."
+      ]
+    },
+    {
+      "last_name": "Kapetanovic",
+      "fore_name": "Solange",
+      "initials": "S",
+      "name": "Solange Kapetanovic",
+      "affiliations": [
+        "Servicio de Neurología, Hospital de Basurto, Avenida de Montevideo 18, 48013 Bilbao, Bizkaia, Spain."
+      ]
+    },
+    {
+      "last_name": "Lang",
+      "fore_name": "Anthony",
+      "initials": "A",
+      "name": "Anthony Lang",
+      "affiliations": [
+        "Edmond J. Safra Program in Parkinson disease and the Morton and Gloria Shulman Movement Disorders Clinic, Toronto Western Hospital, Toronto, ON M5T 2S8, Canada; Department of Medicine, Division of Neurology, University Health Network and the University of Toronto, Toronto, ON M5T 2S8, Canada."
+      ]
+    },
+    {
+      "last_name": "Mossman",
+      "fore_name": "Stuart",
+      "initials": "S",
+      "name": "Stuart Mossman",
+      "affiliations": [
+        "Department of Neurology, Wellington Hospital, Wellington 6021, New Zealand."
+      ]
+    },
+    {
+      "last_name": "Mu",
+      "fore_name": "Weiyi",
+      "initials": "W",
+      "name": "Weiyi Mu",
+      "affiliations": [
+        "McKusick-Nathans Institute of Genetic Medicine, Johns Hopkins University School of Medicine, Baltimore, MD 21205, USA."
+      ]
+    },
+    {
+      "last_name": "Patrikios",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Patrikios",
+      "affiliations": [
+        "Sunshine Neurology, Maroochydore, QLD 4558, Australia."
+      ]
+    },
+    {
+      "last_name": "Perlman",
+      "fore_name": "Susan L",
+      "initials": "SL",
+      "name": "Susan L Perlman",
+      "affiliations": [
+        "Department of Neurology, David Geffen School of Medicine, University of California, Los Angeles, CA 90095, USA."
+      ]
+    },
+    {
+      "last_name": "Rosemergy",
+      "fore_name": "Ian",
+      "initials": "I",
+      "name": "Ian Rosemergy",
+      "affiliations": [
+        "Department of Neurology, Wellington Hospital, Newtown, Wellington 6021, New Zealand."
+      ]
+    },
+    {
+      "last_name": "Storey",
+      "fore_name": "Elsdon",
+      "initials": "E",
+      "name": "Elsdon Storey",
+      "affiliations": [
+        "Department of Neuroscience, Central Clinical School, Monash University, Alfred Hospital Campus, Commercial Road, Melbourne, VIC 3004, Australia."
+      ]
+    },
+    {
+      "last_name": "Watson",
+      "fore_name": "Shaun R D",
+      "initials": "SRD",
+      "name": "Shaun R D Watson",
+      "affiliations": [
+        "Institute of Neurological Sciences, Prince of Wales Hospital, Randwick, NSW 2031, Australia."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael A",
+      "initials": "MA",
+      "name": "Michael A Wilson",
+      "affiliations": [
+        "Bruce Lefroy Centre, Murdoch Children's Research Institute, Flemington Rd, Parkville, VIC 3052, Australia."
+      ]
+    },
+    {
+      "last_name": "Zee",
+      "fore_name": "David S",
+      "initials": "DS",
+      "name": "David S Zee",
+      "affiliations": [
+        "Department of Neurology, Johns Hopkins Hospital, Baltimore, MD 21287, USA."
+      ]
+    },
+    {
+      "last_name": "Valle",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Valle",
+      "affiliations": [
+        "McKusick-Nathans Institute of Genetic Medicine, Johns Hopkins University School of Medicine, Baltimore, MD 21205, USA."
+      ]
+    },
+    {
+      "last_name": "Amor",
+      "fore_name": "David J",
+      "initials": "DJ",
+      "name": "David J Amor",
+      "affiliations": [
+        "Bruce Lefroy Centre, Murdoch Children's Research Institute, Flemington Rd, Parkville, VIC 3052, Australia; Department of Paediatrics, University of Melbourne, Royal Children's Hospital, Flemington Rd, Parkville, VIC 3052, Australia."
+      ]
+    },
+    {
+      "last_name": "Bahlo",
+      "fore_name": "Melanie",
+      "initials": "M",
+      "name": "Melanie Bahlo",
+      "affiliations": [
+        "Population Health and Immunity Division, The Walter and Eliza Hall Institute of Medical Research, 1G Royal Parade, Parkville, VIC 3052, Australia; Department of Medical Biology, University of Melbourne, 1G Royal Parade, Parkville, VIC 3052, Australia."
+      ]
+    },
+    {
+      "last_name": "Lockhart",
+      "fore_name": "Paul J",
+      "initials": "PJ",
+      "name": "Paul J Lockhart",
+      "affiliations": [
+        "Bruce Lefroy Centre, Murdoch Children's Research Institute, Flemington Rd, Parkville, VIC 3052, Australia; Department of Paediatrics, University of Melbourne, Royal Children's Hospital, Flemington Rd, Parkville, VIC 3052, Australia. Electronic address: paul.lockhart@mcri.edu.au."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "American journal of human genetics",
+    "iso_abbreviation": "Am J Hum Genet",
+    "issn": "1537-6605",
+    "issn_type": "Electronic",
+    "volume": "105",
+    "issue": "1",
+    "pub_year": "2019",
+    "pub_month": "Jul",
+    "pub_day": "03"
+  },
+  "start_page": "151",
+  "end_page": "165",
+  "pages": "151-165",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Cerebellar Ataxia",
+    "Cohort Studies",
+    "Computational Biology",
+    "Family",
+    "Female",
+    "Genomics",
+    "Humans",
+    "Introns",
+    "Male",
+    "Microsatellite Repeats",
+    "Middle Aged",
+    "Polyneuropathies",
+    "Replication Protein C",
+    "Sensation Disorders",
+    "Syndrome",
+    "Vestibular Diseases",
+    "Whole Genome Sequencing"
+  ],
+  "article_ids": {
+    "pubmed": "31230722",
+    "pmc": "PMC6612533",
+    "doi": "10.1016/j.ajhg.2019.05.016",
+    "pii": "S0002-9297(19)30203-4"
+  },
+  "doi": "10.1016/j.ajhg.2019.05.016",
+  "pmc_id": "PMC6612533",
+  "dates": {
+    "completed": "2020-03-11",
+    "revised": "2023-10-12"
+  },
+  "chemicals": [
+    "RFC1 protein, human",
+    "Replication Protein C"
+  ],
+  "grants": [
+    {
+      "grant_id": "T32 GM007814",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 NS082094",
+      "agency": "NINDS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U54 HG006542",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P50 HD103538",
+      "agency": "NICHD NIH HHS",
+      "country": "United States"
+    },
+    {
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.529060",
+    "pmid": "31230722"
+  }
+}

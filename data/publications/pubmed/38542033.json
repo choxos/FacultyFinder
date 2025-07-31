@@ -1,0 +1,265 @@
+{
+  "pmid": "38542033",
+  "uid": "38542033",
+  "title": "Predicting the Length of Mechanical Ventilation in Acute Respiratory Disease Syndrome Using Machine Learning: The PIONEER Study.",
+  "abstract": "Background: The ability to predict a long duration of mechanical ventilation (MV) by clinicians is very limited. We assessed the value of machine learning (ML) for early prediction of the duration of MV > 14 days in patients with moderate-to-severe acute respiratory distress syndrome (ARDS). Methods: This is a development, testing, and external validation study using data from 1173 patients on MV ≥ 3 days with moderate-to-severe ARDS. We first developed and tested prediction models in 920 ARDS patients using relevant features captured at the time of moderate/severe ARDS diagnosis, at 24 h and 72 h after diagnosis with logistic regression, and Multilayer Perceptron, Support Vector Machine, and Random Forest ML techniques. For external validation, we used an independent cohort of 253 patients on MV ≥ 3 days with moderate/severe ARDS. Results: A total of 441 patients (48%) from the derivation cohort (n = 920) and 100 patients (40%) from the validation cohort (n = 253) were mechanically ventilated for >14 days [median 14 days (IQR 8-25) vs. 13 days (IQR 7-21), respectively]. The best early prediction model was obtained with data collected at 72 h after moderate/severe ARDS diagnosis. Multilayer Perceptron risk modeling identified major prognostic factors for the duration of MV > 14 days, including PaO2/FiO2, PaCO2, pH, and positive end-expiratory pressure. Predictions of the duration of MV > 14 days showed modest discrimination [AUC 0.71 (95%CI 0.65-0.76)]. Conclusions: Prolonged MV duration in moderate/severe ARDS patients remains difficult to predict early even with ML techniques such as Multilayer Perceptron and using data at 72 h of diagnosis. More research is needed to identify markers for predicting the length of MV. This study was registered on 14 August 2023 at ClinicalTrials.gov (NCT NCT05993377).",
+  "authors": [
+    {
+      "last_name": "Villar",
+      "fore_name": "Jesús",
+      "initials": "J",
+      "name": "Jesús Villar",
+      "affiliations": [
+        "CIBER de Enfermedades Respiratorias, Instituto de Salud Carlos III, 28029 Madrid, Spain.",
+        "Research Unit, Hospital Universitario Dr. Negrín, 35019 Las Palmas de Gran Canaria, Spain.",
+        "Li Ka Shing Knowledge Institute at St. Michael's Hospital, Toronto, ON M5B 1W8, Canada.",
+        "Faculty of Health Sciences, Universidad del Atlántico Medio (UNAM), 35017 Tafira Baja, Gran Canaria, Canary Islands, Spain."
+      ],
+      "orcid": "0000-0001-5687-3562"
+    },
+    {
+      "last_name": "González-Martín",
+      "fore_name": "Jesús M",
+      "initials": "JM",
+      "name": "Jesús M González-Martín",
+      "affiliations": [
+        "CIBER de Enfermedades Respiratorias, Instituto de Salud Carlos III, 28029 Madrid, Spain.",
+        "Research Unit, Hospital Universitario Dr. Negrín, 35019 Las Palmas de Gran Canaria, Spain."
+      ],
+      "orcid": "0000-0001-6816-4157"
+    },
+    {
+      "last_name": "Fernández",
+      "fore_name": "Cristina",
+      "initials": "C",
+      "name": "Cristina Fernández",
+      "affiliations": [
+        "Research Unit, Hospital Universitario Dr. Negrín, 35019 Las Palmas de Gran Canaria, Spain."
+      ]
+    },
+    {
+      "last_name": "Soler",
+      "fore_name": "Juan A",
+      "initials": "JA",
+      "name": "Juan A Soler",
+      "affiliations": [
+        "Intensive Care Unit, Hospital Universitario Virgen de Arrixaca, 30120 Murcia, Spain."
+      ]
+    },
+    {
+      "last_name": "Ambrós",
+      "fore_name": "Alfonso",
+      "initials": "A",
+      "name": "Alfonso Ambrós",
+      "affiliations": [
+        "Intensive Care Unit, Hospital General Universitario de Ciudad Real, 13005 Ciudad Real, Spain."
+      ]
+    },
+    {
+      "last_name": "Pita-García",
+      "fore_name": "Lidia",
+      "initials": "L",
+      "name": "Lidia Pita-García",
+      "affiliations": [
+        "Intensive Care Unit, Hospital Universitario de A Coruña, 15006 La Coruña, Spain."
+      ]
+    },
+    {
+      "last_name": "Fernández",
+      "fore_name": "Lorena",
+      "initials": "L",
+      "name": "Lorena Fernández",
+      "affiliations": [
+        "Intensive Care Unit, Hospital Universitario Río Hortega, 47012 Valladolid, Spain."
+      ]
+    },
+    {
+      "last_name": "Ferrando",
+      "fore_name": "Carlos",
+      "initials": "C",
+      "name": "Carlos Ferrando",
+      "affiliations": [
+        "CIBER de Enfermedades Respiratorias, Instituto de Salud Carlos III, 28029 Madrid, Spain.",
+        "Surgical Intensive Care Unit, Department Anesthesia, Hospital Clinic, IDIBAPS, 08036 Barcelona, Spain."
+      ]
+    },
+    {
+      "last_name": "Arocas",
+      "fore_name": "Blanca",
+      "initials": "B",
+      "name": "Blanca Arocas",
+      "affiliations": [
+        "Department of Anesthesia, Hospital Clínico Universitario de Valencia, 46010 Valenci, Spain."
+      ]
+    },
+    {
+      "last_name": "González-Vaquero",
+      "fore_name": "Myriam",
+      "initials": "M",
+      "name": "Myriam González-Vaquero",
+      "affiliations": [
+        "Intensive Care Unit, Complejo Asistencial Universitario de León, 24001 León, Spain."
+      ]
+    },
+    {
+      "last_name": "Añón",
+      "fore_name": "José M",
+      "initials": "JM",
+      "name": "José M Añón",
+      "affiliations": [
+        "CIBER de Enfermedades Respiratorias, Instituto de Salud Carlos III, 28029 Madrid, Spain.",
+        "Intensive Care Unit, Hospital Universitario La Paz, IdiPaz, 28046 Madrid, Spain."
+      ]
+    },
+    {
+      "last_name": "González-Higueras",
+      "fore_name": "Elena",
+      "initials": "E",
+      "name": "Elena González-Higueras",
+      "affiliations": [
+        "Intensive Care Unit, Hospital Virgen de La Luz, 16002 Cuenca, Spain."
+      ]
+    },
+    {
+      "last_name": "Parrilla",
+      "fore_name": "Dácil",
+      "initials": "D",
+      "name": "Dácil Parrilla",
+      "affiliations": [
+        "Intensive Care Unit, Hospital Universitario NS de Candelaria, 38010 Santa Cruz de Tenerife, Spain."
+      ]
+    },
+    {
+      "last_name": "Vidal",
+      "fore_name": "Anxela",
+      "initials": "A",
+      "name": "Anxela Vidal",
+      "affiliations": [
+        "Intensive Care Unit, Hospital Universitario Fundación Jiménez Díaz, 28040 Madrid, Spain."
+      ],
+      "orcid": "0000-0002-2879-8152"
+    },
+    {
+      "last_name": "Fernández",
+      "fore_name": "M Mar",
+      "initials": "MM",
+      "name": "M Mar Fernández",
+      "affiliations": [
+        "Intensive Care Unit, Hospital Universitario Mutua Terrassa, 08221 Terrassa, Spain."
+      ],
+      "orcid": "0000-0001-8137-5872"
+    },
+    {
+      "last_name": "Rodríguez-Suárez",
+      "fore_name": "Pedro",
+      "initials": "P",
+      "name": "Pedro Rodríguez-Suárez",
+      "affiliations": [
+        "CIBER de Enfermedades Respiratorias, Instituto de Salud Carlos III, 28029 Madrid, Spain.",
+        "Thoracic Surgery, Hospital Universitario Dr. Negrín, 35019 Las Palmas de Gran Canaria, Spain."
+      ]
+    },
+    {
+      "last_name": "Fernández",
+      "fore_name": "Rosa L",
+      "initials": "RL",
+      "name": "Rosa L Fernández",
+      "affiliations": [
+        "CIBER de Enfermedades Respiratorias, Instituto de Salud Carlos III, 28029 Madrid, Spain.",
+        "Research Unit, Hospital Universitario Dr. Negrín, 35019 Las Palmas de Gran Canaria, Spain."
+      ]
+    },
+    {
+      "last_name": "Gómez-Bentolila",
+      "fore_name": "Estrella",
+      "initials": "E",
+      "name": "Estrella Gómez-Bentolila",
+      "affiliations": [
+        "Research Unit, Hospital Universitario Dr. Negrín, 35019 Las Palmas de Gran Canaria, Spain."
+      ]
+    },
+    {
+      "last_name": "Burns",
+      "fore_name": "Karen E A",
+      "initials": "KEA",
+      "name": "Karen E A Burns",
+      "affiliations": [
+        "Li Ka Shing Knowledge Institute at St. Michael's Hospital, Toronto, ON M5B 1W8, Canada.",
+        "Critical Care Medicine, Unity Health Toronto-St. Michael's Hospital, Toronto, ON M5B 1W8, Canada.",
+        "Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON L8S 4L8, Canada."
+      ],
+      "orcid": "0000-0002-9967-5424"
+    },
+    {
+      "last_name": "Szakmany",
+      "fore_name": "Tamas",
+      "initials": "T",
+      "name": "Tamas Szakmany",
+      "affiliations": [
+        "Intensive Care, Cardiff University, Cardiff CF14 4XW, UK."
+      ],
+      "orcid": "0000-0003-3632-8844"
+    },
+    {
+      "last_name": "Steyerberg",
+      "fore_name": "Ewout W",
+      "initials": "EW",
+      "name": "Ewout W Steyerberg",
+      "affiliations": [
+        "Department Biomedical Data Sciences, Leiden University Medical Center, 2333 ZA Leiden, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "The PredictION Of Duration Of mEchanical vEntilation In Ards Pioneer Network",
+      "name": "The PredictION Of Duration Of mEchanical vEntilation In Ards Pioneer Network",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Journal of clinical medicine",
+    "iso_abbreviation": "J Clin Med",
+    "issn": "2077-0383",
+    "issn_type": "Print",
+    "volume": "13",
+    "issue": "6",
+    "pub_year": "2024",
+    "pub_month": "Mar",
+    "pub_day": "21"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "38542033",
+    "pmc": "PMC10971349",
+    "doi": "10.3390/jcm13061811",
+    "pii": "jcm13061811"
+  },
+  "doi": "10.3390/jcm13061811",
+  "pmc_id": "PMC10971349",
+  "dates": {
+    "revised": "2024-03-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "PI19/0141",
+      "agency": "Instituto de Salud Carlos III"
+    },
+    {
+      "grant_id": "PIFIISC20-51",
+      "agency": "The European Regional Development's Funds"
+    },
+    {
+      "grant_id": "PIFIISC21-36",
+      "agency": "Fundación Canaria Instituto de Investigación Sanitaria de Canarias"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:12:08.959911",
+    "pmid": "38542033"
+  }
+}

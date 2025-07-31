@@ -1,0 +1,148 @@
+{
+  "openalex_id": "W4391880018",
+  "doi": "https://doi.org/10.3389/fbloc.2024.1342956",
+  "title": "Data depth and core-based trend detection on blockchain transaction networks",
+  "abstract": "Blockchains are significantly easing trade finance, with billions of dollars worth of assets being transacted daily. However, analyzing these networks remains challenging due to the sheer volume and complexity of the data. We introduce a method named InnerCore that detects market manipulators within blockchain-based networks and offers a sentiment indicator for these networks. This is achieved through data depth-based core decomposition and centered motif discovery, ensuring scalability. InnerCore is a computationally efficient, unsupervised approach suitable for analyzing large temporal graphs. We demonstrate its effectiveness by analyzing and detecting three recent real-world incidents from our datasets: the catastrophic collapse of LunaTerra, the Proof-of-Stake switch of Ethereum, and the temporary peg loss of USDC - while also verifying our results against external ground truth. Our experiments show that InnerCore can match the qualified analysis accurately without human involvement, automating blockchain analysis in a scalable manner, while being more effective and efficient than baselines and state-of-the-art attributed change detection approach in dynamic graphs.",
+  "authors": [
+    {
+      "display_name": "Jason Zhu",
+      "id": "A5010848117",
+      "orcid": "https://orcid.org/0000-0003-0328-665X",
+      "institutions": [
+        {
+          "id": "I46247651",
+          "display_name": "University of Manitoba",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jason Zhu"
+    },
+    {
+      "display_name": "Arijit Khan",
+      "id": "A5019024971",
+      "orcid": "https://orcid.org/0000-0002-7312-6312",
+      "institutions": [
+        {
+          "id": "I891191580",
+          "display_name": "Aalborg University",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Arijit Khan"
+    },
+    {
+      "display_name": "Cüneyt Gürcan Akçora",
+      "id": "A5045418504",
+      "orcid": "https://orcid.org/0000-0002-2882-6950",
+      "institutions": [
+        {
+          "id": "I106165777",
+          "display_name": "University of Central Florida",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Cuneyt Gurcan Akcora"
+    }
+  ],
+  "publication_year": 2024,
+  "publication_date": "2024-02-16",
+  "type": "article",
+  "cited_by_count": 4,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210212584",
+    "display_name": "Frontiers in Blockchain",
+    "issn_l": "2624-7852",
+    "issn": [
+      "2624-7852"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320527"
+  },
+  "volume": "7",
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.frontiersin.org/articles/10.3389/fbloc.2024.1342956/pdf?isPublishedV2=False",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2779687700",
+      "display_name": "Blockchain",
+      "level": 2,
+      "score": 0.9669626
+    },
+    {
+      "id": "C2164484",
+      "display_name": "Core (optical fiber)",
+      "level": 2,
+      "score": 0.6711147
+    },
+    {
+      "id": "C75949130",
+      "display_name": "Database transaction",
+      "level": 2,
+      "score": 0.5515308
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.4707214
+    },
+    {
+      "id": "C77088390",
+      "display_name": "Database",
+      "level": 1,
+      "score": 0.28355062
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.26690665
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.18966833
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10064",
+      "display_name": "Complex Network Analysis Techniques",
+      "score": 0.9984
+    },
+    {
+      "id": "T10270",
+      "display_name": "Blockchain Technology Applications and Security",
+      "score": 0.9918
+    },
+    {
+      "id": "T12761",
+      "display_name": "Data Stream Mining Techniques",
+      "score": 0.9803
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3389/fbloc.2024.1342956",
+  "pdf_url": "https://www.frontiersin.org/articles/10.3389/fbloc.2024.1342956/pdf?isPublishedV2=False",
+  "retrieved_date": "2025-07-30T14:56:27.871635",
+  "source_database": "OpenAlex"
+}

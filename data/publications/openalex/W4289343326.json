@@ -1,0 +1,239 @@
+{
+  "openalex_id": "W4289343326",
+  "doi": "https://doi.org/10.21203/rs.3.rs-1875351/v1",
+  "title": "A comparison of machine learning methods to predict survival times for cancer patients: Incorporating time-varying covariates",
+  "abstract": "Abstract The Cox proportional hazard model is commonly used in evaluating risk factors in cancer survival data. The model assumes an additive, linear relationship between the risk factors and the log hazard. However, this assumption may be too simplistic. Further, failure to take time-varying covariates into account, if present, may lower prediction accuracy. In this retrospective, population-based, prognostic study of data from patients diagnosed with cancer from 2008 to 2015 in Ontario, Canada, we applied machine learning-based time-to-event prediction methods and compared their predictive performance in two sets of analyses: 1) yearly-cohort-based time-invariant and 2) fully time-varying covariates analysis. Machine learning-based methods — gradient boosting model (gbm), random survival forest (rsf), elastic net (enet), lasso, ridge, and deepsurv neural network (nnet) — were compared to the traditional Cox proportional hazard (coxph) model and the prior study which used the yearly-cohort-based time-invariant analysis. Using Harrell's C index as our primary measure, we found that using both machine-learning techniques and incorporating time-dependent covariates can improve predictive performance. Gradient boosting machine showed the best performance on test data in both time-invariant and time-varying covariates analysis.",
+  "authors": [
+    {
+      "display_name": "Steve Cygu",
+      "id": "A5031946770",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steve Cygu"
+    },
+    {
+      "display_name": "Hsien Seow",
+      "id": "A5011213291",
+      "orcid": "https://orcid.org/0000-0001-6701-1714",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hsien Seow"
+    },
+    {
+      "display_name": "Jonathan Dushoff",
+      "id": "A5071611289",
+      "orcid": "https://orcid.org/0000-0003-0506-4794",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan Dushoff"
+    },
+    {
+      "display_name": "Benjamin M. Bolker",
+      "id": "A5021063042",
+      "orcid": "https://orcid.org/0000-0002-2127-0443",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Benjamin M. Bolker"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-08-01",
+  "type": "preprint",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4306402450",
+    "display_name": "Research Square (Research Square)",
+    "issn_l": null,
+    "issn": null,
+    "type": "repository",
+    "host_organization": "https://openalex.org/I4210096694"
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://www.researchsquare.com/article/rs-1875351/latest.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C119043178",
+      "display_name": "Covariate",
+      "level": 2,
+      "score": 0.8442596
+    },
+    {
+      "id": "C50382708",
+      "display_name": "Proportional hazards model",
+      "level": 2,
+      "score": 0.7824025
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.58479017
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.5541253
+    },
+    {
+      "id": "C10515644",
+      "display_name": "Survival analysis",
+      "level": 2,
+      "score": 0.5291465
+    },
+    {
+      "id": "C37616216",
+      "display_name": "Lasso (programming language)",
+      "level": 2,
+      "score": 0.52042204
+    },
+    {
+      "id": "C70153297",
+      "display_name": "Gradient boosting",
+      "level": 3,
+      "score": 0.49727657
+    },
+    {
+      "id": "C203868755",
+      "display_name": "Elastic net regularization",
+      "level": 3,
+      "score": 0.49368724
+    },
+    {
+      "id": "C207103383",
+      "display_name": "Hazard ratio",
+      "level": 3,
+      "score": 0.49015078
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.48981687
+    },
+    {
+      "id": "C2908647359",
+      "display_name": "Population",
+      "level": 2,
+      "score": 0.46394134
+    },
+    {
+      "id": "C169258074",
+      "display_name": "Random forest",
+      "level": 2,
+      "score": 0.44751075
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.4413497
+    },
+    {
+      "id": "C149782125",
+      "display_name": "Econometrics",
+      "level": 1,
+      "score": 0.32250226
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.2899174
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.2633949
+    },
+    {
+      "id": "C148483581",
+      "display_name": "Feature selection",
+      "level": 2,
+      "score": 0.15059862
+    },
+    {
+      "id": "C44249647",
+      "display_name": "Confidence interval",
+      "level": 2,
+      "score": 0.084189326
+    },
+    {
+      "id": "C99454951",
+      "display_name": "Environmental health",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10556",
+      "display_name": "Global Cancer Incidence and Screening",
+      "score": 0.9921
+    },
+    {
+      "id": "T10552",
+      "display_name": "Colorectal Cancer Screening and Detection",
+      "score": 0.9893
+    },
+    {
+      "id": "T12422",
+      "display_name": "Radiomics and Machine Learning in Medical Imaging",
+      "score": 0.9819
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.21203/rs.3.rs-1875351/v1",
+  "pdf_url": "https://www.researchsquare.com/article/rs-1875351/latest.pdf",
+  "retrieved_date": "2025-07-30T15:41:45.083880",
+  "source_database": "OpenAlex"
+}

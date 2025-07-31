@@ -1,0 +1,369 @@
+{
+  "openalex_id": "W3114651185",
+  "doi": "https://doi.org/10.18653/v1/2020.coling-main.419",
+  "title": "CLUE: A Chinese Language Understanding Evaluation Benchmark",
+  "abstract": "Liang Xu, Hai Hu, Xuanwei Zhang, Lu Li, Chenjie Cao, Yudong Li, Yechen Xu, Kai Sun, Dian Yu, Cong Yu, Yin Tian, Qianqian Dong, Weitang Liu, Bo Shi, Yiming Cui, Junyi Li, Jun Zeng, Rongzhao Wang, Weijian Xie, Yanting Li, Yina Patterson, Zuoyu Tian, Yiwen Zhang, He Zhou, Shaoweihua Liu, Zhe Zhao, Qipeng Zhao, Cong Yue, Xinrui Zhang, Zhengliang Yang, Kyle Richardson, Zhenzhong Lan. Proceedings of the 28th International Conference on Computational Linguistics. 2020.",
+  "authors": [
+    {
+      "display_name": "Liang Xu",
+      "id": "A5100673719",
+      "orcid": "https://orcid.org/0000-0001-8171-0247",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Liang Xu"
+    },
+    {
+      "display_name": "Hai Hu",
+      "id": "A5069337524",
+      "orcid": "https://orcid.org/0000-0002-2289-9008",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Hai Hu"
+    },
+    {
+      "display_name": "Xuanwei Zhang",
+      "id": "A5103212914",
+      "orcid": "https://orcid.org/0000-0001-5972-4132",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Xuanwei Zhang"
+    },
+    {
+      "display_name": "Li Lü",
+      "id": "A5100658678",
+      "orcid": "https://orcid.org/0000-0001-5230-3749",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Lu Li"
+    },
+    {
+      "display_name": "Chenjie Cao",
+      "id": "A5028833097",
+      "orcid": "https://orcid.org/0000-0003-3916-2843",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Chenjie Cao"
+    },
+    {
+      "display_name": "Yudong Li",
+      "id": "A5100332356",
+      "orcid": "https://orcid.org/0000-0001-6779-8836",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yudong Li"
+    },
+    {
+      "display_name": "Yechen Xu",
+      "id": "A5043067273",
+      "orcid": "https://orcid.org/0009-0009-7390-1153",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yechen Xu"
+    },
+    {
+      "display_name": "Kai Sun",
+      "id": "A5053739372",
+      "orcid": "https://orcid.org/0000-0003-2281-5051",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Kai Sun"
+    },
+    {
+      "display_name": "Dian Yu",
+      "id": "A5101834699",
+      "orcid": "https://orcid.org/0000-0002-8583-8931",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Dian Yu"
+    },
+    {
+      "display_name": "Cong Yu",
+      "id": "A5043275971",
+      "orcid": "https://orcid.org/0000-0001-7331-2345",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Cong Yu"
+    },
+    {
+      "display_name": "Yin Tian",
+      "id": "A5061204988",
+      "orcid": "https://orcid.org/0000-0002-4293-6830",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yin Tian"
+    },
+    {
+      "display_name": "Qianqian Dong",
+      "id": "A5089516014",
+      "orcid": "https://orcid.org/0000-0003-4199-100X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Qianqian Dong"
+    },
+    {
+      "display_name": "Weitang Liu",
+      "id": "A5006765666",
+      "orcid": "https://orcid.org/0000-0002-1740-5341",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Weitang Liu"
+    },
+    {
+      "display_name": "Bo Shi",
+      "id": "A5056792882",
+      "orcid": "https://orcid.org/0000-0002-6334-3460",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Bo Shi"
+    },
+    {
+      "display_name": "Yiming Cui",
+      "id": "A5051107002",
+      "orcid": "https://orcid.org/0000-0002-2452-375X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yiming Cui"
+    },
+    {
+      "display_name": "Junyi Li",
+      "id": "A5100363211",
+      "orcid": "https://orcid.org/0000-0002-7162-5396",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Junyi Li"
+    },
+    {
+      "display_name": "Jun Zeng",
+      "id": "A5024752776",
+      "orcid": "https://orcid.org/0000-0003-3129-9052",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Jun Zeng"
+    },
+    {
+      "display_name": "Rongzhao Wang",
+      "id": "A5066386605",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Rongzhao Wang"
+    },
+    {
+      "display_name": "Weijian Xie",
+      "id": "A5079087634",
+      "orcid": "https://orcid.org/0000-0002-8027-4081",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Weijian Xie"
+    },
+    {
+      "display_name": "Yanting Li",
+      "id": "A5100720241",
+      "orcid": "https://orcid.org/0000-0002-2528-747X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yanting Li"
+    },
+    {
+      "display_name": "Yina Patterson",
+      "id": "A5062237715",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yina Patterson"
+    },
+    {
+      "display_name": "Zuoyu Tian",
+      "id": "A5066345085",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Zuoyu Tian"
+    },
+    {
+      "display_name": "Yiwen Zhang",
+      "id": "A5100430650",
+      "orcid": "https://orcid.org/0000-0001-8709-1088",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yiwen Zhang"
+    },
+    {
+      "display_name": "He Zhou",
+      "id": "A5101074708",
+      "orcid": "https://orcid.org/0000-0001-5055-4608",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "He Zhou"
+    },
+    {
+      "display_name": "Shaoweihua Liu",
+      "id": "A5048326242",
+      "orcid": "https://orcid.org/0000-0003-1294-3439",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Shaoweihua Liu"
+    },
+    {
+      "display_name": "Zhe Zhao",
+      "id": "A5100631152",
+      "orcid": "https://orcid.org/0000-0003-4189-3258",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Zhe Zhao"
+    },
+    {
+      "display_name": "Qipeng Zhao",
+      "id": "A5019909551",
+      "orcid": "https://orcid.org/0009-0009-2580-4252",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Qipeng Zhao"
+    },
+    {
+      "display_name": "Cong Yue",
+      "id": "A5103045138",
+      "orcid": "https://orcid.org/0000-0002-2532-7195",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Cong Yue"
+    },
+    {
+      "display_name": "Xinrui Zhang",
+      "id": "A5100708912",
+      "orcid": "https://orcid.org/0000-0003-1211-821X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Xinrui Zhang"
+    },
+    {
+      "display_name": "Zhengliang Yang",
+      "id": "A5085827408",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Zhengliang Yang"
+    },
+    {
+      "display_name": "Kyle Richardson",
+      "id": "A5039359682",
+      "orcid": "https://orcid.org/0000-0003-4836-0753",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Kyle Richardson"
+    },
+    {
+      "display_name": "Zhenzhong Lan",
+      "id": "A5103239171",
+      "orcid": "https://orcid.org/0000-0003-4763-6148",
+      "institutions": [],
+      "is_corresponding": true,
+      "raw_author_name": "Zhenzhong Lan"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-01-01",
+  "type": "article",
+  "cited_by_count": 226,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4363608852",
+    "display_name": "Proceedings of the 17th international conference on Computational linguistics -",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://www.aclweb.org/anthology/2020.coling-main.419.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2777045944",
+      "display_name": "Zhàng",
+      "level": 3,
+      "score": 0.8006191
+    },
+    {
+      "id": "C2779802804",
+      "display_name": "Tian",
+      "level": 2,
+      "score": 0.63218415
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.46868092
+    },
+    {
+      "id": "C15708023",
+      "display_name": "Humanities",
+      "level": 1,
+      "score": 0.41761842
+    },
+    {
+      "id": "C191935318",
+      "display_name": "China",
+      "level": 2,
+      "score": 0.40712047
+    },
+    {
+      "id": "C142362112",
+      "display_name": "Art",
+      "level": 0,
+      "score": 0.31533498
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.21203598
+    },
+    {
+      "id": "C124952713",
+      "display_name": "Literature",
+      "level": 1,
+      "score": 0.10956678
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.07529086
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9999
+    },
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9998
+    },
+    {
+      "id": "T13910",
+      "display_name": "Computational and Text Analysis Methods",
+      "score": 0.9751
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2020.coling-main.419",
+  "pdf_url": "https://www.aclweb.org/anthology/2020.coling-main.419.pdf",
+  "retrieved_date": "2025-07-30T15:03:12.666828",
+  "source_database": "OpenAlex"
+}

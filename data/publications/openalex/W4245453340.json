@@ -1,0 +1,245 @@
+{
+  "openalex_id": "W4245453340",
+  "doi": "https://doi.org/10.5194/gmd-2017-292",
+  "title": "Thetis coastal ocean model: discontinuous Galerkin discretization for the three-dimensional hydrostatic equations",
+  "abstract": "Abstract. Unstructured grid ocean models are advantageous for simulating the coastal ocean and river-estuary-plume systems. However, unstructured grid models tend to be diffusive and/or computationally expensive which limits their applicability to real life problems. In this paper, we describe a novel discontinuous Galerkin (DG) finite element discretization for the hydrostatic equations. The formulation is fully conservative and second-order accurate in space and time. Monotonicity of the advection scheme is ensured by using a strong stability preserving time integration method and slope limiters. Compared to previous DG models advantages include a more accurate mode splitting method, revised viscosity formulation, and new second-order time integration scheme. We demonstrate that the model is capable of simulating baroclinic flows in the eddying regime with a suite of test cases. Numerical dissipation is well-controlled, being comparable or lower than in existing state-of-the-art structured grid models.",
+  "authors": [
+    {
+      "display_name": "Tuomas Kärnä",
+      "id": "A5027774048",
+      "orcid": "https://orcid.org/0000-0002-9247-4830",
+      "institutions": [
+        {
+          "id": "I165690674",
+          "display_name": "Oregon Health & Science University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Tuomas Kärnä"
+    },
+    {
+      "display_name": "Stephan C. Kramer",
+      "id": "A5075797728",
+      "orcid": "https://orcid.org/0000-0002-9193-5092",
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephan C. Kramer"
+    },
+    {
+      "display_name": "Lawrence Mitchell",
+      "id": "A5075683889",
+      "orcid": "https://orcid.org/0000-0001-8062-1453",
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lawrence Mitchell"
+    },
+    {
+      "display_name": "David A. Ham",
+      "id": "A5046769638",
+      "orcid": "https://orcid.org/0000-0001-9545-9110",
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David A. Ham"
+    },
+    {
+      "display_name": "Matthew D. Piggott",
+      "id": "A5010171659",
+      "orcid": "https://orcid.org/0000-0002-7526-6853",
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthew D. Piggott"
+    },
+    {
+      "display_name": "António M. Baptista",
+      "id": "A5013644294",
+      "orcid": "https://orcid.org/0000-0002-7641-5937",
+      "institutions": [
+        {
+          "id": "I165690674",
+          "display_name": "Oregon Health & Science University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "António M. Baptista"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-02-02",
+  "type": "preprint",
+  "cited_by_count": 7,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://doi.org/10.5194/gmd-2017-292",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C73000952",
+      "display_name": "Discretization",
+      "level": 2,
+      "score": 0.8355591
+    },
+    {
+      "id": "C92244383",
+      "display_name": "Discontinuous Galerkin method",
+      "level": 3,
+      "score": 0.75042546
+    },
+    {
+      "id": "C187691185",
+      "display_name": "Grid",
+      "level": 2,
+      "score": 0.600584
+    },
+    {
+      "id": "C134853933",
+      "display_name": "Hydrostatic equilibrium",
+      "level": 2,
+      "score": 0.53768414
+    },
+    {
+      "id": "C5072599",
+      "display_name": "Advection",
+      "level": 2,
+      "score": 0.5240201
+    },
+    {
+      "id": "C28826006",
+      "display_name": "Applied mathematics",
+      "level": 1,
+      "score": 0.47924852
+    },
+    {
+      "id": "C140295346",
+      "display_name": "Shallow water equations",
+      "level": 2,
+      "score": 0.43309033
+    },
+    {
+      "id": "C135628077",
+      "display_name": "Finite element method",
+      "level": 2,
+      "score": 0.41997036
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.39287448
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.3664321
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.35874766
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.23166904
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.17121136
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.15273383
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C97355855",
+      "display_name": "Thermodynamics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10466",
+      "display_name": "Meteorological Phenomena and Simulations",
+      "score": 0.9972
+    },
+    {
+      "id": "T10255",
+      "display_name": "Oceanographic and Atmospheric Processes",
+      "score": 0.9951
+    },
+    {
+      "id": "T10173",
+      "display_name": "Computational Fluid Dynamics and Aerodynamics",
+      "score": 0.9947
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.5194/gmd-2017-292",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:31:26.511234",
+  "source_database": "OpenAlex"
+}

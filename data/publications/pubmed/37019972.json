@@ -1,0 +1,401 @@
+{
+  "pmid": "37019972",
+  "uid": "37019972",
+  "title": "Etiology of oncogenic fusions in 5,190 childhood cancers and its clinical and therapeutic implication.",
+  "abstract": "Oncogenic fusions formed through chromosomal rearrangements are hallmarks of childhood cancer that define cancer subtype, predict outcome, persist through treatment, and can be ideal therapeutic targets. However, mechanistic understanding of the etiology of oncogenic fusions remains elusive. Here we report a comprehensive detection of 272 oncogenic fusion gene pairs by using tumor transcriptome sequencing data from 5190 childhood cancer patients. We identify diverse factors, including translation frame, protein domain, splicing, and gene length, that shape the formation of oncogenic fusions. Our mathematical modeling reveals a strong link between differential selection pressure and clinical outcome in CBFB-MYH11. We discover 4 oncogenic fusions, including RUNX1-RUNX1T1, TCF3-PBX1, CBFA2T3-GLIS2, and KMT2A-AFDN, with promoter-hijacking-like features that may offer alternative strategies for therapeutic targeting. We uncover extensive alternative splicing in oncogenic fusions including KMT2A-MLLT3, KMT2A-MLLT10, C11orf95-RELA, NUP98-NSD1, KMT2A-AFDN and ETV6-RUNX1. We discover neo splice sites in 18 oncogenic fusion gene pairs and demonstrate that such splice sites confer therapeutic vulnerability for etiology-based genome editing. Our study reveals general principles on the etiology of oncogenic fusions in childhood cancer and suggests profound clinical implications including etiology-based risk stratification and genome-editing-based therapeutics.",
+  "authors": [
+    {
+      "last_name": "Liu",
+      "fore_name": "Yanling",
+      "initials": "Y",
+      "name": "Yanling Liu",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Klein",
+      "fore_name": "Jonathon",
+      "initials": "J",
+      "name": "Jonathon Klein",
+      "affiliations": [
+        "Department of Cell and Molecular Biology and Center for Advanced Genome Editing, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Bajpai",
+      "fore_name": "Richa",
+      "initials": "R",
+      "name": "Richa Bajpai",
+      "affiliations": [
+        "Department of Cell and Molecular Biology and Center for Advanced Genome Editing, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Dong",
+      "fore_name": "Li",
+      "initials": "L",
+      "name": "Li Dong",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Tran",
+      "fore_name": "Quang",
+      "initials": "Q",
+      "name": "Quang Tran",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Kolekar",
+      "fore_name": "Pandurang",
+      "initials": "P",
+      "name": "Pandurang Kolekar",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0003-0044-0076"
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "Jenny L",
+      "initials": "JL",
+      "name": "Jenny L Smith",
+      "affiliations": [
+        "Clinical Research Division, Fred Hutchinson Cancer Research Center, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Ries",
+      "fore_name": "Rhonda E",
+      "initials": "RE",
+      "name": "Rhonda E Ries",
+      "affiliations": [
+        "Clinical Research Division, Fred Hutchinson Cancer Research Center, Seattle, WA, USA."
+      ],
+      "orcid": "0000-0002-3702-7923"
+    },
+    {
+      "last_name": "Huang",
+      "fore_name": "Benjamin J",
+      "initials": "BJ",
+      "name": "Benjamin J Huang",
+      "affiliations": [
+        "Department of Pediatrics and Helen Diller Family Comprehensive Cancer Center, University of California San Francisco, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-6996-0833"
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Yi-Cheng",
+      "initials": "YC",
+      "name": "Yi-Cheng Wang",
+      "affiliations": [
+        "Children's Oncology Group, Monrovia, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Alonzo",
+      "fore_name": "Todd A",
+      "initials": "TA",
+      "name": "Todd A Alonzo",
+      "affiliations": [
+        "Department of Preventive Medicine, University of Southern California, Los Angeles, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Tian",
+      "fore_name": "Liqing",
+      "initials": "L",
+      "name": "Liqing Tian",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0001-9921-0603"
+    },
+    {
+      "last_name": "Mulder",
+      "fore_name": "Heather L",
+      "initials": "HL",
+      "name": "Heather L Mulder",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0003-2024-9498"
+    },
+    {
+      "last_name": "Shaw",
+      "fore_name": "Timothy I",
+      "initials": "TI",
+      "name": "Timothy I Shaw",
+      "affiliations": [
+        "Department of Biostatistics and Bioinformatics, Moffitt Cancer Center, Tampa, FL, USA."
+      ],
+      "orcid": "0000-0002-9316-1924"
+    },
+    {
+      "last_name": "Ma",
+      "fore_name": "Jing",
+      "initials": "J",
+      "name": "Jing Ma",
+      "affiliations": [
+        "Department of Pathology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Walsh",
+      "fore_name": "Michael P",
+      "initials": "MP",
+      "name": "Michael P Walsh",
+      "affiliations": [
+        "Department of Pathology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Song",
+      "fore_name": "Guangchun",
+      "initials": "G",
+      "name": "Guangchun Song",
+      "affiliations": [
+        "Department of Pathology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Westover",
+      "fore_name": "Tamara",
+      "initials": "T",
+      "name": "Tamara Westover",
+      "affiliations": [
+        "Department of Pathology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0002-1000-6698"
+    },
+    {
+      "last_name": "Autry",
+      "fore_name": "Robert J",
+      "initials": "RJ",
+      "name": "Robert J Autry",
+      "affiliations": [
+        "Department of Pharmacy and Pharmaceutical Sciences, St. Jude Children's Research Hospital, Memphis, TN, USA.",
+        "Hopp Children's Cancer Center Heidelberg (KiTZ), Heidelberg, Germany.",
+        "Division of Pediatric Neurooncology, German Cancer Research Center (DKFZ), Heidelberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Gout",
+      "fore_name": "Alexander M",
+      "initials": "AM",
+      "name": "Alexander M Gout",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Wheeler",
+      "fore_name": "David A",
+      "initials": "DA",
+      "name": "David A Wheeler",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Wan",
+      "fore_name": "Shibiao",
+      "initials": "S",
+      "name": "Shibiao Wan",
+      "affiliations": [
+        "Center for Applied Bioinformatics, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0003-0661-2684"
+    },
+    {
+      "last_name": "Wu",
+      "fore_name": "Gang",
+      "initials": "G",
+      "name": "Gang Wu",
+      "affiliations": [
+        "Center for Applied Bioinformatics, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0002-1678-5864"
+    },
+    {
+      "last_name": "Yang",
+      "fore_name": "Jun J",
+      "initials": "JJ",
+      "name": "Jun J Yang",
+      "affiliations": [
+        "Department of Pharmacy and Pharmaceutical Sciences, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0002-0770-9659"
+    },
+    {
+      "last_name": "Evans",
+      "fore_name": "William E",
+      "initials": "WE",
+      "name": "William E Evans",
+      "affiliations": [
+        "Department of Pharmacy and Pharmaceutical Sciences, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0002-9333-5322"
+    },
+    {
+      "last_name": "Loh",
+      "fore_name": "Mignon",
+      "initials": "M",
+      "name": "Mignon Loh",
+      "affiliations": [
+        "Ben Towne Center for Childhood Cancer Research, Seattle Children's Research Institute and the Department of Pediatrics, Seattle Children's Hospital, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Easton",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Easton",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0003-4503-6608"
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Jinghui",
+      "initials": "J",
+      "name": "Jinghui Zhang",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA."
+      ],
+      "orcid": "0000-0003-3350-9682"
+    },
+    {
+      "last_name": "Klco",
+      "fore_name": "Jeffery M",
+      "initials": "JM",
+      "name": "Jeffery M Klco",
+      "affiliations": [
+        "Department of Pathology, St. Jude Children's Research Hospital, Memphis, TN, USA. Jeffery.Klco@stjude.org."
+      ],
+      "orcid": "0000-0003-2961-6960"
+    },
+    {
+      "last_name": "Meshinchi",
+      "fore_name": "Soheil",
+      "initials": "S",
+      "name": "Soheil Meshinchi",
+      "affiliations": [
+        "Clinical Research Division, Fred Hutchinson Cancer Research Center, Seattle, WA, USA. smeshinc@fredhutch.org."
+      ]
+    },
+    {
+      "last_name": "Brown",
+      "fore_name": "Patrick A",
+      "initials": "PA",
+      "name": "Patrick A Brown",
+      "affiliations": [
+        "Bristol Myers Squibb, Princeton, NJ, USA. Patrick.Brown@bms.com."
+      ],
+      "orcid": "0000-0002-8653-1069"
+    },
+    {
+      "last_name": "Pruett-Miller",
+      "fore_name": "Shondra M",
+      "initials": "SM",
+      "name": "Shondra M Pruett-Miller",
+      "affiliations": [
+        "Department of Cell and Molecular Biology and Center for Advanced Genome Editing, St. Jude Children's Research Hospital, Memphis, TN, USA. Shondra.Miller@stjude.org."
+      ],
+      "orcid": "0000-0002-3793-585X"
+    },
+    {
+      "last_name": "Ma",
+      "fore_name": "Xiaotu",
+      "initials": "X",
+      "name": "Xiaotu Ma",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, Memphis, TN, USA. Xiaotu.Ma@stjude.org."
+      ],
+      "orcid": "0000-0002-6233-2145"
+    }
+  ],
+  "journal": {
+    "title": "Nature communications",
+    "iso_abbreviation": "Nat Commun",
+    "issn": "2041-1723",
+    "issn_type": "Electronic",
+    "volume": "14",
+    "issue": "1",
+    "pub_year": "2023",
+    "pub_month": "Apr",
+    "pub_day": "05"
+  },
+  "start_page": "1739",
+  "pages": "1739",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Humans",
+    "Child",
+    "Core Binding Factor Alpha 2 Subunit",
+    "Oncogene Fusion",
+    "Precursor Cell Lymphoblastic Leukemia-Lymphoma",
+    "Transcriptome",
+    "Causality",
+    "Oncogene Proteins, Fusion"
+  ],
+  "article_ids": {
+    "pubmed": "37019972",
+    "pmc": "PMC10076316",
+    "doi": "10.1038/s41467-023-37438-4",
+    "pii": "10.1038/s41467-023-37438-4"
+  },
+  "doi": "10.1038/s41467-023-37438-4",
+  "pmc_id": "PMC10076316",
+  "dates": {
+    "completed": "2023-04-07",
+    "revised": "2024-06-08"
+  },
+  "chemicals": [
+    "Core Binding Factor Alpha 2 Subunit",
+    "Oncogene Proteins, Fusion"
+  ],
+  "grants": [
+    {
+      "grant_id": "K08 CA256489",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U10 CA180899",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U10 CA180886",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA273326",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P30 CA021765",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:05:23.104500",
+    "pmid": "37019972"
+  }
+}

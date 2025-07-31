@@ -1,0 +1,256 @@
+{
+  "pmid": "29683450",
+  "uid": "29683450",
+  "title": "Targeted Next-generation Sequencing and Bioinformatics Pipeline to Evaluate Genetic Determinants of Constitutional Disease.",
+  "abstract": "Next-generation sequencing (NGS) is quickly revolutionizing how research into the genetic determinants of constitutional disease is performed. The technique is highly efficient with millions of sequencing reads being produced in a short time span and at relatively low cost. Specifically, targeted NGS is able to focus investigations to genomic regions of particular interest based on the disease of study. Not only does this further reduce costs and increase the speed of the process, but it lessens the computational burden that often accompanies NGS. Although targeted NGS is restricted to certain regions of the genome, preventing identification of potential novel loci of interest, it can be an excellent technique when faced with a phenotypically and genetically heterogeneous disease, for which there are previously known genetic associations. Because of the complex nature of the sequencing technique, it is important to closely adhere to protocols and methodologies in order to achieve sequencing reads of high coverage and quality. Further, once sequencing reads are obtained, a sophisticated bioinformatics workflow is utilized to accurately map reads to a reference genome, to call variants, and to ensure the variants pass quality metrics. Variants must also be annotated and curated based on their clinical significance, which can be standardized by applying the American College of Medical Genetics and Genomics Pathogenicity Guidelines. The methods presented herein will display the steps involved in generating and analyzing NGS data from a targeted sequencing panel, using the ONDRISeq neurodegenerative disease panel as a model, to identify variants that may be of clinical significance.",
+  "authors": [
+    {
+      "last_name": "Dilliott",
+      "fore_name": "Allison A",
+      "initials": "AA",
+      "name": "Allison A Dilliott",
+      "affiliations": [
+        "Robarts Research Institute, Schulich School of Medicine and Dentistry, Western University; Department of Biochemistry, Schulich School of Medicine and Dentistry, Western University."
+      ]
+    },
+    {
+      "last_name": "Farhan",
+      "fore_name": "Sali M K",
+      "initials": "SMK",
+      "name": "Sali M K Farhan",
+      "affiliations": [
+        "Analytic and Translational Genetics Unit, Center for Genomic Medicine, Harvard Medical School, Massachusetts General Hospital, Stanley Centre for Psychiatric Research, Broad Institute of MIT and Harvard."
+      ]
+    },
+    {
+      "last_name": "Ghani",
+      "fore_name": "Mahdi",
+      "initials": "M",
+      "name": "Mahdi Ghani",
+      "affiliations": [
+        "Tanz Centre for Research in Neurodegenerative Diseases, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "Sato",
+      "fore_name": "Christine",
+      "initials": "C",
+      "name": "Christine Sato",
+      "affiliations": [
+        "Tanz Centre for Research in Neurodegenerative Diseases, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "Liang",
+      "fore_name": "Eric",
+      "initials": "E",
+      "name": "Eric Liang",
+      "affiliations": [
+        "School of Medicine, Faculty of Health Sciences, Queen's University."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Ming",
+      "initials": "M",
+      "name": "Ming Zhang",
+      "affiliations": [
+        "Tanz Centre for Research in Neurodegenerative Diseases, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "McIntyre",
+      "fore_name": "Adam D",
+      "initials": "AD",
+      "name": "Adam D McIntyre",
+      "affiliations": [
+        "Robarts Research Institute, Schulich School of Medicine and Dentistry, Western University."
+      ]
+    },
+    {
+      "last_name": "Cao",
+      "fore_name": "Henian",
+      "initials": "H",
+      "name": "Henian Cao",
+      "affiliations": [
+        "Robarts Research Institute, Schulich School of Medicine and Dentistry, Western University."
+      ]
+    },
+    {
+      "last_name": "Racacho",
+      "fore_name": "Lemuel",
+      "initials": "L",
+      "name": "Lemuel Racacho",
+      "affiliations": [
+        "Faculty of Medicine, Department of Biochemistry, Microbiology and Immunology, University of Ottawa; CHEO Research Institute, Faculty of Medicine, University of Ottawa."
+      ]
+    },
+    {
+      "last_name": "Robinson",
+      "fore_name": "John F",
+      "initials": "JF",
+      "name": "John F Robinson",
+      "affiliations": [
+        "Robarts Research Institute, Schulich School of Medicine and Dentistry, Western University."
+      ]
+    },
+    {
+      "last_name": "Strong",
+      "fore_name": "Michael J",
+      "initials": "MJ",
+      "name": "Michael J Strong",
+      "affiliations": [
+        "Robarts Research Institute, Schulich School of Medicine and Dentistry, Western University; Department of Clinical Neurological Sciences, Western University."
+      ]
+    },
+    {
+      "last_name": "Masellis",
+      "fore_name": "Mario",
+      "initials": "M",
+      "name": "Mario Masellis",
+      "affiliations": [
+        "Division of Neurology, Department of Medicine, Sunnybrook Health Sciences Centre, University of Toronto; Division of Neurology, Department of Medicine, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "Bulman",
+      "fore_name": "Dennis E",
+      "initials": "DE",
+      "name": "Dennis E Bulman",
+      "affiliations": [
+        "Faculty of Medicine, Department of Biochemistry, Microbiology and Immunology, University of Ottawa; CHEO Research Institute, Faculty of Medicine, University of Ottawa."
+      ]
+    },
+    {
+      "last_name": "Rogaeva",
+      "fore_name": "Ekaterina",
+      "initials": "E",
+      "name": "Ekaterina Rogaeva",
+      "affiliations": [
+        "Tanz Centre for Research in Neurodegenerative Diseases, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "Lang",
+      "fore_name": "Anthony",
+      "initials": "A",
+      "name": "Anthony Lang",
+      "affiliations": [
+        "Division of Neurology, Department of Medicine, University of Toronto; Morton and Gloria Shulman Movement Disorders Centre, Toronto Western Hospital."
+      ]
+    },
+    {
+      "last_name": "Tartaglia",
+      "fore_name": "Carmela",
+      "initials": "C",
+      "name": "Carmela Tartaglia",
+      "affiliations": [
+        "Tanz Centre for Research in Neurodegenerative Diseases, University of Toronto; Division of Neurology, Department of Medicine, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "Finger",
+      "fore_name": "Elizabeth",
+      "initials": "E",
+      "name": "Elizabeth Finger",
+      "affiliations": [
+        "Department of Clinical Neurological Sciences, Schulich School of Medicine and Dentistry, Western University; Parkwood Institute, St. Joseph's Health Care."
+      ]
+    },
+    {
+      "last_name": "Zinman",
+      "fore_name": "Lorne",
+      "initials": "L",
+      "name": "Lorne Zinman",
+      "affiliations": [
+        "Division of Neurology, Department of Medicine, Sunnybrook Health Sciences Centre, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "Turnbull",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Turnbull",
+      "affiliations": [
+        "Department of Medicine, Division of Neurology, McMaster University."
+      ]
+    },
+    {
+      "last_name": "Freedman",
+      "fore_name": "Morris",
+      "initials": "M",
+      "name": "Morris Freedman",
+      "affiliations": [
+        "Division of Neurology, Department of Medicine, University of Toronto; Division of Neurology, Department of Medicine, Baycrest Health Sciences."
+      ]
+    },
+    {
+      "last_name": "Swartz",
+      "fore_name": "Rick",
+      "initials": "R",
+      "name": "Rick Swartz",
+      "affiliations": [
+        "Division of Neurology, Department of Medicine, Sunnybrook Health Sciences Centre, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "Black",
+      "fore_name": "Sandra E",
+      "initials": "SE",
+      "name": "Sandra E Black",
+      "affiliations": [
+        "Division of Neurology, Department of Medicine, Sunnybrook Health Sciences Centre, University of Toronto; Canadian Partnership for Stroke Recovery Sunnybrook Site, Sunnybrook Health Science Centre, University of Toronto."
+      ]
+    },
+    {
+      "last_name": "Hegele",
+      "fore_name": "Robert A",
+      "initials": "RA",
+      "name": "Robert A Hegele",
+      "affiliations": [
+        "Robarts Research Institute, Schulich School of Medicine and Dentistry, Western University; Department of Biochemistry, Schulich School of Medicine and Dentistry, Western University; hegele@robarts.ca."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Journal of visualized experiments : JoVE",
+    "iso_abbreviation": "J Vis Exp",
+    "issn": "1940-087X",
+    "issn_type": "Electronic",
+    "issue": "134",
+    "pub_year": "2018",
+    "pub_month": "Apr",
+    "pub_day": "04"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Video-Audio Media"
+  ],
+  "keywords": [
+    "Computational Biology",
+    "Disease",
+    "Genomics",
+    "High-Throughput Nucleotide Sequencing",
+    "Humans"
+  ],
+  "article_ids": {
+    "pubmed": "29683450",
+    "pmc": "PMC5933375",
+    "doi": "10.3791/57266"
+  },
+  "doi": "10.3791/57266",
+  "pmc_id": "PMC5933375",
+  "dates": {
+    "completed": "2018-07-30",
+    "revised": "2018-12-02"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T15:03:51.631332",
+    "pmid": "29683450"
+  }
+}

@@ -1,0 +1,647 @@
+{
+  "openalex_id": "W3174150157",
+  "doi": "https://doi.org/10.18653/v1/2021.acl-demo.41",
+  "title": "TextFlint: Unified Multilingual Robustness Evaluation Toolkit for Natural Language Processing",
+  "abstract": "Xiao Wang, Qin Liu, Tao Gui, Qi Zhang, Yicheng Zou, Xin Zhou, Jiacheng Ye, Yongxin Zhang, Rui Zheng, Zexiong Pang, Qinzhuo Wu, Zhengyan Li, Chong Zhang, Ruotian Ma, Zichu Fei, Ruijian Cai, Jun Zhao, Xingwu Hu, Zhiheng Yan, Yiding Tan, Yuan Hu, Qiyuan Bian, Zhihua Liu, Shan Qin, Bolin Zhu, Xiaoyu Xing, Jinlan Fu, Yue Zhang, Minlong Peng, Xiaoqing Zheng, Yaqian Zhou, Zhongyu Wei, Xipeng Qiu, Xuanjing Huang. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing: System Demonstrations. 2021.",
+  "authors": [
+    {
+      "display_name": "Xiao Wang",
+      "id": "A5100411426",
+      "orcid": "https://orcid.org/0000-0001-6117-6745",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Xiao Wang"
+    },
+    {
+      "display_name": "Qin Liu",
+      "id": "A5100611326",
+      "orcid": "https://orcid.org/0009-0000-8303-8757",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qin Liu"
+    },
+    {
+      "display_name": "Tao Gui",
+      "id": "A5058353652",
+      "orcid": "https://orcid.org/0000-0002-6154-0751",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tao Gui"
+    },
+    {
+      "display_name": "Qi Zhang",
+      "id": "A5014306843",
+      "orcid": "https://orcid.org/0000-0002-5203-8778",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qi Zhang"
+    },
+    {
+      "display_name": "Yicheng Zou",
+      "id": "A5013258788",
+      "orcid": "https://orcid.org/0009-0002-4575-5063",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yicheng Zou"
+    },
+    {
+      "display_name": "Xin Zhou",
+      "id": "A5100709810",
+      "orcid": "https://orcid.org/0000-0003-0231-2895",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xin Zhou"
+    },
+    {
+      "display_name": "Jiacheng Ye",
+      "id": "A5102844797",
+      "orcid": "https://orcid.org/0009-0008-6306-311X",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jiacheng Ye"
+    },
+    {
+      "display_name": "Yongxin Zhang",
+      "id": "A5100768241",
+      "orcid": "https://orcid.org/0000-0002-9243-2673",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yongxin Zhang"
+    },
+    {
+      "display_name": "Rui Zheng",
+      "id": "A5103144065",
+      "orcid": "https://orcid.org/0000-0002-5334-2640",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rui Zheng"
+    },
+    {
+      "display_name": "Zexiong Pang",
+      "id": "A5025809838",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zexiong Pang"
+    },
+    {
+      "display_name": "Qinzhuo Wu",
+      "id": "A5064887293",
+      "orcid": "https://orcid.org/0000-0002-9511-0258",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qinzhuo Wu"
+    },
+    {
+      "display_name": "Zhengyan Li",
+      "id": "A5100710232",
+      "orcid": "https://orcid.org/0000-0001-5326-1659",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhengyan Li"
+    },
+    {
+      "display_name": "Chong Zhang",
+      "id": "A5100393895",
+      "orcid": "https://orcid.org/0000-0001-9867-4190",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chong Zhang"
+    },
+    {
+      "display_name": "Ruotian Ma",
+      "id": "A5088256860",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ruotian Ma"
+    },
+    {
+      "display_name": "Zichu Fei",
+      "id": "A5067373136",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zichu Fei"
+    },
+    {
+      "display_name": "Ruijian Cai",
+      "id": "A5056472085",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ruijian Cai"
+    },
+    {
+      "display_name": "Jun Zhao",
+      "id": "A5110722665",
+      "orcid": "https://orcid.org/0000-0003-3370-2263",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jun Zhao"
+    },
+    {
+      "display_name": "Xingwu Hu",
+      "id": "A5054962782",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xingwu Hu"
+    },
+    {
+      "display_name": "Zhiheng Yan",
+      "id": "A5036071618",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhiheng Yan"
+    },
+    {
+      "display_name": "Yiding Tan",
+      "id": "A5060970452",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yiding Tan"
+    },
+    {
+      "display_name": "Yuan Hu",
+      "id": "A5021587155",
+      "orcid": "https://orcid.org/0000-0002-1799-6524",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuan Hu"
+    },
+    {
+      "display_name": "Qiyuan Bian",
+      "id": "A5006717130",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qiyuan Bian"
+    },
+    {
+      "display_name": "Zhihua Liu",
+      "id": "A5100406781",
+      "orcid": "https://orcid.org/0000-0003-4994-6764",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhihua Liu"
+    },
+    {
+      "display_name": "Shan Qin",
+      "id": "A5014783086",
+      "orcid": "https://orcid.org/0000-0002-9985-3163",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shan Qin"
+    },
+    {
+      "display_name": "Bolin Zhu",
+      "id": "A5064849055",
+      "orcid": "https://orcid.org/0000-0002-6846-566X",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bolin Zhu"
+    },
+    {
+      "display_name": "Xiaoyu Xing",
+      "id": "A5088133604",
+      "orcid": "https://orcid.org/0000-0003-0539-0936",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoyu Xing"
+    },
+    {
+      "display_name": "Jinlan Fu",
+      "id": "A5103097172",
+      "orcid": "https://orcid.org/0000-0002-0370-1238",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jinlan Fu"
+    },
+    {
+      "display_name": "Yue Zhang",
+      "id": "A5100333729",
+      "orcid": "https://orcid.org/0000-0002-5214-2268",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yue Zhang"
+    },
+    {
+      "display_name": "Minlong Peng",
+      "id": "A5070246702",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Minlong Peng"
+    },
+    {
+      "display_name": "Xiaoqing Zheng",
+      "id": "A5017835517",
+      "orcid": "https://orcid.org/0000-0003-4430-5036",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoqing Zheng"
+    },
+    {
+      "display_name": "Yaqian Zhou",
+      "id": "A5100559702",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yaqian Zhou"
+    },
+    {
+      "display_name": "Zhongyu Wei",
+      "id": "A5011504177",
+      "orcid": "https://orcid.org/0000-0003-3789-8507",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhongyu Wei"
+    },
+    {
+      "display_name": "Xipeng Qiu",
+      "id": "A5044665993",
+      "orcid": "https://orcid.org/0000-0001-7163-5247",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xipeng Qiu"
+    },
+    {
+      "display_name": "Xuanjing Huang",
+      "id": "A5088834359",
+      "orcid": "https://orcid.org/0000-0001-9197-9426",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xuanjing Huang"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-01-01",
+  "type": "article",
+  "cited_by_count": 75,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2021.acl-demo.41.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2777045944",
+      "display_name": "Zhàng",
+      "level": 3,
+      "score": 0.8302392
+    },
+    {
+      "id": "C63479239",
+      "display_name": "Robustness (evolution)",
+      "level": 3,
+      "score": 0.5750593
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.526484
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.4740165
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.42728633
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.39709243
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.38306916
+    },
+    {
+      "id": "C191935318",
+      "display_name": "China",
+      "level": 2,
+      "score": 0.34916317
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.19342142
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.08175978
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.06569648
+    },
+    {
+      "id": "C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.999
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9951
+    },
+    {
+      "id": "T13910",
+      "display_name": "Computational and Text Analysis Methods",
+      "score": 0.9674
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2021.acl-demo.41",
+  "pdf_url": "https://aclanthology.org/2021.acl-demo.41.pdf",
+  "retrieved_date": "2025-07-30T16:04:39.020989",
+  "source_database": "OpenAlex"
+}

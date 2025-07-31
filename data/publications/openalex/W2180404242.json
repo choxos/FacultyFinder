@@ -1,0 +1,239 @@
+{
+  "openalex_id": "W2180404242",
+  "doi": "https://doi.org/10.1002/hyp.10749",
+  "title": "When does spatial resolution become spurious in probabilistic flood inundation predictions?",
+  "abstract": "Abstract Advances in remote sensing have enabled hydraulic models to run at fine scale resolutions, producing precise flood inundation predictions. However, running models at finer resolutions increase their computational expense, reducing the feasibility of running the multiple model realizations required to undertake uncertainty analysis. Furthermore, it is possible that precision gained by running fine scale models is smoothed out when treating models probabilistically. The aim of this paper is to determine the level of spatial complexity that is required when making probabilistic flood inundation predictions. The Imera basin, Sicily is used as a case study to assess how changing the spatial resolution of the hydraulic model LISFLOOD‐FP impacts on the skill of conditional probabilistic flood inundation maps given model parameter and boundary condition uncertainties. We find that model performance deteriorates at resolutions coarser than 50 m. This is predominantly caused by changes in flow pathways at coarser resolutions which lead to non‐stationarity in the optimum model parameters at different spatial resolutions. However, although it is still possible to produce probabilistic flood maps that contain a coherent outline of the flood extent at coarser resolutions, the reliability of these maps deteriorates at resolutions coarser than 100 m. Additionally, although the rejection of non‐behavioural models reduces the uncertainty in probabilistic flood maps the reliability of these maps is also reduced. Models with resolutions finer than 50 m offer little gain in performance yet are more than an order of magnitude computationally expensive which can become infeasible when undertaking probabilistic analysis. Furthermore, we show that using deterministic, high‐resolution flood maps can lead to a spurious precision that would be misleading and not representative of the overall uncertainties that are inherent in making inundation predictions. Copyright © 2015 The Authors Hydrological Processes Published by John Wiley &amp; Sons Ltd.",
+  "authors": [
+    {
+      "display_name": "James Savage",
+      "id": "A5087994939",
+      "orcid": "https://orcid.org/0000-0003-4807-0916",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "James Thomas Steven Savage"
+    },
+    {
+      "display_name": "Paul Bates",
+      "id": "A5041770872",
+      "orcid": "https://orcid.org/0000-0001-9192-9963",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul Bates"
+    },
+    {
+      "display_name": "Jim Freer",
+      "id": "A5055056868",
+      "orcid": "https://orcid.org/0000-0001-6388-7890",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jim Freer"
+    },
+    {
+      "display_name": "Jeffrey Neal",
+      "id": "A5086031620",
+      "orcid": "https://orcid.org/0000-0001-5793-9594",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeffrey Neal"
+    },
+    {
+      "display_name": "Giuseppe Tito Aronica",
+      "id": "A5024045970",
+      "orcid": "https://orcid.org/0000-0003-0485-6466",
+      "institutions": [
+        {
+          "id": "I112862951",
+          "display_name": "University of Messina",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Giuseppe Aronica"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-11-13",
+  "type": "article",
+  "cited_by_count": 133,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S75830442",
+    "display_name": "Hydrological Processes",
+    "issn_l": "0885-6087",
+    "issn": [
+      "0885-6087",
+      "1099-1085"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "30",
+  "issue": "13",
+  "first_page": "2014",
+  "last_page": "2032",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/hyp.10749",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C49937458",
+      "display_name": "Probabilistic logic",
+      "level": 2,
+      "score": 0.8316504
+    },
+    {
+      "id": "C74256435",
+      "display_name": "Flood myth",
+      "level": 2,
+      "score": 0.72826636
+    },
+    {
+      "id": "C97256817",
+      "display_name": "Spurious relationship",
+      "level": 2,
+      "score": 0.66899025
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5696121
+    },
+    {
+      "id": "C2778755073",
+      "display_name": "Scale (ratio)",
+      "level": 2,
+      "score": 0.53658134
+    },
+    {
+      "id": "C43214815",
+      "display_name": "Reliability (semiconductor)",
+      "level": 3,
+      "score": 0.48267153
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.40633482
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.3227284
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.2291905
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.14304376
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.1306369
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.12757573
+    },
+    {
+      "id": "C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "score": 0.095647186
+    },
+    {
+      "id": "C163258240",
+      "display_name": "Power (physics)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10930",
+      "display_name": "Flood Risk Assessment and Management",
+      "score": 1.0
+    },
+    {
+      "id": "T10330",
+      "display_name": "Hydrology and Watershed Management Studies",
+      "score": 0.9994
+    },
+    {
+      "id": "T11186",
+      "display_name": "Hydrology and Drought Analysis",
+      "score": 0.999
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1002/hyp.10749",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/hyp.10749",
+  "retrieved_date": "2025-07-30T14:15:24.673876",
+  "source_database": "OpenAlex"
+}

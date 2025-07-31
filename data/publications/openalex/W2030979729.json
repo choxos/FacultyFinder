@@ -1,0 +1,281 @@
+{
+  "openalex_id": "W2030979729",
+  "doi": "https://doi.org/10.1080/03610918.2012.667479",
+  "title": "An Improved Method on Wilcoxon Rank Sum Test for Gene Selection from Microarray Experiments",
+  "abstract": "Selecting a small subset out of the thousands of genes in microarray data is important for accurate classification of phenotypes. In this paper, we propose a flexible rank-based nonparametric procedure for gene selection from microarray data. In the method we propose a statistic for testing whether area under receiver operating characteristic curve (AUC) for each gene is equal to 0.5 allowing different variance for each gene. The contribution to this \"single gene\" statistic is the studentization of the empirical AUC, which takes into account the variances associated with each gene in the experiment. Delong et al. proposed a nonparametric procedure for calculating a consistent variance estimator of the AUC. We use their variance estimation technique to get a test statistic, and we focus on the primary step in the gene selection process, namely, the ranking of genes with respect to a statistical measure of differential expression. Two real datasets are analyzed to illustrate the methods and a simulation study is carried out to assess the relative performance of different statistical gene ranking measures. The work includes how to use the variance information to produce a list of significant targets and assess differential gene expressions under two conditions. The proposed method does not involve complicated formulas and does not require advanced programming skills. We conclude that the proposed methods offer useful analytical tools for identifying differentially expressed genes for further biological and clinical analysis.",
+  "authors": [
+    {
+      "display_name": "Ahmed Hossain",
+      "id": "A5063245788",
+      "orcid": "https://orcid.org/0000-0003-4575-1273",
+      "institutions": [
+        {
+          "id": "I4210125326",
+          "display_name": "Public Health Ontario",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ahmed Hossain"
+    },
+    {
+      "display_name": "Andrew R. Willan",
+      "id": "A5013944168",
+      "orcid": "https://orcid.org/0000-0001-8337-2042",
+      "institutions": [
+        {
+          "id": "I4210125326",
+          "display_name": "Public Health Ontario",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew R. Willan"
+    },
+    {
+      "display_name": "Joseph Beyene",
+      "id": "A5027743498",
+      "orcid": "https://orcid.org/0000-0002-0770-4444",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joseph Beyene"
+    }
+  ],
+  "publication_year": 2013,
+  "publication_date": "2013-01-02",
+  "type": "article",
+  "cited_by_count": 7,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S153329750",
+    "display_name": "Communications in Statistics - Simulation and Computation",
+    "issn_l": "0361-0918",
+    "issn": [
+      "0361-0918",
+      "1532-4141"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320547"
+  },
+  "volume": "42",
+  "issue": "7",
+  "first_page": "1563",
+  "last_page": "1577",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C102366305",
+      "display_name": "Nonparametric statistics",
+      "level": 2,
+      "score": 0.716877
+    },
+    {
+      "id": "C189430467",
+      "display_name": "Ranking (information retrieval)",
+      "level": 2,
+      "score": 0.67130816
+    },
+    {
+      "id": "C185429906",
+      "display_name": "Estimator",
+      "level": 2,
+      "score": 0.6188976
+    },
+    {
+      "id": "C2984324147",
+      "display_name": "Gene selection",
+      "level": 5,
+      "score": 0.56374246
+    },
+    {
+      "id": "C89128539",
+      "display_name": "Statistic",
+      "level": 2,
+      "score": 0.5456408
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5285548
+    },
+    {
+      "id": "C196083921",
+      "display_name": "Variance (accounting)",
+      "level": 2,
+      "score": 0.5243928
+    },
+    {
+      "id": "C206041023",
+      "display_name": "Wilcoxon signed-rank test",
+      "level": 3,
+      "score": 0.5094438
+    },
+    {
+      "id": "C164226766",
+      "display_name": "Rank (graph theory)",
+      "level": 2,
+      "score": 0.49383053
+    },
+    {
+      "id": "C87007009",
+      "display_name": "Statistical hypothesis testing",
+      "level": 2,
+      "score": 0.48786187
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.47584105
+    },
+    {
+      "id": "C169857963",
+      "display_name": "Test statistic",
+      "level": 3,
+      "score": 0.4723274
+    },
+    {
+      "id": "C81917197",
+      "display_name": "Selection (genetic algorithm)",
+      "level": 2,
+      "score": 0.45695946
+    },
+    {
+      "id": "C124101348",
+      "display_name": "Data mining",
+      "level": 1,
+      "score": 0.44249088
+    },
+    {
+      "id": "C8415881",
+      "display_name": "Microarray analysis techniques",
+      "level": 4,
+      "score": 0.38600284
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.3698395
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.34262848
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.26175457
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.23236763
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.21196651
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.1631417
+    },
+    {
+      "id": "C150194340",
+      "display_name": "Gene expression",
+      "level": 3,
+      "score": 0.15389717
+    },
+    {
+      "id": "C121955636",
+      "display_name": "Accounting",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C114614502",
+      "display_name": "Combinatorics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C144133560",
+      "display_name": "Business",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C12868164",
+      "display_name": "Mann–Whitney U test",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10885",
+      "display_name": "Gene expression and cancer classification",
+      "score": 0.9997
+    },
+    {
+      "id": "T11798",
+      "display_name": "Optimal Experimental Design Methods",
+      "score": 0.9805
+    },
+    {
+      "id": "T10887",
+      "display_name": "Bioinformatics and Genomic Networks",
+      "score": 0.9795
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1080/03610918.2012.667479",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:17:32.632454",
+  "source_database": "OpenAlex"
+}

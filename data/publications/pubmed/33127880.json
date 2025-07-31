@@ -1,0 +1,201 @@
+{
+  "pmid": "33127880",
+  "uid": "33127880",
+  "title": "Optimized design of single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.",
+  "abstract": "Single-cell RNA-sequencing (scRNA-Seq) is a compelling approach to directly and simultaneously measure cellular composition and state, which can otherwise only be estimated by applying deconvolution methods to bulk RNA-Seq estimates. However, it has not yet become a widely used tool in population-scale analyses, due to its prohibitively high cost. Here we show that given the same budget, the statistical power of cell-type-specific expression quantitative trait loci (eQTL) mapping can be increased through low-coverage per-cell sequencing of more samples rather than high-coverage sequencing of fewer samples. We use simulations starting from one of the largest available real single-cell RNA-Seq data from 120 individuals to also show that multiple experimental designs with different numbers of samples, cells per sample and reads per cell could have similar statistical power, and choosing an appropriate design can yield large cost savings especially when multiplexed workflows are considered. Finally, we provide a practical approach on selecting cost-effective designs for maximizing cell-type-specific eQTL power which is available in the form of a web tool.",
+  "authors": [
+    {
+      "last_name": "Mandric",
+      "fore_name": "Igor",
+      "initials": "I",
+      "name": "Igor Mandric",
+      "affiliations": [
+        "Department of Computer Science, University of California Los Angeles, 404 Westwood Plaza, Los Angeles, CA, 90095, USA."
+      ],
+      "orcid": "0000-0003-4362-5169"
+    },
+    {
+      "last_name": "Schwarz",
+      "fore_name": "Tommer",
+      "initials": "T",
+      "name": "Tommer Schwarz",
+      "affiliations": [
+        "Bioinformatics Interdepartmental Program, University of California Los Angeles, 611 Charles E. Young Drive East, Los Angeles, CA, 90095, USA."
+      ]
+    },
+    {
+      "last_name": "Majumdar",
+      "fore_name": "Arunabha",
+      "initials": "A",
+      "name": "Arunabha Majumdar",
+      "affiliations": [
+        "Department of Pathology and Laboratory Medicine, David Geffen School of Medicine, University of California Los Angeles, 10833 Le Conte Ave, Los Angeles, CA, 90095, USA."
+      ]
+    },
+    {
+      "last_name": "Hou",
+      "fore_name": "Kangcheng",
+      "initials": "K",
+      "name": "Kangcheng Hou",
+      "affiliations": [
+        "Bioinformatics Interdepartmental Program, University of California Los Angeles, 611 Charles E. Young Drive East, Los Angeles, CA, 90095, USA."
+      ],
+      "orcid": "0000-0001-7110-5596"
+    },
+    {
+      "last_name": "Briscoe",
+      "fore_name": "Leah",
+      "initials": "L",
+      "name": "Leah Briscoe",
+      "affiliations": [
+        "Bioinformatics Interdepartmental Program, University of California Los Angeles, 611 Charles E. Young Drive East, Los Angeles, CA, 90095, USA."
+      ]
+    },
+    {
+      "last_name": "Perez",
+      "fore_name": "Richard",
+      "initials": "R",
+      "name": "Richard Perez",
+      "affiliations": [
+        "Institute for Human Genetics, University of California San Francisco, 513 Parnassus Avenue, San Francisco, CA, 94143, USA.",
+        "Bakar Computational Health Sciences Institute, University of California San Francisco, 550 16th Street, San Francisco, CA, 94158, USA.",
+        "Division of Rheumatology, Department of Medicine, University of California San Francisco, 513 Parnassus Avenue, San Francisco, CA, 94143, USA."
+      ]
+    },
+    {
+      "last_name": "Subramaniam",
+      "fore_name": "Meena",
+      "initials": "M",
+      "name": "Meena Subramaniam",
+      "affiliations": [
+        "Institute for Human Genetics, University of California San Francisco, 513 Parnassus Avenue, San Francisco, CA, 94143, USA.",
+        "Bakar Computational Health Sciences Institute, University of California San Francisco, 550 16th Street, San Francisco, CA, 94158, USA.",
+        "Division of Rheumatology, Department of Medicine, University of California San Francisco, 513 Parnassus Avenue, San Francisco, CA, 94143, USA.",
+        "Bioinformatics Program, University of California San Francisco, 513 Parnassus Ave, San Francisco, CA, 94143, USA."
+      ]
+    },
+    {
+      "last_name": "Hafemeister",
+      "fore_name": "Christoph",
+      "initials": "C",
+      "name": "Christoph Hafemeister",
+      "affiliations": [
+        "New York Genome Center, 101 Avenue of the Americas, New York, NY, 10013, USA."
+      ]
+    },
+    {
+      "last_name": "Satija",
+      "fore_name": "Rahul",
+      "initials": "R",
+      "name": "Rahul Satija",
+      "affiliations": [
+        "New York Genome Center, 101 Avenue of the Americas, New York, NY, 10013, USA.",
+        "Center for Genomics and Systems Biology, New York University, 12 Waverly Place, New York, NY, 10003, USA."
+      ],
+      "orcid": "0000-0001-9448-8833"
+    },
+    {
+      "last_name": "Ye",
+      "fore_name": "Chun Jimmie",
+      "initials": "CJ",
+      "name": "Chun Jimmie Ye",
+      "affiliations": [
+        "Institute for Human Genetics, University of California San Francisco, 513 Parnassus Avenue, San Francisco, CA, 94143, USA.",
+        "Bakar Computational Health Sciences Institute, University of California San Francisco, 550 16th Street, San Francisco, CA, 94158, USA.",
+        "Division of Rheumatology, Department of Medicine, University of California San Francisco, 513 Parnassus Avenue, San Francisco, CA, 94143, USA.",
+        "Bioinformatics Program, University of California San Francisco, 513 Parnassus Ave, San Francisco, CA, 94143, USA."
+      ],
+      "orcid": "0000-0001-6560-3783"
+    },
+    {
+      "last_name": "Pasaniuc",
+      "fore_name": "Bogdan",
+      "initials": "B",
+      "name": "Bogdan Pasaniuc",
+      "affiliations": [
+        "Bioinformatics Interdepartmental Program, University of California Los Angeles, 611 Charles E. Young Drive East, Los Angeles, CA, 90095, USA. pasaniuc@ucla.edu.",
+        "Department of Pathology and Laboratory Medicine, David Geffen School of Medicine, University of California Los Angeles, 10833 Le Conte Ave, Los Angeles, CA, 90095, USA. pasaniuc@ucla.edu.",
+        "Department of Human Genetics, David Geffen School of Medicine, University of California Los Angeles, 6506 Gonda Center, Los Angeles, CA, 90095, USA. pasaniuc@ucla.edu.",
+        "Department of Computational Medicine, David Geffen School of Medicine, University of California Los Angeles, Room 5303 Life Sciences, Los Angeles, CA, 90095, USA. pasaniuc@ucla.edu."
+      ]
+    },
+    {
+      "last_name": "Halperin",
+      "fore_name": "Eran",
+      "initials": "E",
+      "name": "Eran Halperin",
+      "affiliations": [
+        "Department of Computer Science, University of California Los Angeles, 404 Westwood Plaza, Los Angeles, CA, 90095, USA.",
+        "Department of Human Genetics, David Geffen School of Medicine, University of California Los Angeles, 6506 Gonda Center, Los Angeles, CA, 90095, USA.",
+        "Department of Computational Medicine, David Geffen School of Medicine, University of California Los Angeles, Room 5303 Life Sciences, Los Angeles, CA, 90095, USA.",
+        "Department of Anesthesiology and Perioperative Medicine, David Geffen School of Medicine, University of California Los Angeles, 757 Westwood Plaza, Los Angeles, CA, 90095, USA.",
+        "Institute of Precision Health, University of California, Los Angeles, CA, USA."
+      ],
+      "orcid": "0000-0002-2373-3691"
+    }
+  ],
+  "journal": {
+    "title": "Nature communications",
+    "iso_abbreviation": "Nat Commun",
+    "issn": "2041-1723",
+    "issn_type": "Electronic",
+    "volume": "11",
+    "issue": "1",
+    "pub_year": "2020",
+    "pub_month": "Oct",
+    "pub_day": "30"
+  },
+  "start_page": "5504",
+  "pages": "5504",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Base Sequence",
+    "Computational Biology",
+    "Gene Expression",
+    "Gene Expression Profiling",
+    "Genomics",
+    "Humans",
+    "Quantitative Trait Loci",
+    "Sequence Analysis, RNA",
+    "Single-Cell Analysis"
+  ],
+  "article_ids": {
+    "pubmed": "33127880",
+    "pmc": "PMC7599215",
+    "doi": "10.1038/s41467-020-19365-w",
+    "pii": "10.1038/s41467-020-19365-w"
+  },
+  "doi": "10.1038/s41467-020-19365-w",
+  "pmc_id": "PMC7599215",
+  "dates": {
+    "completed": "2020-11-16",
+    "revised": "2024-03-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 HG009120",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HG010505",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 MH115676",
+      "agency": "NIMH NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:51:49.727375",
+    "pmid": "33127880"
+  }
+}

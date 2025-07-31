@@ -1,0 +1,125 @@
+{
+  "pmid": "30644947",
+  "uid": "30644947",
+  "title": "Deep learning for FTIR histology: leveraging spatial and spectral features with convolutional neural networks.",
+  "abstract": "Current methods for cancer detection rely on tissue biopsy, chemical labeling/staining, and examination of the tissue by a pathologist. Though these methods continue to remain the gold standard, they are non-quantitative and susceptible to human error. Fourier transform infrared (FTIR) spectroscopic imaging has shown potential as a quantitative alternative to traditional histology. However, identification of histological components requires reliable classification based on molecular spectra, which are susceptible to artifacts introduced by noise and scattering. Several tissue types, particularly in heterogeneous tissue regions, tend to confound traditional classification methods. Convolutional neural networks (CNNs) are the current state-of-the-art in image classification, providing the ability to learn spatial characteristics of images. In this paper, we demonstrate that CNNs with architectures designed to process both spectral and spatial information can significantly improve classifier performance over per-pixel spectral classification. We report classification results after applying CNNs to data from tissue microarrays (TMAs) to identify six major cellular and acellular constituents of tissue, namely adipocytes, blood, collagen, epithelium, necrosis, and myofibroblasts. Experimental results show that the use of spatial information in addition to the spectral information brings significant improvements in the classifier performance and allows classification of cellular subtypes, such as adipocytes, that exhibit minimal chemical information but have distinct spatial characteristics. This work demonstrates the application and efficiency of deep learning algorithms in improving the diagnostic techniques in clinical and research activities related to cancer.",
+  "authors": [
+    {
+      "last_name": "Berisha",
+      "fore_name": "Sebastian",
+      "initials": "S",
+      "name": "Sebastian Berisha",
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, University of Houston, Houston, TX, USA. mayerich@uh.edu."
+      ]
+    },
+    {
+      "last_name": "Lotfollahi",
+      "fore_name": "Mahsa",
+      "initials": "M",
+      "name": "Mahsa Lotfollahi",
+      "affiliations": []
+    },
+    {
+      "last_name": "Jahanipour",
+      "fore_name": "Jahandar",
+      "initials": "J",
+      "name": "Jahandar Jahanipour",
+      "affiliations": []
+    },
+    {
+      "last_name": "Gurcan",
+      "fore_name": "Ilker",
+      "initials": "I",
+      "name": "Ilker Gurcan",
+      "affiliations": []
+    },
+    {
+      "last_name": "Walsh",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Walsh",
+      "affiliations": []
+    },
+    {
+      "last_name": "Bhargava",
+      "fore_name": "Rohit",
+      "initials": "R",
+      "name": "Rohit Bhargava",
+      "affiliations": []
+    },
+    {
+      "last_name": "Van Nguyen",
+      "fore_name": "Hien",
+      "initials": "H",
+      "name": "Hien Van Nguyen",
+      "affiliations": []
+    },
+    {
+      "last_name": "Mayerich",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Mayerich",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "The Analyst",
+    "iso_abbreviation": "Analyst",
+    "issn": "1364-5528",
+    "issn_type": "Electronic",
+    "volume": "144",
+    "issue": "5",
+    "pub_year": "2019",
+    "pub_month": "Feb",
+    "pub_day": "25"
+  },
+  "start_page": "1642",
+  "end_page": "1653",
+  "pages": "1642-1653",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "30644947",
+    "mid": "NIHMS1016333",
+    "pmc": "PMC6450401",
+    "doi": "10.1039/c8an01495g"
+  },
+  "doi": "10.1039/c8an01495g",
+  "pmc_id": "PMC6450401",
+  "dates": {
+    "completed": "2019-03-04",
+    "revised": "2020-02-25"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R00 LM011390",
+      "agency": "NLM NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 EB009745",
+      "agency": "NIBIB NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R21 DK103066",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T15 LM007093",
+      "agency": "NLM NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:05:22.941131",
+    "pmid": "30644947"
+  }
+}

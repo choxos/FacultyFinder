@@ -1,0 +1,691 @@
+{
+  "openalex_id": "W2592626516",
+  "doi": "https://doi.org/10.18632/oncotarget.15915",
+  "title": "Context-dependent miR-204 and miR-211 affect the biological properties of amelanotic and melanotic melanoma cells",
+  "abstract": "// Marianna Vitiello 1, 2 , Andrea Tuccoli 1 , Romina D&rsquo;Aurizio 3 , Samanta Sarti 1, 4 , Laura Giannecchini 1 , Simone Lubrano 1, 4 , Andrea Marranci 1, 4 , Monica Evangelista 2 , Silvia Peppicelli 5 , Chiara Ippolito 6 , Ivana Barravecchia 7 , Elena Guzzolino 7 , Valentina Montagnani 8 , Michael Gowen 9 , Elisa Mercoledi 1 , Alberto Mercatanti 2 , Laura Comelli 2 , Salvatore Gurrieri 1 , Lawrence W. Wu 10 , Omotayo Ope 10 , Keith Flaherty 11 , Genevieve M. Boland 11 , Marc R. Hammond 11 , Lawrence Kwong 12 , Mario Chiariello 2, 13 , Barbara Stecca 8 , Gao Zhang 10 , Alessandra Salvetti 14 , Debora Angeloni 7 , Letizia Pitto 2 , Lido Calorini 5 , Giovanna Chiorino 15 , Marco Pellegrini 3 , Meenhard Herlyn 10 , Iman Osman 9 , Laura Poliseno 1, 2 1 Oncogenomics Unit, Core Research Laboratory, Istituto Toscano Tumori (ITT), AOUP, Pisa, Italy 2 Institute of Clinical Physiology (IFC), CNR, Pisa, Italy 3 Laboratory of Integrative Systems Medicine (LISM), Institute of Informatics and Telematics (IIT), CNR, Pisa, Italy 4 University of Siena, Italy 5 Section of Experimental Pathology and Oncology, Department of Experimental and Clinical Biomedical Sciences, University of Firenze, Italy 6 Unit of Histology, Department of Clinical and Experimental Medicine, University of Pisa, Italy 7 Scuola Superiore Sant&rsquo;Anna, Pisa, Italy 8 Tumor Cell Biology Unit, Core Research Laboratory, Istituto Toscano Tumori (ITT), AOUC, Firenze, Italy 9 New York University, New York, NY, USA 10 The Wistar Institute, Philadelphia, PA, USA 11 Massachusetts General Hospital, Boston, MA, USA 12 MD Anderson Cancer Center, Houston, TX, USA 13 Signal Transduction Unit, Core Research Laboratory, Istituto Toscano Tumori (ITT), AOUS, Siena, Italy 14 Unit of Experimental Biology and Genetics, Department of Clinical and Experimental Medicine, University of Pisa, Italy 15 Fondazione Edo and Elvo Tempia, Biella, Italy Correspondence to: Laura Poliseno, email: laura.poliseno@gmail.com Keywords: melanoma, BRAFV600E, ERK pathway, miR-204 family, context-dependency Received: March 11, 2016&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Accepted: February 06, 2017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Published: March 06, 2017 ABSTRACT Despite increasing amounts of experimental evidence depicting the involvement of non-coding RNAs in cancer, the study of BRAFV600E-regulated genes has thus far focused mainly on protein-coding ones. Here, we identify and study the microRNAs that BRAFV600E regulates through the ERK pathway. By performing small RNA sequencing on A375 melanoma cells and a vemurafenib-resistant clone that was taken as negative control, we discover miR-204 and miR-211 as the miRNAs most induced by vemurafenib. We also demonstrate that, although belonging to the same family, these two miRNAs have distinctive features. miR-204 is under the control of STAT3 and its expression is induced in amelanotic melanoma cells, where it acts as an effector of vemurafenib&rsquo;s anti-motility activity by targeting AP1S2. Conversely, miR-211, a known transcriptional target of MITF, is induced in melanotic melanoma cells, where it targets EDEM1 and consequently impairs the degradation of TYROSINASE (TYR) through the ER-associated degradation (ERAD) pathway. In doing so, miR-211 serves as an effector of vemurafenib&rsquo;s pro-pigmentation activity. We also show that such an increase in pigmentation in turn represents an adaptive response that needs to be overcome using appropriate inhibitors in order to increase the efficacy of vemurafenib. In summary, we unveil the distinct and context-dependent activities exerted by miR-204 family members in melanoma cells. Our work challenges the widely accepted &ldquo;same miRNA family = same function&rdquo; rule and provides a rationale for a novel treatment strategy for melanotic melanomas that is based on the combination of ERK pathway inhibitors with pigmentation inhibitors.",
+  "authors": [
+    {
+      "display_name": "Marianna Vitiello",
+      "id": "A5033533853",
+      "orcid": "https://orcid.org/0000-0001-7443-2728",
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        },
+        {
+          "id": "I4210106076",
+          "display_name": "Istituto di Fisiologia Clinica",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marianna Vitiello"
+    },
+    {
+      "display_name": "Andrea Tuccoli",
+      "id": "A5072650260",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrea Tuccoli"
+    },
+    {
+      "display_name": "Romina D’Aurizio",
+      "id": "A5017016816",
+      "orcid": "https://orcid.org/0000-0002-1728-6397",
+      "institutions": [
+        {
+          "id": "I4210130157",
+          "display_name": "Institute of Informatics and Telematics",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Romina D’Aurizio"
+    },
+    {
+      "display_name": "Samanta Sarti",
+      "id": "A5033429638",
+      "orcid": "https://orcid.org/0000-0002-2177-6567",
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        },
+        {
+          "id": "I102064193",
+          "display_name": "University of Siena",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Samanta Sarti"
+    },
+    {
+      "display_name": "Laura Giannecchini",
+      "id": "A5065266037",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laura Giannecchini"
+    },
+    {
+      "display_name": "Simone Lubrano",
+      "id": "A5051883082",
+      "orcid": "https://orcid.org/0000-0003-4779-5632",
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        },
+        {
+          "id": "I102064193",
+          "display_name": "University of Siena",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Simone Lubrano"
+    },
+    {
+      "display_name": "Andrea Marranci",
+      "id": "A5023371869",
+      "orcid": "https://orcid.org/0000-0002-8334-8795",
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        },
+        {
+          "id": "I102064193",
+          "display_name": "University of Siena",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrea Marranci"
+    },
+    {
+      "display_name": "Monica Evangelista",
+      "id": "A5011398087",
+      "orcid": "https://orcid.org/0000-0002-5674-8523",
+      "institutions": [
+        {
+          "id": "I4210106076",
+          "display_name": "Istituto di Fisiologia Clinica",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Monica Evangelista"
+    },
+    {
+      "display_name": "Silvia Peppicelli",
+      "id": "A5017421300",
+      "orcid": "https://orcid.org/0000-0001-6459-0458",
+      "institutions": [
+        {
+          "id": "I45084792",
+          "display_name": "University of Florence",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Silvia Peppicelli"
+    },
+    {
+      "display_name": "Chiara Ippolito",
+      "id": "A5016094054",
+      "orcid": "https://orcid.org/0000-0001-8671-313X",
+      "institutions": [
+        {
+          "id": "I108290504",
+          "display_name": "University of Pisa",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chiara Ippolito"
+    },
+    {
+      "display_name": "Ivana Barravecchia",
+      "id": "A5091092258",
+      "orcid": "https://orcid.org/0000-0003-4525-5632",
+      "institutions": [
+        {
+          "id": "I162290304",
+          "display_name": "Scuola Superiore Sant'Anna",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ivana Barravecchia"
+    },
+    {
+      "display_name": "Elena Guzzolino",
+      "id": "A5038505921",
+      "orcid": "https://orcid.org/0000-0002-8334-7653",
+      "institutions": [
+        {
+          "id": "I162290304",
+          "display_name": "Scuola Superiore Sant'Anna",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elena Guzzolino"
+    },
+    {
+      "display_name": "Valentina Montagnani",
+      "id": "A5064181169",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Valentina Montagnani"
+    },
+    {
+      "display_name": "Michael Gowen",
+      "id": "A5016232878",
+      "orcid": "https://orcid.org/0000-0002-8629-020X",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Gowen"
+    },
+    {
+      "display_name": "Elisa Mercoledi",
+      "id": "A5035968663",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elisa Mercoledi"
+    },
+    {
+      "display_name": "Alberto Mercatanti",
+      "id": "A5011040459",
+      "orcid": "https://orcid.org/0000-0001-5110-9688",
+      "institutions": [
+        {
+          "id": "I4210106076",
+          "display_name": "Istituto di Fisiologia Clinica",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alberto Mercatanti"
+    },
+    {
+      "display_name": "Laura Comelli",
+      "id": "A5082784680",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210106076",
+          "display_name": "Istituto di Fisiologia Clinica",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laura Comelli"
+    },
+    {
+      "display_name": "Salvatore Gurrieri",
+      "id": "A5108623817",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Salvatore Gurrieri"
+    },
+    {
+      "display_name": "Lawrence W. Wu",
+      "id": "A5052472298",
+      "orcid": "https://orcid.org/0000-0002-8013-1275",
+      "institutions": [
+        {
+          "id": "I102322052",
+          "display_name": "The Wistar Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lawrence W. Wu"
+    },
+    {
+      "display_name": "Omotayo Ope",
+      "id": "A5082281320",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I102322052",
+          "display_name": "The Wistar Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Omotayo Ope"
+    },
+    {
+      "display_name": "Keith T. Flaherty",
+      "id": "A5023174631",
+      "orcid": "https://orcid.org/0000-0002-3402-0478",
+      "institutions": [
+        {
+          "id": "I4210087915",
+          "display_name": "Massachusetts General Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Keith Flaherty"
+    },
+    {
+      "display_name": "Genevieve M. Boland",
+      "id": "A5009222009",
+      "orcid": "https://orcid.org/0000-0002-7522-6173",
+      "institutions": [
+        {
+          "id": "I4210087915",
+          "display_name": "Massachusetts General Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Genevieve M. Boland"
+    },
+    {
+      "display_name": "Marc R. Hammond",
+      "id": "A5051960148",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210087915",
+          "display_name": "Massachusetts General Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marc R. Hammond"
+    },
+    {
+      "display_name": "Lawrence N. Kwong",
+      "id": "A5040776645",
+      "orcid": "https://orcid.org/0000-0001-8370-1432",
+      "institutions": [
+        {
+          "id": "I1343551460",
+          "display_name": "The University of Texas MD Anderson Cancer Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lawrence Kwong"
+    },
+    {
+      "display_name": "M Chiariello",
+      "id": "A5051324603",
+      "orcid": "https://orcid.org/0000-0001-8434-5177",
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        },
+        {
+          "id": "I4210106076",
+          "display_name": "Istituto di Fisiologia Clinica",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mario Chiariello"
+    },
+    {
+      "display_name": "Barbara Stecca",
+      "id": "A5047583572",
+      "orcid": "https://orcid.org/0000-0003-1197-1622",
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Barbara Stecca"
+    },
+    {
+      "display_name": "Gao Zhang",
+      "id": "A5076455011",
+      "orcid": "https://orcid.org/0000-0001-8617-8886",
+      "institutions": [
+        {
+          "id": "I102322052",
+          "display_name": "The Wistar Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gao Zhang"
+    },
+    {
+      "display_name": "Alessandra Salvetti",
+      "id": "A5000108455",
+      "orcid": "https://orcid.org/0000-0002-9154-9773",
+      "institutions": [
+        {
+          "id": "I108290504",
+          "display_name": "University of Pisa",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alessandra Salvetti"
+    },
+    {
+      "display_name": "Debora Angeloni",
+      "id": "A5036665309",
+      "orcid": "https://orcid.org/0000-0002-3850-5392",
+      "institutions": [
+        {
+          "id": "I162290304",
+          "display_name": "Scuola Superiore Sant'Anna",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Debora Angeloni"
+    },
+    {
+      "display_name": "Letizia Pitto",
+      "id": "A5022839754",
+      "orcid": "https://orcid.org/0000-0002-8660-9516",
+      "institutions": [
+        {
+          "id": "I4210106076",
+          "display_name": "Istituto di Fisiologia Clinica",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Letizia Pitto"
+    },
+    {
+      "display_name": "Lido Calorini",
+      "id": "A5019631673",
+      "orcid": "https://orcid.org/0000-0002-5508-4200",
+      "institutions": [
+        {
+          "id": "I45084792",
+          "display_name": "University of Florence",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lido Calorini"
+    },
+    {
+      "display_name": "Giovanna Chiorino",
+      "id": "A5003180276",
+      "orcid": "https://orcid.org/0000-0002-9502-6400",
+      "institutions": [
+        {
+          "id": "I4210121248",
+          "display_name": "Fondazione Edo ed Elvo Tempia",
+          "country_code": "IT",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Giovanna Chiorino"
+    },
+    {
+      "display_name": "Marco Pellegrini",
+      "id": "A5028551838",
+      "orcid": "https://orcid.org/0000-0003-3151-9481",
+      "institutions": [
+        {
+          "id": "I4210130157",
+          "display_name": "Institute of Informatics and Telematics",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marco Pellegrini"
+    },
+    {
+      "display_name": "Meenhard Herlyn",
+      "id": "A5028792712",
+      "orcid": "https://orcid.org/0000-0003-0839-0739",
+      "institutions": [
+        {
+          "id": "I102322052",
+          "display_name": "The Wistar Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Meenhard Herlyn"
+    },
+    {
+      "display_name": "Iman Osman",
+      "id": "A5080635562",
+      "orcid": "https://orcid.org/0000-0002-1472-1971",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Iman Osman"
+    },
+    {
+      "display_name": "Laura Poliseno",
+      "id": "A5017664557",
+      "orcid": "https://orcid.org/0000-0001-6557-955X",
+      "institutions": [
+        {
+          "id": "I4210123523",
+          "display_name": "Tumour Institute of Tuscany",
+          "country_code": "IT",
+          "type": "funder"
+        },
+        {
+          "id": "I4210106076",
+          "display_name": "Istituto di Fisiologia Clinica",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Laura Poliseno"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-03-06",
+  "type": "article",
+  "cited_by_count": 69,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S126644158",
+    "display_name": "Oncotarget",
+    "issn_l": "1949-2553",
+    "issn": [
+      "1949-2553"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310316297"
+  },
+  "volume": "8",
+  "issue": "15",
+  "first_page": "25395",
+  "last_page": "25417",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "http://www.oncotarget.com/index.php?journal=oncotarget&page=article&op=download&path%5B%5D=15915&path%5B%5D=54892",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2779343474",
+      "display_name": "Context (archaeology)",
+      "level": 2,
+      "score": 0.65071785
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.56256074
+    },
+    {
+      "id": "C2777198872",
+      "display_name": "Amelanotic melanoma",
+      "level": 3,
+      "score": 0.41533184
+    },
+    {
+      "id": "C15708023",
+      "display_name": "Humanities",
+      "level": 1,
+      "score": 0.33613932
+    },
+    {
+      "id": "C2777658100",
+      "display_name": "Melanoma",
+      "level": 2,
+      "score": 0.29071218
+    },
+    {
+      "id": "C142362112",
+      "display_name": "Art",
+      "level": 0,
+      "score": 0.28856695
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.110132724
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11533",
+      "display_name": "Melanoma and MAPK Pathways",
+      "score": 0.9997
+    },
+    {
+      "id": "T10392",
+      "display_name": "Cutaneous Melanoma Detection and Management",
+      "score": 0.9966
+    },
+    {
+      "id": "T11144",
+      "display_name": "melanin and skin pigmentation",
+      "score": 0.9955
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18632/oncotarget.15915",
+  "pdf_url": "http://www.oncotarget.com/index.php?journal=oncotarget&page=article&op=download&path%5B%5D=15915&path%5B%5D=54892",
+  "retrieved_date": "2025-07-30T14:12:07.421141",
+  "source_database": "OpenAlex"
+}

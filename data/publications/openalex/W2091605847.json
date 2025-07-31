@@ -1,0 +1,257 @@
+{
+  "openalex_id": "W2091605847",
+  "doi": "https://doi.org/10.1109/tnsre.2014.2300091",
+  "title": "Integrating Language Information With a Hidden Markov Model to Improve Communication Rate in the P300 Speller",
+  "abstract": "The P300 speller is a common brain-computer interface (BCI) application designed to communicate language by detecting event related potentials in a subject's electroencephalogram (EEG) signal. Information about the structure of natural language can be valuable for BCI communication systems, but few attempts have been made to incorporate this domain knowledge into the classifier. In this study, we treat BCI communication as a hidden Markov model (HMM) where hidden states are target characters and the EEG signal is the visible output. Using the Viterbi algorithm, language information can be incorporated in classification and errors can be corrected automatically. This method was first evaluated offline on a dataset of 15 healthy subjects who had a significant increase in bit rate from a previously published naïve Bayes approach and an average 32% increase from standard classification with dynamic stopping. An online pilot study of five healthy subjects verified these results as the average bit rate achieved using the HMM method was significantly higher than that using the naïve Bayes and standard methods. These findings strongly support the integration of domain-specific knowledge into BCI classification to improve system performance and accuracy.",
+  "authors": [
+    {
+      "display_name": "William Speier",
+      "id": "A5029456122",
+      "orcid": "https://orcid.org/0000-0002-0890-8684",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William Speier"
+    },
+    {
+      "display_name": "Corey Arnold",
+      "id": "A5001751044",
+      "orcid": "https://orcid.org/0000-0002-4119-8143",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Corey Arnold"
+    },
+    {
+      "display_name": "Jessica R. Lu",
+      "id": "A5100460379",
+      "orcid": "https://orcid.org/0000-0001-9611-0009",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jessica Lu"
+    },
+    {
+      "display_name": "Aniket Deshpande",
+      "id": "A5022779373",
+      "orcid": "https://orcid.org/0000-0002-2070-6479",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Aniket Deshpande"
+    },
+    {
+      "display_name": "Nader Pouratian",
+      "id": "A5004627402",
+      "orcid": "https://orcid.org/0000-0002-0426-3241",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nader Pouratian"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-01-31",
+  "type": "article",
+  "cited_by_count": 40,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S98183460",
+    "display_name": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+    "issn_l": "1534-4320",
+    "issn": [
+      "1534-4320",
+      "1558-0210"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "22",
+  "issue": "3",
+  "first_page": "678",
+  "last_page": "684",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://europepmc.org/articles/pmc4205234?pdf=render",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C173201364",
+      "display_name": "Brain–computer interface",
+      "level": 3,
+      "score": 0.85733354
+    },
+    {
+      "id": "C23224414",
+      "display_name": "Hidden Markov model",
+      "level": 2,
+      "score": 0.8229741
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.7675961
+    },
+    {
+      "id": "C60582962",
+      "display_name": "Viterbi algorithm",
+      "level": 3,
+      "score": 0.6861006
+    },
+    {
+      "id": "C28490314",
+      "display_name": "Speech recognition",
+      "level": 1,
+      "score": 0.61410904
+    },
+    {
+      "id": "C52001869",
+      "display_name": "Naive Bayes classifier",
+      "level": 3,
+      "score": 0.50175786
+    },
+    {
+      "id": "C95623464",
+      "display_name": "Classifier (UML)",
+      "level": 2,
+      "score": 0.4905128
+    },
+    {
+      "id": "C207201462",
+      "display_name": "Bayes' theorem",
+      "level": 3,
+      "score": 0.46170714
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.45977056
+    },
+    {
+      "id": "C113843644",
+      "display_name": "Interface (matter)",
+      "level": 4,
+      "score": 0.42954433
+    },
+    {
+      "id": "C40969351",
+      "display_name": "Word error rate",
+      "level": 2,
+      "score": 0.41342467
+    },
+    {
+      "id": "C522805319",
+      "display_name": "Electroencephalography",
+      "level": 2,
+      "score": 0.3870476
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.33536533
+    },
+    {
+      "id": "C12267149",
+      "display_name": "Support vector machine",
+      "level": 2,
+      "score": 0.22928047
+    },
+    {
+      "id": "C107673813",
+      "display_name": "Bayesian probability",
+      "level": 2,
+      "score": 0.1744022
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.08052164
+    },
+    {
+      "id": "C157915830",
+      "display_name": "Bubble",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C118552586",
+      "display_name": "Psychiatry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C129307140",
+      "display_name": "Maximum bubble pressure method",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "C173608175",
+      "display_name": "Parallel computing",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10429",
+      "display_name": "EEG and Brain-Computer Interfaces",
+      "score": 1.0
+    },
+    {
+      "id": "T11601",
+      "display_name": "Neuroscience and Neural Engineering",
+      "score": 0.9806
+    },
+    {
+      "id": "T10581",
+      "display_name": "Neural dynamics and brain function",
+      "score": 0.974
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tnsre.2014.2300091",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:46:17.129894",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,72 @@
+{
+  "pmid": "22247672",
+  "uid": "22247672",
+  "title": "Use of Earth's magnetic field for mitigating gyroscope errors regardless of magnetic perturbation.",
+  "abstract": "Most portable systems like smart-phones are equipped with low cost consumer grade sensors, making them useful as Pedestrian Navigation Systems (PNS). Measurements of these sensors are severely contaminated by errors caused due to instrumentation and environmental issues rendering the unaided navigation solution with these sensors of limited use. The overall navigation error budget associated with pedestrian navigation can be categorized into position/displacement errors and attitude/orientation errors. Most of the research is conducted for tackling and reducing the displacement errors, which either utilize Pedestrian Dead Reckoning (PDR) or special constraints like Zero velocity UPdaTes (ZUPT) and Zero Angular Rate Updates (ZARU). This article targets the orientation/attitude errors encountered in pedestrian navigation and develops a novel sensor fusion technique to utilize the Earth's magnetic field, even perturbed, for attitude and rate gyroscope error estimation in pedestrian navigation environments where it is assumed that Global Navigation Satellite System (GNSS) navigation is denied. As the Earth's magnetic field undergoes severe degradations in pedestrian navigation environments, a novel Quasi-Static magnetic Field (QSF) based attitude and angular rate error estimation technique is developed to effectively use magnetic measurements in highly perturbed environments. The QSF scheme is then used for generating the desired measurements for the proposed Extended Kalman Filter (EKF) based attitude estimator. Results indicate that the QSF measurements are capable of effectively estimating attitude and gyroscope errors, reducing the overall navigation error budget by over 80% in urban canyon environment.",
+  "authors": [
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad Haris",
+      "initials": "MH",
+      "name": "Muhammad Haris Afzal",
+      "affiliations": [
+        "Department of Geomatics Engineering, Schulich School of Engineering, University of Calgary, 2500 University Drive NW, Calgary, AB T2N 1N4, Canada. haris.afzal@ucalgary.ca"
+      ]
+    },
+    {
+      "last_name": "Renaudin",
+      "fore_name": "Valérie",
+      "initials": "V",
+      "name": "Valérie Renaudin",
+      "affiliations": []
+    },
+    {
+      "last_name": "Lachapelle",
+      "fore_name": "Gérard",
+      "initials": "G",
+      "name": "Gérard Lachapelle",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Sensors (Basel, Switzerland)",
+    "iso_abbreviation": "Sensors (Basel)",
+    "issn": "1424-8220",
+    "issn_type": "Electronic",
+    "volume": "11",
+    "issue": "12",
+    "pub_year": "2011"
+  },
+  "start_page": "11390",
+  "end_page": "11414",
+  "pages": "11390-414",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Earth, Planet",
+    "Geographic Information Systems",
+    "Magnetics"
+  ],
+  "article_ids": {
+    "pubmed": "22247672",
+    "pmc": "PMC3251989",
+    "doi": "10.3390/s111211390",
+    "pii": "s111211390"
+  },
+  "doi": "10.3390/s111211390",
+  "pmc_id": "PMC3251989",
+  "dates": {
+    "completed": "2012-06-29",
+    "revised": "2021-10-21"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.531322",
+    "pmid": "22247672"
+  }
+}

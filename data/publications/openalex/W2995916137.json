@@ -1,0 +1,931 @@
+{
+  "openalex_id": "W2995916137",
+  "doi": "https://doi.org/10.1002/cyto.a.23941",
+  "title": "Cyt‐Geist: Current and Future Challenges in Cytometry: Reports of the CYTO 2019 Conference Workshops",
+  "abstract": "In May 2018, we initiated a new, unique project: the CYTO Conference workshop summary report. The main motivation was to present to the reader key findings from the live discussions, indicate the trends, and discuss identified challenges and proposed solutions or guidelines in specific fields of cytometry. CYTO workshops are well-known dynamic and open forums for free discussions and experience exchange at different levels and among various scientific specialties. The allocated time for this format however is limited, so workshops must be run in parallel. That format unfortunately does not allow one to attend all workshops of a CYTO conference. Furthermore, not all International Society for Advancement of Cytometry (ISAC) members can join every annual CYTO meeting thus they cannot benefit from any of the workshops. Publication of the workshop summaries and making it thereby available for a global audience not only captures the live discussions but may seed new initiatives to support hot topics or new trends. Good examples are last year's CYTO Lab Hacks initiative; or this year's workshop African Working Group under the umbrella of ISAC and announcing its Instrument4Science Task Force [I4S] initiative. The joint effort of the 73 scientists facilitating CYTO2018 workshops was a successful endeavor and the final report summary was published in June this year 1. The download numbers of full-text manuscript from the journal website were 1,140 within the first four months. Encouraged by the impressive interest, we decided to continue the project and publish joint manuscript from this year's CYTO2019 workshops, held in Vancouver. We received summaries from all 11 workshops and grouped them into three chapters: 1. Trends; 2. Shared Resource Laboratory (SRL) Best Practices; and 3. Quality Assurance and Reproducibility. Some topics that gathered the attention of last year's workshop participants were further discussed also this year. Good examples here could be mass cytometry presented as one of the trends last year and discussed this year in more detail in the context of clinical trials (WS05). Automated algorithm-based data analysis of multisite clinical studies data received well-deserved attention in one of the workshops included in this manuscript (WS10). We hope that this short summary will serve the scientific community as a useful source of information and will help to connect scientists and initiate new fascinating projects and even more exciting workshops. This chapter consists of reports from three workshops that focus on the current trends in cytometry. The main trend identified at CYTO2019 was related to information sharing and promoting interdisciplinary dialogue. As already seen last year, there is a strong ISAC community request to establish cytometry-related databases as reported by the authors of WS01 and WS11. There is a clear and sound demand for open access to data, protocols, and guidelines that would help to drive the research and in consequence, move the innovation forward. WS01 proposes the launch of a cell sorting data and guidelines repository for different cell types. Even though such initiative was welcomed with great enthusiasm by the society and many workshop participants volunteered to help with such a database creation, there are some obstacles like source of financing, management, or location, which need to be overcome first. WS11 is intended to serve the community as open forum for driving innovation in cytometry. The above-mentioned databases could be of great help for the third initiative in this chapter, the African Working Group of ISAC Instrument4Science Task Force (I4S) (WS03). The African Working group needs substantial support of reagent and instrumentation vendors to help progress African cytometry. I4S is initiated by the ISAC for consolidating solitary efforts by individuals or individual companies in Africa that may be expandable to many resource poor countries on other continents. Gelo Victoriano Dela Cruz, Anna Fossum, Peter Lopez. Flow Cytometric Cell Sorting is an essential technology used in the biomedical sciences. This technology allows for the rapid purification of specific populations from a heterogeneous cell suspension based on user-defined light scatter and/or fluorescence properties. In a typical cell sorting experiment, samples are first dissociated into a single-cell suspension, washed to remove debris, and then concentrated using centrifugation. In addition to getting samples into a single-cell suspension, samples may be subjected to additional steps including antibody staining before analyzing and sorting. The research goals dictate the success of a cell sorting experiment. This is often measured by the viability and yield of cells after sorting and the quality of isolated macromolecules, among others. Performance characteristics related to the mechanical isolation of cells can vary due to instrument setup or cell type. Riddell et al. 2 established an approach that utilizes fluorescent beads to optimize and document electrostatic sorter performance. While the mechanical optimization of the cell sorting process can be achieved using beads, cells may add another variable due to size or condition and contribute to an unintended outcome, as shown by Osborne 3. Also, electrostatic cell sorting may cause any number of perturbations to the sorted cells, recently described as sorter-induced cellular stress (SICS) 4. Due to the myriad of cell types seen in a shared resource laboratory for cell sorting, as well as the variety of cell sorters and cell sorter configurations, a database or repository containing contributed recommendations on how to obtain the best results for successful sorting of various cell types and various cell sorters would be very beneficial to those performing cell sorting experiments. Currently, there is a wealth of both published and unpublished cell sorting data. Published data can be found in methodologies and supplementary information in research studies utilizing cell sorting. The MIFlowCyt standard was adopted in 2008 for reporting of information about flow cytometry (including cell sorting) experiments. However, the MIFlowCyt information is not in a searchable database format that can be easily accessed. This workshop surveyed the workshop participants and the greater cytometry community via an online survey as to what data are needed in a database for cell-sorting information. In addition, suggestions on where the database can be hosted or located and how the database can be curated and maintained were discussed. The online survey was conducted before CYTO Conference 2019, and the results discussed during the workshop. An online survey was sent out to the greater cytometry community before the CYTO Conference 2019 through the Purdue Cytometry List. The survey contained questions pertaining to cell-sorting information needed in an online database in an open-ended format. The workshop started with a brief introduction about cell sorting, the current status of cell-sorting information resources and SICS. The FPbase (www.fpbase.org) website was shown as an example of a research resource that a cell-sorting repository can be patterned after. The Fpbase is a database of fluorescent proteins and their properties that is free and open-source, community-editable but curated, and most importantly, with searchable data. The results of the pre-congress survey (see Supporting Information 1, WS01_SI1) were shown and discussed, and attendees were then polled with the following two key questions using live polling with Slido (www.slido.com). The workshop had at least 147 participants. Live polling contributions to the first key question had natural groupings of slightly different responses which allowed for the results to be binned into several categories (Fig. 1 and Supporting Information 2, WS01_SI2). Majority of the participants recommended to have this repository as an ISAC-provided resource (Fig. 2 and Supporting Information 3, WS01_SI3). During the workshop, it was clear that there is a need for a cell sorting information resource as evidenced by the lively and enthusiastic discussion. The pre-congress survey had 28 respondents and showed that information on nozzle size, sheath pressure, sample preparation, and temperature conditions, among others, rated highly as important information that should be reported about cell sorting experiments. The live polling from the workshop showed similar results. Even though both pre-congress survey and online polling results show that there are a myriad of variables that can be reported, a consensus was still established. From the live polling data, the replies were classified into several general categories (Fig. 1). Sorter settings include nozzle size, and sample and sheath pressure. Cell buffers include buffers used for sample resuspension for sorting and for collection. Sheath refers to the type of sheath fluid used for the sort. Sample information includes cell type and source (species and whether it is a cell line or are primary cells). Sort information refers to threshold rate, the sort mask, gating strategy, and sort efficiency. Sample preparation refers to the sample preparation protocol for the specific cells, while viability refers to the pre- and post-sort viability of the cells. Temperature information includes instrument (sample and collection chamber) temperature settings as well as any specific temperature conditions involved in the experiment. There is a lot of information that workshop participants deemed important for a cell-sorting repository. It is important to note that these variables are related (i.e., nozzle size to sheath pressure, threshold rate to flow rate to sample concentration) and changing one variable might change others (i.e., going from 100 μm nozzle to 70 μm nozzle will change the sheath pressure). Furthermore, the discussions during the workshop indicated that not only successful cell-sorting outcomes be included in the repository but also information on cell-sorting experiments that failed. As mentioned earlier, there was a lot of enthusiasm about the possibility of creating a repository for cell-sorting data. After the workshop, several attendees approached the facilitators and volunteered to help with creating and establishing this repository. However, in order to set this up, we need more than volunteers. The creation of a repository with cell sorting information can be beneficial to the cytometry community. It will provide researchers with an easily searchable resource where they can search for the best conditions for cell sorting for their particular cell type, instrumentation, and downstream applications of the sorted material. The repository can be a good starting point for researchers trying out new cell types and can provide them with information on what not to do for these sorts. This will allow them to save on time and resources and hopefully help with the success of their sorting experiments. On the down side, creating a repository such as this will require resources including funding and manpower. Funds will be needed to acquire server and hosting services, and possibly, hiring programmers to create the repository if our volunteers are not able to in a timely manner. Also, the funding has to be continuous, as the cost of maintaining a server and hosting services for this repository is not a one-time expense. Majority of the attendees suggested that this be funded by ISAC (Fig. 2) as a resource available to members, but it was also suggested that it be an ISAC-related resource that has independent funding through sponsorships by companies, a model of which will have to be devised to make the funding sustainable. In addition to funding, manpower is also needed. To establish the repository, programmers are needed to create the repository to specifications. Once created, administrators will be needed in order to curate entries and manage the repository. Although we have volunteers from the cytometry community, we might need to hire the services of programmers to create the repository. This will be possible if we get enough financial support from ISAC or from other funding sources. The repository can be a stand-alone resource that is funded by either private money (sponsorships from companies), or one that is under the auspices of ISAC. Regardless of funding source, the repository should be a community-led effort that is curated and open to all. Establishing a repository for cell-sorting information is a challenging endeavor that will be extremely beneficial to the cytometry community. In order to establish, build, and maintain the repository, a sustainable model for funding should be devised and implemented. Also, the project should harness the skills and talents of eager volunteers from the community in order to maximize resources and ensure success. The authors declare no conflicts of interest. Lydia Tesfa, Iyadh Douagi, William G. Telford, J. Paul Robinson, Howard Shapiro, Karen Hogg, Paul Wheeler, Daniel Bitoun, Samuel Tony Boova, Ines Nasdala, Alfonso Blanco Fernández. Instrument access, reagent and assay availability, training, and education are all paramount in supporting scientists and clinicians in advancing their scientific studies in Africa. Nemes et al. 5 have indicated the need for training scientists in basic and advanced cytometry, assay developments, and operational theories of cytometry instrumentation. To achieve these goals, collaborative support and dedication from cytometry researchers, shared resource managers and reagent and instrumentation vendors is critical. The first ISAC Cytometry in Africa Workshop was organized at CYTO 2019 to get a clearer picture about the status of cytometry in Africa. It sought to identify both strengths and needs in the African flow cytometry community and highlight examples of the different actions and initiatives as well as share obstacles and outcomes. The workshop attempted to strategize mechanisms for enhancing the efficiency and impact of the limited economic and human resources available in the African countries. The specific aims of the workshop were to review results from a recent survey of African cytometry resources and personnel, showcase existing collaborative efforts, and discuss both current and new strategies for improving collaborative support and science. A further aim of the workshops was to increase awareness of the recently launched ISAC Task Force Instrument4Science (IS4S) that aims to promote and advance Science in Africa, Latin American and Caribbean countries, Eastern European countries, the Middle East, and Asian countries with economic and/or political difficulties by facilitating the donation of instruments and/or improve collaborative efforts with the local communities of these areas. This workshop constituted an excellent opportunity to collect feedback from participants and attendees on how to improve collaborative efforts in Africa. The State of Flow Cytometry in Africa CYTO2019 Workshop comprised of three main blocks: on-site presentation of the results of the survey, support efforts by both academic and industry scientists, discussion of current and proposed actions and plans for future activities. This is further discussed in Figure 3 and Supporting Information, see WS03_SI Highlights_Presentation Final. The first block was the introduction of pre-workshop survey results targeting the broad spectrum of clinical and research laboratories in Africa. This survey was broadly distributed to investigators throughout the African continent, as well as non-African scientists with collaborative links to African research institutions. Current and proposed efforts were presented in the second block, including donations, education, research efforts and other initiatives by both academic and industry investigators. The floor was then opened for discussion, where several significant African collaborative projects not included in the second section were described and discussed. At the end, a preliminary plan was put into place to align these efforts with the I4S, the ISAC Live Education Task Force, and the ISAC Education Committee. The workshop was pleased and honored to have the participation of Howard Shapiro (via Skype), who has promoted many appropriate technologies for improved flow cytometric analysis in the developing world. The results of this survey were presented at the workshop and are briefly summarized below (the complete results are attached as Supporting Information see WS03_SI1 Survey_Results). Thirty-seven survey questions were sent out to flow cytometry users in Africa. The respondents (n = 42) were from all regions of Africa, the vast majority of them researchers (83.3%). Over 90% of the surveyed had a cytometer, which over 30% having multiple instruments. The survey covered satisfaction of the investigators with their resources, user and instrument operator experience, level of and access to training, access to service and service contracts and maintenance costs. The results of this survey reveal a movement in the research community toward sophisticated research studies, indicating for better access to more advanced equipment. Inquiries about applications showed immunophenotyping and tumor diagnosis to be the unsurprising dominant techniques, and cell cycle analysis, cell proliferation showed frequent usage. Nonbiomedical applications (11.9%) including microbial ecology, plant biology, and biotechnology were also identified as important. Overall, the survey showed some interesting trends. It demonstrated considerable resources both in equipment and in personnel but with uneven distribution across countries and institutions. It also showed the increased emphasis on biomedical research and advanced clinical applications, in addition to more routine clinical analysis. The variety of scientific research described (both biomedical and biotechnological, including drug discovery and agriculture) was considerable. It also showed that, despite the best efforts of both foreign biomedical scientists and vendor community, access to instrument support, reagents and assays, training and education all remain challenging and need improvement. One way to improve cytometry access is to donate refurbished instruments to collaborating laboratories. The National Cancer Center Institute (NCCI) program under Dr. William Telford has been operating a cytometer donation program since 2002. This program has arranged the donation of over 16 flow cytometers to laboratories all over the world. This donation program was described together with the challenges of the process: gifting to the recipient instrument, restoration and shipping, navigating international customs, and supporting equipment in often remote parts of the world. Training and educational support provided after the donation is critical for success of these efforts; this is an area that ISAC traditionally excels in, and the efforts and experience of the Live Education Task Force and the ISAC Education Committee have been leveraged toward this project. One focus of the Instruments 4 Sciences Task Force will be to facilitate such equipment donations. The ethical challenges of used equipment donations for clinical use were also discussed. Clinical analysis typically demands new instrumentation still supported by the manufacturer. Dr. Alfonso Blanco (UCD Conway Institute, Ireland) discussed his clinical and educational project in Sudan as model for collaborative sites and building up the local knowledge. The donation of second-hand instruments constitutes both legal and ethical challenges for the corporates due to international corporate policies and restrictions on importing used equipment especially in the clinical diagnostic field. However, companies are supportive of these efforts in principle, and ways that vendors can participate in this process were discussed. More interest was expressed in the donation of new equipment, particularly for clinical applications. Instruments are important but can the hosting labs use them? Support infrastructure, including good lab space, access to clean water and stable electrical system is critical to maintaining instrumentation in a useful state. High-end cytometers often place excessive demands on laboratory resources. Therefore, alternative systems appropriate to the region must be considered for a correct and fast diagnosis of different diseases such as malaria. Howard Shapiro presented his theory and designs for building appropriate cytometry technology for laboratory setting with limited infrastructure. In Howard Shapiro's own words: \"In the 1960s, when I was in medical school, the light microscope was the primary tool for students, who did all the counts for the labs. Of red and white blood cells, segmented or stabs. We learned to use Giemsa's dye for blood smear staining but didn't see much of malaria while training. We also used Ziehl-Neelsen (Z-N) stain for tuberculosis; Though red bugs on blue can be easy to see, a slide may yield nothing but eyestrain and tedium, while colonies grow some weeks later in medium. Let Giemsa and Z-N take bows for their ages and put brighter talent on microscope stages! A multiparameter low-magnification wide-field imager (conceptually a 'flowless flow cytometer') applicable to a wide range of tasks including the diagnosis of Malaria/Tuberculosis could be affordable (production cost <US$1,000) and sustainable for resource-poor countries in Africa and elsewhere. This is increasingly becoming a multinational effort pointing toward an open-source design.\" Several cytometer manufacturers have also produced low-cost instrumentation aimed at simple clinical analysis in regions with limited resources. Many of these systems, point-of-care (POC), cytometers with simple maintenance needs but limited analytical capacity. However, recent technological advances in photonics have also provided high-capability instrumentation in smaller packages, allowing easier installation and operation in remote areas. The companies participating in this workshop presented their systems, as well as their overall strategies for providing reagent and technical support. Training and education are both critical for any research program. However, training and education are not always synonymous. While education programs should teach up to the highest levels of the field, training is often more specific to the instrumentation and analytical needs of the institution. Dr. Paul Robinson from Purdue University emphasized this point in his description of his workshops in Africa, including an upcoming conference in Nairobi Kenya. He also encouraged the instrument and reagent manufacturers to provide support for these efforts. Dr. Blanco also described his training programs for his cytometry project in Sudan. Each one of the four participating companies have provided a huge variety of training and education programs that they sponsor and/or organize, including a Good Laboratory Practices (GLP) program for clinical diagnostic laboratories, regional Round Tables, Hematology Standardization for Leukemia/Lymphoma or the Flow Cytometry Continuous Educational and Regional Immunology Workshop with ISAC. The companies also provide basic instrument training; BD Biosciences, for example, is opening new training centers in the key geographic regions of Africa to provide local training without the requirement for long distance travel. Education has been a traditional strength of ISAC, and the ISAC Education Committee, ISAC Live Education Task Force (LETF) and CYTO U all highlight this emphasis on both training and education. Close coordination between any African working group, companies and these existing ISAC committees will be critical to leverage existing experience in cytometry training. Different examples of global health initiative emphasizing partnerships and alliances between researchers, clinicians, corporates and academics were presented, such as the CARES Program from Beckman Coulter 6. Drs. Karen Hogg summarized a project lead by Professor Paul Kaye (University of York, UK), a consortium of European partners from European and African partners, funded by European and Developing Countries Clinical Trials Program, to study the immunopathology of visceral leishmaniasis across four leishmaniasis endemic countries of East Africa and a vaccine trial in Sudan. The cytometers purchased for the project and the training provided will significantly enhance research capabilities of all sites involved. The floor was then opened for discussion. Several attendees described their own African programs and experiences. Dr. Huw (Zip) Kruger Gray shared his experiences working on a POC cytometry project in Nigeria. Logistic and bureaucratic difficulties were discussed, although it was emphasized that these issues could not be generalized to all countries. Working closely with the local governments and research communities was essential to dealing with bureaucratic obstacles. The importance of working both with the national and international societies (such as the African Academy of Sciences), international agencies (such as WHO) and established international research organizations and foundations (Wellcome Trust, USAID, Gates, Pasteur, etc.) was strongly emphasized. Since cultural and political situations vary dramatically between different counties, it was suggested that the establishment of working groups for defined regions might help in dealing with these obstacles. The survey of African cytometry resources yielded several other interesting findings. There was a lack of knowledge about the online resources available such as the Cytometry Purdue Mailing list, the existence of the ISAC or the Pan African Cytometry Association. The participating manufacturers all suggested that they could direct their customers to these valuable and free resources. A significant finding from this workshop is that many African Scientists are involved in projects and collaborations with ISAC-associated scientists. The researchers hope that the workshop will yield fruitful partnerships that will spur substantial ISAC support for African investigators. Education, service, and post-installation support, adequate infrastructures and both local and national politics are all critical issues for managing cytometry facilities in Africa. Although these problems are often difficult to solve, a team effort between academia, manufacturers, funding bodies, local authorities and the local scientific community can produce surprisingly good results. A key outcome of the workshop was the establishment of an African Working Group that would connect both African and foreign investigators working on joint projects. A positive observation of the workshop was the large number of existing projects involving ISAC investigators and African scientists, many of which are not widely publicized. A working group will provide a clearinghouse for such efforts and will encourage future project in this area. Another key outcome of the workshop was the official launch of the ISAC Task Force \"Instruments 4 Science.\" This initiative is designed to promote the provision of instruments (new or refurbished) flow cytometers to institutions and laboratories not yet able to purchase their own equipment. I4S will connect donors with recipients and will help and advice in the donation process, including legal transfer of ownership, instrument refurbishment and shipping, and importation into the recipient country. I4S will be focus on providing support not just in African groups, also to Latin-American and Caribbean countries, Eastern European countries, the Middle East, and Asian countries with economic and/or political difficulties. I4S will work closely with the Education Committee, the Live Education Task Force, and other training programs within ISAC to support and train donation recipients to help them get the most out of their equipment. I4S will also attempt to establish relationships between donors and instrument manufacturers to provide support for instrument donations and will encourage efforts to place new equipment in recipient laboratories as part of international research collaborations. I4S will also work closely with ISAC Finance Committee and Funding Task Force to explore different mechanisms for making this effort financially possible. It will also cooperate with the ISAC Education Committee and Live Education Task Force to provide cytometry training and education. Instruments 4 Science is still in the exploratory stage, and eager for participants who have experience or an interest in instrument donations and working with recipients in the developing world. Dr. Blanco and Dr. Telford will spearhead I4S as co-chairs. The project \"European-African partnership to advance clinical research and clinical trials capacity through the development of a Leishmania vaccine\" is part of the EDCTP2 Programme supported by the European Union (RIA2016V-1640) The authors would like to acknowledge Instruments 4 Science Task Force committee members in the following order: Alfonso Blanco, Co-chair; Bill Telford, Co-chair; Iyadh Douagi; Karen Hogg; Lydia Tesfa; Raif Yuecel; Francesca Ziolkowska; Jessica Houston (Finance Committee Representative); Paul Smith (Fundraising Task Force Representative); Zofia Maciorowski (Life Education Delivery Task Force Representative); Michelle Butler (ex officio); Andrea Cossarizza (ex officio); and Jonni Moore (ex officio). Alfonso Blanco would like to acknowledge the ISAC Scholar Program. The authors declare no conflicts of interest. Cláudia Bispo, Bunny Cotleur, Christopher Hall, Virginia Litwin, Jakub Nedbal, Betsy M. Ohlsson-Wilhelm. Publishing in peer-reviewed journals and books or through meeting proceedings and presentations remain the main tools for dissemin",
+  "authors": [
+    {
+      "display_name": "Kamila Czechowska",
+      "id": "A5086496689",
+      "orcid": "https://orcid.org/0000-0002-9223-1820",
+      "institutions": [],
+      "is_corresponding": true,
+      "raw_author_name": "Kamila Czechowska"
+    },
+    {
+      "display_name": "Joanne Lannigan",
+      "id": "A5041629116",
+      "orcid": "https://orcid.org/0000-0002-3981-8681",
+      "institutions": [
+        {
+          "id": "I51556381",
+          "display_name": "University of Virginia",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joanne Lannigan"
+    },
+    {
+      "display_name": "Nima Aghaeepour",
+      "id": "A5031425035",
+      "orcid": "https://orcid.org/0000-0002-6117-8764",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nima Aghaeepour"
+    },
+    {
+      "display_name": "Jessica B. Back",
+      "id": "A5090664312",
+      "orcid": "https://orcid.org/0000-0003-2424-9946",
+      "institutions": [
+        {
+          "id": "I185443292",
+          "display_name": "Wayne State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jessica B. Back"
+    },
+    {
+      "display_name": "Julfa Begum",
+      "id": "A5089892671",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I166337079",
+          "display_name": "Queen Mary University of London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julfa Begum"
+    },
+    {
+      "display_name": "Greg K. Behbehani",
+      "id": "A5021720425",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2802841970",
+          "display_name": "The Ohio State University Wexner Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Greg Behbehani"
+    },
+    {
+      "display_name": "Claúdia Bispo",
+      "id": "A5005080999",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cláudia Bispo"
+    },
+    {
+      "display_name": "Daniel Bitoun",
+      "id": "A5033385509",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel Bitoun"
+    },
+    {
+      "display_name": "Alfonso Blanco Fernández",
+      "id": "A5103327439",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I100930933",
+          "display_name": "University College Dublin",
+          "country_code": "IE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alfonso Blanco Fernández"
+    },
+    {
+      "display_name": "Samuel Tony Boova",
+      "id": "A5013737036",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210146791",
+          "display_name": "Beckman Coulter Foundation",
+          "country_code": "US",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Samuel Tony Boova"
+    },
+    {
+      "display_name": "Ryan R. Brinkman",
+      "id": "A5035285628",
+      "orcid": "https://orcid.org/0000-0002-9765-2990",
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ryan Remy Brinkman"
+    },
+    {
+      "display_name": "Christopher O. Ciccolella",
+      "id": "A5008344345",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher O. Ciccolella"
+    },
+    {
+      "display_name": "Bunny Cotleur",
+      "id": "A5113997352",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1297540436",
+          "display_name": "Biogen (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bunny Cotleur"
+    },
+    {
+      "display_name": "Derek Davies",
+      "id": "A5052408528",
+      "orcid": "https://orcid.org/0000-0002-6977-4181",
+      "institutions": [
+        {
+          "id": "I2801081054",
+          "display_name": "The Francis Crick Institute",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Derek Davies"
+    },
+    {
+      "display_name": "Gelo Victoriano Dela Cruz",
+      "id": "A5041076259",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2801134892",
+          "display_name": "Novo Nordisk Foundation",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gelo Victoriano Dela Cruz"
+    },
+    {
+      "display_name": "Roxana del Río",
+      "id": "A5090092082",
+      "orcid": "https://orcid.org/0000-0001-6871-3259",
+      "institutions": [
+        {
+          "id": "I111236770",
+          "display_name": "University of Vermont",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Roxana Del Rio‐Guerra"
+    },
+    {
+      "display_name": "Ann Marie Des Lauriers‐cox",
+      "id": "A5016295272",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ann Marie Des Lauriers‐Cox"
+    },
+    {
+      "display_name": "Iyadh Douagi",
+      "id": "A5035302832",
+      "orcid": "https://orcid.org/0000-0002-3221-8667",
+      "institutions": [
+        {
+          "id": "I4210134534",
+          "display_name": "National Institute of Allergy and Infectious Diseases",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1299303238",
+          "display_name": "National Institutes of Health",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Iyadh Douagi"
+    },
+    {
+      "display_name": "Claudia Dumrese",
+      "id": "A5035642184",
+      "orcid": "https://orcid.org/0000-0002-7660-7082",
+      "institutions": [
+        {
+          "id": "I202697423",
+          "display_name": "University of Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Claudia Dumrese"
+    },
+    {
+      "display_name": "Diana L. Bonilla Escobar",
+      "id": "A5068009312",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1343551460",
+          "display_name": "The University of Texas MD Anderson Cancer Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Diana L. Bonilla Escobar"
+    },
+    {
+      "display_name": "Jose Estevam",
+      "id": "A5071972745",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210140176",
+          "display_name": "Takeda (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jose Estevam"
+    },
+    {
+      "display_name": "Christina Ewald",
+      "id": "A5054769714",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I202697423",
+          "display_name": "University of Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christina Ewald"
+    },
+    {
+      "display_name": "Anna Fossum",
+      "id": "A5081831372",
+      "orcid": "https://orcid.org/0000-0001-7446-9918",
+      "institutions": [
+        {
+          "id": "I124055696",
+          "display_name": "University of Copenhagen",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anna Fossum"
+    },
+    {
+      "display_name": "Brice Gaudillière",
+      "id": "A5034034727",
+      "orcid": "https://orcid.org/0000-0002-3475-5706",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brice Gaudillière"
+    },
+    {
+      "display_name": "Cherie Green",
+      "id": "A5016772237",
+      "orcid": "https://orcid.org/0000-0002-3160-2106",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Cherie Green"
+    },
+    {
+      "display_name": "Christopher J. Groves",
+      "id": "A5028742831",
+      "orcid": "https://orcid.org/0000-0002-2386-4827",
+      "institutions": [
+        {
+          "id": "I4210150756",
+          "display_name": "AstraZeneca (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher Groves"
+    },
+    {
+      "display_name": "Christopher Hall",
+      "id": "A5083913930",
+      "orcid": "https://orcid.org/0000-0001-6156-4975",
+      "institutions": [
+        {
+          "id": "I2802476451",
+          "display_name": "Wellcome Sanger Institute",
+          "country_code": "GB",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher Hall"
+    },
+    {
+      "display_name": "Yasmin Haque",
+      "id": "A5090204284",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I183935753",
+          "display_name": "King's College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yasmin Haque"
+    },
+    {
+      "display_name": "Michael N. Hedrick",
+      "id": "A5057908094",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210091812",
+          "display_name": "Bristol-Myers Squibb (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Nathan Hedrick"
+    },
+    {
+      "display_name": "Karen Hogg",
+      "id": "A5061764111",
+      "orcid": "https://orcid.org/0000-0001-7015-5102",
+      "institutions": [
+        {
+          "id": "I52099693",
+          "display_name": "University of York",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karen Hogg"
+    },
+    {
+      "display_name": "Elena W.Y. Hsieh",
+      "id": "A5016960321",
+      "orcid": "https://orcid.org/0000-0003-3969-6597",
+      "institutions": [
+        {
+          "id": "I921990950",
+          "display_name": "University of Colorado Denver",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I51713134",
+          "display_name": "University of Colorado Anschutz Medical Campus",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elena W.Y. Hsieh"
+    },
+    {
+      "display_name": "Jonathan M. Irish",
+      "id": "A5048197375",
+      "orcid": "https://orcid.org/0000-0001-9428-8866",
+      "institutions": [
+        {
+          "id": "I200719446",
+          "display_name": "Vanderbilt University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan Irish"
+    },
+    {
+      "display_name": "James A. Lederer",
+      "id": "A5037981265",
+      "orcid": "https://orcid.org/0000-0002-6445-252X",
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James Lederer"
+    },
+    {
+      "display_name": "Michael D. Leipold",
+      "id": "A5036939117",
+      "orcid": "https://orcid.org/0000-0001-5389-0906",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Leipold"
+    },
+    {
+      "display_name": "Laura J. Lewis‐Tuffin",
+      "id": "A5084974700",
+      "orcid": "https://orcid.org/0000-0002-6013-8322",
+      "institutions": [
+        {
+          "id": "I4210146710",
+          "display_name": "Mayo Clinic in Florida",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laura J. Lewis‐Tuffin"
+    },
+    {
+      "display_name": "Virginia Litwin",
+      "id": "A5064662777",
+      "orcid": "https://orcid.org/0009-0007-0837-7637",
+      "institutions": [
+        {
+          "id": "I4210100264",
+          "display_name": "Caprion (Canada)",
+          "country_code": "CA",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Virginia Litwin"
+    },
+    {
+      "display_name": "Peter Lopez",
+      "id": "A5058664193",
+      "orcid": "https://orcid.org/0000-0002-8587-7148",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peter Lopez"
+    },
+    {
+      "display_name": "Ines Nasdala",
+      "id": "A5048994935",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210088386",
+          "display_name": "Sysmex (Germany)",
+          "country_code": "DE",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ines Nasdala"
+    },
+    {
+      "display_name": "Jakub Nedbal",
+      "id": "A5029003337",
+      "orcid": "https://orcid.org/0000-0003-4866-1126",
+      "institutions": [
+        {
+          "id": "I183935753",
+          "display_name": "King's College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jakub Nedbal"
+    },
+    {
+      "display_name": "Betsy M. Ohlsson‐Wilhelm",
+      "id": "A5074784744",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Betsy M. Ohlsson‐Wilhelm"
+    },
+    {
+      "display_name": "Kylie M. Price",
+      "id": "A5032169040",
+      "orcid": "https://orcid.org/0000-0002-1446-6958",
+      "institutions": [
+        {
+          "id": "I200359443",
+          "display_name": "Malaghan Institute of Medical Research",
+          "country_code": "NZ",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kylie M. Price"
+    },
+    {
+      "display_name": "Adeeb Rahman",
+      "id": "A5020454256",
+      "orcid": "https://orcid.org/0000-0002-8620-3161",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Adeeb H. Rahman"
+    },
+    {
+      "display_name": "Radhika Rayanki",
+      "id": "A5084047279",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210150756",
+          "display_name": "AstraZeneca (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Radhika Rayanki"
+    },
+    {
+      "display_name": "Aja M. Rieger",
+      "id": "A5065411296",
+      "orcid": "https://orcid.org/0000-0002-0536-6023",
+      "institutions": [
+        {
+          "id": "I154425047",
+          "display_name": "University of Alberta",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Aja M. Rieger"
+    },
+    {
+      "display_name": "J. Paul Robinson",
+      "id": "A5053912700",
+      "orcid": "https://orcid.org/0000-0001-8383-3240",
+      "institutions": [
+        {
+          "id": "I219193219",
+          "display_name": "Purdue University West Lafayette",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Paul Robinson"
+    },
+    {
+      "display_name": "Howard Shapiro",
+      "id": "A5073969967",
+      "orcid": "https://orcid.org/0000-0001-7810-1299",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Howard Shapiro"
+    },
+    {
+      "display_name": "Yongliang Sun",
+      "id": "A5054890412",
+      "orcid": "https://orcid.org/0000-0002-0642-1557",
+      "institutions": [
+        {
+          "id": "I4210091812",
+          "display_name": "Bristol-Myers Squibb (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yongliang Steve Sun"
+    },
+    {
+      "display_name": "Vera A. Tang",
+      "id": "A5034560966",
+      "orcid": "https://orcid.org/0000-0003-3930-9139",
+      "institutions": [
+        {
+          "id": "I153718931",
+          "display_name": "University of Ottawa",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vera A. Tang"
+    },
+    {
+      "display_name": "Lydia Tesfa",
+      "id": "A5010165541",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I129975664",
+          "display_name": "Albert Einstein College of Medicine",
+          "country_code": "US",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lydia Tesfa"
+    },
+    {
+      "display_name": "William G. Telford",
+      "id": "A5061239953",
+      "orcid": "https://orcid.org/0009-0002-2689-9600",
+      "institutions": [
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        },
+        {
+          "id": "I1299303238",
+          "display_name": "National Institutes of Health",
+          "country_code": "US",
+          "type": "government"
+        },
+        {
+          "id": "I4210149717",
+          "display_name": "Center for Cancer Research",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I4210089431",
+          "display_name": "National Cancer Center",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William G. Telford"
+    },
+    {
+      "display_name": "Rachael Walker",
+      "id": "A5010867472",
+      "orcid": "https://orcid.org/0000-0001-8180-7516",
+      "institutions": [
+        {
+          "id": "I1302113299",
+          "display_name": "Babraham Institute",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rachael Walker"
+    },
+    {
+      "display_name": "Joshua A Welsh",
+      "id": "A5046116488",
+      "orcid": "https://orcid.org/0000-0002-1097-9756",
+      "institutions": [
+        {
+          "id": "I1299303238",
+          "display_name": "National Institutes of Health",
+          "country_code": "US",
+          "type": "government"
+        },
+        {
+          "id": "I4210140884",
+          "display_name": "National Cancer Institute",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joshua A. Welsh"
+    },
+    {
+      "display_name": "Paul S. Wheeler",
+      "id": "A5111625932",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Paul Wheeler"
+    },
+    {
+      "display_name": "Attila Tárnok",
+      "id": "A5029537086",
+      "orcid": "https://orcid.org/0000-0002-3315-1249",
+      "institutions": [
+        {
+          "id": "I926574661",
+          "display_name": "Leipzig University",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210145647",
+          "display_name": "Fraunhofer Institute for Cell Therapy and Immunology",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Attila Tárnok"
+    }
+  ],
+  "publication_year": 2019,
+  "publication_date": "2019-12-01",
+  "type": "article",
+  "cited_by_count": 13,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S86468533",
+    "display_name": "Cytometry Part A",
+    "issn_l": "1552-4922",
+    "issn": [
+      "1552-4922",
+      "1552-4930"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "95",
+  "issue": "12",
+  "first_page": "1236",
+  "last_page": "1274",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cyto.a.23941",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41458344",
+      "display_name": "Publication",
+      "level": 2,
+      "score": 0.7006508
+    },
+    {
+      "id": "C161191863",
+      "display_name": "Library science",
+      "level": 1,
+      "score": 0.54929733
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.49185395
+    },
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.42621198
+    },
+    {
+      "id": "C2777206241",
+      "display_name": "Paragraph",
+      "level": 2,
+      "score": 0.41423157
+    },
+    {
+      "id": "C39549134",
+      "display_name": "Public relations",
+      "level": 1,
+      "score": 0.4007354
+    },
+    {
+      "id": "C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "score": 0.34824675
+    },
+    {
+      "id": "C42475967",
+      "display_name": "Operations research",
+      "level": 1,
+      "score": 0.34219083
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.169323
+    },
+    {
+      "id": "C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "score": 0.12993684
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11289",
+      "display_name": "Single-cell and spatial transcriptomics",
+      "score": 0.9981
+    },
+    {
+      "id": "T12859",
+      "display_name": "Cell Image Analysis Techniques",
+      "score": 0.9899
+    },
+    {
+      "id": "T11287",
+      "display_name": "Cancer Genomics and Diagnostics",
+      "score": 0.9333
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1002/cyto.a.23941",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cyto.a.23941",
+  "retrieved_date": "2025-07-30T14:46:50.403396",
+  "source_database": "OpenAlex"
+}

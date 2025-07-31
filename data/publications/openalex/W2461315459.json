@@ -1,0 +1,779 @@
+{
+  "openalex_id": "W2461315459",
+  "doi": "https://doi.org/10.1158/1557-3125.myc15-pr09",
+  "title": "Abstract PR09: MYCN and is a therapeutic target in neuroblastoma",
+  "abstract": "Abstract Neuroblastoma is a childhood cancer of the sympathetic nervous system. Approximately 20% of patients present with an aggressive metastatic disease characterized by amplification of the MYCN locus. However, an additional 30% of patients suffer from an equally aggressive disease, yet there are no unified genetic markers available. To identify potential biomarkers of poor prognosis in neuroblastoma, we conducted unsupervised hierarchical clustering on 649 primary neuroblastoma tumors based on a 51 gene MYC core target signature. This demonstrated strong activation within the MYCN amplified cohort as expected, but surprisingly there was a large subset of MYCN non-amplified patients that exhibited high MYC signaling. High expression of this MYC signature proved to be strongly predictive of poor overall survival, in both the full cohort (Hazard ratio (HR): 47.6, p= 2.7x10-35, n=649) and in MYCN non-amplified patients (HR=32.8, p=1.3x10-13, n=554), suggesting that neuroblastoma can be driven by MYC signaling in the absence of MYCN amplification. To evaluate potential therapeutic targets within this MYC signature, we conducted cox regression analysis on the 51 individual members and identified that SPT16 was a particularly potent predictor of poor outcome in these 649 neuroblastoma patients (HR: 7.2, p=2.7x10-17). SPT16 is a subunit of the FACT histone chaperone complex, which together with its heterodimer partner SSRP1, has previously been shown to function in dynamic regulation of chromatin to drive transcription, DNA replication and DNA repair. Similar to SPT16, high SSRP1 expression was a strong predictor of poor prognosis in 649 neuroblastoma patients (HR: 12.5, p=5.812x10-26) implicating FACT as a mediator of MYC driven neuroblastoma. Next we investigated the biological relationship between FACT and MYCN in neuroblastoma. siRNA experiments showed that FACT and MYCN participate in a positive feedback transcriptional loop that is essential for maintaining mutual high expression. Immunohistochemistry in sympathetic ganglia of pre-tumor TH-MYCN mouse model of neuroblastoma identified that FACT was highly expressed at tumor initiation and chemical inhibition of FACT by CBL0137 markedly reduced tumor initiation and subsequent tumorigenesis in vivo. Next we tested CBL0137 against established neuroblastoma in TH-MYCN mice. CBL0137 was highly cytotoxic to tumors either as a single agent or by synergistically promoting clinically used chemotherapeutics. This was accompanied by marked MYCN depletion and prolonged tumor regression in a majority of recipient mice. Pulsed-field electrophoresis showed that CBL0137 impaired FACT dependent DNA damage repair in the presence of genotoxic chemotherapy, thus creating a synthetic lethal environment in MYCN-amplified neuroblastoma cells. Together our data define FACT as a mediator of neuroblastoma tumorigenesis and MYCN-related treatment target. Given the current poor survival rates of children with high-risk neuroblastoma, our findings provide support for the clinical development of CBL0137 as a novel treatment approach for this refractory malignancy. Citation Format: Daniel R. Carter, Jayne Murray, Belamy B. Cheung, Heyam Kalla, Laura Gamble, Joanna Tsang, Selina Sutton, Jessica Koach, Sarah Syed, Andrew Gifford, Natalia Issaeva, Asel Biktasova, Bernard Atmadibrata, Yuting Sun, Nicolas Sokolowski, Dora Ling, Patrick Y. Kim, Hannah Webber, Ashleigh Clark, Michelle Ruhle, Bing Liu, André Oberthuer, Matthias Fischer, Jennifer Byrne, Federica Saletta, Andrei Purmal, David Ziegler, Tao Liu, Katerina V. Gurova, Andrei V. Gudkov, Murray D. Norris, Michelle Haber, Glenn M. Marshall. MYCN and is a therapeutic target in neuroblastoma. [abstract]. In: Proceedings of the AACR Special Conference on Myc: From Biology to Therapy; Jan 7-10, 2015; La Jolla, CA. Philadelphia (PA): AACR; Mol Cancer Res 2015;13(10 Suppl):Abstract nr PR09.",
+  "authors": [
+    {
+      "display_name": "Daniel R. Carter",
+      "id": "A5088108148",
+      "orcid": "https://orcid.org/0000-0002-8464-238X",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel R. Carter"
+    },
+    {
+      "display_name": "Jayne Murray",
+      "id": "A5088741070",
+      "orcid": "https://orcid.org/0000-0002-1861-6570",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jayne Murray"
+    },
+    {
+      "display_name": "Belamy B. Cheung",
+      "id": "A5013270397",
+      "orcid": "https://orcid.org/0000-0001-8784-860X",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Belamy B. Cheung"
+    },
+    {
+      "display_name": "Heyam Kalla",
+      "id": "A5091631838",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Heyam Kalla"
+    },
+    {
+      "display_name": "Laura D. Gamble",
+      "id": "A5078723889",
+      "orcid": "https://orcid.org/0000-0001-8496-9705",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laura Gamble"
+    },
+    {
+      "display_name": "Joanna Tsang",
+      "id": "A5061768376",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joanna Tsang"
+    },
+    {
+      "display_name": "Selina K. Sutton",
+      "id": "A5077776907",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Selina Sutton"
+    },
+    {
+      "display_name": "Jessica Koach",
+      "id": "A5088511308",
+      "orcid": "https://orcid.org/0000-0002-6052-0126",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jessica Koach"
+    },
+    {
+      "display_name": "Sarah Syed",
+      "id": "A5032880397",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sarah Syed"
+    },
+    {
+      "display_name": "Andrew J. Gifford",
+      "id": "A5053799594",
+      "orcid": "https://orcid.org/0000-0002-4092-2347",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew Gifford"
+    },
+    {
+      "display_name": "Natalia Issaeva",
+      "id": "A5000300151",
+      "orcid": "https://orcid.org/0000-0001-5483-6610",
+      "institutions": [
+        {
+          "id": "I2802730090",
+          "display_name": "Yale Cancer Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Natalia Issaeva"
+    },
+    {
+      "display_name": "Asel Biktasova",
+      "id": "A5110486859",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2802730090",
+          "display_name": "Yale Cancer Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Asel Biktasova"
+    },
+    {
+      "display_name": "Bernard Atmadibrata",
+      "id": "A5028852936",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bernard Atmadibrata"
+    },
+    {
+      "display_name": "Yuting Sun",
+      "id": "A5101571849",
+      "orcid": "https://orcid.org/0000-0002-2245-6477",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuting Sun"
+    },
+    {
+      "display_name": "Nicolas Sokolowski",
+      "id": "A5022806476",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicolas Sokolowski"
+    },
+    {
+      "display_name": "Dora Ling",
+      "id": "A5070351545",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dora Ling"
+    },
+    {
+      "display_name": "Patrick Y. Kim",
+      "id": "A5026481880",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patrick Y. Kim"
+    },
+    {
+      "display_name": "Hannah Webber",
+      "id": "A5091120518",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hannah Webber"
+    },
+    {
+      "display_name": "Ashleigh Clark",
+      "id": "A5108514830",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ashleigh Clark"
+    },
+    {
+      "display_name": "Michelle Ruhle",
+      "id": "A5045524674",
+      "orcid": "https://orcid.org/0000-0002-6582-3177",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michelle Ruhle"
+    },
+    {
+      "display_name": "Bing Liu",
+      "id": "A5100339963",
+      "orcid": "https://orcid.org/0000-0003-4304-1374",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bing Liu"
+    },
+    {
+      "display_name": "André Oberthuer",
+      "id": "A5061265036",
+      "orcid": "https://orcid.org/0000-0002-6856-9872",
+      "institutions": [
+        {
+          "id": "I4210153755",
+          "display_name": "University Hospital Cologne",
+          "country_code": "DE",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180923762",
+          "display_name": "University of Cologne",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "André Oberthuer"
+    },
+    {
+      "display_name": "Matthias Fischer",
+      "id": "A5061831442",
+      "orcid": "https://orcid.org/0000-0003-1363-1242",
+      "institutions": [
+        {
+          "id": "I180923762",
+          "display_name": "University of Cologne",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210153755",
+          "display_name": "University Hospital Cologne",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthias Fischer"
+    },
+    {
+      "display_name": "Jennifer A. Byrne",
+      "id": "A5084971557",
+      "orcid": "https://orcid.org/0000-0002-8923-0587",
+      "institutions": [
+        {
+          "id": "I2802384191",
+          "display_name": "Children's Hospital at Westmead",
+          "country_code": "AU",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennifer Byrne"
+    },
+    {
+      "display_name": "Federica Saletta",
+      "id": "A5082316302",
+      "orcid": "https://orcid.org/0000-0003-0598-3504",
+      "institutions": [
+        {
+          "id": "I2802384191",
+          "display_name": "Children's Hospital at Westmead",
+          "country_code": "AU",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Federica Saletta"
+    },
+    {
+      "display_name": "Andrei A. Purmal",
+      "id": "A5071922213",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Andrei Purmal"
+    },
+    {
+      "display_name": "David S. Ziegler",
+      "id": "A5046321083",
+      "orcid": "https://orcid.org/0000-0001-7451-7916",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Ziegler"
+    },
+    {
+      "display_name": "Tao Liu",
+      "id": "A5100338067",
+      "orcid": "https://orcid.org/0000-0001-6244-7316",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tao Liu"
+    },
+    {
+      "display_name": "Katerina V. Gurova",
+      "id": "A5015550222",
+      "orcid": "https://orcid.org/0000-0001-9189-0712",
+      "institutions": [
+        {
+          "id": "I1292894508",
+          "display_name": "Roswell Park Comprehensive Cancer Center",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Katerina V. Gurova"
+    },
+    {
+      "display_name": "Andrei V. Gudkov",
+      "id": "A5069808553",
+      "orcid": "https://orcid.org/0000-0003-2548-0154",
+      "institutions": [
+        {
+          "id": "I1292894508",
+          "display_name": "Roswell Park Comprehensive Cancer Center",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrei V. Gudkov"
+    },
+    {
+      "display_name": "Murray D. Norris",
+      "id": "A5011765291",
+      "orcid": "https://orcid.org/0000-0002-0632-4589",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Murray D. Norris"
+    },
+    {
+      "display_name": "Michelle Haber",
+      "id": "A5072009574",
+      "orcid": "https://orcid.org/0000-0003-2036-8817",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michelle Haber"
+    },
+    {
+      "display_name": "Glenn M. Marshall",
+      "id": "A5078090612",
+      "orcid": "https://orcid.org/0000-0002-2503-0762",
+      "institutions": [
+        {
+          "id": "I4210112315",
+          "display_name": "Children's Cancer Institute Australia",
+          "country_code": "AU",
+          "type": "healthcare"
+        },
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Glenn M. Marshall"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-10-01",
+  "type": "article",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S192067876",
+    "display_name": "Molecular Cancer Research",
+    "issn_l": "1541-7786",
+    "issn": [
+      "1541-7786",
+      "1557-3125"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320273"
+  },
+  "volume": "13",
+  "issue": "10_Supplement",
+  "first_page": "PR09",
+  "last_page": "PR09",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C2776715637",
+      "display_name": "Neuroblastoma",
+      "level": 3,
+      "score": 0.90962845
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.63691235
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.52364254
+    },
+    {
+      "id": "C2777956278",
+      "display_name": "N-Myc",
+      "level": 5,
+      "score": 0.46545607
+    },
+    {
+      "id": "C83640560",
+      "display_name": "Chromatin",
+      "level": 3,
+      "score": 0.4363924
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.41705352
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.3588214
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.3478955
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.22857344
+    },
+    {
+      "id": "C2779102060",
+      "display_name": "Ganglioneuroma",
+      "level": 4,
+      "score": 0.1273753
+    },
+    {
+      "id": "C81885089",
+      "display_name": "Cell culture",
+      "level": 2,
+      "score": 0.11392087
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12226",
+      "display_name": "Neuroblastoma Research and Treatments",
+      "score": 0.9988
+    },
+    {
+      "id": "T10631",
+      "display_name": "Cancer, Hypoxia, and Metabolism",
+      "score": 0.9138
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1158/1557-3125.myc15-pr09",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:53:17.856538",
+  "source_database": "OpenAlex"
+}

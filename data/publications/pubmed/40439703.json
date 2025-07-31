@@ -1,0 +1,111 @@
+{
+  "pmid": "40439703",
+  "uid": "40439703",
+  "title": "Multimodal medical image-to-image translation via variational autoencoder latent space mapping.",
+  "abstract": "BACKGROUND: Medical image translation has become an essential tool in modern radiotherapy, providing complementary information for target delineation and dose calculation. However, current approaches are constrained by their modality-specific nature, requiring separate model training for each pair of imaging modalities. This limitation hinders the efficient deployment of comprehensive multimodal solutions in clinical practice. PURPOSE: To develop a unified image translation method using variational autoencoder (VAE) latent space mapping, which enables flexible conversion between different medical imaging modalities to meet clinical demands. METHODS: We propose a three-stage approach to construct a unified image translation model. Initially, a VAE is trained to learn a shared latent space for various medical images. A stacked bidirectional transformer is subsequently utilized to learn the mapping between different modalities within the latent space under the guidance of the image modality. Finally, the VAE decoder is fine-tuned to improve image quality. Our internal dataset collected paired imaging data from 87 head and neck cases, with each case containing cone beam computed tomography (CBCT), computed tomography (CT), MR T1c, and MR T2W images. The effectiveness of this strategy is quantitatively evaluated on our internal dataset and a public dataset by the mean absolute error (MAE), peak-signal-to-noise ratio (PSNR), and structural similarity index (SSIM). Additionally, the dosimetry characteristics of the synthetic CT images are evaluated, and subjective quality assessments of the synthetic MR images are conducted to determine their clinical value. RESULTS: The VAE with the Kullback‒Leibler (KL)-16 image tokenizer demonstrates superior image reconstruction ability, achieving a Fréchet inception distance (FID) of 4.84, a PSNR of 32.80 dB, and an SSIM of 92.33%. In synthetic CT tasks, the model shows greater accuracy in intramodality translations than in cross-modality translations, as evidenced by an MAE of 21.60 ± 8.80 Hounsfield unit (HU) in the CBCT-to-CT task and 45.23 ± 13.21 HU/47.55 ± 13.88 in the MR T1c/T2w-to-CT tasks. For the cross-contrast MR translation tasks, the results are very close, with mean PSNR and SSIM values of 26.33 ± 1.36 dB and 85.21% ± 2.21%, respectively, for the T1c-to-T2w translation and 26.03 ± 1.67 dB and 85.73% ± 2.66%, respectively, for the T2w-to-T1c translation. Dosimetric results indicate that all the gamma pass rates for synthetic CTs are higher than 99% for photon intensity-modulated radiation therapy (IMRT) planning. However, the subjective quality assessment scores for synthetic MR images are lower than those for real MR images. CONCLUSIONS: The proposed three-stage approach successfully develops a unified image translation model that can effectively handle a wide range of medical image translation tasks. This flexibility and effectiveness make it a valuable tool for clinical applications.",
+  "authors": [
+    {
+      "last_name": "Liang",
+      "fore_name": "Zhiwen",
+      "initials": "Z",
+      "name": "Zhiwen Liang",
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China.",
+        "Cancer Center, Union Hospital, Tongji Medical College, Huazhong University of Science and Technology, Wuhan, China.",
+        "Hubei Key Laboratory of Precision Radiation Oncology, Wuhan, China."
+      ]
+    },
+    {
+      "last_name": "Cheng",
+      "fore_name": "Mengjie",
+      "initials": "M",
+      "name": "Mengjie Cheng",
+      "affiliations": [
+        "Cancer Nutrition Department, Renmin Hospital of Wuhan University, Wuhan, China."
+      ]
+    },
+    {
+      "last_name": "Ma",
+      "fore_name": "Jinhui",
+      "initials": "J",
+      "name": "Jinhui Ma",
+      "affiliations": [
+        "Cancer Center, Union Hospital, Tongji Medical College, Huazhong University of Science and Technology, Wuhan, China."
+      ]
+    },
+    {
+      "last_name": "Hu",
+      "fore_name": "Ying",
+      "initials": "Y",
+      "name": "Ying Hu",
+      "affiliations": [
+        "School of Mathematics and Statistics, Hubei University of Education, Wuhan, Hubei, China.",
+        "Bigdata Modeling and Intelligent Computing Research Institute, Hubei University of Education, Wuhan, Hubei, China."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Song",
+      "initials": "S",
+      "name": "Song Li",
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China."
+      ]
+    },
+    {
+      "last_name": "Tian",
+      "fore_name": "Xin",
+      "initials": "X",
+      "name": "Xin Tian",
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Medical physics",
+    "iso_abbreviation": "Med Phys",
+    "issn": "2473-4209",
+    "issn_type": "Electronic",
+    "volume": "52",
+    "issue": "7",
+    "pub_year": "2025",
+    "pub_month": "Jul"
+  },
+  "start_page": "e17912",
+  "pages": "e17912",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Image Processing, Computer-Assisted",
+    "Humans",
+    "Multimodal Imaging",
+    "Magnetic Resonance Imaging",
+    "Head and Neck Neoplasms",
+    "Cone-Beam Computed Tomography",
+    "Autoencoder"
+  ],
+  "article_ids": {
+    "pubmed": "40439703",
+    "doi": "10.1002/mp.17912"
+  },
+  "doi": "10.1002/mp.17912",
+  "dates": {
+    "completed": "2025-07-14",
+    "revised": "2025-07-15"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "2025AFB842",
+      "agency": "Natural Science Foundation of Hubei Province of China"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:40:18.410952",
+    "pmid": "40439703"
+  }
+}

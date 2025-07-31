@@ -1,0 +1,739 @@
+{
+  "openalex_id": "W4206580270",
+  "doi": "https://doi.org/10.21203/rs.3.rs-268937/v1",
+  "title": "Convalescent plasma for adults with acute COVID-19 respiratory illness (CONCOR-1): Study protocol for an international, multicenter, randomized, open-label trial",
+  "abstract": "<title>Abstract</title> <bold>Background:</bold> Convalescent plasma has been used for numerous viral diseases including influenza, severe acute respiratory syndrome, Middle East respiratory syndrome and Ebola virus; however, evidence to support its use is weak. SARS-CoV-2 is a novel coronavirus responsible for the 2019 global pandemic of COVID-19 community acquired pneumonia. We have undertaken a randomized controlled trial to assess the efficacy and safety of COVID-19 convalescent plasma (CCP) in patients with SARS-CoV-2 infection.<bold>Methods:</bold> CONCOR-1 is an open-label, multicenter, randomized trial. Inclusion criteria include: patients <underline>&gt;</underline>16 years; admitted to hospital with COVID-19 infection; receiving supplemental oxygen for respiratory complications of COVID-19; and, availability of blood group compatible CCP. Exclusion criteria are: onset of respiratory symptoms more than 12 days prior to randomization; intubated or planned for intubation; and previous severe reactions to plasma. Consenting patients will be randomized 2:1 to receive either approximately 500 mL of CCP or standard of care. CCP will be collected from donors who have recovered from COVID-19 and who have detectable anti-SARS-CoV-2 antibodies quantified serologically. The primary outcome is intubation or death at Day 30. Secondary outcomes include ventilator free days, length of stay in intensive care or hospital, transfusion reactions, serious adverse events, and reduction in SARS-CoV-2 viral load. Exploratory analyses include patients who received CCP containing high titre antibodies. A sample size of 1200 patients gives 80% power to detect a 25% relative risk reduction assuming a 30% baseline risk of intubation or death at 30 days (two-sided test; α =0.05). An interim analysis and sample size re-estimation will be done by an unblinded independent biostatistician after primary outcome data are available for 50% of the target recruitment (n= 600). <bold>Discussion:</bold> This trial will determine whether CCP will reduce intubation or death non-intubated adults with COVID-19. The trial will also provide information on the role of and thresholds for SARS-CoV-2 antibody titers and neutralization assays for donor qualification.<bold>Trial registration: </bold>Clinicaltrials.gov<bold> </bold>NCT04348656; registered 16 April 2020; https://clinicaltrials.gov/ct2/show/NCT04348656?term=NCT04348656&amp;draw=2&amp;rank=1",
+  "authors": [
+    {
+      "display_name": "Philippe Bégin",
+      "id": "A5080962883",
+      "orcid": "https://orcid.org/0000-0002-9089-4604",
+      "institutions": [
+        {
+          "id": "I70931966",
+          "display_name": "Université de Montréal",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Philippe Bégin"
+    },
+    {
+      "display_name": "Jeannie Callum",
+      "id": "A5108134851",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeannie Callum"
+    },
+    {
+      "display_name": "Nancy M. Heddle",
+      "id": "A5003839957",
+      "orcid": "https://orcid.org/0000-0002-9671-3501",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nancy Heddle"
+    },
+    {
+      "display_name": "Richard J. Cook",
+      "id": "A5054553011",
+      "orcid": "https://orcid.org/0000-0002-1414-4908",
+      "institutions": [
+        {
+          "id": "I151746483",
+          "display_name": "University of Waterloo",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard Cook"
+    },
+    {
+      "display_name": "Michelle P. Zeller",
+      "id": "A5070231452",
+      "orcid": "https://orcid.org/0000-0002-6489-6980",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michelle P Zeller"
+    },
+    {
+      "display_name": "Alan Tinmouth",
+      "id": "A5077778585",
+      "orcid": "https://orcid.org/0000-0001-8869-389X",
+      "institutions": [
+        {
+          "id": "I153718931",
+          "display_name": "University of Ottawa",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alan Tinmouth"
+    },
+    {
+      "display_name": "Dean Fergusson",
+      "id": "A5065187538",
+      "orcid": "https://orcid.org/0000-0002-3389-2485",
+      "institutions": [
+        {
+          "id": "I2800722420",
+          "display_name": "Ottawa Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4388482656",
+          "display_name": "Ottawa Hospital Research Institute",
+          "country_code": null,
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dean Fergusson"
+    },
+    {
+      "display_name": "Melissa M. Cushing",
+      "id": "A5009054572",
+      "orcid": "https://orcid.org/0000-0001-8042-1494",
+      "institutions": [
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4387153466",
+          "display_name": "Weill Cornell Medicine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Melissa M Cushing"
+    },
+    {
+      "display_name": "Marshall J. Glesby",
+      "id": "A5037776964",
+      "orcid": "https://orcid.org/0000-0002-2145-148X",
+      "institutions": [
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4387153466",
+          "display_name": "Weill Cornell Medicine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marshall J Glesby"
+    },
+    {
+      "display_name": "Michaël Chassé",
+      "id": "A5003074300",
+      "orcid": "https://orcid.org/0000-0001-7075-1924",
+      "institutions": [
+        {
+          "id": "I70931966",
+          "display_name": "Université de Montréal",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michaël Chassé"
+    },
+    {
+      "display_name": "Dana V. Devine",
+      "id": "A5006207744",
+      "orcid": "https://orcid.org/0000-0002-9059-0344",
+      "institutions": [
+        {
+          "id": "I95297979",
+          "display_name": "Canadian Blood Services",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dana V Devine"
+    },
+    {
+      "display_name": "Nancy Robitaille",
+      "id": "A5052047853",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1328242539",
+          "display_name": "Héma-Québec",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nancy Robitaille"
+    },
+    {
+      "display_name": "Renée Bazin",
+      "id": "A5057947476",
+      "orcid": "https://orcid.org/0000-0001-9594-2532",
+      "institutions": [
+        {
+          "id": "I1328242539",
+          "display_name": "Héma-Québec",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Renée Bazin"
+    },
+    {
+      "display_name": "Nadine Shehata",
+      "id": "A5039041999",
+      "orcid": "https://orcid.org/0000-0002-9267-6256",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nadine Shehata"
+    },
+    {
+      "display_name": "Andrés Finzi",
+      "id": "A5050888562",
+      "orcid": "https://orcid.org/0000-0002-4992-5288",
+      "institutions": [
+        {
+          "id": "I70931966",
+          "display_name": "Université de Montréal",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrés Finzi"
+    },
+    {
+      "display_name": "Allison McGeer",
+      "id": "A5008543119",
+      "orcid": "https://orcid.org/0000-0001-5647-6137",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Allison McGeer"
+    },
+    {
+      "display_name": "Damon C. Scales",
+      "id": "A5090011318",
+      "orcid": "https://orcid.org/0000-0001-7101-3958",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Damon Scales"
+    },
+    {
+      "display_name": "Lisa Schwartz",
+      "id": "A5006016566",
+      "orcid": "https://orcid.org/0000-0002-4959-225X",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lisa Schwartz"
+    },
+    {
+      "display_name": "Alexis F. Turgeon",
+      "id": "A5069849817",
+      "orcid": "https://orcid.org/0000-0001-5675-8791",
+      "institutions": [
+        {
+          "id": "I43406934",
+          "display_name": "Université Laval",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexis F Turgeon"
+    },
+    {
+      "display_name": "Ryan Zarychanski",
+      "id": "A5043765709",
+      "orcid": "https://orcid.org/0000-0001-9455-6138",
+      "institutions": [
+        {
+          "id": "I46247651",
+          "display_name": "University of Manitoba",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ryan Zarychanski"
+    },
+    {
+      "display_name": "Nick Daneman",
+      "id": "A5016977836",
+      "orcid": "https://orcid.org/0000-0001-8827-3764",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nick Daneman"
+    },
+    {
+      "display_name": "Richard Carl",
+      "id": "A5081447023",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Richard Carl"
+    },
+    {
+      "display_name": "Luiz Amorim",
+      "id": "A5103832059",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210088663",
+          "display_name": "Hemorio",
+          "country_code": "BR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Luiz Amorim"
+    },
+    {
+      "display_name": "Caroline Gabe",
+      "id": "A5064996810",
+      "orcid": "https://orcid.org/0000-0001-9877-6533",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Caroline Gabe"
+    },
+    {
+      "display_name": "Martin Ellis",
+      "id": "A5023965238",
+      "orcid": "https://orcid.org/0000-0001-6804-1472",
+      "institutions": [
+        {
+          "id": "I16391192",
+          "display_name": "Tel Aviv University",
+          "country_code": "IL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin Ellis"
+    },
+    {
+      "display_name": "Erin Jamula",
+      "id": "A5024371630",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Erin Jamula"
+    },
+    {
+      "display_name": "Julie Carruthers",
+      "id": "A5025994505",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julie Carruthers"
+    },
+    {
+      "display_name": "Joanne Duncan",
+      "id": "A5083441842",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joanne Duncan"
+    },
+    {
+      "display_name": "Kayla J. Lucier",
+      "id": "A5078340074",
+      "orcid": "https://orcid.org/0000-0001-8142-3678",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kayla Lucier"
+    },
+    {
+      "display_name": "Chantal Armali",
+      "id": "A5047579271",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1323843004",
+          "display_name": "Sunnybrook Health Science Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I2802362269",
+          "display_name": "Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chantal Armali"
+    },
+    {
+      "display_name": "Amie Kron",
+      "id": "A5076018947",
+      "orcid": "https://orcid.org/0000-0001-6315-5315",
+      "institutions": [
+        {
+          "id": "I1323843004",
+          "display_name": "Sunnybrook Health Science Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I2802362269",
+          "display_name": "Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amie Kron"
+    },
+    {
+      "display_name": "Dimpy Modi",
+      "id": "A5020339947",
+      "orcid": "https://orcid.org/0000-0002-5879-4179",
+      "institutions": [
+        {
+          "id": "I2802362269",
+          "display_name": "Health Sciences Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I1323843004",
+          "display_name": "Sunnybrook Health Science Centre",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dimpy Modi"
+    },
+    {
+      "display_name": "Marie‐Christine Auclair",
+      "id": "A5070226165",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2802351361",
+          "display_name": "Centre Hospitalier Universitaire Sainte-Justine",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marie-Christine Auclair"
+    },
+    {
+      "display_name": "Meda Avram",
+      "id": "A5085282083",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2802351361",
+          "display_name": "Centre Hospitalier Universitaire Sainte-Justine",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Meda Avram"
+    },
+    {
+      "display_name": "Donald M. Arnold",
+      "id": "A5015950115",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Donald M Arnold"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-03-05",
+  "type": "preprint",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4306402450",
+    "display_name": "Research Square (Research Square)",
+    "issn_l": null,
+    "issn": null,
+    "type": "repository",
+    "host_organization": "https://openalex.org/I4210096694"
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": "https://doi.org/10.21203/rs.3.rs-268937/v1",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C3008058167",
+      "display_name": "Coronavirus disease 2019 (COVID-19)",
+      "level": 4,
+      "score": 0.76698124
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.681507
+    },
+    {
+      "id": "C3018027319",
+      "display_name": "Convalescent plasma",
+      "level": 5,
+      "score": 0.6372861
+    },
+    {
+      "id": "C168563851",
+      "display_name": "Randomized controlled trial",
+      "level": 2,
+      "score": 0.62871575
+    },
+    {
+      "id": "C3007834351",
+      "display_name": "Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+      "level": 5,
+      "score": 0.6190357
+    },
+    {
+      "id": "C2780385302",
+      "display_name": "Protocol (science)",
+      "level": 3,
+      "score": 0.61635894
+    },
+    {
+      "id": "C3006700255",
+      "display_name": "2019-20 coronavirus outbreak",
+      "level": 3,
+      "score": 0.56077486
+    },
+    {
+      "id": "C3019800554",
+      "display_name": "Open label",
+      "level": 3,
+      "score": 0.5041765
+    },
+    {
+      "id": "C2994330797",
+      "display_name": "Respiratory illness",
+      "level": 3,
+      "score": 0.49522343
+    },
+    {
+      "id": "C89623803",
+      "display_name": "Pandemic",
+      "level": 5,
+      "score": 0.48985
+    },
+    {
+      "id": "C2992435398",
+      "display_name": "Multicenter study",
+      "level": 3,
+      "score": 0.44731128
+    },
+    {
+      "id": "C534529494",
+      "display_name": "Respiratory system",
+      "level": 2,
+      "score": 0.43603826
+    },
+    {
+      "id": "C177713679",
+      "display_name": "Intensive care medicine",
+      "level": 1,
+      "score": 0.43264058
+    },
+    {
+      "id": "C2778137277",
+      "display_name": "Betacoronavirus",
+      "level": 5,
+      "score": 0.42726207
+    },
+    {
+      "id": "C159047783",
+      "display_name": "Virology",
+      "level": 1,
+      "score": 0.36991417
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.2754134
+    },
+    {
+      "id": "C524204448",
+      "display_name": "Infectious disease (medical specialty)",
+      "level": 3,
+      "score": 0.109978676
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.09568003
+    },
+    {
+      "id": "C116675565",
+      "display_name": "Outbreak",
+      "level": 2,
+      "score": 0.08099502
+    },
+    {
+      "id": "C2779134260",
+      "display_name": "Disease",
+      "level": 2,
+      "score": 0.07942915
+    },
+    {
+      "id": "C204787440",
+      "display_name": "Alternative medicine",
+      "level": 2,
+      "score": 0.07910937
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10041",
+      "display_name": "COVID-19 Clinical Research Studies",
+      "score": 0.9994
+    },
+    {
+      "id": "T10118",
+      "display_name": "SARS-CoV-2 and COVID-19 Research",
+      "score": 0.9965
+    },
+    {
+      "id": "T11368",
+      "display_name": "Long-Term Effects of COVID-19",
+      "score": 0.9924
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.21203/rs.3.rs-268937/v1",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:12:48.316034",
+  "source_database": "OpenAlex"
+}

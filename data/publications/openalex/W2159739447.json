@@ -1,0 +1,518 @@
+{
+  "openalex_id": "W2159739447",
+  "doi": "https://doi.org/10.1093/bioinformatics/btv341",
+  "title": "JSBML 1.0: providing a smorgasbord of options to encode systems biology models",
+  "abstract": "JSBML, the official pure Java programming library for the Systems Biology Markup Language (SBML) format, has evolved with the advent of different modeling formalisms in systems biology and their ability to be exchanged and represented via extensions of SBML. JSBML has matured into a major, active open-source project with contributions from a growing, international team of developers who not only maintain compatibility with SBML, but also drive steady improvements to the Java interface and promote ease-of-use with end users. Source code, binaries and documentation for JSBML can be freely obtained under the terms of the LGPL 2.1 from the website http://sbml.org/Software/JSBML. More information about JSBML can be found in the user guide at http://sbml.org/Software/JSBML/docs/. jsbml-development@googlegroups.com or andraeger@eng.ucsd.edu Supplementary data are available at Bioinformatics online.",
+  "authors": [
+    {
+      "display_name": "Nicolás Rodríguez",
+      "id": "A5002460040",
+      "orcid": "https://orcid.org/0000-0002-9290-7894",
+      "institutions": [
+        {
+          "id": "I1302113299",
+          "display_name": "Babraham Institute",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I1303153112",
+          "display_name": "European Bioinformatics Institute",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Nicolas Rodriguez"
+    },
+    {
+      "display_name": "Alex Thomas",
+      "id": "A5101657086",
+      "orcid": "https://orcid.org/0000-0002-8868-750X",
+      "institutions": [
+        {
+          "id": "I4210106615",
+          "display_name": "Novo Nordisk (United States)",
+          "country_code": "US",
+          "type": "company"
+        },
+        {
+          "id": "I36258959",
+          "display_name": "University of California, San Diego",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2802640032",
+          "display_name": "Foundation Center",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Alex Thomas"
+    },
+    {
+      "display_name": "Leandro Watanabe",
+      "id": "A5109380610",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I223532165",
+          "display_name": "University of Utah",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Leandro Watanabe"
+    },
+    {
+      "display_name": "Ibrahim Vazirabad",
+      "id": "A5014819534",
+      "orcid": "https://orcid.org/0009-0003-0443-3663",
+      "institutions": [
+        {
+          "id": "I102461120",
+          "display_name": "Marquette University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ibrahim Y. Vazirabad"
+    },
+    {
+      "display_name": "Victor Kofia",
+      "id": "A5070570781",
+      "orcid": "https://orcid.org/0000-0001-5849-7337",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Victor Kofia"
+    },
+    {
+      "display_name": "Harold Gómez",
+      "id": "A5107919027",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I111088046",
+          "display_name": "Boston University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Harold F. Gómez"
+    },
+    {
+      "display_name": "Florian Mittag",
+      "id": "A5041910971",
+      "orcid": "https://orcid.org/0000-0002-6472-0221",
+      "institutions": [
+        {
+          "id": "I1303153112",
+          "display_name": "European Bioinformatics Institute",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Florian Mittag"
+    },
+    {
+      "display_name": "Jakob Matthes",
+      "id": "A5108716239",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jakob Matthes"
+    },
+    {
+      "display_name": "Jan Daniel Rudolph",
+      "id": "A5034035915",
+      "orcid": "https://orcid.org/0000-0003-4196-057X",
+      "institutions": [
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I16391192",
+          "display_name": "Tel Aviv University",
+          "country_code": "IL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jan Rudolph"
+    },
+    {
+      "display_name": "Finja Wrzodek",
+      "id": "A5080292313",
+      "orcid": "https://orcid.org/0000-0001-5031-1016",
+      "institutions": [
+        {
+          "id": "I1303153112",
+          "display_name": "European Bioinformatics Institute",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Finja Wrzodek"
+    },
+    {
+      "display_name": "Eugen Netz",
+      "id": "A5069825969",
+      "orcid": "https://orcid.org/0000-0003-2442-7538",
+      "institutions": [
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eugen Netz"
+    },
+    {
+      "display_name": "Alexander Diamantikos",
+      "id": "A5015634300",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexander Diamantikos"
+    },
+    {
+      "display_name": "Johannes Eichner",
+      "id": "A5108094949",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Johannes Eichner"
+    },
+    {
+      "display_name": "Roland Keller",
+      "id": "A5111558148",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Roland Keller"
+    },
+    {
+      "display_name": "Clemens Wrzodek",
+      "id": "A5083106620",
+      "orcid": "https://orcid.org/0000-0003-4995-780X",
+      "institutions": [
+        {
+          "id": "I4210094361",
+          "display_name": "Roche Pharma AG (Germany)",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Clemens Wrzodek"
+    },
+    {
+      "display_name": "Sebastian Fröhlich",
+      "id": "A5057162396",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127902",
+          "display_name": "Leibniz Institute of Plant Genetics and Crop Plant Research",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I68956291",
+          "display_name": "Martin Luther University Halle-Wittenberg",
+          "country_code": "DE",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sebastian Fröhlich"
+    },
+    {
+      "display_name": "Nathan E. Lewis",
+      "id": "A5074538839",
+      "orcid": "https://orcid.org/0000-0001-7700-3654",
+      "institutions": [
+        {
+          "id": "I36258959",
+          "display_name": "University of California, San Diego",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2802640032",
+          "display_name": "Foundation Center",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210106615",
+          "display_name": "Novo Nordisk (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nathan E. Lewis"
+    },
+    {
+      "display_name": "Chris J. Myers",
+      "id": "A5111386695",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I223532165",
+          "display_name": "University of Utah",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chris J. Myers"
+    },
+    {
+      "display_name": "Nicolas Le Novère",
+      "id": "A5112438594",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1303153112",
+          "display_name": "European Bioinformatics Institute",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I1302113299",
+          "display_name": "Babraham Institute",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicolas Le Novère"
+    },
+    {
+      "display_name": "Bernhard Ø. Palsson",
+      "id": "A5051097609",
+      "orcid": "https://orcid.org/0000-0003-2357-6785",
+      "institutions": [
+        {
+          "id": "I4210106615",
+          "display_name": "Novo Nordisk (United States)",
+          "country_code": "US",
+          "type": "company"
+        },
+        {
+          "id": "I36258959",
+          "display_name": "University of California, San Diego",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2802640032",
+          "display_name": "Foundation Center",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bernhard Ø. Palsson"
+    },
+    {
+      "display_name": "Michael Hucka",
+      "id": "A5016716446",
+      "orcid": "https://orcid.org/0000-0001-9105-5960",
+      "institutions": [
+        {
+          "id": "I122411786",
+          "display_name": "California Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Hucka"
+    },
+    {
+      "display_name": "Andreas Dräger",
+      "id": "A5065854572",
+      "orcid": "https://orcid.org/0000-0002-1240-5553",
+      "institutions": [
+        {
+          "id": "I36258959",
+          "display_name": "University of California, San Diego",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I8087733",
+          "display_name": "University of Tübingen",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Andreas Dräger"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-06-16",
+  "type": "article",
+  "cited_by_count": 40,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S52395412",
+    "display_name": "Bioinformatics",
+    "issn_l": "1367-4803",
+    "issn": [
+      "1367-4803",
+      "1367-4811"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311648"
+  },
+  "volume": "31",
+  "issue": "20",
+  "first_page": "3383",
+  "last_page": "3386",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://academic.oup.com/bioinformatics/article-pdf/31/20/3383/49036046/bioinformatics_31_20_3383.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C66746571",
+      "display_name": "ENCODE",
+      "level": 3,
+      "score": 0.80740404
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.58392596
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.5800477
+    },
+    {
+      "id": "C152662350",
+      "display_name": "Systems biology",
+      "level": 2,
+      "score": 0.47372642
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.4224118
+    },
+    {
+      "id": "C2522767166",
+      "display_name": "Data science",
+      "level": 1,
+      "score": 0.39027113
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.20006165
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.085856825
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10621",
+      "display_name": "Gene Regulatory Network Analysis",
+      "score": 0.9989
+    },
+    {
+      "id": "T10887",
+      "display_name": "Bioinformatics and Genomic Networks",
+      "score": 0.9978
+    },
+    {
+      "id": "T10932",
+      "display_name": "Microbial Metabolic Engineering and Bioproduction",
+      "score": 0.9975
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1093/bioinformatics/btv341",
+  "pdf_url": "https://academic.oup.com/bioinformatics/article-pdf/31/20/3383/49036046/bioinformatics_31_20_3383.pdf",
+  "retrieved_date": "2025-07-30T14:36:56.137204",
+  "source_database": "OpenAlex"
+}

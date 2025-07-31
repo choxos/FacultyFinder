@@ -1,0 +1,323 @@
+{
+  "openalex_id": "W4221032430",
+  "doi": "https://doi.org/10.1038/s41431-022-01083-0",
+  "title": "DNA methylation signature associated with Bohring-Opitz syndrome: a new tool for functional classification of variants in ASXL genes",
+  "abstract": "Abstract The additional sex combs-like (ASXL) gene family—encoded by ASXL1 , ASXL2 , and ASXL3 —is crucial for mammalian development. Pathogenic variants in the ASXL gene family are associated with three phenotypically distinct neurodevelopmental syndromes. Our previous work has shown that syndromic conditions caused by pathogenic variants in epigenetic regulatory genes show consistent patterns of genome-wide DNA methylation (DNAm) alterations, i.e., DNAm signatures in peripheral blood. Given the role of ASXL1 in chromatin modification, we hypothesized that pathogenic ASXL1 variants underlying Bohring-Opitz syndrome (BOS) have a unique DNAm signature. We profiled whole-blood DNAm for 17 ASXL1 variants, and 35 sex- and age-matched typically developing individuals, using Illumina’s Infinium EPIC array. We identified 763 differentially methylated CpG sites in individuals with BOS. Differentially methylated sites overlapped 323 unique genes, including HOXA5 and HOXB4 , supporting the functional relevance of DNAm signatures. We used a machine-learning classification model based on the BOS DNAm signature to classify variants of uncertain significance in ASXL1 , as well as pathogenic ASXL2 and ASXL3 variants. The DNAm profile of one individual with the ASXL2 variant was BOS-like, whereas the DNAm profiles of three individuals with ASXL3 variants were control-like. We also used Horvath’s epigenetic clock, which showed acceleration in DNAm age in individuals with pathogenic ASXL1 variants, and the individual with the pathogenic ASXL2 variant, but not in individuals with ASXL3 variants. These studies enhance our understanding of the epigenetic dysregulation underpinning ASXL gene family-associated syndromes.",
+  "authors": [
+    {
+      "display_name": "Zain Awamleh",
+      "id": "A5076311667",
+      "orcid": "https://orcid.org/0000-0003-3851-2389",
+      "institutions": [
+        {
+          "id": "I2801317318",
+          "display_name": "Hospital for Sick Children",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zain Awamleh"
+    },
+    {
+      "display_name": "Eric Chater‐Diehl",
+      "id": "A5027364127",
+      "orcid": "https://orcid.org/0000-0003-2587-5893",
+      "institutions": [
+        {
+          "id": "I2801317318",
+          "display_name": "Hospital for Sick Children",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eric Chater-Diehl"
+    },
+    {
+      "display_name": "Sanaa Choufani",
+      "id": "A5002180539",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2801317318",
+          "display_name": "Hospital for Sick Children",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sanaa Choufani"
+    },
+    {
+      "display_name": "Elizabeth Y. Wei",
+      "id": "A5103176342",
+      "orcid": "https://orcid.org/0009-0009-7439-6654",
+      "institutions": [
+        {
+          "id": "I2801317318",
+          "display_name": "Hospital for Sick Children",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elizabeth Wei"
+    },
+    {
+      "display_name": "Rebecca R. Kianmahd",
+      "id": "A5064780974",
+      "orcid": "https://orcid.org/0000-0003-0555-8313",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rebecca R. Kianmahd"
+    },
+    {
+      "display_name": "Anna Yu",
+      "id": "A5076531458",
+      "orcid": "https://orcid.org/0009-0004-3197-581X",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anna Yu"
+    },
+    {
+      "display_name": "Lauren Chad",
+      "id": "A5000944814",
+      "orcid": "https://orcid.org/0000-0003-0468-6663",
+      "institutions": [
+        {
+          "id": "I2801317318",
+          "display_name": "Hospital for Sick Children",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lauren Chad"
+    },
+    {
+      "display_name": "Gregory Costain",
+      "id": "A5050099013",
+      "orcid": "https://orcid.org/0000-0003-0099-9945",
+      "institutions": [
+        {
+          "id": "I2801317318",
+          "display_name": "Hospital for Sick Children",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gregory Costain"
+    },
+    {
+      "display_name": "Wen‐Hann Tan",
+      "id": "A5055629414",
+      "orcid": "https://orcid.org/0000-0002-1593-6149",
+      "institutions": [
+        {
+          "id": "I1288882113",
+          "display_name": "Boston Children's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wen-Hann Tan"
+    },
+    {
+      "display_name": "Stephen W. Scherer",
+      "id": "A5049296994",
+      "orcid": "https://orcid.org/0000-0002-8326-1999",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephen W. Scherer"
+    },
+    {
+      "display_name": "Valerie A. Arboleda",
+      "id": "A5079692842",
+      "orcid": "https://orcid.org/0000-0002-9687-9122",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Valerie A. Arboleda"
+    },
+    {
+      "display_name": "Bianca Russell",
+      "id": "A5030858748",
+      "orcid": "https://orcid.org/0000-0003-3934-9800",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bianca E. Russell"
+    },
+    {
+      "display_name": "Rosanna Weksberg",
+      "id": "A5036444068",
+      "orcid": "https://orcid.org/0000-0002-6501-4150",
+      "institutions": [
+        {
+          "id": "I2801317318",
+          "display_name": "Hospital for Sick Children",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rosanna Weksberg"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-04-01",
+  "type": "article",
+  "cited_by_count": 23,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S121703463",
+    "display_name": "European Journal of Human Genetics",
+    "issn_l": "1018-4813",
+    "issn": [
+      "1018-4813",
+      "1476-5438"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319965"
+  },
+  "volume": "30",
+  "issue": "6",
+  "first_page": "695",
+  "last_page": "702",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://www.nature.com/articles/s41431-022-01083-0.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2775921022",
+      "display_name": "dNaM",
+      "level": 5,
+      "score": 0.9646971
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.7932134
+    },
+    {
+      "id": "C41091548",
+      "display_name": "Epigenetics",
+      "level": 3,
+      "score": 0.7684771
+    },
+    {
+      "id": "C190727270",
+      "display_name": "DNA methylation",
+      "level": 4,
+      "score": 0.74553376
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.69190794
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.61645454
+    },
+    {
+      "id": "C33288867",
+      "display_name": "Methylation",
+      "level": 3,
+      "score": 0.46962312
+    },
+    {
+      "id": "C140173407",
+      "display_name": "CpG site",
+      "level": 5,
+      "score": 0.46878138
+    },
+    {
+      "id": "C141231307",
+      "display_name": "Genome",
+      "level": 3,
+      "score": 0.4514786
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.3868944
+    },
+    {
+      "id": "C150194340",
+      "display_name": "Gene expression",
+      "level": 3,
+      "score": 0.17371404
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10269",
+      "display_name": "Epigenetics and DNA Methylation",
+      "score": 0.9997
+    },
+    {
+      "id": "T11642",
+      "display_name": "Genomics and Rare Diseases",
+      "score": 0.996
+    },
+    {
+      "id": "T11928",
+      "display_name": "Genetic Syndromes and Imprinting",
+      "score": 0.9943
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1038/s41431-022-01083-0",
+  "pdf_url": "https://www.nature.com/articles/s41431-022-01083-0.pdf",
+  "retrieved_date": "2025-07-30T15:33:18.591477",
+  "source_database": "OpenAlex"
+}

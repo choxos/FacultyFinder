@@ -1,0 +1,317 @@
+{
+  "pmid": "38749656",
+  "uid": "38749656",
+  "title": "A harmonized public resource of deeply sequenced diverse human genomes.",
+  "abstract": "Underrepresented populations are often excluded from genomic studies owing in part to a lack of resources supporting their analyses. The 1000 Genomes Project (1kGP) and Human Genome Diversity Project (HGDP), which have recently been sequenced to high coverage, are valuable genomic resources because of the global diversity they capture and their open data sharing policies. Here, we harmonized a high-quality set of 4094 whole genomes from 80 populations in the HGDP and 1kGP with data from the Genome Aggregation Database (gnomAD) and identified over 153 million high-quality SNVs, indels, and SVs. We performed a detailed ancestry analysis of this cohort, characterizing population structure and patterns of admixture across populations, analyzing site frequency spectra, and measuring variant counts at global and subcontinental levels. We also show substantial added value from this data set compared with the prior versions of the component resources, typically combined via liftOver and variant intersection; for example, we catalog millions of new genetic variants, mostly rare, compared with previous releases. In addition to unrestricted individual-level public release, we provide detailed tutorials for conducting many of the most common quality-control steps and analyses with these data in a scalable cloud-computing environment and publicly release this new phased joint callset for use as a haplotype resource in phasing and imputation pipelines. This jointly called reference panel will serve as a key resource to support research of diverse ancestry populations.",
+  "authors": [
+    {
+      "last_name": "Koenig",
+      "fore_name": "Zan",
+      "initials": "Z",
+      "name": "Zan Koenig",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Yohannes",
+      "fore_name": "Mary T",
+      "initials": "MT",
+      "name": "Mary T Yohannes",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Nkambule",
+      "fore_name": "Lethukuthula L",
+      "initials": "LL",
+      "name": "Lethukuthula L Nkambule",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Zhao",
+      "fore_name": "Xuefang",
+      "initials": "X",
+      "name": "Xuefang Zhao",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Department of Neurology, Massachusetts General Hospital and Harvard Medical School, Boston, Massachusetts 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Goodrich",
+      "fore_name": "Julia K",
+      "initials": "JK",
+      "name": "Julia K Goodrich",
+      "affiliations": [
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA."
+      ]
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Heesu Ally",
+      "initials": "HA",
+      "name": "Heesu Ally Kim",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael W",
+      "initials": "MW",
+      "name": "Michael W Wilson",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA."
+      ]
+    },
+    {
+      "last_name": "Tiao",
+      "fore_name": "Grace",
+      "initials": "G",
+      "name": "Grace Tiao",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA."
+      ]
+    },
+    {
+      "last_name": "Hao",
+      "fore_name": "Stephanie P",
+      "initials": "SP",
+      "name": "Stephanie P Hao",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Department of Neurology, Massachusetts General Hospital and Harvard Medical School, Boston, Massachusetts 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Sahakian",
+      "fore_name": "Nareh",
+      "initials": "N",
+      "name": "Nareh Sahakian",
+      "affiliations": [
+        "Broad Genomics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts, 02141, USA."
+      ]
+    },
+    {
+      "last_name": "Chao",
+      "fore_name": "Katherine R",
+      "initials": "KR",
+      "name": "Katherine R Chao",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA."
+      ],
+      "orcid": "0000-0003-2897-2410"
+    },
+    {
+      "last_name": "Walker",
+      "fore_name": "Mark A",
+      "initials": "MA",
+      "name": "Mark A Walker",
+      "affiliations": [
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Data Sciences Platform, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA."
+      ]
+    },
+    {
+      "last_name": "Lyu",
+      "fore_name": "Yunfei",
+      "initials": "Y",
+      "name": "Yunfei Lyu",
+      "affiliations": [
+        "Department of Biostatistics, Harvard T.H. Chan School of Public Health, Boston, Massachusetts 02115, USA."
+      ]
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "last_name": "Rehm",
+      "fore_name": "Heidi L",
+      "initials": "HL",
+      "name": "Heidi L Rehm",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, Massachusetts 02114, USA."
+      ],
+      "orcid": "0000-0002-6025-0015"
+    },
+    {
+      "last_name": "Neale",
+      "fore_name": "Benjamin M",
+      "initials": "BM",
+      "name": "Benjamin M Neale",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Novo Nordisk Foundation Center for Genomic Mechanisms of Disease, Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA."
+      ],
+      "orcid": "0000-0003-1513-6077"
+    },
+    {
+      "last_name": "Talkowski",
+      "fore_name": "Michael E",
+      "initials": "ME",
+      "name": "Michael E Talkowski",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Department of Neurology, Massachusetts General Hospital and Harvard Medical School, Boston, Massachusetts 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Daly",
+      "fore_name": "Mark J",
+      "initials": "MJ",
+      "name": "Mark J Daly",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Department of Medicine, Harvard Medical School, Boston, Massachusetts 02115, USA.",
+        "Institute for Molecular Medicine Finland, 00290 Helsinki, Finland."
+      ],
+      "orcid": "0000-0002-0949-8752"
+    },
+    {
+      "last_name": "Brand",
+      "fore_name": "Harrison",
+      "initials": "H",
+      "name": "Harrison Brand",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Department of Neurology, Massachusetts General Hospital and Harvard Medical School, Boston, Massachusetts 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Karczewski",
+      "fore_name": "Konrad J",
+      "initials": "KJ",
+      "name": "Konrad J Karczewski",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Novo Nordisk Foundation Center for Genomic Mechanisms of Disease, Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA."
+      ]
+    },
+    {
+      "last_name": "Atkinson",
+      "fore_name": "Elizabeth G",
+      "initials": "EG",
+      "name": "Elizabeth G Atkinson",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Department of Molecular and Human Genetics, Baylor College of Medicine, Houston, Texas 77030, USA."
+      ],
+      "orcid": "0000-0002-6308-776X"
+    },
+    {
+      "last_name": "Martin",
+      "fore_name": "Alicia R",
+      "initials": "AR",
+      "name": "Alicia R Martin",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA; armartin@broadinstitute.org.",
+        "Analytic and Translational Genetics Unit, Massachusetts General Hospital, Boston, Massachusetts 02114, USA.",
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, Massachusetts 02142, USA.",
+        "Center for Genomic Medicine, Massachusetts General Hospital, Boston, Massachusetts 02114, USA."
+      ],
+      "orcid": "0000-0003-0241-3522"
+    }
+  ],
+  "journal": {
+    "title": "Genome research",
+    "iso_abbreviation": "Genome Res",
+    "issn": "1549-5469",
+    "issn_type": "Electronic",
+    "volume": "34",
+    "issue": "5",
+    "pub_year": "2024",
+    "pub_month": "Jun",
+    "pub_day": "25"
+  },
+  "start_page": "796",
+  "end_page": "809",
+  "pages": "796-809",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Genome, Human",
+    "Databases, Genetic",
+    "Human Genome Project",
+    "High-Throughput Nucleotide Sequencing",
+    "Genetic Variation",
+    "Genomics"
+  ],
+  "article_ids": {
+    "pubmed": "38749656",
+    "pmc": "PMC11216312",
+    "doi": "10.1101/gr.278378.123",
+    "pii": "gr.278378.123",
+    "medline": "9509184"
+  },
+  "doi": "10.1101/gr.278378.123",
+  "pmc_id": "PMC11216312",
+  "dates": {
+    "completed": "2024-06-25",
+    "revised": "2024-11-02"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 MH115957",
+      "agency": "NIMH NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R37 MH107649",
+      "agency": "NIMH NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HG012869",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K01 MH121659",
+      "agency": "NIMH NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 DE031261",
+      "agency": "NIDCR NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R00 MH117229",
+      "agency": "NIMH NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.861024",
+    "pmid": "38749656"
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "openalex_id": "W2900119248",
+  "doi": "https://doi.org/10.1093/neuonc/noy148.1120",
+  "title": "TMOD-07. LOCALIZATION OF ERLOTONIB RELATIVE TO MRI-BASED TUMOR EXTENT IN PDX GLIOBLASTOMA MODEL: TOWARDS A MATHEMATICAL MODEL FOR THE INTERFACE BETWEEN MRI AND DRUG DISTRIBUTION",
+  "abstract": "Clinical neuro-oncology relies on the hyperintensity of gadolinium (Gd) contrast agent on magnetic resonance imaging (MRI) in tumor regions to confirm that the blood-brain barrier (BBB) is locally compromised. While the extent of Gd hyperintensity may indicate that systemically administered drug is being distributed to the tumor regions, little is known about how a drug is distributed and how it may relate to the Gd hyperintensity. Additionally, glioblastomas (GBMs) are diffusely invading neoplasms with a significant fraction of the overall tumor cells spread peripheral to the Gd abnormality, which raises uncertainty as to how or if the rest of the diffuse tumor is affected by drug. Given the gap in understanding drug delivery to the brain, we propose a quantitative approach to model drug delivery in GBM based on MRI and matrix-assisted laser desorption/ionization mass spectroscopy imaging (MALDI). T2-weighted (T2) and T1-weighted with Gd contrast (T1Gd) MRI images were acquired for an animal with the GBM12 orthotopic GBM patient derived xenograft (PDX) line dosed with 100mg/kg erlotinib. A T1Gd region of interest (ROI) captured the Gd-associated hyperintensity. MALDI was performed and aligned with MRI images. A Drug ROI was created to represent the increased intensity of erlotinib on MALDI images. Since the Drug ROI encompassed the T1Gd ROI, we subtracted the two ROIs to create a ‘Drug No T1Gd’ ROI, which represented the drug region beyond the edge of the T1Gd ROI. A ‘Brain ROI’ was created to represent the region of the brain outside of the drug’s spread. The MALDI intensities for the three ROIs were all significantly different (p<0.05), with the T1Gd ROI having the highest mean, followed by the Drug No T1Gd and the Brain ROIs. By developing a quantitative understanding of drug distribution, we can make more robust predictions regarding treatment efficacy in the clinical setting.",
+  "authors": [
+    {
+      "display_name": "Pamela Jackson",
+      "id": "A5087584073",
+      "orcid": "https://orcid.org/0000-0002-8424-4007",
+      "institutions": [
+        {
+          "id": "I4210146710",
+          "display_name": "Mayo Clinic in Florida",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pamela Jackson"
+    },
+    {
+      "display_name": "Sara Ranjbar",
+      "id": "A5078763626",
+      "orcid": "https://orcid.org/0000-0002-4344-1282",
+      "institutions": [
+        {
+          "id": "I4210146710",
+          "display_name": "Mayo Clinic in Florida",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sara Ranjbar"
+    },
+    {
+      "display_name": "Elizabeth C. Randall",
+      "id": "A5012857071",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elizabeth Randall"
+    },
+    {
+      "display_name": "Michael S. Regan",
+      "id": "A5075621139",
+      "orcid": "https://orcid.org/0000-0001-5252-2829",
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Regan"
+    },
+    {
+      "display_name": "Walid M. Abdelmoula",
+      "id": "A5077410286",
+      "orcid": "https://orcid.org/0000-0003-3117-7389",
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Walid Abdelmoula"
+    },
+    {
+      "display_name": "Begoña Giménez",
+      "id": "A5064675930",
+      "orcid": "https://orcid.org/0000-0002-9553-6291",
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Begona Lopez"
+    },
+    {
+      "display_name": "Susan Christine Massey",
+      "id": "A5016994967",
+      "orcid": "https://orcid.org/0000-0002-4680-7796",
+      "institutions": [
+        {
+          "id": "I4210146710",
+          "display_name": "Mayo Clinic in Florida",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Susan Christine Massey"
+    },
+    {
+      "display_name": "Leland Hu",
+      "id": "A5058133357",
+      "orcid": "https://orcid.org/0000-0001-9282-7619",
+      "institutions": [
+        {
+          "id": "I4210127938",
+          "display_name": "Mayo Clinic Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Leland Hu"
+    },
+    {
+      "display_name": "Lihong He",
+      "id": "A5026242985",
+      "orcid": "https://orcid.org/0000-0002-2694-2974",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lihong He"
+    },
+    {
+      "display_name": "Slobodan Macura",
+      "id": "A5043681590",
+      "orcid": "https://orcid.org/0000-0002-6054-5163",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Slobodan Macura"
+    },
+    {
+      "display_name": "Jeffrey N. Agar",
+      "id": "A5052079094",
+      "orcid": "https://orcid.org/0000-0003-2645-1873",
+      "institutions": [
+        {
+          "id": "I12912129",
+          "display_name": "Northeastern University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeffrey Agar"
+    },
+    {
+      "display_name": "Jann N. Sarkaria",
+      "id": "A5015247761",
+      "orcid": "https://orcid.org/0000-0001-7489-4885",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jann Sarkaria"
+    },
+    {
+      "display_name": "Nathalie Y.R. Agar",
+      "id": "A5046979141",
+      "orcid": "https://orcid.org/0000-0003-3149-3146",
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nathalie Agar"
+    },
+    {
+      "display_name": "Kristin R. Swanson",
+      "id": "A5014011778",
+      "orcid": "https://orcid.org/0000-0002-2464-6119",
+      "institutions": [
+        {
+          "id": "I4210146710",
+          "display_name": "Mayo Clinic in Florida",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kristin Swanson"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-11-01",
+  "type": "article",
+  "cited_by_count": 1,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S106908163",
+    "display_name": "Neuro-Oncology",
+    "issn_l": "1522-8517",
+    "issn": [
+      "1522-8517",
+      "1523-5866"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311648"
+  },
+  "volume": "20",
+  "issue": "suppl_6",
+  "first_page": "vi269",
+  "last_page": "vi270",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://academic.oup.com/neuro-oncology/article-pdf/20/suppl_6/vi269/26281955/noy148.1120.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C146638467",
+      "display_name": "Hyperintensity",
+      "level": 3,
+      "score": 0.71385705
+    },
+    {
+      "id": "C143409427",
+      "display_name": "Magnetic resonance imaging",
+      "level": 2,
+      "score": 0.6956618
+    },
+    {
+      "id": "C19609008",
+      "display_name": "Region of interest",
+      "level": 2,
+      "score": 0.6850055
+    },
+    {
+      "id": "C2778087573",
+      "display_name": "Erlotinib",
+      "level": 4,
+      "score": 0.6057032
+    },
+    {
+      "id": "C557651011",
+      "display_name": "Gadolinium",
+      "level": 2,
+      "score": 0.5420289
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.44060206
+    },
+    {
+      "id": "C101070640",
+      "display_name": "Fluid-attenuated inversion recovery",
+      "level": 3,
+      "score": 0.43439007
+    },
+    {
+      "id": "C103191249",
+      "display_name": "In vivo magnetic resonance spectroscopy",
+      "level": 3,
+      "score": 0.43154278
+    },
+    {
+      "id": "C2778978742",
+      "display_name": "MRI contrast agent",
+      "level": 3,
+      "score": 0.42992225
+    },
+    {
+      "id": "C2989005",
+      "display_name": "Nuclear medicine",
+      "level": 1,
+      "score": 0.39365405
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.33923993
+    },
+    {
+      "id": "C126838900",
+      "display_name": "Radiology",
+      "level": 1,
+      "score": 0.24848148
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.24027896
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.146559
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.12308502
+    },
+    {
+      "id": "C2779438470",
+      "display_name": "Epidermal growth factor receptor",
+      "level": 3,
+      "score": 0.07494876
+    },
+    {
+      "id": "C178790620",
+      "display_name": "Organic chemistry",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10522",
+      "display_name": "Medical Imaging Techniques and Applications",
+      "score": 0.9851
+    },
+    {
+      "id": "T11885",
+      "display_name": "MRI in cancer diagnosis",
+      "score": 0.9768
+    },
+    {
+      "id": "T11279",
+      "display_name": "Lanthanide and Transition Metal Complexes",
+      "score": 0.9701
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1093/neuonc/noy148.1120",
+  "pdf_url": "https://academic.oup.com/neuro-oncology/article-pdf/20/suppl_6/vi269/26281955/noy148.1120.pdf",
+  "retrieved_date": "2025-07-30T14:43:48.910377",
+  "source_database": "OpenAlex"
+}

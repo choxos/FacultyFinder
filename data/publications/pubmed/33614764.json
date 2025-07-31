@@ -1,0 +1,148 @@
+{
+  "pmid": "33614764",
+  "uid": "33614764",
+  "title": "Detection of Mycobacterium avium ssp. paratuberculosis in Cultures From Fecal and Tissue Samples Using VOC Analysis and Machine Learning Tools.",
+  "abstract": "Analysis of volatile organic compounds (VOCs) is a novel approach to accelerate bacterial culture diagnostics of Mycobacterium avium subsp. paratuberculosis (MAP). In the present study, cultures of fecal and tissue samples from MAP-infected and non-suspect dairy cattle and goats were explored to elucidate the effects of sample matrix and of animal species on VOC emissions during bacterial cultivation and to identify early markers for bacterial growth. The samples were processed following standard laboratory procedures, culture tubes were incubated for different time periods. Headspace volume of the tubes was sampled by needle trap-micro-extraction, and analyzed by gas chromatography-mass spectrometry. Analysis of MAP-specific VOC emissions considered potential characteristic VOC patterns. To address variation of the patterns, a flexible and robust machine learning workflow was set up, based on random forest classifiers, and comprising three steps: variable selection, parameter optimization, and classification. Only a few substances originated either from a certain matrix or could be assigned to one animal species. These additional emissions were not considered informative by the variable selection procedure. Classification accuracy of MAP-positive and negative cultures of bovine feces was 0.98 and of caprine feces 0.88, respectively. Six compounds indicating MAP presence were selected in all four settings (cattle vs. goat, feces vs. tissue): 2-Methyl-1-propanol, 2-methyl-1-butanol, 3-methyl-1-butanol, heptanal, isoprene, and 2-heptanone. Classification accuracies for MAP growth-scores ranged from 0.82 for goat tissue to 0.89 for cattle feces. Misclassification occurred predominantly between related scores. Seventeen compounds indicating MAP growth were selected in all four settings, including the 6 compounds indicating MAP presence. The concentration levels of 2,3,5-trimethylfuran, 2-pentylfuran, 1-propanol, and 1-hexanol were indicative for MAP cultures before visible growth was apparent. Thus, very accurate classification of the VOC samples was achieved and the potential of VOC analysis to detect bacterial growth before colonies become visible was confirmed. These results indicate that diagnosis of paratuberculosis can be optimized by monitoring VOC emissions of bacterial cultures. Further validation studies are needed to increase the robustness of indicative VOC patterns for early MAP growth as a pre-requisite for the development of VOC-based diagnostic analysis systems.",
+  "authors": [
+    {
+      "last_name": "Vitense",
+      "fore_name": "Philipp",
+      "initials": "P",
+      "name": "Philipp Vitense",
+      "affiliations": [
+        "Institute of Mathematics and Computer Science, University of Greifswald, Greifswald, Germany."
+      ]
+    },
+    {
+      "last_name": "Kasbohm",
+      "fore_name": "Elisa",
+      "initials": "E",
+      "name": "Elisa Kasbohm",
+      "affiliations": [
+        "Institute of Mathematics and Computer Science, University of Greifswald, Greifswald, Germany."
+      ]
+    },
+    {
+      "last_name": "Klassen",
+      "fore_name": "Anne",
+      "initials": "A",
+      "name": "Anne Klassen",
+      "affiliations": [
+        "Institute of Molecular Pathogenesis, Friedrich-Loeffler-Institut, Jena, Germany."
+      ]
+    },
+    {
+      "last_name": "Gierschner",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Gierschner",
+      "affiliations": [
+        "Department of Anaesthesia and Intensive Care, University Medicine Rostock, Rostock, Germany."
+      ]
+    },
+    {
+      "last_name": "Trefz",
+      "fore_name": "Phillip",
+      "initials": "P",
+      "name": "Phillip Trefz",
+      "affiliations": [
+        "Department of Anaesthesia and Intensive Care, University Medicine Rostock, Rostock, Germany."
+      ]
+    },
+    {
+      "last_name": "Weber",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Weber",
+      "affiliations": [
+        "Institute of Molecular Pathogenesis, Friedrich-Loeffler-Institut, Jena, Germany."
+      ]
+    },
+    {
+      "last_name": "Miekisch",
+      "fore_name": "Wolfram",
+      "initials": "W",
+      "name": "Wolfram Miekisch",
+      "affiliations": [
+        "Department of Anaesthesia and Intensive Care, University Medicine Rostock, Rostock, Germany."
+      ]
+    },
+    {
+      "last_name": "Schubert",
+      "fore_name": "Jochen K",
+      "initials": "JK",
+      "name": "Jochen K Schubert",
+      "affiliations": [
+        "Department of Anaesthesia and Intensive Care, University Medicine Rostock, Rostock, Germany."
+      ]
+    },
+    {
+      "last_name": "Möbius",
+      "fore_name": "Petra",
+      "initials": "P",
+      "name": "Petra Möbius",
+      "affiliations": [
+        "National Reference Laboratory for Paratuberculosis, Institute of Molecular Pathogenesis, Friedrich-Loeffler-Institut, Jena, Germany."
+      ]
+    },
+    {
+      "last_name": "Reinhold",
+      "fore_name": "Petra",
+      "initials": "P",
+      "name": "Petra Reinhold",
+      "affiliations": [
+        "Institute of Molecular Pathogenesis, Friedrich-Loeffler-Institut, Jena, Germany."
+      ]
+    },
+    {
+      "last_name": "Liebscher",
+      "fore_name": "Volkmar",
+      "initials": "V",
+      "name": "Volkmar Liebscher",
+      "affiliations": [
+        "Institute of Mathematics and Computer Science, University of Greifswald, Greifswald, Germany."
+      ]
+    },
+    {
+      "last_name": "Köhler",
+      "fore_name": "Heike",
+      "initials": "H",
+      "name": "Heike Köhler",
+      "affiliations": [
+        "National Reference Laboratory for Paratuberculosis, Institute of Molecular Pathogenesis, Friedrich-Loeffler-Institut, Jena, Germany."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Frontiers in veterinary science",
+    "iso_abbreviation": "Front Vet Sci",
+    "issn": "2297-1769",
+    "issn_type": "Print",
+    "volume": "8",
+    "pub_year": "2021"
+  },
+  "start_page": "620327",
+  "pages": "620327",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "33614764",
+    "pmc": "PMC7887282",
+    "doi": "10.3389/fvets.2021.620327"
+  },
+  "doi": "10.3389/fvets.2021.620327",
+  "pmc_id": "PMC7887282",
+  "dates": {
+    "revised": "2021-02-23"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:33:22.448774",
+    "pmid": "33614764"
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "openalex_id": "W2617669016",
+  "doi": "https://doi.org/10.3348/kjr.2017.18.4.570",
+  "title": "Deep Learning in Medical Imaging: General Overview",
+  "abstract": "The artificial neural network (ANN)-a machine learning technique inspired by the human neuronal synapse system-was introduced in the 1950s.However, the ANN was previously limited in its ability to solve actual problems, due to the vanishing gradient and overfitting problems with training of deep architecture, lack of computing power, and primarily the absence of sufficient data to train the computer system.Interest in this concept has lately resurfaced, due to the availability of big data, enhanced computing power with the current graphics processing units, and novel algorithms to train the deep neural network.Recent studies on this technology suggest its potentially to perform better than humans in some visual and auditory recognition tasks, which may portend its applications in medicine and healthcare, especially in medical imaging, in the foreseeable future.This review article offers perspectives on the history, development, and applications of deep learning technology, particularly regarding its applications in medical imaging.",
+  "authors": [
+    {
+      "display_name": "June‐Goo Lee",
+      "id": "A5017984400",
+      "orcid": "https://orcid.org/0000-0002-1380-6682",
+      "institutions": [
+        {
+          "id": "I40542001",
+          "display_name": "University of Ulsan",
+          "country_code": "KR",
+          "type": "funder"
+        },
+        {
+          "id": "I2801680663",
+          "display_name": "Asan Medical Center",
+          "country_code": "KR",
+          "type": "healthcare"
+        },
+        {
+          "id": "I116631150",
+          "display_name": "Ulsan College",
+          "country_code": "KR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "June-Goo Lee"
+    },
+    {
+      "display_name": "Sanghoon Jun",
+      "id": "A5066524393",
+      "orcid": "https://orcid.org/0000-0002-5971-8282",
+      "institutions": [
+        {
+          "id": "I40542001",
+          "display_name": "University of Ulsan",
+          "country_code": "KR",
+          "type": "funder"
+        },
+        {
+          "id": "I2801680663",
+          "display_name": "Asan Medical Center",
+          "country_code": "KR",
+          "type": "healthcare"
+        },
+        {
+          "id": "I116631150",
+          "display_name": "Ulsan College",
+          "country_code": "KR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sanghoon Jun"
+    },
+    {
+      "display_name": "Young-Won Cho",
+      "id": "A5053692200",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40542001",
+          "display_name": "University of Ulsan",
+          "country_code": "KR",
+          "type": "funder"
+        },
+        {
+          "id": "I2801680663",
+          "display_name": "Asan Medical Center",
+          "country_code": "KR",
+          "type": "healthcare"
+        },
+        {
+          "id": "I116631150",
+          "display_name": "Ulsan College",
+          "country_code": "KR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Young-Won Cho"
+    },
+    {
+      "display_name": "Hyunna Lee",
+      "id": "A5086297134",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40542001",
+          "display_name": "University of Ulsan",
+          "country_code": "KR",
+          "type": "funder"
+        },
+        {
+          "id": "I2801680663",
+          "display_name": "Asan Medical Center",
+          "country_code": "KR",
+          "type": "healthcare"
+        },
+        {
+          "id": "I116631150",
+          "display_name": "Ulsan College",
+          "country_code": "KR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hyunna Lee"
+    },
+    {
+      "display_name": "Guk Bae Kim",
+      "id": "A5053283505",
+      "orcid": "https://orcid.org/0000-0003-2022-379X",
+      "institutions": [
+        {
+          "id": "I116631150",
+          "display_name": "Ulsan College",
+          "country_code": "KR",
+          "type": "education"
+        },
+        {
+          "id": "I2801680663",
+          "display_name": "Asan Medical Center",
+          "country_code": "KR",
+          "type": "healthcare"
+        },
+        {
+          "id": "I40542001",
+          "display_name": "University of Ulsan",
+          "country_code": "KR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guk Bae Kim"
+    },
+    {
+      "display_name": "Joon Beom Seo",
+      "id": "A5006695326",
+      "orcid": "https://orcid.org/0000-0003-0271-7884",
+      "institutions": [
+        {
+          "id": "I116631150",
+          "display_name": "Ulsan College",
+          "country_code": "KR",
+          "type": "education"
+        },
+        {
+          "id": "I40542001",
+          "display_name": "University of Ulsan",
+          "country_code": "KR",
+          "type": "funder"
+        },
+        {
+          "id": "I2801680663",
+          "display_name": "Asan Medical Center",
+          "country_code": "KR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joon Beom Seo"
+    },
+    {
+      "display_name": "Namkug Kim",
+      "id": "A5004946653",
+      "orcid": "https://orcid.org/0000-0002-3438-2217",
+      "institutions": [
+        {
+          "id": "I40542001",
+          "display_name": "University of Ulsan",
+          "country_code": "KR",
+          "type": "funder"
+        },
+        {
+          "id": "I2801680663",
+          "display_name": "Asan Medical Center",
+          "country_code": "KR",
+          "type": "healthcare"
+        },
+        {
+          "id": "I116631150",
+          "display_name": "Ulsan College",
+          "country_code": "KR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Namkug Kim"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-01-01",
+  "type": "review",
+  "cited_by_count": 1158,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S75759149",
+    "display_name": "Korean Journal of Radiology",
+    "issn_l": "1229-6929",
+    "issn": [
+      "1229-6929",
+      "2005-8330"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319430"
+  },
+  "volume": "18",
+  "issue": "4",
+  "first_page": "570",
+  "last_page": "570",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://europepmc.org/articles/pmc5447633?pdf=render",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C22019652",
+      "display_name": "Overfitting",
+      "level": 3,
+      "score": 0.8828649
+    },
+    {
+      "id": "C108583219",
+      "display_name": "Deep learning",
+      "level": 2,
+      "score": 0.7860588
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.6637454
+    },
+    {
+      "id": "C50644808",
+      "display_name": "Artificial neural network",
+      "level": 2,
+      "score": 0.57689095
+    },
+    {
+      "id": "C31601959",
+      "display_name": "Medical imaging",
+      "level": 2,
+      "score": 0.51809114
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.49090344
+    },
+    {
+      "id": "C21442007",
+      "display_name": "Graphics",
+      "level": 2,
+      "score": 0.4531307
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.4496303
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.44088462
+    },
+    {
+      "id": "C77660652",
+      "display_name": "Computer graphics",
+      "level": 2,
+      "score": 0.4209292
+    },
+    {
+      "id": "C2522767166",
+      "display_name": "Data science",
+      "level": 1,
+      "score": 0.4056927
+    },
+    {
+      "id": "C107457646",
+      "display_name": "Human–computer interaction",
+      "level": 1,
+      "score": 0.3352461
+    },
+    {
+      "id": "C121684516",
+      "display_name": "Computer graphics (images)",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10862",
+      "display_name": "AI in cancer detection",
+      "score": 0.9995
+    },
+    {
+      "id": "T12422",
+      "display_name": "Radiomics and Machine Learning in Medical Imaging",
+      "score": 0.9994
+    },
+    {
+      "id": "T11775",
+      "display_name": "COVID-19 diagnosis using AI",
+      "score": 0.9993
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3348/kjr.2017.18.4.570",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:59:57.442108",
+  "source_database": "OpenAlex"
+}

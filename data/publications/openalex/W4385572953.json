@@ -1,0 +1,484 @@
+{
+  "openalex_id": "W4385572953",
+  "doi": "https://doi.org/10.18653/v1/2022.emnlp-main.39",
+  "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+  "abstract": "Tianbao Xie, Chen Henry Wu, Peng Shi, Ruiqi Zhong, Torsten Scholak, Michihiro Yasunaga, Chien-Sheng Wu, Ming Zhong, Pengcheng Yin, Sida I. Wang, Victor Zhong, Bailin Wang, Chengzu Li, Connor Boyle, Ansong Ni, Ziyu Yao, Dragomir Radev, Caiming Xiong, Lingpeng Kong, Rui Zhang, Noah A. Smith, Luke Zettlemoyer, Tao Yu. Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing. 2022.",
+  "authors": [
+    {
+      "display_name": "Tianbao Xie",
+      "id": "A5103373480",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Tianbao Xie"
+    },
+    {
+      "display_name": "Chen Wu",
+      "id": "A5100707380",
+      "orcid": "https://orcid.org/0000-0002-2492-0640",
+      "institutions": [
+        {
+          "id": "I74973139",
+          "display_name": "Carnegie Mellon University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chen Henry Wu"
+    },
+    {
+      "display_name": "Peng Shi",
+      "id": "A5100739668",
+      "orcid": "https://orcid.org/0000-0001-8218-586X",
+      "institutions": [
+        {
+          "id": "I151746483",
+          "display_name": "University of Waterloo",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peng Shi"
+    },
+    {
+      "display_name": "Ruiqi Zhong",
+      "id": "A5046116522",
+      "orcid": "https://orcid.org/0000-0002-3153-4027",
+      "institutions": [
+        {
+          "id": "I134446601",
+          "display_name": "Berkeley College",
+          "country_code": "US",
+          "type": "education"
+        },
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ruiqi Zhong"
+    },
+    {
+      "display_name": "Torsten Scholak",
+      "id": "A5072325974",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210167039",
+          "display_name": "ServiceNow (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Torsten Scholak"
+    },
+    {
+      "display_name": "Michihiro Yasunaga",
+      "id": "A5005898634",
+      "orcid": "https://orcid.org/0009-0003-3008-927X",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michihiro Yasunaga"
+    },
+    {
+      "display_name": "Chien-Sheng Wu",
+      "id": "A5066791810",
+      "orcid": "https://orcid.org/0000-0002-5598-5324",
+      "institutions": [
+        {
+          "id": "I4210155268",
+          "display_name": "Salesforce (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chien-Sheng Wu"
+    },
+    {
+      "display_name": "Ming Zhong",
+      "id": "A5033128202",
+      "orcid": "https://orcid.org/0000-0001-9376-818X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Ming Zhong"
+    },
+    {
+      "display_name": "Pengcheng Yin",
+      "id": "A5078519761",
+      "orcid": "https://orcid.org/0000-0003-2739-1032",
+      "institutions": [
+        {
+          "id": "I2252078561",
+          "display_name": "Meta (Israel)",
+          "country_code": "IL",
+          "type": "company"
+        },
+        {
+          "id": "I1291425158",
+          "display_name": "Google (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pengcheng Yin"
+    },
+    {
+      "display_name": "Sida I. Wang",
+      "id": "A5071629954",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Sida I. Wang"
+    },
+    {
+      "display_name": "Victor W. Zhong",
+      "id": "A5077994189",
+      "orcid": "https://orcid.org/0000-0001-9208-4683",
+      "institutions": [
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Victor Zhong"
+    },
+    {
+      "display_name": "Bailin Wang",
+      "id": "A5042749062",
+      "orcid": "https://orcid.org/0000-0002-3579-298X",
+      "institutions": [
+        {
+          "id": "I98677209",
+          "display_name": "University of Edinburgh",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bailin Wang"
+    },
+    {
+      "display_name": "Chengzu Li",
+      "id": "A5070178016",
+      "orcid": "https://orcid.org/0000-0002-1879-7391",
+      "institutions": [
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chengzu Li"
+    },
+    {
+      "display_name": "Connor Boyle",
+      "id": "A5037868591",
+      "orcid": "https://orcid.org/0000-0003-2124-607X",
+      "institutions": [
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Connor Boyle"
+    },
+    {
+      "display_name": "Ansong Ni",
+      "id": "A5087977697",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Ansong Ni"
+    },
+    {
+      "display_name": "Ziyu Yao",
+      "id": "A5101616607",
+      "orcid": "https://orcid.org/0009-0007-4571-3505",
+      "institutions": [
+        {
+          "id": "I162714631",
+          "display_name": "George Mason University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ziyu Yao"
+    },
+    {
+      "display_name": "Dragomir Radev",
+      "id": "A5081787254",
+      "orcid": "https://orcid.org/0000-0001-7830-6489",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Dragomir Radev"
+    },
+    {
+      "display_name": "Caiming Xiong",
+      "id": "A5032046813",
+      "orcid": "https://orcid.org/0000-0003-0349-8628",
+      "institutions": [
+        {
+          "id": "I4210155268",
+          "display_name": "Salesforce (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Caiming Xiong"
+    },
+    {
+      "display_name": "Lingpeng Kong",
+      "id": "A5014554970",
+      "orcid": "https://orcid.org/0000-0002-9033-2724",
+      "institutions": [
+        {
+          "id": "I889458895",
+          "display_name": "University of Hong Kong",
+          "country_code": "HK",
+          "type": "funder"
+        },
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lingpeng Kong"
+    },
+    {
+      "display_name": "Rui Zhang",
+      "id": "A5100421963",
+      "orcid": "https://orcid.org/0000-0001-8258-3585",
+      "institutions": [
+        {
+          "id": "I130769515",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rui Zhang"
+    },
+    {
+      "display_name": "Noah A. Smith",
+      "id": "A5088517824",
+      "orcid": "https://orcid.org/0000-0002-2310-6380",
+      "institutions": [
+        {
+          "id": "I4210156221",
+          "display_name": "Allen Institute for Artificial Intelligence",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Noah A. Smith"
+    },
+    {
+      "display_name": "Luke Zettlemoyer",
+      "id": "A5067919401",
+      "orcid": "https://orcid.org/0009-0008-8296-0764",
+      "institutions": [
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Luke Zettlemoyer"
+    },
+    {
+      "display_name": "Tao Yu",
+      "id": "A5100664157",
+      "orcid": "https://orcid.org/0000-0002-2238-299X",
+      "institutions": [
+        {
+          "id": "I889458895",
+          "display_name": "University of Hong Kong",
+          "country_code": "HK",
+          "type": "funder"
+        },
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tao Yu"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-01-01",
+  "type": "article",
+  "cited_by_count": 186,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4363608991",
+    "display_name": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2022.emnlp-main.39.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2777045944",
+      "display_name": "Zhàng",
+      "level": 3,
+      "score": 0.5426543
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.53652704
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.51421
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.48657286
+    },
+    {
+      "id": "C188147891",
+      "display_name": "Cognitive science",
+      "level": 1,
+      "score": 0.45409223
+    },
+    {
+      "id": "C2776085556",
+      "display_name": "Chen",
+      "level": 2,
+      "score": 0.41883293
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.41415823
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.38108957
+    },
+    {
+      "id": "C15708023",
+      "display_name": "Humanities",
+      "level": 1,
+      "score": 0.35542285
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.22117683
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.13689435
+    },
+    {
+      "id": "C191935318",
+      "display_name": "China",
+      "level": 2,
+      "score": 0.077738285
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9943
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9877
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2022.emnlp-main.39",
+  "pdf_url": "https://aclanthology.org/2022.emnlp-main.39.pdf",
+  "retrieved_date": "2025-07-30T15:03:12.669452",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,262 @@
+{
+  "openalex_id": "W3133877888",
+  "doi": "https://doi.org/10.1158/1557-3265.adi21-po-074",
+  "title": "Abstract PO-074: The impact of phenotypic bias in the generalizability of deep learning models in non-small cell lung cancer",
+  "abstract": "Abstract Although deep learning analysis of diagnostic imaging has shown increasing effectiveness in modeling non-small cell lung cancer (NSCLC) outcomes, a minority of proposed deep learning algorithms have been externally validated. Given a majority of these models are built on single institutional datasets, their generalizability across the entire population remains understudied. Moreover, the effect of biases that exist among institutional training dataset on overall generalizability of deep learning prognostic models is unclear. We attempted to identify demographic and clinical characteristics which if over-represented within training data could affect the generalizability of deep learning models aimed at predicting survival in patients with non-small cell lung cancer (NSCLC). Using a dataset of pre-treatment CT images of 422 patients diagnosed with non-small cell lung cancer (NSCLC), we examined deep learning model performance across demographic and tumor specific factors. Demographic factors of interest included age and gender. Clinical factors of interest included tumor histology, overall stage, T-Stage, and N-Stage. The effect of bias among training data was examined by varying the representation of demographic and clinical populations within the training and validation datasets. Model generalizability was measured by comparing AUC values among validation datasets (biased versus unbiased). AUC was estimated using 1,000 bootstrapped samples of 400 patients from validation cohorts. We found training datasets with biased representation of NSCLC histologist to be associated with greatest decrease in generalizability. Specifically, we found over-representation of adenocarcinoma within training datasets to be associated with an AUC reduction of 0.320 (0.296 - 0.344 CI, p&amp;lt;.001). Similarly over-representation of squamous cell carcinoma was associated with an AUC reduction of 0.177 (0.156 - 0.201 CI, p&amp;lt;.001). Biases in age (AUC 0.103, p&amp;lt;0.001), T stage (0.170, p=0.01 ), and N stage (0.120, p= 0.01) were also associated with reduced generalizability among deep learning models. Gender bias within training data was not associated with decreases in generalizability. Deep learning models of non-small cell lung cancer outcomes fail to generalize if trained on bias datasets. Specifically, overrepresentation of histologic subtypes may decrease the generalizability of deep learning models for NSCLC. Efforts to assure training data is representative of population demographics may lead to improved generalizability across more diverse patient populations. Citation Format: Aidan Gilson, Justin Du, Guneet Janda, Sachin Umrao, Marina Joel, Rachel Choi, Roy Herbst, Harlan Krumholz, Sanjay Aneja. The impact of phenotypic bias in the generalizability of deep learning models in non-small cell lung cancer [abstract]. In: Proceedings of the AACR Virtual Special Conference on Artificial Intelligence, Diagnosis, and Imaging; 2021 Jan 13-14. Philadelphia (PA): AACR; Clin Cancer Res 2021;27(5_Suppl):Abstract nr PO-074.",
+  "authors": [
+    {
+      "display_name": "Aidan Gilson",
+      "id": "A5019426692",
+      "orcid": "https://orcid.org/0000-0002-4770-4705",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Aidan Gilson"
+    },
+    {
+      "display_name": "Justin Du",
+      "id": "A5041139005",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40253897",
+          "display_name": "University of New Haven",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Justin Du"
+    },
+    {
+      "display_name": "Guneet Janda",
+      "id": "A5052244008",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Guneet Janda"
+    },
+    {
+      "display_name": "Sachin Umrao",
+      "id": "A5051801852",
+      "orcid": "https://orcid.org/0000-0002-1935-7304",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Sachin Umrao"
+    },
+    {
+      "display_name": "Marina Joel",
+      "id": "A5090039465",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40253897",
+          "display_name": "University of New Haven",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marina Joel"
+    },
+    {
+      "display_name": "Rachel Choi",
+      "id": "A5014960791",
+      "orcid": "https://orcid.org/0000-0001-6765-1623",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Rachel Choi"
+    },
+    {
+      "display_name": "Roy S. Herbst",
+      "id": "A5008593691",
+      "orcid": "https://orcid.org/0000-0003-2535-5847",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Roy Herbst"
+    },
+    {
+      "display_name": "Harlan M. Krumholz",
+      "id": "A5088028306",
+      "orcid": "https://orcid.org/0000-0003-2046-127X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Harlan Krumholz"
+    },
+    {
+      "display_name": "Sanjay Aneja",
+      "id": "A5027831083",
+      "orcid": "https://orcid.org/0000-0001-5681-7528",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Sanjay Aneja"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-03-01",
+  "type": "article",
+  "cited_by_count": 2,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S183149254",
+    "display_name": "Clinical Cancer Research",
+    "issn_l": "1078-0432",
+    "issn": [
+      "1078-0432",
+      "1557-3265"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320273"
+  },
+  "volume": "27",
+  "issue": "5_Supplement",
+  "first_page": "PO",
+  "last_page": "074",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C27158222",
+      "display_name": "Generalizability theory",
+      "level": 2,
+      "score": 0.98700947
+    },
+    {
+      "id": "C2776256026",
+      "display_name": "Lung cancer",
+      "level": 2,
+      "score": 0.60805595
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.5560545
+    },
+    {
+      "id": "C2908647359",
+      "display_name": "Population",
+      "level": 2,
+      "score": 0.48695454
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.47378397
+    },
+    {
+      "id": "C108583219",
+      "display_name": "Deep learning",
+      "level": 2,
+      "score": 0.46845698
+    },
+    {
+      "id": "C146357865",
+      "display_name": "Stage (stratigraphy)",
+      "level": 2,
+      "score": 0.4670844
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.45713437
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.38007653
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.36695808
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.30080095
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.21687326
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.20549792
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.14971036
+    },
+    {
+      "id": "C138496976",
+      "display_name": "Developmental psychology",
+      "level": 1,
+      "score": 0.07662687
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C99454951",
+      "display_name": "Environmental health",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12422",
+      "display_name": "Radiomics and Machine Learning in Medical Imaging",
+      "score": 0.9944
+    },
+    {
+      "id": "T10862",
+      "display_name": "AI in cancer detection",
+      "score": 0.9438
+    },
+    {
+      "id": "T10552",
+      "display_name": "Colorectal Cancer Screening and Detection",
+      "score": 0.9052
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1158/1557-3265.adi21-po-074",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:38:36.171825",
+  "source_database": "OpenAlex"
+}

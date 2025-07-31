@@ -1,0 +1,155 @@
+{
+  "openalex_id": "W2324387650",
+  "doi": "https://doi.org/10.1097/ede.0b013e31821d0426",
+  "title": "Random Allocation in Observational Data",
+  "abstract": "Conventional observational epidemiology has an unenviable reputation for generating false-positive findings,1,2 or \"scares,\" as others call them.3 In 1993, for example, the New York Times reported that \"vitamin E greatly reduces the risk of heart disease\"4 following simultaneous publication of 2 observational studies in the New England Journal of Medicine demonstrating that use of vitamin E supplements, even for just a few years, was associated with a substantially lower risk of coronary heart disease (CHD).5,6 Randomized controlled trials (RCTs)—testing precisely the same hypothesis—revealed no reduction in risk at all.7 As I write this, UK news media are reporting that \"junk food makes your kids dumb,\" in response to a paper reporting that children given a poor diet at age 3 had lower IQ scores 5 years later.8 In the latter case, however, no RCTs are ever likely to be carried out, and the status of the finding will remain liminal. The ratio of false-positive to false-negative (FP:FN) published findings in traditional epidemiology is very high, John Ioannidis and colleagues argue.9 But what exactly are \"false-positive\" findings in the context of conventional observational epidemiology, and how can their prevalence be quantified? My suspicion is that use of vitamin E supplements would—in most contexts—be associated with lower risk of CHD, because of substantial confounding by a myriad of measured and unmeasured factors related to such a socially and behaviorally patterned exposure.10 The same will apply to children fed on junk food and their later intelligence.11 The inability to substantially \"control\" statistically for confounding in many situations—due to measurement error in assessed confounders and omission of others—remains underappreciated.12,13 In the sense that these associations do exist, they should perhaps not be called false positives; they are false positives only if they are taken to be indicators of underlying causal effects. Noncausal but replicable observational associations could clearly be of considerable value through prediction of disease risk, and targeting of preventive measures to those who can benefit most. For the holy grail of epidemiology—identifying causes of disease—they are a disappointment, however. A wide range of approaches—from formally comparing associations in contexts where confounding structures differ,14 utilizing correlates of the exposure under study that are not plausible causes15 and natural experiments,16 through to formal instrumental variables methods17—offer greater hope for reliable causal inference than plowing on with traditional approaches and keeping the FP:FN ratio high.9 Ioannidis and colleagues reiterate the low positive predictive value of a nominally \"significant\" P, something I (along with a generation of epidemiologists, I imagine) first encountered in Michael Oakes' seminal \"Statistical Inference,18 although (as has been publically confessed) it did not instantly prevent me from using the word 'significant' and over-interpreting such tests.19As Sander Greenland20 argued in this journal 20 years ago, randomization provides the key link between inferential statistics and causal parameters.\" It is through this prism that we should consider Ioannidis' finding that in genetic association studies, once appropriate thresholds were applied,21 false positives became a rarity.9 Greenland stated that his arguments were \"largely derived from the writings of R.A. Fisher,\"20 and it was Fisher who clarified that randomization is inherent in genetic analysis. When lecturing on \"Statistical Methods in Genetics\" in 1951, Fisher clarified the relationship between the 2 disciplines to which he contributed so much22: And here I may mention a connection between our two subjects which seem not to be altogether accidental, namely that the factorial method of experimentation, now of lively concern so far afield as the psychologists, or the industrial chemists, derives its structure and its name, from the simultaneous inheritance of Mendelian factors. Geneticists certainly need not feel that the intellectual debt is all on one side.22 Fisher goes on: Genetics is indeed in a peculiarly favoured condition in that Providence has shielded the geneticist from many of the difficulties of a reliably controlled comparison. The different genotypes possible from the same mating have been beautifully randomised by the meiotic process.22 This principle—that analysis of genetic data is analogous to that of a randomized experiment—has, in epidemiology, been termed \"Mendelian randomization.\"23 This depends on the basic (but approximate) laws of Mendelian genetics. If the probability that a postmeiotic germ cell that has received any particular allele at segregation contributes to a viable conceptus is independent of environment (following from Mendel's first law), and if genetic variants sort independently (following on from Mendel's second law), then these variants will not be associated with the confounding factors that generally distort conventional observational studies.24 Fisher was referring only to the implications of Mendel's second law when he stated that \"A more perfect control of conditions is scarcely possible, than that of different genotypes appearing in the same litter,\"22 which would imply that family-based analysis is required.24 If, however, basic precautions with respect to population stratification are applied, then, at a population level, genetic variants are indeed unrelated to nongenetic confounding factors, as has been empirically demonstrated.25 For Fisher, perhaps, Mendelian randomization provided the basis for formularizing randomization in experiments. Fisher appears to be saying this in his 1951 lecture, although his initial advocacy of randomization related to ensuring symmetry of the error distribution,26,27 and \"ensur[ing] the validity of normal-theory analysis.\"28 His daughter, Joan Fisher Box, writes \"the structure of the factorial experiment was borrowed, in all its efficiency and versatility, from genetics.\"29 She reminds us that the analysis of variance components was developed in Fisher's pioneering work on polygenic inheritance,30 and it was in the context of analysis of variance that he first hinted at randomization, when crop variation data were analyzed as \"if all the plots are undifferentiated, as if the numbers had been mixed up and written down in random order,\"31 Fisher's students similarly consider that his pioneering genetic work, in particular with respect to polygenic inheritance,30 was reflected in his later work on the design of experiments.32,33 Iain Chalmers has pointed out that statistical theory did not underlie the development of controlled trials in medicine,34 and it is entertaining to speculate that, rather than statistical theory, it was analogy with the factorial randomization of Mendel's second law that provided the basis for the development of randomized experiments in general. In biomedical science the key value of Mendelian randomization is that genetic variants can proxy for modifiable risk factors, and their randomization allows considerably greater inferential power than is provided in conventional observational epidemiology.24 The principles have been reviewed24,35,36 and a now very substantial body of empirical studies have been reported in the leading medical journals. Indeed, for biomarkers, this approach is rapidly becoming de rigueur.37,38 Obstacles to reliable interpretation from Mendelian randomization studies have been discussed at considerable length.24,35,36 Important issues include low statistical power of the instrumental variable analyses conducted within this framework and the possibility of confounding being reintroduced by pleiotropy—that is, possible multiple functional consequences of genetic variants. Here the right-hand term in Ioannidis' FP:FN ratio comes into play. The very low ratio with respect to properly conducted genetic studies reflects the fact that there are many false-negative findings and a very large number of common variants waiting to be identified through adequately powered studies.39 Large numbers of variants (eg, over 200 variants for height, 100 for circulating lipids, etc) have already been identified in genome-wide association studies, and the harvest will continue.40 These allow the construction of allele scores41 that explain more of the variance in the proxied-for phenotype and thus increase the power beyond that of the single-variant approaches used in most Mendelian randomization studies to date. Indeed, such allele scores often explain more of the variance in the phenotype than any potentially randomizable intervention could. More importantly, multiple variants (or independent combinations of variants) working through different pathways can be used as separate instruments. If these predict the same causal effect of the proxied-for environmentally modifiable risk factor, then it becomes much less plausible that reintroduced confounding (through pleiotropy, for example) explains the association, because the confounding would have to be acting in the same way for these 2 unlinked variants or combination of variants. This can be likened to RCTs of blood pressure–lowering agents (eg, diuretics and ACE inhibitors), which work through different biologic mechanisms and have different potential side effects. If the various agents produce the reductions in cardiovascular disease risk predicted by the degree to which they lower blood pressure, then it is unlikely that they act through agent-specific (pleiotropic) effects of the drugs; rather, such a finding points to blood pressure lowering as being key. The latter is indeed what is generally observed.42 Multiple variant approaches have been reported in the Mendelian randomization context,43 but they have not yet exploited the possibilities provided by large numbers of independent variants. These allow very large numbers of combinations to be used as instruments to evaluate the validity of the assumptions. In this setting, even if some variants do have pleiotropic effects, this will balance out across the different combinations. More speculatively, in the future we will be able to use these methods to obtain hypothesis-free causal inference, through combining forwards genetics (phenotype to genetic variant) and reverse genetics (genetic variant to phenotype) approaches. As a shorthand it can be said that traits tend to have heritability of around 50%,44 and rather few traits with low to zero heritability exist. Genome-wide association data (or, in time, whole-genome sequence data) can be used to generate multiple instruments for each trait, which can then be related to every other variable, and in this way the causal structure will be revealed. The wonderful \"hypothesis-generating machine,\" invented by Philip Cole and announced to the world in this journal in 1993,45 will become redundant. We will enter the pure Fisherian world, where inferential statistics have meaning. Greenland envisaged this possibility in 1990, stating that \"If nature or circumstance resulted in what is essentially random allocation and we knew this was so, we could employ all the above interpretations of our statistics.\"20 He thought, however, that \"such 'natural experiments' are rare.\"20 They no longer are: unmediated hypothesis-free causality is available to all. ABOUT THE AUTHOR GEORGE DAVEY SMITH is Professor of Clinical Epidemiology at the University of Bristol, Director of the MRC Centre for Causal Analyses in Translational Epidemiology (CAiTE) and coeditor of the International Journal of Epidemiology. After nearly 3 decades of contributing to the miasma of obvious, spurious or uninteresting epidemiologic findings, he is attempting to do something more useful during his declining years. ACKNOWLEDGMENTS I thank Sander Greenland, Debbie Lawlor, and John Lynch for their comments on an earlier draft.",
+  "authors": [
+    {
+      "display_name": "George Davey Smith",
+      "id": "A5013184354",
+      "orcid": "https://orcid.org/0000-0002-1407-8314",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "George Davey Smith"
+    }
+  ],
+  "publication_year": 2011,
+  "publication_date": "2011-06-03",
+  "type": "letter",
+  "cited_by_count": 45,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S15470582",
+    "display_name": "Epidemiology",
+    "issn_l": "1044-3983",
+    "issn": [
+      "1044-3983",
+      "1531-5487"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315671"
+  },
+  "volume": "22",
+  "issue": "4",
+  "first_page": "460",
+  "last_page": "463",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://doi.org/10.1097/ede.0b013e31821d0426",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C23131810",
+      "display_name": "Observational study",
+      "level": 2,
+      "score": 0.91538405
+    },
+    {
+      "id": "C77350462",
+      "display_name": "Confounding",
+      "level": 2,
+      "score": 0.6709888
+    },
+    {
+      "id": "C107130276",
+      "display_name": "Epidemiology",
+      "level": 2,
+      "score": 0.66376746
+    },
+    {
+      "id": "C168563851",
+      "display_name": "Randomized controlled trial",
+      "level": 2,
+      "score": 0.6627054
+    },
+    {
+      "id": "C2779343474",
+      "display_name": "Context (archaeology)",
+      "level": 2,
+      "score": 0.62436354
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.6162193
+    },
+    {
+      "id": "C2775848727",
+      "display_name": "Nutritional epidemiology",
+      "level": 3,
+      "score": 0.58162385
+    },
+    {
+      "id": "C48798503",
+      "display_name": "Reputation",
+      "level": 2,
+      "score": 0.41114438
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.17674649
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.07018289
+    },
+    {
+      "id": "C36289849",
+      "display_name": "Social science",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C144024400",
+      "display_name": "Sociology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10206",
+      "display_name": "Meta-analysis and systematic reviews",
+      "score": 0.9807
+    },
+    {
+      "id": "T10845",
+      "display_name": "Advanced Causal Inference Techniques",
+      "score": 0.9642
+    },
+    {
+      "id": "T10866",
+      "display_name": "Nutritional Studies and Diet",
+      "score": 0.9502
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1097/ede.0b013e31821d0426",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:48:51.671923",
+  "source_database": "OpenAlex"
+}

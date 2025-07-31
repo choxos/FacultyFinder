@@ -1,0 +1,219 @@
+{
+  "openalex_id": "W2162167019",
+  "doi": "https://doi.org/10.1109/tvcg.2007.3",
+  "title": "Advections with Significantly Reduced Dissipation and Diffusion",
+  "abstract": "Back and Forth Error Compensation and Correction (BFECC) was recently developed for interface computation using a level set method. We show that BFECC can be applied to reduce dissipation and diffusion encountered in a variety of advection steps, such as velocity, smoke density, and image advections on uniform and adaptive grids and on a triangulated surface. BFECC can be implemented trivially as a small modification of the first-order upwind or semi-Lagrangian integration of advection equations. It provides second-order accuracy in both space and time. When applied to level set evolution, BFECC reduces volume loss significantly. We demonstrate the benefits of this approach on image advection and on the simulation of smoke, bubbles in water, and the highly dynamic interaction between water, a solid, and air. We also apply BFECC to dye advection to visualize vector fields.",
+  "authors": [
+    {
+      "display_name": "ByungMoon Kim",
+      "id": "A5037737423",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I130701444",
+          "display_name": "Georgia Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Byungmoon Kim"
+    },
+    {
+      "display_name": "Yingjie Liu",
+      "id": "A5034885556",
+      "orcid": "https://orcid.org/0000-0002-1169-6213",
+      "institutions": [
+        {
+          "id": "I130701444",
+          "display_name": "Georgia Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yingjie Liu"
+    },
+    {
+      "display_name": "Ignacio Llamas",
+      "id": "A5077907659",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127875",
+          "display_name": "Nvidia (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ignacio Llamas"
+    },
+    {
+      "display_name": "Jarek Rossignac",
+      "id": "A5039380034",
+      "orcid": "https://orcid.org/0000-0002-4550-0151",
+      "institutions": [
+        {
+          "id": "I130701444",
+          "display_name": "Georgia Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jarek Rossignac"
+    }
+  ],
+  "publication_year": 2006,
+  "publication_date": "2006-11-21",
+  "type": "article",
+  "cited_by_count": 93,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S84775595",
+    "display_name": "IEEE Transactions on Visualization and Computer Graphics",
+    "issn_l": "1077-2626",
+    "issn": [
+      "1077-2626",
+      "1941-0506",
+      "2160-9306"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "13",
+  "issue": "1",
+  "first_page": "135",
+  "last_page": "144",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://smartech.gatech.edu/bitstream/1853/13136/1/06-17.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C5072599",
+      "display_name": "Advection",
+      "level": 2,
+      "score": 0.82906646
+    },
+    {
+      "id": "C135402231",
+      "display_name": "Dissipation",
+      "level": 2,
+      "score": 0.63515985
+    },
+    {
+      "id": "C91188154",
+      "display_name": "Vector field",
+      "level": 2,
+      "score": 0.6252687
+    },
+    {
+      "id": "C45374587",
+      "display_name": "Computation",
+      "level": 2,
+      "score": 0.5324408
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5109505
+    },
+    {
+      "id": "C69357855",
+      "display_name": "Diffusion",
+      "level": 2,
+      "score": 0.5029122
+    },
+    {
+      "id": "C127210992",
+      "display_name": "Volume of fluid method",
+      "level": 3,
+      "score": 0.48236102
+    },
+    {
+      "id": "C28826006",
+      "display_name": "Applied mathematics",
+      "level": 1,
+      "score": 0.4393778
+    },
+    {
+      "id": "C148444096",
+      "display_name": "Numerical diffusion",
+      "level": 2,
+      "score": 0.4279042
+    },
+    {
+      "id": "C57879066",
+      "display_name": "Mechanics",
+      "level": 1,
+      "score": 0.38407463
+    },
+    {
+      "id": "C126255220",
+      "display_name": "Mathematical optimization",
+      "level": 1,
+      "score": 0.36396474
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.34868932
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.3104012
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.16530907
+    },
+    {
+      "id": "C97355855",
+      "display_name": "Thermodynamics",
+      "level": 1,
+      "score": 0.07830542
+    },
+    {
+      "id": "C2777871205",
+      "display_name": "Breakup",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10481",
+      "display_name": "Computer Graphics and Visualization Techniques",
+      "score": 0.9998
+    },
+    {
+      "id": "T10360",
+      "display_name": "Fluid Dynamics and Turbulent Flows",
+      "score": 0.9888
+    },
+    {
+      "id": "T11382",
+      "display_name": "Fluid Dynamics and Heat Transfer",
+      "score": 0.9841
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tvcg.2007.3",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:19:27.417625",
+  "source_database": "OpenAlex"
+}

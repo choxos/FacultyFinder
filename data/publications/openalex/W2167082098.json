@@ -1,0 +1,2506 @@
+{
+  "openalex_id": "W2167082098",
+  "doi": "https://doi.org/10.1093/neuonc/not174",
+  "title": "CELL BIOLOGY AND SIGNALING",
+  "abstract": "Ikaros, a DNA-binding protein also known as Ikaros family zinc finger protein 1 (IKZF1), was initially shown to function critically in hematopoietic differentiation.Deletion or mutation of Ikaros has been associated with lymphoblastic, as well as acute and chronic myelogenous leukemias demonstrating that Ikaros can act as a tumor suppressor.Ikaros is predominantly expressed in a variety of tissue including the brain, suggesting that Ikaros may be involved in the physiological functions of glial growth.Other recent studies have shown that Ikaros can regulate the transition of neural progenitor cells to postmitotic neurons which eventually differentiate into glial cells.Deregulation of glial development and/or growth has been shown to initiate glioblastoma (GBM) growth suggesting that Ikaros may be involved in GBM tumorigenesis.The goal of this study was to determine if Ikaros plays an important role in glial tumorigenesis.Analysis using the TCGA and Rembrandt databases demonstrated that decreased expression of Ikaros leads to worse prognosis in GBM patients (P , 0.01).In addition, the Ikaros promoter was found to be hypermethylated (85% of samples) in GBM samples suggesting that inhibition of Ikaros may contribute to glial tumorigenesis.To determine if Ikaros is involved in glial tumorigenesis we generated stable GBM cell lines that were transduced with HA-Ikaros.Enhanced expression of Ikaros resulted in a 3-to 4-fold reduction in proliferation and a 2-to 3-fold reduction in colony formation.In addition, exogenous expression of Ikaros inhibited the migration of GBM cells suggesting that Ikaros may also be involved in the invasiveness of glial cancers.Together our data suggests that Ikaros may play an important role in suppressing glial tumor formation and may be a novel biomarker for GBMs.",
+  "authors": [
+    {
+      "display_name": "Manu Agarwal",
+      "id": "A5052511443",
+      "orcid": "https://orcid.org/0000-0003-4241-5055",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Agarwal"
+    },
+    {
+      "display_name": "Ryo Nitta",
+      "id": "A5085793837",
+      "orcid": "https://orcid.org/0000-0002-6537-9272",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Nitta"
+    },
+    {
+      "display_name": "Sinisa Dovat",
+      "id": "A5072518893",
+      "orcid": "https://orcid.org/0000-0003-3906-6165",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Dovat"
+    },
+    {
+      "display_name": "Jean Mosser",
+      "id": "A5109227451",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Li"
+    },
+    {
+      "display_name": "Hideyuki Arita",
+      "id": "A5076223235",
+      "orcid": "https://orcid.org/0000-0002-1126-8155",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Arita"
+    },
+    {
+      "display_name": "Y. Narita",
+      "id": "A5043097373",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Narita"
+    },
+    {
+      "display_name": "Shoji Fukushima",
+      "id": "A5101398619",
+      "orcid": "https://orcid.org/0000-0001-6422-3316",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Fukushima"
+    },
+    {
+      "display_name": "Kensuke Tateishi",
+      "id": "A5078203308",
+      "orcid": "https://orcid.org/0000-0001-6895-9013",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I89630735",
+          "display_name": "Yokohama City University",
+          "country_code": "JP",
+          "type": "funder"
+        },
+        {
+          "id": "I154526488",
+          "display_name": "Inserm",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I110736937",
+          "display_name": "Délégation Paris 5",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210133106",
+          "display_name": "Parc de Salut",
+          "country_code": "ES",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Tateishi"
+    },
+    {
+      "display_name": "Yasuhiko Matsushita",
+      "id": "A5031158448",
+      "orcid": "https://orcid.org/0000-0003-3215-551X",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Matsushita"
+    },
+    {
+      "display_name": "Akihiko Yoshida",
+      "id": "A5006840327",
+      "orcid": "https://orcid.org/0000-0002-3373-0099",
+      "institutions": [
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Yoshida"
+    },
+    {
+      "display_name": "Y. Miyakita",
+      "id": "A5073909209",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Miyakita"
+    },
+    {
+      "display_name": "Masuo Ohno",
+      "id": "A5033371779",
+      "orcid": "https://orcid.org/0000-0003-4215-8212",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Ohno"
+    },
+    {
+      "display_name": "V. Peter Collins",
+      "id": "A5109941444",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I241749",
+          "display_name": "University of Cambridge",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I1316902750",
+          "display_name": "Cleveland Clinic",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. P. Collins"
+    },
+    {
+      "display_name": "N. Kawahara",
+      "id": "A5112331700",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Kawahara"
+    },
+    {
+      "display_name": "S. Shibui",
+      "id": "A5016899106",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Shibui"
+    },
+    {
+      "display_name": "K. Ichimura",
+      "id": "A5044592865",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I82783531",
+          "display_name": "Penn State Milton S. Hershey Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210107147",
+          "display_name": "Institut Català d'Oncologia",
+          "country_code": "ES",
+          "type": "government"
+        },
+        {
+          "id": "I4210153043",
+          "display_name": "Duke University Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I36258959",
+          "display_name": "University of California, San Diego",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I111979921",
+          "display_name": "Northwestern University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Ichimura"
+    },
+    {
+      "display_name": "Suzana Assad Kahn",
+      "id": "A5103260451",
+      "orcid": "https://orcid.org/0000-0002-5058-1144",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. A. Kahn"
+    },
+    {
+      "display_name": "Sharareh Gholamin",
+      "id": "A5062236085",
+      "orcid": "https://orcid.org/0000-0001-7425-6074",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Gholamin"
+    },
+    {
+      "display_name": "Marie‐Pierre Junier",
+      "id": "A5018387769",
+      "orcid": "https://orcid.org/0000-0002-5731-0929",
+      "institutions": [
+        {
+          "id": "I4210133106",
+          "display_name": "Parc de Salut",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I89630735",
+          "display_name": "Yokohama City University",
+          "country_code": "JP",
+          "type": "funder"
+        },
+        {
+          "id": "I154526488",
+          "display_name": "Inserm",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I110736937",
+          "display_name": "Délégation Paris 5",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M.-P. Junier"
+    },
+    {
+      "display_name": "Hervé Chneiweiss",
+      "id": "A5060230145",
+      "orcid": "https://orcid.org/0000-0001-7675-5061",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Chneiweiss"
+    },
+    {
+      "display_name": "I. Weissman",
+      "id": "A5056105406",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. Weissman"
+    },
+    {
+      "display_name": "S. Mitra",
+      "id": "A5057537512",
+      "orcid": "https://orcid.org/0000-0002-3060-2278",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Mitra"
+    },
+    {
+      "display_name": "S. Cheshier",
+      "id": "A5048979176",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Cheshier"
+    },
+    {
+      "display_name": "Tony Avril",
+      "id": "A5050858115",
+      "orcid": "https://orcid.org/0000-0002-1129-8514",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Avril"
+    },
+    {
+      "display_name": "Abderrahmane Hamlat",
+      "id": "A5112553018",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Hamlat"
+    },
+    {
+      "display_name": "Pierre‐Jean Le Reste",
+      "id": "A5062246969",
+      "orcid": "https://orcid.org/0000-0003-4673-5697",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P.-J. Le Reste"
+    },
+    {
+      "display_name": "Jean Mosser",
+      "id": "A5109227451",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Mosser"
+    },
+    {
+      "display_name": "Véronique Quillien",
+      "id": "A5063276003",
+      "orcid": "https://orcid.org/0000-0002-1465-3753",
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Quillien"
+    },
+    {
+      "display_name": "Cristina Carrato",
+      "id": "A5080151764",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Carrato"
+    },
+    {
+      "display_name": "Ana M Muñoz‐Mármol",
+      "id": "A5086952093",
+      "orcid": "https://orcid.org/0000-0003-1008-7763",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Munoz-Marmol"
+    },
+    {
+      "display_name": "L. Serrano",
+      "id": "A5108110349",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Serrano"
+    },
+    {
+      "display_name": "Lara Pijuán",
+      "id": "A5037944579",
+      "orcid": "https://orcid.org/0000-0002-9978-6933",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Pijuan"
+    },
+    {
+      "display_name": "C. Hostalot",
+      "id": "A5048573863",
+      "orcid": "https://orcid.org/0000-0002-1935-0524",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Hostalot"
+    },
+    {
+      "display_name": "S. Villà",
+      "id": "A5101638916",
+      "orcid": "https://orcid.org/0000-0002-9089-4807",
+      "institutions": [
+        {
+          "id": "I4210153043",
+          "display_name": "Duke University Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I36258959",
+          "display_name": "University of California, San Diego",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I82783531",
+          "display_name": "Penn State Milton S. Hershey Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210107147",
+          "display_name": "Institut Català d'Oncologia",
+          "country_code": "ES",
+          "type": "government"
+        },
+        {
+          "id": "I111979921",
+          "display_name": "Northwestern University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. l. Villa"
+    },
+    {
+      "display_name": "A. Ariza",
+      "id": "A5062746071",
+      "orcid": "https://orcid.org/0000-0003-4364-823X",
+      "institutions": [
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Ariza"
+    },
+    {
+      "display_name": "Olatz Etxániz",
+      "id": "A5060467306",
+      "orcid": "https://orcid.org/0000-0002-8856-5596",
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "O. Etxaniz"
+    },
+    {
+      "display_name": "Carmen Balañá",
+      "id": "A5057499890",
+      "orcid": "https://orcid.org/0000-0003-0771-0390",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Balana"
+    },
+    {
+      "display_name": "Etty Benveniste",
+      "id": "A5032782967",
+      "orcid": "https://orcid.org/0000-0003-4120-5750",
+      "institutions": [
+        {
+          "id": "I110736937",
+          "display_name": "Délégation Paris 5",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210133106",
+          "display_name": "Parc de Salut",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I89630735",
+          "display_name": "Yokohama City University",
+          "country_code": "JP",
+          "type": "funder"
+        },
+        {
+          "id": "I154526488",
+          "display_name": "Inserm",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. T. Benveniste"
+    },
+    {
+      "display_name": "Y. Zheng",
+      "id": "A5064964267",
+      "orcid": "https://orcid.org/0009-0003-2814-0881",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Zheng"
+    },
+    {
+      "display_name": "B. McFarland",
+      "id": "A5078429299",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. McFarland"
+    },
+    {
+      "display_name": "Denis Drygin",
+      "id": "A5050272324",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Drygin"
+    },
+    {
+      "display_name": "Susan L. Bellis",
+      "id": "A5039063725",
+      "orcid": "https://orcid.org/0000-0002-5071-527X",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Bellis"
+    },
+    {
+      "display_name": "M. Bredel",
+      "id": "A5090452129",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Bredel"
+    },
+    {
+      "display_name": "Daniela Lötsch",
+      "id": "A5112245679",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Lotsch"
+    },
+    {
+      "display_name": "C. Engelmaier",
+      "id": "A5114783643",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Engelmaier"
+    },
+    {
+      "display_name": "Sigrid Allerstorfer",
+      "id": "A5049252121",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Allerstorfer"
+    },
+    {
+      "display_name": "Michael Grusch",
+      "id": "A5033125669",
+      "orcid": "https://orcid.org/0000-0001-5486-9340",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Grusch"
+    },
+    {
+      "display_name": "J. Pichler",
+      "id": "A5038038630",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Pichler"
+    },
+    {
+      "display_name": "Serge Weis",
+      "id": "A5032775594",
+      "orcid": "https://orcid.org/0000-0001-6750-2599",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Weis"
+    },
+    {
+      "display_name": "Johannes A. Hainfellner",
+      "id": "A5043947003",
+      "orcid": "https://orcid.org/0000-0002-9148-958X",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Hainfellner"
+    },
+    {
+      "display_name": "C. Marosi",
+      "id": "A5005458580",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I76134821",
+          "display_name": "Medical University of Vienna",
+          "country_code": "AT",
+          "type": "funder"
+        },
+        {
+          "id": "I1327163397",
+          "display_name": "State University of New York",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Marosi"
+    },
+    {
+      "display_name": "S. Spiegl-Kreinecker",
+      "id": "A5085223010",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Spiegl-Kreinecker"
+    },
+    {
+      "display_name": "Walter Berger",
+      "id": "A5043913136",
+      "orcid": "https://orcid.org/0000-0003-0014-1658",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "W. Berger"
+    },
+    {
+      "display_name": "A. Bronisz",
+      "id": "A5086212519",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Bronisz"
+    },
+    {
+      "display_name": "M. O. Nowicki",
+      "id": "A5055040617",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. O. Nowicki"
+    },
+    {
+      "display_name": "Yun Wang",
+      "id": "A5100377600",
+      "orcid": "https://orcid.org/0000-0001-7146-8290",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Wang"
+    },
+    {
+      "display_name": "K. Ansari",
+      "id": "A5008242529",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I82783531",
+          "display_name": "Penn State Milton S. Hershey Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210107147",
+          "display_name": "Institut Català d'Oncologia",
+          "country_code": "ES",
+          "type": "government"
+        },
+        {
+          "id": "I4210153043",
+          "display_name": "Duke University Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I36258959",
+          "display_name": "University of California, San Diego",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I111979921",
+          "display_name": "Northwestern University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Ansari"
+    },
+    {
+      "display_name": "E. A. Chiocca",
+      "id": "A5001168237",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. A. Chiocca"
+    },
+    {
+      "display_name": "J. Godlewski",
+      "id": "A5028451925",
+      "orcid": "https://orcid.org/0000-0002-5666-2965",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Godlewski"
+    },
+    {
+      "display_name": "Kenneth Brown",
+      "id": "A5109253620",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Brown"
+    },
+    {
+      "display_name": "Madan M. Kwatra",
+      "id": "A5039499461",
+      "orcid": "https://orcid.org/0000-0002-6547-8852",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Kwatra"
+    },
+    {
+      "display_name": "Kenneth Brown",
+      "id": "A5109253620",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Brown"
+    },
+    {
+      "display_name": "Madan M. Kwatra",
+      "id": "A5039499461",
+      "orcid": "https://orcid.org/0000-0002-6547-8852",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Kwatra"
+    },
+    {
+      "display_name": "Timothy T. Bui",
+      "id": "A5019623276",
+      "orcid": "https://orcid.org/0000-0003-4403-6227",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Bui"
+    },
+    {
+      "display_name": "Ryo Nitta",
+      "id": "A5085793837",
+      "orcid": "https://orcid.org/0000-0002-6537-9272",
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Nitta"
+    },
+    {
+      "display_name": "Jean Mosser",
+      "id": "A5109227451",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Li"
+    },
+    {
+      "display_name": "Shujia Zhu",
+      "id": "A5034604512",
+      "orcid": "https://orcid.org/0000-0001-8358-2859",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Zhu"
+    },
+    {
+      "display_name": "D. Kozono",
+      "id": "A5031761672",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Kozono"
+    },
+    {
+      "display_name": "Jie Li",
+      "id": "A5100454139",
+      "orcid": "https://orcid.org/0000-0002-7529-6040",
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Li"
+    },
+    {
+      "display_name": "Deepa Kushwaha",
+      "id": "A5001031272",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Kushwaha"
+    },
+    {
+      "display_name": "Brendan R. Carter",
+      "id": "A5008670707",
+      "orcid": "https://orcid.org/0000-0003-2445-0711",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Carter"
+    },
+    {
+      "display_name": "Chen Chen",
+      "id": "A5100418494",
+      "orcid": "https://orcid.org/0000-0002-7651-1216",
+      "institutions": [
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Chen"
+    },
+    {
+      "display_name": "Jessica Schulte",
+      "id": "A5076256448",
+      "orcid": "https://orcid.org/0000-0002-7135-9200",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Schulte"
+    },
+    {
+      "display_name": "M. Srikanth",
+      "id": "A5112601055",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Srikanth"
+    },
+    {
+      "display_name": "Satyabrata Das",
+      "id": "A5082187794",
+      "orcid": "https://orcid.org/0000-0001-9790-6164",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Das"
+    },
+    {
+      "display_name": "J. Zhang",
+      "id": "A5006915091",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Zhang"
+    },
+    {
+      "display_name": "J. Lathia",
+      "id": "A5011653871",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Lathia"
+    },
+    {
+      "display_name": "Liangjun Yin",
+      "id": "A5100601139",
+      "orcid": "https://orcid.org/0000-0002-9244-4965",
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Yin"
+    },
+    {
+      "display_name": "J. Rich",
+      "id": "A5088997579",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Rich"
+    },
+    {
+      "display_name": "Eric N. Olson",
+      "id": "A5084182062",
+      "orcid": "https://orcid.org/0000-0003-1151-8262",
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Olson"
+    },
+    {
+      "display_name": "Jacqueline Keßler",
+      "id": "A5034829799",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Kessler"
+    },
+    {
+      "display_name": "Anjen Chenn",
+      "id": "A5077599238",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Chenn"
+    },
+    {
+      "display_name": "Allison E. Cherry",
+      "id": "A5031396018",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Cherry"
+    },
+    {
+      "display_name": "Bodo Haas",
+      "id": "A5085930874",
+      "orcid": "https://orcid.org/0000-0002-1213-3527",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Haas"
+    },
+    {
+      "display_name": "Yu‐Hao Lin",
+      "id": "A5053783394",
+      "orcid": "https://orcid.org/0000-0002-3380-4609",
+      "institutions": [
+        {
+          "id": "I241749",
+          "display_name": "University of Cambridge",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I1316902750",
+          "display_name": "Cleveland Clinic",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. H. Lin"
+    },
+    {
+      "display_name": "S.-E. Ong",
+      "id": "A5071075880",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S.-E. Ong"
+    },
+    {
+      "display_name": "Nephi Stella",
+      "id": "A5038158464",
+      "orcid": "https://orcid.org/0000-0002-4780-8360",
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Stella"
+    },
+    {
+      "display_name": "Christopher P. Cifarelli",
+      "id": "A5027389549",
+      "orcid": "https://orcid.org/0000-0002-3147-2743",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "C. P. Cifarelli"
+    },
+    {
+      "display_name": "Robert Griffin",
+      "id": "A5101810888",
+      "orcid": "https://orcid.org/0000-0002-1907-2421",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "R. J. Griffin"
+    },
+    {
+      "display_name": "Degang Cong",
+      "id": "A5069140083",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Cong"
+    },
+    {
+      "display_name": "Weimin Zhu",
+      "id": "A5042267085",
+      "orcid": "https://orcid.org/0000-0002-2420-0731",
+      "institutions": [
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "W. Zhu"
+    },
+    {
+      "display_name": "Yang Shi",
+      "id": "A5100616274",
+      "orcid": "https://orcid.org/0000-0002-3336-4826",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Shi"
+    },
+    {
+      "display_name": "P. Clark",
+      "id": "A5081488833",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Clark"
+    },
+    {
+      "display_name": "John S. Kuo",
+      "id": "A5054371127",
+      "orcid": "https://orcid.org/0000-0001-6809-4806",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Kuo"
+    },
+    {
+      "display_name": "Siqi Hu",
+      "id": "A5101973501",
+      "orcid": "https://orcid.org/0000-0001-6564-9781",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Hu"
+    },
+    {
+      "display_name": "Di Sun",
+      "id": "A5058328352",
+      "orcid": "https://orcid.org/0000-0001-5786-2152",
+      "institutions": [
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Sun"
+    },
+    {
+      "display_name": "Markus J. Bookland",
+      "id": "A5010534062",
+      "orcid": "https://orcid.org/0000-0003-4422-8376",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Bookland"
+    },
+    {
+      "display_name": "Nune Darbinian",
+      "id": "A5090976561",
+      "orcid": "https://orcid.org/0000-0002-8712-4940",
+      "institutions": [
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210155724",
+          "display_name": "Centre Hospitalier Universitaire de Rennes",
+          "country_code": "FR",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Darbinian"
+    },
+    {
+      "display_name": "Abhinav Dey",
+      "id": "A5080667786",
+      "orcid": "https://orcid.org/0000-0003-0412-6236",
+      "institutions": [
+        {
+          "id": "I4210126298",
+          "display_name": "Duke Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I39422238",
+          "display_name": "University of Illinois Chicago",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210156366",
+          "display_name": "Tokyo National Hospital",
+          "country_code": "JP",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210110881",
+          "display_name": "Centre Eugène Marquis",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210153460",
+          "display_name": "Hospital Universitari Germans Trias i Pujol",
+          "country_code": "ES",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092129",
+          "display_name": "Comprehensive Cancer Center Vienna",
+          "country_code": "AT",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Dey"
+    },
+    {
+      "display_name": "Mélanie Robitaille",
+      "id": "A5010381857",
+      "orcid": "https://orcid.org/0000-0001-9354-5162",
+      "institutions": [
+        {
+          "id": "I4210127029",
+          "display_name": "Institut de génétique et de développement de Rennes",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Robitaille"
+    }
+  ],
+  "publication_year": 2013,
+  "publication_date": "2013-11-01",
+  "type": "article",
+  "cited_by_count": 3,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S106908163",
+    "display_name": "Neuro-Oncology",
+    "issn_l": "1522-8517",
+    "issn": [
+      "1522-8517",
+      "1523-5866"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311648"
+  },
+  "volume": "15",
+  "issue": "suppl 3",
+  "first_page": "iii12",
+  "last_page": "iii31",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://academic.oup.com/neuro-oncology/article-pdf/15/suppl_3/iii12/3802847/not174.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C95444343",
+      "display_name": "Cell biology",
+      "level": 1,
+      "score": 0.51495105
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.50848734
+    },
+    {
+      "id": "C62478195",
+      "display_name": "Signal transduction",
+      "level": 2,
+      "score": 0.49018532
+    },
+    {
+      "id": "C1491633281",
+      "display_name": "Cell",
+      "level": 2,
+      "score": 0.44574818
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.39266157
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.19919112
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12763",
+      "display_name": "ATP Synthase and ATPases Research",
+      "score": 0.9974
+    },
+    {
+      "id": "T13991",
+      "display_name": "Nuclear Receptors and Signaling",
+      "score": 0.9971
+    },
+    {
+      "id": "T11150",
+      "display_name": "Endoplasmic Reticulum Stress and Disease",
+      "score": 0.9969
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1093/neuonc/not174",
+  "pdf_url": "https://academic.oup.com/neuro-oncology/article-pdf/15/suppl_3/iii12/3802847/not174.pdf",
+  "retrieved_date": "2025-07-30T14:25:53.603479",
+  "source_database": "OpenAlex"
+}

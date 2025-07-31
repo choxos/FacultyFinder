@@ -1,0 +1,269 @@
+{
+  "openalex_id": "W2083398732",
+  "doi": "https://doi.org/10.1142/s0219720013410047",
+  "title": "INFLUENCE OF mRNA FEATURES ON siRNA INTERFERENCE EFFICACY",
+  "abstract": "Design of small interference RNA (siRNA) is one of the most important steps in effectively applying the RNA interference (RNAi) technology. The current siRNA design often produces inconsistent design results, which often fail to reliably select siRNA with clear silencing effects. We propose that when designing siRNA, one should consider mRNA global features and near siRNA-binding site local features. By a linear regression study, we discovered strong correlations between inhibitory efficacy and both mRNA global features and neighboring local features. This paper shows that, on average, less GC content, fewer stem secondary structures, and more loop secondary structures of mRNA at both global and local flanking regions of the siRNA binding sites lead to stronger inhibitory efficacy. Thus, the use of mRNA global features and near siRNA-binding site local features are essential to successful gene silencing and hence, a better siRNA design. We use a random forest model to predict siRNA efficacy using siRNA features, mRNA features, and near siRNA binding site features. Our prediction method achieved a correlation coefficient of 0.7 in 10-fold cross validation in contrast to 0.63 when using siRNA features only. Our study demonstrates that considering mRNA and near siRNA binding site features helps improve siRNA design accuracy. The findings may also be helpful in understanding binding efficacy between microRNA and mRNA.",
+  "authors": [
+    {
+      "display_name": "Yuanning Liu",
+      "id": "A5101708144",
+      "orcid": "https://orcid.org/0000-0003-2643-0976",
+      "institutions": [
+        {
+          "id": "I194450716",
+          "display_name": "Jilin University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "YUANNING LIU"
+    },
+    {
+      "display_name": "Yaping Chang",
+      "id": "A5056123975",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I194450716",
+          "display_name": "Jilin University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "YAPING CHANG"
+    },
+    {
+      "display_name": "Chao Zhang",
+      "id": "A5060215226",
+      "orcid": "https://orcid.org/0000-0001-8019-7998",
+      "institutions": [
+        {
+          "id": "I76835614",
+          "display_name": "University of Missouri",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "CHAO ZHANG"
+    },
+    {
+      "display_name": "Qingkai Wei",
+      "id": "A5007511595",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I194450716",
+          "display_name": "Jilin University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "QINGKAI WEI"
+    },
+    {
+      "display_name": "Jingbo Chen",
+      "id": "A5100649322",
+      "orcid": "https://orcid.org/0000-0001-8113-7823",
+      "institutions": [
+        {
+          "id": "I194450716",
+          "display_name": "Jilin University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "JINGBO CHEN"
+    },
+    {
+      "display_name": "Huiling Chen",
+      "id": "A5100648348",
+      "orcid": "https://orcid.org/0000-0002-7714-9693",
+      "institutions": [
+        {
+          "id": "I146620803",
+          "display_name": "Wenzhou University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "HUILING CHEN"
+    },
+    {
+      "display_name": "Dong Xu",
+      "id": "A5082428303",
+      "orcid": "https://orcid.org/0000-0002-4809-0514",
+      "institutions": [
+        {
+          "id": "I76835614",
+          "display_name": "University of Missouri",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "DONG XU"
+    }
+  ],
+  "publication_year": 2012,
+  "publication_date": "2012-12-31",
+  "type": "article",
+  "cited_by_count": 15,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S155349577",
+    "display_name": "Journal of Bioinformatics and Computational Biology",
+    "issn_l": "0219-7200",
+    "issn": [
+      "0219-7200",
+      "1757-6334"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311754"
+  },
+  "volume": "11",
+  "issue": "03",
+  "first_page": "1341004",
+  "last_page": "1341004",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C119056186",
+      "display_name": "Gene silencing",
+      "level": 3,
+      "score": 0.80307937
+    },
+    {
+      "id": "C166703698",
+      "display_name": "RNA interference",
+      "level": 4,
+      "score": 0.793005
+    },
+    {
+      "id": "C22615655",
+      "display_name": "Small interfering RNA",
+      "level": 4,
+      "score": 0.7272612
+    },
+    {
+      "id": "C105580179",
+      "display_name": "Messenger RNA",
+      "level": 3,
+      "score": 0.61840576
+    },
+    {
+      "id": "C60723119",
+      "display_name": "Trans-acting siRNA",
+      "level": 5,
+      "score": 0.5435207
+    },
+    {
+      "id": "C32022120",
+      "display_name": "Interference (communication)",
+      "level": 3,
+      "score": 0.5395327
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.51473975
+    },
+    {
+      "id": "C107824862",
+      "display_name": "Binding site",
+      "level": 2,
+      "score": 0.5130385
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.45586044
+    },
+    {
+      "id": "C2191507",
+      "display_name": "RNA silencing",
+      "level": 5,
+      "score": 0.43499985
+    },
+    {
+      "id": "C67705224",
+      "display_name": "RNA",
+      "level": 3,
+      "score": 0.39622033
+    },
+    {
+      "id": "C95444343",
+      "display_name": "Cell biology",
+      "level": 1,
+      "score": 0.35833246
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.31174293
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.2545075
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.22251248
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.13343495
+    },
+    {
+      "id": "C127162648",
+      "display_name": "Channel (broadcasting)",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10725",
+      "display_name": "RNA Interference and Gene Delivery",
+      "score": 1.0
+    },
+    {
+      "id": "T10207",
+      "display_name": "Advanced biosensing and bioanalysis techniques",
+      "score": 0.999
+    },
+    {
+      "id": "T10062",
+      "display_name": "MicroRNA in disease regulation",
+      "score": 0.992
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1142/s0219720013410047",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:25:00.293207",
+  "source_database": "OpenAlex"
+}

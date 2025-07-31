@@ -1,0 +1,248 @@
+{
+  "openalex_id": "W2100514499",
+  "doi": "https://doi.org/10.1109/robot.2009.5152219",
+  "title": "A versatile wire robot concept as a haptic interface for sport simulation",
+  "abstract": "This paper presents the design of a new user-cooperative rope robot. This robot serves as a large-scale haptic interface in a multi-modal Cave environment used for sport simulation. In contrast to current rope robots, the configuration of the presented robot is adaptable to different simulation tasks what makes the robot more versatile. However, this adaptability and the high dynamics in sports lead to challenging requirements and specific design criteria of the hardware components. We present the requirements on the single robot components as well as the design of the entire setup optimized in terms of user-cooperativity and versatility. The setup includes sensors to measure the relevant parameters for user-cooperative control, i.e. position with a high resolution and the rope forces. Furthermore, an algorithm is introduced, which calculates the distance between the single ropes and the user in order to avoid collisions between the ropes and the user. Single points on the user's body are, therefore, tracked with a motion tracking system; the user's single body parts are then represented by geometrical objects whose distances to the ropes are calculated. The algorithm is programmed in such way that the collision detection runs in real-time. Both, the hardware and the algorithm, were evaluated experimentally in two applications, a rowing simulator and a tennis application. The hardware concept combined with the distance calculation allows the use of new kinematic concepts and expands the spectrum of realizable movement tasks that can be implemented into the Cave environment.",
+  "authors": [
+    {
+      "display_name": "Joachim von Zitzewitz",
+      "id": "A5048613608",
+      "orcid": "https://orcid.org/0000-0002-4662-9088",
+      "institutions": [
+        {
+          "id": "I35440088",
+          "display_name": "ETH Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. v. Zitzewitz"
+    },
+    {
+      "display_name": "Georg Rauter",
+      "id": "A5046591192",
+      "orcid": "https://orcid.org/0000-0001-9089-8181",
+      "institutions": [
+        {
+          "id": "I35440088",
+          "display_name": "ETH Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Rauter"
+    },
+    {
+      "display_name": "Raphael S. Steiner",
+      "id": "A5072919584",
+      "orcid": "https://orcid.org/0000-0001-8391-8949",
+      "institutions": [
+        {
+          "id": "I35440088",
+          "display_name": "ETH Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Steiner"
+    },
+    {
+      "display_name": "Andreas Brunschweiler",
+      "id": "A5015168585",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I35440088",
+          "display_name": "ETH Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Brunschweiler"
+    },
+    {
+      "display_name": "Robert Riener",
+      "id": "A5053676944",
+      "orcid": "https://orcid.org/0000-0002-1726-2950",
+      "institutions": [
+        {
+          "id": "I35440088",
+          "display_name": "ETH Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        },
+        {
+          "id": "I202697423",
+          "display_name": "University of Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Riener"
+    }
+  ],
+  "publication_year": 2009,
+  "publication_date": "2009-05-01",
+  "type": "article",
+  "cited_by_count": 54,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "313",
+  "last_page": "318",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://www.zora.uzh.ch/id/eprint/29365/10/Zitzewitz.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C90509273",
+      "display_name": "Robot",
+      "level": 2,
+      "score": 0.6822982
+    },
+    {
+      "id": "C162269090",
+      "display_name": "Rope",
+      "level": 2,
+      "score": 0.65448034
+    },
+    {
+      "id": "C44154836",
+      "display_name": "Simulation",
+      "level": 1,
+      "score": 0.57303077
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5568058
+    },
+    {
+      "id": "C152086174",
+      "display_name": "Haptic technology",
+      "level": 2,
+      "score": 0.5385685
+    },
+    {
+      "id": "C58581272",
+      "display_name": "Workspace",
+      "level": 3,
+      "score": 0.5023668
+    },
+    {
+      "id": "C199668693",
+      "display_name": "Collision detection",
+      "level": 3,
+      "score": 0.501287
+    },
+    {
+      "id": "C39920418",
+      "display_name": "Kinematics",
+      "level": 2,
+      "score": 0.48015755
+    },
+    {
+      "id": "C121704057",
+      "display_name": "Collision",
+      "level": 2,
+      "score": 0.438831
+    },
+    {
+      "id": "C113843644",
+      "display_name": "Interface (matter)",
+      "level": 4,
+      "score": 0.421603
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.20771459
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.15300816
+    },
+    {
+      "id": "C157915830",
+      "display_name": "Bubble",
+      "level": 2,
+      "score": 0.10128054
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C74650414",
+      "display_name": "Classical mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C129307140",
+      "display_name": "Maximum bubble pressure method",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "C173608175",
+      "display_name": "Parallel computing",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10868",
+      "display_name": "Soft Robotics and Applications",
+      "score": 0.9991
+    },
+    {
+      "id": "T10653",
+      "display_name": "Robot Manipulation and Learning",
+      "score": 0.9985
+    },
+    {
+      "id": "T11687",
+      "display_name": "Teleoperation and Haptic Systems",
+      "score": 0.9979
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/robot.2009.5152219",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:34:32.739902",
+  "source_database": "OpenAlex"
+}

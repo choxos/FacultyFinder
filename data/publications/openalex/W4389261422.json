@@ -1,0 +1,576 @@
+{
+  "openalex_id": "W4389261422",
+  "doi": "https://doi.org/10.1158/1538-7755.disp23-ia050",
+  "title": "Abstract IA050: Biomarker benchmarking across ancestral populations",
+  "abstract": "Abstract Background The US FDA approved pembrolizumab for the treatment of patients (pts) with unresectable or metastatic tumors classified as TMB-high (⩾ 10 variants/Mb) and who have progressed on prior therapy. The degree to which TMB-high (TMB-H) generalizes as a biomarker in diverse ancestral populations remains unknown. Methods Using 3 clinical cohorts from the TCGA, Dana-Farber Cancer Institute (DFCI), and Memorial Sloan Kettering Cancer Center (MSKCC), genetic ancestry was determined for pts diagnosed with solid tumors. For pts in the TCGA cohort, TMB (mutations/Mb) was calculated using 2 methods: 1) Filtering out germline variants using paired normal tissue (gold standard) 2) Using publicly available reference panels to filter out germline variants, which in turn mirrors tumor-only TMB calling at DFCI. TCGA data was used to compute ancestry-specific calibration coefficients for panel tumor-only TMB with TMB paired (tumor/normal) as a benchmark. Ancestry-specific and cancer-specific TMB coefficients from TCGA were then projected onto the TMB estimates in the DFCI and MSKCC cohorts. Overall survival (OS) was estimated using the Kaplan-Meier method. Results In the TCGA cohort (N=3618 pts), germline contamination was associated with TMB (tumor-only) inflation across ancestral populations. TMB inflation was more pronounced in non-Europeans (non-EUR; 2.2 fold inflation) compared to EUR (1.5 fold inflation). We then computed calibration coefficients from the TCGA (methods) and projected them to the DFCI cohort (N=8,193) sequenced by a tumor-only panel. We computed raw TMB and calibrated TMB (TMB-c) for each of the pts at DFCI. Non-EUR with TMB-H tumors had significantly higher rates of false TMB-H (i.e., raw TMB-H corrected to TMB-c low) compared with EUR. Of 100 EUR, 21 would have false TMB-H versus 37 Asians and 44 Blacks. Among pts with non-small cell lung cancer treated with ICIs, those misclassified as TMB-high from tumor-only panels in DFCI and MSKCC cohorts did not associate with improved outcomes comapred to true TMB-high tumors. In the DFCI and MSKCC cohorts, higher TMB was associated with significantly longer OS in EUR but this was not the case in Blacks and Asians, although sample sizes were small. Conclusion: TMB estimates from tumor-only panels overclassified individuals into the TMB-high group due to germline contamination, and this bias was more pronounced in pts with Asian/African ancestry. Misclassifed TMB-H was associated with suboptimal survival outcomes compared to true TMB-H. Ancestry-aware tumor-only TMB calibration and ancestry-diverse biomarker studies are critical to ensure that existing disparities are not exacerbated in precision medicine. Citation Format: Amin Nassar, Elio Adib, Sarah Abou Alaiwi, Talal El Zarif, Stefan Groha, Elie W. Akl, Pier Vitale Nuzzo, Tarek H. Mouhieddine, Tomin Perea-Chamblee, Kodi Taraszka, Habib El-Khoury, Muhieddine Labban, Christopher Fong, Kanika S. Arora, Chris Labaki, Wenxin Xu, Guru P. Sonpavde, Robert I. Haddad, Kent W. Mouw, Marios Giannakis, Stephen Hodi, Noah Zaitlen, Adam Schoenfeld, Nikolaus Schultz, Michael F. Berger, Laura E. MacConaill, Guruprasad Ananda, David J. Kwiatkowski, Toni K. Choueiri, Deborah Schrag, Jian-Carrot Zhang, Alexander Gusev. Biomarker benchmarking across ancestral populations [abstract]. In: Proceedings of the 16th AACR Conference on the Science of Cancer Health Disparities in Racial/Ethnic Minorities and the Medically Underserved; 2023 Sep 29-Oct 2;Orlando, FL. Philadelphia (PA): AACR; Cancer Epidemiol Biomarkers Prev 2023;32(12 Suppl):Abstract nr IA050.",
+  "authors": [
+    {
+      "display_name": "Amin H. Nassar",
+      "id": "A5073541359",
+      "orcid": "https://orcid.org/0000-0002-8084-9105",
+      "institutions": [
+        {
+          "id": "I40253897",
+          "display_name": "University of New Haven",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amin Nassar"
+    },
+    {
+      "display_name": "Elio Adib",
+      "id": "A5065302418",
+      "orcid": "https://orcid.org/0000-0003-0594-7976",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Elio Adib"
+    },
+    {
+      "display_name": "Sarah Abou Alaiwi",
+      "id": "A5001568490",
+      "orcid": "https://orcid.org/0000-0002-7073-3432",
+      "institutions": [
+        {
+          "id": "I40253897",
+          "display_name": "University of New Haven",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I32971472",
+          "display_name": "Yale University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sarah Abou Alaiwi"
+    },
+    {
+      "display_name": "Talal El Zarif",
+      "id": "A5028897583",
+      "orcid": "https://orcid.org/0000-0002-4507-2396",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Talal El Zarif"
+    },
+    {
+      "display_name": "Stefan Groha",
+      "id": "A5015912472",
+      "orcid": "https://orcid.org/0000-0002-0714-5080",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stefan Groha"
+    },
+    {
+      "display_name": "Elie W. Akl",
+      "id": "A5112645201",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elie W. Akl"
+    },
+    {
+      "display_name": "Pier Vitale Nuzzo",
+      "id": "A5053905496",
+      "orcid": "https://orcid.org/0000-0002-5618-8079",
+      "institutions": [
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pier Vitale Nuzzo"
+    },
+    {
+      "display_name": "Tarek H. Mouhieddine",
+      "id": "A5054484092",
+      "orcid": "https://orcid.org/0000-0002-1190-5978",
+      "institutions": [
+        {
+          "id": "I4210101641",
+          "display_name": "Mount Sinai Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tarek H. Mouhieddine"
+    },
+    {
+      "display_name": "Tomin Perea-Chamblee",
+      "id": "A5023817303",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Tomin Perea-Chamblee"
+    },
+    {
+      "display_name": "Kodi Taraszka",
+      "id": "A5076480305",
+      "orcid": "https://orcid.org/0000-0002-1921-2113",
+      "institutions": [
+        {
+          "id": "I1317197149",
+          "display_name": "APLA Health",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kodi Taraszka"
+    },
+    {
+      "display_name": "Habib El‐Khoury",
+      "id": "A5038511686",
+      "orcid": "https://orcid.org/0000-0002-4023-6566",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Habib El-Khoury"
+    },
+    {
+      "display_name": "Muhieddine Labban",
+      "id": "A5067240481",
+      "orcid": "https://orcid.org/0000-0002-4580-1915",
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Muhieddine Labban"
+    },
+    {
+      "display_name": "Christopher J. Fong",
+      "id": "A5038312068",
+      "orcid": "https://orcid.org/0000-0003-1628-3335",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher Fong"
+    },
+    {
+      "display_name": "Kanika Arora",
+      "id": "A5012795135",
+      "orcid": "https://orcid.org/0000-0001-9537-8708",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Kanika S. Arora"
+    },
+    {
+      "display_name": "Chris Labaki",
+      "id": "A5001700576",
+      "orcid": "https://orcid.org/0000-0002-9584-8455",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chris Labaki"
+    },
+    {
+      "display_name": "Wenxin Xu",
+      "id": "A5063368856",
+      "orcid": "https://orcid.org/0000-0002-8450-2037",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wenxin Xu"
+    },
+    {
+      "display_name": "Guru Sonpavde",
+      "id": "A5052069729",
+      "orcid": "https://orcid.org/0000-0002-1010-9611",
+      "institutions": [
+        {
+          "id": "I147878501",
+          "display_name": "Orlando Health",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I2799648416",
+          "display_name": "AdventHealth Orlando",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guru P. Sonpavde"
+    },
+    {
+      "display_name": "Robert I. Haddad",
+      "id": "A5080875822",
+      "orcid": "https://orcid.org/0000-0003-1413-0079",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert I. Haddad"
+    },
+    {
+      "display_name": "Kent W. Mouw",
+      "id": "A5073123534",
+      "orcid": "https://orcid.org/0000-0001-7939-7343",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kent W. Mouw"
+    },
+    {
+      "display_name": "Marios Giannakis",
+      "id": "A5048568172",
+      "orcid": "https://orcid.org/0000-0001-9012-6982",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marios Giannakis"
+    },
+    {
+      "display_name": "Stephen Hodi",
+      "id": "A5037565476",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephen Hodi"
+    },
+    {
+      "display_name": "Noah Zaitlen",
+      "id": "A5058484067",
+      "orcid": "https://orcid.org/0000-0002-3553-3670",
+      "institutions": [
+        {
+          "id": "I1317197149",
+          "display_name": "APLA Health",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Noah Zaitlen"
+    },
+    {
+      "display_name": "Adam J. Schoenfeld",
+      "id": "A5010486958",
+      "orcid": "https://orcid.org/0000-0002-2644-1416",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Adam Schoenfeld"
+    },
+    {
+      "display_name": "Nikolaus Schultz",
+      "id": "A5033125884",
+      "orcid": "https://orcid.org/0000-0002-0131-4904",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Nikolaus Schultz"
+    },
+    {
+      "display_name": "Michael F. Berger",
+      "id": "A5037092952",
+      "orcid": "https://orcid.org/0000-0003-3882-5000",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Michael F. Berger"
+    },
+    {
+      "display_name": "Laura E. MacConaill",
+      "id": "A5088965709",
+      "orcid": "https://orcid.org/0000-0002-0220-4715",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laura E. MacConaill"
+    },
+    {
+      "display_name": "Guruprasad Ananda",
+      "id": "A5014045859",
+      "orcid": "https://orcid.org/0000-0001-6697-3479",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guruprasad Ananda"
+    },
+    {
+      "display_name": "David J. Kwiatkowski",
+      "id": "A5100620133",
+      "orcid": "https://orcid.org/0000-0002-5668-5219",
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David J. Kwiatkowski"
+    },
+    {
+      "display_name": "Toni K. Choueiri",
+      "id": "A5052504518",
+      "orcid": "https://orcid.org/0000-0002-9201-3217",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Toni K. Choueiri"
+    },
+    {
+      "display_name": "Deborah Schrag",
+      "id": "A5088893766",
+      "orcid": "https://orcid.org/0000-0002-4334-5717",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Deborah Schrag"
+    },
+    {
+      "display_name": "Jingyv Zhang",
+      "id": "A5043901744",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Jian-Carrot Zhang"
+    },
+    {
+      "display_name": "Alexander Gusev",
+      "id": "A5044886059",
+      "orcid": "https://orcid.org/0000-0002-7980-4620",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexander Gusev"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-12-01",
+  "type": "article",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S8391440",
+    "display_name": "Cancer Epidemiology Biomarkers & Prevention",
+    "issn_l": "1055-9965",
+    "issn": [
+      "1055-9965",
+      "1538-7755"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320273"
+  },
+  "volume": "32",
+  "issue": "12_Supplement",
+  "first_page": "IA050",
+  "last_page": "IA050",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C72563966",
+      "display_name": "Cohort",
+      "level": 2,
+      "score": 0.6617478
+    },
+    {
+      "id": "C109825262",
+      "display_name": "Germline",
+      "level": 3,
+      "score": 0.6427063
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.5603036
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.51007277
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.50713515
+    },
+    {
+      "id": "C2781197716",
+      "display_name": "Biomarker",
+      "level": 2,
+      "score": 0.46081087
+    },
+    {
+      "id": "C163763905",
+      "display_name": "Precision medicine",
+      "level": 2,
+      "score": 0.45634353
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.45080394
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.37253374
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.22621155
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.17859355
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.1647368
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11287",
+      "display_name": "Cancer Genomics and Diagnostics",
+      "score": 0.9994
+    },
+    {
+      "id": "T11369",
+      "display_name": "Genetic factors in colorectal cancer",
+      "score": 0.9942
+    },
+    {
+      "id": "T11482",
+      "display_name": "RNA modifications and cancer",
+      "score": 0.9888
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1158/1538-7755.disp23-ia050",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:10:26.053518",
+  "source_database": "OpenAlex"
+}

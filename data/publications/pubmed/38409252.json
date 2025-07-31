@@ -1,0 +1,223 @@
+{
+  "pmid": "38409252",
+  "uid": "38409252",
+  "title": "Fully automated deep learning based auto-contouring of liver segments and spleen on contrast-enhanced CT images.",
+  "abstract": "Manual delineation of liver segments on computed tomography (CT) images for primary/secondary liver cancer (LC) patients is time-intensive and prone to inter/intra-observer variability. Therefore, we developed a deep-learning-based model to auto-contour liver segments and spleen on contrast-enhanced CT (CECT) images. We trained two models using 3d patch-based attention U-Net ([Formula: see text] and 3d full resolution of nnU-Net ([Formula: see text] to determine the best architecture ([Formula: see text]. BA was used with vessels ([Formula: see text] and spleen ([Formula: see text] to assess the impact on segment contouring. Models were trained, validated, and tested on 160 ([Formula: see text]), 40 ([Formula: see text]), 33 ([Formula: see text]), 25 (CCH) and 20 (CPVE) CECT of LC patients. [Formula: see text] outperformed [Formula: see text] across all segments with median differences in Dice similarity coefficients (DSC) ranging 0.03-0.05 (p < 0.05). [Formula: see text], and [Formula: see text] were not statistically different (p > 0.05), however, both were slightly better than [Formula: see text] by DSC up to 0.02. The final model, [Formula: see text], showed a mean DSC of 0.89, 0.82, 0.88, 0.87, 0.96, and 0.95 for segments 1, 2, 3, 4, 5-8, and spleen, respectively on entire test sets. Qualitatively, more than 85% of cases showed a Likert score [Formula: see text] 3 on test sets. Our final model provides clinically acceptable contours of liver segments and spleen which are usable in treatment planning.",
+  "authors": [
+    {
+      "last_name": "Gupta",
+      "fore_name": "Aashish C",
+      "initials": "AC",
+      "name": "Aashish C Gupta",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA. acgupta1@mdanderson.org.",
+        "The University of Texas MD Anderson Cancer Center UTHealth Graduate School of Biomedical Sciences, Houston, TX, USA. acgupta1@mdanderson.org."
+      ]
+    },
+    {
+      "last_name": "Cazoulat",
+      "fore_name": "Guillaume",
+      "initials": "G",
+      "name": "Guillaume Cazoulat",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Al Taie",
+      "fore_name": "Mais",
+      "initials": "M",
+      "name": "Mais Al Taie",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Yedururi",
+      "fore_name": "Sireesha",
+      "initials": "S",
+      "name": "Sireesha Yedururi",
+      "affiliations": [
+        "Abdominal Imaging Department, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Rigaud",
+      "fore_name": "Bastien",
+      "initials": "B",
+      "name": "Bastien Rigaud",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Castelo",
+      "fore_name": "Austin",
+      "initials": "A",
+      "name": "Austin Castelo",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Wood",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Wood",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Yu",
+      "fore_name": "Cenji",
+      "initials": "C",
+      "name": "Cenji Yu",
+      "affiliations": [
+        "The University of Texas MD Anderson Cancer Center UTHealth Graduate School of Biomedical Sciences, Houston, TX, USA.",
+        "Department of Radiation Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "O'Connor",
+      "fore_name": "Caleb",
+      "initials": "C",
+      "name": "Caleb O'Connor",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Salem",
+      "fore_name": "Usama",
+      "initials": "U",
+      "name": "Usama Salem",
+      "affiliations": [
+        "Abdominal Imaging Department, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Silva",
+      "fore_name": "Jessica Albuquerque Marques",
+      "initials": "JAM",
+      "name": "Jessica Albuquerque Marques Silva",
+      "affiliations": [
+        "Department of Interventional Radiology, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Jones",
+      "fore_name": "Aaron Kyle",
+      "initials": "AK",
+      "name": "Aaron Kyle Jones",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA.",
+        "The University of Texas MD Anderson Cancer Center UTHealth Graduate School of Biomedical Sciences, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "McCulloch",
+      "fore_name": "Molly",
+      "initials": "M",
+      "name": "Molly McCulloch",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Odisio",
+      "fore_name": "Bruno C",
+      "initials": "BC",
+      "name": "Bruno C Odisio",
+      "affiliations": [
+        "Department of Interventional Radiology, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Koay",
+      "fore_name": "Eugene J",
+      "initials": "EJ",
+      "name": "Eugene J Koay",
+      "affiliations": [
+        "The University of Texas MD Anderson Cancer Center UTHealth Graduate School of Biomedical Sciences, Houston, TX, USA.",
+        "Department of Gastrointestinal Radiation Oncology, The University of Texas MD Anderson Cancer Center, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Brock",
+      "fore_name": "Kristy K",
+      "initials": "KK",
+      "name": "Kristy K Brock",
+      "affiliations": [
+        "Department of Imaging Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA. KKBrock@mdanderson.org.",
+        "The University of Texas MD Anderson Cancer Center UTHealth Graduate School of Biomedical Sciences, Houston, TX, USA. KKBrock@mdanderson.org.",
+        "Department of Radiation Physics, The University of Texas MD Anderson Cancer Center, Houston, TX, USA. KKBrock@mdanderson.org."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Scientific reports",
+    "iso_abbreviation": "Sci Rep",
+    "issn": "2045-2322",
+    "issn_type": "Electronic",
+    "volume": "14",
+    "issue": "1",
+    "pub_year": "2024",
+    "pub_month": "Feb",
+    "pub_day": "26"
+  },
+  "start_page": "4678",
+  "pages": "4678",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Spleen",
+    "Deep Learning",
+    "Tomography, X-Ray Computed",
+    "Liver Neoplasms",
+    "Image Processing, Computer-Assisted"
+  ],
+  "article_ids": {
+    "pubmed": "38409252",
+    "pmc": "PMC10967337",
+    "doi": "10.1038/s41598-024-53997-y",
+    "pii": "10.1038/s41598-024-53997-y"
+  },
+  "doi": "10.1038/s41598-024-53997-y",
+  "pmc_id": "PMC10967337",
+  "dates": {
+    "completed": "2024-02-28",
+    "revised": "2025-01-04"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "P01 CA261669",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P30 CA016672",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA221971",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA235564",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:31:25.724546",
+    "pmid": "38409252"
+  }
+}

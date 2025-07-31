@@ -1,0 +1,583 @@
+{
+  "openalex_id": "W4321055752",
+  "doi": "https://doi.org/10.1007/s42113-022-00160-3",
+  "title": "Bayes Factors for Mixed Models: a Discussion",
+  "abstract": "Abstract van Doorn et al. (2021) outlined various questions that arise when conducting Bayesian model comparison for mixed effects models. Seven response articles offered their own perspective on the preferred setup for mixed model comparison, on the most appropriate specification of prior distributions, and on the desirability of default recommendations. This article presents a round-table discussion that aims to clarify outstanding issues, explore common ground, and outline practical considerations for any researcher wishing to conduct a Bayesian mixed effects model comparison.",
+  "authors": [
+    {
+      "display_name": "Johnny van Doorn",
+      "id": "A5076337994",
+      "orcid": "https://orcid.org/0000-0003-0270-096X",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Johnny van Doorn"
+    },
+    {
+      "display_name": "Julia M. Haaf",
+      "id": "A5012030771",
+      "orcid": "https://orcid.org/0000-0001-5122-706X",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julia M. Haaf"
+    },
+    {
+      "display_name": "Angelika Marlene Stefan",
+      "id": "A5011175123",
+      "orcid": "https://orcid.org/0000-0003-3382-4746",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Angelika M. Stefan"
+    },
+    {
+      "display_name": "Eric‐Jan Wagenmakers",
+      "id": "A5063079579",
+      "orcid": "https://orcid.org/0000-0003-1596-1034",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eric-Jan Wagenmakers"
+    },
+    {
+      "display_name": "Gregory E. Cox",
+      "id": "A5027275905",
+      "orcid": "https://orcid.org/0000-0002-0602-1545",
+      "institutions": [
+        {
+          "id": "I392282",
+          "display_name": "University at Albany, State University of New York",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gregory Edward Cox"
+    },
+    {
+      "display_name": "Clintin P. Davis‐Stober",
+      "id": "A5021103186",
+      "orcid": "https://orcid.org/0000-0002-6836-6979",
+      "institutions": [
+        {
+          "id": "I76835614",
+          "display_name": "University of Missouri",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Clintin P. Davis-Stober"
+    },
+    {
+      "display_name": "Andrew Heathcote",
+      "id": "A5062360625",
+      "orcid": "https://orcid.org/0000-0003-4324-5537",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew Heathcote"
+    },
+    {
+      "display_name": "Daniel W. Heck",
+      "id": "A5032213499",
+      "orcid": "https://orcid.org/0000-0002-6302-9252",
+      "institutions": [
+        {
+          "id": "I161103922",
+          "display_name": "Philipps University of Marburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel W. Heck"
+    },
+    {
+      "display_name": "Michael L. Kalish",
+      "id": "A5056106335",
+      "orcid": "https://orcid.org/0000-0002-2810-7550",
+      "institutions": [
+        {
+          "id": "I70983195",
+          "display_name": "Syracuse University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Kalish"
+    },
+    {
+      "display_name": "David Kellen",
+      "id": "A5039039657",
+      "orcid": "https://orcid.org/0000-0003-1483-7875",
+      "institutions": [
+        {
+          "id": "I70983195",
+          "display_name": "Syracuse University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Kellen"
+    },
+    {
+      "display_name": "Dóra Matzke",
+      "id": "A5034870294",
+      "orcid": "https://orcid.org/0000-0003-1990-0175",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dora Matzke"
+    },
+    {
+      "display_name": "Richard D. Morey",
+      "id": "A5028544438",
+      "orcid": "https://orcid.org/0000-0001-9220-3179",
+      "institutions": [
+        {
+          "id": "I79510175",
+          "display_name": "Cardiff University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard D. Morey"
+    },
+    {
+      "display_name": "Bruno Nicenboim",
+      "id": "A5067693591",
+      "orcid": "https://orcid.org/0000-0002-5176-3943",
+      "institutions": [
+        {
+          "id": "I193700539",
+          "display_name": "Tilburg University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bruno Nicenboim"
+    },
+    {
+      "display_name": "Don van Ravenzwaaij",
+      "id": "A5023033299",
+      "orcid": "https://orcid.org/0000-0002-5030-4091",
+      "institutions": [
+        {
+          "id": "I169381384",
+          "display_name": "University of Groningen",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Don van Ravenzwaaij"
+    },
+    {
+      "display_name": "Jeffrey N. Rouder",
+      "id": "A5041903789",
+      "orcid": "https://orcid.org/0000-0003-2023-3891",
+      "institutions": [
+        {
+          "id": "I204250578",
+          "display_name": "University of California, Irvine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeffrey N. Rouder"
+    },
+    {
+      "display_name": "Daniel J. Schad",
+      "id": "A5002073624",
+      "orcid": "https://orcid.org/0000-0003-2586-6823",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel J. Schad"
+    },
+    {
+      "display_name": "Richard M. Shiffrin",
+      "id": "A5053621830",
+      "orcid": "https://orcid.org/0000-0002-3708-3212",
+      "institutions": [
+        {
+          "id": "I4210119109",
+          "display_name": "Indiana University Bloomington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard M. Shiffrin"
+    },
+    {
+      "display_name": "Henrik Singmann",
+      "id": "A5030631966",
+      "orcid": "https://orcid.org/0000-0002-4842-3657",
+      "institutions": [
+        {
+          "id": "I45129253",
+          "display_name": "University College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Henrik Singmann"
+    },
+    {
+      "display_name": "Shravan Vasishth",
+      "id": "A5019071696",
+      "orcid": "https://orcid.org/0000-0003-2027-1994",
+      "institutions": [
+        {
+          "id": "I176453806",
+          "display_name": "University of Potsdam",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shravan Vasishth"
+    },
+    {
+      "display_name": "João Veríssimo",
+      "id": "A5036645357",
+      "orcid": "https://orcid.org/0000-0002-1264-3017",
+      "institutions": [
+        {
+          "id": "I176453806",
+          "display_name": "University of Potsdam",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "João Veríssimo"
+    },
+    {
+      "display_name": "Florence Bockting",
+      "id": "A5026371505",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I161103922",
+          "display_name": "Philipps University of Marburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Florence Bockting"
+    },
+    {
+      "display_name": "Suyog Chandramouli",
+      "id": "A5050221870",
+      "orcid": "https://orcid.org/0000-0002-3450-1909",
+      "institutions": [
+        {
+          "id": "I133731052",
+          "display_name": "University of Helsinki",
+          "country_code": "FI",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Suyog Chandramouli"
+    },
+    {
+      "display_name": "John C. Dunn",
+      "id": "A5009057782",
+      "orcid": "https://orcid.org/0000-0002-3950-3460",
+      "institutions": [
+        {
+          "id": "I5681781",
+          "display_name": "The University of Adelaide",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John C. Dunn"
+    },
+    {
+      "display_name": "Quentin F. Gronau",
+      "id": "A5090294872",
+      "orcid": "https://orcid.org/0000-0001-5510-6943",
+      "institutions": [
+        {
+          "id": "I78757542",
+          "display_name": "University of Newcastle Australia",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Quentin F. Gronau"
+    },
+    {
+      "display_name": "Maximilian Linde",
+      "id": "A5017478426",
+      "orcid": "https://orcid.org/0000-0001-8421-090X",
+      "institutions": [
+        {
+          "id": "I169381384",
+          "display_name": "University of Groningen",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Maximilian Linde"
+    },
+    {
+      "display_name": "Sara D McMullin",
+      "id": "A5080984976",
+      "orcid": "https://orcid.org/0000-0002-6455-0840",
+      "institutions": [
+        {
+          "id": "I76835614",
+          "display_name": "University of Missouri",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sara D. McMullin"
+    },
+    {
+      "display_name": "Danielle Navarro",
+      "id": "A5045288622",
+      "orcid": "https://orcid.org/0000-0001-7648-6578",
+      "institutions": [
+        {
+          "id": "I31746571",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Danielle Navarro"
+    },
+    {
+      "display_name": "Martin Schnuerch",
+      "id": "A5042185612",
+      "orcid": "https://orcid.org/0000-0001-6531-2265",
+      "institutions": [
+        {
+          "id": "I177802217",
+          "display_name": "University of Mannheim",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin Schnuerch"
+    },
+    {
+      "display_name": "Himanshu Yadav",
+      "id": "A5053431042",
+      "orcid": "https://orcid.org/0000-0002-1145-3238",
+      "institutions": [
+        {
+          "id": "I176453806",
+          "display_name": "University of Potsdam",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Himanshu Yadav"
+    },
+    {
+      "display_name": "Frederik Aust",
+      "id": "A5008630488",
+      "orcid": "https://orcid.org/0000-0003-4900-788X",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Frederik Aust"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-02-16",
+  "type": "article",
+  "cited_by_count": 4,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210221739",
+    "display_name": "Computational Brain & Behavior",
+    "issn_l": "2522-0861",
+    "issn": [
+      "2522-0861",
+      "2522-087X"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319900"
+  },
+  "volume": "6",
+  "issue": "1",
+  "first_page": "140",
+  "last_page": "158",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://link.springer.com/content/pdf/10.1007/s42113-022-00160-3.pdf",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C12713177",
+      "display_name": "Perspective (graphical)",
+      "level": 2,
+      "score": 0.61755836
+    },
+    {
+      "id": "C107673813",
+      "display_name": "Bayesian probability",
+      "level": 2,
+      "score": 0.58834183
+    },
+    {
+      "id": "C207201462",
+      "display_name": "Bayes' theorem",
+      "level": 3,
+      "score": 0.5217867
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.51641256
+    },
+    {
+      "id": "C16012445",
+      "display_name": "Mixed model",
+      "level": 2,
+      "score": 0.5058972
+    },
+    {
+      "id": "C142291917",
+      "display_name": "Bayes factor",
+      "level": 4,
+      "score": 0.4932298
+    },
+    {
+      "id": "C539667460",
+      "display_name": "Management science",
+      "level": 1,
+      "score": 0.42329437
+    },
+    {
+      "id": "C2522767166",
+      "display_name": "Data science",
+      "level": 1,
+      "score": 0.3882304
+    },
+    {
+      "id": "C149782125",
+      "display_name": "Econometrics",
+      "level": 1,
+      "score": 0.35214433
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.25479913
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.22699708
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.15551755
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.13720608
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10206",
+      "display_name": "Meta-analysis and systematic reviews",
+      "score": 0.9965
+    },
+    {
+      "id": "T10243",
+      "display_name": "Statistical Methods and Bayesian Inference",
+      "score": 0.9964
+    },
+    {
+      "id": "T13309",
+      "display_name": "Reliability and Agreement in Measurement",
+      "score": 0.9813
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1007/s42113-022-00160-3",
+  "pdf_url": "https://link.springer.com/content/pdf/10.1007/s42113-022-00160-3.pdf",
+  "retrieved_date": "2025-07-30T14:09:41.719481",
+  "source_database": "OpenAlex"
+}

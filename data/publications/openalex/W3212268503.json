@@ -1,0 +1,565 @@
+{
+  "openalex_id": "W3212268503",
+  "doi": "https://doi.org/10.3389/fmars.2021.772139",
+  "title": "Variability of the Red River Plume in the Gulf of Tonkin as Revealed by Numerical Modeling and Clustering Analysis",
+  "abstract": "We study the daily to interannual variability of the Red River plume in the Gulf of Tonkin from numerical simulations at high resolution over 6 years (2011–2016). Compared with observational data, the model results show good performance. To identify the plume, passive tracers are used in order to (1) help distinguish the freshwater coming from different continental sources, including the Red River branches, and (2) avoid the low salinity effect due to precipitation. We first consider the buoyant plume formed by the Red River waters and three other nearby rivers along the Vietnamese coast. We show that the temporal evolution of the surface coverage of the plume is correlated with the runoff (within a lag), but that the runoff only cannot explain the variability of the river plume; other processes, such as winds and tides, are involved. Using a K-means unsupervised machine learning algorithm, the main patterns of the plume and their evolution in time are analyzed and linked to different environmental conditions. In winter, the plume is narrow and sticks along the coast most of the time due to the downcoast current and northeasterly wind. In early summer, the southwesterly monsoon wind makes the plume flow offshore. The plume reaches its highest coverage in September after the peak of runoff. Vertically, the plume thickness also shows seasonal variations. In winter, the plume is narrow and mixed over the whole water depth, while in summer, the plume can be detached both from the bottom and the coast. The plume can deepen offshore in summer, due to strong wind (in May, June) or specifically to a recurrent eddy occurring near 19°N (in August). This first analysis of the variability of the Red River plume can be used to provide a general picture of the transport of materials from the river to the ocean, for example in case of anthropogenic chemical substances leaked to the river. For this purpose, we provide maps of the receiving basins for the different river systems in the Gulf of Tonkin.",
+  "authors": [
+    {
+      "display_name": "Tung Nguyen‐Duy",
+      "id": "A5038212526",
+      "orcid": "https://orcid.org/0000-0002-0186-7146",
+      "institutions": [
+        {
+          "id": "I17866349",
+          "display_name": "Université Fédérale de Toulouse Midi-Pyrénées",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210112630",
+          "display_name": "Laboratoire d’Études en Géophysique et Océanographie Spatiales",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I94518387",
+          "display_name": "Hanoi University of Science and Technology",
+          "country_code": "VN",
+          "type": "funder"
+        },
+        {
+          "id": "I70349855",
+          "display_name": "Vietnam Academy of Science and Technology",
+          "country_code": "VN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Tung Nguyen-Duy"
+    },
+    {
+      "display_name": "Nadia Ayoub",
+      "id": "A5022226658",
+      "orcid": "https://orcid.org/0000-0002-2702-9220",
+      "institutions": [
+        {
+          "id": "I17866349",
+          "display_name": "Université Fédérale de Toulouse Midi-Pyrénées",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210112630",
+          "display_name": "Laboratoire d’Études en Géophysique et Océanographie Spatiales",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nadia K. Ayoub"
+    },
+    {
+      "display_name": "Patrick Marsaleix",
+      "id": "A5058288665",
+      "orcid": "https://orcid.org/0000-0002-4506-5209",
+      "institutions": [
+        {
+          "id": "I17866349",
+          "display_name": "Université Fédérale de Toulouse Midi-Pyrénées",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210112630",
+          "display_name": "Laboratoire d’Études en Géophysique et Océanographie Spatiales",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patrick Marsaleix"
+    },
+    {
+      "display_name": "Florence Toublanc",
+      "id": "A5009140759",
+      "orcid": "https://orcid.org/0000-0003-4844-7648",
+      "institutions": [
+        {
+          "id": "I4210112630",
+          "display_name": "Laboratoire d’Études en Géophysique et Océanographie Spatiales",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I17866349",
+          "display_name": "Université Fédérale de Toulouse Midi-Pyrénées",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Florence Toublanc"
+    },
+    {
+      "display_name": "Pierre De Mey-Frémaux",
+      "id": "A5070910118",
+      "orcid": "https://orcid.org/0000-0002-4615-1897",
+      "institutions": [
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210112630",
+          "display_name": "Laboratoire d’Études en Géophysique et Océanographie Spatiales",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I17866349",
+          "display_name": "Université Fédérale de Toulouse Midi-Pyrénées",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pierre De Mey-Frémaux"
+    },
+    {
+      "display_name": "Violaine Piton",
+      "id": "A5077338546",
+      "orcid": "https://orcid.org/0000-0002-2947-7326",
+      "institutions": [
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I17866349",
+          "display_name": "Université Fédérale de Toulouse Midi-Pyrénées",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210112630",
+          "display_name": "Laboratoire d’Études en Géophysique et Océanographie Spatiales",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I5124864",
+          "display_name": "École Polytechnique Fédérale de Lausanne",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Violaine Piton"
+    },
+    {
+      "display_name": "Marine Herrmann",
+      "id": "A5015508144",
+      "orcid": "https://orcid.org/0000-0001-6125-7238",
+      "institutions": [
+        {
+          "id": "I4210112630",
+          "display_name": "Laboratoire d’Études en Géophysique et Océanographie Spatiales",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I94518387",
+          "display_name": "Hanoi University of Science and Technology",
+          "country_code": "VN",
+          "type": "funder"
+        },
+        {
+          "id": "I70349855",
+          "display_name": "Vietnam Academy of Science and Technology",
+          "country_code": "VN",
+          "type": "government"
+        },
+        {
+          "id": "I17866349",
+          "display_name": "Université Fédérale de Toulouse Midi-Pyrénées",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marine Herrmann"
+    },
+    {
+      "display_name": "Thomas Duhaut",
+      "id": "A5088206477",
+      "orcid": "https://orcid.org/0009-0006-8772-9655",
+      "institutions": [
+        {
+          "id": "I4210112630",
+          "display_name": "Laboratoire d’Études en Géophysique et Océanographie Spatiales",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I17866349",
+          "display_name": "Université Fédérale de Toulouse Midi-Pyrénées",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Duhaut"
+    },
+    {
+      "display_name": "Manh Cuong Tran",
+      "id": "A5069802336",
+      "orcid": "https://orcid.org/0000-0001-7344-556X",
+      "institutions": [
+        {
+          "id": "I4210161208",
+          "display_name": "Laboratoire d’Océanologie et de Géosciences",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I2279609970",
+          "display_name": "Université de Lille",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210166444",
+          "display_name": "Institut de Recherche pour le Développement",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Manh Cuong Tran"
+    },
+    {
+      "display_name": "Thanh Ngo‐Duc",
+      "id": "A5037141392",
+      "orcid": "https://orcid.org/0000-0003-1444-7498",
+      "institutions": [
+        {
+          "id": "I70349855",
+          "display_name": "Vietnam Academy of Science and Technology",
+          "country_code": "VN",
+          "type": "government"
+        },
+        {
+          "id": "I94518387",
+          "display_name": "Hanoi University of Science and Technology",
+          "country_code": "VN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thanh Ngo-Duc"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-11-12",
+  "type": "article",
+  "cited_by_count": 31,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2596539584",
+    "display_name": "Frontiers in Marine Science",
+    "issn_l": "2296-7745",
+    "issn": [
+      "2296-7745"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320527"
+  },
+  "volume": "8",
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.frontiersin.org/articles/10.3389/fmars.2021.772139/pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2775840915",
+      "display_name": "Plume",
+      "level": 2,
+      "score": 0.96508276
+    },
+    {
+      "id": "C2775835907",
+      "display_name": "Panache",
+      "level": 3,
+      "score": 0.5660405
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.5633036
+    },
+    {
+      "id": "C111368507",
+      "display_name": "Oceanography",
+      "level": 1,
+      "score": 0.52704245
+    },
+    {
+      "id": "C50477045",
+      "display_name": "Surface runoff",
+      "level": 2,
+      "score": 0.51661235
+    },
+    {
+      "id": "C136996986",
+      "display_name": "Monsoon",
+      "level": 2,
+      "score": 0.4504838
+    },
+    {
+      "id": "C81660378",
+      "display_name": "Discharge",
+      "level": 3,
+      "score": 0.4458813
+    },
+    {
+      "id": "C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "score": 0.40954062
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.40897712
+    },
+    {
+      "id": "C91586092",
+      "display_name": "Atmospheric sciences",
+      "level": 1,
+      "score": 0.34795505
+    },
+    {
+      "id": "C76886044",
+      "display_name": "Hydrology (agriculture)",
+      "level": 2,
+      "score": 0.3337901
+    },
+    {
+      "id": "C126645576",
+      "display_name": "Drainage basin",
+      "level": 2,
+      "score": 0.21583182
+    },
+    {
+      "id": "C153294291",
+      "display_name": "Meteorology",
+      "level": 1,
+      "score": 0.21547341
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.09657878
+    },
+    {
+      "id": "C18903297",
+      "display_name": "Ecology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C187320778",
+      "display_name": "Geotechnical engineering",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10255",
+      "display_name": "Oceanographic and Atmospheric Processes",
+      "score": 0.9994
+    },
+    {
+      "id": "T10032",
+      "display_name": "Marine and coastal ecosystems",
+      "score": 0.9961
+    },
+    {
+      "id": "T11061",
+      "display_name": "Ocean Waves and Remote Sensing",
+      "score": 0.9893
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3389/fmars.2021.772139",
+  "pdf_url": "https://www.frontiersin.org/articles/10.3389/fmars.2021.772139/pdf",
+  "retrieved_date": "2025-07-30T15:52:42.542417",
+  "source_database": "OpenAlex"
+}

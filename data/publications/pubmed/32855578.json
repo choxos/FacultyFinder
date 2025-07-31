@@ -1,0 +1,68 @@
+{
+  "pmid": "32855578",
+  "uid": "32855578",
+  "title": "Semantics-enhanced supervised deep autoencoder for depth image-based 3D model retrieval.",
+  "abstract": "Increased accuracy and affordability of depth sensors such as Kinect has created a great depth-data source for various 3D oriented applications. Specifically, 3D model retrieval is attracting attention in the field of computer vision and pattern recognition due to its numerous applications. A cross-domain retrieval approach such as depth image based 3D model retrieval has the challenges of occlusion, noise and view variability present in both query and training data. In this paper, we propose a new supervised deep autoencoder approach followed by semantic modeling to retrieve 3D shapes based on depth images. The key novelty is the two-fold feature abstraction to cope with the incompleteness and ambiguity present in the depth images. First, we develop a supervised autoencoder to extract robust features from both real depth images and synthetic ones rendered from 3D models, which are intended to balance reconstruction and classification capabilities of mix-domain data. Then semantic modeling of the supervised autoencoder features offers the next level of abstraction to cope with the incompleteness and ambiguity of the depth data. It is interesting that unlike any other pairwise model structures, we argue that cross-domain retrieval is still possible using only one single deep network trained on real and synthetic data. The experimental results on the NYUD2 and ModelNet10 datasets demonstrate that the proposed supervised method outperforms the recent approaches for cross-modal 3D model retrieval.",
+  "authors": [
+    {
+      "last_name": "Siddiqua",
+      "fore_name": "Ayesha",
+      "initials": "A",
+      "name": "Ayesha Siddiqua",
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Oklahoma State University, Stillwater, OK 74078, USA."
+      ]
+    },
+    {
+      "last_name": "Fan",
+      "fore_name": "Guoliang",
+      "initials": "G",
+      "name": "Guoliang Fan",
+      "affiliations": [
+        "School of Electrical and Computer Engineering, Oklahoma State University, Stillwater, OK 74078, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Pattern recognition letters",
+    "iso_abbreviation": "Pattern Recognit Lett",
+    "issn": "0167-8655",
+    "issn_type": "Print",
+    "volume": "125",
+    "pub_year": "2019",
+    "pub_month": "Jul",
+    "pub_day": "01"
+  },
+  "start_page": "806",
+  "end_page": "812",
+  "pages": "806-812",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "32855578",
+    "mid": "NIHMS1537122",
+    "pmc": "PMC7448535",
+    "doi": "10.1016/j.patrec.2019.08.004"
+  },
+  "doi": "10.1016/j.patrec.2019.08.004",
+  "pmc_id": "PMC7448535",
+  "dates": {
+    "revised": "2024-03-29"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R15 AG061833",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:58:43.245985",
+    "pmid": "32855578"
+  }
+}

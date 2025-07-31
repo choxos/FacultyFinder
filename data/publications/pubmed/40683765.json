@@ -1,0 +1,137 @@
+{
+  "pmid": "40683765",
+  "uid": "40683765",
+  "title": "2.5D Deep Learning-Based Prediction of Pathological Grading of Clear Cell Renal Cell Carcinoma Using Contrast-Enhanced CT: A Multicenter Study.",
+  "abstract": "RATIONALE AND OBJECTIVES: To develop and validate a deep learning model based on arterial phase-enhanced CT for predicting the pathological grading of clear cell renal cell carcinoma (ccRCC). MATERIALS AND METHODS: Data from 564 patients diagnosed with ccRCC from five distinct hospitals were retrospectively analyzed. Patients from centers 1 and 2 were randomly divided into a training set (n=283) and an internal test set (n=122). Patients from centers 3, 4, and 5 served as external validation sets 1 (n=60), 2 (n=38), and 3 (n=61), respectively. A 2D model, a 2.5D model (three-slice input), and a radiomics-based multi-layer perceptron (MLP) model were developed. Model performance was evaluated using the area under the curve (AUC), accuracy, and sensitivity. RESULTS: The 2.5D model outperformed the 2D and MLP models. Its AUCs were 0.959 (95% CI: 0.9438-0.9738) for the training set, 0.879 (95% CI: 0.8401-0.9180) for the internal test set, and 0.870 (95% CI: 0.8076-0.9334), 0.862 (95% CI: 0.7581-0.9658), and 0.849 (95% CI: 0.7766-0.9216) for the three external validation sets, respectively. The corresponding accuracy values were 0.895, 0.836, 0.827, 0.825, and 0.839. Compared to the MLP model, the 2.5D model achieved significantly higher AUCs (increases of 0.150 [p<0.05], 0.112 [p<0.05], and 0.088 [p<0.05]) and accuracies (increases of 0.077 [p<0.05], 0.075 [p<0.05], and 0.101 [p<0.05]) in the external validation sets. CONCLUSION: The 2.5D model based on 2.5D CT image input demonstrated improved predictive performance for the WHO/ISUP grading of ccRCC.",
+  "authors": [
+    {
+      "last_name": "Yang",
+      "fore_name": "Zi",
+      "initials": "Z",
+      "name": "Zi Yang",
+      "affiliations": [
+        "School of Automation, Hangzhou Dianzi University, Hangzhou 310018, P.R. China (Z.Y., Q.K., Y.Z.)."
+      ]
+    },
+    {
+      "last_name": "Jiang",
+      "fore_name": "Haitao",
+      "initials": "H",
+      "name": "Haitao Jiang",
+      "affiliations": [
+        "Department of Radiology, Zhejiang Cancer Hospital, Hangzhou 310022, China (H.J., X.W., P.J.)."
+      ]
+    },
+    {
+      "last_name": "Shan",
+      "fore_name": "Shuai",
+      "initials": "S",
+      "name": "Shuai Shan",
+      "affiliations": [
+        "Department of Radiology, The First Affiliated Hospital with Nanjing Medical University, Nanjing 210000, China (S.S., Y.Z.)."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Xu",
+      "initials": "X",
+      "name": "Xu Wang",
+      "affiliations": [
+        "Department of Radiology, Zhejiang Cancer Hospital, Hangzhou 310022, China (H.J., X.W., P.J.)."
+      ]
+    },
+    {
+      "last_name": "Kou",
+      "fore_name": "Quanming",
+      "initials": "Q",
+      "name": "Quanming Kou",
+      "affiliations": [
+        "School of Automation, Hangzhou Dianzi University, Hangzhou 310018, P.R. China (Z.Y., Q.K., Y.Z.)."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Chao",
+      "initials": "C",
+      "name": "Chao Wang",
+      "affiliations": [
+        "Department of Radiology, The Second Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou 320000, China (C.W.)."
+      ]
+    },
+    {
+      "last_name": "Jin",
+      "fore_name": "Pengfei",
+      "initials": "P",
+      "name": "Pengfei Jin",
+      "affiliations": [
+        "Department of Radiology, Zhejiang Cancer Hospital, Hangzhou 310022, China (H.J., X.W., P.J.)."
+      ]
+    },
+    {
+      "last_name": "Xu",
+      "fore_name": "Yuyun",
+      "initials": "Y",
+      "name": "Yuyun Xu",
+      "affiliations": [
+        "Department of Radiology, Zhejiang Provincial People's Hospital, Hangzhou 310000, China (Y.X.)."
+      ]
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Xiaohui",
+      "initials": "X",
+      "name": "Xiaohui Liu",
+      "affiliations": [
+        "Department of Radiology, The Quzhou Affiliated Hospital of Wenzhou Medical University, Quzhou People's Hospital, Quzhou 324100, China (X.L.)."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yudong",
+      "initials": "Y",
+      "name": "Yudong Zhang",
+      "affiliations": [
+        "Department of Radiology, The First Affiliated Hospital with Nanjing Medical University, Nanjing 210000, China (S.S., Y.Z.)."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "School of Automation, Hangzhou Dianzi University, Hangzhou 310018, P.R. China (Z.Y., Q.K., Y.Z.). Electronic address: zhangyuqing@hdu.edu.cn."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Academic radiology",
+    "iso_abbreviation": "Acad Radiol",
+    "issn": "1878-4046",
+    "issn_type": "Electronic",
+    "pub_year": "2025",
+    "pub_month": "Jul",
+    "pub_day": "19"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "40683765",
+    "doi": "10.1016/j.acra.2025.06.056",
+    "pii": "S1076-6332(25)00636-1"
+  },
+  "doi": "10.1016/j.acra.2025.06.056",
+  "dates": {
+    "revised": "2025-07-19"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.775955",
+    "pmid": "40683765"
+  }
+}

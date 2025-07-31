@@ -1,0 +1,687 @@
+{
+  "pmid": "24092746",
+  "uid": "24092746",
+  "title": "Integrative annotation of variants from 1092 humans: application to cancer genomics.",
+  "abstract": "Interpreting variants, especially noncoding ones, in the increasing number of personal genomes is challenging. We used patterns of polymorphisms in functionally annotated regions in 1092 humans to identify deleterious variants; then we experimentally validated candidates. We analyzed both coding and noncoding regions, with the former corroborating the latter. We found regions particularly sensitive to mutations (\"ultrasensitive\") and variants that are disruptive because of mechanistic effects on transcription-factor binding (that is, \"motif-breakers\"). We also found variants in regions with higher network centrality tend to be deleterious. Insertions and deletions followed a similar pattern to single-nucleotide variants, with some notable exceptions (e.g., certain deletions and enhancers). On the basis of these patterns, we developed a computational tool (FunSeq), whose application to ~90 cancer genomes reveals nearly a hundred candidate noncoding drivers.",
+  "authors": [
+    {
+      "last_name": "Khurana",
+      "fore_name": "Ekta",
+      "initials": "E",
+      "name": "Ekta Khurana",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA.",
+        "Department of Molecular Biophysics and Biochemistry, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Fu",
+      "fore_name": "Yao",
+      "initials": "Y",
+      "name": "Yao Fu",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Colonna",
+      "fore_name": "Vincenza",
+      "initials": "V",
+      "name": "Vincenza Colonna",
+      "affiliations": [
+        "Wellcome Trust Sanger Institute, Wellcome Trust Genome Campus, Cambridge, CB10 1SA, UK.",
+        "Institute of Genetics and Biophysics, National Research Council (CNR), 80131 Naples, Italy."
+      ]
+    },
+    {
+      "last_name": "Mu",
+      "fore_name": "Xinmeng Jasmine",
+      "initials": "XJ",
+      "name": "Xinmeng Jasmine Mu",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Kang",
+      "fore_name": "Hyun Min",
+      "initials": "HM",
+      "name": "Hyun Min Kang",
+      "affiliations": [
+        "Center for Statistical Genetics, Biostatistics, University of Michigan, Ann Arbor, MI 48109, USA."
+      ]
+    },
+    {
+      "last_name": "Lappalainen",
+      "fore_name": "Tuuli",
+      "initials": "T",
+      "name": "Tuuli Lappalainen",
+      "affiliations": [
+        "Department of Genetic Medicine and Development, University of Geneva Medical School, 1211 Geneva, Switzerland.",
+        "Institute for Genetics and Genomics in Geneva (iGE3), University of Geneva, 1211 Geneva, Switzerland.",
+        "Swiss Institute of Bioinformatics, 1211 Geneva, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Sboner",
+      "fore_name": "Andrea",
+      "initials": "A",
+      "name": "Andrea Sboner",
+      "affiliations": [
+        "Institute for Precision Medicine and the Department of Pathology and Laboratory Medicine, Weill Cornell Medical College and New York-Presbyterian Hospital, New York, NY 10065, USA.",
+        "The HRH Prince Alwaleed Bin Talal Bin Abdulaziz Alsaud Institute for Computational Biomedicine, Weill Cornell Medical College, New York, NY 10021, USA."
+      ]
+    },
+    {
+      "last_name": "Lochovsky",
+      "fore_name": "Lucas",
+      "initials": "L",
+      "name": "Lucas Lochovsky",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Jieming",
+      "initials": "J",
+      "name": "Jieming Chen",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA.",
+        "Integrated Graduate Program in Physical and Engineering Biology, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Harmanci",
+      "fore_name": "Arif",
+      "initials": "A",
+      "name": "Arif Harmanci",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA.",
+        "Department of Molecular Biophysics and Biochemistry, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Das",
+      "fore_name": "Jishnu",
+      "initials": "J",
+      "name": "Jishnu Das",
+      "affiliations": [
+        "Department of Biological Statistics and Computational Biology, Cornell University, Ithaca, NY 14853, USA.",
+        "Weill Institute for Cell and Molecular Biology, Cornell University, Ithaca, NY 14853, USA."
+      ]
+    },
+    {
+      "last_name": "Abyzov",
+      "fore_name": "Alexej",
+      "initials": "A",
+      "name": "Alexej Abyzov",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA.",
+        "Department of Molecular Biophysics and Biochemistry, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Balasubramanian",
+      "fore_name": "Suganthi",
+      "initials": "S",
+      "name": "Suganthi Balasubramanian",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA.",
+        "Department of Molecular Biophysics and Biochemistry, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Beal",
+      "fore_name": "Kathryn",
+      "initials": "K",
+      "name": "Kathryn Beal",
+      "affiliations": [
+        "European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, UK."
+      ]
+    },
+    {
+      "last_name": "Chakravarty",
+      "fore_name": "Dimple",
+      "initials": "D",
+      "name": "Dimple Chakravarty",
+      "affiliations": [
+        "Institute for Precision Medicine and the Department of Pathology and Laboratory Medicine, Weill Cornell Medical College and New York-Presbyterian Hospital, New York, NY 10065, USA."
+      ]
+    },
+    {
+      "last_name": "Challis",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Challis",
+      "affiliations": [
+        "Baylor College of Medicine, Human Genome Sequencing Center, Houston, TX 77030, USA."
+      ]
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Yuan",
+      "initials": "Y",
+      "name": "Yuan Chen",
+      "affiliations": [
+        "Wellcome Trust Sanger Institute, Wellcome Trust Genome Campus, Cambridge, CB10 1SA, UK."
+      ]
+    },
+    {
+      "last_name": "Clarke",
+      "fore_name": "Declan",
+      "initials": "D",
+      "name": "Declan Clarke",
+      "affiliations": [
+        "Department of Chemistry, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Clarke",
+      "fore_name": "Laura",
+      "initials": "L",
+      "name": "Laura Clarke",
+      "affiliations": [
+        "European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, UK."
+      ]
+    },
+    {
+      "last_name": "Cunningham",
+      "fore_name": "Fiona",
+      "initials": "F",
+      "name": "Fiona Cunningham",
+      "affiliations": [
+        "European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, UK."
+      ]
+    },
+    {
+      "last_name": "Evani",
+      "fore_name": "Uday S",
+      "initials": "US",
+      "name": "Uday S Evani",
+      "affiliations": [
+        "Baylor College of Medicine, Human Genome Sequencing Center, Houston, TX 77030, USA."
+      ]
+    },
+    {
+      "last_name": "Flicek",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Flicek",
+      "affiliations": [
+        "European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, UK."
+      ]
+    },
+    {
+      "last_name": "Fragoza",
+      "fore_name": "Robert",
+      "initials": "R",
+      "name": "Robert Fragoza",
+      "affiliations": [
+        "Weill Institute for Cell and Molecular Biology, Cornell University, Ithaca, NY 14853, USA.",
+        "Department of Molecular Biology and Genetics, Cornell University, Ithaca, NY 14853, USA."
+      ]
+    },
+    {
+      "last_name": "Garrison",
+      "fore_name": "Erik",
+      "initials": "E",
+      "name": "Erik Garrison",
+      "affiliations": [
+        "Department of Biology, Boston College, Chestnut Hill, MA 02467, USA."
+      ]
+    },
+    {
+      "last_name": "Gibbs",
+      "fore_name": "Richard",
+      "initials": "R",
+      "name": "Richard Gibbs",
+      "affiliations": [
+        "Baylor College of Medicine, Human Genome Sequencing Center, Houston, TX 77030, USA."
+      ]
+    },
+    {
+      "last_name": "Gümüş",
+      "fore_name": "Zeynep H",
+      "initials": "ZH",
+      "name": "Zeynep H Gümüş",
+      "affiliations": [
+        "The HRH Prince Alwaleed Bin Talal Bin Abdulaziz Alsaud Institute for Computational Biomedicine, Weill Cornell Medical College, New York, NY 10021, USA.",
+        "Department of Physiology and Biophysics, Weill Cornell Medical College, New York, NY, 10065, USA."
+      ]
+    },
+    {
+      "last_name": "Herrero",
+      "fore_name": "Javier",
+      "initials": "J",
+      "name": "Javier Herrero",
+      "affiliations": [
+        "European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, UK."
+      ]
+    },
+    {
+      "last_name": "Kitabayashi",
+      "fore_name": "Naoki",
+      "initials": "N",
+      "name": "Naoki Kitabayashi",
+      "affiliations": [
+        "Institute for Precision Medicine and the Department of Pathology and Laboratory Medicine, Weill Cornell Medical College and New York-Presbyterian Hospital, New York, NY 10065, USA."
+      ]
+    },
+    {
+      "last_name": "Kong",
+      "fore_name": "Yong",
+      "initials": "Y",
+      "name": "Yong Kong",
+      "affiliations": [
+        "Department of Molecular Biophysics and Biochemistry, Yale University, New Haven, CT 06520, USA.",
+        "Keck Biotechnology Resource Laboratory, Yale University, New Haven, CT 06511, USA."
+      ]
+    },
+    {
+      "last_name": "Lage",
+      "fore_name": "Kasper",
+      "initials": "K",
+      "name": "Kasper Lage",
+      "affiliations": [
+        "Pediatric Surgical Research Laboratories, MassGeneral Hospital for Children, Massachusetts General Hospital, Boston, MA 02114, USA.",
+        "Analytical and Translational Genetics Unit, Massachusetts General Hospital, Boston, MA 02114, USA.",
+        "Harvard Medical School, Boston, MA 02115, USA.",
+        "Center for Biological Sequence Analysis, Department of Systems Biology, Technical University of Denmark, Lyngby, Denmark.",
+        "Center for Protein Research, University of Copenhagen, Copenhagen, Denmark."
+      ]
+    },
+    {
+      "last_name": "Liluashvili",
+      "fore_name": "Vaja",
+      "initials": "V",
+      "name": "Vaja Liluashvili",
+      "affiliations": [
+        "The HRH Prince Alwaleed Bin Talal Bin Abdulaziz Alsaud Institute for Computational Biomedicine, Weill Cornell Medical College, New York, NY 10021, USA.",
+        "Department of Physiology and Biophysics, Weill Cornell Medical College, New York, NY, 10065, USA."
+      ]
+    },
+    {
+      "last_name": "Lipkin",
+      "fore_name": "Steven M",
+      "initials": "SM",
+      "name": "Steven M Lipkin",
+      "affiliations": [
+        "Department of Medicine, Weill Cornell Medical College, New York, NY 10065, USA."
+      ]
+    },
+    {
+      "last_name": "MacArthur",
+      "fore_name": "Daniel G",
+      "initials": "DG",
+      "name": "Daniel G MacArthur",
+      "affiliations": [
+        "Analytical and Translational Genetics Unit, Massachusetts General Hospital, Boston, MA 02114, USA.",
+        "Program in Medical and Population Genetics, Broad Institute of Harvard and Massachusetts Institute of Technology (MIT), Cambridge, MA 02142, USA."
+      ]
+    },
+    {
+      "last_name": "Marth",
+      "fore_name": "Gabor",
+      "initials": "G",
+      "name": "Gabor Marth",
+      "affiliations": [
+        "Department of Biology, Boston College, Chestnut Hill, MA 02467, USA."
+      ]
+    },
+    {
+      "last_name": "Muzny",
+      "fore_name": "Donna",
+      "initials": "D",
+      "name": "Donna Muzny",
+      "affiliations": [
+        "Baylor College of Medicine, Human Genome Sequencing Center, Houston, TX 77030, USA."
+      ]
+    },
+    {
+      "last_name": "Pers",
+      "fore_name": "Tune H",
+      "initials": "TH",
+      "name": "Tune H Pers",
+      "affiliations": [
+        "Center for Biological Sequence Analysis, Department of Systems Biology, Technical University of Denmark, Lyngby, Denmark.",
+        "Division of Endocrinology and Center for Basic and Translational Obesity Research, Children's Hospital, Boston, MA 02115, USA.",
+        "Broad Institute of MIT and Harvard, Cambridge, MA 02142, USA."
+      ]
+    },
+    {
+      "last_name": "Ritchie",
+      "fore_name": "Graham R S",
+      "initials": "GRS",
+      "name": "Graham R S Ritchie",
+      "affiliations": [
+        "European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, Cambridge CB10 1SD, UK."
+      ]
+    },
+    {
+      "last_name": "Rosenfeld",
+      "fore_name": "Jeffrey A",
+      "initials": "JA",
+      "name": "Jeffrey A Rosenfeld",
+      "affiliations": [
+        "Department of Medicine, Rutgers New Jersey Medical School, Newark, NJ 07101, USA.",
+        "IST/High Performance and Research Computing, Rutgers University Newark, NJ 07101, USA.",
+        "Sackler Institute for Comparative Genomics, American Museum of Natural History, New York, NY 10024, USA."
+      ]
+    },
+    {
+      "last_name": "Sisu",
+      "fore_name": "Cristina",
+      "initials": "C",
+      "name": "Cristina Sisu",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA.",
+        "Department of Molecular Biophysics and Biochemistry, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Wei",
+      "fore_name": "Xiaomu",
+      "initials": "X",
+      "name": "Xiaomu Wei",
+      "affiliations": [
+        "Weill Institute for Cell and Molecular Biology, Cornell University, Ithaca, NY 14853, USA.",
+        "Department of Medicine, Weill Cornell Medical College, New York, NY 10065, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA.",
+        "Child Study Center, Yale University, New Haven, CT 06520, USA."
+      ]
+    },
+    {
+      "last_name": "Xue",
+      "fore_name": "Yali",
+      "initials": "Y",
+      "name": "Yali Xue",
+      "affiliations": [
+        "Wellcome Trust Sanger Institute, Wellcome Trust Genome Campus, Cambridge, CB10 1SA, UK."
+      ]
+    },
+    {
+      "last_name": "Yu",
+      "fore_name": "Fuli",
+      "initials": "F",
+      "name": "Fuli Yu",
+      "affiliations": [
+        "Baylor College of Medicine, Human Genome Sequencing Center, Houston, TX 77030, USA."
+      ]
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "last_name": "Dermitzakis",
+      "fore_name": "Emmanouil T",
+      "initials": "ET",
+      "name": "Emmanouil T Dermitzakis",
+      "affiliations": [
+        "Department of Genetic Medicine and Development, University of Geneva Medical School, 1211 Geneva, Switzerland.",
+        "Institute for Genetics and Genomics in Geneva (iGE3), University of Geneva, 1211 Geneva, Switzerland.",
+        "Swiss Institute of Bioinformatics, 1211 Geneva, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Yu",
+      "fore_name": "Haiyuan",
+      "initials": "H",
+      "name": "Haiyuan Yu",
+      "affiliations": [
+        "Department of Biological Statistics and Computational Biology, Cornell University, Ithaca, NY 14853, USA.",
+        "Weill Institute for Cell and Molecular Biology, Cornell University, Ithaca, NY 14853, USA."
+      ]
+    },
+    {
+      "last_name": "Rubin",
+      "fore_name": "Mark A",
+      "initials": "MA",
+      "name": "Mark A Rubin",
+      "affiliations": [
+        "Institute for Precision Medicine and the Department of Pathology and Laboratory Medicine, Weill Cornell Medical College and New York-Presbyterian Hospital, New York, NY 10065, USA."
+      ]
+    },
+    {
+      "last_name": "Tyler-Smith",
+      "fore_name": "Chris",
+      "initials": "C",
+      "name": "Chris Tyler-Smith",
+      "affiliations": [
+        "Wellcome Trust Sanger Institute, Wellcome Trust Genome Campus, Cambridge, CB10 1SA, UK."
+      ]
+    },
+    {
+      "last_name": "Gerstein",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Gerstein",
+      "affiliations": [
+        "Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT 06520, USA.",
+        "Department of Molecular Biophysics and Biochemistry, Yale University, New Haven, CT 06520, USA.",
+        "Department of Computer Science, Yale University, New Haven, CT 06520, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Science (New York, N.Y.)",
+    "iso_abbreviation": "Science",
+    "issn": "1095-9203",
+    "issn_type": "Electronic",
+    "volume": "342",
+    "issue": "6154",
+    "pub_year": "2013",
+    "pub_month": "Oct",
+    "pub_day": "04"
+  },
+  "start_page": "1235587",
+  "pages": "1235587",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Binding Sites",
+    "Genetic Variation",
+    "Genome, Human",
+    "Genomics",
+    "Humans",
+    "Kruppel-Like Transcription Factors",
+    "Molecular Sequence Annotation",
+    "Mutation",
+    "Neoplasms",
+    "Polymorphism, Single Nucleotide",
+    "Population",
+    "RNA, Untranslated",
+    "Selection, Genetic"
+  ],
+  "article_ids": {
+    "pubmed": "24092746",
+    "mid": "NIHMS545446",
+    "pmc": "PMC3947637",
+    "doi": "10.1126/science.1235587"
+  },
+  "doi": "10.1126/science.1235587",
+  "pmc_id": "PMC3947637",
+  "dates": {
+    "completed": "2013-10-29",
+    "revised": "2025-05-29"
+  },
+  "chemicals": [
+    "Kruppel-Like Transcription Factors",
+    "RNA, Untranslated",
+    "ZNF274 protein, human"
+  ],
+  "grants": [
+    {
+      "grant_id": "R01 HG002898",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA152057",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG005718",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HG004719",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "WT090532",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "WT095908",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "WT098051",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "CA167824",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01CA152057",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 GM097358",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "085532",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "U01HG6513",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "WT085532",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "HG005718",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG006513",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01HG4719",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "098051",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "G12 MD007579",
+      "agency": "NIMHD NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P20 MD006899",
+      "agency": "NIMHD NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA167824",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "090532",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "095908",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "R01 CA166661",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U54 HG003079",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "GM104424",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U41 HG007000",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UL1 TR000457",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HG007000",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 CA111275",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 GM104424",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "G12 RR003050",
+      "agency": "NCRR NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.275362",
+    "pmid": "24092746"
+  }
+}

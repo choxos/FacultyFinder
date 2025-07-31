@@ -1,0 +1,257 @@
+{
+  "openalex_id": "W2092108829",
+  "doi": "https://doi.org/10.1109/tnnls.2014.2341655",
+  "title": "On Equivalence of FIS and ELM for Interpretable Rule-Based Knowledge Representation",
+  "abstract": "This paper presents a fuzzy extreme learning machine (F-ELM) that embeds fuzzy membership functions and rules into the hidden layer of extreme learning machine (ELM). Similar to the concept of ELM that employed the random initialization technique, three parameters of F-ELM are randomly assigned. They are the standard deviation of the membership functions, matrix-C (rule-combination matrix), and matrix-D [don't care (DC) matrix]. Fuzzy if-then rules are formulated by the rule-combination Matrix of F-ELM, and a DC approach is adopted to minimize the number of input attributes in the rules. Furthermore, F-ELM utilizes the output weights of the ELM to form the target class and confidence factor for each of the rules. This is to indicate that the corresponding consequent parameters are determined analytically. The operations of F-ELM are equivalent to a fuzzy inference system. Several benchmark data sets and a real world fault detection and diagnosis problem have been used to empirically evaluate the efficacy of the proposed F-ELM in handling pattern classification tasks. The results show that the accuracy rates of F-ELM are comparable (if not superior) to ELM with distinctive ability of providing explicit knowledge in the form of interpretable rule base.",
+  "authors": [
+    {
+      "display_name": "Shen Yuong Wong",
+      "id": "A5062531171",
+      "orcid": "https://orcid.org/0000-0001-6027-5346",
+      "institutions": [
+        {
+          "id": "I79156528",
+          "display_name": "Universiti Tenaga Nasional",
+          "country_code": "MY",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Shen Yuong Wong"
+    },
+    {
+      "display_name": "Keem Siah Yap",
+      "id": "A5091148707",
+      "orcid": "https://orcid.org/0000-0002-5518-5132",
+      "institutions": [
+        {
+          "id": "I79156528",
+          "display_name": "Universiti Tenaga Nasional",
+          "country_code": "MY",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Keem Siah Yap"
+    },
+    {
+      "display_name": "Hwa Jen Yap",
+      "id": "A5068725566",
+      "orcid": "https://orcid.org/0000-0001-7637-9297",
+      "institutions": [
+        {
+          "id": "I33849332",
+          "display_name": "University of Malaya",
+          "country_code": "MY",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Hwa Jen Yap"
+    },
+    {
+      "display_name": "Shing Chiang Tan",
+      "id": "A5053906728",
+      "orcid": "https://orcid.org/0000-0002-1267-1894",
+      "institutions": [
+        {
+          "id": "I173029219",
+          "display_name": "Multimedia University",
+          "country_code": "MY",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Shing Chiang Tan"
+    },
+    {
+      "display_name": "Siow‐Wee Chang",
+      "id": "A5038757453",
+      "orcid": "https://orcid.org/0000-0001-7038-6170",
+      "institutions": [
+        {
+          "id": "I33849332",
+          "display_name": "University of Malaya",
+          "country_code": "MY",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "None Siow Wee Chang"
+    }
+  ],
+  "publication_year": 2014,
+  "publication_date": "2014-08-13",
+  "type": "article",
+  "cited_by_count": 96,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210175523",
+    "display_name": "IEEE Transactions on Neural Networks and Learning Systems",
+    "issn_l": "2162-237X",
+    "issn": [
+      "2162-237X",
+      "2162-2388"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "26",
+  "issue": "7",
+  "first_page": "1417",
+  "last_page": "1430",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C2780150128",
+      "display_name": "Extreme learning machine",
+      "level": 3,
+      "score": 0.84437203
+    },
+    {
+      "id": "C114466953",
+      "display_name": "Initialization",
+      "level": 2,
+      "score": 0.5855243
+    },
+    {
+      "id": "C185798385",
+      "display_name": "Benchmark (surveying)",
+      "level": 2,
+      "score": 0.5259968
+    },
+    {
+      "id": "C106487976",
+      "display_name": "Matrix (chemical analysis)",
+      "level": 2,
+      "score": 0.5210949
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.49678877
+    },
+    {
+      "id": "C58166",
+      "display_name": "Fuzzy logic",
+      "level": 2,
+      "score": 0.4781526
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.45910478
+    },
+    {
+      "id": "C2780049643",
+      "display_name": "Fuzzy rule",
+      "level": 4,
+      "score": 0.41782373
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.41200817
+    },
+    {
+      "id": "C2780069185",
+      "display_name": "Equivalence (formal languages)",
+      "level": 2,
+      "score": 0.41173717
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.37057215
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.35701916
+    },
+    {
+      "id": "C195975749",
+      "display_name": "Fuzzy control system",
+      "level": 3,
+      "score": 0.27300978
+    },
+    {
+      "id": "C118615104",
+      "display_name": "Discrete mathematics",
+      "level": 1,
+      "score": 0.18004468
+    },
+    {
+      "id": "C50644808",
+      "display_name": "Artificial neural network",
+      "level": 2,
+      "score": 0.1686976
+    },
+    {
+      "id": "C159985019",
+      "display_name": "Composite material",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C192562407",
+      "display_name": "Materials science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C13280743",
+      "display_name": "Geodesy",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12676",
+      "display_name": "Machine Learning and ELM",
+      "score": 1.0
+    },
+    {
+      "id": "T10320",
+      "display_name": "Neural Networks and Applications",
+      "score": 0.9891
+    },
+    {
+      "id": "T10062",
+      "display_name": "MicroRNA in disease regulation",
+      "score": 0.9673
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tnnls.2014.2341655",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:25:00.303356",
+  "source_database": "OpenAlex"
+}

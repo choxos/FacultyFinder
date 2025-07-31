@@ -1,0 +1,89 @@
+{
+  "pmid": "33015620",
+  "uid": "33015620",
+  "title": "ComBat-seq: batch effect adjustment for RNA-seq count data.",
+  "abstract": "The benefit of integrating batches of genomic data to increase statistical power is often hindered by batch effects, or unwanted variation in data caused by differences in technical factors across batches. It is therefore critical to effectively address batch effects in genomic data to overcome these challenges. Many existing methods for batch effects adjustment assume the data follow a continuous, bell-shaped Gaussian distribution. However in RNA-seq studies the data are typically skewed, over-dispersed counts, so this assumption is not appropriate and may lead to erroneous results. Negative binomial regression models have been used previously to better capture the properties of counts. We developed a batch correction method, ComBat-seq, using a negative binomial regression model that retains the integer nature of count data in RNA-seq studies, making the batch adjusted data compatible with common differential expression software packages that require integer counts. We show in realistic simulations that the ComBat-seq adjusted data results in better statistical power and control of false positives in differential expression compared to data adjusted by the other available methods. We further demonstrated in a real data example that ComBat-seq successfully removes batch effects and recovers the biological signal in the data.",
+  "authors": [
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "Department of Bioinformatics and Clinical Data Science, Gilead Sciences, Inc., 333 Lakeside Dr, Foster City, CA 94404, USA."
+      ],
+      "orcid": "0000-0002-8519-9463"
+    },
+    {
+      "last_name": "Parmigiani",
+      "fore_name": "Giovanni",
+      "initials": "G",
+      "name": "Giovanni Parmigiani",
+      "affiliations": [
+        "Department of Data Sciences, Dana-Farber Cancer Institute, 450 Brookline Ave, Boston, MA 02215, USA."
+      ],
+      "orcid": "0000-0002-8783-5961"
+    },
+    {
+      "last_name": "Johnson",
+      "fore_name": "W Evan",
+      "initials": "WE",
+      "name": "W Evan Johnson",
+      "affiliations": [
+        "Division of Computational Biomedicine, Boston University School of Medicine, 72 East Concord Street, Boston, MA 02118, USA."
+      ],
+      "orcid": "0000-0002-6247-6595"
+    }
+  ],
+  "journal": {
+    "title": "NAR genomics and bioinformatics",
+    "iso_abbreviation": "NAR Genom Bioinform",
+    "issn": "2631-9268",
+    "issn_type": "Electronic",
+    "volume": "2",
+    "issue": "3",
+    "pub_year": "2020",
+    "pub_month": "Sep"
+  },
+  "start_page": "lqaa078",
+  "pages": "lqaa078",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "33015620",
+    "pmc": "PMC7518324",
+    "doi": "10.1093/nargab/lqaa078",
+    "pii": "lqaa078"
+  },
+  "doi": "10.1093/nargab/lqaa078",
+  "pmc_id": "PMC7518324",
+  "dates": {
+    "revised": "2020-11-19"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 GM083084",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 GM127430",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 CA220413",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.413189",
+    "pmid": "33015620"
+  }
+}

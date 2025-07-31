@@ -1,0 +1,335 @@
+{
+  "openalex_id": "W3176134652",
+  "doi": "https://doi.org/10.18653/v1/2021.acl-short.83",
+  "title": "QA-Driven Zero-shot Slot Filling with Weak Supervision Pretraining",
+  "abstract": "Xinya Du, Luheng He, Qi Li, Dian Yu, Panupong Pasupat, Yuan Zhang. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 2: Short Papers). 2021.",
+  "authors": [
+    {
+      "display_name": "Xinya Du",
+      "id": "A5059181012",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1291425158",
+          "display_name": "Google (United States)",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I84218800",
+          "display_name": "University of California, Davis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xinya Du"
+    },
+    {
+      "display_name": "Luheng He",
+      "id": "A5025887224",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1291425158",
+          "display_name": "Google (United States)",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I84218800",
+          "display_name": "University of California, Davis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Luheng He"
+    },
+    {
+      "display_name": "Qi Li",
+      "id": "A5100350237",
+      "orcid": "https://orcid.org/0000-0002-8095-5573",
+      "institutions": [
+        {
+          "id": "I1291425158",
+          "display_name": "Google (United States)",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I84218800",
+          "display_name": "University of California, Davis",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qi Li"
+    },
+    {
+      "display_name": "Dian Yu",
+      "id": "A5101834699",
+      "orcid": "https://orcid.org/0000-0002-8583-8931",
+      "institutions": [
+        {
+          "id": "I84218800",
+          "display_name": "University of California, Davis",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1291425158",
+          "display_name": "Google (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dian Yu"
+    },
+    {
+      "display_name": "Panupong Pasupat",
+      "id": "A5035867340",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1291425158",
+          "display_name": "Google (United States)",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I84218800",
+          "display_name": "University of California, Davis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Panupong Pasupat"
+    },
+    {
+      "display_name": "Yuan Zhang",
+      "id": "A5100368775",
+      "orcid": "https://orcid.org/0009-0000-8003-0725",
+      "institutions": [
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1291425158",
+          "display_name": "Google (United States)",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I84218800",
+          "display_name": "University of California, Davis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuan Zhang"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-01-01",
+  "type": "article",
+  "cited_by_count": 16,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2021.acl-short.83.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2777045944",
+      "display_name": "Zhàng",
+      "level": 3,
+      "score": 0.6671443
+    },
+    {
+      "id": "C2780813799",
+      "display_name": "Zero (linguistics)",
+      "level": 2,
+      "score": 0.64520615
+    },
+    {
+      "id": "C20556612",
+      "display_name": "Volume (thermodynamics)",
+      "level": 2,
+      "score": 0.5521129
+    },
+    {
+      "id": "C2778344882",
+      "display_name": "Shot (pellet)",
+      "level": 2,
+      "score": 0.52675647
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.524814
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.50891185
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.46445772
+    },
+    {
+      "id": "C18555067",
+      "display_name": "Joint (building)",
+      "level": 2,
+      "score": 0.43197846
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.42552388
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.28242308
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.24223489
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.20304838
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.1695424
+    },
+    {
+      "id": "C192562407",
+      "display_name": "Materials science",
+      "level": 0,
+      "score": 0.124283046
+    },
+    {
+      "id": "C191935318",
+      "display_name": "China",
+      "level": 2,
+      "score": 0.10486153
+    },
+    {
+      "id": "C66938386",
+      "display_name": "Structural engineering",
+      "level": 1,
+      "score": 0.07812247
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.074909836
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C191897082",
+      "display_name": "Metallurgy",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11439",
+      "display_name": "Video Analysis and Summarization",
+      "score": 0.9982
+    },
+    {
+      "id": "T11714",
+      "display_name": "Multimodal Machine Learning Applications",
+      "score": 0.9981
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9969
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2021.acl-short.83",
+  "pdf_url": "https://aclanthology.org/2021.acl-short.83.pdf",
+  "retrieved_date": "2025-07-30T16:04:39.001572",
+  "source_database": "OpenAlex"
+}

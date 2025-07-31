@@ -1,0 +1,157 @@
+{
+  "pmid": "39696605",
+  "uid": "39696605",
+  "title": "XGBoost-SHAP-based interpretable diagnostic framework for knee osteoarthritis: a population-based retrospective cohort study.",
+  "abstract": "OBJECTIVE: To use routine demographic and clinical data to develop an interpretable individual-level machine learning (ML) model to diagnose knee osteoarthritis (KOA) and to identify highly ranked features. METHODS: In this retrospective, population-based cohort study, anonymized questionnaire data was retrieved from the Wu Chuan KOA Study, Inner Mongolia, China. After feature selections, participants were divided in a 7:3 ratio into training and test sets. Class balancing was applied to the training set for data augmentation. Four ML classifiers were compared by cross-validation within the training set and their performance was further analyzed with an unseen test set. Classifications were evaluated using sensitivity, specificity, positive predictive value, negative predictive value, accuracy, area under the curve(AUC), G-means, and F1 scores. The best model was explained using Shapley values to extract highly ranked features. RESULTS: A total of 1188 participants were investigated in this study, among whom 26.3% were diagnosed with KOA. Comparatively, XGBoost with Boruta exhibited the highest classification performance among the four models, with an AUC of 0.758, G-means of 0.800, and F1 scores of 0.703. The SHAP method reveals the top 17 features of KOA according to the importance ranking, and the average of the experience of joint pain was recognized as the most important features. CONCLUSIONS: Our study highlights the usefulness of machine learning in unveiling important factors that influence the diagnosis of KOA to guide new prevention strategies. Further work is needed to validate this approach.",
+  "authors": [
+    {
+      "last_name": "Fan",
+      "fore_name": "Zijuan",
+      "initials": "Z",
+      "name": "Zijuan Fan",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Qingchun Road No. 79, Hangzhou, China.",
+        "Department of Health Statistics, School of Public Health, Sun Yat-sen University, Guangzhou, China."
+      ]
+    },
+    {
+      "last_name": "Song",
+      "fore_name": "Wenzhu",
+      "initials": "W",
+      "name": "Wenzhu Song",
+      "affiliations": [
+        "Department of Big Data in Health Science School of Public Health, Zhejiang University School of Medicine, Hangzhou, Zhejiang, China."
+      ]
+    },
+    {
+      "last_name": "Ke",
+      "fore_name": "Yan",
+      "initials": "Y",
+      "name": "Yan Ke",
+      "affiliations": [
+        "Arthritis Clinic & Research Center, Peking University People's Hospital, Beijing, China."
+      ]
+    },
+    {
+      "last_name": "Jia",
+      "fore_name": "Ligan",
+      "initials": "L",
+      "name": "Ligan Jia",
+      "affiliations": [
+        "School of Computer Science and Technology, Xinjiang University, Urumchi, China."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Songyan",
+      "initials": "S",
+      "name": "Songyan Li",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Qingchun Road No. 79, Hangzhou, China."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Jiao Jiao",
+      "initials": "JJ",
+      "name": "Jiao Jiao Li",
+      "affiliations": [
+        "School of Biomedical Engineering, Faculty of Engineering and IT, University of Technology Sydney, Sydney, Australia."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "Harvard Medical School, Boston Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Lin",
+      "fore_name": "Jianhao",
+      "initials": "J",
+      "name": "Jianhao Lin",
+      "affiliations": [
+        "Arthritis Clinic & Research Center, Peking University People's Hospital, Beijing, China. linjianhao@pkuph.edu.cn."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Bin",
+      "initials": "B",
+      "name": "Bin Wang",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, The First Affiliated Hospital, Zhejiang University School of Medicine, Qingchun Road No. 79, Hangzhou, China. wangbin_pku@zju.edu.cn."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Arthritis research & therapy",
+    "iso_abbreviation": "Arthritis Res Ther",
+    "issn": "1478-6362",
+    "issn_type": "Electronic",
+    "volume": "26",
+    "issue": "1",
+    "pub_year": "2024",
+    "pub_month": "Dec",
+    "pub_day": "19"
+  },
+  "start_page": "213",
+  "pages": "213",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Osteoarthritis, Knee",
+    "Retrospective Studies",
+    "Female",
+    "Male",
+    "Middle Aged",
+    "Machine Learning",
+    "Aged",
+    "Cohort Studies",
+    "China",
+    "Adult",
+    "Surveys and Questionnaires"
+  ],
+  "article_ids": {
+    "pubmed": "39696605",
+    "pmc": "PMC11657490",
+    "doi": "10.1186/s13075-024-03450-2",
+    "pii": "10.1186/s13075-024-03450-2"
+  },
+  "doi": "10.1186/s13075-024-03450-2",
+  "pmc_id": "PMC11657490",
+  "dates": {
+    "completed": "2024-12-19",
+    "revised": "2025-01-04"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "81802204",
+      "agency": "National Natural Science Foundation of China"
+    },
+    {
+      "grant_id": "G2022010-18",
+      "agency": "Alibaba Cloud"
+    },
+    {
+      "grant_id": "2023RC010",
+      "agency": "Zhejiang Medical and Health Science and Technology Project"
+    },
+    {
+      "grant_id": "LTGY23H060007",
+      "agency": "Natural Science Foundation of Zhejiang Province"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.731680",
+    "pmid": "39696605"
+  }
+}

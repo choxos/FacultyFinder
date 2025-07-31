@@ -1,0 +1,268 @@
+{
+  "openalex_id": "W2519235776",
+  "doi": "https://doi.org/10.3390/rs8090733",
+  "title": "Mapping Arctic Plant Functional Type Distributions in the Barrow Environmental Observatory Using WorldView-2 and LiDAR Datasets",
+  "abstract": "Multi-scale modeling of Arctic tundra vegetation requires characterization of the heterogeneous tundra landscape, which includes representation of distinct plant functional types (PFTs). We combined high-resolution multi-spectral remote sensing imagery from the WorldView-2 satellite with light detecting and ranging (LiDAR)-derived digital elevation models (DEM) to characterize the tundra landscape in and around the Barrow Environmental Observatory (BEO), a 3021-hectare research reserve located at the northern edge of the Alaskan Arctic Coastal Plain. Vegetation surveys were conducted during the growing season (June–August) of 2012 from 48 1 m × 1 m plots in the study region for estimating the percent cover of PFTs (i.e., sedges, grasses, forbs, shrubs, lichens and mosses). Statistical relationships were developed between spectral and topographic remote sensing characteristics and PFT fractions at the vegetation plots from field surveys. These derived relationships were employed to statistically upscale PFT fractions for our study region of 586 hectares at 0.25-m resolution around the sampling areas within the BEO, which was bounded by the LiDAR footprint. We employed an unsupervised clustering for stratification of this polygonal tundra landscape and used the clusters for segregating the field data for our upscaling algorithm over our study region, which was an inverse distance weighted (IDW) interpolation. We describe two versions of PFT distribution maps upscaled by IDW from WorldView-2 imagery and LiDAR: (1) a version computed from a single image in the middle of the growing season; and (2) a version computed from multiple images through the growing season. This approach allowed us to quantify the value of phenology for improving PFT distribution estimates. We also evaluated the representativeness of the field surveys by measuring the Euclidean distance between every pixel. This guided the ground-truthing campaign in late July of 2014 for addressing uncertainty based on representativeness analysis by selecting 24 1 m × 1 m plots that were well and poorly represented. Ground-truthing indicated that including phenology had a better accuracy ( R 2 = 0.75 , R M S E = 9.94 ) than the single image upscaling ( R 2 = 0.63 , R M S E = 12.05 ) predicted from IDW. We also updated our upscaling approach to include the 24 ground-truthing plots, and a second ground-truthing campaign in late August of 2014 indicated a better accuracy for the phenology model ( R 2 = 0.61 , R M S E = 13.78 ) than only using the original 48 plots for the phenology model ( R 2 = 0.23 , R M S E = 17.49 ). We believe that the cluster-based IDW upscaling approach and the representativeness analysis offer new insights for upscaling high-resolution data in fragmented landscapes. This analysis and approach provides PFT maps needed to inform land surface models in Arctic ecosystems.",
+  "authors": [
+    {
+      "display_name": "Zachary Langford",
+      "id": "A5078960014",
+      "orcid": "https://orcid.org/0000-0001-7574-4440",
+      "institutions": [
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Zachary Langford"
+    },
+    {
+      "display_name": "Jitendra Kumar",
+      "id": "A5038417949",
+      "orcid": "https://orcid.org/0000-0002-0159-0546",
+      "institutions": [
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jitendra Kumar"
+    },
+    {
+      "display_name": "Forrest M. Hoffman",
+      "id": "A5053220196",
+      "orcid": "https://orcid.org/0000-0001-5802-4134",
+      "institutions": [
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Forrest Hoffman"
+    },
+    {
+      "display_name": "Richard J. Norby",
+      "id": "A5073871288",
+      "orcid": "https://orcid.org/0000-0002-0238-9828",
+      "institutions": [
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard Norby"
+    },
+    {
+      "display_name": "Stan D. Wullschleger",
+      "id": "A5061034566",
+      "orcid": "https://orcid.org/0000-0002-9869-0446",
+      "institutions": [
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stan Wullschleger"
+    },
+    {
+      "display_name": "Victoria Sloan",
+      "id": "A5109383986",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Victoria Sloan"
+    },
+    {
+      "display_name": "Colleen M. Iversen",
+      "id": "A5047874160",
+      "orcid": "https://orcid.org/0000-0001-8293-3450",
+      "institutions": [
+        {
+          "id": "I75027704",
+          "display_name": "University of Tennessee at Knoxville",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1289243028",
+          "display_name": "Oak Ridge National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Colleen Iversen"
+    }
+  ],
+  "publication_year": 2016,
+  "publication_date": "2016-09-06",
+  "type": "article",
+  "cited_by_count": 40,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S43295729",
+    "display_name": "Remote Sensing",
+    "issn_l": "2072-4292",
+    "issn": [
+      "2072-4292"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310310987"
+  },
+  "volume": "8",
+  "issue": "9",
+  "first_page": "733",
+  "last_page": "733",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.mdpi.com/2072-4292/8/9/733/pdf?version=1474354426",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C125069764",
+      "display_name": "Tundra",
+      "level": 3,
+      "score": 0.8140069
+    },
+    {
+      "id": "C51399673",
+      "display_name": "Lidar",
+      "level": 2,
+      "score": 0.7561624
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.6046782
+    },
+    {
+      "id": "C518008717",
+      "display_name": "Arctic",
+      "level": 2,
+      "score": 0.55090207
+    },
+    {
+      "id": "C2776133958",
+      "display_name": "Vegetation (pathology)",
+      "level": 2,
+      "score": 0.49539888
+    },
+    {
+      "id": "C100970517",
+      "display_name": "Physical geography",
+      "level": 1,
+      "score": 0.45909768
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.42972708
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.39852804
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.16463265
+    },
+    {
+      "id": "C111368507",
+      "display_name": "Oceanography",
+      "level": 1,
+      "score": 0.079149246
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11333",
+      "display_name": "Climate change and permafrost",
+      "score": 0.9998
+    },
+    {
+      "id": "T10644",
+      "display_name": "Cryospheric studies and observations",
+      "score": 0.9942
+    },
+    {
+      "id": "T10895",
+      "display_name": "Species Distribution and Climate Change",
+      "score": 0.9833
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3390/rs8090733",
+  "pdf_url": "https://www.mdpi.com/2072-4292/8/9/733/pdf?version=1474354426",
+  "retrieved_date": "2025-07-30T14:58:47.509896",
+  "source_database": "OpenAlex"
+}

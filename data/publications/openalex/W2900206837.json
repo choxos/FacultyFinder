@@ -1,0 +1,401 @@
+{
+  "openalex_id": "W2900206837",
+  "doi": "https://doi.org/10.1093/neuonc/noy148.260",
+  "title": "COMP-05. EVALUATION OF A DEEP LEARNING ARCHITECTURE FOR MRI PREDICTION OF IDH, 1p19q AND TERT IN GLIOMA PATIENTS",
+  "abstract": "Recent studies have highlighted the importance of using molecular biomarkers (IDH, 1p19q, TERT) to group gliomas that have similar clinical behavior, response to therapy, and outcome. An emerging hypothesis is that glioma specific genetic and/or molecular alterations manifest as specific observable changes in MR anatomical imaging. Morphologic and texture features, originating from anatomical MRI, have been investigated as imaging biomarkers to predict MGMT and glioma group status. These texture or morphologic based approaches pose several challenges including requirements for several preprocessing steps such as intensity standardization, skull stripping, and tumor segmentation. Deep learning is an important evolving technology in many different fields, including anatomic imaging, and can be used to empirically identify important features in a variety of modalities, including MRI. Importantly deep learning precludes the need for extensive pre-processing. We describe a convolutional neural network, evaluating resnet50, vgg16, inception and xception neural network architectures, that can predict IDH, 1p19q and TERT status utilizing conventional T2 weighted MRI imaging with intensity normalization and nonuniform intensity normalization (N4) bias corrections. The dataset consisted of 432 images (340 for training and 92 for validation) from patients published by Eckel-Passow et al New England Journal of Medicine (2015). The system achieved a weighted f1 score of 0.901, 0.937 and 0.924 for IDH, 1p19q and TERT prediction on the test dataset, respectively. IDH status was misclassified in 9 out of 92 patients, while 1p19q and TERT status was misclassified in 6 and 7 patients respectively. Our results demonstrate the potential of deep learning architectures applied to conventional MRI to predict molecular glioma groups.",
+  "authors": [
+    {
+      "display_name": "Panagiotis Korfiatis",
+      "id": "A5053303391",
+      "orcid": "https://orcid.org/0000-0003-2516-1751",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Panagiotis Korfiatis"
+    },
+    {
+      "display_name": "Daniel H. Lachance",
+      "id": "A5050683295",
+      "orcid": "https://orcid.org/0000-0002-5475-9931",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel Lachance"
+    },
+    {
+      "display_name": "Ian F. Parney",
+      "id": "A5042333597",
+      "orcid": "https://orcid.org/0000-0002-9702-8047",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ian Parney"
+    },
+    {
+      "display_name": "Jan C. Buckner",
+      "id": "A5034104319",
+      "orcid": "https://orcid.org/0000-0002-8688-266X",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jan Buckner"
+    },
+    {
+      "display_name": "Jeanette E. Eckel‐Passow",
+      "id": "A5040994175",
+      "orcid": "https://orcid.org/0000-0002-6113-1114",
+      "institutions": [
+        {
+          "id": "I1330342723",
+          "display_name": "Mayo Clinic",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeanette Eckel-Passow"
+    },
+    {
+      "display_name": "Paul A. Decker",
+      "id": "A5067380097",
+      "orcid": "https://orcid.org/0000-0002-3756-4227",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul Decker"
+    },
+    {
+      "display_name": "Robert B. Jenkins",
+      "id": "A5060720802",
+      "orcid": "https://orcid.org/0000-0002-4049-694X",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Jenkins"
+    },
+    {
+      "display_name": "Margaret Wrensch",
+      "id": "A5069788891",
+      "orcid": "https://orcid.org/0000-0002-3070-7600",
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Margaret Wrensch"
+    },
+    {
+      "display_name": "John Wiencke",
+      "id": "A5054356906",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John Wiencke"
+    },
+    {
+      "display_name": "Helen Hansen",
+      "id": "A5037274147",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Helen Hansen"
+    },
+    {
+      "display_name": "Terri Rice",
+      "id": "A5111394137",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Terri Rice"
+    },
+    {
+      "display_name": "Lucie McCoy",
+      "id": "A5054987661",
+      "orcid": "https://orcid.org/0000-0002-2728-6083",
+      "institutions": [
+        {
+          "id": "I4210157890",
+          "display_name": "Neurological Surgery",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lucie McCoy"
+    },
+    {
+      "display_name": "Sarah J. Nelson",
+      "id": "A5031916033",
+      "orcid": "https://orcid.org/0000-0001-7015-8442",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sarah Nelson"
+    },
+    {
+      "display_name": "Jennifer Clarke",
+      "id": "A5052248018",
+      "orcid": "https://orcid.org/0000-0002-8054-7342",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennifer Clarke"
+    },
+    {
+      "display_name": "Jennie Taylor",
+      "id": "A5083711110",
+      "orcid": "https://orcid.org/0000-0003-3980-5626",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennie Taylor"
+    },
+    {
+      "display_name": "Tracy Luks",
+      "id": "A5026977235",
+      "orcid": "https://orcid.org/0000-0003-0994-9960",
+      "institutions": [
+        {
+          "id": "I180670191",
+          "display_name": "University of California, San Francisco",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tracy Luks"
+    },
+    {
+      "display_name": "Bradley J. Erickson",
+      "id": "A5008832314",
+      "orcid": "https://orcid.org/0000-0001-7926-6095",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bradley Erickson"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-11-01",
+  "type": "article",
+  "cited_by_count": 3,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S106908163",
+    "display_name": "Neuro-Oncology",
+    "issn_l": "1522-8517",
+    "issn": [
+      "1522-8517",
+      "1523-5866"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311648"
+  },
+  "volume": "20",
+  "issue": "suppl_6",
+  "first_page": "vi64",
+  "last_page": "vi64",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://academic.oup.com/neuro-oncology/article-pdf/20/suppl_6/vi64/26281527/noy148.260.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C108583219",
+      "display_name": "Deep learning",
+      "level": 2,
+      "score": 0.71276903
+    },
+    {
+      "id": "C81363708",
+      "display_name": "Convolutional neural network",
+      "level": 2,
+      "score": 0.66125906
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.56731635
+    },
+    {
+      "id": "C2778227246",
+      "display_name": "Glioma",
+      "level": 2,
+      "score": 0.4732067
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.42499033
+    },
+    {
+      "id": "C143409427",
+      "display_name": "Magnetic resonance imaging",
+      "level": 2,
+      "score": 0.41282025
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.336254
+    },
+    {
+      "id": "C126838900",
+      "display_name": "Radiology",
+      "level": 1,
+      "score": 0.32870492
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12422",
+      "display_name": "Radiomics and Machine Learning in Medical Imaging",
+      "score": 0.9979
+    },
+    {
+      "id": "T12702",
+      "display_name": "Brain Tumor Detection and Classification",
+      "score": 0.9594
+    },
+    {
+      "id": "T10129",
+      "display_name": "Glioma Diagnosis and Treatment",
+      "score": 0.9456
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1093/neuonc/noy148.260",
+  "pdf_url": "https://academic.oup.com/neuro-oncology/article-pdf/20/suppl_6/vi64/26281527/noy148.260.pdf",
+  "retrieved_date": "2025-07-30T14:29:47.526733",
+  "source_database": "OpenAlex"
+}

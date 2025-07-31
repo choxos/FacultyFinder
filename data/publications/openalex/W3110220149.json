@@ -1,0 +1,580 @@
+{
+  "openalex_id": "W3110220149",
+  "doi": "https://doi.org/10.1126/sciadv.abc8696",
+  "title": "Transcriptome and regulatory maps of decidua-derived stromal cells inform gene discovery in preterm birth",
+  "abstract": "Functional annotations of a placental cell genome aid in identifying genes associated with preterm birth.",
+  "authors": [
+    {
+      "display_name": "Noboru J. Sakabe",
+      "id": "A5029264952",
+      "orcid": "https://orcid.org/0000-0003-1817-6090",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Noboru J. Sakabe"
+    },
+    {
+      "display_name": "Ivy Aneas",
+      "id": "A5018622003",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ivy Aneas"
+    },
+    {
+      "display_name": "Nicholas Knoblauch",
+      "id": "A5053483293",
+      "orcid": "https://orcid.org/0000-0002-2890-6520",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicholas Knoblauch"
+    },
+    {
+      "display_name": "Débora R. Sobreira",
+      "id": "A5042269454",
+      "orcid": "https://orcid.org/0000-0002-2232-3922",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Debora R. Sobreira"
+    },
+    {
+      "display_name": "Nicole Clark",
+      "id": "A5034222874",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicole Clark"
+    },
+    {
+      "display_name": "Cristina Paz",
+      "id": "A5028551301",
+      "orcid": "https://orcid.org/0000-0003-1507-0346",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cristina Paz"
+    },
+    {
+      "display_name": "Cynthia Horth",
+      "id": "A5052667150",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cynthia Horth"
+    },
+    {
+      "display_name": "Ryan Ziffra",
+      "id": "A5006765574",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ryan Ziffra"
+    },
+    {
+      "display_name": "Harjot Kaur",
+      "id": "A5103900888",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Harjot Kaur"
+    },
+    {
+      "display_name": "Xiao Liu",
+      "id": "A5100441085",
+      "orcid": "https://orcid.org/0000-0002-8073-0534",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiao Liu"
+    },
+    {
+      "display_name": "Rebecca L. Anderson",
+      "id": "A5102768745",
+      "orcid": "https://orcid.org/0009-0002-6127-3769",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rebecca Anderson"
+    },
+    {
+      "display_name": "Jean Morrison",
+      "id": "A5055176503",
+      "orcid": "https://orcid.org/0000-0003-4829-8283",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jean Morrison"
+    },
+    {
+      "display_name": "Virginia Chu Cheung",
+      "id": "A5103132402",
+      "orcid": "https://orcid.org/0000-0003-2617-823X",
+      "institutions": [
+        {
+          "id": "I111979921",
+          "display_name": "Northwestern University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Virginia C. Cheung"
+    },
+    {
+      "display_name": "Chad A. Grotegut",
+      "id": "A5061597708",
+      "orcid": "https://orcid.org/0000-0002-3511-7642",
+      "institutions": [
+        {
+          "id": "I4210144876",
+          "display_name": "Duke University Health System",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chad Grotegut"
+    },
+    {
+      "display_name": "Timothy E. Reddy",
+      "id": "A5018030255",
+      "orcid": "https://orcid.org/0000-0002-7629-061X",
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Timothy E. Reddy"
+    },
+    {
+      "display_name": "Bo Jacobsson",
+      "id": "A5091876255",
+      "orcid": "https://orcid.org/0000-0001-5079-2374",
+      "institutions": [
+        {
+          "id": "I1333353642",
+          "display_name": "Norwegian Institute of Public Health",
+          "country_code": "NO",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bo Jacobsson"
+    },
+    {
+      "display_name": "Mikko Hallman",
+      "id": "A5014179994",
+      "orcid": "https://orcid.org/0000-0002-8172-729X",
+      "institutions": [
+        {
+          "id": "I2799272722",
+          "display_name": "Oulu University Hospital",
+          "country_code": "FI",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mikko Hallman"
+    },
+    {
+      "display_name": "Kari Teramo",
+      "id": "A5054343558",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I133731052",
+          "display_name": "University of Helsinki",
+          "country_code": "FI",
+          "type": "funder"
+        },
+        {
+          "id": "I2800394112",
+          "display_name": "Helsinki University Hospital",
+          "country_code": "FI",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kari Teramo"
+    },
+    {
+      "display_name": "Amy Murtha",
+      "id": "A5084933705",
+      "orcid": "https://orcid.org/0000-0003-4682-215X",
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amy Murtha"
+    },
+    {
+      "display_name": "John A. Kessler",
+      "id": "A5029832154",
+      "orcid": "https://orcid.org/0000-0003-1948-7712",
+      "institutions": [
+        {
+          "id": "I111979921",
+          "display_name": "Northwestern University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John Kessler"
+    },
+    {
+      "display_name": "William A. Grobman",
+      "id": "A5026803018",
+      "orcid": "https://orcid.org/0000-0002-3979-0738",
+      "institutions": [
+        {
+          "id": "I111979921",
+          "display_name": "Northwestern University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William Grobman"
+    },
+    {
+      "display_name": "Ge Zhang",
+      "id": "A5100326060",
+      "orcid": "https://orcid.org/0000-0002-0543-2254",
+      "institutions": [
+        {
+          "id": "I1285204247",
+          "display_name": "Cincinnati Children's Hospital Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ge Zhang"
+    },
+    {
+      "display_name": "Louis J. Muglia",
+      "id": "A5080833691",
+      "orcid": "https://orcid.org/0000-0002-0301-8770",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Louis J. Muglia"
+    },
+    {
+      "display_name": "Sarosh Rana",
+      "id": "A5030601893",
+      "orcid": "https://orcid.org/0000-0002-5828-7433",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sarosh Rana"
+    },
+    {
+      "display_name": "Vincent J. Lynch",
+      "id": "A5045621140",
+      "orcid": "https://orcid.org/0000-0001-5311-3824",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vincent J. Lynch"
+    },
+    {
+      "display_name": "Gregory E. Crawford",
+      "id": "A5040856457",
+      "orcid": "https://orcid.org/0000-0001-6106-2772",
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gregory E. Crawford"
+    },
+    {
+      "display_name": "Carole Ober",
+      "id": "A5016707790",
+      "orcid": "https://orcid.org/0000-0003-4626-9809",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Carole Ober"
+    },
+    {
+      "display_name": "Xin He",
+      "id": "A5064795764",
+      "orcid": "https://orcid.org/0000-0001-9011-5212",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Xin He"
+    },
+    {
+      "display_name": "Marcelo A. Nóbrega",
+      "id": "A5085696863",
+      "orcid": "https://orcid.org/0000-0002-2134-9661",
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Marcelo A. Nóbrega"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-12-03",
+  "type": "article",
+  "cited_by_count": 39,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2737427234",
+    "display_name": "Science Advances",
+    "issn_l": "2375-2548",
+    "issn": [
+      "2375-2548"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315823"
+  },
+  "volume": "6",
+  "issue": "49",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "http://www.bristol.ac.uk/alspac/external/documents/grant-acknowledgements.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C162317418",
+      "display_name": "Transcriptome",
+      "level": 4,
+      "score": 0.8070328
+    },
+    {
+      "id": "C2780197806",
+      "display_name": "Decidua",
+      "level": 5,
+      "score": 0.735594
+    },
+    {
+      "id": "C16930146",
+      "display_name": "Stromal cell",
+      "level": 2,
+      "score": 0.71544206
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.5438995
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.54097456
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.50044584
+    },
+    {
+      "id": "C60644358",
+      "display_name": "Bioinformatics",
+      "level": 1,
+      "score": 0.384284
+    },
+    {
+      "id": "C150194340",
+      "display_name": "Gene expression",
+      "level": 3,
+      "score": 0.29172063
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.27653158
+    },
+    {
+      "id": "C2779234561",
+      "display_name": "Pregnancy",
+      "level": 2,
+      "score": 0.21863353
+    },
+    {
+      "id": "C172680121",
+      "display_name": "Fetus",
+      "level": 3,
+      "score": 0.19680765
+    },
+    {
+      "id": "C2776953305",
+      "display_name": "Placenta",
+      "level": 4,
+      "score": 0.16860616
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.13771558
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11294",
+      "display_name": "Infant Nutrition and Health",
+      "score": 0.9978
+    },
+    {
+      "id": "T11290",
+      "display_name": "Preterm Birth and Chorioamnionitis",
+      "score": 0.9976
+    },
+    {
+      "id": "T10549",
+      "display_name": "Neonatal Respiratory Health Research",
+      "score": 0.9947
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1126/sciadv.abc8696",
+  "pdf_url": "http://www.bristol.ac.uk/alspac/external/documents/grant-acknowledgements.pdf",
+  "retrieved_date": "2025-07-30T14:41:49.328235",
+  "source_database": "OpenAlex"
+}

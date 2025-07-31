@@ -1,0 +1,239 @@
+{
+  "openalex_id": "W2779927064",
+  "doi": "https://doi.org/10.1515/jag-2017-0023",
+  "title": "An accurate Kriging-based regional ionospheric model using combined GPS/BeiDou observations",
+  "abstract": "Abstract In this study, we propose a regional ionospheric model (RIM) based on both of the GPS-only and the combined GPS/BeiDou observations for single-frequency precise point positioning (SF-PPP) users in Europe. GPS/BeiDou observations from 16 reference stations are processed in the zero-difference mode. A least-squares algorithm is developed to determine the vertical total electron content (VTEC) bi-linear function parameters for a 15-minute time interval. The Kriging interpolation method is used to estimate the VTEC values at a 1 ° × 1 ° grid. The resulting RIMs are validated for PPP applications using GNSS observations from another set of stations. The SF-PPP accuracy and convergence time obtained through the proposed RIMs are computed and compared with those obtained through the international GNSS service global ionospheric maps (IGS-GIM). The results show that the RIMs speed up the convergence time and enhance the overall positioning accuracy in comparison with the IGS-GIM model, particularly the combined GPS/BeiDou-based model.",
+  "authors": [
+    {
+      "display_name": "Mohamed Abdelazeem",
+      "id": "A5020984172",
+      "orcid": "https://orcid.org/0000-0002-6922-3398",
+      "institutions": [
+        {
+          "id": "I86310350",
+          "display_name": "Aswan University",
+          "country_code": "EG",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Mohamed Abdelazeem"
+    },
+    {
+      "display_name": "Rahmi Nurhan Çeli̇k",
+      "id": "A5011836259",
+      "orcid": "https://orcid.org/0000-0002-8131-2879",
+      "institutions": [
+        {
+          "id": "I48912391",
+          "display_name": "Istanbul Technical University",
+          "country_code": "TR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rahmi N. Çelik"
+    },
+    {
+      "display_name": "Ahmed El‐Rabbany",
+      "id": "A5086020074",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I530967",
+          "display_name": "Toronto Metropolitan University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ahmed El-Rabbany"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-12-22",
+  "type": "article",
+  "cited_by_count": 10,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S1710380",
+    "display_name": "Journal of Applied Geodesy",
+    "issn_l": "1862-9016",
+    "issn": [
+      "1862-9016",
+      "1862-9024"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310313990"
+  },
+  "volume": "12",
+  "issue": "1",
+  "first_page": "65",
+  "last_page": "76",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C60229501",
+      "display_name": "Global Positioning System",
+      "level": 2,
+      "score": 0.78087354
+    },
+    {
+      "id": "C13280743",
+      "display_name": "Geodesy",
+      "level": 1,
+      "score": 0.7632722
+    },
+    {
+      "id": "C14279187",
+      "display_name": "GNSS applications",
+      "level": 3,
+      "score": 0.76120114
+    },
+    {
+      "id": "C202511199",
+      "display_name": "Precise Point Positioning",
+      "level": 4,
+      "score": 0.7424418
+    },
+    {
+      "id": "C81692654",
+      "display_name": "Kriging",
+      "level": 2,
+      "score": 0.5426105
+    },
+    {
+      "id": "C180966878",
+      "display_name": "Undulation of the geoid",
+      "level": 4,
+      "score": 0.52801746
+    },
+    {
+      "id": "C165391973",
+      "display_name": "Total electron content",
+      "level": 4,
+      "score": 0.49174502
+    },
+    {
+      "id": "C116403925",
+      "display_name": "Ionosphere",
+      "level": 2,
+      "score": 0.46475637
+    },
+    {
+      "id": "C137800194",
+      "display_name": "Interpolation (computer graphics)",
+      "level": 3,
+      "score": 0.44840765
+    },
+    {
+      "id": "C2777303404",
+      "display_name": "Convergence (economics)",
+      "level": 2,
+      "score": 0.41321215
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.41251212
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.3784093
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.3373664
+    },
+    {
+      "id": "C176379880",
+      "display_name": "TEC",
+      "level": 3,
+      "score": 0.26015002
+    },
+    {
+      "id": "C80989030",
+      "display_name": "Geoid",
+      "level": 3,
+      "score": 0.22287521
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.07487959
+    },
+    {
+      "id": "C8058405",
+      "display_name": "Geophysics",
+      "level": 1,
+      "score": 0.06637344
+    },
+    {
+      "id": "C126042441",
+      "display_name": "Frame (networking)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C50522688",
+      "display_name": "Economic growth",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C162324750",
+      "display_name": "Economics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C113346285",
+      "display_name": "Measured depth",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10159",
+      "display_name": "Ionosphere and magnetosphere dynamics",
+      "score": 0.9999
+    },
+    {
+      "id": "T10655",
+      "display_name": "GNSS positioning and interference",
+      "score": 0.9998
+    },
+    {
+      "id": "T11405",
+      "display_name": "Geophysics and Gravity Measurements",
+      "score": 0.9973
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1515/jag-2017-0023",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:33:47.504341",
+  "source_database": "OpenAlex"
+}

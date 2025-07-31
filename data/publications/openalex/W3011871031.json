@@ -1,0 +1,202 @@
+{
+  "openalex_id": "W3011871031",
+  "doi": "https://doi.org/10.1109/access.2020.2981140",
+  "title": "Robust Video Object Segmentation via Propagating Seams and Matching Superpixels",
+  "abstract": "Video object segmentation aims at separating foreground object from background, and it is far from well solved for different challenges such as deformation, occlusion and motion blurs. This paper proposes a robust video object segmentation method by propagating patch seams and matching superpixels. First, we predict the initial object contour based on pixel-level target labels calculated by patch seam propagation and rough sets. By a patch seam, we map a current patch to its most similar patch from last frame and obtain its labels based on the labels of mapped patch. Second, we utilize superpixels as middle level cues to optimize predicted object contour. The bidirectional distance based on three brightness channels is provided to match superpixels between adjacent frames. Using the boundaries of matched results and initialized object contour, many candidates of object contours are constructed. Third, we define an energy function based on multi-features to measure contour candidates, and the contour with minimum energy is the final segmented result of current frame. Finally, by propagating patch seams and matching superpixels, we compute video object segmentation results frame by frame. Fourteen videos of SegTrack-v2 data are used to evaluate our method. The quantitative and qualitative evaluations show that our method performs better than most present methods especially in dealing with occlusion, deformation and motion blurs.",
+  "authors": [
+    {
+      "display_name": "Yun Liang",
+      "id": "A5100604862",
+      "orcid": "https://orcid.org/0000-0003-0799-0054",
+      "institutions": [
+        {
+          "id": "I101479585",
+          "display_name": "South China Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yun Liang"
+    },
+    {
+      "display_name": "Yuqing Zhang",
+      "id": "A5100401890",
+      "orcid": "https://orcid.org/0000-0002-0015-8874",
+      "institutions": [
+        {
+          "id": "I101479585",
+          "display_name": "South China Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuqing Zhang"
+    },
+    {
+      "display_name": "Yihan Wu",
+      "id": "A5033682600",
+      "orcid": "https://orcid.org/0000-0003-2856-3203",
+      "institutions": [
+        {
+          "id": "I101479585",
+          "display_name": "South China Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yihan Wu"
+    },
+    {
+      "display_name": "Shuqin Tu",
+      "id": "A5003611963",
+      "orcid": "https://orcid.org/0000-0001-5844-2360",
+      "institutions": [
+        {
+          "id": "I101479585",
+          "display_name": "South China Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shuqin Tu"
+    },
+    {
+      "display_name": "Caixing Liu",
+      "id": "A5028057155",
+      "orcid": "https://orcid.org/0000-0002-5485-0196",
+      "institutions": [
+        {
+          "id": "I101479585",
+          "display_name": "South China Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Caixing Liu"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-01-01",
+  "type": "article",
+  "cited_by_count": 10,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2485537415",
+    "display_name": "IEEE Access",
+    "issn_l": "2169-3536",
+    "issn": [
+      "2169-3536"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "8",
+  "issue": null,
+  "first_page": "53766",
+  "last_page": "53776",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09037297.pdf",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.73594254
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.71273696
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.69532937
+    },
+    {
+      "id": "C89600930",
+      "display_name": "Segmentation",
+      "level": 2,
+      "score": 0.64856523
+    },
+    {
+      "id": "C124504099",
+      "display_name": "Image segmentation",
+      "level": 3,
+      "score": 0.5456754
+    },
+    {
+      "id": "C2781238097",
+      "display_name": "Object (grammar)",
+      "level": 2,
+      "score": 0.5391749
+    },
+    {
+      "id": "C165064840",
+      "display_name": "Matching (statistics)",
+      "level": 2,
+      "score": 0.5116361
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.4792414
+    },
+    {
+      "id": "C65885262",
+      "display_name": "Scale-space segmentation",
+      "level": 4,
+      "score": 0.41368347
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.111362785
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11605",
+      "display_name": "Visual Attention and Saliency Detection",
+      "score": 1.0
+    },
+    {
+      "id": "T10627",
+      "display_name": "Advanced Image and Video Retrieval Techniques",
+      "score": 0.9998
+    },
+    {
+      "id": "T10036",
+      "display_name": "Advanced Neural Network Applications",
+      "score": 0.999
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/access.2020.2981140",
+  "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09037297.pdf",
+  "retrieved_date": "2025-07-30T16:05:12.078708",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,100 @@
+{
+  "pmid": "36099006",
+  "uid": "36099006",
+  "title": "Optimizing Health Coaching for Patients With Type 2 Diabetes Using Machine Learning: Model Development and Validation Study.",
+  "abstract": "BACKGROUND: Health coaching is an emerging intervention that has been shown to improve clinical and patient-relevant outcomes for type 2 diabetes. Advances in artificial intelligence may provide an avenue for developing a more personalized, adaptive, and cost-effective approach to diabetes health coaching. OBJECTIVE: We aim to apply Q-learning, a widely used reinforcement learning algorithm, to a diabetes health-coaching data set to develop a model for recommending an optimal coaching intervention at each decision point that is tailored to a patient's accumulated history. METHODS: In this pilot study, we fit a two-stage reinforcement learning model on 177 patients from the intervention arm of a community-based randomized controlled trial conducted in Canada. The policy produced by the reinforcement learning model can recommend a coaching intervention at each decision point that is tailored to a patient's accumulated history and is expected to maximize the composite clinical outcome of hemoglobin A1c reduction and quality of life improvement (normalized to [ ​0, 1 ​], with a higher score being better). Our data, models, and source code are publicly available. RESULTS: Among the 177 patients, the coaching intervention recommended by our policy mirrored the observed diabetes health coach's interventions in 17.5% (n=31) of the patients in stage 1 and 14.1% (n=25) of the patients in stage 2. Where there was agreement in both stages, the average cumulative composite outcome (0.839, 95% CI 0.460-1.220) was better than those for whom the optimal policy agreed with the diabetes health coach in only one stage (0.791, 95% CI 0.747-0.836) or differed in both stages (0.755, 95% CI 0.728-0.781). Additionally, the average cumulative composite outcome predicted for the policy's recommendations was significantly better than that of the observed diabetes health coach's recommendations (tn-1=10.040; P<.001). CONCLUSIONS: Applying reinforcement learning to diabetes health coaching could allow for both the automation of health coaching and an improvement in health outcomes produced by this type of intervention.",
+  "authors": [
+    {
+      "last_name": "Di",
+      "fore_name": "Shuang",
+      "initials": "S",
+      "name": "Shuang Di",
+      "affiliations": [
+        "Centre for Data Science and Digital Health, Hamilton Health Sciences, Hamilton, ON, Canada.",
+        "Dalla Lana School of Public Health, University of Toronto, Toronto, ON, Canada."
+      ],
+      "orcid": "0000-0003-1707-7613"
+    },
+    {
+      "last_name": "Petch",
+      "fore_name": "Jeremy",
+      "initials": "J",
+      "name": "Jeremy Petch",
+      "affiliations": [
+        "Centre for Data Science and Digital Health, Hamilton Health Sciences, Hamilton, ON, Canada.",
+        "Population Health Research Institute, Hamilton Health Sciences, Hamilton, ON, Canada.",
+        "Institute of Health Policy, Management and Evaluation, University of Toronto, Toronto, ON, Canada.",
+        "Department of Medicine, Faculty of Health Sciences, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0003-1614-1046"
+    },
+    {
+      "last_name": "Gerstein",
+      "fore_name": "Hertzel C",
+      "initials": "HC",
+      "name": "Hertzel C Gerstein",
+      "affiliations": [
+        "Population Health Research Institute, Hamilton Health Sciences, Hamilton, ON, Canada.",
+        "Department of Medicine, Faculty of Health Sciences, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0001-8072-2836"
+    },
+    {
+      "last_name": "Zhu",
+      "fore_name": "Ruoqing",
+      "initials": "R",
+      "name": "Ruoqing Zhu",
+      "affiliations": [
+        "Department of Statistics, University of Illinois at Urbana-Champaign, Champaign, IL, United States."
+      ],
+      "orcid": "0000-0002-0753-5716"
+    },
+    {
+      "last_name": "Sherifali",
+      "fore_name": "Diana",
+      "initials": "D",
+      "name": "Diana Sherifali",
+      "affiliations": [
+        "Population Health Research Institute, Hamilton Health Sciences, Hamilton, ON, Canada.",
+        "School of Nursing, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-4423-3848"
+    }
+  ],
+  "journal": {
+    "title": "JMIR formative research",
+    "iso_abbreviation": "JMIR Form Res",
+    "issn": "2561-326X",
+    "issn_type": "Electronic",
+    "volume": "6",
+    "issue": "9",
+    "pub_year": "2022",
+    "pub_month": "Sep",
+    "pub_day": "13"
+  },
+  "start_page": "e37838",
+  "pages": "e37838",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "36099006",
+    "pmc": "PMC9516374",
+    "doi": "10.2196/37838",
+    "pii": "v6i9e37838"
+  },
+  "doi": "10.2196/37838",
+  "pmc_id": "PMC9516374",
+  "dates": {
+    "revised": "2024-09-05"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:58:36.764585",
+    "pmid": "36099006"
+  }
+}

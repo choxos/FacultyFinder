@@ -1,0 +1,319 @@
+{
+  "pmid": "33471219",
+  "uid": "33471219",
+  "title": "Artificial Intelligence-assisted chest X-ray assessment scheme for COVID-19.",
+  "abstract": "OBJECTIVES: To study whether a trained convolutional neural network (CNN) can be of assistance to radiologists in differentiating Coronavirus disease (COVID)-positive from COVID-negative patients using chest X-ray (CXR) through an ambispective clinical study. To identify subgroups of patients where artificial intelligence (AI) can be of particular value and analyse what imaging features may have contributed to the performance of AI by means of visualisation techniques. METHODS: CXR of 487 patients were classified into [4] categories-normal, classical COVID, indeterminate, and non-COVID by consensus opinion of 2 radiologists. CXR which were classified as \"normal\" and \"indeterminate\" were then subjected to analysis by AI, and final categorisation provided as guided by prediction of the network. Precision and recall of the radiologist alone and radiologist assisted by AI were calculated in comparison to reverse transcriptase-polymerase chain reaction (RT-PCR) as the gold standard. Attention maps of the CNN were analysed to understand regions in the CXR important to the AI algorithm in making a prediction. RESULTS: The precision of radiologists improved from 65.9 to 81.9% and recall improved from 17.5 to 71.75 when assistance with AI was provided. AI showed 92% accuracy in classifying \"normal\" CXR into COVID or non-COVID. Analysis of attention maps revealed attention on the cardiac shadow in these \"normal\" radiographs. CONCLUSION: This study shows how deployment of an AI algorithm can complement a human expert in the determination of COVID status. Analysis of the detected features suggests possible subtle cardiac changes, laying ground for further investigative studies into possible cardiac changes. KEY POINTS: • Through an ambispective clinical study, we show how assistance with an AI algorithm can improve recall (sensitivity) and precision (positive predictive value) of radiologists in assessing CXR for possible COVID in comparison to RT-PCR. • We show that AI achieves the best results in images classified as \"normal\" by radiologists. We conjecture that possible subtle cardiac in the CXR, imperceptible to the human eye, may have contributed to this prediction. • The reported results may pave the way for a human computer collaboration whereby the expert with some help from the AI algorithm achieves higher accuracy in predicting COVID status on CXR than previously thought possible when considering either alone.",
+  "authors": [
+    {
+      "last_name": "Rangarajan",
+      "fore_name": "Krithika",
+      "initials": "K",
+      "name": "Krithika Rangarajan",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India. krithikarangarajan86@gmail.com.",
+        "Indian Institute of Technology, Delhi, New Delhi, India. krithikarangarajan86@gmail.com."
+      ],
+      "orcid": "0000-0001-5376-6390"
+    },
+    {
+      "last_name": "Muku",
+      "fore_name": "Sumanyu",
+      "initials": "S",
+      "name": "Sumanyu Muku",
+      "affiliations": [
+        "Indian Institute of Technology, Delhi, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Garg",
+      "fore_name": "Amit Kumar",
+      "initials": "AK",
+      "name": "Amit Kumar Garg",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Gabra",
+      "fore_name": "Pavan",
+      "initials": "P",
+      "name": "Pavan Gabra",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Shankar",
+      "fore_name": "Sujay Halkur",
+      "initials": "SH",
+      "name": "Sujay Halkur Shankar",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Nischal",
+      "fore_name": "Neeraj",
+      "initials": "N",
+      "name": "Neeraj Nischal",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Soni",
+      "fore_name": "Kapil Dev",
+      "initials": "KD",
+      "name": "Kapil Dev Soni",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Bhalla",
+      "fore_name": "Ashu Seith",
+      "initials": "AS",
+      "name": "Ashu Seith Bhalla",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Mohan",
+      "fore_name": "Anant",
+      "initials": "A",
+      "name": "Anant Mohan",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Tiwari",
+      "fore_name": "Pawan",
+      "initials": "P",
+      "name": "Pawan Tiwari",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Bhatnagar",
+      "fore_name": "Sushma",
+      "initials": "S",
+      "name": "Sushma Bhatnagar",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Bansal",
+      "fore_name": "Raghav",
+      "initials": "R",
+      "name": "Raghav Bansal",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Kumar",
+      "fore_name": "Atin",
+      "initials": "A",
+      "name": "Atin Kumar",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Gamanagati",
+      "fore_name": "Shivanand",
+      "initials": "S",
+      "name": "Shivanand Gamanagati",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Aggarwal",
+      "fore_name": "Richa",
+      "initials": "R",
+      "name": "Richa Aggarwal",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Baitha",
+      "fore_name": "Upendra",
+      "initials": "U",
+      "name": "Upendra Baitha",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Biswas",
+      "fore_name": "Ashutosh",
+      "initials": "A",
+      "name": "Ashutosh Biswas",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Kumar",
+      "fore_name": "Arvind",
+      "initials": "A",
+      "name": "Arvind Kumar",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Jorwal",
+      "fore_name": "Pankaj",
+      "initials": "P",
+      "name": "Pankaj Jorwal",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Shalimar",
+      "name": "Shalimar",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Shariff",
+      "fore_name": "A",
+      "initials": "A",
+      "name": "A Shariff",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Wig",
+      "fore_name": "Naveet",
+      "initials": "N",
+      "name": "Naveet Wig",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Subramanium",
+      "fore_name": "Rajeshwari",
+      "initials": "R",
+      "name": "Rajeshwari Subramanium",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Trikha",
+      "fore_name": "Anjan",
+      "initials": "A",
+      "name": "Anjan Trikha",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Malhotra",
+      "fore_name": "Rajesh",
+      "initials": "R",
+      "name": "Rajesh Malhotra",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Guleria",
+      "fore_name": "Randeep",
+      "initials": "R",
+      "name": "Randeep Guleria",
+      "affiliations": [
+        "All India Institute of Medical Sciences, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Namboodiri",
+      "fore_name": "Vinay",
+      "initials": "V",
+      "name": "Vinay Namboodiri",
+      "affiliations": [
+        "Indian Institute of Technology, Kanpur, Kanpur, India."
+      ]
+    },
+    {
+      "last_name": "Banerjee",
+      "fore_name": "Subhashis",
+      "initials": "S",
+      "name": "Subhashis Banerjee",
+      "affiliations": [
+        "Indian Institute of Technology, Delhi, New Delhi, India."
+      ]
+    },
+    {
+      "last_name": "Arora",
+      "fore_name": "Chetan",
+      "initials": "C",
+      "name": "Chetan Arora",
+      "affiliations": [
+        "Indian Institute of Technology, Delhi, New Delhi, India."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "European radiology",
+    "iso_abbreviation": "Eur Radiol",
+    "issn": "1432-1084",
+    "issn_type": "Electronic",
+    "volume": "31",
+    "issue": "8",
+    "pub_year": "2021",
+    "pub_month": "Aug"
+  },
+  "start_page": "6039",
+  "end_page": "6048",
+  "pages": "6039-6048",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Artificial Intelligence",
+    "COVID-19",
+    "Humans",
+    "Radiography, Thoracic",
+    "SARS-CoV-2",
+    "Tomography, X-Ray Computed",
+    "X-Rays"
+  ],
+  "article_ids": {
+    "pubmed": "33471219",
+    "pmc": "PMC7816060",
+    "doi": "10.1007/s00330-020-07628-5",
+    "pii": "10.1007/s00330-020-07628-5"
+  },
+  "doi": "10.1007/s00330-020-07628-5",
+  "pmc_id": "PMC7816060",
+  "dates": {
+    "completed": "2021-07-13",
+    "revised": "2022-01-08"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "A 30 COVID",
+      "agency": "All-India Institute of Medical Sciences"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:22:09.311389",
+    "pmid": "33471219"
+  }
+}

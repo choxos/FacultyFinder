@@ -1,0 +1,351 @@
+{
+  "openalex_id": "W4360821295",
+  "doi": "https://doi.org/10.1016/j.molp.2023.03.012",
+  "title": "Rice Gene Index: A comprehensive pan-genome database for comparative and functional genomics of Asian rice",
+  "abstract": "Asian rice (Oryza sativa) is the staple food for half the world and is a model crop that has been extensively studied. It contributes ∼20% of calories to the human diet (Stein et al., 2018Stein J.C. Yu Y. Copetti D. Zwickl D.J. Zhang L. Zhang C. Chougule K. Gao D. Iwata A. Goicoechea J.L. et al.Genomes of 13 domesticated and wild rice relatives highlight genetic conservation, turnover and innovation across the genus Oryza.Nat. Genet. 2018; 50: 285-296https://doi.org/10.1038/s41588-018-0040-0Crossref PubMed Scopus (278) Google Scholar). With the increase in global population and rapid changes in climate, rice breeders need to develop new and sustainable cultivars with higher yields, healthier grains, and reduced environmental footprints (Wing et al., 2018Wing R.A. Purugganan M.D. Zhang Q. The rice genome revolution: from an ancient grain to Green Super Rice.Nat. Rev. Genet. 2018; 19: 505-517https://doi.org/10.1038/s41576-018-0024-zCrossref PubMed Scopus (182) Google Scholar). Since the first gold-standard reference genome of rice variety Nipponbare was published (International Rice Genome Sequencing Project, 2005International Rice Genome Sequencing ProjectThe map-based sequence of the rice genome.Nature. 2005; 436: 793-800https://doi.org/10.1038/nature03895Crossref PubMed Scopus (3009) Google Scholar), an increasing number of rice accessions have been sequenced, assembled, and annotated with global efforts. Nowadays, a single reference genome is obviously insufficient to perform the genetic difference analysis for rice accessions. Therefore, the pan-genome has been proposed as a solution, which allows the discovery of more presence-absence variants compared with single-reference genome-based studies (Zhao et al., 2018Zhao Q. Feng Q. Lu H. Li Y. Wang A. Tian Q. Zhan Q. Lu Y. Zhang L. Huang T. et al.Pan-genome analysis highlights the extent of genomic variation in cultivated and wild rice.Nat. Genet. 2018; 50: 278-284https://doi.org/10.1038/s41588-018-0041-zCrossref PubMed Scopus (313) Google Scholar). Over the past years, several databases, such as RAP-db (https://rapdb.dna.affrc.go.jp), RGAP (http://rice.uga.edu), and Gramene (https://www.gramene.org), have long-term served rice genomic research by providing information based on one or a series of individual reference genomes. To integrate and utilize the genomic information of multiple accessions, we performed comparative analyses and established the user-friendly Rice Gene Index (RGI; https://riceome.hzau.edu.cn) platform. RGI is the first gene-based pan-genome database for rice. To set up a solid foundation for this database, we selected 16 platinum standard reference genomes of rice accessions that represent the major Asian rice subpopulations when K = 15 (Zhou et al., 2020Zhou Y. Chebotarov D. Kudrna D. Llaca V. Lee S. Rajasekar S. Mohammed N. Al-Bader N. Sobel-Sorenson C. Parakkal P. et al.A platinum standard pan-genome resource that represents the population structure of Asian rice.Sci. Data. 2020; 7: 113https://doi.org/10.1038/s41597-020-0438-2Crossref PubMed Scopus (47) Google Scholar; Song et al., 2021Song J.-M. Xie W.-Z. Wang S. Guo Y.-X. Koo D.-H. Kudrna D. Gong C. Huang Y. Feng J.-W. Zhang W. et al.Two gap-free reference genomes and a global view of the centromere architecture in rice.Mol. Plant. 2021; 14: 1757-1767https://doi.org/10.1016/j.molp.2021.06.018Abstract Full Text Full Text PDF PubMed Scopus (52) Google Scholar; Stein et al., 2018Stein J.C. Yu Y. Copetti D. Zwickl D.J. Zhang L. Zhang C. Chougule K. Gao D. Iwata A. Goicoechea J.L. et al.Genomes of 13 domesticated and wild rice relatives highlight genetic conservation, turnover and innovation across the genus Oryza.Nat. Genet. 2018; 50: 285-296https://doi.org/10.1038/s41588-018-0040-0Crossref PubMed Scopus (278) Google Scholar), (Figure 1A). Starting with a set of unified de novo annotations performed by Gramene (Zhou et al., 2023Zhou Y. Yu Z. Chebotarov D. Chougule K. Lu Z. Rivera L.F. Kathiresan N. Al-Bader N. Mohammed N. Alsantely A. et al.Pan-genome inversion index reveals evolutionary insights into the subpopulation structure of Asian rice.Nat. Commun. 2023; 14: 1567https://doi.org/10.1038/s41467-023-37004-yCrossref PubMed Scopus (1) Google Scholar) of 14 genomes and 4 published annotations including Minghui 63 (MH63), Zhenshan 97, and Nipponbare (RGAP and RAP-db) (Kawahara et al., 2013Kawahara Y. de la Bastide M. Hamilton J.P. Kanamori H. McCombie W.R. Ouyang S. Schwartz D.C. Tanaka T. Wu J. Zhou S. et al.Improvement of the Oryza sativa Nipponbare reference genome using next generation sequence and optical map data.Rice. 2013; 6: 4https://doi.org/10.1186/1939-8433-6-4Crossref Scopus (1064) Google Scholar; Sakai et al., 2013Sakai H. Lee S.S. Tanaka T. Numa H. Kim J. Kawahara Y. Wakimoto H. Yang C.-c. Iwamoto M. Abe T. et al.Rice annotation project database (RAP-DB): an integrative and interactive database for rice genomics.Plant Cell Physiol. 2013; 54: e6https://doi.org/10.1093/pcp/pcs183Crossref PubMed Scopus (470) Google Scholar), we incrementally integrated the genes and transcripts identified by newly sequenced isoform sequencing (Iso-Seq) data into the Gramene annotation results as the basics to build homology relationships between 18 annotations (Supplemental Table 1). In addition, a series of Iso-Seq and RNA-Seq data of multiple tissues from selected accessions (Supplemental Tables 2 and 3) were collected and fully presented as baseline information in RGI, which included gene expression, full-length transcripts, and alternative splicing (AS) events. Details on data processing are described in the supplemental methods. As the primary datasets in RGI, the genome annotations of 16 rice accessions contained an average of 41 346 genes, of which an average of 1178 genes are supplemented by Iso-Seq data (Supplemental Table 4). The GeneTribe pipeline (Chen et al., 2020Chen Y. Song W. Xie X. Wang Z. Guan P. Peng H. Jiao Y. Ni Z. Sun Q. Guo W. A collinearity-incorporating homology inference strategy for connecting emerging assemblies in the triticeae tribe as a pilot practice in the plant pangenomic era.Mol. Plant. 2020; 13: 1694-1708https://doi.org/10.1016/j.molp.2020.09.019Abstract Full Text Full Text PDF PubMed Scopus (75) Google Scholar) identified an average of 33 350 gene pairs between annotations (Supplemental Figure 2), which classified “reciprocal best hits,” “single-side best hits,” “one-to-many hits,” or “singleton hits.” By counting unique homolog gene groups, a total of 119 783 non-redundant gene groups were determined to represent the whole Asian rice gene set. To further unify the gene groups in Oryza sativa, we defined a unified and sustainable number—Ortholog Gene Index (OGI), which is a homolog group clustered by connected graph methods based on reciprocal best hit relationships, with an updatable score that indicates its representativeness in all accessions. Of the 112 658 OGIs, we classified them into 21 418 OGI core genes (19.01% of OGI) appearing in all rice accessions, 40 141 OGI dispensable genes, and 51 099 OGI accession-specific genes (Supplemental Figure 1A). And we found that the specific genes are younger and shorter (t-test, p = 2e−16) than core genes (supplemental information 1). The first objective of RGI is to logically organize and scientifically index all genes among rice accessions. RGI provides “GeneCard” pages to show comprehensive information for individual genes with convenient links to other modules and outside databases on one page (Figure 1C). By entering a gene ID of rice, through the search box on the homepage, users may browse the “GeneCard” page on three sections: 1) basic information includes sequence, gene function, gene expression, links for accessing various modules and other databases, etc. (Supplemental Figure 4A). 2) “Transcripts” exhibits graph and table of transcript structures. In addition to the baseline expression analysis of all genes, 116 640 AS events at the transcriptome level were extensively revealed by the analysis of different groups (Supplemental Figure 4B; Supplemental Table 5). For example, two AS events were detected for OsNiR (OsNip_01g0357100), a critical gene that encodes nitrite reductase in nitrogen assimilation (Yu et al., 2021Yu J. Xuan W. Tian Y. Fan L. Sun J. Tang W. Chen G. Wang B. Liu Y. Wu W. et al.Enhanced OsNLP4-OsNiR cascade confers nitrogen use efficiency by promoting tiller number in rice.Plant Biotechnol. J. 2021; 19: 167-176https://doi.org/10.1111/pbi.13450Crossref PubMed Scopus (41) Google Scholar) (Figure 1D). Additionally, “Homologues” lists all associated homologs of a gene across annotations through a link graph and a table. This section also shows the phylogenetic tree. Furthermore, RGI provides informative pages to show the association graph of genes in each OGI (Supplemental Figure 4C). Second, RGI provides three ways to search for relationships and comprehensive information for genes.1)Through keyword-based searches, users can easily search OGI#, gene ID, gene symbol, Gene Ontology, or functional terms in the query box. If users search the famous gene SD1 in RGI, 306 items will be returned with basic information, which could link to other modules or databases.2)In the way of sequence-based searches, the classical “BLAST” tool allows users to query amino acid or nucleotide sequences in sequence databases of the whole genome and protein. To easily access other modules, the tool returns gene ID linking to “GeneCard” or chromosome location linking to “JBrowse” when using the protein or nucleotide database, respectively.3)For association-based searches, the “Homologues” module allows users to query and connect the homologous genes through a given gene ID, which may obtain the homology relationship among annotations. By using TreePlot, users could build the phylogenetic tree with gene structures (Figure 1F) and view multiple sequence alignments of interested genes, as well as the detailed information of each gene. For example, OsTPP7 (LOC_Os09g20390), an anaerobic germination tolerance gene, was found to be absent in IR64 but present in other accessions by “Homologues” (Supplemental Table 6), and the results were manually verified. This indicates that IR64 has less tolerance to anaerobic germination (Yang et al., 2019Yang J. Sun K. Li D. Luo L. Liu Y. Huang M. Yang G. Liu H. Wang H. Chen Z. Guo T. Identification of stable QTLs and candidate genes involved in anaerobic germination tolerance in rice via high-density genetic mapping and RNA-Seq.BMC Genom. 2019; 20: 355https://doi.org/10.1186/s12864-019-5741-yCrossref PubMed Scopus (34) Google Scholar). Third, RGI can visualize the relationship of these annotated genes across accessions at local and global scales corresponding to two modules as follows.1)At the local scale, the “MicroCollinearity” module enables users to demonstrate genomic collinearities of a gene and its flanking genes in selected accessions (Figure 1E). The homologous relations among genomes help to investigate gene-based variations in the local regions of multiple accessions. Many genes encoding nucleotide-binding site leucine-rich repeat proteins are found in the region close to the end of rice chromosome 11 long arm (Supplemental Figure 5) (Song et al., 2021Song J.-M. Xie W.-Z. Wang S. Guo Y.-X. Koo D.-H. Kudrna D. Gong C. Huang Y. Feng J.-W. Zhang W. et al.Two gap-free reference genomes and a global view of the centromere architecture in rice.Mol. Plant. 2021; 14: 1757-1767https://doi.org/10.1016/j.molp.2021.06.018Abstract Full Text Full Text PDF PubMed Scopus (52) Google Scholar), and the collinearity comparison results detected by this module show that these nucleotide-binding site leucine-rich repeat genes are significantly more abundant in MH63 than in other accessions, which potentially contribute to MH63’s superior resistance to rice diseases.2)At the global scale, “MacroCollinearity” helps users to explore collinearity between accessions and study rearrangements of rice genome at the whole-chromosome level. With this module, structure variations may be easily detected, and the interactive tool “Dot Plot” was embedded to show the collinearity details and links to associated genome loci on “JBrowse” (Figure 1G). A useful module, “GenePair,” is provided to visualize collinearity comparisons of ortholog gene pairs between two accessions on both global and local scales. All information mentioned above is logically organized and seamlessly integrated by modules and tools in RGI. Four extra modules (“JBrowse” [Figure 1I], “GOEnrichment” [Figure 1H], “GeneDescription,” and “Download”) were additionally integrated to enhance RGI’s serviceability (supplemental information 2). The technical details on RGI construction of RGI are described in supplemental information 3. Although more than 100 chromosomal-level genomes of Asian rice have been published, most of the relevant databases focus on single genomes for specific domains (e.g., long non-coding RNA, epigenomic, etc.). Two “pan-genome” databases have been published (i.e., RPAN [https://cgm.sjtu.edu.cn/3kricedb/index.php] provides data on individual rice accessions, and Rice RC [http://ricerc.sicau.edu.cn/RiceRC] has a focus on structure variants), while our RGI comprehensively creates and focuses on gene-level relationships across representative Asian rice accessions, establishes a standardized gene index for Asian rice, and provides richer search and visualization capabilities for the whole rice research community. This research was supported by Fundamental Research Funds for the Central Universities (2662020SKPY010), the Major Project of Hubei Hongshan Laboratory (2022HSZD031), and Huazhong Agricultural University’s Start-up Fund to J.Z.",
+  "authors": [
+    {
+      "display_name": "Zhichao Yu",
+      "id": "A5088224052",
+      "orcid": "https://orcid.org/0000-0003-2155-4830",
+      "institutions": [
+        {
+          "id": "I204823248",
+          "display_name": "Huazhong Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhichao Yu"
+    },
+    {
+      "display_name": "Yongming Chen",
+      "id": "A5018811216",
+      "orcid": "https://orcid.org/0000-0002-2143-3134",
+      "institutions": [
+        {
+          "id": "I52158045",
+          "display_name": "China Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yongming Chen"
+    },
+    {
+      "display_name": "Yong Zhou",
+      "id": "A5020200362",
+      "orcid": "https://orcid.org/0000-0002-1662-9589",
+      "institutions": [
+        {
+          "id": "I71920554",
+          "display_name": "King Abdullah University of Science and Technology",
+          "country_code": "SA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yong Zhou"
+    },
+    {
+      "display_name": "Yulu Zhang",
+      "id": "A5100461117",
+      "orcid": "https://orcid.org/0000-0001-6993-9049",
+      "institutions": [
+        {
+          "id": "I204823248",
+          "display_name": "Huazhong Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yulu Zhang"
+    },
+    {
+      "display_name": "Mengyuan Li",
+      "id": "A5100415402",
+      "orcid": "https://orcid.org/0000-0003-0028-5512",
+      "institutions": [
+        {
+          "id": "I204823248",
+          "display_name": "Huazhong Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mengyuan Li"
+    },
+    {
+      "display_name": "Yidan Ouyang",
+      "id": "A5015858296",
+      "orcid": "https://orcid.org/0000-0003-4966-1005",
+      "institutions": [
+        {
+          "id": "I204823248",
+          "display_name": "Huazhong Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yidan Ouyang"
+    },
+    {
+      "display_name": "Dmytro Chebotarov",
+      "id": "A5059871468",
+      "orcid": "https://orcid.org/0000-0003-1351-9453",
+      "institutions": [
+        {
+          "id": "I162210093",
+          "display_name": "International Rice Research Institute",
+          "country_code": "PH",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dmytro Chebotarov"
+    },
+    {
+      "display_name": "Ramil Mauleon",
+      "id": "A5083094488",
+      "orcid": "https://orcid.org/0000-0001-8512-144X",
+      "institutions": [
+        {
+          "id": "I162210093",
+          "display_name": "International Rice Research Institute",
+          "country_code": "PH",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ramil Mauleon"
+    },
+    {
+      "display_name": "Hu Zhao",
+      "id": "A5060891974",
+      "orcid": "https://orcid.org/0000-0001-5046-6632",
+      "institutions": [
+        {
+          "id": "I204823248",
+          "display_name": "Huazhong Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hu Zhao"
+    },
+    {
+      "display_name": "Weibo Xie",
+      "id": "A5100458707",
+      "orcid": "https://orcid.org/0000-0002-2768-3572",
+      "institutions": [
+        {
+          "id": "I204823248",
+          "display_name": "Huazhong Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Weibo Xie"
+    },
+    {
+      "display_name": "Millicent D. Alexandrov Sanciangco",
+      "id": "A5103015079",
+      "orcid": "https://orcid.org/0000-0002-9613-5537",
+      "institutions": [
+        {
+          "id": "I162210093",
+          "display_name": "International Rice Research Institute",
+          "country_code": "PH",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kenneth L. McNally"
+    },
+    {
+      "display_name": "Rod A. Wing",
+      "id": "A5006286921",
+      "orcid": "https://orcid.org/0000-0001-6633-6226",
+      "institutions": [
+        {
+          "id": "I71920554",
+          "display_name": "King Abdullah University of Science and Technology",
+          "country_code": "SA",
+          "type": "funder"
+        },
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Rod A. Wing"
+    },
+    {
+      "display_name": "Weilong Guo",
+      "id": "A5043106360",
+      "orcid": "https://orcid.org/0000-0001-5199-1359",
+      "institutions": [
+        {
+          "id": "I52158045",
+          "display_name": "China Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Weilong Guo"
+    },
+    {
+      "display_name": "Jianwei Zhang",
+      "id": "A5100326955",
+      "orcid": "https://orcid.org/0000-0001-8030-5346",
+      "institutions": [
+        {
+          "id": "I204823248",
+          "display_name": "Huazhong Agricultural University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Jianwei Zhang"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-03-25",
+  "type": "letter",
+  "cited_by_count": 34,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S150334665",
+    "display_name": "Molecular Plant",
+    "issn_l": "1674-2052",
+    "issn": [
+      "1752-9859",
+      "1752-9867",
+      "1674-2052"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "16",
+  "issue": "5",
+  "first_page": "798",
+  "last_page": "801",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://doi.org/10.1016/j.molp.2023.03.012",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.89932024
+    },
+    {
+      "id": "C161078062",
+      "display_name": "Functional genomics",
+      "level": 5,
+      "score": 0.5871199
+    },
+    {
+      "id": "C141231307",
+      "display_name": "Genome",
+      "level": 3,
+      "score": 0.57392186
+    },
+    {
+      "id": "C189206191",
+      "display_name": "Genomics",
+      "level": 4,
+      "score": 0.54492766
+    },
+    {
+      "id": "C2777382242",
+      "display_name": "Index (typography)",
+      "level": 2,
+      "score": 0.4973798
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.472939
+    },
+    {
+      "id": "C105176652",
+      "display_name": "Comparative genomics",
+      "level": 5,
+      "score": 0.4448516
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.37510923
+    },
+    {
+      "id": "C150903083",
+      "display_name": "Biotechnology",
+      "level": 1,
+      "score": 0.3650114
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.3637833
+    },
+    {
+      "id": "C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "score": 0.09915066
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.068561405
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11468",
+      "display_name": "Genetic Mapping and Diversity in Plants and Animals",
+      "score": 0.9984
+    },
+    {
+      "id": "T10015",
+      "display_name": "Genomics and Phylogenetic Studies",
+      "score": 0.9976
+    },
+    {
+      "id": "T12045",
+      "display_name": "Rice Cultivation and Yield Improvement",
+      "score": 0.9966
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.molp.2023.03.012",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:02:07.541076",
+  "source_database": "OpenAlex"
+}

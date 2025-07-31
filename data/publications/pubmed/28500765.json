@@ -1,0 +1,86 @@
+{
+  "pmid": "28500765",
+  "uid": "28500765",
+  "title": "Developing Bayesian networks from a dependency-layered ontology: A proof-of-concept in radiation oncology.",
+  "abstract": "PURPOSE: Bayesian networks (BNs) are graphical representations of probabilistic knowledge that offer normative reasoning under uncertainty and are well suited for use in medical domains. Traditional knowledge-based network development of BN topology requires that modeling experts establish relevant dependency links between domain concepts by searching and translating published literature, querying domain experts, or applying machine learning algorithms on data. For initial development these methods are time-intensive and this cost hinders the growth of BN applications in medical decision making. Further, this approach fails to utilize knowledge representation in medical fields to automate network development. Our research alleviates the challenges surrounding BN modeling in radiation oncology by leveraging an ontology based hub and spoke system for BN construction. METHODS: We implement a hub and spoke system by developing (a) an ontology of knowledge in radiation oncology (the hub) which includes dependency semantics similar to BN relations and (b) a software tool that operates on ontological semantics using deductive reasoning to create BN topologies (the spokes). We demonstrate that network topologies built using the software are terminologically consistent and form networks that are topologically compatible with existing ones. We do this first by merging two different BN models for prostate cancer radiotherapy prediction which contain domain cross terms. We then use the logic to perform discovery of new causal chains between radiation oncology concepts. RESULTS: From the radiation oncology (RO) ontology we successfully reconstructed a previously published prostate cancer radiotherapy Bayes net using up-to-date domain knowledge. Merging this model with another similar prostate cancer model in the RO domain produced a larger, highly interconnected model representing the expanded scope of knowledge available regarding prostate cancer therapy parameters, complications, and outcomes. The causal discovery resulted in an automatically-built causal network model of all ontologized radiotherapy concepts between a 'Mucositis' complication and anatomic tumor location. CONCLUSIONS: The proposed model building approach lowers barriers to developing probabilistic models relevant to real-world clinical decision making, and offers a solution to the consistency and compatibility problems. Further, the knowledge representation in this work demonstrates potential for broader radiation oncology applications outside of Bayes nets.",
+  "authors": [
+    {
+      "last_name": "Kalet",
+      "fore_name": "Alan M",
+      "initials": "AM",
+      "name": "Alan M Kalet",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington Medical Center, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Doctor",
+      "fore_name": "Jason N",
+      "initials": "JN",
+      "name": "Jason N Doctor",
+      "affiliations": [
+        "Department of Pharmaceutical and Health Economics, University of Southern California, Los Angeles, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Gennari",
+      "fore_name": "John H",
+      "initials": "JH",
+      "name": "John H Gennari",
+      "affiliations": [
+        "Department of Biomedical Informatics and Medical Education, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Phillips",
+      "fore_name": "Mark H",
+      "initials": "MH",
+      "name": "Mark H Phillips",
+      "affiliations": [
+        "Department of Biomedical Informatics and Medical Education, University of Washington, Seattle, WA, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Medical physics",
+    "iso_abbreviation": "Med Phys",
+    "issn": "2473-4209",
+    "issn_type": "Electronic",
+    "volume": "44",
+    "issue": "8",
+    "pub_year": "2017",
+    "pub_month": "Aug"
+  },
+  "start_page": "4350",
+  "end_page": "4359",
+  "pages": "4350-4359",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Bayes Theorem",
+    "Humans",
+    "Male",
+    "Neoplasms",
+    "Radiation Oncology",
+    "Software"
+  ],
+  "article_ids": {
+    "pubmed": "28500765",
+    "doi": "10.1002/mp.12340"
+  },
+  "doi": "10.1002/mp.12340",
+  "dates": {
+    "completed": "2018-07-23",
+    "revised": "2018-12-02"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:52:16.712946",
+    "pmid": "28500765"
+  }
+}

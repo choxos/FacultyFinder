@@ -1,0 +1,432 @@
+{
+  "openalex_id": "W2065384164",
+  "doi": "https://doi.org/10.3310/hta16350",
+  "title": "Influence of reported study design characteristics on intervention effect estimates from randomised controlled trials: combined analysis of meta-epidemiological studies.",
+  "abstract": "The design of randomised controlled trials (RCTs) should incorporate characteristics (such as concealment of randomised allocation and blinding of participants and personnel) that avoid biases resulting from lack of comparability of the intervention and control groups. Empirical evidence suggests that the absence of such characteristics leads to biased intervention effect estimates, but the findings of different studies are not consistent.To examine the influence of unclear or inadequate random sequence generation and allocation concealment, and unclear or absent double blinding, on intervention effect estimates and between-trial heterogeneity, and whether or not these influences vary with type of clinical area, intervention, comparison and outcome measure.Data were combined from seven contributing meta-epidemiological studies (collections of meta-analyses in which trial characteristics are assessed and results recorded). The resulting database was used to identify and remove overlapping meta-analyses. Outcomes were coded such that odds ratios < 1 correspond to beneficial intervention effects. Outcome measures were classified as mortality, other objective or subjective. We examined agreement between assessments of trial characteristics in trials assessed in more than one contributing study. We used hierarchical Bayesian bias models to estimate the effect of trial characteristics on average bias [quantified as ratios of odds ratios (RORs) with 95% credible intervals (CrIs) comparing trials with and without a characteristic] and in increasing between-trial heterogeneity.The analysis data set contained 1973 trials included in 234 meta-analyses. Median kappa statistics for agreement between assessments of trial characteristics were: sequence generation 0.60, allocation concealment 0.58 and blinding 0.87. Intervention effect estimates were exaggerated by an average 11% in trials with inadequate or unclear (compared with adequate) sequence generation (ROR 0.89, 95% CrI 0.82 to 0.96); between-trial heterogeneity was higher among such trials. Bias associated with inadequate or unclear sequence generation was greatest for subjective outcomes (ROR 0.83, 95% CrI 0.74 to 0.94) and the increase in heterogeneity was greatest for such outcomes [standard deviation (SD) 0.20, 95% CrI 0.03 to 0.32]. The effect of inadequate or unclear (compared with adequate) allocation concealment was greatest among meta-analyses with a subjectively assessed outcome intervention effect (ROR 0.85, 95% CrI 0.75 to 0.95), and the increase in between-trial heterogeneity was also greatest for such outcomes (SD 0.20, 95% CrI 0.02 to 0.33). Lack of, or unclear, double blinding (compared with double blinding) was associated with an average 13% exaggeration of intervention effects (ROR 0.87, 95% CrI 0.79 to 0.96), and between-trial heterogeneity was increased for such studies (SD 0.14, 95% CrI 0.02 to 0.30). Average bias (ROR 0.78, 95% CrI 0.65 to 0.92) and between-trial heterogeneity (SD 0.37, 95% CrI 0.19 to 0.53) were greatest for meta-analyses assessing subjective outcomes. Among meta-analyses with subjectively assessed outcomes, the effect of lack of blinding appeared greater than the effect of inadequate or unclear sequence generation or allocation concealment.Bias associated with specific reported study design characteristics leads to exaggeration of beneficial intervention effect estimates and increases in between-trial heterogeneity. For each of the three characteristics assessed, these effects were greatest for subjectively assessed outcomes. Assessments of the risk of bias in RCTs should account for these findings. Further research is needed to understand the effects of attrition bias, as well as the relative importance of blinding of patients, care-givers and outcome assessors, and thus separate the effects of performance and detection bias.National Institute for Health Research Health Technology Assessment programme.",
+  "authors": [
+    {
+      "display_name": "Jelena Savović",
+      "id": "A5016408852",
+      "orcid": "https://orcid.org/0000-0002-2861-0578",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J Savović"
+    },
+    {
+      "display_name": "Hayley E. Jones",
+      "id": "A5002491485",
+      "orcid": "https://orcid.org/0000-0002-4265-2854",
+      "institutions": [
+        {
+          "id": "I33618826",
+          "display_name": "Centre for Mental Health",
+          "country_code": "GB",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "HE Jones"
+    },
+    {
+      "display_name": "DG Altman",
+      "id": "A5108659772",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210158028",
+          "display_name": "Cancer Research UK Oxford Centre",
+          "country_code": "GB",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "DG Altman"
+    },
+    {
+      "display_name": "Harris Rj",
+      "id": "A5113941649",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "RJ Harris"
+    },
+    {
+      "display_name": "Peter Jüni",
+      "id": "A5038409870",
+      "orcid": "https://orcid.org/0000-0002-5985-0670",
+      "institutions": [
+        {
+          "id": "I118564535",
+          "display_name": "University of Bern",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P Jűni"
+    },
+    {
+      "display_name": "Julie Pildal",
+      "id": "A5066614328",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2802567020",
+          "display_name": "Copenhagen University Hospital",
+          "country_code": "DK",
+          "type": "healthcare"
+        },
+        {
+          "id": "I2802709434",
+          "display_name": "Rigshospitalet",
+          "country_code": "DK",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J Pildal"
+    },
+    {
+      "display_name": "Bodil Als‐Nielsen",
+      "id": "A5065164974",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2802709434",
+          "display_name": "Rigshospitalet",
+          "country_code": "DK",
+          "type": "healthcare"
+        },
+        {
+          "id": "I2802567020",
+          "display_name": "Copenhagen University Hospital",
+          "country_code": "DK",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B Als-Nielsen"
+    },
+    {
+      "display_name": "EM Balk",
+      "id": "A5111393938",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1290900354",
+          "display_name": "Tufts Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "EM Balk"
+    },
+    {
+      "display_name": "Christian Gluud",
+      "id": "A5019275846",
+      "orcid": "https://orcid.org/0000-0002-8861-0799",
+      "institutions": [
+        {
+          "id": "I2802709434",
+          "display_name": "Rigshospitalet",
+          "country_code": "DK",
+          "type": "healthcare"
+        },
+        {
+          "id": "I2802567020",
+          "display_name": "Copenhagen University Hospital",
+          "country_code": "DK",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C Gluud"
+    },
+    {
+      "display_name": "Lise Lotte Gluud",
+      "id": "A5114375523",
+      "orcid": "https://orcid.org/0000-0002-9462-4468",
+      "institutions": [
+        {
+          "id": "I2802567020",
+          "display_name": "Copenhagen University Hospital",
+          "country_code": "DK",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "LL Gluud"
+    },
+    {
+      "display_name": "Ioannidis Jpa.",
+      "id": "A5053364186",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "JPA Ioannidis"
+    },
+    {
+      "display_name": "KF Schulz",
+      "id": "A5112155667",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210090916",
+          "display_name": "Triangle",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "KF Schulz"
+    },
+    {
+      "display_name": "Rhona Beynon",
+      "id": "A5066541875",
+      "orcid": "https://orcid.org/0000-0001-5494-9519",
+      "institutions": [
+        {
+          "id": "I4210165020",
+          "display_name": "Health Protection Research Unit in Emerging and Zoonotic Infections at University of Liverpool",
+          "country_code": "GB",
+          "type": "healthcare"
+        },
+        {
+          "id": "I146655781",
+          "display_name": "University of Liverpool",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R Beynon"
+    },
+    {
+      "display_name": "Nicky J. Welton",
+      "id": "A5052188317",
+      "orcid": "https://orcid.org/0000-0003-2198-3205",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "N Welton"
+    },
+    {
+      "display_name": "Lesley Wood",
+      "id": "A5019357230",
+      "orcid": "https://orcid.org/0000-0002-9139-1507",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "L Wood"
+    },
+    {
+      "display_name": "David Moher",
+      "id": "A5068353058",
+      "orcid": "https://orcid.org/0000-0003-2434-4206",
+      "institutions": [
+        {
+          "id": "I2800722420",
+          "display_name": "Ottawa Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4388482656",
+          "display_name": "Ottawa Hospital Research Institute",
+          "country_code": null,
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D Moher"
+    },
+    {
+      "display_name": "Jonathan J Deeks",
+      "id": "A5009420648",
+      "orcid": "https://orcid.org/0000-0002-8850-1971",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "JJ Deeks"
+    },
+    {
+      "display_name": "Jonathan A C Sterne",
+      "id": "A5015955757",
+      "orcid": "https://orcid.org/0000-0001-8496-6053",
+      "institutions": [
+        {
+          "id": "I4210165024",
+          "display_name": "Institute of Infection and Immunity",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "JAC Sterne"
+    }
+  ],
+  "publication_year": 2012,
+  "publication_date": "2012-09-01",
+  "type": "review",
+  "cited_by_count": 631,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S191206091",
+    "display_name": "Health Technology Assessment",
+    "issn_l": "1366-5278",
+    "issn": [
+      "1366-5278",
+      "2046-4924",
+      "2046-4932"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311817"
+  },
+  "volume": "16",
+  "issue": "35",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "diamond",
+    "oa_url": "https://njl-admin.nihr.ac.uk/document/download/2002264",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2771230",
+      "display_name": "Blinding",
+      "level": 3,
+      "score": 0.79655826
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.75095
+    },
+    {
+      "id": "C95190672",
+      "display_name": "Meta-analysis",
+      "level": 2,
+      "score": 0.72469467
+    },
+    {
+      "id": "C168563851",
+      "display_name": "Randomized controlled trial",
+      "level": 2,
+      "score": 0.60417247
+    },
+    {
+      "id": "C156957248",
+      "display_name": "Odds ratio",
+      "level": 2,
+      "score": 0.5498252
+    },
+    {
+      "id": "C107130276",
+      "display_name": "Epidemiology",
+      "level": 2,
+      "score": 0.48701888
+    },
+    {
+      "id": "C535046627",
+      "display_name": "Clinical trial",
+      "level": 2,
+      "score": 0.48143336
+    },
+    {
+      "id": "C119423318",
+      "display_name": "Study heterogeneity",
+      "level": 3,
+      "score": 0.44250968
+    },
+    {
+      "id": "C143095724",
+      "display_name": "Odds",
+      "level": 3,
+      "score": 0.41243634
+    },
+    {
+      "id": "C2779318504",
+      "display_name": "Research design",
+      "level": 2,
+      "score": 0.41209942
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.3472204
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.17013806
+    },
+    {
+      "id": "C151956035",
+      "display_name": "Logistic regression",
+      "level": 2,
+      "score": 0.1351732
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10206",
+      "display_name": "Meta-analysis and systematic reviews",
+      "score": 0.9998
+    },
+    {
+      "id": "T10804",
+      "display_name": "Health Systems, Economic Evaluations, Quality of Life",
+      "score": 0.9874
+    },
+    {
+      "id": "T10629",
+      "display_name": "Health Policy Implementation Science",
+      "score": 0.9868
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3310/hta16350",
+  "pdf_url": "https://njl-admin.nihr.ac.uk/document/download/2002264",
+  "retrieved_date": "2025-07-30T14:48:51.672359",
+  "source_database": "OpenAlex"
+}

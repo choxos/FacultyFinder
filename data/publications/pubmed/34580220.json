@@ -1,0 +1,119 @@
+{
+  "pmid": "34580220",
+  "uid": "34580220",
+  "title": "False discovery rate control in genome-wide association studies with population structure.",
+  "abstract": "We present a comprehensive statistical framework to analyze data from genome-wide association studies of polygenic traits, producing interpretable findings while controlling the false discovery rate. In contrast with standard approaches, our method can leverage sophisticated multivariate algorithms but makes no parametric assumptions about the unknown relation between genotypes and phenotype. Instead, we recognize that genotypes can be considered as a random sample from an appropriate model, encapsulating our knowledge of genetic inheritance and human populations. This allows the generation of imperfect copies (knockoffs) of these variables that serve as ideal negative controls, correcting for linkage disequilibrium and accounting for unknown population structure, which may be due to diverse ancestries or familial relatedness. The validity and effectiveness of our method are demonstrated by extensive simulations and by applications to the UK Biobank data. These analyses confirm our method is powerful relative to state-of-the-art alternatives, while comparisons with other studies validate most of our discoveries. Finally, fast software is made available for researchers to analyze Biobank-scale datasets.",
+  "authors": [
+    {
+      "last_name": "Sesia",
+      "fore_name": "Matteo",
+      "initials": "M",
+      "name": "Matteo Sesia",
+      "affiliations": [
+        "Department of Data Sciences and Operations, University of Southern California, Los Angeles, CA 90089; candes@stanford.edu sesia@marshall.usc.edu."
+      ],
+      "orcid": "0000-0001-9046-907X"
+    },
+    {
+      "last_name": "Bates",
+      "fore_name": "Stephen",
+      "initials": "S",
+      "name": "Stephen Bates",
+      "affiliations": [
+        "Department of Statistics, University of California, Berkeley, CA 94720.",
+        "Department of Electrical Engineering and Computer Science, University of California, Berkeley, CA 94720."
+      ]
+    },
+    {
+      "last_name": "Candès",
+      "fore_name": "Emmanuel",
+      "initials": "E",
+      "name": "Emmanuel Candès",
+      "affiliations": [
+        "Department of Statistics, Stanford University, Stanford, CA 94305; candes@stanford.edu sesia@marshall.usc.edu.",
+        "Department of Mathematics, Stanford University, Stanford, CA 94305."
+      ]
+    },
+    {
+      "last_name": "Marchini",
+      "fore_name": "Jonathan",
+      "initials": "J",
+      "name": "Jonathan Marchini",
+      "affiliations": [
+        "Genetics Center, Regeneron Pharmaceuticals, Tarrytown, NY 10591."
+      ]
+    },
+    {
+      "last_name": "Sabatti",
+      "fore_name": "Chiara",
+      "initials": "C",
+      "name": "Chiara Sabatti",
+      "affiliations": [
+        "Department of Statistics, Stanford University, Stanford, CA 94305.",
+        "Department of Biomedical Data Sciences, Stanford University, Stanford, CA 94305."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Proceedings of the National Academy of Sciences of the United States of America",
+    "iso_abbreviation": "Proc Natl Acad Sci U S A",
+    "issn": "1091-6490",
+    "issn_type": "Electronic",
+    "volume": "118",
+    "issue": "40",
+    "pub_year": "2021",
+    "pub_month": "Oct",
+    "pub_day": "05"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Genome, Human",
+    "Genome-Wide Association Study",
+    "Genotype",
+    "Humans",
+    "Linkage Disequilibrium",
+    "Multifactorial Inheritance",
+    "Phenotype",
+    "Software"
+  ],
+  "article_ids": {
+    "pubmed": "34580220",
+    "pmc": "PMC8501795",
+    "doi": "10.1073/pnas.2105841118",
+    "pii": "2105841118"
+  },
+  "doi": "10.1073/pnas.2105841118",
+  "pmc_id": "PMC8501795",
+  "dates": {
+    "completed": "2021-12-14",
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "MC_PC_17228",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MC_QA137853",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "R56 HG010812",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:07:16.803782",
+    "pmid": "34580220"
+  }
+}

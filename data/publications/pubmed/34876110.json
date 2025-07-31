@@ -1,0 +1,117 @@
+{
+  "pmid": "34876110",
+  "uid": "34876110",
+  "title": "Modelling and identification of characteristic kinematic features preceding freezing of gait with convolutional neural networks and layer-wise relevance propagation.",
+  "abstract": "BACKGROUND: Although deep neural networks (DNNs) are showing state of the art performance in clinical gait analysis, they are considered to be black-box algorithms. In other words, there is a lack of direct understanding of a DNN's ability to identify relevant features, hindering clinical acceptance. Interpretability methods have been developed to ameliorate this concern by providing a way to explain DNN predictions. METHODS: This paper proposes the use of an interpretability method to explain DNN decisions for classifying the movement that precedes freezing of gait (FOG), one of the most debilitating symptoms of Parkinson's disease (PD). The proposed two-stage pipeline consists of (1) a convolutional neural network (CNN) to model the reduction of movement present before a FOG episode, and (2) layer-wise relevance propagation (LRP) to visualize the underlying features that the CNN perceives as important to model the pathology. The CNN was trained with the sagittal plane kinematics from a motion capture dataset of fourteen PD patients with FOG. The robustness of the model predictions and learned features was further assessed on fourteen PD patients without FOG and fourteen age-matched healthy controls. RESULTS: The CNN proved highly accurate in modelling the movement that precedes FOG, with 86.8% of the strides being correctly identified. However, the CNN model was unable to model the movement for one of the seven patients that froze during the protocol. The LRP interpretability case study shows that (1) the kinematic features perceived as most relevant by the CNN are the reduced peak knee flexion and the fixed ankle dorsiflexion during the swing phase, (2) very little relevance for FOG is observed in the PD patients without FOG and the healthy control subjects, and (3) the poor predictive performance of one subject is attributed to the patient's unique and severely flexed gait signature. CONCLUSIONS: The proposed pipeline can aid clinicians in explaining DNN decisions in clinical gait analysis and aid machine learning practitioners in assessing the generalization of their models by ensuring that the predictions are based on meaningful kinematic features.",
+  "authors": [
+    {
+      "last_name": "Filtjens",
+      "fore_name": "Benjamin",
+      "initials": "B",
+      "name": "Benjamin Filtjens",
+      "affiliations": [
+        "Intelligent Mobile Platform Research Group, Department of Mechanical Engineering, KU Leuven, Andreas Vesaliusstraat 13, 3000, Leuven, Belgium. benjamin.filtjens@kuleuven.be.",
+        "eMedia Research Lab/STADIUS, Department of Electrical Engineering (ESAT), KU Leuven, Andreas Vesaliusstraat 13, 3000, Leuven, Belgium. benjamin.filtjens@kuleuven.be."
+      ],
+      "orcid": "0000-0003-2609-6883"
+    },
+    {
+      "last_name": "Ginis",
+      "fore_name": "Pieter",
+      "initials": "P",
+      "name": "Pieter Ginis",
+      "affiliations": [
+        "Research Group for Neurorehabilitation (eNRGy), Department of Rehabilitation Sciences, KU Leuven, Tervuursevest 101, 3001, Heverlee, Belgium."
+      ]
+    },
+    {
+      "last_name": "Nieuwboer",
+      "fore_name": "Alice",
+      "initials": "A",
+      "name": "Alice Nieuwboer",
+      "affiliations": [
+        "Research Group for Neurorehabilitation (eNRGy), Department of Rehabilitation Sciences, KU Leuven, Tervuursevest 101, 3001, Heverlee, Belgium."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad Raheel",
+      "initials": "MR",
+      "name": "Muhammad Raheel Afzal",
+      "affiliations": [
+        "Intelligent Mobile Platform Research Group, Department of Mechanical Engineering, KU Leuven, Andreas Vesaliusstraat 13, 3000, Leuven, Belgium."
+      ]
+    },
+    {
+      "last_name": "Spildooren",
+      "fore_name": "Joke",
+      "initials": "J",
+      "name": "Joke Spildooren",
+      "affiliations": [
+        "Faculty of Rehabilitation Sciences, REVAL - Rehabilitation Research Center, Hasselt University, Agoralaan Building A, 3590, Diepenbeek, Belgium."
+      ]
+    },
+    {
+      "last_name": "Vanrumste",
+      "fore_name": "Bart",
+      "initials": "B",
+      "name": "Bart Vanrumste",
+      "affiliations": [
+        "eMedia Research Lab/STADIUS, Department of Electrical Engineering (ESAT), KU Leuven, Andreas Vesaliusstraat 13, 3000, Leuven, Belgium."
+      ]
+    },
+    {
+      "last_name": "Slaets",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Slaets",
+      "affiliations": [
+        "Intelligent Mobile Platform Research Group, Department of Mechanical Engineering, KU Leuven, Andreas Vesaliusstraat 13, 3000, Leuven, Belgium."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "BMC medical informatics and decision making",
+    "iso_abbreviation": "BMC Med Inform Decis Mak",
+    "issn": "1472-6947",
+    "issn_type": "Electronic",
+    "volume": "21",
+    "issue": "1",
+    "pub_year": "2021",
+    "pub_month": "Dec",
+    "pub_day": "07"
+  },
+  "start_page": "341",
+  "pages": "341",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Biomechanical Phenomena",
+    "Gait",
+    "Gait Disorders, Neurologic",
+    "Humans",
+    "Neural Networks, Computer",
+    "Parkinson Disease"
+  ],
+  "article_ids": {
+    "pubmed": "34876110",
+    "pmc": "PMC8650332",
+    "doi": "10.1186/s12911-021-01699-0",
+    "pii": "10.1186/s12911-021-01699-0"
+  },
+  "doi": "10.1186/s12911-021-01699-0",
+  "pmc_id": "PMC8650332",
+  "dates": {
+    "completed": "2022-01-24",
+    "revised": "2024-04-04"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.992618",
+    "pmid": "34876110"
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "openalex_id": "W2964301648",
+  "doi": "https://doi.org/10.18653/v1/p18-1041",
+  "title": "Baseline Needs More Love: On Simple Word-Embedding-Based Models and Associated Pooling Mechanisms",
+  "abstract": "Dinghan Shen, Guoyin Wang, Wenlin Wang, Martin Renqiang Min, Qinliang Su, Yizhe Zhang, Chunyuan Li, Ricardo Henao, Lawrence Carin. Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2018.",
+  "authors": [
+    {
+      "display_name": "Dinghan Shen",
+      "id": "A5013573244",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Dinghan Shen"
+    },
+    {
+      "display_name": "Guoyin Wang",
+      "id": "A5031220156",
+      "orcid": "https://orcid.org/0000-0002-8521-5232",
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guoyin Wang"
+    },
+    {
+      "display_name": "Wenlin Wang",
+      "id": "A5101558666",
+      "orcid": "https://orcid.org/0009-0008-2844-0063",
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wenlin Wang"
+    },
+    {
+      "display_name": "Martin Renqiang Min",
+      "id": "A5065576006",
+      "orcid": "https://orcid.org/0000-0002-8563-6133",
+      "institutions": [
+        {
+          "id": "I4210107353",
+          "display_name": "NEC (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin Renqiang Min"
+    },
+    {
+      "display_name": "Qinliang Su",
+      "id": "A5043729465",
+      "orcid": "https://orcid.org/0000-0002-5903-2504",
+      "institutions": [
+        {
+          "id": "I157773358",
+          "display_name": "Sun Yat-sen University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qinliang Su"
+    },
+    {
+      "display_name": "Yizhe Zhang",
+      "id": "A5101959000",
+      "orcid": "https://orcid.org/0000-0002-9599-7995",
+      "institutions": [
+        {
+          "id": "I4210164937",
+          "display_name": "Microsoft Research (United Kingdom)",
+          "country_code": "GB",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yizhe Zhang"
+    },
+    {
+      "display_name": "Chunyuan Li",
+      "id": "A5101417967",
+      "orcid": "https://orcid.org/0000-0003-1271-9605",
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chunyuan Li"
+    },
+    {
+      "display_name": "Ricardo Henao",
+      "id": "A5056639842",
+      "orcid": "https://orcid.org/0000-0003-4980-845X",
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ricardo Henao"
+    },
+    {
+      "display_name": "Lawrence Carin",
+      "id": "A5016448581",
+      "orcid": "https://orcid.org/0000-0001-6277-7948",
+      "institutions": [
+        {
+          "id": "I170897317",
+          "display_name": "Duke University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lawrence Carin"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-01-01",
+  "type": "article",
+  "cited_by_count": 321,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4363608652",
+    "display_name": "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://www.aclweb.org/anthology/P18-1041.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C70437156",
+      "display_name": "Pooling",
+      "level": 2,
+      "score": 0.7894433
+    },
+    {
+      "id": "C2777045944",
+      "display_name": "Zhàng",
+      "level": 3,
+      "score": 0.710231
+    },
+    {
+      "id": "C12725497",
+      "display_name": "Baseline (sea)",
+      "level": 2,
+      "score": 0.7059289
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.54026806
+    },
+    {
+      "id": "C90805587",
+      "display_name": "Word (group theory)",
+      "level": 2,
+      "score": 0.53402734
+    },
+    {
+      "id": "C166955791",
+      "display_name": "Macro",
+      "level": 2,
+      "score": 0.53305995
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.50988185
+    },
+    {
+      "id": "C2780586882",
+      "display_name": "Simple (philosophy)",
+      "level": 2,
+      "score": 0.44926593
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.42889178
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.42852625
+    },
+    {
+      "id": "C41608201",
+      "display_name": "Embedding",
+      "level": 2,
+      "score": 0.42672306
+    },
+    {
+      "id": "C28490314",
+      "display_name": "Speech recognition",
+      "level": 1,
+      "score": 0.3462928
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.20677593
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.2067393
+    },
+    {
+      "id": "C111472728",
+      "display_name": "Epistemology",
+      "level": 1,
+      "score": 0.13873118
+    },
+    {
+      "id": "C191935318",
+      "display_name": "China",
+      "level": 2,
+      "score": 0.12651587
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.100874215
+    },
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.07447857
+    },
+    {
+      "id": "C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9999
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9998
+    },
+    {
+      "id": "T10664",
+      "display_name": "Sentiment Analysis and Opinion Mining",
+      "score": 0.993
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/p18-1041",
+  "pdf_url": "https://www.aclweb.org/anthology/P18-1041.pdf",
+  "retrieved_date": "2025-07-30T15:03:12.657562",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,97 @@
+{
+  "pmid": "40127378",
+  "uid": "40127378",
+  "title": "Optimising window size of semantic of classification model for identification of in-text citations based on context and intent.",
+  "abstract": "Citations in scientific literature act as channels for the sharing, transfer, and development of scientific knowledge. However, not all citations hold the same significance. Numerous taxonomies and machine learning models have been developed to analyze citations, but they often overlook the internal context of these citations. Moreover, it is worth noting that selecting the appropriate word embedding and classification models is crucial for achieving superior results. Word embeddings offer n-dimensional distributed representations of text, striving to capture the nuanced meanings of words. Deep learning-based word embedding techniques have garnered significant attention and found application in various Natural Language Processing (NLP) tasks, including text classification, sentiment analysis, and citation analysis. Current state-of-the-art techniques often use small datasets with fixed window sizes, resulting in the loss of contextual meaning. This study leverages two benchmark datasets encompassing a substantial volume of in-text citations to guide the selection of an optimal word embedding window size and classification approaches. A comparative analysis of various window sizes for in-text citations is conducted to identify crucial citations effectively. Additionally, Word2Vec embedding is employed in conjunction with deep learning models and machine learning models such as Convolutional Neural Networks (CNNs), Gated Recurrent Units (GRUs), Long Short-Term Memory (LSTM) networks, Support Vector Machines (SVM), Decision Trees, and Naive Bayes.The evaluation employs precision, recall, F1-score, and accuracy metrics for each combination of window sizes. The findings reveal that, particularly for lengthy in-text citations, larger citation windows are more adept at capturing the semantic essence of the references. Within the scope of this study, window sizes of 10 achieve superior accuracy and precision with both machine and deep learning models.",
+  "authors": [
+    {
+      "last_name": "Iqbal",
+      "fore_name": "Arshad",
+      "initials": "A",
+      "name": "Arshad Iqbal",
+      "affiliations": [
+        "Institute of Computing Kohat University of Science and Technology, Kohat, Pakistan."
+      ],
+      "orcid": "0009-0008-9301-5901"
+    },
+    {
+      "last_name": "Shahid",
+      "fore_name": "Abdul",
+      "initials": "A",
+      "name": "Abdul Shahid",
+      "affiliations": [
+        "National College of Ireland, Dublin, Ireland."
+      ]
+    },
+    {
+      "last_name": "Roman",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Roman",
+      "affiliations": [
+        "Institute of Computing Kohat University of Science and Technology, Kohat, Pakistan."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad Tanvir",
+      "initials": "MT",
+      "name": "Muhammad Tanvir Afzal",
+      "affiliations": [
+        "Shifa School of Computing, Shifa Tameer-e-Millat University, Islamabad, Pakistan."
+      ]
+    },
+    {
+      "last_name": "Hassan",
+      "fore_name": "Umair Ul",
+      "initials": "UU",
+      "name": "Umair Ul Hassan",
+      "affiliations": [
+        "JE Cairnes School of Business and Economics, University of Galway, Galway, Ireland.",
+        "Insight SFI Research Centre for Data Analytics, University of Galway, Galway, Ireland."
+      ],
+      "orcid": "0000-0002-3647-9020"
+    }
+  ],
+  "journal": {
+    "title": "PloS one",
+    "iso_abbreviation": "PLoS One",
+    "issn": "1932-6203",
+    "issn_type": "Electronic",
+    "volume": "20",
+    "issue": "3",
+    "pub_year": "2025"
+  },
+  "start_page": "e0309862",
+  "pages": "e0309862",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Semantics",
+    "Natural Language Processing",
+    "Deep Learning",
+    "Machine Learning",
+    "Humans"
+  ],
+  "article_ids": {
+    "pubmed": "40127378",
+    "pmc": "PMC11932707",
+    "doi": "10.1371/journal.pone.0309862",
+    "pii": "PONE-D-24-35528"
+  },
+  "doi": "10.1371/journal.pone.0309862",
+  "pmc_id": "PMC11932707",
+  "dates": {
+    "completed": "2025-05-14",
+    "revised": "2025-05-14"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:15.220001",
+    "pmid": "40127378"
+  }
+}

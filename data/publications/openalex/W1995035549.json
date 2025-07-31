@@ -1,0 +1,157 @@
+{
+  "openalex_id": "W1995035549",
+  "doi": "https://doi.org/10.1080/07038992.1998.10874689",
+  "title": "Use of Radarsat Data in the Canadian Ice Service",
+  "abstract": "RÉSUMÉLe Service canadien des glaces (SCG) est l'agence gouvernementale canadienne responsable de l'information sur les glaces au-dessus des zones offshore du Canada pour les opérateurs maritimes. Le lancement de RADARSAT en novembre 1995 constitue un apport majeur à ce programme. Des données du capteur radar en bande C en polarisation HH monté à bord sont acquises en temps quasi réel à partir du Centre canadien de traitement des données (CCTD) à Gatineau, Québec, via un lien numérique T1. Des produits d'information sur les glaces sont alors développés au Centre des glaces à Ottawa et transmis aux clients maritimes. Le client principal est la Garde côtière canadienne (GCC) qui reçoit les images et les produits dérivés à bord de ses navires brise-glace et au Bureau des opérations sur les glaces, et qui les affichent sur des stations Windows NT dans le système Ice-Vu.Cet article décrit le système développé pour l'acquisition des images numériques de RADARSAT, la production de produits de données sur les glaces et la transmission de ces données auprès de clients maritimes en temps quasi réel. On décrit la procédure pour l'analyse de ces données et la fourniture de l'information sur les glaces à la Garde côtière et aux autres clients maritimes, et on montre des exemples de données images SCANSAR et de produits dérivés pour la navigation dans les glaces. On discute de la qualité des images SCANSAR en ce que a trait à l'extraction de l'information sur les glaces de même que des bénéfices pour le SCG au plan des opérations. À l'heure actuelle, on développe des algorithmes automatiques d'extraction de l'information sur les glaces pour permettre d'exploiter au maximum la grande quantité de données et afin d'améliorer la rapidité du rendu auprès des utilisateurs. Un système de suivi des glaces, qui calcule les déplacements des glaces à partir de couples d'images RADARSAT, est mis à l'essai présentement au Centre des glaces en mode opérationnel pour des fins de démonstration. Aussi, à titre de précurseur à un système opérationnel de classification de la glace de mer, on effectue des tests sur un classificateur présence de glace/absence de glace. On décrit ces deux algorithmes, de même qu'un système d'information maritime (Marine Information System – MAST) qui incorporera ces derniers algorithmes en plus d'autres algorithmes dans un ensemble d'outils pour l'analyse de l'information maritime à partir de données de sources multiples.SUMMARYThe Canadian Ice Service (CIS) is the Canadian Government Agency responsible for providing ice information over Canada's offshore areas for marine operators. The launch of RADARSAT in November, 1995, has provided a major new input to this program. Data from the on-board C-band HH-polarised SAR sensor is acquired in near real time from the Canadian Data Processing Facility (CDPF) at Gatineau, Québec via a T1 digital link. Ice information products are then developed at the Ice Centre in Ottawa and transmitted to marine clients. The major client is the Canadian Coast Guard (CCG) who receives the imagery and derived products on board their icebreaking vessels and at the Ice Operations Offices, and displays them on Windows NT-based systems known as Ice-Vu.This paper will describe the end-to-end system that has been developed for acquiring RADARSAT digital imagery, producing ice data products and transmitting them to marine clients in near real time. The process for analyzing the data and providing ice information to the Coast Guard and other marine clients will be described, and examples of SCANSAR image data and derived ice navigation products will be shown. The image quality of SCANSAR imagery as it relates to ice information extraction will be discussed as will operational benefits to the CIS.Currently, automatic ice information extraction algorithms are being developed in order to fully exploit the large quantity of data and improve the timeliness for the users. An Ice Tracking system, which calculates ice displacements from coincident RADARSAT image pairs, is now running at the Ice Centre in an operational demonstration mode. Additionally, an ice/no ice classifier as a precursor to a fully operational sea ice classification system has been undergoing testing. These two algorithms will be described, along with a Marine Information System (MAST) which will incorporate these and other algorithms into a suite of tools for marine information analysis on a variety of data sources. Additional informationNotes on contributorsB. Ramsay• Bruce Ramsay, Michael Manore, Laurie Weir, Katherine Wilson and David Bradley are with the Canadian Ice Service, 373 Sussex Drive, Block \"3E\", Ottawa, Ontario, Canada K1A 0H3 Ph: 613-996-4671 Fax: 613-996-4218 e-mail: bruce.ramsay@ec.gc.caM. Manore• Bruce Ramsay, Michael Manore, Laurie Weir, Katherine Wilson and David Bradley are with the Canadian Ice Service, 373 Sussex Drive, Block \"3E\", Ottawa, Ontario, Canada K1A 0H3 Ph: 613-996-4671 Fax: 613-996-4218 e-mail: bruce.ramsay@ec.gc.caL. Weir• Bruce Ramsay, Michael Manore, Laurie Weir, Katherine Wilson and David Bradley are with the Canadian Ice Service, 373 Sussex Drive, Block \"3E\", Ottawa, Ontario, Canada K1A 0H3 Ph: 613-996-4671 Fax: 613-996-4218 e-mail: bruce.ramsay@ec.gc.caK. Wilson• Bruce Ramsay, Michael Manore, Laurie Weir, Katherine Wilson and David Bradley are with the Canadian Ice Service, 373 Sussex Drive, Block \"3E\", Ottawa, Ontario, Canada K1A 0H3 Ph: 613-996-4671 Fax: 613-996-4218 e-mail: bruce.ramsay@ec.gc.caD. Bradley• Bruce Ramsay, Michael Manore, Laurie Weir, Katherine Wilson and David Bradley are with the Canadian Ice Service, 373 Sussex Drive, Block \"3E\", Ottawa, Ontario, Canada K1A 0H3 Ph: 613-996-4671 Fax: 613-996-4218 e-mail: bruce.ramsay@ec.gc.ca",
+  "authors": [
+    {
+      "display_name": "B. Ramsay",
+      "id": "A5020314676",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "B. Ramsay"
+    },
+    {
+      "display_name": "M. Manore",
+      "id": "A5080225804",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M. Manore"
+    },
+    {
+      "display_name": "Laurie Weir",
+      "id": "A5072859211",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "L. Weir"
+    },
+    {
+      "display_name": "K. Wilson",
+      "id": "A5054823309",
+      "orcid": "https://orcid.org/0000-0002-4246-3578",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "K. Wilson"
+    },
+    {
+      "display_name": "David M. Bradley",
+      "id": "A5073795104",
+      "orcid": "https://orcid.org/0000-0003-2952-2366",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "D. Bradley"
+    }
+  ],
+  "publication_year": 1998,
+  "publication_date": "1998-03-01",
+  "type": "article",
+  "cited_by_count": 23,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "fr",
+  "source": {
+    "id": "S85837164",
+    "display_name": "Canadian Journal of Remote Sensing",
+    "issn_l": "0703-8992",
+    "issn": [
+      "0703-8992",
+      "1712-7971",
+      "1712-798X"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320547"
+  },
+  "volume": "24",
+  "issue": "1",
+  "first_page": "36",
+  "last_page": "42",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.56259966
+    },
+    {
+      "id": "C2780378061",
+      "display_name": "Service (business)",
+      "level": 2,
+      "score": 0.42698577
+    },
+    {
+      "id": "C153294291",
+      "display_name": "Meteorology",
+      "level": 1,
+      "score": 0.3817513
+    },
+    {
+      "id": "C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "score": 0.33487362
+    },
+    {
+      "id": "C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "score": 0.3341715
+    },
+    {
+      "id": "C100970517",
+      "display_name": "Physical geography",
+      "level": 1,
+      "score": 0.33098757
+    },
+    {
+      "id": "C144133560",
+      "display_name": "Business",
+      "level": 0,
+      "score": 0.17398551
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.16817442
+    },
+    {
+      "id": "C162853370",
+      "display_name": "Marketing",
+      "level": 1,
+      "score": 0.1492294
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11459",
+      "display_name": "Arctic and Antarctic ice dynamics",
+      "score": 0.9867
+    },
+    {
+      "id": "T10995",
+      "display_name": "Methane Hydrates and Related Phenomena",
+      "score": 0.9372
+    },
+    {
+      "id": "T13200",
+      "display_name": "Spacecraft and Cryogenic Technologies",
+      "score": 0.9095
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1080/07038992.1998.10874689",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:13:17.298112",
+  "source_database": "OpenAlex"
+}

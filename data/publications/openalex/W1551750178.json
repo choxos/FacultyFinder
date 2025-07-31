@@ -1,0 +1,496 @@
+{
+  "openalex_id": "W1551750178",
+  "doi": "https://doi.org/10.1097/ccm.0000000000001079",
+  "title": "A Multibiomarker-Based Model for Estimating the Risk of Septic Acute Kidney Injury",
+  "abstract": "The development of acute kidney injury in patients with sepsis is associated with worse outcomes. Identifying those at risk for septic acute kidney injury could help to inform clinical decision making. We derived and tested a multibiomarker-based model to estimate the risk of septic acute kidney injury in children with septic shock.Candidate serum protein septic acute kidney injury biomarkers were identified from previous transcriptomic studies. Model derivation involved measuring these biomarkers in serum samples from 241 subjects with septic shock obtained during the first 24 hours of admission and then using a Classification and Regression Tree approach to estimate the probability of septic acute kidney injury 3 days after the onset of septic shock, defined as at least two-fold increase from baseline serum creatinine. The model was then tested in a separate cohort of 200 subjects.Multiple PICUs in the United States.None other than standard care.The decision tree included a first-level decision node based on day 1 septic acute kidney injury status and five subsequent biomarker-based decision nodes. The area under the curve for the tree was 0.95 (CI95, 0.91-0.99), with a sensitivity of 93% and a specificity of 88%. The tree was superior to day 1 septic acute kidney injury status alone for estimating day 3 septic acute kidney injury risk. In the test cohort, the tree had an area under the curve of 0.83 (0.72-0.95), with a sensitivity of 85% and a specificity of 77% and was also superior to day 1 septic acute kidney injury status alone for estimating day 3 septic acute kidney injury risk.We have derived and tested a model to estimate the risk of septic acute kidney injury on day 3 of septic shock using a novel panel of biomarkers. The model had very good performance in a test cohort and has test characteristics supporting clinical utility and further prospective evaluation.",
+  "authors": [
+    {
+      "display_name": "Hector R. Wong",
+      "id": "A5020609229",
+      "orcid": "https://orcid.org/0000-0001-7989-1173",
+      "institutions": [
+        {
+          "id": "I63135867",
+          "display_name": "University of Cincinnati",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1285204247",
+          "display_name": "Cincinnati Children's Hospital Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hector R. Wong"
+    },
+    {
+      "display_name": "Natalie Z. Cvijanovich",
+      "id": "A5022979690",
+      "orcid": "https://orcid.org/0000-0001-9905-4137",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Natalie Z. Cvijanovich"
+    },
+    {
+      "display_name": "Nick Anas",
+      "id": "A5111864477",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I204250578",
+          "display_name": "University of California, Irvine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nick Anas"
+    },
+    {
+      "display_name": "Geoffrey L. Allen",
+      "id": "A5030325805",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1328594524",
+          "display_name": "Children's Mercy Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Geoffrey L. Allen"
+    },
+    {
+      "display_name": "Neal J. Thomas",
+      "id": "A5069821127",
+      "orcid": "https://orcid.org/0000-0002-7991-7510",
+      "institutions": [
+        {
+          "id": "I1288882113",
+          "display_name": "Boston Children's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Neal J. Thomas"
+    },
+    {
+      "display_name": "Michael T. Bigham",
+      "id": "A5026529892",
+      "orcid": "https://orcid.org/0000-0002-5085-2231",
+      "institutions": [
+        {
+          "id": "I4210098750",
+          "display_name": "Akron Children's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael T. Bigham"
+    },
+    {
+      "display_name": "Scott L. Weiss",
+      "id": "A5048932268",
+      "orcid": "https://orcid.org/0000-0002-7040-3281",
+      "institutions": [
+        {
+          "id": "I79576946",
+          "display_name": "University of Pennsylvania",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Scott L. Weiss"
+    },
+    {
+      "display_name": "Julie C. Fitzgerald",
+      "id": "A5088663182",
+      "orcid": "https://orcid.org/0000-0001-9936-9569",
+      "institutions": [
+        {
+          "id": "I79576946",
+          "display_name": "University of Pennsylvania",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julie Fitzgerald"
+    },
+    {
+      "display_name": "Paul A. Checchia",
+      "id": "A5036929595",
+      "orcid": "https://orcid.org/0000-0003-0364-2052",
+      "institutions": [
+        {
+          "id": "I181547552",
+          "display_name": "Baylor College of Medicine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul A. Checchia"
+    },
+    {
+      "display_name": "Keith Meyer",
+      "id": "A5001150243",
+      "orcid": "https://orcid.org/0000-0001-7354-5552",
+      "institutions": [
+        {
+          "id": "I4210146630",
+          "display_name": "Miami Children's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Keith Meyer"
+    },
+    {
+      "display_name": "Thomas P. Shanley",
+      "id": "A5066527726",
+      "orcid": "https://orcid.org/0000-0001-8936-377X",
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas P. Shanley"
+    },
+    {
+      "display_name": "Michael W. Quasney",
+      "id": "A5079982654",
+      "orcid": "https://orcid.org/0000-0002-0003-6500",
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Quasney"
+    },
+    {
+      "display_name": "Mark W. Hall",
+      "id": "A5101449920",
+      "orcid": "https://orcid.org/0000-0002-9595-2308",
+      "institutions": [
+        {
+          "id": "I1314135232",
+          "display_name": "Nationwide Children's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mark Hall"
+    },
+    {
+      "display_name": "Rainer Gedeit",
+      "id": "A5062184349",
+      "orcid": "https://orcid.org/0000-0003-2420-9493",
+      "institutions": [
+        {
+          "id": "I126218986",
+          "display_name": "Children's Hospital of Wisconsin",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rainer Gedeit"
+    },
+    {
+      "display_name": "Robert J. Freishtat",
+      "id": "A5011120474",
+      "orcid": "https://orcid.org/0000-0002-7411-2342",
+      "institutions": [
+        {
+          "id": "I1336742384",
+          "display_name": "Children's National",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert J. Freishtat"
+    },
+    {
+      "display_name": "Jeffrey Nowak",
+      "id": "A5031540879",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210101327",
+          "display_name": "Twin Cities Orthopedics",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I130238516",
+          "display_name": "University of Minnesota",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeffrey Nowak"
+    },
+    {
+      "display_name": "Shekhar S. Raj",
+      "id": "A5015272007",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2802740592",
+          "display_name": "Riley Hospital for Children",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shekhar S. Raj"
+    },
+    {
+      "display_name": "Shira J. Gertz",
+      "id": "A5064650836",
+      "orcid": "https://orcid.org/0000-0001-8119-6006",
+      "institutions": [
+        {
+          "id": "I1324520350",
+          "display_name": "Hackensack University Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shira Gertz"
+    },
+    {
+      "display_name": "Emily Dawson",
+      "id": "A5089800802",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I40347166",
+          "display_name": "University of Chicago",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Emily Dawson"
+    },
+    {
+      "display_name": "Kelli Howard",
+      "id": "A5048394384",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1285204247",
+          "display_name": "Cincinnati Children's Hospital Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kelli Howard"
+    },
+    {
+      "display_name": "Kelli Harmon",
+      "id": "A5063549700",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1285204247",
+          "display_name": "Cincinnati Children's Hospital Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kelli Harmon"
+    },
+    {
+      "display_name": "Patrick Lahni",
+      "id": "A5033756432",
+      "orcid": "https://orcid.org/0000-0002-3652-0329",
+      "institutions": [
+        {
+          "id": "I1285204247",
+          "display_name": "Cincinnati Children's Hospital Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patrick Lahni"
+    },
+    {
+      "display_name": "Erin Frank",
+      "id": "A5110441649",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1285204247",
+          "display_name": "Cincinnati Children's Hospital Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Erin Frank"
+    },
+    {
+      "display_name": "Kimberly W. Hart",
+      "id": "A5109923640",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I63135867",
+          "display_name": "University of Cincinnati",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kimberly W. Hart"
+    },
+    {
+      "display_name": "Christopher J. Lindsell",
+      "id": "A5006953289",
+      "orcid": "https://orcid.org/0000-0002-3297-2811",
+      "institutions": [
+        {
+          "id": "I63135867",
+          "display_name": "University of Cincinnati",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher J. Lindsell"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-05-09",
+  "type": "article",
+  "cited_by_count": 26,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S108732581",
+    "display_name": "Critical Care Medicine",
+    "issn_l": "0090-3493",
+    "issn": [
+      "0090-3493",
+      "1530-0293"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315671"
+  },
+  "volume": "43",
+  "issue": "8",
+  "first_page": "1646",
+  "last_page": "1653",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://europepmc.org/articles/pmc4667777?pdf=render",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.9169197
+    },
+    {
+      "id": "C2780472472",
+      "display_name": "Acute kidney injury",
+      "level": 2,
+      "score": 0.86398464
+    },
+    {
+      "id": "C2777628635",
+      "display_name": "Septic shock",
+      "level": 3,
+      "score": 0.85377103
+    },
+    {
+      "id": "C2778384902",
+      "display_name": "Sepsis",
+      "level": 2,
+      "score": 0.6238425
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.4840195
+    },
+    {
+      "id": "C2780306776",
+      "display_name": "Creatinine",
+      "level": 2,
+      "score": 0.43027803
+    },
+    {
+      "id": "C72563966",
+      "display_name": "Cohort",
+      "level": 2,
+      "score": 0.42943966
+    },
+    {
+      "id": "C177713679",
+      "display_name": "Intensive care medicine",
+      "level": 1,
+      "score": 0.38474935
+    },
+    {
+      "id": "C194828623",
+      "display_name": "Emergency medicine",
+      "level": 1,
+      "score": 0.32794338
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10218",
+      "display_name": "Sepsis Diagnosis and Treatment",
+      "score": 0.9995
+    },
+    {
+      "id": "T10684",
+      "display_name": "Acute Kidney Injury Research",
+      "score": 0.9981
+    },
+    {
+      "id": "T10291",
+      "display_name": "Dialysis and Renal Disease Management",
+      "score": 0.9894
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1097/ccm.0000000000001079",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:24:00.148918",
+  "source_database": "OpenAlex"
+}

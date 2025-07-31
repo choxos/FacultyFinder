@@ -1,0 +1,185 @@
+{
+  "pmid": "40111645",
+  "uid": "40111645",
+  "title": "Unsupervised clustering for sepsis identification in large-scale patient data: a model development and validation study.",
+  "abstract": "BACKGROUND: Sepsis is a major global health problem. However, it lacks a true reference standard for case identification, complicating epidemiologic surveillance. Consensus definitions have changed multiple times, clinicians struggle to identify sepsis at the bedside, and differing identification algorithms generate wide variation in incidence rates. The two current identification approaches use codes from administrative data, or electronic health record (EHR)-based algorithms such as the Center for Disease Control Adult Sepsis Event (ASE); both have limitations. Here our primary purpose is to report initial steps in developing a novel approach to identifying sepsis using unsupervised clustering methods. Secondarily, we report preliminary analysis of resulting clusters, using identification by ASE criteria as a familiar comparator. METHODS: This retrospective cohort study used hospital administrative and EHR data on adults admitted to intensive care units (ICUs) at five Canadian medical centres (2015-2017), with split development and validation cohorts. After preprocessing 592 variables (demographics, encounter characteristics, diagnoses, medications, laboratory tests, and clinical management) and applying data reduction, we presented 55 principal components to eight different clustering algorithms. An automated elbow method determined the optimal number of clusters, and the optimal algorithm was selected based on clustering metrics for consistency, separation, distribution and stability. Cluster membership in the validation cohort was assigned using an XGBoost model trained to predict cluster membership in the development cohort. For cluster analysis, we prospectively subdivided clusters by their fractions meeting ASE criteria (≥ 50% ASE-majority clusters vs. ASE-minority clusters), and compared their characteristics. RESULTS: There were 3660 patients in the development cohort and 3012 in the validation cohort, of which 21.5% (development) and 19.1% (validation) were ASE (+). The Robust and Sparse K-means Clustering (RSKC) method performed best. In the development cohort, it identified 48 clusters of hospitalizations; 11 ASE-majority clusters contained 22.4% of all patients but 77.8% of all ASE (+) patients. 34.9% of the 209 ASE (-) patients in the ASE-majority clusters met more liberal ASE criteria for sepsis. Findings were consistent in the validation cohort. CONCLUSIONS: Unsupervised clustering applied to diverse, large-scale medical data offers a promising approach to the identification of sepsis phenotypes for epidemiological surveillance.",
+  "authors": [
+    {
+      "last_name": "Li",
+      "fore_name": "Na",
+      "initials": "N",
+      "name": "Na Li",
+      "affiliations": [
+        "Department of Community Health Sciences, Cumming School of Medicine, University of Calgary, CWPH 5E34, 3280 Hospital Dr. NW, Calgary, AB, T2N 4Z6, Canada. Na.Li@ucalgary.ca.",
+        "Centre for Health Informatics, University of Calgary, Alberta, Canada. Na.Li@ucalgary.ca.",
+        "Department of Computing and Software, McMaster University, Hamilton, ON, Canada. Na.Li@ucalgary.ca."
+      ],
+      "orcid": "0000-0002-4803-0984"
+    },
+    {
+      "last_name": "Riazi",
+      "fore_name": "Kiarash",
+      "initials": "K",
+      "name": "Kiarash Riazi",
+      "affiliations": [
+        "Department of Community Health Sciences, Cumming School of Medicine, University of Calgary, CWPH 5E34, 3280 Hospital Dr. NW, Calgary, AB, T2N 4Z6, Canada.",
+        "Centre for Health Informatics, University of Calgary, Alberta, Canada."
+      ]
+    },
+    {
+      "last_name": "Pan",
+      "fore_name": "Jie",
+      "initials": "J",
+      "name": "Jie Pan",
+      "affiliations": [
+        "Department of Community Health Sciences, Cumming School of Medicine, University of Calgary, CWPH 5E34, 3280 Hospital Dr. NW, Calgary, AB, T2N 4Z6, Canada.",
+        "Centre for Health Informatics, University of Calgary, Alberta, Canada."
+      ]
+    },
+    {
+      "last_name": "Thavorn",
+      "fore_name": "Kednapa",
+      "initials": "K",
+      "name": "Kednapa Thavorn",
+      "affiliations": [
+        "Ottawa Hospital Research Institute, Ottawa, ON, Canada.",
+        "School of Epidemiology and Public Health, University of Ottawa, Ottawa, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Ziegler",
+      "fore_name": "Jennifer",
+      "initials": "J",
+      "name": "Jennifer Ziegler",
+      "affiliations": [
+        "Department of Medicine, University of Manitoba, Winnipeg, MB, Canada.",
+        "Department of Community Health Sciences, University of Manitoba, Winnipeg, MB, Canada."
+      ]
+    },
+    {
+      "last_name": "Rochwerg",
+      "fore_name": "Bram",
+      "initials": "B",
+      "name": "Bram Rochwerg",
+      "affiliations": [
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada.",
+        "Department of Health Research Methods, Evidence and Impact, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Quan",
+      "fore_name": "Hude",
+      "initials": "H",
+      "name": "Hude Quan",
+      "affiliations": [
+        "Department of Community Health Sciences, Cumming School of Medicine, University of Calgary, CWPH 5E34, 3280 Hospital Dr. NW, Calgary, AB, T2N 4Z6, Canada.",
+        "Centre for Health Informatics, University of Calgary, Alberta, Canada."
+      ]
+    },
+    {
+      "last_name": "Prescott",
+      "fore_name": "Hallie C",
+      "initials": "HC",
+      "name": "Hallie C Prescott",
+      "affiliations": [
+        "Department of Medicine, University of Michigan, Ann Arbor, MI, USA."
+      ]
+    },
+    {
+      "last_name": "Dodek",
+      "fore_name": "Peter M",
+      "initials": "PM",
+      "name": "Peter M Dodek",
+      "affiliations": [
+        "Division of Critical Care Medicine and Center for Advancing Health Outcomes, St. Paul'S Hospital and University of British Columbia, Vancouver, BC, Canada."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Bing",
+      "initials": "B",
+      "name": "Bing Li",
+      "affiliations": [
+        "Centre for Health Informatics, University of Calgary, Alberta, Canada.",
+        "Alberta Health Services Analytics and Strategy for Patient-Oriented Research (SPOR), Calgary, AB, Canada."
+      ]
+    },
+    {
+      "last_name": "Gervais",
+      "fore_name": "Alain",
+      "initials": "A",
+      "name": "Alain Gervais",
+      "affiliations": [
+        "Centre de Recherche du CIUSSS de l'Estrie-CHUS, Université de Sherbrooke, Sherbrooke, Québec, Canada."
+      ]
+    },
+    {
+      "last_name": "Garland",
+      "fore_name": "Allan",
+      "initials": "A",
+      "name": "Allan Garland",
+      "affiliations": [
+        "Department of Medicine, University of Manitoba, Winnipeg, MB, Canada.",
+        "Department of Community Health Sciences, University of Manitoba, Winnipeg, MB, Canada."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Intensive care medicine experimental",
+    "iso_abbreviation": "Intensive Care Med Exp",
+    "issn": "2197-425X",
+    "issn_type": "Print",
+    "volume": "13",
+    "issue": "1",
+    "pub_year": "2025",
+    "pub_month": "Mar",
+    "pub_day": "20"
+  },
+  "start_page": "37",
+  "pages": "37",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "40111645",
+    "pmc": "PMC11925832",
+    "doi": "10.1186/s40635-025-00744-w",
+    "pii": "10.1186/s40635-025-00744-w"
+  },
+  "doi": "10.1186/s40635-025-00744-w",
+  "pmc_id": "PMC11925832",
+  "dates": {
+    "revised": "2025-07-07"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "202209PJT-486541-HS1-CBBA-68649",
+      "agency": "CIHR",
+      "country": "Canada"
+    },
+    {
+      "grant_id": "Sepsis Research Network: Improving Care Before",
+      "agency": "CIHR Team Grant 2019"
+    },
+    {
+      "grant_id": "During",
+      "agency": "CIHR Team Grant 2019"
+    },
+    {
+      "grant_id": "After Sepsis",
+      "agency": "CIHR Team Grant 2019"
+    },
+    {
+      "grant_id": "222300842",
+      "agency": "Alberta Innovates LevMax CIHR Computer Modelling and Simulation"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:54:35.261641",
+    "pmid": "40111645"
+  }
+}

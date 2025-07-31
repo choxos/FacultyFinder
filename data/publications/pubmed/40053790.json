@@ -1,0 +1,273 @@
+{
+  "pmid": "40053790",
+  "uid": "40053790",
+  "title": "Augmenting Insufficiently Accruing Oncology Clinical Trials Using Generative Models: Validation Study.",
+  "abstract": "BACKGROUND: Insufficient patient accrual is a major challenge in clinical trials and can result in underpowered studies, as well as exposing study participants to toxicity and additional costs, with limited scientific benefit. Real-world data can provide external controls, but insufficient accrual affects all arms of a study, not just controls. Studies that used generative models to simulate more patients were limited in the accrual scenarios considered, replicability criteria, number of generative models, and number of clinical trials evaluated. OBJECTIVE: This study aimed to perform a comprehensive evaluation on the extent generative models can be used to simulate additional patients to compensate for insufficient accrual in clinical trials. METHODS: We performed a retrospective analysis using 10 datasets from 9 fully accrued, completed, and published cancer trials. For each trial, we removed the latest recruited patients (from 10% to 50%), trained a generative model on the remaining patients, and simulated additional patients to replace the removed ones using the generative model to augment the available data. We then replicated the published analysis on this augmented dataset to determine if the findings remained the same. Four different generative models were evaluated: sequential synthesis with decision trees, Bayesian network, generative adversarial network, and a variational autoencoder. These generative models were compared to sampling with replacement (ie, bootstrap) as a simple alternative. Replication of the published analyses used 4 metrics: decision agreement, estimate agreement, standardized difference, and CI overlap. RESULTS: Sequential synthesis performed well on the 4 replication metrics for the removal of up to 40% of the last recruited patients (decision agreement: 88% to 100% across datasets, estimate agreement: 100%, cannot reject standardized difference null hypothesis: 100%, and CI overlap: 0.8-0.92). Sampling with replacement was the next most effective approach, with decision agreement varying from 78% to 89% across all datasets. There was no evidence of a monotonic relationship in the estimated effect size with recruitment order across these studies. This suggests that patients recruited earlier in a trial were not systematically different than those recruited later, at least partially explaining why generative models trained on early data can effectively simulate patients recruited later in a trial. The fidelity of the generated data relative to the training data on the Hellinger distance was high in all cases. CONCLUSIONS: For an oncology study with insufficient accrual with as few as 60% of target recruitment, sequential synthesis can enable the simulation of the full dataset had the study continued accruing patients and can be an alternative to drawing conclusions from an underpowered study. These results provide evidence demonstrating the potential for generative models to rescue poorly accruing clinical trials, but additional studies are needed to confirm these findings and to generalize them for other diseases.",
+  "authors": [
+    {
+      "last_name": "El Kababji",
+      "fore_name": "Samer",
+      "initials": "S",
+      "name": "Samer El Kababji",
+      "affiliations": [
+        "School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, ON, Canada.",
+        "CHEO Research Institute, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0002-7642-2280"
+    },
+    {
+      "last_name": "Mitsakakis",
+      "fore_name": "Nicholas",
+      "initials": "N",
+      "name": "Nicholas Mitsakakis",
+      "affiliations": [
+        "CHEO Research Institute, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0001-9041-9152"
+    },
+    {
+      "last_name": "Jonker",
+      "fore_name": "Elizabeth",
+      "initials": "E",
+      "name": "Elizabeth Jonker",
+      "affiliations": [
+        "CHEO Research Institute, Ottawa, ON, Canada."
+      ],
+      "orcid": "0009-0003-0306-1677"
+    },
+    {
+      "last_name": "Beltran-Bless",
+      "fore_name": "Ana-Alicia",
+      "initials": "AA",
+      "name": "Ana-Alicia Beltran-Bless",
+      "affiliations": [
+        "Division of Medical Oncology, University of Ottawa, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0003-4880-8167"
+    },
+    {
+      "last_name": "Pond",
+      "fore_name": "Gregory",
+      "initials": "G",
+      "name": "Gregory Pond",
+      "affiliations": [
+        "Department of Oncology, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0003-1033-0882"
+    },
+    {
+      "last_name": "Vandermeer",
+      "fore_name": "Lisa",
+      "initials": "L",
+      "name": "Lisa Vandermeer",
+      "affiliations": [
+        "Division of Medical Oncology, University of Ottawa, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0001-5921-1441"
+    },
+    {
+      "last_name": "Radhakrishnan",
+      "fore_name": "Dhenuka",
+      "initials": "D",
+      "name": "Dhenuka Radhakrishnan",
+      "affiliations": [
+        "CHEO Research Institute, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0002-8637-1480"
+    },
+    {
+      "last_name": "Mosquera",
+      "fore_name": "Lucy",
+      "initials": "L",
+      "name": "Lucy Mosquera",
+      "affiliations": [
+        "Generate Ops & Data Science, Aetion, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0002-5289-8372"
+    },
+    {
+      "last_name": "Paterson",
+      "fore_name": "Alexander",
+      "initials": "A",
+      "name": "Alexander Paterson",
+      "affiliations": [
+        "Oncology, Alberta Health Services, Edmonton, AB, Canada."
+      ],
+      "orcid": "0000-0002-3138-3337"
+    },
+    {
+      "last_name": "Shepherd",
+      "fore_name": "Lois",
+      "initials": "L",
+      "name": "Lois Shepherd",
+      "affiliations": [
+        "Public Health Sciences, Queens University, Kingston, ON, Canada."
+      ],
+      "orcid": "0000-0002-5035-1621"
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Bingshu",
+      "initials": "B",
+      "name": "Bingshu Chen",
+      "affiliations": [
+        "Public Health Sciences, Queens University, Kingston, ON, Canada."
+      ],
+      "orcid": "0000-0001-6139-0696"
+    },
+    {
+      "last_name": "Barlow",
+      "fore_name": "William",
+      "initials": "W",
+      "name": "William Barlow",
+      "affiliations": [
+        "Biostatistics, University of Washington, Seattle, WA, United States."
+      ],
+      "orcid": "0000-0003-4651-2282"
+    },
+    {
+      "last_name": "Gralow",
+      "fore_name": "Julie",
+      "initials": "J",
+      "name": "Julie Gralow",
+      "affiliations": [
+        "Medical Oncology, University of Washington, Seattle, WA, United States."
+      ],
+      "orcid": "0000-0003-3837-9928"
+    },
+    {
+      "last_name": "Savard",
+      "fore_name": "Marie-France",
+      "initials": "MF",
+      "name": "Marie-France Savard",
+      "affiliations": [
+        "Division of Medical Oncology, University of Ottawa, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0002-7651-0870"
+    },
+    {
+      "last_name": "Fesl",
+      "fore_name": "Christian",
+      "initials": "C",
+      "name": "Christian Fesl",
+      "affiliations": [
+        "Clinical Statistics, Austrian Breast & Colorectal Cancer Study Group (ABCSG), Vienna, Austria."
+      ],
+      "orcid": "0000-0001-5631-076X"
+    },
+    {
+      "last_name": "Hlauschek",
+      "fore_name": "Dominik",
+      "initials": "D",
+      "name": "Dominik Hlauschek",
+      "affiliations": [
+        "Clinical Statistics, Austrian Breast & Colorectal Cancer Study Group (ABCSG), Vienna, Austria."
+      ],
+      "orcid": "0009-0009-1009-3777"
+    },
+    {
+      "last_name": "Balic",
+      "fore_name": "Marija",
+      "initials": "M",
+      "name": "Marija Balic",
+      "affiliations": [
+        "Division of Clinical Oncology, Medical University Graz, Graz, Austria."
+      ],
+      "orcid": "0000-0001-9482-9191"
+    },
+    {
+      "last_name": "Rinnerthaler",
+      "fore_name": "Gabriel",
+      "initials": "G",
+      "name": "Gabriel Rinnerthaler",
+      "affiliations": [
+        "Division of Clinical Oncology, Medical University Graz, Graz, Austria."
+      ],
+      "orcid": "0000-0001-7438-1465"
+    },
+    {
+      "last_name": "Greil",
+      "fore_name": "Richard",
+      "initials": "R",
+      "name": "Richard Greil",
+      "affiliations": [
+        "Paracelsus Medical University Salzburg, Salzburg, Austria."
+      ],
+      "orcid": "0000-0002-4462-3694"
+    },
+    {
+      "last_name": "Gnant",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Gnant",
+      "affiliations": [
+        "Comprehensive Cancer Center, Medical University of Vienna, Vienna, Austria."
+      ],
+      "orcid": "0000-0003-1002-2118"
+    },
+    {
+      "last_name": "Clemons",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Clemons",
+      "affiliations": [
+        "Division of Medical Oncology, University of Ottawa, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0002-0738-2713"
+    },
+    {
+      "last_name": "El Emam",
+      "fore_name": "Khaled",
+      "initials": "K",
+      "name": "Khaled El Emam",
+      "affiliations": [
+        "School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, ON, Canada.",
+        "CHEO Research Institute, Ottawa, ON, Canada."
+      ],
+      "orcid": "0000-0003-3325-4149"
+    }
+  ],
+  "journal": {
+    "title": "Journal of medical Internet research",
+    "iso_abbreviation": "J Med Internet Res",
+    "issn": "1438-8871",
+    "issn_type": "Electronic",
+    "volume": "27",
+    "pub_year": "2025",
+    "pub_month": "Mar",
+    "pub_day": "05"
+  },
+  "start_page": "e66821",
+  "pages": "e66821",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Validation Study"
+  ],
+  "keywords": [
+    "Humans",
+    "Clinical Trials as Topic",
+    "Neoplasms",
+    "Retrospective Studies",
+    "Patient Selection"
+  ],
+  "article_ids": {
+    "pubmed": "40053790",
+    "pmc": "PMC11923467",
+    "doi": "10.2196/66821",
+    "pii": "v27i1e66821"
+  },
+  "doi": "10.2196/66821",
+  "pmc_id": "PMC11923467",
+  "dates": {
+    "completed": "2025-03-07",
+    "revised": "2025-05-11"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:52:52.335227",
+    "pmid": "40053790"
+  }
+}

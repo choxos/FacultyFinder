@@ -1,0 +1,201 @@
+{
+  "pmid": "39478176",
+  "uid": "39478176",
+  "title": "Inferring allele-specific copy number aberrations and tumor phylogeography from spatially resolved transcriptomics.",
+  "abstract": "Analyzing somatic evolution within a tumor over time and across space is a key challenge in cancer research. Spatially resolved transcriptomics (SRT) measures gene expression at thousands of spatial locations in a tumor, but does not directly reveal genomic aberrations. We introduce CalicoST, an algorithm to simultaneously infer allele-specific copy number aberrations (CNAs) and reconstruct spatial tumor evolution, or phylogeography, from SRT data. CalicoST identifies important classes of CNAs-including copy-neutral loss of heterozygosity and mirrored subclonal CNAs-that are invisible to total copy number analysis. Using nine patients' data from the Human Tumor Atlas Network, CalicoST achieves an average accuracy of 86%, approximately 21% higher than existing methods. CalicoST reconstructs a tumor phylogeography in three-dimensional space for two patients with multiple adjacent slices. CalicoST analysis of multiple SRT slices from a cancerous prostate organ reveals mirrored subclonal CNAs on the two sides of the prostate, forming a bifurcating phylogeography in both genetic and physical space.",
+  "authors": [
+    {
+      "last_name": "Ma",
+      "fore_name": "Cong",
+      "initials": "C",
+      "name": "Cong Ma",
+      "affiliations": [
+        "Department of Computer Science, Princeton University, Princeton, NJ, USA."
+      ]
+    },
+    {
+      "last_name": "Balaban",
+      "fore_name": "Metin",
+      "initials": "M",
+      "name": "Metin Balaban",
+      "affiliations": [
+        "Department of Computer Science, Princeton University, Princeton, NJ, USA."
+      ],
+      "orcid": "0000-0002-6947-5915"
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Jingxian",
+      "initials": "J",
+      "name": "Jingxian Liu",
+      "affiliations": [
+        "Department of Medicine, Washington University in St. Louis, St. Louis, MO, USA.",
+        "McDonnell Genome Institute, Washington University in St. Louis, St. Louis, MO, USA."
+      ]
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Siqi",
+      "initials": "S",
+      "name": "Siqi Chen",
+      "affiliations": [
+        "Department of Medicine, Washington University in St. Louis, St. Louis, MO, USA.",
+        "McDonnell Genome Institute, Washington University in St. Louis, St. Louis, MO, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael J",
+      "initials": "MJ",
+      "name": "Michael J Wilson",
+      "affiliations": [
+        "Department of Astrophysical Sciences, Princeton University, Princeton, NJ, USA."
+      ]
+    },
+    {
+      "last_name": "Sun",
+      "fore_name": "Christopher H",
+      "initials": "CH",
+      "name": "Christopher H Sun",
+      "affiliations": [
+        "Lewis-Sigler Institute for Integrative Genomics, Princeton University, Princeton, NJ, USA."
+      ],
+      "orcid": "0009-0003-8749-8955"
+    },
+    {
+      "last_name": "Ding",
+      "fore_name": "Li",
+      "initials": "L",
+      "name": "Li Ding",
+      "affiliations": [
+        "Department of Medicine, Washington University in St. Louis, St. Louis, MO, USA. lding@wustl.edu.",
+        "McDonnell Genome Institute, Washington University in St. Louis, St. Louis, MO, USA. lding@wustl.edu.",
+        "Siteman Cancer Center, Washington University in St. Louis, St. Louis, MO, USA. lding@wustl.edu.",
+        "Department of Genetics, Washington University in St. Louis, St. Louis, MO, USA. lding@wustl.edu."
+      ],
+      "orcid": "0000-0003-1517-2975"
+    },
+    {
+      "last_name": "Raphael",
+      "fore_name": "Benjamin J",
+      "initials": "BJ",
+      "name": "Benjamin J Raphael",
+      "affiliations": [
+        "Department of Computer Science, Princeton University, Princeton, NJ, USA. braphael@princeton.edu."
+      ],
+      "orcid": "0000-0003-1274-048X"
+    }
+  ],
+  "journal": {
+    "title": "Nature methods",
+    "iso_abbreviation": "Nat Methods",
+    "issn": "1548-7105",
+    "issn_type": "Electronic",
+    "volume": "21",
+    "issue": "12",
+    "pub_year": "2024",
+    "pub_month": "Dec"
+  },
+  "start_page": "2239",
+  "end_page": "2247",
+  "pages": "2239-2247",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "DNA Copy Number Variations",
+    "Phylogeography",
+    "Algorithms",
+    "Alleles",
+    "Neoplasms",
+    "Transcriptome",
+    "Male",
+    "Gene Expression Profiling",
+    "Prostatic Neoplasms"
+  ],
+  "article_ids": {
+    "pubmed": "39478176",
+    "pmc": "PMC11621028",
+    "doi": "10.1038/s41592-024-02438-9",
+    "pii": "10.1038/s41592-024-02438-9"
+  },
+  "doi": "10.1038/s41592-024-02438-9",
+  "pmc_id": "PMC11621028",
+  "dates": {
+    "completed": "2024-12-06",
+    "revised": "2024-12-17"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "U24CA264027",
+      "agency": "U.S. Department of Health & Human Services | NIH | National Cancer Institute (NCI)"
+    },
+    {
+      "grant_id": "U54 AG075934",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U24CA210972",
+      "agency": "U.S. Department of Health & Human Services | NIH | National Cancer Institute (NCI)"
+    },
+    {
+      "grant_id": "DRQ",
+      "agency": "Damon Runyon Cancer Research Foundation (Cancer Research Fund of the Damon Runyon-Walter Winchell Foundation)"
+    },
+    {
+      "grant_id": "U24 CA248453",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HG009711",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA260112",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U24CA248453",
+      "agency": "U.S. Department of Health & Human Services | NIH | National Cancer Institute (NCI)"
+    },
+    {
+      "grant_id": "U24 CA210972",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01CA260112",
+      "agency": "U.S. Department of Health & Human Services | NIH | National Cancer Institute (NCI)"
+    },
+    {
+      "grant_id": "U2C CA233303",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01HG009711",
+      "agency": "U.S. Department of Health & Human Services | NIH | National Human Genome Research Institute (NHGRI)"
+    },
+    {
+      "grant_id": "U24 CA264027",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U2CCA233303",
+      "agency": "U.S. Department of Health & Human Services | NIH | National Cancer Institute (NCI)"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.880709",
+    "pmid": "39478176"
+  }
+}

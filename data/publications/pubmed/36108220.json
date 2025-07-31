@@ -1,0 +1,448 @@
+{
+  "pmid": "36108220",
+  "uid": "36108220",
+  "title": "Loss of Epigenetic Regulation Disrupts Lineage Integrity, Induces Aberrant Alveogenesis, and Promotes Breast Cancer.",
+  "abstract": "UNLABELLED: Systematically investigating the scores of genes mutated in cancer and discerning disease drivers from inconsequential bystanders is a prerequisite for precision medicine but remains challenging. Here, we developed a somatic CRISPR/Cas9 mutagenesis screen to study 215 recurrent \"long-tail\" breast cancer genes, which revealed epigenetic regulation as a major tumor-suppressive mechanism. We report that components of the BAP1 and COMPASS-like complexes, including KMT2C/D, KDM6A, BAP1, and ASXL1/2 (\"EpiDrivers\"), cooperate with PIK3CAH1047R to transform mouse and human breast epithelial cells. Mechanistically, we find that activation of PIK3CAH1047R and concomitant EpiDriver loss triggered an alveolar-like lineage conversion of basal mammary epithelial cells and accelerated formation of luminal-like tumors, suggesting a basal origin for luminal tumors. EpiDriver mutations are found in ∼39% of human breast cancers, and ∼50% of ductal carcinoma in situ express casein, suggesting that lineage infidelity and alveogenic mimicry may significantly contribute to early steps of breast cancer etiology. SIGNIFICANCE: Infrequently mutated genes comprise most of the mutational burden in breast tumors but are poorly understood. In vivo CRISPR screening identified functional tumor suppressors that converged on epigenetic regulation. Loss of epigenetic regulators accelerated tumorigenesis and revealed lineage infidelity and aberrant expression of alveogenesis genes as potential early events in tumorigenesis. This article is highlighted in the In This Issue feature, p. 2711.",
+  "authors": [
+    {
+      "last_name": "Langille",
+      "fore_name": "Ellen",
+      "initials": "E",
+      "name": "Ellen Langille",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-3616-3616"
+    },
+    {
+      "last_name": "Al-Zahrani",
+      "fore_name": "Khalid N",
+      "initials": "KN",
+      "name": "Khalid N Al-Zahrani",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-5771-7537"
+    },
+    {
+      "last_name": "Ma",
+      "fore_name": "Zhibo",
+      "initials": "Z",
+      "name": "Zhibo Ma",
+      "affiliations": [
+        "Gene Expression Laboratory, Salk Institute for Biological Studies, La Jolla, California."
+      ],
+      "orcid": "0000-0002-5801-0354"
+    },
+    {
+      "last_name": "Liang",
+      "fore_name": "Minggao",
+      "initials": "M",
+      "name": "Minggao Liang",
+      "affiliations": [
+        "Hospital for Sick Children, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-4451-0921"
+    },
+    {
+      "last_name": "Uuskula-Reimand",
+      "fore_name": "Liis",
+      "initials": "L",
+      "name": "Liis Uuskula-Reimand",
+      "affiliations": [
+        "Hospital for Sick Children, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-5322-5524"
+    },
+    {
+      "last_name": "Espin",
+      "fore_name": "Roderic",
+      "initials": "R",
+      "name": "Roderic Espin",
+      "affiliations": [
+        "Program Against Cancer Therapeutic Resistance (ProCURE), Catalan Institute of Oncology (ICO), Oncobell, Bellvitge Institute for Biomedical Research (IDIBELL), L'Hospitalet del Llobregat, Barcelona, Spain."
+      ],
+      "orcid": "0000-0003-2494-0964"
+    },
+    {
+      "last_name": "Teng",
+      "fore_name": "Katie",
+      "initials": "K",
+      "name": "Katie Teng",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-7459-4193"
+    },
+    {
+      "last_name": "Malik",
+      "fore_name": "Ahmad",
+      "initials": "A",
+      "name": "Ahmad Malik",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-6254-0403"
+    },
+    {
+      "last_name": "Bergholtz",
+      "fore_name": "Helga",
+      "initials": "H",
+      "name": "Helga Bergholtz",
+      "affiliations": [
+        "Department of Cancer Genetics, Institute for Cancer Research, Oslo University Hospital, Oslo, Norway."
+      ],
+      "orcid": "0000-0003-0999-1106"
+    },
+    {
+      "last_name": "Ghamrasni",
+      "fore_name": "Samah El",
+      "initials": "SE",
+      "name": "Samah El Ghamrasni",
+      "affiliations": [
+        "Princess Margaret Cancer Centre, University Health Network, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0003-4346-1360"
+    },
+    {
+      "last_name": "Afiuni-Zadeh",
+      "fore_name": "Somaieh",
+      "initials": "S",
+      "name": "Somaieh Afiuni-Zadeh",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-5425-4821"
+    },
+    {
+      "last_name": "Tsai",
+      "fore_name": "Ricky",
+      "initials": "R",
+      "name": "Ricky Tsai",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-5916-6978"
+    },
+    {
+      "last_name": "Alvi",
+      "fore_name": "Sana",
+      "initials": "S",
+      "name": "Sana Alvi",
+      "affiliations": [
+        "Hospital for Sick Children, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0003-4308-8244"
+    },
+    {
+      "last_name": "Elia",
+      "fore_name": "Andrew",
+      "initials": "A",
+      "name": "Andrew Elia",
+      "affiliations": [
+        "Princess Margaret Cancer Centre, University Health Network, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-8619-1415"
+    },
+    {
+      "last_name": "Lü",
+      "fore_name": "YiQing",
+      "initials": "Y",
+      "name": "YiQing Lü",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-5896-031X"
+    },
+    {
+      "last_name": "Oh",
+      "fore_name": "Robin H",
+      "initials": "RH",
+      "name": "Robin H Oh",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-3408-6143"
+    },
+    {
+      "last_name": "Kozma",
+      "fore_name": "Katelyn J",
+      "initials": "KJ",
+      "name": "Katelyn J Kozma",
+      "affiliations": [
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada.",
+        "Hospital for Sick Children, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-5909-4916"
+    },
+    {
+      "last_name": "Trcka",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Trcka",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-2196-7160"
+    },
+    {
+      "last_name": "Narimatsu",
+      "fore_name": "Masahiro",
+      "initials": "M",
+      "name": "Masahiro Narimatsu",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-5381-1972"
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Jeff C",
+      "initials": "JC",
+      "name": "Jeff C Liu",
+      "affiliations": [
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-8977-6590"
+    },
+    {
+      "last_name": "Nguyen",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Nguyen",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-9072-3242"
+    },
+    {
+      "last_name": "Barutcu",
+      "fore_name": "Seda",
+      "initials": "S",
+      "name": "Seda Barutcu",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0003-2739-4153"
+    },
+    {
+      "last_name": "Loganathan",
+      "fore_name": "Sampath K",
+      "initials": "SK",
+      "name": "Sampath K Loganathan",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-8809-1466"
+    },
+    {
+      "last_name": "Bremner",
+      "fore_name": "Rod",
+      "initials": "R",
+      "name": "Rod Bremner",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-9184-7212"
+    },
+    {
+      "last_name": "Bader",
+      "fore_name": "Gary D",
+      "initials": "GD",
+      "name": "Gary D Bader",
+      "affiliations": [
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0003-0185-8861"
+    },
+    {
+      "last_name": "Egan",
+      "fore_name": "Sean E",
+      "initials": "SE",
+      "name": "Sean E Egan",
+      "affiliations": [
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada.",
+        "Hospital for Sick Children, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0003-0189-3202"
+    },
+    {
+      "last_name": "Cescon",
+      "fore_name": "David W",
+      "initials": "DW",
+      "name": "David W Cescon",
+      "affiliations": [
+        "Princess Margaret Cancer Centre, University Health Network, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-1080-0998"
+    },
+    {
+      "last_name": "Sørlie",
+      "fore_name": "Therese",
+      "initials": "T",
+      "name": "Therese Sørlie",
+      "affiliations": [
+        "Department of Cancer Genetics, Institute for Cancer Research, Oslo University Hospital, Oslo, Norway.",
+        "Institute of Clinical Medicine, University of Oslo, Oslo, Norway."
+      ],
+      "orcid": "0000-0002-5995-2319"
+    },
+    {
+      "last_name": "Wrana",
+      "fore_name": "Jeffrey L",
+      "initials": "JL",
+      "name": "Jeffrey L Wrana",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0003-0932-0644"
+    },
+    {
+      "last_name": "Jackson",
+      "fore_name": "Hartland W",
+      "initials": "HW",
+      "name": "Hartland W Jackson",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-6423-2415"
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael D",
+      "initials": "MD",
+      "name": "Michael D Wilson",
+      "affiliations": [
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada.",
+        "Hospital for Sick Children, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0002-4015-3066"
+    },
+    {
+      "last_name": "Witkiewicz",
+      "fore_name": "Agnieszka K",
+      "initials": "AK",
+      "name": "Agnieszka K Witkiewicz",
+      "affiliations": [
+        "Center for Personalized Medicine, Roswell Park Cancer Institute, Buffalo, New York."
+      ],
+      "orcid": "0000-0003-4538-1145"
+    },
+    {
+      "last_name": "Knudsen",
+      "fore_name": "Erik S",
+      "initials": "ES",
+      "name": "Erik S Knudsen",
+      "affiliations": [
+        "Center for Personalized Medicine, Roswell Park Cancer Institute, Buffalo, New York."
+      ],
+      "orcid": "0000-0002-5130-5969"
+    },
+    {
+      "last_name": "Pujana",
+      "fore_name": "Miguel Angel",
+      "initials": "MA",
+      "name": "Miguel Angel Pujana",
+      "affiliations": [
+        "Program Against Cancer Therapeutic Resistance (ProCURE), Catalan Institute of Oncology (ICO), Oncobell, Bellvitge Institute for Biomedical Research (IDIBELL), L'Hospitalet del Llobregat, Barcelona, Spain."
+      ],
+      "orcid": "0000-0003-3222-4044"
+    },
+    {
+      "last_name": "Wahl",
+      "fore_name": "Geoffrey M",
+      "initials": "GM",
+      "name": "Geoffrey M Wahl",
+      "affiliations": [
+        "Gene Expression Laboratory, Salk Institute for Biological Studies, La Jolla, California."
+      ],
+      "orcid": "0000-0003-3658-2279"
+    },
+    {
+      "last_name": "Schramek",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Schramek",
+      "affiliations": [
+        "Centre for Molecular and Systems Biology, Lunenfeld-Tanenbaum Research Institute, Mount Sinai Hospital, Toronto, Ontario, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, Ontario, Canada."
+      ],
+      "orcid": "0000-0001-9977-2104"
+    }
+  ],
+  "journal": {
+    "title": "Cancer discovery",
+    "iso_abbreviation": "Cancer Discov",
+    "issn": "2159-8290",
+    "issn_type": "Electronic",
+    "volume": "12",
+    "issue": "12",
+    "pub_year": "2022",
+    "pub_month": "Dec",
+    "pub_day": "02"
+  },
+  "start_page": "2930",
+  "end_page": "2953",
+  "pages": "2930-2953",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Humans",
+    "Mice",
+    "Animals",
+    "Female",
+    "Breast Neoplasms",
+    "Epigenesis, Genetic",
+    "Neoplasm Recurrence, Local",
+    "Carcinoma, Intraductal, Noninfiltrating",
+    "Cell Transformation, Neoplastic"
+  ],
+  "article_ids": {
+    "pubmed": "36108220",
+    "mid": "NIHMS1838374",
+    "pmc": "PMC9812400",
+    "doi": "10.1158/2159-8290.CD-21-0865",
+    "pii": "709222"
+  },
+  "doi": "10.1158/2159-8290.CD-21-0865",
+  "pmc_id": "PMC9812400",
+  "dates": {
+    "completed": "2022-12-05",
+    "revised": "2024-06-07"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "P30 CA014195",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA247362",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R35 CA197687",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.784484",
+    "pmid": "36108220"
+  }
+}

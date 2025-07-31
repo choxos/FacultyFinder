@@ -1,0 +1,256 @@
+{
+  "openalex_id": "W2939046886",
+  "doi": "https://doi.org/10.31635/ccschem.019.20180016",
+  "title": "Polysulfide Electrocatalysis on Framework Porphyrin in High-Capacity and High-Stable Lithium–Sulfur Batteries",
+  "abstract": "Open AccessCCS ChemistryRESEARCH ARTICLE1 Apr 2019Polysulfide Electrocatalysis on Framework Porphyrin in High-Capacity and High-Stable Lithium–Sulfur Batteries Bo-Quan Li, Hong-Jie Peng, Xiang Chen, Shu-Yuan Zhang, Jin Xie, Chang-Xin Zhao and Qiang Zhang Bo-Quan Li Beijing Key Laboratory of Green Chemical Reaction Engineering and Technology, Department of Chemical Engineering, Tsinghua University, Beijing 100084 (China) , Hong-Jie Peng Beijing Key Laboratory of Green Chemical Reaction Engineering and Technology, Department of Chemical Engineering, Tsinghua University, Beijing 100084 (China) , Xiang Chen Beijing Key Laboratory of Green Chemical Reaction Engineering and Technology, Department of Chemical Engineering, Tsinghua University, Beijing 100084 (China) , Shu-Yuan Zhang Beijing Key Laboratory of Green Chemical Reaction Engineering and Technology, Department of Chemical Engineering, Tsinghua University, Beijing 100084 (China) , Jin Xie Beijing Key Laboratory of Green Chemical Reaction Engineering and Technology, Department of Chemical Engineering, Tsinghua University, Beijing 100084 (China) , Chang-Xin Zhao Beijing Key Laboratory of Green Chemical Reaction Engineering and Technology, Department of Chemical Engineering, Tsinghua University, Beijing 100084 (China) and Qiang Zhang *Corresponding author: E-mail Address: [email protected] Beijing Key Laboratory of Green Chemical Reaction Engineering and Technology, Department of Chemical Engineering, Tsinghua University, Beijing 100084 (China) https://doi.org/10.31635/ccschem.019.20180016 SectionsSupplemental MaterialAboutAbstractPDF ToolsAdd to favoritesDownload CitationsTrack Citations ShareFacebookTwitterLinked InEmail Lithium–sulfur batteries with an ultrahigh theoretical energy density of 2600 Wh kg−1 are highly considered as desirable next-generation energy storage devices that will meet the growing demand of energy consumption worldwide. However, complicated sulfur redox reactions and polysulfide shuttling significantly postpone the applications of lithium–sulfur batteries with rapid capacity decay and low Coulombic efficiency. Herein, a unique strategy of polysulfide electrocatalysis is proposed to improve the kinetics of the sulfur species and inhibit polysulfide shuttling in working lithium–sulfur batteries. Inspired by a natural biocatalyst and congener oxygen electrocatalysis, porphyrin was selected as the electrocatalytic active site, and framework porphyrin (POF) electrocatalysts were rationally designed, precisely fabricated, and demonstrated superior full-scheme electrocatalytic performance with regard to improving the kinetics for polysulfide conversion, Li2S nucleation, and dissolution of Li2S to polysulfides, simultaneously. Consequently, the lithium–sulfur batteries with POF electrocatalysts achieve high capacity of 1611 mAh·g−1 at 0.1 C; outstanding stability with the capacity decay rate of 0.071% in 400 cycles, and satisfied performance with a high sulfur loading up to 4.3 mg·cm−2. The strategy of polysulfide electrocatalysis develops our chemical understanding of sulfur species in energy-related applications and inspires the electrocatalysis concept for extended energy conversion and storage systems based on multielectron redox reactions. Download figure Download PowerPoint Introduction The spectacular development of sustainable energy techniques marks the energy revolution of the modern society.1 Electrochemical energy storage devices, as an outstanding representative, call for brilliant electrode materials for high efficiency.2 Sulfur constitutes a very important cathode material because of its high theoretical capacity of 1672 mAh·g−1, natural abundance, and low cost.3 By pairing lithium metal as the anode, lithium–sulfur (Li–S) batteries can deliver an ultrahigh theoretical energy density of 2600 Wh kg−1, and are regarded as desirable next-generation energy storage devices that will meet the growing demand of energy consumption worldwide.4,5 However, the electrochemical behaviors of sulfur species are complicated, involving soluble lithium polysulfides (LiPSs) and insoluble lithium (poly)sulfide (Li2S/Li2S2).6,7 Dissolved LiPS intermediates tend to shuttle between the cathode and anode, rendering drastic phase migration, degrading capacity, and low Coulombic efficiency (CE).8,9 Therefore, effective regulation of the sulfur species to inhibit the shuttle of polysulfides is of great significance to achieve practical Li–S batteries.10 Immobilization of LiPSs within the cathode by chemical adsorption is strongly considered for shuttle inhibition in a working Li–S battery.11,12 Owing to the polar nature of LiPSs, abundant polar additives are introduced to sulfur cathodes for polysulfide adsorption through dipole–dipole interactions, including heteroatom-doped carbon,13,14 polymers,15,16 metal hydroxides,17,18 oxides,19–21 sulfides,22 nitrides,23 carbides,24 metal–organic frameworks,25,26 and covalent organic frameworks with strong anchoring sites.27,28 For instance, Tang and co-workers described a borate-ester covalent organic framework to adsorb LiPSs through cooperative Li–O and B–S bonds.29 A lithium bond theory was proposed to elucidate the chemical nature of the interactions between polar hosts and LiPSs.30 Nevertheless, the chemisorption strategy merely partially changes the chemical equilibrium of the sulfur species, with limited anchoring sites. Therefore, the shuttle of LiPSs is essentially uncured. If an electrocatalysis cycle can be introduced, the sulfur redox reactions can, therefore, be kinetically facilitated so as to correspondingly reduce the thermodynamic-driven LiPS shuttle, which provides a fresh insight into the sulfur electrochemistry. Electrocatalytic regulation of LiPSs intends to improve the kinetics between the sulfur species.31 Due to the benefits from lower overpotentials, the sulfur redox reactions take place rapidly and efficiently within the cathode, and the shuttle effect is greatly restrained due to the speedy transformation from soluble LiPSs to insoluble Li2S2/Li2S.32 Several pioneer works have been done using Pt,33 CoS234 TiC,35 and carbon nitrides36 as electrocatalysts for sulfur redox reactions in Li–S batteries. Very recently, deficient MoS2 nanoflakes were proven effective in accelerating polysulfide kinetics with relieved sulfur shuttling and improved performance by Lin et al.37 However, the investigation of polysulfide electrocatalysis is at its early stage, with neither systematic kinetic characterization nor deep mechanism understanding. New families of electrocatalysts are strongly demanded for establishing electrocatalytic chemistry for sulfur-containing compounds as well as the practical application of Li–S batteries. Nature is the master of catalysis. During oxidative phosphorylation, cytochrome c reductase, a natural biocatalyst, functions through synergistic electron transfer between porphyrin and sulfur clusters.38,39 This enzyme inspires porphyrin as a prototype molecular electrocatalyst for sulfur redox reactions. Besides, porphyrin complexes serve as efficient electrocatalysts for oxygen redox reactions, suggesting the potential for congener sulfur electrocatalysis from another perspective.40,41 Unfortunately, porphyrin molecules tend to aggregate or dissolve in organic electrolyte. If porphyrin molecules can be linked into framework materials, the resultant framework porphyrin would function as a superior polysulfide electrocatalyst for shuttle inhibition and excellent Li–S batteries. In this contribution, a framework porphyrin (POF) electrocatalyst is applied for kinetic promotion of polysulfide-involving redox reactions in high-capacity and high-stable Li–S batteries. The POF electrocatalyst is fabricated by covalently linking porphyrin units into two-dimensional frameworks directed by reticular chemistry, combining functional porphyrin centers and stable framework skeletons.42,43 As illustrated in Figure 1, the resultant POF demonstrates superior full-scheme electrocatalytic performances with regard to improving the kinetics for LiPS conversion, Li2S nucleation, and dissolution of Li2S to LiPSs, simultaneously. Consequently, the Li–S batteries with POF functional interlayers achieve high capacity, improved rate capability, long cycling stability, and satisfied performance with a high sulfur loading up to 4.3 mg·cm−2. Figure 1 | Schematic of POF synthesis and polysulfide electrocatalysis on POF electrocatalysts. The electrocatalytic process involves conversion between soluble LiPSs (2 < y < x ≤ 8), nucleation of Li2S from LiPSs, and dissolution of solid Li2S to LiPSs. The hydrogen, carbon, nitrogen, and oxygen atoms are marked with white, brown, blue, and red, respectively. Download figure Download PowerPoint Results and Discussion POF was one-pot synthesized with benzene-1,4-dicarboxaldehyde and pyrrole substrates following the direct synthesis methodology. Unfortunately, pure POF suffers from limited electronic conductivity and aggregated morphology. Therefore, graphene (named as G) was introduced as the template for spreading POF layers from stacking as well as increasing the overall conductivity. The resultant hybrid of G and POF was named as [email protected] Compared with bare G (Figures 2a and ), [email protected] exhibits a homogeneous morphology of coated graphene without POF aggregation characterized by scanning electron microscopy (SEM; ). Further, transmission electron microscopy (TEM) contrast confirms that the POF layers are uniformly deposited on graphene surface to afford a squamous morphology (Figures 2b and ). The thickness of the POF layer is estimated to be 3 nm, under which conditions the electron conductivity of the hybrid [email protected] can be guaranteed. The individual POF nanosheets are ca. 20 nm in lateral diameter (Figure 2c). Figure 2 | Characterization of [email protected] (a) SEM image of G. (b) TEM and (c) high-resolution TEM images of [email protected] (d) XRD patterns and (e) XPS survey spectra of G and [email protected] (f) High-resolution N 1s XPS spectrum of [email protected] Download figure Download PowerPoint Fourier transformed infrared spectrometry was performed to evaluate the completeness of the synthesis reaction. The characteristic adsorption of benzene-1,4-dicarboxaldehyde carboxyl group at 1700 cm−1 was greatly reduced in [email protected], indicating full conversion into POF (). The adsorption bands at 1650, 1200, and 800 cm−1 are assigned to the C=N vibration, N–H vibration, and in-plane POF deformation, respectively.44 The structure of G and [email protected] was elucidated using X-ray diffraction (XRD). G exhibits two peaks at 26° and 42°, which are attributed to the diffraction of (002) and (100) crystal faces, respectively (Figure 2d).45 [email protected], however, demonstrates an intense diffraction peak at 13° serving as the characteristic signal of ordered POF structure, implying the intrinsic periodic structure of POF that is different from amorphous polymers. The ordered structure of POF derived by the nature of covalent bonds with directivity and saturability guarantees the precise construction of porphyrin units with the maximum exposure for further electrocatalytic applications in a working battery. Element analysis was carried out using three independent methods, including conventional combustion, X-ray energy-dispersive spectrometer, and X-ray photoelectron spectroscopy (XPS). [email protected] affords a reasonable nitrogen content of 6.7 at.% determined by XPS, while the nitrogen content of G is negligible (Figure 2e). In addition, both conventional combustion and X-ray energy-dispersive spectrometer results exhibit a similar tendency of increased ratio of N∶C ( and ). Further, high-resolution N 1s XPS spectrum in Figure 2f indicates pyrrole N (400.1 eV) with a proportion of 91.4 at.% as the dominant nitrogen species, which agrees with the starting pyrrole substrate that remains stable during POF synthesis.46,47 The pore structure of G and [email protected] was characterized by N2 isothermal sorption measurements. The specific surface area of [email protected] is 548 m2·g−1, slightly reduced compared with that of G (609 m2·g−1) based on the Brunauer–Emmett–Teller method (). The pore volume also decreases from 2.10 cm3·g−1 of G to 1.74 cm3·g−1 of [email protected] (). Despite similar mesoporous structures afforded by shared graphene templates, [email protected] exhibits an ensemble of characteristic micropores with a mean diameter of 1.4 nm, which are assigned as the intrinsic pores of POF. Successful hybridization of functional POF with conductive graphene scaffolds encourages [email protected] as a promising electrocatalyst for polysulfide redox reactions. Surface adsorption of LiPSs constitutes the initial process of electrocatalysis. The adsorption behavior of polysulfides on different substrates was evaluated by both density functional theory calculations and experimental visualized adsorption of polysulfides. Li2S4 was selected as the typical polysulfide, which is commonly accepted as a starting species for the liquid–solid conversion. As demonstrated in Figure 3a, Li2S4 interacts strongly with the polar domain of POF units to afford a high binding energy of −5.34 eV (Figure 3b). G alone with nonpolar structures exhibits much weaker interactions, and the binding energy is only −0.58 eV (). The corresponding visualized adsorption experiments were conducted in identical adsorption conditions (Figure 3c). The solution with [email protected] additives rapidly decolored, while the control sample with G exhibited no obvious difference with the LiPS solution. [email protected] exhibits superior capability for polysulfide adsorption over G, offering POFs as potential functional units for polysulfide electrocatalysis. Figure 3 | Kinetic evaluation for polysulfide redox reactions on POF electrocatalyst. (a) Geometry of Li2S4 binding to POF. (b) Binding energies between Li2S4 and G or POF. (c) Static adsorption of Li2S4 by G and [email protected] (d) CV curves of symmetric cells to evaluate the conversion between soluble LiPSs (2 < y < x ≤ 8). (e) Potentiostatic discharge profile at 2.05 V for the nucleation of Li2S. (f) Potentiostatic charge profile at 2.40 V for dissolution of Li2S on G or [email protected] electrodes. Download figure Download PowerPoint Investigation of polysulfide electrocatalysis in Li–S batteries involves complicated sulfur redox reactions. According to the phase of sulfur species in working batteries, the reactions are typically classified into three processes, including (1) conversion between liquid LiPSs, (2) nucleation of insoluble Li2S from soluble LiPSs, and (3) dissolution of solid Li2S into soluble LiPSs. The three electrochemical processes are all kinetically sluggish, but are distinguished physicochemically. Therefore, individual kinetic investigations are employed to confirm polysulfide electrocatalysis and evaluate the performance of POF electrocatalysts. The conversion between soluble LiPSs (commonly Li2Sx, 4 ≤ x ≤ 8) was characterized using symmetric cells with the Li2S6 electrolyte.34 Identical electrodes were employed as the cathode and the anode simultaneously to eliminate distraction from lithium metal. The cyclic voltammetry (CV) curves demonstrate larger current density of [email protected] over G at a certain polarization voltage, indicating faster reaction rates and enhanced kinetics of the soluble LiPS redox reactions (Figure 3d). From another perspective, [email protected] delivers lower potential than G required at the same current density. This implies reduced overpotentials for polysulfide conversion, which is distinct evidence of polysulfide electrocatalysis on POF electrocatalysts. A low resistance of [email protected] is observed on electrochemical impedance spectra, which is ascribed to the superior electrocatalytic performance (). The kinetics of Li2S nucleation from liquid polysulfides was monitored following a potentiostatic discharge method.48 The sulfur species were fully discharged at 2.06 V in advance and then potentiostatically discharged at 2.05 V for Li2S nucleation. As exhibited in Figure 3e, the nucleation peak of [email protected] appears 1000 s earlier than G, indicating the reduced overpotential and distinct electrocatalysis for Li2S nucleation. Faster kinetics for Li2S nucleation favor uniform distribution of insulating Li2S on conductive frameworks, reservation of active sulfur species and, consequently, maintaining high capacity during cycling in working Li–S batteries. In addition, the early nucleated Li2S serves as an intrinsic polysulfide adsorbent to mitigate the shuttle of LiPSs. Dissolution of solid Li2S refers to the oxidation of Li2S to soluble LiPSs during charging, which is regarded to be kinetically sluggish to reduce the reversibility of Li2S-to-polysulfide interconversion and leave electrochemically deactivated phases.49,50 Similarly, kinetic evaluation of Li2S dissolution was performed using a potentiostatic charge method after full discharge into Li2S. [email protected] exhibits an obvious oxidative peak of Li2S dissolution at 1500 s (Figure 3f). In contrast, no current signal was observed for G, suggesting the intrinsic difference in the case of electrocatalytic Li2S dissolution on POF electrocatalysts. The reduced overpotential of Li2S oxidation using POF electrocatalysts serves as a key indicator to identify polysulfide electrocatalysis with improved kinetics. The previous results come to the same conclusion that POF electrocatalysts possess the intrinsic ability for polysulfide electrocatalysis, with significant promoted kinetics of full-scheme Li–S redox reactions. Considering the excellent kinetic performance, [email protected] was further applied in practical Li–S batteries, serving as both a cathode host and a functional interlayer. The sulfur content was 64 wt.% in the cathode. The sulfur redox reactions were first confirmed by CV profiles. Li–S batteries with [email protected] exhibit prominent redox peaks and higher current density compared with the cells with G, suggesting the sulfur kinetics are improved using POF electrocatalysts (). Electrochemical impedance spectra in additionally imply lower impedance of Li–S cells with [email protected], which is favorable for full demonstration of the POF electrocatalysts and overall improvement of battery performance. The rate performance was characterized to reveal the superior kinetics of sulfur species conversions. [email protected] contributes a capacity of 1611 mAh·g−1 at a current density of 0.1 C (1.0 C = 1672 mA·g−1 based on the weight of all sulfur species in the cell), with a sulfur loading of 1.5 mg·cm−2, which is very close (96.5%) to the theoretic capacity of sulfur (Figure 4a). The ultrahigh capacity indicates the sulfur redox reactions are highly reversible with reduced overpotentials on POF electrocatalysts. In contrast, G only affords a capacity of 1111 mAh·g−1 at the same current density. In addition, Li–S batteries with POF electrocatalysts exhibit satisfactory capacity at higher current density (1450, 1153, and 928 mAh·g−1, on average, at 0.2, 0.5, and 1.0 C, respectively), and a capacity of 1423 mAh·g−1 can be retained back to 0.2 C. The rate performance of G is inferior in comparison. Galvanostatic discharge–charge profiles at different rates reveal the origin of capacity differences (Figure 4b). Notably, the polarization degree determined by the voltage gap between charge and discharge is distinctly reduced for cells with [email protected], which agrees well with the electrocatalytic capability of [email protected] demonstrated in kinetic studies of probe reactions. Figure 4 | Electrochemical performance of Li–S batteries with POF electrocatalyst interlayers. (a) Rate performance and (b) corresponding galvanostatic discharge–charge profiles at 0.1 and 0.5 C, respectively. (c) Cycling performance of G and [email protected] at 0.5 C. The sulfur loading of the previous cells is 1.5 mg·cm−2. (d) Stable operation of Li–S batteries with high sulfur loading of 4.3 mg·cm−2 at 0.1 C. Download figure Download PowerPoint Both CE and capacity are selected as the main descriptors to evaluate the shuttle inhibition. Li–S batteries with modified [email protected] interlayers afford an initial discharge capacity of 1242 mAh·g−1 at 0.5 C. A capacity of 936 mAh·g−1 was preserved after extensive 400 cycles, corresponding to a cyclic decay rate of 0.071% (Figure 4c). More importantly, the CE maintains around 100% during cycling, indicating sulfur shuttling is significantly suppressed due to the strong adsorption and rapid redox reaction of LiPSs on POF electrocatalysts. The morphology is unchanged for the cathodes with [email protected] after cycling, suggesting the improved stability from another perspective (). G, however, exhibits little ability to restrain shuttle with rapidly decayed capacity and low CE. Lithium–sulfur batteries with high sulfur loading were further assembled as high-energy-density energy storage devices for practical applications. The cell with [email protected] delivers a high capacity of 1212 mAh·g−1, even at a high areal sulfur loading of 4.3 mg·cm−2, which is corresponded to an areal capacity of 5.21 mAh·cm−2 (Figure 4d). After 100 cycles, a capacity of 1130 mAh·g−1 (4.86 mAh·cm−2) is preserved, while the Li–S batteries with G exhibit obvious capacity degradation. The CE of the high-sulfur-loading Li–S cells is not as stable as that with moderate sulfur loading for both G and [email protected] because of higher concentration of soluble LiPSs in the electrolyte and higher resistance for ion transportation and electron conduction. Nevertheless, the CE of Li–S cells with [email protected] is higher overall throughout the cycling. Therefore, considering the high capacity and acceptable stability, POF electrocatalysts render Li–S batteries with highly desirable performances for practical applications. The remarkable electrocatalytic performance impels in-depth investigation on the mechanism of polysulfide electrocatalysis on POF electrocatalysts. Li2S6 was selected as a typical polysulfide to probe excellent electrocatalysis of POF at the electronic level. Difference charge density analysis was performed to elucidate the origin of the strong interactions between polysulfides and POF. As demonstrated in Figure 5a and , the charge density between Li atoms in Li2S6 and N atoms in POF is obviously increased, suggesting a strong electronic interaction and a large binding energy.30 Simultaneously, the Li–S bond is weakened due to the formation of lithium bond. Specifically, a charge transfer of 1.55 e− from Li2S6 to POF was observed according to the Bader charge analysis. POF possesses highly polar and conjugated structures with delocalized electrons and polarizing capability. Therefore, the strong interactions between POF and sulfur species are significantly enhanced through intermolecular polarization. The resultant electron transfer constitutes an essential prerequisite. Figure 5 | Mechanistic investigation of polysulfide electrocatalysis on porphyrin electrocatalysts. (a) Different charge density analysis of Li2S6 adsorbed on POF from the side view. The yellow and blue isosurfaces (0.001 |e| Å−3) correspond to the charge gain and loss regions, respectively. The hydrogen, carbon, nitrogen, lithium, and sulfur atoms are marked with white, brown, blue, green, and yellow, respectively. (b) DOS of sulfur 3p orbitals in Li2S6 and carbon and nitrogen 2p orbitals in POF. Download figure Download PowerPoint Effective energy matching between electrocatalysts and substrates is another key issue. The density of state (DOS) analysis was carried out to determine the electronic structures of POF and polysulfides. There are several obvious overlaps in the states between carbon and nitrogen 2p orbitals of POF and sulfur 3p orbitals of polysulfide (Figure 5b), indicating feasible electron transfer. In addition, delocalization of POF affords wide states adjacent to sulfur 3p orbitals, which is in favor of electron transfer. The overlaps of DOS and enhanced charge transfer are reasonable for achieving excellent electrocatalysis. Polar and conjugated POF affords delocalized electrons and suitable electronic structures, which are highly regarded as two essential advantages of POF electrocatalysts for superior polysulfide electrocatalysis. Conclusions A unique strategy of polysulfide electrocatalysis was proposed to inhibit the shuttle of LiPSs in Li–S batteries. A new family of framework porphyrin materials was rationally designed and precisely fabricated with graphene hybridization as a superior electrocatalyst for polysulfide redox reactions. Systematic kinetic characterizations demonstrate POF as a superior electrocatalyst regarding processes of soluble polysulfide conversion, lithium sulfide nucleation, and lithium sulfide dissolution. The Li–S batteries employing POF electrocatalysts exhibit faster kinetics, high capacity of 1611 mAh·g−1 at 0.1 C, outstanding cycling performance with the capacity decay rate of 0.071% in 400 cycles, and stable operation with high-loading sulfur cathodes (4.3 mg·cm−2). Density functional theory calculations further unveil the origin of the excellent catalysis of POF electrocatalysts. The strategy of polysulfide electrocatalysis develops our chemical understanding of sulfur species in energy-related applications and inspires the electrocatalysis concept for extended energy conversion and storage systems based on multielectron redox reactions. Conflict of Interest The authors declare no competing financial interests. Supporting Information Supporting information is available. Acknowledgments B.-Q.L., H.-J.P., and X.C. contributed equally to this work. This work was supported by National Key Research and Development Program (2016YFA0202500, 2015CB932500, and 2016YFA0200102), National Natural Scientific Foundation of China (21676160 and 21825501), and Tsinghua University Initiative Scientific Research Program. The authors acknowledge the support from Tsinghua National Laboratory for Information Science and Technology for theoretical simulations. The authors thank Dr. Cheng Tang, Dr. Long Kong, and Prof. Jia-Qi Huang for helpful discussion. References 1. Chu S.; Cui Y.; Liu N.The Path Towards Sustainable Energy.Nat. Mater.2017, 16, 16–22. Google Scholar 2. Grey C. P.; Tarascon J. M.Sustainability and in Situ Monitoring in Battery Development.Nat. Mater.2017, 16, 45–56. Google Scholar 3. Fang R.; Zhao S.; Sun Z.; Wang W.; Cheng H.-M.; Li F.More Reliable Lithium-Sulfur Batteries: Status, Solutions and Prospects.Adv. Mater.2017, 29, 1606823. Google Scholar 4. Peng H.-J.; Huang J.-Q.; Zhang Q.A Review of Flexible Lithium-Sulfur and Analogous Alkali Metal-Chalcogen Rechargeable Batteries.Chem. Soc. Rev.2017, 46, 5237–5288. Google Scholar 5. Wang H.; Zhang W.; Liu H.; Guo Z.A Strategy for Configuration of an Integrated Flexible Sulfur Cathode for High-Performance Lithium-Sulfur Batteries.Angew. Chem. Int. Ed.2016, 55, 3992–3996. Google Scholar 6. Tao X.; Wang J.; Liu C.; Wang H.; Yao H.; Zheng G.; Seh Z. W.; Cai Q.; Li W.; Zhou G.; Zu C.; Cui Y.Balancing Surface Adsorption and Diffusion of Lithium-Polysulfides on Nonconductive Oxides for Lithium-Sulfur Battery Design.Nat. Commun.2016, 7, 11203. Google Scholar 7. Zhang J.; Huang H.; Bae J.; Chung S.-H.; Zhang W.; Manthiram A.; Yu G.Nanostructured Host Materials for Trapping Sulfur in Rechargeable Li-S Batteries: Structure Design and Interfacial Chemistry.Small Methods2018, 2, 1700279. Google Scholar 8. Ye C.; Zhang L.; Guo C.; Li D.; Vasileff A.; Wang H.; Qiao S.-Z.A 3D Hybrid of Chemically Coupled Nickel Sulfide and Hollow Carbon Spheres for High Performance Lithium-Sulfur Batteries.Adv. Funct. Mater.2017, 27, 1702524. Google Scholar 9. Manthiram A.; Chung S.-H.; Zu C.Lithium-Sulfur Batteries: Progress and Prospects.Adv. Mater.2015, 27, 1980–2006. Google Scholar 10. Shyamsunder A.; Beichel W.; Klose P.; Pang Q.; Scherer H.; Hoffmann A.; Murphy G. K.; Krossing I.; Nazar L. F.Inhibiting Polysulfide Shuttle in Lithium-Sulfur Batteries through Low-Ion-Pairing Salts and a Triflamide Solvent.Angew. Chem. Int. Ed.2017, 56, 6192–6197. Google Scholar 11. Peng H.-J.; Liang J.; Z",
+  "authors": [
+    {
+      "display_name": "Bo‐Quan Li",
+      "id": "A5060856608",
+      "orcid": "https://orcid.org/0000-0002-9544-5795",
+      "institutions": [
+        {
+          "id": "I99065089",
+          "display_name": "Tsinghua University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bo-Quan Li"
+    },
+    {
+      "display_name": "Hong‐Jie Peng",
+      "id": "A5062965071",
+      "orcid": "https://orcid.org/0000-0002-4183-703X",
+      "institutions": [
+        {
+          "id": "I99065089",
+          "display_name": "Tsinghua University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hong-Jie Peng"
+    },
+    {
+      "display_name": "Xiang Chen",
+      "id": "A5100641667",
+      "orcid": "https://orcid.org/0000-0002-7686-6308",
+      "institutions": [
+        {
+          "id": "I99065089",
+          "display_name": "Tsinghua University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiang Chen"
+    },
+    {
+      "display_name": "Shuyuan Zhang",
+      "id": "A5100699732",
+      "orcid": "https://orcid.org/0000-0002-9297-4333",
+      "institutions": [
+        {
+          "id": "I99065089",
+          "display_name": "Tsinghua University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shu-Yuan Zhang"
+    },
+    {
+      "display_name": "Jin Xie",
+      "id": "A5035802167",
+      "orcid": "https://orcid.org/0000-0002-4235-7441",
+      "institutions": [
+        {
+          "id": "I99065089",
+          "display_name": "Tsinghua University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jin Xie"
+    },
+    {
+      "display_name": "Zhao Chang-xin",
+      "id": "A5082992256",
+      "orcid": "https://orcid.org/0000-0003-3133-0814",
+      "institutions": [
+        {
+          "id": "I99065089",
+          "display_name": "Tsinghua University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chang-Xin Zhao"
+    },
+    {
+      "display_name": "Qiang Zhang",
+      "id": "A5100381911",
+      "orcid": "https://orcid.org/0000-0002-3929-1541",
+      "institutions": [
+        {
+          "id": "I99065089",
+          "display_name": "Tsinghua University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qiang Zhang"
+    }
+  ],
+  "publication_year": 2019,
+  "publication_date": "2019-04-01",
+  "type": "article",
+  "cited_by_count": 153,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210239486",
+    "display_name": "CCS Chemistry",
+    "issn_l": "2096-5745",
+    "issn": [
+      "2096-5745"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311897"
+  },
+  "volume": "1",
+  "issue": "1",
+  "first_page": "128",
+  "last_page": "137",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "diamond",
+    "oa_url": "https://doi.org/10.31635/ccschem.019.20180016",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C2777379467",
+      "display_name": "Polysulfide",
+      "level": 4,
+      "score": 0.9529663
+    },
+    {
+      "id": "C2779480358",
+      "display_name": "Porphyrin",
+      "level": 2,
+      "score": 0.73612726
+    },
+    {
+      "id": "C33989665",
+      "display_name": "Electrocatalyst",
+      "level": 4,
+      "score": 0.7204466
+    },
+    {
+      "id": "C518881349",
+      "display_name": "Sulfur",
+      "level": 2,
+      "score": 0.62730193
+    },
+    {
+      "id": "C2777464112",
+      "display_name": "Lithium–sulfur battery",
+      "level": 4,
+      "score": 0.57991046
+    },
+    {
+      "id": "C2778541603",
+      "display_name": "Lithium (medication)",
+      "level": 2,
+      "score": 0.55408925
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.39202812
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.17632353
+    },
+    {
+      "id": "C17525397",
+      "display_name": "Electrode",
+      "level": 2,
+      "score": 0.15607652
+    },
+    {
+      "id": "C52859227",
+      "display_name": "Electrochemistry",
+      "level": 3,
+      "score": 0.15234527
+    },
+    {
+      "id": "C75473681",
+      "display_name": "Photochemistry",
+      "level": 1,
+      "score": 0.1441113
+    },
+    {
+      "id": "C118552586",
+      "display_name": "Psychiatry",
+      "level": 1,
+      "score": 0.094540805
+    },
+    {
+      "id": "C178790620",
+      "display_name": "Organic chemistry",
+      "level": 1,
+      "score": 0.09280935
+    },
+    {
+      "id": "C147789679",
+      "display_name": "Physical chemistry",
+      "level": 1,
+      "score": 0.060854375
+    },
+    {
+      "id": "C68801617",
+      "display_name": "Electrolyte",
+      "level": 3,
+      "score": 0.04978594
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10281",
+      "display_name": "Advanced Battery Materials and Technologies",
+      "score": 1.0
+    },
+    {
+      "id": "T10018",
+      "display_name": "Advancements in Battery Materials",
+      "score": 0.9996
+    },
+    {
+      "id": "T11690",
+      "display_name": "Advanced battery technologies research",
+      "score": 0.9994
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.31635/ccschem.019.20180016",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:04:39.036652",
+  "source_database": "OpenAlex"
+}

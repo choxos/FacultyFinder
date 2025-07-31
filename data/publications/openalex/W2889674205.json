@@ -1,0 +1,254 @@
+{
+  "openalex_id": "W2889674205",
+  "doi": "https://doi.org/10.1190/segam2018-2997711.1",
+  "title": "Correcting for salt misinterpretation with full-waveform inversion",
+  "abstract": "PreviousNext No AccessSEG Technical Program Expanded Abstracts 2018Correcting for salt misinterpretation with full-waveform inversionAuthors: Zhigang ZhangJiawei MeiFeng LinRongxin HuangPing WangZhigang ZhangCGG, Jiawei MeiCGG, Feng LinCGG, Rongxin HuangCGG, and Ping WangCGGhttps://doi.org/10.1190/segam2018-2997711.1 SectionsAboutPDF/ePub ToolsAdd to favoritesDownload CitationsTrack CitationsPermissions ShareFacebookTwitterLinked InRedditEmail Abstract Using full-waveform inversion (FWI) to update velocity models that contain salt bodies with high velocity contrasts is challenging. It is even harder if erroneous salt geometry is part of the velocity model. Shen et al. (2017) showed a successful FWI application that corrected some misinterpretation of salt structures and resulted in improved subsalt images at the Atlantis field in the Gulf of Mexico. Their study stressed the importance of the low frequencies (usable down to 1.6 Hz), full azimuths, and long offsets of OBN data. Encouraged by the success at Atlantis, we revisited some aspects of FWI algorithms to minimize cycle-skipping and amplitude discrepancy issues that are common in the presence of salt and salt misinterpretation. Here we present the use of traveltime misfit measured in frequency-dependent time windows as the FWI cost function. It is devised to minimize the negative impact from the amplitude discrepancy and cycleskipping between the recorded data and modeled synthetic data. Furthermore, we use the crosscorrelation coefficient between the recorded data and synthetic data as a weight function in gradient computation to promote traveltime measurements of higher quality. We demonstrate the effect of our approach using a full-azimuth streamer data set in an area of complex shallow salt bodies in the Gulf of Mexico. Presentation Date: Tuesday, October 16, 2018 Start Time: 1:50:00 PM Location: 207C (Anaheim Convention Center) Presentation Type: Oral Keywords: algorithm, full-waveform inversion, salt, subsaltPermalink: https://doi.org/10.1190/segam2018-2997711.1FiguresReferencesRelatedDetailsCited byAutomated salt model building: From compaction trend to final velocity model using waveform inversionMike Warner, Tenice Nangoo, Adrian Umpleby, Nikhil Shah, Chris Manuel, Dimitri Bevc, and Miguel Merino1 March 2023 | The Leading Edge, Vol. 42, No. 3Enhancing salt model resolution and subsalt imaging with elastic FWIZhigang Zhang, Zedong Wu, Zhiyuan Wei, Jiawei Mei, Rongxin Huang, and Ping Wang1 March 2023 | The Leading Edge, Vol. 42, No. 3Toward high-fidelity imaging: Dynamic matching FWI and its applicationsYi Huang, Jian Mao, James Sheng, Mike Perz, Yang He, Feng Hao, Faqi Liu, Bin Wang, Seet Li Yong, Daniel Chaikin, Adriana Citlali Ramirez, Matt Hart, and Henrik Roende1 February 2023 | The Leading Edge, Vol. 42, No. 2Pushing seismic resolution to the limit with FWI imagingZhiyuan Wei, Jiawei Mei, Zedong Wu, Zhigang Zhang, Rongxin Huang, and Ping Wang3 January 2023 | The Leading Edge, Vol. 42, No. 1Superior resolution through multiparameter FWI imaging: A new philosophy in seismic processing and imagingJames McLeman, Tom Rayment, Tim Burgess, Karen Dancer, Gary Hampson, and Alex Pauli3 January 2023 | The Leading Edge, Vol. 42, No. 1From FWI to ultra-high-resolution imagingIsabel Espin, Nicolas Salaun, Hao Jiang, and Mathieu Reinier3 January 2023 | The Leading Edge, Vol. 42, No. 1Deep Velocity Generator: A Plug-In Network for FWI EnhancementIEEE Transactions on Geoscience and Remote Sensing, Vol. 61Influence of shear velocity on elastic full-waveform inversion: Gulf of Mexico case study using multicomponent ocean-bottom node dataYongchae Cho, Carlos Pérez Solano, John Kimbro, Yi Yang, René-Édouard Plessix, and Kenneth Matson23 August 2022 | GEOPHYSICS, Vol. 87, No. 5Estimate near-surface velocity with reversals using deep learning and full-waveform inversion: A field-data-driven methodJournal of Applied Geophysics, Vol. 37Estimate near-surface velocity with reversals using deep learning and full-waveform inversionYong Ma, Xu Ji, Weiguang He, and Tong Fei15 August 2022Practical considerations for computing the kernels of reflection-based full-waveform inversionHouzhu (James) Zhang, Hong Liang, and Hongwei Liu15 August 2022FWI for the complex Walker Ridge salt province using streamer dataDorothy Ren, Xin He, Siyun Xu, Fei Gao, Feng Lin, and Jiawei Mei15 August 2022Analysis of the impact of demigration on traveltime-based reflection full-waveform inversionHong Liang, Houzhu (James) Zhang, and Hongwei Liu15 August 2022Velocity model building with a time shift objective function: Gulf of Mexico examplesYi Yang, Ken Matson, Tadas Krupovnickas, Mark Huiskes, Rene-Edouard Plessix, and Sijmen Gerritsen15 August 2022Unlocking the potential of WAZ data for subsalt imaging using FWI: A case study in the Perdido areaVivek Vandrasi, Zhihua Su, Shouting Huang, Yogesh Agnihotri, and Sabaresan Mothi15 August 2022Pushing the boundary of WAZ streamer data for subsalt imaging: A case study in deepwater Mexico CampecheYi Chen, Kendra Pyke, Juan Wang, Jasmeen Moubarak, Earl Manning, Jessica Kopp, Rongzhang Chen, Chang Chen, Ravi Kumar, Minshen Wang, and Sabaresan Mothi15 August 2022Assessing FWI imaging's potential to tackle illumination issues and internal multiples in the Brazilian presaltCyril Dolymnyj, Filipe Rudrigues, Amanda Porto, Leandro Galves, and Asdrubal Ovalles15 August 2022Improving subsalt images using reflection FWI on WAZ data: Examples from the Gulf of MexicoMaksym Kryvohuz, Yihua Cai, Sebastian Ramirez, Robert Schelstrate, and Gislain Madiba15 August 2022Revisiting the Brazilian Equatorial Margin with FWI and its impact on interpretation in an exploratory frontierDiego Costa, Edmarley Ramos, Giuseppe Loconte, Filipe Rudrigues, and Olivier Brachet15 August 2022High-resolution FWI of converted-wave data — A case study from the Edvard Grieg fieldPer Eivind Dhelie, Vidar Danielsen, Jon Andre Haugen, Emilie Davenne, Knut Richard Straith, Alireza Roodaki, Manuel Peiro, Alexis Fotsoh, Wenlei Gao, Nabil Masmoudi, and Andrew Ratcliffe15 August 2022One more stride forward in Thunder Horse subsalt imaging with elastic FWIBunmi Elebiju, Qingsong Li, Ken Hartman, Francis Rollins, Ye Feng, Karl Kaiser, Werner Schinagl, Chi Chen, Alex Yanjun Hao, Zhiyuan Wei, and Jiawei Mei15 August 2022Evaluating the impact from dual-azimuth, wide-azimuth towed streamer and ocean bottom node acquisitions for Brazil pre-salt exploration: A finite difference modeling studyLei Zhuo, Jeff Bergeron, Jake Deeds, Robert Brandt, and Dirk Erickson15 August 2022Towards more accurate reservoir imaging using FWI: An OBN case study at TrionZhen Wang, Sen Mei, Zhuocheng Yang, Joakim Blanch, Ezequiel Genova, Juan-Mauricio Florez-Nino, Humberto Salazar-Soto, and Alfredo Vazquez-Cantu15 August 2022High-resolution seismic imaging of shallow karstified carbonate overburden offshore IndonesiaXiaobo Li, Yonghe Guo, Yi Xie, Barry Hung, Ilham Panggeleng, M. R. Husni Sahidu, and Sarah Putri15 August 2022Practical solutions for reflection-driven FWI and application to Gulf of Mexico datasetsMax Liu, René-Édouard Plessix, Yi Yang, Jeffrey Vander Hurst, Na Shan, Rob Schelstrate, Colin Perkins, and Vanessa Goh15 August 2022Elastic FWI for large impedance contrastsZedong Wu, Zhiyuan Wei, Zhigang Zhang, Jiawei Mei, Rongxin Huang, and Ping Wang15 August 2022Innovative application of full-waveform inversion applied to extended wide-azimuth marine streamer seismic data in a complex salt environmentPeter Lanzarone, Xukai Shen, Andrew Brenders, Ganyuan Xia, Joe Dellinger, Gabriel Ritter, and John Etgen25 February 2022 | GEOPHYSICS, Vol. 87, No. 3Two Improved Acquisition Systems for Deep Subsurface Exploration11 April 2022 | Frontiers in Earth Science, Vol. 10Integrating deep neural networks with full-waveform inversion: Reparameterization, regularization, and uncertainty quantificationWeiqiang Zhu, Kailai Xu, Eric Darve, Biondo Biondi, and Gregory C. Beroza6 December 2021 | GEOPHYSICS, Vol. 87, No. 1The value of very low frequencies and far offsets for seismic data in the Permian Basin: Case study on a new dense survey from the Central Basin PlatformVincent Durussel, Dongren Bai, Amin Baharvand Ahmadi, Scott Downie, and Keith Millis4 January 2022 | The Leading Edge, Vol. 41, No. 1Paradigm shift: Recent advances in model building and imaging at ShenziBrad Wray, Lin Zheng, Fabian Rozario, Xue Zhang, Nicolas Chazalnoel, and Cheryl Mifflin1 September 2021Correcting severe image distortion via multiazimuth FWI in offshore SenegalXiang Li, Keat Huat Teng, Kai Zhao, Shiping Wu, David Dickinson, and F. Hasan Sidi1 September 20214D FWI using towed-streamer data: A case study near Laverda oil fieldNanxin Li, Ziqin Yu, Robert To, Min Wang, Yi Xie, and David Dickinson1 September 2021Sim-source for 4D: Learnings from processing the first ISS OBN monitor survey at AtlantisJing Yang, Xin He, Jiawei Mei, Rongxin Huang, Qingsong Li, Kang Fu, and Jean-Paul van Gestel1 September 2021Shear-wave velocity update using PS reflection FWI for imaging beneath complex gas cloudsMin Wang, Yi Xie, Peipei Deng, Jit Heang Tan, Shivaji Maitra, Matthew Camm, N. Fitri S. Zainal, Wai Hoong Tang, M. Nasrul B. M. Isa, and A. Aziz B. Muhamad1 September 2021Solving subsalt imaging challenges in Green Canyon using OBN and FWI imagingJianlei Liu, Min Yang, Jacob Deeds, Joel Luckow, Thomas Cheriyan, Pierre-Olivier Ariston, Zhuocheng Yang, Meisen Mei, and Zhigang Zhang1 September 2021Reduced subsalt reservoir structural uncertainty and improved amplitude characterization through FWI and LSRTMAfolabi Babalola, Douglas Rodenberger, Arpad Ozsdolay, Mandy Wong, Olga Rodina, Juan Wang, Ritu Sarker, Vicente Oropeza Bacci, Edward Townend, Hao Shen, Chanjuan Sun, Medha Bhargava, and Nicolas Chazalnoel1 September 2021Wave-equation traveltime and amplitude for Kirchhoff migrationYu Pu, Gang Liu, Diancheng Wang, Hui Huang, and Ping Wang1 September 2021Imaging the complex geology in the Central Basin Platform with land FWIDongren Bai, Lin Zheng, and Wubing Deng1 September 2021FWI imaging: Revealing the unprecedented resolution of seismic dataZhiyuan Wei, Jiawei Mei, Zedong Wu, Zhigang Zhang, Rongxin Huang, and Ping Wang1 September 2021Exploring the full potential of a sparse nodes survey in the western Gulf of MexicoFeng Lin, Dorothy Ren, Jiawei Mei, Zhiguang Xue, Joakim Blanch, Marcus Cahoj, Jon Jarvis, and Alex Kostin1 September 2021The first high-end OBC imaging for fractured basement in Bohai Bay, ChinaJianfeng Zhang, Zhiliang Wang, Yitao Chen, Yonghe Guo, Zhi Kang Fong, Jiang Li, and Yao Wu1 September 2021Improving seismic images for frontier exploration in East Coast Canada: Lessons learnedJun Cai, Jin Tan, Xiaojing Liu, Pengfei Dong, Timmy Dy, and Weiping Gou1 September 2021Learnings from an FWI imaging study using 3D and 4D data over a postsalt field in Campos BasinSamanta Bortoni, Sergio Barragan, Gregório Azevedo, Luis Cypriano, André Ferreira, Wendel Moreira, Paula dos Reis, and Wilson Filho1 September 2021Joint time-lapse full-waveform inversion with a time-lag cost functionZhiguang Xue, Zhigang Zhang, Ping Wang, and Jun Cai1 September 2021Log-validated waveform inversion of reflection seismic data with wavelet phase and amplitude updatingSergio Romahn, Kristopher A. Innanen, and Gary F. Margrave2 July 2021 | GEOPHYSICS, Vol. 86, No. 4Ten years of time-lapse seismic on Atlantis FieldJean-Paul van Gestel1 July 2021 | The Leading Edge, Vol. 40, No. 7Full-waveform inversion for full-wavefield imaging: Decades in the makingRongxin Huang, Zhigang Zhang, Zedong Wu, Zhiyuan Wei, Jiawei Mei, and Ping Wang3 May 2021 | The Leading Edge, Vol. 40, No. 5Low-frequency, long-offset elastic waveform inversion in the context of velocity model buildingRené-Édouard Plessix and Tadas Krupovnickas3 May 2021 | The Leading Edge, Vol. 40, No. 5Shenzi OBN: An imaging step changeCheryl Mifflin, Drew Eddy, Brad Wray, Lin Zheng, Nicolas Chazalnoel, and Rongxin Huang3 May 2021 | The Leading Edge, Vol. 40, No. 5Full-Waveform Inversion and Least-Squares Migration to Improve Images in Northern Carnarvon Basin16 March 2021Target-oriented waveform redatuming and high-resolution inversion: Role of the overburdenQiang Guo and Tariq Alkhalifah9 November 2020 | GEOPHYSICS, Vol. 85, No. 6New-generation simultaneous shooting sparse OBN survey and FWI delineate deep subsalt structures in the Greater Mars-Ursa areaHenrik Roende, Dan Chaikin, Yi Huang, and Konstantin N. Kudin2 November 2020 | The Leading Edge, Vol. 39, No. 11Improving Mississippi Canyon images with ocean bottom node data: Challenges and surprisesYuan Yao, Hui Zhang, Lingli Hu, and Chao Peng30 September 2020High-resolution imaging with least-squares Q Kirchhoff using velocity and Q updated by OBN FWI: Gulf of Mexico, Marlin-Dorado FieldJianxiong Chen, Brian Lindsey, Jordan Dubuisson, Wally Partridge, George Zemlicka, Mustafa Al-Waily, Bang Lu, and Huifeng Zhu30 September 2020Derisking and unlocking infill opportunities in the Auger and Andros BasinsUwe Klein-Helmkamp, Erkan Ay, Siavash Tarkhan, Nikita Krylov, Vicki Gee, Bin Deng, Karthik Kanakamedala, and Shuo Ji30 September 2020FWI-driven orthorhombic modeling with OBS data for reservoir imaging offshore TrinidadGuangfu Shao, Xin Zhao, Qianqian Tong, Rongxin Huang, Dale Baptiste, Li Jiang, and Bertram Nolte30 September 2020FWI Imaging: Full-wavefield imaging through full-waveform inversionZhigang Zhang, Zedong Wu, Zhiyuan Wei, Jiawei Mei, Rongxin Huang, and Ping Wang30 September 2020The potential of sparse nodes for exploration in Santos BasinAdriano Martinez, Adel Khalil, Werter Oliveira, Eduardo Naomitsu, and Ana Moliterno30 September 2020Full-waveform inversion for sparse OBN dataZhiguang Xue, Zhigang Zhang, Feng Lin, Jiawei Mei, Rongxin Huang, and Ping Wang30 September 2020Time-lag FWI based velocity model and image of a coarse shallow water OBC data setVivek Vandrasi, Mustafa Al-Waily, Sabaresan Mothi, and Alfredo Vasquez30 September 2020Adaptive quadratic Wasserstein full-waveform inversionDiancheng Wang and Ping Wang10 August 2019Illuminating Santos Basin's pre-salt with OBN data: Potential and challenges of FWIFlorian Jouno, Adriano Martinez, Denis Ferreira, Daniela Donno, and Adel Khalil10 August 2019Sparse nodes for velocity: Learnings from Atlantis OBN full-waveform inversion testJiawei Mei, Zhigang Zhang, Feng Lin, Rongxin Huang, Ping Wang, and Cheryl Mifflin10 August 2019Purposeful seismic imaging for subsalt Wilcox stratigraphyMark Fan, R. Chadwick Holmes, Rob Buehring, Bing Bai, Qiaofeng Wu, Yao Zhao, and Serife Bitlis10 August 2019Reflection full-waveform inversion with data-space LSRTMMaksym Kryvohuz, Henning Kuehl, René-Édouard Plessix, and Yi Yang10 August 2019Elastic reflection FWI for subsalt velocity reconstruction: Benchmark test with massive salt bodyQiang Guo and Christian Rivera10 August 2019Least-squares RTM with ocean bottom nodes: Potentials and challengesYan Liu, Yi Chen, Hongda Ma, Chao Peng, Gopal Mohapatra, Wisley Martins, Gregory Duncan, and Steve Checkles10 August 2019Updating salt model using FWI on WAZ data in the Perdido area: Benefits and challengesRavi Kumar, Huifeng Zhu, Vivek Vandrasi, Don Dobesh, and Alfredo Vazquez10 August 2019Salt velocity model building with FWI on OBN data: Example from Mad Dog, Gulf of MexicoBertram Nolte, Francis Rollins, Qingsong Li, Sireesh Dadi, Siyuan Yang, Jiawei Mei, and Rongxin Huang10 August 2019Improving images under complex salt with ocean bottom node dataYuan Yao, Hongda Ma, Yan Liu, Chao Peng, Gopal Mohapatra, Gregory Duncan, Wisley Martins, and Steve Checkles10 August 2019Assisting salt model building with reflection full-waveform inversionAdriano Gomes, Joe Peterson, Serife Bitlis, Chengliang Fan, and Robert Buehring1 April 2019 | Interpretation, Vol. 7, No. 2Full-waveform inversion for imaging and geologic interpretation: A deepwater Gulf of Mexico case studyYannick Cobo, Carlos Calderón-Macías, and Shihong Chi15 March 2019 | Interpretation, Vol. 7, No. 2Full-waveform inversion for salt: A coming of agePing Wang, Zhigang Zhang, Jiawei Mei, Feng Lin, and Rongxin Huang28 February 2019 | The Leading Edge, Vol. 38, No. 3 SEG Technical Program Expanded Abstracts 2018ISSN (print):1052-3812 ISSN (online):1949-4645Copyright: 2018 Pages: 5520 publication data© 2018 Published in electronic format with permission by the Society of Exploration GeophysicistsPublisher:Society of Exploration Geophysicists HistoryPublished Online: 27 Aug 2018 CITATION INFORMATION Zhigang Zhang, Jiawei Mei, Feng Lin, Rongxin Huang, and Ping Wang, (2018), \"Correcting for salt misinterpretation with full-waveform inversion,\" SEG Technical Program Expanded Abstracts : 1143-1147. https://doi.org/10.1190/segam2018-2997711.1 Plain-Language Summary Keywordsalgorithmfull-waveform inversionsaltsubsaltPDF DownloadLoading ...",
+  "authors": [
+    {
+      "display_name": "Zhigang Zhang",
+      "id": "A5100373984",
+      "orcid": "https://orcid.org/0000-0001-8666-1026",
+      "institutions": [
+        {
+          "id": "I4693666",
+          "display_name": "GGG (France)",
+          "country_code": "FR",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhigang Zhang"
+    },
+    {
+      "display_name": "Jia‐Wei Mei",
+      "id": "A5088997654",
+      "orcid": "https://orcid.org/0000-0003-4933-4880",
+      "institutions": [
+        {
+          "id": "I4693666",
+          "display_name": "GGG (France)",
+          "country_code": "FR",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jiawei Mei"
+    },
+    {
+      "display_name": "Feng Lin",
+      "id": "A5017986015",
+      "orcid": "https://orcid.org/0000-0003-4249-6174",
+      "institutions": [
+        {
+          "id": "I4693666",
+          "display_name": "GGG (France)",
+          "country_code": "FR",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Feng Lin"
+    },
+    {
+      "display_name": "Rongxin Huang",
+      "id": "A5102422307",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4693666",
+          "display_name": "GGG (France)",
+          "country_code": "FR",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rongxin Huang"
+    },
+    {
+      "display_name": "Ping Wang",
+      "id": "A5100338726",
+      "orcid": "https://orcid.org/0000-0003-2932-0617",
+      "institutions": [
+        {
+          "id": "I4693666",
+          "display_name": "GGG (France)",
+          "country_code": "FR",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ping Wang"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-08-27",
+  "type": "article",
+  "cited_by_count": 121,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.6923069
+    },
+    {
+      "id": "C180205008",
+      "display_name": "Amplitude",
+      "level": 2,
+      "score": 0.67986923
+    },
+    {
+      "id": "C1893757",
+      "display_name": "Inversion (geology)",
+      "level": 3,
+      "score": 0.63056785
+    },
+    {
+      "id": "C159737794",
+      "display_name": "Azimuth",
+      "level": 2,
+      "score": 0.6108081
+    },
+    {
+      "id": "C197424946",
+      "display_name": "Waveform",
+      "level": 3,
+      "score": 0.6045585
+    },
+    {
+      "id": "C165205528",
+      "display_name": "Seismology",
+      "level": 1,
+      "score": 0.45689675
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.4167155
+    },
+    {
+      "id": "C2780615836",
+      "display_name": "USable",
+      "level": 2,
+      "score": 0.41447663
+    },
+    {
+      "id": "C125171110",
+      "display_name": "Economic geology",
+      "level": 4,
+      "score": 0.41326925
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.3707499
+    },
+    {
+      "id": "C13280743",
+      "display_name": "Geodesy",
+      "level": 1,
+      "score": 0.35379243
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.2207264
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.14586493
+    },
+    {
+      "id": "C120665830",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.12747708
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.116217405
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.1028344
+    },
+    {
+      "id": "C2993313656",
+      "display_name": "Metamorphic petrology",
+      "level": 3,
+      "score": 0.09394723
+    },
+    {
+      "id": "C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "score": 0.065933794
+    },
+    {
+      "id": "C554190296",
+      "display_name": "Radar",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C77928131",
+      "display_name": "Tectonics",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10271",
+      "display_name": "Seismic Imaging and Inversion Techniques",
+      "score": 1.0
+    },
+    {
+      "id": "T10635",
+      "display_name": "Hydraulic Fracturing and Reservoir Analysis",
+      "score": 0.9981
+    },
+    {
+      "id": "T11801",
+      "display_name": "Reservoir Engineering and Simulation Methods",
+      "score": 0.998
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1190/segam2018-2997711.1",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:02:07.509133",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,822 @@
+{
+  "openalex_id": "W4318024957",
+  "doi": "https://doi.org/10.1136/bmjopen-2022-062562",
+  "title": "Protocol for validation of the Global Scales for Early Development (GSED) for children under 3 years of age in seven countries",
+  "abstract": "Children's early development is affected by caregiving experiences, with lifelong health and well-being implications. Governments and civil societies need population-based measures to monitor children's early development and ensure that children receive the care needed to thrive. To this end, the WHO developed the Global Scales for Early Development (GSED) to measure children's early development up to 3 years of age. The GSED includes three measures for population and programmatic level measurement: (1) short form (SF) (caregiver report), (2) long form (LF) (direct administration) and (3) psychosocial form (PF) (caregiver report). The primary aim of this protocol is to validate the GSED SF and LF. Secondary aims are to create preliminary reference scores for the GSED SF and LF, validate an adaptive testing algorithm and assess the feasibility and preliminary validity of the GSED PF.We will conduct the validation in seven countries (Bangladesh, Brazil, Côte d'Ivoire, Pakistan, The Netherlands, People's Republic of China, United Republic of Tanzania), varying in geography, language, culture and income through a 1-year prospective design, combining cross-sectional and longitudinal methods with 1248 children per site, stratified by age and sex. The GSED generates an innovative common metric (Developmental Score: D-score) using the Rasch model and a Development for Age Z-score (DAZ). We will evaluate six psychometric properties of the GSED SF and LF: concurrent validity, predictive validity at 6 months, convergent and discriminant validity, and test-retest and inter-rater reliability. We will evaluate measurement invariance by comparing differential item functioning and differential test functioning across sites.This study has received ethical approval from the WHO (protocol GSED validation 004583 20.04.2020) and approval in each site. Study results will be disseminated through webinars and publications from WHO, international organisations, academic journals and conference proceedings.Open Science Framework https://osf.io/ on 19 November 2021 (DOI 10.17605/OSF.IO/KX5T7; identifier: osf-registrations-kx5t7-v1).",
+  "authors": [
+    {
+      "display_name": "Vanessa Cavallera",
+      "id": "A5027903512",
+      "orcid": "https://orcid.org/0000-0001-5623-9721",
+      "institutions": [
+        {
+          "id": "I1290603121",
+          "display_name": "World Health Organization - Pakistan",
+          "country_code": "PK",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vanessa Cavallera"
+    },
+    {
+      "display_name": "Gillian Lancaster",
+      "id": "A5007449933",
+      "orcid": "https://orcid.org/0000-0002-6957-6177",
+      "institutions": [
+        {
+          "id": "I56007636",
+          "display_name": "Keele University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gillian Lancaster"
+    },
+    {
+      "display_name": "Melissa Gladstone",
+      "id": "A5019453659",
+      "orcid": "https://orcid.org/0000-0002-2579-9301",
+      "institutions": [
+        {
+          "id": "I146655781",
+          "display_name": "University of Liverpool",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Melissa Gladstone"
+    },
+    {
+      "display_name": "Maureen M. Black",
+      "id": "A5011625511",
+      "orcid": "https://orcid.org/0000-0002-6427-4639",
+      "institutions": [
+        {
+          "id": "I126744593",
+          "display_name": "University of Maryland, Baltimore",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I180297670",
+          "display_name": "RTI International",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I1342214328",
+          "display_name": "Institute of International Education",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Maureen M Black"
+    },
+    {
+      "display_name": "Gareth McCray",
+      "id": "A5041761304",
+      "orcid": "https://orcid.org/0000-0002-0728-5171",
+      "institutions": [
+        {
+          "id": "I56007636",
+          "display_name": "Keele University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gareth McCray"
+    },
+    {
+      "display_name": "Ambreen Nizar",
+      "id": "A5071636747",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I118185606",
+          "display_name": "Aga Khan University",
+          "country_code": "PK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ambreen Nizar"
+    },
+    {
+      "display_name": "Salahuddin Ahmed",
+      "id": "A5043796567",
+      "orcid": "https://orcid.org/0000-0001-6771-0638",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Salahuddin Ahmed"
+    },
+    {
+      "display_name": "Arup Dutta",
+      "id": "A5056486002",
+      "orcid": "https://orcid.org/0000-0003-0602-0363",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Arup Dutta"
+    },
+    {
+      "display_name": "Romuald Anago",
+      "id": "A5049127479",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210138991",
+          "display_name": "Institut Pasteur de Côte d'Ivoire",
+          "country_code": "CI",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Romuald Kouadio E Anago"
+    },
+    {
+      "display_name": "Alexandra Brentani",
+      "id": "A5054660480",
+      "orcid": "https://orcid.org/0000-0001-6650-9705",
+      "institutions": [
+        {
+          "id": "I17974374",
+          "display_name": "Universidade de São Paulo",
+          "country_code": "BR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexandra Brentani"
+    },
+    {
+      "display_name": "Fan Jiang",
+      "id": "A5012086581",
+      "orcid": "https://orcid.org/0000-0003-0634-101X",
+      "institutions": [
+        {
+          "id": "I4210092101",
+          "display_name": "Shanghai Children's Medical Center",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I183067930",
+          "display_name": "Shanghai Jiao Tong University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fan Jiang"
+    },
+    {
+      "display_name": "Yvonne Schönbeck",
+      "id": "A5040529665",
+      "orcid": "https://orcid.org/0000-0002-4998-5117",
+      "institutions": [
+        {
+          "id": "I148297040",
+          "display_name": "Netherlands Organisation for Applied Scientific Research",
+          "country_code": "NL",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yvonne Schönbeck"
+    },
+    {
+      "display_name": "Dana Charles McCoy",
+      "id": "A5035617382",
+      "orcid": "https://orcid.org/0000-0002-0896-1813",
+      "institutions": [
+        {
+          "id": "I4210130407",
+          "display_name": "Institute of Educational Policy",
+          "country_code": "GR",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dana C McCoy"
+    },
+    {
+      "display_name": "Patricia Kariger",
+      "id": "A5085429342",
+      "orcid": "https://orcid.org/0000-0003-0169-772X",
+      "institutions": [
+        {
+          "id": "I4210147807",
+          "display_name": "Berkeley Public Health Division",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210135243",
+          "display_name": "Center for Effective Global Action",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patricia Kariger"
+    },
+    {
+      "display_name": "Ann M. Weber",
+      "id": "A5025210756",
+      "orcid": "https://orcid.org/0000-0001-8130-5858",
+      "institutions": [
+        {
+          "id": "I134113660",
+          "display_name": "University of Nevada, Reno",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ann M Weber"
+    },
+    {
+      "display_name": "Abbie Raikes",
+      "id": "A5053180721",
+      "orcid": "https://orcid.org/0000-0003-2403-6270",
+      "institutions": [
+        {
+          "id": "I59130452",
+          "display_name": "University of Nebraska Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Abbie Raikes"
+    },
+    {
+      "display_name": "Marcus Waldman",
+      "id": "A5090149892",
+      "orcid": "https://orcid.org/0000-0002-3288-4803",
+      "institutions": [
+        {
+          "id": "I59130452",
+          "display_name": "University of Nebraska Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marcus Waldman"
+    },
+    {
+      "display_name": "Stef van Buuren",
+      "id": "A5038820830",
+      "orcid": "https://orcid.org/0000-0003-1098-2119",
+      "institutions": [
+        {
+          "id": "I148297040",
+          "display_name": "Netherlands Organisation for Applied Scientific Research",
+          "country_code": "NL",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I193662353",
+          "display_name": "Utrecht University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stef van Buuren"
+    },
+    {
+      "display_name": "Raghbir Kaur",
+      "id": "A5004005789",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1290603121",
+          "display_name": "World Health Organization - Pakistan",
+          "country_code": "PK",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Raghbir Kaur"
+    },
+    {
+      "display_name": "Michelle Pérez Maillard",
+      "id": "A5024516524",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1290603121",
+          "display_name": "World Health Organization - Pakistan",
+          "country_code": "PK",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michelle Pérez Maillard"
+    },
+    {
+      "display_name": "Muhammad Imran Nisar",
+      "id": "A5090564291",
+      "orcid": "https://orcid.org/0000-0002-2378-4720",
+      "institutions": [
+        {
+          "id": "I118185606",
+          "display_name": "Aga Khan University",
+          "country_code": "PK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Muhammad Imran Nisar"
+    },
+    {
+      "display_name": "Rasheda Khanam",
+      "id": "A5068453185",
+      "orcid": "https://orcid.org/0000-0002-9365-8594",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rasheda Khanam"
+    },
+    {
+      "display_name": "Sunil Sazawal",
+      "id": "A5057032685",
+      "orcid": "https://orcid.org/0000-0002-8035-9085",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Sunil Sazawal"
+    },
+    {
+      "display_name": "Arsène Zongo",
+      "id": "A5063456905",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210138991",
+          "display_name": "Institut Pasteur de Côte d'Ivoire",
+          "country_code": "CI",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Arsène Zongo"
+    },
+    {
+      "display_name": "Mariana Pacífico Mercadante",
+      "id": "A5074578283",
+      "orcid": "https://orcid.org/0000-0002-1126-8649",
+      "institutions": [
+        {
+          "id": "I17974374",
+          "display_name": "Universidade de São Paulo",
+          "country_code": "BR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mariana Pacifico Mercadante"
+    },
+    {
+      "display_name": "Yunting Zhang",
+      "id": "A5100669697",
+      "orcid": "https://orcid.org/0000-0002-6341-2956",
+      "institutions": [
+        {
+          "id": "I183067930",
+          "display_name": "Shanghai Jiao Tong University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210136794",
+          "display_name": "National Children's Advocacy Center",
+          "country_code": "US",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210092101",
+          "display_name": "Shanghai Children's Medical Center",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yunting Zhang"
+    },
+    {
+      "display_name": "Arunangshu D. Roy",
+      "id": "A5029548745",
+      "orcid": "https://orcid.org/0000-0002-6781-6325",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Arunangshu D Roy"
+    },
+    {
+      "display_name": "Katelyn Hepworth",
+      "id": "A5090853475",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I59130452",
+          "display_name": "University of Nebraska Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Katelyn Hepworth"
+    },
+    {
+      "display_name": "Günther Fink",
+      "id": "A5046130488",
+      "orcid": "https://orcid.org/0000-0001-7525-3668",
+      "institutions": [
+        {
+          "id": "I158937107",
+          "display_name": "Swiss Tropical and Public Health Institute",
+          "country_code": "CH",
+          "type": "facility"
+        },
+        {
+          "id": "I1850255",
+          "display_name": "University of Basel",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Günther Fink"
+    },
+    {
+      "display_name": "Marta Rubio‐Codina",
+      "id": "A5088842551",
+      "orcid": "https://orcid.org/0000-0002-1286-7918",
+      "institutions": [
+        {
+          "id": "I184564680",
+          "display_name": "Inter-American Development Bank",
+          "country_code": "US",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marta Rubio-Codina"
+    },
+    {
+      "display_name": "Fahmida Tofail",
+      "id": "A5043193152",
+      "orcid": "https://orcid.org/0000-0003-2301-9196",
+      "institutions": [
+        {
+          "id": "I205889620",
+          "display_name": "International Centre for Diarrhoeal Disease Research",
+          "country_code": "BD",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fahmida Tofail"
+    },
+    {
+      "display_name": "Iris Eekhout",
+      "id": "A5045257990",
+      "orcid": "https://orcid.org/0000-0002-0030-1458",
+      "institutions": [
+        {
+          "id": "I148297040",
+          "display_name": "Netherlands Organisation for Applied Scientific Research",
+          "country_code": "NL",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Iris Eekhout"
+    },
+    {
+      "display_name": "Jonathan Seiden",
+      "id": "A5003614437",
+      "orcid": "https://orcid.org/0000-0002-0318-8016",
+      "institutions": [
+        {
+          "id": "I4210130407",
+          "display_name": "Institute of Educational Policy",
+          "country_code": "GR",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan Seiden"
+    },
+    {
+      "display_name": "Rebecca Norton",
+      "id": "A5030810329",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1290603121",
+          "display_name": "World Health Organization - Pakistan",
+          "country_code": "PK",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rebecca Norton"
+    },
+    {
+      "display_name": "Abdullah H Baqui",
+      "id": "A5062953269",
+      "orcid": "https://orcid.org/0000-0001-8350-1983",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Abdullah H Baqui"
+    },
+    {
+      "display_name": "Jamila Khalfan Ali",
+      "id": "A5063388640",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210122480",
+          "display_name": "National Public Health Laboratory",
+          "country_code": "NP",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jamila Khalfan Ali"
+    },
+    {
+      "display_name": "Jin Zhao",
+      "id": "A5049844831",
+      "orcid": "https://orcid.org/0000-0001-8649-0861",
+      "institutions": [
+        {
+          "id": "I1336742384",
+          "display_name": "Children's National",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210092101",
+          "display_name": "Shanghai Children's Medical Center",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I183067930",
+          "display_name": "Shanghai Jiao Tong University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jin Zhao"
+    },
+    {
+      "display_name": "Andreas Holzinger",
+      "id": "A5034657358",
+      "orcid": "https://orcid.org/0000-0002-6786-5194",
+      "institutions": [
+        {
+          "id": "I4210158006",
+          "display_name": "Société Francophone du Diabète",
+          "country_code": "FR",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andreas Holzinger"
+    },
+    {
+      "display_name": "Symone Detmar",
+      "id": "A5031313632",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I148297040",
+          "display_name": "Netherlands Organisation for Applied Scientific Research",
+          "country_code": "NL",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Symone Detmar"
+    },
+    {
+      "display_name": "Samuel Nzale Kembou",
+      "id": "A5104103579",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210138991",
+          "display_name": "Institut Pasteur de Côte d'Ivoire",
+          "country_code": "CI",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Samuel Nzale Kembou"
+    },
+    {
+      "display_name": "Farzana Begum",
+      "id": "A5058941747",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I118185606",
+          "display_name": "Aga Khan University",
+          "country_code": "PK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Farzana Begum"
+    },
+    {
+      "display_name": "Said M. Ali",
+      "id": "A5109546429",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210122480",
+          "display_name": "National Public Health Laboratory",
+          "country_code": "NP",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Said Mohammed Ali"
+    },
+    {
+      "display_name": "Fyezah Jehan",
+      "id": "A5052830360",
+      "orcid": "https://orcid.org/0000-0002-5874-4358",
+      "institutions": [
+        {
+          "id": "I118185606",
+          "display_name": "Aga Khan University",
+          "country_code": "PK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fyezah Jehan"
+    },
+    {
+      "display_name": "Tarun Dua",
+      "id": "A5047436348",
+      "orcid": "https://orcid.org/0000-0002-4269-7657",
+      "institutions": [
+        {
+          "id": "I1290603121",
+          "display_name": "World Health Organization - Pakistan",
+          "country_code": "PK",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tarun Dua"
+    },
+    {
+      "display_name": "Magdalena Janus",
+      "id": "A5064828818",
+      "orcid": "https://orcid.org/0000-0002-9500-6776",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210122262",
+          "display_name": "Institut des Sciences Cognitives Marc Jeannerod",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Magdalena Janus"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-01-01",
+  "type": "article",
+  "cited_by_count": 30,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S79054089",
+    "display_name": "BMJ Open",
+    "issn_l": "2044-6055",
+    "issn": [
+      "2044-6055"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319945"
+  },
+  "volume": "13",
+  "issue": "1",
+  "first_page": "e062562",
+  "last_page": "e062562",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://bmjopen.bmj.com/content/bmjopen/13/1/e062562.full.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.93351066
+    },
+    {
+      "id": "C2780385302",
+      "display_name": "Protocol (science)",
+      "level": 3,
+      "score": 0.7203231
+    },
+    {
+      "id": "C138816342",
+      "display_name": "Public health",
+      "level": 2,
+      "score": 0.4278895
+    },
+    {
+      "id": "C512399662",
+      "display_name": "Family medicine",
+      "level": 1,
+      "score": 0.3585956
+    },
+    {
+      "id": "C187212893",
+      "display_name": "Pediatrics",
+      "level": 1,
+      "score": 0.3204852
+    },
+    {
+      "id": "C204787440",
+      "display_name": "Alternative medicine",
+      "level": 2,
+      "score": 0.24938586
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.19206315
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10589",
+      "display_name": "Early Childhood Education and Development",
+      "score": 0.9968
+    },
+    {
+      "id": "T10596",
+      "display_name": "Child Nutrition and Water Access",
+      "score": 0.9966
+    },
+    {
+      "id": "T11060",
+      "display_name": "Infant Development and Preterm Care",
+      "score": 0.995
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1136/bmjopen-2022-062562",
+  "pdf_url": "https://bmjopen.bmj.com/content/bmjopen/13/1/e062562.full.pdf",
+  "retrieved_date": "2025-07-30T14:50:43.470141",
+  "source_database": "OpenAlex"
+}

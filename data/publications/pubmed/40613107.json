@@ -1,0 +1,305 @@
+{
+  "pmid": "40613107",
+  "uid": "40613107",
+  "title": "Novel CAC Dispersion and Density Score to Predict Myocardial Infarction and Cardiovascular Mortality.",
+  "abstract": "BACKGROUND: Coronary artery calcification (CAC) provides robust prediction for major adverse cardiovascular events (MACE), but current techniques disregard plaque distribution and protective effects of high CAC density. We investigated whether a novel CAC-dispersion and density (CAC-DAD) score will exhibit superior prognostic value compared with the Agatston score (AS) for MACE prediction. METHODS: We conducted a multicenter, retrospective, cross-sectional study of 961 patients (median age, 67 years; 61% male) who underwent cardiac computed tomography for cardiovascular or perioperative risk assessment. Blinded analyzers applied deep learning algorithms to noncontrast scans to calculate the CAC-DAD score, which adjusts for the spatial distribution of CAC and assigns a protective weight factor for lesions with ≥1000 Hounsfield units. Associations were assessed using frailty regression. RESULTS: Over a median follow-up of 30 (30-460) days, 61 patients experienced MACE (nonfatal myocardial infarction or cardiovascular mortality). An elevated CAC-DAD score (≥2050 based on optimal cutoff) captured more MACE than AS ≥400 (74% versus 57%; P=0.002). Univariable analysis revealed that an elevated CAC-DAD score, AS ≥400 and AS ≥100, age, diabetes, hypertension, and statin use predicted MACE. On multivariable analysis, only the CAC-DAD score (hazard ratio, 2.57 [95% CI, 1.43-4.61]; P=0.002), age, statins, and diabetes remained significant. The inclusion of the CAC-DAD score in a predictive model containing demographic factors and AS improved the C statistic from 0.61 to 0.66 (P=0.008). CONCLUSIONS: The fully automated CAC-DAD score improves MACE prediction compared with the AS. Patients with a high CAC-DAD score, including those with a low AS, may be at higher risk and warrant intensification of their preventative therapies.",
+  "authors": [
+    {
+      "last_name": "Huangfu",
+      "fore_name": "Gavin",
+      "initials": "G",
+      "name": "Gavin Huangfu",
+      "affiliations": [
+        "Department of Cardiology, Fiona Stanley Hospital, Perth, WA, Australia (G.H., A.R.I., H.S., L.D., G.D.).",
+        "Medical School, The University of Western Australia, Perth (G.H., J.L., H.S., G.D.).",
+        "Harry Perkins Institute of Medical Research, Murdoch, WA, Australia (G.H., A.R.I., G.D.)."
+      ],
+      "orcid": "0000-0002-2244-6033"
+    },
+    {
+      "last_name": "Ihdayhid",
+      "fore_name": "Abdul R",
+      "initials": "AR",
+      "name": "Abdul R Ihdayhid",
+      "affiliations": [
+        "Department of Cardiology, Fiona Stanley Hospital, Perth, WA, Australia (G.H., A.R.I., H.S., L.D., G.D.).",
+        "Harry Perkins Institute of Medical Research, Murdoch, WA, Australia (G.H., A.R.I., G.D.).",
+        "Faculty of Health Sciences, Curtin University, Bentley, WA, Australia (A.R.I.)."
+      ],
+      "orcid": "0000-0003-0501-0980"
+    },
+    {
+      "last_name": "Kwok",
+      "fore_name": "Simon",
+      "initials": "S",
+      "name": "Simon Kwok",
+      "affiliations": [
+        "Artrya Ltd, Perth, WA, Australia (S.K., J.K., K.N.)."
+      ]
+    },
+    {
+      "last_name": "Konstantopoulos",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Konstantopoulos",
+      "affiliations": [
+        "Artrya Ltd, Perth, WA, Australia (S.K., J.K., K.N.)."
+      ],
+      "orcid": "0000-0002-8915-318X"
+    },
+    {
+      "last_name": "Niu",
+      "fore_name": "Kai",
+      "initials": "K",
+      "name": "Kai Niu",
+      "affiliations": [
+        "Artrya Ltd, Perth, WA, Australia (S.K., J.K., K.N.)."
+      ],
+      "orcid": "0009-0009-3357-6130"
+    },
+    {
+      "last_name": "Lu",
+      "fore_name": "Juan",
+      "initials": "J",
+      "name": "Juan Lu",
+      "affiliations": [
+        "Medical School, The University of Western Australia, Perth (G.H., J.L., H.S., G.D.)."
+      ],
+      "orcid": "0000-0002-7508-0565"
+    },
+    {
+      "last_name": "Smallbone",
+      "fore_name": "Harry",
+      "initials": "H",
+      "name": "Harry Smallbone",
+      "affiliations": [
+        "Department of Cardiology, Fiona Stanley Hospital, Perth, WA, Australia (G.H., A.R.I., H.S., L.D., G.D.).",
+        "Medical School, The University of Western Australia, Perth (G.H., J.L., H.S., G.D.)."
+      ]
+    },
+    {
+      "last_name": "Figtree",
+      "fore_name": "Gemma A",
+      "initials": "GA",
+      "name": "Gemma A Figtree",
+      "affiliations": [
+        "University of Sydney, NSW, Australia (G.A.F., C.K.C., S.M.G.)."
+      ],
+      "orcid": "0000-0002-5080-6083"
+    },
+    {
+      "last_name": "Chow",
+      "fore_name": "Clara K",
+      "initials": "CK",
+      "name": "Clara K Chow",
+      "affiliations": [
+        "University of Sydney, NSW, Australia (G.A.F., C.K.C., S.M.G.)."
+      ],
+      "orcid": "0000-0003-4693-0038"
+    },
+    {
+      "last_name": "Dembo",
+      "fore_name": "Lawrence",
+      "initials": "L",
+      "name": "Lawrence Dembo",
+      "affiliations": [
+        "Department of Cardiology, Fiona Stanley Hospital, Perth, WA, Australia (G.H., A.R.I., H.S., L.D., G.D.).",
+        "Envision Medical Imaging, Perth, WA, Australia (L.D., B.A.)."
+      ]
+    },
+    {
+      "last_name": "Adler",
+      "fore_name": "Brendan",
+      "initials": "B",
+      "name": "Brendan Adler",
+      "affiliations": [
+        "Envision Medical Imaging, Perth, WA, Australia (L.D., B.A.)."
+      ]
+    },
+    {
+      "last_name": "Hamilton-Craig",
+      "fore_name": "Christian",
+      "initials": "C",
+      "name": "Christian Hamilton-Craig",
+      "affiliations": [
+        "University of Queensland, Brisbane, Australia (C.H.-C.)."
+      ],
+      "orcid": "0000-0001-7702-7234"
+    },
+    {
+      "last_name": "Grieve",
+      "fore_name": "Stuart M",
+      "initials": "SM",
+      "name": "Stuart M Grieve",
+      "affiliations": [
+        "University of Sydney, NSW, Australia (G.A.F., C.K.C., S.M.G.)."
+      ],
+      "orcid": "0000-0002-2712-157X"
+    },
+    {
+      "last_name": "Chan",
+      "fore_name": "Matthew T V",
+      "initials": "MTV",
+      "name": "Matthew T V Chan",
+      "affiliations": [
+        "Chinese University of Hong Kong, China (M.T.V.C.)."
+      ],
+      "orcid": "0000-0002-3574-7855"
+    },
+    {
+      "last_name": "Butler",
+      "fore_name": "Craig",
+      "initials": "C",
+      "name": "Craig Butler",
+      "affiliations": [
+        "University of Alberta, Edmonton, Canada (C.B.)."
+      ],
+      "orcid": "0009-0009-2947-9848"
+    },
+    {
+      "last_name": "Tandon",
+      "fore_name": "Vikas",
+      "initials": "V",
+      "name": "Vikas Tandon",
+      "affiliations": [
+        "McMaster University, Hamilton, ON, Canada (V.T., W.S., P.J.D., T.S.)."
+      ],
+      "orcid": "0009-0007-0257-3936"
+    },
+    {
+      "last_name": "Nagele",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Nagele",
+      "affiliations": [
+        "The University of Chicago, IL (P.N.)."
+      ],
+      "orcid": "0000-0001-8369-3858"
+    },
+    {
+      "last_name": "Woodard",
+      "fore_name": "Pamela K",
+      "initials": "PK",
+      "name": "Pamela K Woodard",
+      "affiliations": [
+        "Mallinckrodt Institute of Radiology, Washington University School of Medicine, St. Louis, MO (P.K.W.)."
+      ],
+      "orcid": "0000-0001-9012-0812"
+    },
+    {
+      "last_name": "Mrkobrada",
+      "fore_name": "Marko",
+      "initials": "M",
+      "name": "Marko Mrkobrada",
+      "affiliations": [
+        "Western University, London, ON, Canada (M.M.)."
+      ]
+    },
+    {
+      "last_name": "Szczeklik",
+      "fore_name": "Wojciech",
+      "initials": "W",
+      "name": "Wojciech Szczeklik",
+      "affiliations": [
+        "McMaster University, Hamilton, ON, Canada (V.T., W.S., P.J.D., T.S.).",
+        "Center for Intensive Care and Perioperative Medicine, Jagiellonian University Medical College, Kraków, Poland (W.S.).",
+        "Intensive Care and Anaesthesiology Department, 5th Military Hospital, Kraków, Poland (W.S.)."
+      ],
+      "orcid": "0000-0002-1349-1123"
+    },
+    {
+      "last_name": "Aziz",
+      "fore_name": "Yang Faridah Abdul",
+      "initials": "YFA",
+      "name": "Yang Faridah Abdul Aziz",
+      "affiliations": [
+        "Faculty of Medicine, Universiti Malaya, Kuala Lumpur, Malaysia (Y.F.A.A.)."
+      ],
+      "orcid": "0000-0002-0869-1972"
+    },
+    {
+      "last_name": "Biccard",
+      "fore_name": "Bruce",
+      "initials": "B",
+      "name": "Bruce Biccard",
+      "affiliations": [
+        "University of Cape Town, South Africa (B.B.)."
+      ],
+      "orcid": "0000-0001-5872-8369"
+    },
+    {
+      "last_name": "Devereaux",
+      "fore_name": "Philip James",
+      "initials": "PJ",
+      "name": "Philip James Devereaux",
+      "affiliations": [
+        "McMaster University, Hamilton, ON, Canada (V.T., W.S., P.J.D., T.S.)."
+      ],
+      "orcid": "0000-0003-2935-637X"
+    },
+    {
+      "last_name": "Sheth",
+      "fore_name": "Tej",
+      "initials": "T",
+      "name": "Tej Sheth",
+      "affiliations": [
+        "McMaster University, Hamilton, ON, Canada (V.T., W.S., P.J.D., T.S.)."
+      ]
+    },
+    {
+      "last_name": "Dwivedi",
+      "fore_name": "Girish",
+      "initials": "G",
+      "name": "Girish Dwivedi",
+      "affiliations": [
+        "Department of Cardiology, Fiona Stanley Hospital, Perth, WA, Australia (G.H., A.R.I., H.S., L.D., G.D.).",
+        "Medical School, The University of Western Australia, Perth (G.H., J.L., H.S., G.D.).",
+        "Harry Perkins Institute of Medical Research, Murdoch, WA, Australia (G.H., A.R.I., G.D.).",
+        "University of Ottawa Heart Institute, ON, Canada (G.D., B.J.W.C.).",
+        "Victor Chang Cardiac Research Institute, Crawley, WA, Australia (G.D.)."
+      ],
+      "orcid": "0000-0003-0717-740X"
+    },
+    {
+      "last_name": "Chow",
+      "fore_name": "Benjamin J W",
+      "initials": "BJW",
+      "name": "Benjamin J W Chow",
+      "affiliations": [
+        "University of Ottawa Heart Institute, ON, Canada (G.D., B.J.W.C.)."
+      ],
+      "orcid": "0000-0001-8631-0234"
+    }
+  ],
+  "journal": {
+    "title": "Circulation. Cardiovascular imaging",
+    "iso_abbreviation": "Circ Cardiovasc Imaging",
+    "issn": "1942-0080",
+    "issn_type": "Electronic",
+    "pub_year": "2025",
+    "pub_month": "Jul",
+    "pub_day": "04"
+  },
+  "start_page": "e018059",
+  "pages": "e018059",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "40613107",
+    "doi": "10.1161/CIRCIMAGING.125.018059"
+  },
+  "doi": "10.1161/CIRCIMAGING.125.018059",
+  "dates": {
+    "revised": "2025-07-04"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:18:03.368278",
+    "pmid": "40613107"
+  }
+}

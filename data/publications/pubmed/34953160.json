@@ -1,0 +1,164 @@
+{
+  "pmid": "34953160",
+  "uid": "34953160",
+  "title": "A comparison of confounder selection and adjustment methods for estimating causal effects using large healthcare databases.",
+  "abstract": "PURPOSE: Confounding adjustment is required to estimate the effect of an exposure on an outcome in observational studies. However, variable selection and unmeasured confounding are particularly challenging when analyzing large healthcare data. Machine learning methods may help address these challenges. The objective was to evaluate the capacity of such methods to select confounders and reduce unmeasured confounding bias. METHODS: A simulation study with known true effects was conducted. Completely synthetic and partially synthetic data incorporating real large healthcare data were generated. We compared Bayesian adjustment for confounding (BAC), generalized Bayesian causal effect estimation (GBCEE), Group Lasso and Doubly robust estimation, high-dimensional propensity score (hdPS), and scalable collaborative targeted maximum likelihood algorithms. For the hdPS, two adjustment approaches targeting the effect in the whole population were considered: Full matching and inverse probability weighting. RESULTS: In scenarios without hidden confounders, most methods were essentially unbiased. The bias and variance of the hdPS varied considerably according to the number of variables selected by the algorithm. In scenarios with hidden confounders, substantial bias reduction was achieved by using machine-learning methods to identify proxies as compared to adjusting only by observed confounders. hdPS and Group Lasso performed poorly in the partially synthetic simulation. BAC, GBCEE, and scalable collaborative-targeted maximum likelihood algorithms performed particularly well. CONCLUSIONS: Machine learning can help to identify measured confounders in large healthcare databases. They can also capitalize on proxies of unmeasured confounders to substantially reduce residual confounding bias.",
+  "authors": [
+    {
+      "last_name": "Benasseur",
+      "fore_name": "Imane",
+      "initials": "I",
+      "name": "Imane Benasseur",
+      "affiliations": [
+        "Département de Mathématiques et de Statistique, Université Laval, Québec, Canada.",
+        "Unité Santé des Populations et Pratiques Optimales en Santé, CHU de Québec - Université Laval research center, Québec, Canada."
+      ]
+    },
+    {
+      "last_name": "Talbot",
+      "fore_name": "Denis",
+      "initials": "D",
+      "name": "Denis Talbot",
+      "affiliations": [
+        "Unité Santé des Populations et Pratiques Optimales en Santé, CHU de Québec - Université Laval research center, Québec, Canada.",
+        "Département de Médecine Sociale et Préventive, Université Laval, Québec, Canada."
+      ],
+      "orcid": "0000-0003-0431-3314"
+    },
+    {
+      "last_name": "Durand",
+      "fore_name": "Madeleine",
+      "initials": "M",
+      "name": "Madeleine Durand",
+      "affiliations": [
+        "Département de Médecine, Université de Montréal, Montréal, Canada.",
+        "CHUM Research Center, Montreal, Canada."
+      ]
+    },
+    {
+      "last_name": "Holbrook",
+      "fore_name": "Anne",
+      "initials": "A",
+      "name": "Anne Holbrook",
+      "affiliations": [
+        "Division of Clinical Pharmacology & Toxicology, Department of Medicine, McMaster University, Hamilton, Canada."
+      ]
+    },
+    {
+      "last_name": "Matteau",
+      "fore_name": "Alexis",
+      "initials": "A",
+      "name": "Alexis Matteau",
+      "affiliations": [
+        "Département de Médecine, Université de Montréal, Montréal, Canada.",
+        "CHUM Research Center, Montreal, Canada."
+      ]
+    },
+    {
+      "last_name": "Potter",
+      "fore_name": "Brian J",
+      "initials": "BJ",
+      "name": "Brian J Potter",
+      "affiliations": [
+        "Département de Médecine, Université de Montréal, Montréal, Canada.",
+        "CHUM Research Center, Montreal, Canada."
+      ],
+      "orcid": "0000-0002-0316-9026"
+    },
+    {
+      "last_name": "Renoux",
+      "fore_name": "Christel",
+      "initials": "C",
+      "name": "Christel Renoux",
+      "affiliations": [
+        "Centre for Clinical Epidemiology, Lady Davis Institute for Medical Research - Jewish General Hospital, Montreal, Canada.",
+        "Department of Epidemiology, Biostatistics, and Occupational Health, McGill University, Montréal, Canada.",
+        "Department of Neurology and Neurosurgery, McGill University, Montréal, Canada."
+      ],
+      "orcid": "0000-0002-4691-9579"
+    },
+    {
+      "last_name": "Schnitzer",
+      "fore_name": "Mireille E",
+      "initials": "ME",
+      "name": "Mireille E Schnitzer",
+      "affiliations": [
+        "Department of Epidemiology, Biostatistics, and Occupational Health, McGill University, Montréal, Canada.",
+        "Faculty of Pharmacy, Université de Montréal, Montréal, Canada.",
+        "École de santé publique - Département de médecine sociale et préventive, Université de Montréal, Montréal, Canada."
+      ],
+      "orcid": "0000-0001-8049-9646"
+    },
+    {
+      "last_name": "Tarride",
+      "fore_name": "Jean-Éric",
+      "initials": "JÉ",
+      "name": "Jean-Éric Tarride",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Canada.",
+        "Programs for Assessment of Technology in Health, The Research Institute of St. Joseph's, Hamilton, Canada."
+      ]
+    },
+    {
+      "last_name": "Guertin",
+      "fore_name": "Jason R",
+      "initials": "JR",
+      "name": "Jason R Guertin",
+      "affiliations": [
+        "Unité Santé des Populations et Pratiques Optimales en Santé, CHU de Québec - Université Laval research center, Québec, Canada.",
+        "Département de Médecine Sociale et Préventive, Université Laval, Québec, Canada."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Pharmacoepidemiology and drug safety",
+    "iso_abbreviation": "Pharmacoepidemiol Drug Saf",
+    "issn": "1099-1557",
+    "issn_type": "Electronic",
+    "volume": "31",
+    "issue": "4",
+    "pub_year": "2022",
+    "pub_month": "Apr"
+  },
+  "start_page": "424",
+  "end_page": "433",
+  "pages": "424-433",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Bayes Theorem",
+    "Bias",
+    "Causality",
+    "Computer Simulation",
+    "Confounding Factors, Epidemiologic",
+    "Delivery of Health Care",
+    "Humans",
+    "Propensity Score"
+  ],
+  "article_ids": {
+    "pubmed": "34953160",
+    "pmc": "PMC9304306",
+    "doi": "10.1002/pds.5403"
+  },
+  "doi": "10.1002/pds.5403",
+  "pmc_id": "PMC9304306",
+  "dates": {
+    "completed": "2022-03-25",
+    "revised": "2022-07-29"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "agency": "CIHR",
+      "country": "Canada"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T15:01:09.656485",
+    "pmid": "34953160"
+  }
+}

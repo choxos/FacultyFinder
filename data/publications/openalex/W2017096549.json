@@ -1,0 +1,233 @@
+{
+  "openalex_id": "W2017096549",
+  "doi": "https://doi.org/10.1088/0031-9155/50/17/021",
+  "title": "Tomographic bioluminescence imaging by use of a combined optical-PET (OPET) system: a computer simulation feasibility study",
+  "abstract": "The feasibility and limits in performing tomographic bioluminescence imaging with a combined optical-PET (OPET) system were explored by simulating its image formation process. A micro-MRI based virtual mouse phantom was assigned appropriate tissue optical properties to each of its segmented internal organs at wavelengths spanning the emission spectrum of the firefly luciferase at 37 °C. The TOAST finite-element code was employed to simulate the diffuse transport of photons emitted from bioluminescence sources in the mouse. OPET measurements were simulated for single-point, two-point and distributed bioluminescence sources located in different organs such as the liver, the kidneys and the gut. An expectation maximization code was employed to recover the intensity and location of these simulated sources. It was found that spectrally resolved measurements were necessary in order to perform tomographic bioluminescence imaging. The true location of emission sources could be recovered if the mouse background optical properties were known a priori. The assumption of a homogeneous optical property background proved inadequate for describing photon transport in optically heterogeneous tissues and led to inaccurate source localization in the reconstructed images. The simulation results pointed out specific methodological challenges that need to be addressed before a practical implementation of OPET-based bioluminescence tomography is achieved.",
+  "authors": [
+    {
+      "display_name": "George Alexandrakis",
+      "id": "A5010133683",
+      "orcid": "https://orcid.org/0000-0003-3690-3159",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "George Alexandrakis"
+    },
+    {
+      "display_name": "Fernando R. Rannou",
+      "id": "A5012488729",
+      "orcid": "https://orcid.org/0000-0002-3244-1893",
+      "institutions": [
+        {
+          "id": "I10457146",
+          "display_name": "Universidad de Santiago de Chile",
+          "country_code": "CL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fernando R Rannou"
+    },
+    {
+      "display_name": "Arion F. Chatziioannou",
+      "id": "A5054681352",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Arion F Chatziioannou"
+    }
+  ],
+  "publication_year": 2005,
+  "publication_date": "2005-08-24",
+  "type": "article",
+  "cited_by_count": 448,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S20241394",
+    "display_name": "Physics in Medicine and Biology",
+    "issn_l": "0031-9155",
+    "issn": [
+      "0031-9155",
+      "1361-6560"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320083"
+  },
+  "volume": "50",
+  "issue": "17",
+  "first_page": "4225",
+  "last_page": "4241",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://europepmc.org/articles/pmc1317109?pdf=render",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C5176359",
+      "display_name": "Bioluminescence",
+      "level": 2,
+      "score": 0.72336686
+    },
+    {
+      "id": "C104293457",
+      "display_name": "Imaging phantom",
+      "level": 2,
+      "score": 0.68033296
+    },
+    {
+      "id": "C161997846",
+      "display_name": "Bioluminescence imaging",
+      "level": 5,
+      "score": 0.5779542
+    },
+    {
+      "id": "C120665830",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.51267254
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.47746375
+    },
+    {
+      "id": "C2777413408",
+      "display_name": "Optical tomography",
+      "level": 3,
+      "score": 0.4659786
+    },
+    {
+      "id": "C103783831",
+      "display_name": "Point source",
+      "level": 2,
+      "score": 0.46253115
+    },
+    {
+      "id": "C173163844",
+      "display_name": "Multispectral image",
+      "level": 2,
+      "score": 0.4513119
+    },
+    {
+      "id": "C163716698",
+      "display_name": "Tomography",
+      "level": 2,
+      "score": 0.448172
+    },
+    {
+      "id": "C75553542",
+      "display_name": "A priori and a posteriori",
+      "level": 2,
+      "score": 0.44275957
+    },
+    {
+      "id": "C159317903",
+      "display_name": "Photon",
+      "level": 2,
+      "score": 0.4362383
+    },
+    {
+      "id": "C97742081",
+      "display_name": "Tomographic reconstruction",
+      "level": 3,
+      "score": 0.42974395
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.40212658
+    },
+    {
+      "id": "C111335760",
+      "display_name": "Luciferase",
+      "level": 4,
+      "score": 0.30504757
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.22152266
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.13908577
+    },
+    {
+      "id": "C54009773",
+      "display_name": "Transfection",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C111472728",
+      "display_name": "Epistemology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10977",
+      "display_name": "Optical Imaging and Spectroscopy Techniques",
+      "score": 0.9999
+    },
+    {
+      "id": "T10522",
+      "display_name": "Medical Imaging Techniques and Applications",
+      "score": 0.9972
+    },
+    {
+      "id": "T12015",
+      "display_name": "Photoacoustic and Ultrasonic Imaging",
+      "score": 0.9913
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1088/0031-9155/50/17/021",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:59:11.015546",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,191 @@
+{
+  "pmid": "37051847",
+  "uid": "37051847",
+  "title": "Development of machine-learning algorithms for 90-day and one-year mortality prediction in the elderly with femoral neck fractures based on the HEALTH and FAITH trials.",
+  "abstract": "To develop prediction models using machine-learning (ML) algorithms for 90-day and one-year mortality prediction in femoral neck fracture (FNF) patients aged 50 years or older based on the Hip fracture Evaluation with Alternatives of Total Hip arthroplasty versus Hemiarthroplasty (HEALTH) and Fixation using Alternative Implants for the Treatment of Hip fractures (FAITH) trials. This study included 2,388 patients from the HEALTH and FAITH trials, with 90-day and one-year mortality proportions of 3.0% (71/2,388) and 6.4% (153/2,388), respectively. The mean age was 75.9 years (SD 10.8) and 65.9% of patients (1,574/2,388) were female. The algorithms included patient and injury characteristics. Six algorithms were developed, internally validated and evaluated across discrimination (c-statistic; discriminative ability between those with risk of mortality and those without), calibration (observed outcome compared to the predicted probability), and the Brier score (composite of discrimination and calibration). The developed algorithms distinguished between patients at high and low risk for 90-day and one-year mortality. The penalized logistic regression algorithm had the best performance metrics for both 90-day (c-statistic 0.80, calibration slope 0.95, calibration intercept -0.06, and Brier score 0.039) and one-year (c-statistic 0.76, calibration slope 0.86, calibration intercept -0.20, and Brier score 0.074) mortality prediction in the hold-out set. Using high-quality data, the ML-based prediction models accurately predicted 90-day and one-year mortality in patients aged 50 years or older with a FNF. The final models must be externally validated to assess generalizability to other populations, and prospectively evaluated in the process of shared decision-making.",
+  "authors": [
+    {
+      "last_name": "Dijkstra",
+      "fore_name": "Hidde",
+      "initials": "H",
+      "name": "Hidde Dijkstra",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, University Medical Centre Groningen, University of Groningen, Groningen, The Netherlands.",
+        "Department of Trauma Surgery, University of Groningen, University Medical Center Groningen, Groningen, The Netherlands.",
+        "Department of Geriatric Medicine, University Medical Center of Groningen, University of Groningen, Groningen, The Netherlands."
+      ],
+      "orcid": "0000-0002-3173-6841"
+    },
+    {
+      "last_name": "Oosterhoff",
+      "fore_name": "Jacobien H F",
+      "initials": "JHF",
+      "name": "Jacobien H F Oosterhoff",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, Massachusetts General Hospital, Harvard Medical School, Boston, Massachusetts, USA.",
+        "Department of Orthopaedic Surgery, Amsterdam Movement Sciences, Amsterdam University Medical Centers, University of Amsterdam, Amsterdam, The Netherlands.",
+        "Department of Engineering Systems and Services, Faculty Technology Policy Management, Delft University of Technology, Delt, Netherlands."
+      ]
+    },
+    {
+      "last_name": "van de Kuit",
+      "fore_name": "Anouk",
+      "initials": "A",
+      "name": "Anouk van de Kuit",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, University Medical Centre Groningen, University of Groningen, Groningen, The Netherlands.",
+        "Department of Trauma Surgery, University of Groningen, University Medical Center Groningen, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "IJpma",
+      "fore_name": "Frank F A",
+      "initials": "FFA",
+      "name": "Frank F A IJpma",
+      "affiliations": [
+        "Department of Trauma Surgery, University of Groningen, University Medical Center Groningen, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Schwab",
+      "fore_name": "Joseph H",
+      "initials": "JH",
+      "name": "Joseph H Schwab",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, Massachusetts General Hospital, Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Poolman",
+      "fore_name": "Rudolf W",
+      "initials": "RW",
+      "name": "Rudolf W Poolman",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, Leiden University Medical Center, Leiden, The Netherlands.",
+        "Department of Orthopaedic Surgery, Onze Lieve Vrouw Gasthuis, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Sprague",
+      "fore_name": "Sheila",
+      "initials": "S",
+      "name": "Sheila Sprague",
+      "affiliations": [
+        "Division of Orthopaedic Surgery, Department of Surgery, McMaster University, Hamilton, Canada.",
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Canada."
+      ]
+    },
+    {
+      "last_name": "Bzovsky",
+      "fore_name": "Sofia",
+      "initials": "S",
+      "name": "Sofia Bzovsky",
+      "affiliations": [
+        "Division of Orthopaedic Surgery, Department of Surgery, McMaster University, Hamilton, Canada."
+      ]
+    },
+    {
+      "last_name": "Bhandari",
+      "fore_name": "Mohit",
+      "initials": "M",
+      "name": "Mohit Bhandari",
+      "affiliations": [
+        "Division of Orthopaedic Surgery, Department of Surgery, McMaster University, Hamilton, Canada.",
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Canada."
+      ]
+    },
+    {
+      "last_name": "Swiontkowski",
+      "fore_name": "Marc",
+      "initials": "M",
+      "name": "Marc Swiontkowski",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, University of Minnesota, Minneapolis, Minnesota, USA."
+      ]
+    },
+    {
+      "last_name": "Schemitsch",
+      "fore_name": "Emil H",
+      "initials": "EH",
+      "name": "Emil H Schemitsch",
+      "affiliations": [
+        "Department of Surgery, Western University, London, Canada."
+      ]
+    },
+    {
+      "last_name": "Doornberg",
+      "fore_name": "Job N",
+      "initials": "JN",
+      "name": "Job N Doornberg",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, University Medical Centre Groningen, University of Groningen, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Hendrickx",
+      "fore_name": "Laurent A M",
+      "initials": "LAM",
+      "name": "Laurent A M Hendrickx",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, Amsterdam Movement Sciences, Amsterdam University Medical Centers, University of Amsterdam, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Bone & joint open",
+    "iso_abbreviation": "Bone Jt Open",
+    "issn": "2633-1462",
+    "issn_type": "Electronic",
+    "volume": "4",
+    "issue": "3",
+    "pub_year": "2023",
+    "pub_month": "Mar",
+    "pub_day": "14"
+  },
+  "start_page": "168",
+  "end_page": "181",
+  "pages": "168-181",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "37051847",
+    "pmc": "PMC10032237",
+    "doi": "10.1302/2633-1462.43.BJO-2022-0162.R1",
+    "pii": "BJO-2022-0162.R1"
+  },
+  "doi": "10.1302/2633-1462.43.BJO-2022-0162.R1",
+  "pmc_id": "PMC10032237",
+  "dates": {
+    "revised": "2025-04-02"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 AR055267",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UM1 AR063386",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:08:44.486937",
+    "pmid": "37051847"
+  }
+}

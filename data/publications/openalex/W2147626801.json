@@ -1,0 +1,1666 @@
+{
+  "openalex_id": "W2147626801",
+  "doi": "https://doi.org/10.1051/0004-6361/201220873",
+  "title": "LOFAR: The LOw-Frequency ARray",
+  "abstract": "LOFAR, the LOw-Frequency ARray, is a new-generation radio interferometer constructed in the north of the Netherlands and across europe. Utilizing a novel phased-array design, LOFAR covers the largely unexplored low-frequency range from 10-240 MHz and provides a number of unique observing capabilities. Spreading out from a core located near the village of Exloo in the northeast of the Netherlands, a total of 40 LOFAR stations are nearing completion. A further five stations have been deployed throughout Germany, and one station has been built in each of France, Sweden, and the UK. Digital beam-forming techniques make the LOFAR system agile and allow for rapid repointing of the telescope as well as the potential for multiple simultaneous observations. With its dense core array and long interferometric baselines, LOFAR achieves unparalleled sensitivity and angular resolution in the low-frequency radio regime. The LOFAR facilities are jointly operated by the International LOFAR Telescope (ILT) foundation, as an observatory open to the global astronomical community. LOFAR is one of the first radio observatories to feature automated processing pipelines to deliver fully calibrated science products to its user community. LOFAR's new capabilities, techniques and modus operandi make it an important pathfinder for the Square Kilometre Array (SKA). We give an overview of the LOFAR instrument, its major hardware and software components, and the core science objectives that have driven its design. In addition, we present a selection of new results from the commissioning phase of this new radio observatory.",
+  "authors": [
+    {
+      "display_name": "M. P. van Haarlem",
+      "id": "A5058084785",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. P. van Haarlem"
+    },
+    {
+      "display_name": "M. W. Wise",
+      "id": "A5084532778",
+      "orcid": "https://orcid.org/0000-0002-6470-2285",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        },
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. W. Wise"
+    },
+    {
+      "display_name": "A. W. Gunst",
+      "id": "A5047900341",
+      "orcid": "https://orcid.org/0000-0003-0248-649X",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. W. Gunst"
+    },
+    {
+      "display_name": "G. Heald",
+      "id": "A5016568712",
+      "orcid": "https://orcid.org/0000-0002-2155-6054",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Heald"
+    },
+    {
+      "display_name": "J. P. McKean",
+      "id": "A5019177327",
+      "orcid": "https://orcid.org/0000-0003-1787-9552",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. P. McKean"
+    },
+    {
+      "display_name": "J. W. T. Hessels",
+      "id": "A5069227312",
+      "orcid": "https://orcid.org/0000-0003-2317-1446",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        },
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. W. T. Hessels"
+    },
+    {
+      "display_name": "A. G. de Bruyn",
+      "id": "A5110124584",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. G. de Bruyn"
+    },
+    {
+      "display_name": "R. Nijboer",
+      "id": "A5071185327",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Nijboer"
+    },
+    {
+      "display_name": "J. Swinbank",
+      "id": "A5075722206",
+      "orcid": "https://orcid.org/0000-0001-9445-1846",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Swinbank"
+    },
+    {
+      "display_name": "R. A. Fallows",
+      "id": "A5004034288",
+      "orcid": "https://orcid.org/0000-0002-5186-8040",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Fallows"
+    },
+    {
+      "display_name": "M. A. Brentjens",
+      "id": "A5012420270",
+      "orcid": "https://orcid.org/0000-0002-2529-9251",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Brentjens"
+    },
+    {
+      "display_name": "A. Nelles",
+      "id": "A5059865201",
+      "orcid": "https://orcid.org/0000-0002-1720-6350",
+      "institutions": [
+        {
+          "id": "I145872427",
+          "display_name": "Radboud University Nijmegen",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Nelles"
+    },
+    {
+      "display_name": "R. Beck",
+      "id": "A5103122152",
+      "orcid": "https://orcid.org/0009-0001-8154-3562",
+      "institutions": [
+        {
+          "id": "I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Beck"
+    },
+    {
+      "display_name": "H. Falcke",
+      "id": "A5050345412",
+      "orcid": "https://orcid.org/0000-0002-2526-6724",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        },
+        {
+          "id": "I145872427",
+          "display_name": "Radboud University Nijmegen",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Falcke"
+    },
+    {
+      "display_name": "R. P. Fender",
+      "id": "A5018034654",
+      "orcid": "https://orcid.org/0000-0002-5654-2744",
+      "institutions": [
+        {
+          "id": "I43439940",
+          "display_name": "University of Southampton",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Fender"
+    },
+    {
+      "display_name": "J.R. Hörandel",
+      "id": "A5100662084",
+      "orcid": "https://orcid.org/0000-0001-6604-547X",
+      "institutions": [
+        {
+          "id": "I145872427",
+          "display_name": "Radboud University Nijmegen",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Hörandel"
+    },
+    {
+      "display_name": "L. V. E. Koopmans",
+      "id": "A5091046334",
+      "orcid": "https://orcid.org/0000-0003-1840-0312",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "L. V. E. Koopmans"
+    },
+    {
+      "display_name": "G. Mann",
+      "id": "A5076912979",
+      "orcid": "https://orcid.org/0000-0002-4452-3028",
+      "institutions": [
+        {
+          "id": "I2799713863",
+          "display_name": "Leibniz Institute for Astrophysics Potsdam",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Mann"
+    },
+    {
+      "display_name": "G. K. Miley",
+      "id": "A5007786170",
+      "orcid": "https://orcid.org/0000-0003-2884-7214",
+      "institutions": [
+        {
+          "id": "I121797337",
+          "display_name": "Leiden University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Miley"
+    },
+    {
+      "display_name": "H. J. A. Röttgering",
+      "id": "A5016592437",
+      "orcid": "https://orcid.org/0000-0001-8887-2257",
+      "institutions": [
+        {
+          "id": "I121797337",
+          "display_name": "Leiden University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Röttgering"
+    },
+    {
+      "display_name": "B. W. Stappers",
+      "id": "A5065846192",
+      "orcid": "https://orcid.org/0000-0001-9242-7041",
+      "institutions": [
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. W. Stappers"
+    },
+    {
+      "display_name": "R. A. M. J. Wijers",
+      "id": "A5060377458",
+      "orcid": "https://orcid.org/0000-0002-3101-1808",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. A. M. J. Wijers"
+    },
+    {
+      "display_name": "Saleem Zaroubi",
+      "id": "A5105085128",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Zaroubi"
+    },
+    {
+      "display_name": "M. van den Akker",
+      "id": "A5111971077",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I145872427",
+          "display_name": "Radboud University Nijmegen",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. van den Akker"
+    },
+    {
+      "display_name": "A. Alexov",
+      "id": "A5076089782",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Alexov"
+    },
+    {
+      "display_name": "J. M. Anderson",
+      "id": "A5090481199",
+      "orcid": "https://orcid.org/0000-0002-5989-8498",
+      "institutions": [
+        {
+          "id": "I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Anderson"
+    },
+    {
+      "display_name": "Kevin D. Anderson",
+      "id": "A5030210884",
+      "orcid": "https://orcid.org/0000-0003-3064-1151",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Anderson"
+    },
+    {
+      "display_name": "A. van Ardenne",
+      "id": "A5003561068",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I66862912",
+          "display_name": "Chalmers University of Technology",
+          "country_code": "SE",
+          "type": "funder"
+        },
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. van Ardenne"
+    },
+    {
+      "display_name": "M. Arts",
+      "id": "A5060040604",
+      "orcid": "https://orcid.org/0000-0003-0084-2526",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Arts"
+    },
+    {
+      "display_name": "A. Asgekar",
+      "id": "A5020441002",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Asgekar"
+    },
+    {
+      "display_name": "I. M. Avruch",
+      "id": "A5009997208",
+      "orcid": "https://orcid.org/0000-0002-1215-503X",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. M. Avruch"
+    },
+    {
+      "display_name": "F. Batejat",
+      "id": "A5044472720",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I66862912",
+          "display_name": "Chalmers University of Technology",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Batejat"
+    },
+    {
+      "display_name": "L. Bähren",
+      "id": "A5085210917",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Bähren"
+    },
+    {
+      "display_name": "M. E. Bell",
+      "id": "A5033506961",
+      "orcid": "https://orcid.org/0000-0003-1767-5277",
+      "institutions": [
+        {
+          "id": "I43439940",
+          "display_name": "University of Southampton",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. E. Bell"
+    },
+    {
+      "display_name": "M. R. Bell",
+      "id": "A5105787833",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210103661",
+          "display_name": "Max Planck Institute for Astrophysics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. R. Bell"
+    },
+    {
+      "display_name": "Ilse van Bemmel",
+      "id": "A5036589951",
+      "orcid": "https://orcid.org/0000-0001-5473-2950",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. van Bemmel"
+    },
+    {
+      "display_name": "P. Bennema",
+      "id": "A5023310192",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Bennema"
+    },
+    {
+      "display_name": "Mark Bentum",
+      "id": "A5022173241",
+      "orcid": "https://orcid.org/0000-0002-1852-5214",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. J. Bentum"
+    },
+    {
+      "display_name": "G. Bernardi",
+      "id": "A5017361196",
+      "orcid": "https://orcid.org/0000-0002-0916-7443",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "G. Bernardi"
+    },
+    {
+      "display_name": "P. N. Best",
+      "id": "A5054168379",
+      "orcid": "https://orcid.org/0000-0001-5081-4801",
+      "institutions": [
+        {
+          "id": "I4210105583",
+          "display_name": "Royal Observatory",
+          "country_code": "GB",
+          "type": "facility"
+        },
+        {
+          "id": "I98677209",
+          "display_name": "University of Edinburgh",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Best"
+    },
+    {
+      "display_name": "L. Bırzan",
+      "id": "A5106470636",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I121797337",
+          "display_name": "Leiden University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Bîrzan"
+    },
+    {
+      "display_name": "A. Bonafede",
+      "id": "A5035103058",
+      "orcid": "https://orcid.org/0000-0002-5068-4581",
+      "institutions": [
+        {
+          "id": "I193619901",
+          "display_name": "Constructor University",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Bonafede"
+    },
+    {
+      "display_name": "Albert‐Jan Boonstra",
+      "id": "A5026347068",
+      "orcid": "https://orcid.org/0000-0002-1439-5985",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A.-J. Boonstra"
+    },
+    {
+      "display_name": "Róbert Braun",
+      "id": "A5075381655",
+      "orcid": "https://orcid.org/0000-0003-0579-3532",
+      "institutions": [
+        {
+          "id": "I1299164729",
+          "display_name": "Australia Telescope National Facility",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I1292875679",
+          "display_name": "Commonwealth Scientific and Industrial Research Organisation",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Braun"
+    },
+    {
+      "display_name": "Joel N. Bregman",
+      "id": "A5073257394",
+      "orcid": "https://orcid.org/0000-0001-6276-9526",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Bregman"
+    },
+    {
+      "display_name": "F. Breitling",
+      "id": "A5074324131",
+      "orcid": "https://orcid.org/0000-0002-0904-8022",
+      "institutions": [
+        {
+          "id": "I2799713863",
+          "display_name": "Leibniz Institute for Astrophysics Potsdam",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Breitling"
+    },
+    {
+      "display_name": "R. H. van de Brink",
+      "id": "A5044003741",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. H. van de Brink"
+    },
+    {
+      "display_name": "J. W. Broderick",
+      "id": "A5067252301",
+      "orcid": "https://orcid.org/0000-0002-2239-6099",
+      "institutions": [
+        {
+          "id": "I43439940",
+          "display_name": "University of Southampton",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Broderick"
+    },
+    {
+      "display_name": "P. Chris Broekema",
+      "id": "A5005528717",
+      "orcid": "https://orcid.org/0000-0002-7658-4087",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. C. Broekema"
+    },
+    {
+      "display_name": "W. N. Brouw",
+      "id": "A5022392278",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "W. N. Brouw"
+    },
+    {
+      "display_name": "M. Brüggen",
+      "id": "A5087259046",
+      "orcid": "https://orcid.org/0000-0002-3369-7735",
+      "institutions": [
+        {
+          "id": "I159176309",
+          "display_name": "Universität Hamburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Brüggen"
+    },
+    {
+      "display_name": "H. R. Butcher",
+      "id": "A5075375452",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I118347636",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. R. Butcher"
+    },
+    {
+      "display_name": "W. van Cappellen",
+      "id": "A5071970495",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "W. van Cappellen"
+    },
+    {
+      "display_name": "B. Ciardi",
+      "id": "A5020702131",
+      "orcid": "https://orcid.org/0000-0002-5037-310X",
+      "institutions": [
+        {
+          "id": "I4210103661",
+          "display_name": "Max Planck Institute for Astrophysics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Ciardi"
+    },
+    {
+      "display_name": "Thijs Coenen",
+      "id": "A5032832833",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Coenen"
+    },
+    {
+      "display_name": "J. E. Conway",
+      "id": "A5101890564",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I66862912",
+          "display_name": "Chalmers University of Technology",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Conway"
+    },
+    {
+      "display_name": "A. H. W. M. Coolen",
+      "id": "A5025874880",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Coolen"
+    },
+    {
+      "display_name": "A. Corstanje",
+      "id": "A5039050707",
+      "orcid": "https://orcid.org/0000-0001-5992-6228",
+      "institutions": [
+        {
+          "id": "I145872427",
+          "display_name": "Radboud University Nijmegen",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Corstanje"
+    },
+    {
+      "display_name": "S. Damstra",
+      "id": "A5081033169",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Damstra"
+    },
+    {
+      "display_name": "O.T. Davies",
+      "id": "A5081134641",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1286704778",
+          "display_name": "Rutherford Appleton Laboratory",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "O. Davies"
+    },
+    {
+      "display_name": "Adam T. Deller",
+      "id": "A5091286821",
+      "orcid": "https://orcid.org/0000-0001-9434-3837",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. T. Deller"
+    },
+    {
+      "display_name": "R.‐J. Dettmar",
+      "id": "A5001154357",
+      "orcid": "https://orcid.org/0000-0001-8206-5956",
+      "institutions": [
+        {
+          "id": "I904495901",
+          "display_name": "Ruhr University Bochum",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R.-J. Dettmar"
+    },
+    {
+      "display_name": "Ger van Diepen",
+      "id": "A5015225294",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. van Diepen"
+    },
+    {
+      "display_name": "K. Dijkstra",
+      "id": "A5062948133",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I169381384",
+          "display_name": "University of Groningen",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Dijkstra"
+    },
+    {
+      "display_name": "P. Donker",
+      "id": "A5080121039",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Donker"
+    },
+    {
+      "display_name": "A. Doorduin",
+      "id": "A5042798101",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Doorduin"
+    },
+    {
+      "display_name": "J. Dromer",
+      "id": "A5071330042",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Dromer"
+    },
+    {
+      "display_name": "M. Drost",
+      "id": "A5091262066",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Drost"
+    },
+    {
+      "display_name": "A. van Duin",
+      "id": "A5023119047",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. van Duin"
+    },
+    {
+      "display_name": "J. Eislöffel",
+      "id": "A5061044084",
+      "orcid": "https://orcid.org/0000-0001-6496-0252",
+      "institutions": [
+        {
+          "id": "I4210147535",
+          "display_name": "Thüringer Landessternwarte Tautenburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Eislöffel"
+    },
+    {
+      "display_name": "J. van Enst",
+      "id": "A5043522549",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. van Enst"
+    },
+    {
+      "display_name": "C. Ferrari",
+      "id": "A5077877508",
+      "orcid": "https://orcid.org/0000-0002-2917-9759",
+      "institutions": [
+        {
+          "id": "I4210126779",
+          "display_name": "Observatoire de la Côte d’Azur",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Ferrari"
+    },
+    {
+      "display_name": "W. Frieswijk",
+      "id": "A5053228793",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "W. Frieswijk"
+    },
+    {
+      "display_name": "Henk S. GANKEMA",
+      "id": "A5052976146",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "H. Gankema"
+    },
+    {
+      "display_name": "M. A. Garrett",
+      "id": "A5001110573",
+      "orcid": "https://orcid.org/0000-0001-6714-9043",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        },
+        {
+          "id": "I121797337",
+          "display_name": "Leiden University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. A. Garrett"
+    },
+    {
+      "display_name": "F. de Gasperin",
+      "id": "A5081768423",
+      "orcid": "https://orcid.org/0000-0003-4439-2627",
+      "institutions": [
+        {
+          "id": "I4210103661",
+          "display_name": "Max Planck Institute for Astrophysics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. de Gasperin"
+    },
+    {
+      "display_name": "M. Gerbers",
+      "id": "A5065740410",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Gerbers"
+    },
+    {
+      "display_name": "E. de Geus",
+      "id": "A5001295986",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. de Geus"
+    },
+    {
+      "display_name": "J.‐M. Grießmeier",
+      "id": "A5053844405",
+      "orcid": "https://orcid.org/0000-0003-3362-7996",
+      "institutions": [
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I12449238",
+          "display_name": "Université d'Orléans",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        },
+        {
+          "id": "I4387154409",
+          "display_name": "Laboratoire de Physique et Chimie de l’Environnement et de l’Espace",
+          "country_code": null,
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J.-M. Grießmeier"
+    },
+    {
+      "display_name": "T. Grit",
+      "id": "A5021275993",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Grit"
+    },
+    {
+      "display_name": "P. Gruppen",
+      "id": "A5090176274",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Gruppen"
+    },
+    {
+      "display_name": "J. P. Hamaker",
+      "id": "A5047525878",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. P. Hamaker"
+    },
+    {
+      "display_name": "T. E. Hassall",
+      "id": "A5019461550",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Hassall"
+    },
+    {
+      "display_name": "M. Hoeft",
+      "id": "A5071255976",
+      "orcid": "https://orcid.org/0000-0001-5571-1369",
+      "institutions": [
+        {
+          "id": "I4210147535",
+          "display_name": "Thüringer Landessternwarte Tautenburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Hoeft"
+    },
+    {
+      "display_name": "H. A. Holties",
+      "id": "A5057977098",
+      "orcid": "https://orcid.org/0000-0002-8436-0534",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. A. Holties"
+    },
+    {
+      "display_name": "A. Horneffer",
+      "id": "A5107856883",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I145872427",
+          "display_name": "Radboud University Nijmegen",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I4210158571",
+          "display_name": "Max Planck Institute for Radio Astronomy",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Horneffer"
+    },
+    {
+      "display_name": "A. J. van der Horst",
+      "id": "A5051900328",
+      "orcid": "https://orcid.org/0000-0001-9149-6707",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. van der Horst"
+    },
+    {
+      "display_name": "A. van Houwelingen",
+      "id": "A5010800778",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. van Houwelingen"
+    },
+    {
+      "display_name": "A. Huijgen",
+      "id": "A5037040844",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Huijgen"
+    },
+    {
+      "display_name": "M. Iacobelli",
+      "id": "A5020873092",
+      "orcid": "https://orcid.org/0000-0001-9118-2097",
+      "institutions": [
+        {
+          "id": "I121797337",
+          "display_name": "Leiden University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Iacobelli"
+    },
+    {
+      "display_name": "H. T. Intema",
+      "id": "A5008470464",
+      "orcid": "https://orcid.org/0000-0002-5880-2730",
+      "institutions": [
+        {
+          "id": "I1299164729",
+          "display_name": "Australia Telescope National Facility",
+          "country_code": "AU",
+          "type": "funder"
+        },
+        {
+          "id": "I1292875679",
+          "display_name": "Commonwealth Scientific and Industrial Research Organisation",
+          "country_code": "AU",
+          "type": "government"
+        },
+        {
+          "id": "I121797337",
+          "display_name": "Leiden University",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Intema"
+    },
+    {
+      "display_name": "N. Jackson",
+      "id": "A5018166922",
+      "orcid": "https://orcid.org/0000-0002-7782-4847",
+      "institutions": [
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Jackson"
+    },
+    {
+      "display_name": "Vibor Jelić",
+      "id": "A5072712540",
+      "orcid": "https://orcid.org/0000-0002-6034-8610",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Jelic"
+    },
+    {
+      "display_name": "A. de Jong",
+      "id": "A5008910798",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. de Jong"
+    },
+    {
+      "display_name": "E. Juette",
+      "id": "A5109333503",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I904495901",
+          "display_name": "Ruhr University Bochum",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Juette"
+    },
+    {
+      "display_name": "D. Kant",
+      "id": "A5000866273",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Kant"
+    },
+    {
+      "display_name": "A. Karastergiou",
+      "id": "A5060268947",
+      "orcid": "https://orcid.org/0000-0002-1434-9786",
+      "institutions": [
+        {
+          "id": "I40120149",
+          "display_name": "University of Oxford",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Karastergiou"
+    },
+    {
+      "display_name": "A. Koers",
+      "id": "A5035500949",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Koers"
+    },
+    {
+      "display_name": "H. Kollen",
+      "id": "A5014096182",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Kollen"
+    },
+    {
+      "display_name": "V. I. Kondratiev",
+      "id": "A5076907661",
+      "orcid": "https://orcid.org/0000-0001-8864-7471",
+      "institutions": [
+        {
+          "id": "I922237871",
+          "display_name": "Netherlands Institute for Radio Astronomy",
+          "country_code": "NL",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. I. Kondratiev"
+    }
+  ],
+  "publication_year": 2013,
+  "publication_date": "2013-05-15",
+  "type": "article",
+  "cited_by_count": 2254,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S205231332",
+    "display_name": "Astronomy and Astrophysics",
+    "issn_l": "0004-6361",
+    "issn": [
+      "0004-6361",
+      "1432-0746"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319748"
+  },
+  "volume": "556",
+  "issue": null,
+  "first_page": "A2",
+  "last_page": "A2",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://www.aanda.org/articles/aa/pdf/2013/08/aa20873-12.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2780590096",
+      "display_name": "LOFAR",
+      "level": 3,
+      "score": 0.99476504
+    },
+    {
+      "id": "C161813005",
+      "display_name": "Radio telescope",
+      "level": 2,
+      "score": 0.60358894
+    },
+    {
+      "id": "C2779919027",
+      "display_name": "Observatory",
+      "level": 2,
+      "score": 0.53083223
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.51976126
+    },
+    {
+      "id": "C2780848835",
+      "display_name": "Telescope",
+      "level": 2,
+      "score": 0.44683483
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.41813925
+    },
+    {
+      "id": "C1276947",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.2412701
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.16069475
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12450",
+      "display_name": "Radio Astronomy Observations and Technology",
+      "score": 1.0
+    },
+    {
+      "id": "T10818",
+      "display_name": "Astrophysics and Cosmic Phenomena",
+      "score": 0.9948
+    },
+    {
+      "id": "T11946",
+      "display_name": "Antenna Design and Optimization",
+      "score": 0.9873
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1051/0004-6361/201220873",
+  "pdf_url": "https://www.aanda.org/articles/aa/pdf/2013/08/aa20873-12.pdf",
+  "retrieved_date": "2025-07-30T15:04:45.781394",
+  "source_database": "OpenAlex"
+}

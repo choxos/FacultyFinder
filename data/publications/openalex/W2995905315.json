@@ -1,0 +1,464 @@
+{
+  "openalex_id": "W2995905315",
+  "doi": "https://doi.org/10.1158/1538-7445.panca19-b57",
+  "title": "Abstract B57: Early-onset pancreatic ductal adenocarcinomas are characterized by a distinct mutational landscape",
+  "abstract": "Abstract Background: Advanced pancreatic ductal adenocarcinoma (PDAC) remains a leading cause of cancer-related mortality. There has been a rising incidence of early-onset pancreatic cancer (EOPC; ≤55 years). Reported treatment and survival outcomes in EOPC remain limited and have only been reported in the pre-FOLFIRINOX era. We characterized the genomic and transcriptomic landscapes of EOPC, while also leveraging provincial health data to investigate survival outcomes in advanced EOPC in a separate dataset. Methods: We generated a comprehensive and integrative dataset utilizing RNA-seq data and matched clinical metadata for 402 PDAC patients across 5 distinct studies and 4 sequencing centers, encompassing both resectable (ICGC, TCGA) and advanced (Personalized OncoGenomics and COMPASS) disease. 345 (85.8%) and 371 (92.3%) of samples had SNV/indel and CNV data available, respectively. Patients were stratified into EOPC (n=96), average-onset pancreatic cancer (AOPC, ≥70 years; n=121), and intermediate (&amp;gt;55 and &amp;lt;70 years; n=185) groups. Batch correction was performed on RNA-seq data using an Empirical Bayes approach and verified by principal components analysis. Mutation enrichment and differential gene expression analyses were conducted using Fisher’s exact test and Spearman correlation, respectively. All significance values were corrected for multiple comparisons using the Benjamini-Hochberg procedure. Survival analysis in a separate provincial dataset was conducted using 676 patients who received systemic therapy between January 2012-December 2015 across 6 cancer centers in British Columbia, Canada. Kaplan-Meier survival analysis was performed to compare overall survival (OS) between EOPC (n=102) vs. AOPC (n=239) vs. intermediate (n=335). Results: CDKN2A SNV/indels were identified in 22% and 26% of intermediate and AOPC patients, and in only 7% of EOPC patients (p&amp;lt;0.01). SNV/indels in epigenetic modifiers KMT2C/D trended towards lower frequency in EOPC (4% and 5%, respectively) compared to intermediate (13% and 13%) and AOPC (13% and 13%), although these observations did not pass multiple test correction (p=0.09, 0.20). Differential expression analysis and subsequent gene set enrichment analysis revealed EOPC-specific upregulation of genes belonging to pathways related to synaptic signal transduction. In a separate analysis of provincial data for survival outcomes, median OS revealed improved outcomes in EOPC compared to AOPC and intermediate groups (10.9, 7.5, and 8.3 months respectively, p=0.002). Conclusions: Using an extensive PDAC sequencing dataset, we highlight a novel association between CDKN2A SNV/indel frequency and EOPC. Transcriptome-based analysis identified significant associations between age of onset and expression of synaptic signal transduction pathways. Collectively, these data indicate potential age-specific differences in the mutational and developmental trajectories of PDAC and generate novel hypotheses for further study of EOPC. Citation Format: Erica S. Tsang, James T. Topham, Joanna M. Karasinska, Michael K.C. Lee, Shehara Mendis, Luka Culibrk, Robert Denroche, Gun Ho Jang, Steve E. Kalloger, Richard A. Moore, Andrew J. Mungall, Janessa Laskin, Grainne M. O'Kane, Jennifer J. Knox, Steven Gallinger, Steven J. Jones, Marco A. Marra, Jonathan M. Loree, David F. Schaeffer, Daniel J. Renouf. Early-onset pancreatic ductal adenocarcinomas are characterized by a distinct mutational landscape [abstract]. In: Proceedings of the AACR Special Conference on Pancreatic Cancer: Advances in Science and Clinical Care; 2019 Sept 6-9; Boston, MA. Philadelphia (PA): AACR; Cancer Res 2019;79(24 Suppl):Abstract nr B57.",
+  "authors": [
+    {
+      "display_name": "Erica S. Tsang",
+      "id": "A5008869204",
+      "orcid": "https://orcid.org/0000-0003-2317-2721",
+      "institutions": [
+        {
+          "id": "I2801953985",
+          "display_name": "Spinal Cord Injury BC",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Erica S. Tsang"
+    },
+    {
+      "display_name": "James T. Topham",
+      "id": "A5081831776",
+      "orcid": "https://orcid.org/0009-0001-6601-8807",
+      "institutions": [
+        {
+          "id": "I4210163176",
+          "display_name": "Pancreas Centre (Canada)",
+          "country_code": "CA",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James T. Topham"
+    },
+    {
+      "display_name": "Joanna M. Karasinska",
+      "id": "A5036473360",
+      "orcid": "https://orcid.org/0000-0001-6861-4189",
+      "institutions": [
+        {
+          "id": "I4210163176",
+          "display_name": "Pancreas Centre (Canada)",
+          "country_code": "CA",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joanna M. Karasinska"
+    },
+    {
+      "display_name": "Michael K.C. Lee",
+      "id": "A5073611908",
+      "orcid": "https://orcid.org/0000-0001-8075-3608",
+      "institutions": [
+        {
+          "id": "I2801953985",
+          "display_name": "Spinal Cord Injury BC",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael K.C. Lee"
+    },
+    {
+      "display_name": "Shehara Mendis",
+      "id": "A5074901251",
+      "orcid": "https://orcid.org/0000-0001-9175-6329",
+      "institutions": [
+        {
+          "id": "I2801953985",
+          "display_name": "Spinal Cord Injury BC",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shehara Mendis"
+    },
+    {
+      "display_name": "Luka Culibrk",
+      "id": "A5082292492",
+      "orcid": "https://orcid.org/0000-0003-1208-1920",
+      "institutions": [
+        {
+          "id": "I4210133112",
+          "display_name": "Canada's Michael Smith Genome Sciences Centre",
+          "country_code": "CA",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Luka Culibrk"
+    },
+    {
+      "display_name": "Robert E. Denroche",
+      "id": "A5088325035",
+      "orcid": "https://orcid.org/0000-0003-2197-7083",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Denroche"
+    },
+    {
+      "display_name": "Gun Ho Jang",
+      "id": "A5091747658",
+      "orcid": "https://orcid.org/0000-0001-8169-7011",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gun Ho Jang"
+    },
+    {
+      "display_name": "Steve E. Kalloger",
+      "id": "A5085580353",
+      "orcid": "https://orcid.org/0000-0003-1332-7881",
+      "institutions": [
+        {
+          "id": "I4210163176",
+          "display_name": "Pancreas Centre (Canada)",
+          "country_code": "CA",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steve E. Kalloger"
+    },
+    {
+      "display_name": "Richard A. Moore",
+      "id": "A5103016993",
+      "orcid": "https://orcid.org/0000-0002-3572-0572",
+      "institutions": [
+        {
+          "id": "I4210133112",
+          "display_name": "Canada's Michael Smith Genome Sciences Centre",
+          "country_code": "CA",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Richard A. Moore"
+    },
+    {
+      "display_name": "Andrew J. Mungall",
+      "id": "A5052194762",
+      "orcid": "https://orcid.org/0000-0002-0905-2742",
+      "institutions": [
+        {
+          "id": "I4210133112",
+          "display_name": "Canada's Michael Smith Genome Sciences Centre",
+          "country_code": "CA",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew J. Mungall"
+    },
+    {
+      "display_name": "Janessa Laskin",
+      "id": "A5088331751",
+      "orcid": "https://orcid.org/0000-0002-0161-9329",
+      "institutions": [
+        {
+          "id": "I2801953985",
+          "display_name": "Spinal Cord Injury BC",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Janessa Laskin"
+    },
+    {
+      "display_name": "Grainne M. O’Kane",
+      "id": "A5017021482",
+      "orcid": "https://orcid.org/0000-0002-8690-403X",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Grainne M. O'Kane"
+    },
+    {
+      "display_name": "Jennifer J. Knox",
+      "id": "A5068644454",
+      "orcid": "https://orcid.org/0000-0003-3474-6647",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennifer J. Knox"
+    },
+    {
+      "display_name": "Steven Gallinger",
+      "id": "A5016377624",
+      "orcid": "https://orcid.org/0000-0002-6998-9414",
+      "institutions": [
+        {
+          "id": "I112260969",
+          "display_name": "Ontario Institute for Cancer Research",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven Gallinger"
+    },
+    {
+      "display_name": "Steven J.M. Jones",
+      "id": "A5100728059",
+      "orcid": "https://orcid.org/0000-0003-3394-2208",
+      "institutions": [
+        {
+          "id": "I4210133112",
+          "display_name": "Canada's Michael Smith Genome Sciences Centre",
+          "country_code": "CA",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven J. Jones"
+    },
+    {
+      "display_name": "Marco A. Marra",
+      "id": "A5070061359",
+      "orcid": "https://orcid.org/0000-0001-7146-7175",
+      "institutions": [
+        {
+          "id": "I4210133112",
+          "display_name": "Canada's Michael Smith Genome Sciences Centre",
+          "country_code": "CA",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marco A. Marra"
+    },
+    {
+      "display_name": "Jonathan M. Loree",
+      "id": "A5066894564",
+      "orcid": "https://orcid.org/0000-0001-8189-2132",
+      "institutions": [
+        {
+          "id": "I2801953985",
+          "display_name": "Spinal Cord Injury BC",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan M. Loree"
+    },
+    {
+      "display_name": "David F. Schaeffer",
+      "id": "A5104256891",
+      "orcid": "https://orcid.org/0000-0002-7341-1308",
+      "institutions": [
+        {
+          "id": "I4210163176",
+          "display_name": "Pancreas Centre (Canada)",
+          "country_code": "CA",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David F. Schaeffer"
+    },
+    {
+      "display_name": "Daniel J. Renouf",
+      "id": "A5001731680",
+      "orcid": "https://orcid.org/0000-0002-7597-6089",
+      "institutions": [
+        {
+          "id": "I2801953985",
+          "display_name": "Spinal Cord Injury BC",
+          "country_code": "CA",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel J. Renouf"
+    }
+  ],
+  "publication_year": 2019,
+  "publication_date": "2019-12-13",
+  "type": "article",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S168522863",
+    "display_name": "Cancer Research",
+    "issn_l": "0008-5472",
+    "issn": [
+      "0008-5472",
+      "1538-7445"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320273"
+  },
+  "volume": "79",
+  "issue": "24_Supplement",
+  "first_page": "B57",
+  "last_page": "B57",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C2780210213",
+      "display_name": "Pancreatic cancer",
+      "level": 3,
+      "score": 0.72003216
+    },
+    {
+      "id": "C2777148230",
+      "display_name": "FOLFIRINOX",
+      "level": 5,
+      "score": 0.7043018
+    },
+    {
+      "id": "C2781187634",
+      "display_name": "KRAS",
+      "level": 4,
+      "score": 0.6800573
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.56389165
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.54717344
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.499439
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.48655024
+    },
+    {
+      "id": "C162317418",
+      "display_name": "Transcriptome",
+      "level": 4,
+      "score": 0.46491414
+    },
+    {
+      "id": "C10515644",
+      "display_name": "Survival analysis",
+      "level": 2,
+      "score": 0.44845906
+    },
+    {
+      "id": "C2992026798",
+      "display_name": "Pancreatic ductal adenocarcinoma",
+      "level": 4,
+      "score": 0.4429944
+    },
+    {
+      "id": "C2781182431",
+      "display_name": "Adenocarcinoma",
+      "level": 3,
+      "score": 0.4389388
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.31607914
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.25893036
+    },
+    {
+      "id": "C150194340",
+      "display_name": "Gene expression",
+      "level": 3,
+      "score": 0.160173
+    },
+    {
+      "id": "C2780962732",
+      "display_name": "Oxaliplatin",
+      "level": 4,
+      "score": 0.15653831
+    },
+    {
+      "id": "C526805850",
+      "display_name": "Colorectal cancer",
+      "level": 3,
+      "score": 0.12586072
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.114951044
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10231",
+      "display_name": "Pancreatic and Hepatic Oncology Research",
+      "score": 0.9996
+    },
+    {
+      "id": "T11287",
+      "display_name": "Cancer Genomics and Diagnostics",
+      "score": 0.9977
+    },
+    {
+      "id": "T11364",
+      "display_name": "Cholangiocarcinoma and Gallbladder Cancer Studies",
+      "score": 0.9644
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1158/1538-7445.panca19-b57",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:53:17.855826",
+  "source_database": "OpenAlex"
+}

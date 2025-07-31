@@ -1,0 +1,448 @@
+{
+  "openalex_id": "W4224241576",
+  "doi": "https://doi.org/10.1002/imt2.22",
+  "title": "eHypertension: A prospective longitudinal multi‐omics essential hypertension cohort",
+  "abstract": "eHypertension is an essential hypertension cohort with multiple layers of omics data collected and will be followed up longitudinally. Randomized antihypertensive intervention has been set up in eHypertension. eHypertension is a unique cohort for studying the etiology and clinical outcome of hypertension. Interventions in eHypertension may contribute to the development of prediction models for personalized antihypertensive treatment. Hypertension is a condition in which the force of blood in the artery wall is extremely high. Moreover, it is characterized by systolic blood pressure (SBP) of >140 mmHg and diastolic blood pressure (DBP) of >90 mmHg. The prevalence of hypertension among adults is >30% worldwide and is continually increasing [1]. It is the leading cause of cardiovascular diseases (CVDs) resulting in heart problems and stroke [1]. Hypertension is the number one risk factor for death globally, and in China, approximately 23% of adults have hypertension [1, 2]. The etiology of hypertension is still unclear, and human cohort-based association studies have shown that genetics, lifestyle habits, and their interactions may play important roles in the development of hypertension. More than 70 genetic mutations are associated with hypertension [3]. In addition, dietary habits including high salt intake contribute to the development of resistant hypertension [4]. More recently, several studies revealed that interindividual variations in the gut microbiome composition are closely correlated with blood pressure. Further, within-individual changes in the gut microbiome are associated with alterations in host blood pressure [5, 6]. Such investigations have laid the foundation for targeted mechanistic investigations of the causes and consequences of human hypertension. Nevertheless, different cohorts are driven by a series of scientific goals, and limited research resources often indicate tradeoffs between different layers of data collected [7]. Thus, cohorts may vary in terms of number and criteria of participants, types of data collected, and duration of follow-up. Notably, most human cohorts are not entirely designed for hypertension research [7]. High blood pressure is always accompanied by different diseases and medication use, which may bias studies. In addition, to date, several cohort studies have focused on the genetic association of hypertension. However, there is a lack of other layers of omics information, such as microbiome, metabolome, proteome, and immune system profiling [7], which may provide deeper and more innovative knowledge about the molecular basis of hypertension. In addition, an extensive collection of phenotypes from biochemical parameters, physical measurements, psychosocial characteristics, and environmental factors to detailed information on clinical status is indeed very important. For example, data about dietary habits and medical status can correct the molecular analyses of unrelated environmental bias. Finally, although several studies have conducted association analyses to identify disease etiologies, human cohorts do not commonly receive treatments, which can be extremely useful for characterizing the predictive markers of disease onset and progression and the suitability of drugs. Herein, we introduce the infrastructure of the detailed and unique design of eHypertensione Hyperten). We collected relevant data from patients with newly developed hypertension and conducted extensive follow-up analyses. The primary aims of this cohort are to study the etiology and clinical outcome of hypertension from a multiomics perspective. Moreover, the usage of antihypertensive drugs has significantly improved the control rate of hypertension worldwide. However, the response rate to each class of antihypertensive therapy is only approximately 50% [8]. Thus, we also aim to take advantage of this antihypertensive intervention design and utilize multiple layers of information to characterize reliable predictive markers of individual responses to one drug or another. In addition, we believe that the rich data set of the deep and longitudinal phenotyping of participants collected in this cohort will facilitate the study of many hypertension-related scientific questions. The eHypertension cohort (eHyperten) will include 2000 patients with essential hypertension and 500 relatively healthy adults in the southern part of Jiangsu Province (30°45′−35°08′N, 116°21′−121°56′E), China. Every year, residents go to local medical centers to have health checks and clinical phenotypes, such as SBP and DPB, will be recorded at local medical centers. The recruitment is dependent on general practitioners (GPs) of the local medical centers who invite healthy volunteers and residents who have been newly diagnosed with hypertension (SBP and/or DBP more than 140/90 mmHg) during the yearly health check but who are not treated with antihypertensives. The eHyperten service desks in seven local medical centers contacted potential volunteers who provided consent for the study. Then, a research assistant at the service desk explains the inclusion criteria, obtains informed consent, and performs data and biological sample collection. The inclusion criteria included patients aged between 30 and 85 years, as this broad age range can allow the investigation of different causes of essential hypertension. The exclusion criteria were established by a team of expert physicians to create a relatively homogeneous study population comprising individuals not yet diagnosed with clinical conditions, such as diabetes, myocardial infarction, and other chronic disorders. Figure 1 presents the detailed workflow and the inclusion and exclusion criteria. If a participant had met all the criteria and signed the informed consent, physicians will perform a series of clinical assessments, including kidney, heart, and carotid ultrasonography; brain nuclear magnetic resonance (NMR) imaging; and vascular status assessment (Figure 1). Meanwhile, a nurse can help the participant to complete the baseline questionnaires designed for collecting data, such as basic information (e.g., age, sex, and body mass index), lifestyle habits, and environmental, health, and psychosocial factors via a face-to-face interview. In addition, fasting blood (12 h), stool, and urine samples are collected within 2 days after recruitment (Figure 1). Recruitment was initiated in 2021. From July to December 2021, 950 (47.5%) of 2000 patients with essential hypertension and 300 (60%) of 500 healthy volunteers were recruited. To date, an average of five patients with hypertension and two healthy volunteers are recruited per day. Thus, we expect the recruitment of the cohort will be completed in 2022. Based on our previous experience in cohort-based studies [6, 9, 10], we expect an effect size (Cohen's d) of 0.3 and a power of 80% in the t test may be true positive after Bonferroni correction [11] if a thousand omics traits are assessed (corresponding p value should be around 5 × 10−5). In such a case, the corresponding sample size should be around 500 per group based on the pwr.t.test function from the R pwr package. Thus, 500 participants will be sufficient for the healthy control group. For essential hypertension patients, we plan to recruit 2000 participants. Because we have designed randomized antihypertensive interventions with two drugs (Figure 1) and around 70% of patients are willing to take antihypertensives based on the current data. This will result in three subgroups, including a group of essential hypertension patients without taking antihypertensives, and two groups of patients taking different antihypertensives. Thus, the initiated sample size was sufficient for evaluating different biological and clinical hypotheses. Patients with essential hypertension are advised to control their blood pressure with antihypertensive drugs if other CVD risk factors, such as smoking, drinking, and being overweight, are observed [12]. For patients receiving antihypertensive therapy, they were randomly treated with calcium channel blockers (CCB) or angiotensin Ⅱ receptor blockers (ARB), which are the two most commonly used first-line antihypertensive agents in China [13]. Randomized sequences were generated by R (v4.1.2) using sample function. The patients received 20 mg olmesartan medoxomil and 5 mg amlodipine besilate daily. After 1 month, the patients are invited by local GPs for the assessment of treatment efficacy. If the average blood pressure cannot be controlled below 90/140 mmHg after three measurements, the treatment should be switched to another antihypertensive for another month. If it still does not work, combined treatment with angiotensin Ⅱ receptor blocker and calcium channel blocker is recommended (Figure 2). During the whole process, local GPs assess patients for potential side effects due to antihypertensive use. Based on this information, they need to decide whether to continue with the intervention. Both blood pressure and biological samples have been collected at the end of each month or period. After the intervention, patients are suggested to take the antihypertensive indefinitely, and the impact of the long-term antihypertensive intervention on CVD events and other chronic diseases, such as kidney disease, will be followed. Patients are at high risk for developing CVD events. Hence, in addition to the short-term antihypertensive interventions, the patients will be followed-up for 10 years to monitor changes in their health status. Figure 3 shows an overview of the follow-up plan. Every 2 years, follow-up appointments will take place in local medical centers and comprehensive follow-up surveys. Then, repeated measurements will be performed, and biological samples will be collected similar to the baseline. The collection of follow-up data may be useful for many clinical questions. For instance, if the long-term usage of antihypertensives could reduce the risk of certain CVD events? Whether the long-term usage of ARB have a higher/lower onset rate of certain diseases in the later stage than CCB? We will not follow-up health controls unless they have developed essential hypertension in the later stage and would like to be followed-up. The fecal specimens (at least 10 g) are collected at home or during the appointment and are placed in the freezer (−20°C) within 15 min after production. Subsequently, the fecal samples are transferred to the laboratory on dry ice, and aliquots are then established and stored at −80°C until further processing. We generated two types of aliquots, including raw fecal samples and raw fecal samples mixed with 50% glycerin. Fasting blood samples (at least 12 h) with ethylenediaminetetraacetic acid as an anticoagulant are collected by nurses during the appointment and are further stored in the freezer (4°C) for further processing. Blood samples are centrifuged at 4000 rpm for 10 min, and both plasma and blood cell samples are aliquoted and stored at −80°C for further measurements. Midstream urine specimens are collected by participants during the appointment and are placed in the freezer (4°C) within 5 min after production. The urine specimens are aliquoted and stored at −80°C for further measurements. We have designed questionnaires to assess the four phenotype categories, including basic information, dietary habits, lifestyle factors, as well as disease and medication records by taking advantage of existing questionnaires from well-known cohorts, including Lifelines-DEEP [5], UK biobank [14], and NHANES [15], worldwide. Notably, our participants are from southeast China, and their dietary habits are extremely different from western ones. For instance, they frequently eat rice and different special vegetables, such as garlic and leek leaves, but rarely cheese and ham. In addition, participants are more likely to drink Chinese spirits and yellow wine instead of red and white wine. Table S1 shows the detailed summary of the questionnaires. To increase the reliability of surveys and reduce the percentage of missing data collected using questionnaires, we developed an app that can automatically generate warning messages if there are missing answers to the questions. All questionnaires are filled out by well-trained research assistants during face-to-face appointments with participants. The amount of food intake is assessed by research assistants according to the descriptions of participants, and the estimation is based on a graphical-based food amount illustration book. We focused on a group of patients with essential hypertension at high risk for developing CVD events. We utilized different commercialized medical monitoring devices to assess the status of vascular systems and organs. In total, 65 clinical phenotypes have been recorded (Table S2). In detail, a blood pressure monitoring device (OMRON) is used to measure blood pressure and heart rate after 5 min of resting in a chair, and the measurement is repeated three times (Table S2). OMRON BP-203RPEIII is utilized to assess ankle-brachial pressure index and brachial-ankle pulse wave velocity measurements (Table S2). The VICORDER vascular statue testing system is applied for pulse volume recording (PVR) and flow-mediated dilation (FMD) (Table S2). Ultrasonography (Philips CX50) is used to assess the status of the heart, kidney, and neck (Table S2). In addition, NMR imaging is performed to evaluate the brain and hypothalamus. The comprehensive collection of clinical phenotypes is a valuable resource in CVD research. In the blood sample analysis, we have generated 92 measurements (Table S3), including ABO type; cell types and counts; glycemia-related parameters; lipid, hormone, and iron levels; markers of hepatitis; immune factors; and different markers that can reflect heart, liver, kidney and gallbladder functionalities. In addition, we will use blood samples for genomics, metabolomics, and others. In detail, whole-genome sequencing will be performed with the Illumina NovaSeq. 6000 platform and 100 GB of raw data will be generated per sample. For plasma untargeted-metabolomics profiling, we will use the flow-injection-time-of-flight mass spectrometry (FI-MS) on an Agilent 6550 QTOF system [6]. Urine samples are collected for evaluation similar to that of blood samples. In total, 21 measurements are generated (Table S3). Extra urine samples are also available for metabolomics and other omics profiling. Fecal samples are stored mainly for metagenomic sequencing and bacterial culturomics. For metagenomics, the Qiagen QIAamp Fast DNA Stool Mini Kit will be used for fecal DNA isolation and sequencing will be performed by using the MGI DNBSEQ-T7 platform with at least 15 GB of raw data per sample. Moreover, the health status of the gut has been accessed by checking cell types and other related traits in feces (Table S3). Table S3 depicts all measurements operated by KingMed Diagnostics, China (http://en.kingmed.com.cn). eHyperten is a prospective cohort that includes 2000 patients with essential hypertension and 500 healthy individuals. Further, it measures hundreds of phenotypes ranging from biochemical parameters, physical measurements, psychosocial characteristics, and environmental factors to detailed information about the clinical status. In addition, multiple layers of omics data sets, such as the gut microbiome, genotype, metabolomics, and proteomics will also be generated. A comprehensive collection of different phenotypic and deep layers of omics is a rich resource for clinical research. To the best of our knowledge, it is a unique essential hypertension cohort that can address critical questions regarding the influence of environmental exposures, social factors, and nutrition on the onset of hypertension. Moreover, its prospective design and long-term follow-up can help predict the potential CVD outcomes of essential hypertension via continuous measurements. In addition, the antihypertensive intervention setup of the study may promote the development of personalized medicine. For instance, a recent study has shown that most nonantibiotic drugs can be metabolized by gut microbes [16]. Such an intervention is useful in drug selection by characterizing microbiome-based markers that can predict antihypertensive efficiency. The current study had several limitations. That is, we will compare the difference in multiple layers of omics data between healthy controls and patients to reveal the potential etiology of hypertension. However, it is observational in nature, which limits the ability to infer causality. This issue can be addressed by using causal inference methodologies, including Mendelian randomization [17] and mediation [18]. However, randomized clinical trials and wet lab experiments should be conducted to validate the established causality [19]. Moreover, selection bias caused by the self-assignment of participants and the exclusion of people with specific medical conditions might have existed. Such bias may influence the ability to generalize associations between exposure and disease. Finally, the cohort size is also limited compared with other nationwide cohorts. As the majority of essential hypertension patients are relatively old, the wide range of age may result in limited statistical power for young patients. However, it is still relatively large for a deeply phenotyped cohort that includes the abovementioned physiological and molecular assays from newly developed hypertension patients. Between July 2021 and December 2021, 950 patients with essential hypertension and 300 healthy controls were recruited, and 57% of patients were women. The mean age was 63 years, and the mean body mass index was 24 kg/m2. Table 1 shows the characteristics of patients and healthy controls. As the recruitment of participants is based on local medical centers, we applied the Principal Component Analysis to assess whether there are significant batch effects between centers. We applied the vegdist() function from the vegan (version 2.5.5) R package to calculate the Euclidean dissimilarity matrix based on all laboratory measurements shown in Table S3. Subsequently, classical metric multidimensional scaling was performed based on the Euclidean distance matrix to obtain different principal coordinates. The Kruskal–Wallis test was used to assess significant differences between centers. However, results showed that only a limited difference in the fourth principal component between centers (Figure 4, pKruskal–Wallis = 0.012). Wei Sun, Yifeng Wang, Lianmin Chen, and Xiangqing Kong contributed to conceptualization and funding. The eHypertension consortium staff contributed to data and sample collection. Lianmin Chen drafted the manuscript. Wei Sun, Yifeng Wang, Haifeng Zhang, Yanhui Sheng, Jingyi Fan, Mingxia Gu, Yunfan Tian, Yuqing Zhang, Hongxia Ma, Xiaorong Yin, Kangyun Sun, Zheng Ding, Zhibin Hu, Lianmin Chen, and Xiangqing Kong contributed to the discussion of the content. All authors read and approved the final manuscript. We are grateful for the participation of all the volunteers and the members of the eHypertension consortium. The data collection of the study was funded by Gusu School, Nanjing Medical University (GSKY20210105 to X. K.); the Nanjing Medical University starting grant (303073572NC21 to L. C.); the National Natural Science Foundation of China (82150002 and 82170425 to X. K., 82103925 to Y. W.); and the National Key R&D Program of China (2019YFA0210104 and 2019YFA0210100 to W. S.). The eHypertension consortium welcomes collaboration with other cohorts. Potential collaborators are encouraged to contact the eHypertension consortium via e-mail ([email protected]) or website (https://ehypertension.org) for further information. All authors declare no conflicts of interest. The eHypertension study was approved by the ethics committee of the Affiliated Suzhou Hospital of Nanjing Medical University (IEC-C-008-A07-V1.0); the Affiliated Jiangning Hospital of Nanjing Medical University (2021-03-033-H02) and the Nanjing Central Hospital (2022-01). Informed consent was obtained from all participants of this study. Biological samples of the eHypertension cohort (eHyperten) are stored in the China National Gene Bank Suzhou (CNGB-Suzhou), and data will be stored in the China National Center for Bioinformation (CNCB, https://www.cncb.ac.cn). Both individual-level samples and data can be requested for research and scientific purposes, which comply with the informed consent signed by eHyperten participants. This specifies that the collected samples and data will not be used for commercial purposes. Access to individual-level samples and data should be approved by the management board of the eHyperten consortium (website: https://ehypertension.org; email: [email protected]) and subjected to the policies and approvals from the Human Genetic Resource Administration, Ministry of Science and Technology of the People's Republic of China. This article includes online-only Supplemental Data. Please note: The publisher is not responsible for the content or functionality of any supporting information supplied by the authors. Any queries (other than missing content) should be directed to the corresponding author for the article.",
+  "authors": [
+    {
+      "display_name": "Wei Sun",
+      "id": "A5056337785",
+      "orcid": "https://orcid.org/0000-0002-7366-1462",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210116071",
+          "display_name": "Suzhou Municipal Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wei Sun"
+    },
+    {
+      "display_name": "Yifeng Wang",
+      "id": "A5100332320",
+      "orcid": "https://orcid.org/0000-0002-1815-3991",
+      "institutions": [
+        {
+          "id": "I4210116071",
+          "display_name": "Suzhou Municipal Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yifeng Wang"
+    },
+    {
+      "display_name": "Haifeng Zhang",
+      "id": "A5100399684",
+      "orcid": "https://orcid.org/0000-0003-0821-1657",
+      "institutions": [
+        {
+          "id": "I4210116071",
+          "display_name": "Suzhou Municipal Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Haifeng Zhang"
+    },
+    {
+      "display_name": "Yanhui Sheng",
+      "id": "A5058779410",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210116071",
+          "display_name": "Suzhou Municipal Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yanhui Sheng"
+    },
+    {
+      "display_name": "Jingyi Fan",
+      "id": "A5102888688",
+      "orcid": "https://orcid.org/0000-0003-0590-9179",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jingyi Fan"
+    },
+    {
+      "display_name": "Mingxia Gu",
+      "id": "A5048865077",
+      "orcid": "https://orcid.org/0000-0001-7405-8473",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mingxia Gu"
+    },
+    {
+      "display_name": "Yunfan Tian",
+      "id": "A5048360965",
+      "orcid": "https://orcid.org/0000-0002-8111-2455",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yunfan Tian"
+    },
+    {
+      "display_name": "Yuqing Zhang",
+      "id": "A5085370636",
+      "orcid": "https://orcid.org/0000-0001-8142-8305",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuqing Zhang"
+    },
+    {
+      "display_name": "Hongxia Ma",
+      "id": "A5004031758",
+      "orcid": "https://orcid.org/0000-0002-9821-6955",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hongxia Ma"
+    },
+    {
+      "display_name": "Xiaorong Yin",
+      "id": "A5101326181",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaorong Yin"
+    },
+    {
+      "display_name": "Kangyun Sun",
+      "id": "A5053440485",
+      "orcid": "https://orcid.org/0000-0001-5004-6558",
+      "institutions": [
+        {
+          "id": "I4210116071",
+          "display_name": "Suzhou Municipal Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kangyun Sun"
+    },
+    {
+      "display_name": "Zheng Ding",
+      "id": "A5115596725",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zheng Ding"
+    },
+    {
+      "display_name": "Zhibin Hu",
+      "id": "A5084213516",
+      "orcid": "https://orcid.org/0000-0002-8277-5234",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhibin Hu"
+    },
+    {
+      "display_name": "Lianmin Chen",
+      "id": "A5063772500",
+      "orcid": "https://orcid.org/0000-0003-0660-3518",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I4210116071",
+          "display_name": "Suzhou Municipal Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Lianmin Chen"
+    },
+    {
+      "display_name": "Xiangqing Kong",
+      "id": "A5004289748",
+      "orcid": "https://orcid.org/0000-0001-8245-867X",
+      "institutions": [
+        {
+          "id": "I4210116071",
+          "display_name": "Suzhou Municipal Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Xiangqing Kong"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-04-18",
+  "type": "article",
+  "cited_by_count": 11,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4220650979",
+    "display_name": "iMeta",
+    "issn_l": "2770-596X",
+    "issn": [
+      "2770-596X",
+      "2770-5986"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "1",
+  "issue": "2",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/imt2.22",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C84393581",
+      "display_name": "Blood pressure",
+      "level": 2,
+      "score": 0.80583835
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.7653766
+    },
+    {
+      "id": "C2777097880",
+      "display_name": "Essential hypertension",
+      "level": 3,
+      "score": 0.67220855
+    },
+    {
+      "id": "C72563966",
+      "display_name": "Cohort",
+      "level": 2,
+      "score": 0.6662179
+    },
+    {
+      "id": "C137627325",
+      "display_name": "Etiology",
+      "level": 2,
+      "score": 0.62634045
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.5001602
+    },
+    {
+      "id": "C118190526",
+      "display_name": "Prehypertension",
+      "level": 3,
+      "score": 0.4942553
+    },
+    {
+      "id": "C201903717",
+      "display_name": "Cohort study",
+      "level": 2,
+      "score": 0.47536868
+    },
+    {
+      "id": "C188816634",
+      "display_name": "Prospective cohort study",
+      "level": 2,
+      "score": 0.47293806
+    },
+    {
+      "id": "C157585117",
+      "display_name": "Omics",
+      "level": 2,
+      "score": 0.45387167
+    },
+    {
+      "id": "C50440223",
+      "display_name": "Risk factor",
+      "level": 2,
+      "score": 0.43132383
+    },
+    {
+      "id": "C60644358",
+      "display_name": "Bioinformatics",
+      "level": 1,
+      "score": 0.4105354
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.120297134
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10144",
+      "display_name": "Blood Pressure and Hypertension Studies",
+      "score": 0.9983
+    },
+    {
+      "id": "T10866",
+      "display_name": "Nutritional Studies and Diet",
+      "score": 0.9971
+    },
+    {
+      "id": "T13522",
+      "display_name": "Cardiovascular Health and Risk Factors",
+      "score": 0.9864
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1002/imt2.22",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/imt2.22",
+  "retrieved_date": "2025-07-30T16:05:12.073361",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,179 @@
+{
+  "pmid": "38628340",
+  "uid": "38628340",
+  "title": "Predicting the risk of early intensive care unit admission for patients hospitalized with acute pancreatitis using supervised machine learning.",
+  "abstract": "BACKGROUND: Acute pancreatitis (AP) is a complex and life-threatening disease. Early recognition of factors predicting morbidity and mortality is crucial. We aimed to develop and validate a pragmatic model to predict the individualized risk of early intensive care unit (ICU) admission for patients with AP. METHODS: The 2019 Nationwide Readmission Database was used to identify patients hospitalized with a primary diagnosis of AP without ICU admission. A matched comparison cohort of AP patients with ICU admission within 7 days of hospitalization was identified from the National Inpatient Sample after 1:N propensity score matching. The least absolute shrinkage and selection operator (LASSO) regression was used to select predictors and develop an ICU acute pancreatitis risk (IAPR) score validated by 10-fold cross-validation. RESULTS: A total of 1513 patients hospitalized for AP were included. The median age was 50.0 years (interquartile range: 39.0-63.0). The three predictors that were selected included hypoxia (area under the curve [AUC] 0.78), acute kidney injury (AUC 0.72), and cardiac arrhythmia (AUC 0.61). These variables were used to develop a nomogram that displayed excellent discrimination (AUC 0.874) (bootstrap bias-corrected 95% confidence interval 0.824-0.876). There was no evidence of miscalibration (test statistic = 2.88; P = 0.09). For high-risk patients (total score >6 points), the sensitivity was 68.94% and the specificity was 92.66%. CONCLUSIONS: This supervised machine learning-based model can help recognize high-risk AP hospitalizations. Clinicians may use the IAPR score to identify patients with AP at high risk of ICU admission within the first week of hospitalization.",
+  "authors": [
+    {
+      "last_name": "Ali",
+      "fore_name": "Hassam",
+      "initials": "H",
+      "name": "Hassam Ali",
+      "affiliations": [
+        "Department of Gastroenterology, East Carolina University Brody School of Medicine, Greenville, North Carolina, USA."
+      ]
+    },
+    {
+      "last_name": "Inayat",
+      "fore_name": "Faisal",
+      "initials": "F",
+      "name": "Faisal Inayat",
+      "affiliations": [
+        "Department of Internal Medicine, Allama Iqbal Medical College, Lahore, Punjab, Pakistan."
+      ],
+      "orcid": "0000-0001-7576-7319"
+    },
+    {
+      "last_name": "Dhillon",
+      "fore_name": "Rubaid",
+      "initials": "R",
+      "name": "Rubaid Dhillon",
+      "affiliations": [
+        "Department of Gastroenterology, Cleveland Clinic Foundation, Cleveland, Ohio, USA."
+      ]
+    },
+    {
+      "last_name": "Patel",
+      "fore_name": "Pratik",
+      "initials": "P",
+      "name": "Pratik Patel",
+      "affiliations": [
+        "Department of Gastroenterology, Mather Hospital and Hofstra University Zucker School of Medicine, Port Jefferson, New York, USA."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Arslan",
+      "initials": "A",
+      "name": "Arslan Afzal",
+      "affiliations": [
+        "Department of Gastroenterology, East Carolina University Brody School of Medicine, Greenville, North Carolina, USA."
+      ]
+    },
+    {
+      "last_name": "Wilkinson",
+      "fore_name": "Christin",
+      "initials": "C",
+      "name": "Christin Wilkinson",
+      "affiliations": [
+        "Department of Gastroenterology, East Carolina University Brody School of Medicine, Greenville, North Carolina, USA."
+      ]
+    },
+    {
+      "last_name": "Rehman",
+      "fore_name": "Attiq Ur",
+      "initials": "AU",
+      "name": "Attiq Ur Rehman",
+      "affiliations": [
+        "Department of Hepatology, Geisinger Wyoming Valley Medical Center, Wilkes-Barre, Pennsylvania, USA."
+      ]
+    },
+    {
+      "last_name": "Anwar",
+      "fore_name": "Muhammad Sajeel",
+      "initials": "MS",
+      "name": "Muhammad Sajeel Anwar",
+      "affiliations": [
+        "Department of Internal Medicine, UHS Wilson Medical Center, Johnson City, New York, USA."
+      ]
+    },
+    {
+      "last_name": "Nawaz",
+      "fore_name": "Gul",
+      "initials": "G",
+      "name": "Gul Nawaz",
+      "affiliations": [
+        "Department of Internal Medicine, Allama Iqbal Medical College, Lahore, Punjab, Pakistan."
+      ]
+    },
+    {
+      "last_name": "Chaudhry",
+      "fore_name": "Ahtshamullah",
+      "initials": "A",
+      "name": "Ahtshamullah Chaudhry",
+      "affiliations": [
+        "Department of Internal Medicine, St. Dominic's Hospital, Jackson, Mississippi, USA."
+      ]
+    },
+    {
+      "last_name": "Awan",
+      "fore_name": "Junaid Rasul",
+      "initials": "JR",
+      "name": "Junaid Rasul Awan",
+      "affiliations": [
+        "Department of Internal Medicine, Allama Iqbal Medical College, Lahore, Punjab, Pakistan."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad Sohaib",
+      "initials": "MS",
+      "name": "Muhammad Sohaib Afzal",
+      "affiliations": [
+        "Department of Internal Medicine, Louisiana State University Health, Shreveport, Louisiana, USA."
+      ]
+    },
+    {
+      "last_name": "Samanta",
+      "fore_name": "Jayanta",
+      "initials": "J",
+      "name": "Jayanta Samanta",
+      "affiliations": [
+        "Department of Gastroenterology, Post Graduate Institute of Medical Research and Education, Chandigarh, Punjab, India."
+      ]
+    },
+    {
+      "last_name": "Adler",
+      "fore_name": "Douglas G",
+      "initials": "DG",
+      "name": "Douglas G Adler",
+      "affiliations": [
+        "Center for Advanced Therapeutic Endoscopy, Porter Adventist Hospital, Centura Health, Denver, Colorado, USA."
+      ]
+    },
+    {
+      "last_name": "Mohan",
+      "fore_name": "Babu P",
+      "initials": "BP",
+      "name": "Babu P Mohan",
+      "affiliations": [
+        "Department of Gastroenterology and Hepatology, University of Utah School of Medicine, Salt Lake City, Utah, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Proceedings (Baylor University. Medical Center)",
+    "iso_abbreviation": "Proc (Bayl Univ Med Cent)",
+    "issn": "0899-8280",
+    "issn_type": "Print",
+    "volume": "37",
+    "issue": "3",
+    "pub_year": "2024"
+  },
+  "start_page": "437",
+  "end_page": "447",
+  "pages": "437-447",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "38628340",
+    "pmc": "PMC11018057",
+    "doi": "10.1080/08998280.2024.2326371",
+    "pii": "2326371"
+  },
+  "doi": "10.1080/08998280.2024.2326371",
+  "pmc_id": "PMC11018057",
+  "dates": {
+    "revised": "2024-04-18"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:15.131874",
+    "pmid": "38628340"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "pmid": "31445248",
+  "uid": "31445248",
+  "title": "Semantic preservation of standardized healthcare documents in big data.",
+  "abstract": "BACKGROUND: Standardized healthcare documents have a high adoption rate in today's hospital setup. This brings several challenges as processing the documents on a large scale takes a toll on the infrastructure. The complexity of these documents compounds the issue of handling them which is why applying big data techniques is necessary. The nature of big data techniques can trigger accuracy/semantic loss in health documents when they are partitioned for processing. This semantic loss is critical with respect to clinical use as well as insurance, or medical education. METHODS: In this paper we propose a novel technique to avoid any semantic loss that happens during the conventional partitioning of healthcare documents in big data through a constraint model based on the conformance of clinical document standard and user based use cases. We used clinical document architecture (CDAR) datasets on Hadoop Distributed File System (HDFS) through uniquely configured setup. We identified the affected documents with respect to semantic loss after partitioning and separated them into two sets: conflict free documents and conflicted documents. The resolution for conflicted documents was done based on different resolution strategies that were mapped according to CDAR specification. The first part of the technique is focused in identifying the type of conflict in the blocks that arises after partitioning. The second part focuses on the resolution mapping of the conflicts based on the constraints applied depending on the validation and user scenario. RESULTS: We used a publicly available dataset of CDAR documents, identified all conflicted documents and resolved all the them successfully to avoid any semantic loss. In our experiment we tested up to 87,000 CDAR documents and successfully identified the conflicts and resolved the semantic issues. CONCLUSION: We have presented a novel study that focuses on the semantics of big data which did not compromise the performance and resolved the semantic issues risen during the processing of clinical documents.",
+  "authors": [
+    {
+      "last_name": "Hussain",
+      "fore_name": "Shujaat",
+      "initials": "S",
+      "name": "Shujaat Hussain",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea; Department of Computer Science, National University of Computer and Emerging Science, Islamabad, Pakistan. Electronic address: shujaat.hussain@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Hussain",
+      "fore_name": "Maqbool",
+      "initials": "M",
+      "name": "Maqbool Hussain",
+      "affiliations": [
+        "Department of Software, Sejong University, South Korea. Electronic address: maqbool.hussain@sejong.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Afzal",
+      "affiliations": [
+        "Department of Software, Sejong University, South Korea. Electronic address: mafzal@sejong.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Hussain",
+      "fore_name": "Jamil",
+      "initials": "J",
+      "name": "Jamil Hussain",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea. Electronic address: jamil@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Bang",
+      "fore_name": "Jaehun",
+      "initials": "J",
+      "name": "Jaehun Bang",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea. Electronic address: jhb@oslab.khu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Seung",
+      "fore_name": "Hyonwoo",
+      "initials": "H",
+      "name": "Hyonwoo Seung",
+      "affiliations": [
+        "Department of Computer Science, Seoul Women's University, 621 Hwarang-ro, Gongneung 2(i)-dong, Nowon-gu, Seoul, South Korea. Electronic address: hwseung@swu.ac.kr."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Sungyoung",
+      "initials": "S",
+      "name": "Sungyoung Lee",
+      "affiliations": [
+        "Department of Computer Science and Engineering, Kyung Hee University, Seocheon-dong, Giheung-gu, South Korea. Electronic address: sylee@oslab.khu.ac.kr."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "International journal of medical informatics",
+    "iso_abbreviation": "Int J Med Inform",
+    "issn": "1872-8243",
+    "issn_type": "Electronic",
+    "volume": "129",
+    "pub_year": "2019",
+    "pub_month": "Sep"
+  },
+  "start_page": "133",
+  "end_page": "145",
+  "pages": "133-145",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Big Data",
+    "Delivery of Health Care",
+    "Semantics"
+  ],
+  "article_ids": {
+    "pubmed": "31445248",
+    "doi": "10.1016/j.ijmedinf.2019.05.024",
+    "pii": "S1386-5056(18)30845-1"
+  },
+  "doi": "10.1016/j.ijmedinf.2019.05.024",
+  "dates": {
+    "completed": "2019-11-27",
+    "revised": "2019-11-27"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.858443",
+    "pmid": "31445248"
+  }
+}

@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
 """
-PubMed Faculty Searcher - XML-based with Complete Fields
-Reads faculty CSV files and runs EDirect searches in XML format
-Creates individual PMID JSON files with ALL available fields including abstracts
+PubMed Faculty Publication Searcher - Enhanced XML System
+
+This script searches PubMed for faculty publications using NCBI's EDirect tools.
+It performs comprehensive searches and extracts all available fields including abstracts.
+
+Updated to use proper university_code_website folder naming convention.
 """
 
-import os
-import csv
-import json
-import subprocess
-import sys
-import time
 import xml.etree.ElementTree as ET
-from datetime import datetime
-from typing import Dict, List, Optional, Set
+import json
+import csv
+import subprocess
+import os
 import argparse
+import time
+import re
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Set, Optional
+from university_folder_mapper import get_faculty_publications_path
 
 class PubMedFacultySearcher:
     """XML-based PubMed searcher with complete field extraction"""
@@ -472,18 +477,13 @@ class PubMedFacultySearcher:
         """Save faculty tracking CSV with PMID and current_affiliation columns"""
         
         try:
-            # Extract university info for folder structure
-            university_code = faculty.get('university_code', 'unknown')
-            country = university_code[:2] if len(university_code) >= 2 else 'unknown'
-            province = university_code[3:5] if len(university_code) >= 5 else 'unknown'
-            
-            # Create faculty CSV directory
-            csv_dir = os.path.join(self.base_faculties_path, country, province, university_code, 'publications')
+            # Use the university folder mapper for correct folder naming
+            csv_dir = get_faculty_publications_path(faculty, self.base_faculties_path)
             os.makedirs(csv_dir, exist_ok=True)
             
             # Create CSV file
             faculty_id = faculty.get('faculty_id', 'unknown')
-            csv_file = os.path.join(csv_dir, f"{faculty_id}.csv")
+            csv_file = os.path.join(csv_dir, f"{faculty_id}_PubMed.csv")
             
             with open(csv_file, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)

@@ -1,0 +1,97 @@
+{
+  "pmid": "38274737",
+  "uid": "38274737",
+  "title": "DNA damage response coregulator ddrR affects many cellular pathways and processes in Acinetobacter baumannii 17978.",
+  "abstract": "INTRODUCTION: Acinetobacter baumannii strain 17978 is an opportunistic pathogen possessing a DNA damage response (DDR) in which multiple error-prone polymerase genes are co-repressed by a UmuD homolog, UmuDAb, and the small Acinetobacter-specific protein DdrR. Additionally, these regulators coactivate nine other genes. We identified the DNA damage-inducible transcriptome for wildtype, umuDAb, and recA strains, and later established the ddrR DDR transcriptome. However, the ATCC 17978 reference genome had several assembly errors and lacked the 44 kb virulence locus, AbaAL44, that is present in the strain 17978 UN. METHODS: For this project, we combined our earlier single-end read RNAseq data with the ddrR paired-end reads and aligned these data to the improved 17978 UN genome assembly that resembled our laboratory strain, 17978 JH. RESULTS: New DESeq2 analyses verified previous differentially expressed genes (DEGs) but also found 339 genes in 17978 JH that were not annotated or physically present in the older genome assembly. Sixty-three were differentially expressed after DNA damage, and 182 had differential basal expression when comparing umuDAb, ddrR, or recA strains to wildtype, with 94 genes' expression unchanged. This work identified and characterized the 55 gene DNA damage-repressible transcriptome, 98% of which required either umuDAb or ddrR for repression. Two-thirds of these DEGs required both regulators. We also identified 110 genes repressed only in the ddrR strain, ~50% of which were due to increased basal expression levels. Basal gene expression in the ddrR mutant was further dysregulated independent of the DDR. Over 800 genes were upregulated, and over 1200 genes were downregulated compared to wildtype expression. Half of A. baumannii's essential genes were upregulated in the ddrR strain, including cell division genes, and two-thirds of these were downregulated in the umuDAb strain. DISCUSSION: The ddrR mutant upregulated genes enriched in translation, RNA metabolism, protein metabolism, AA/FA/cell-structure synthesis, and transport, while downregulating genes enriched in quorum sensing, biofilm production, secretion systems, pilus production, cell adhesion, and aromatics and chlorine degradation. Our data underscore the need for accurate and appropriately matched genome assemblies and indicate that ddrR affects approximately 60% of the genome, rendering it a potential target for Acinetobacter baumannii infection treatment.",
+  "authors": [
+    {
+      "last_name": "Cook",
+      "fore_name": "Deborah",
+      "initials": "D",
+      "name": "Deborah Cook",
+      "affiliations": [
+        "Department of Biology and Chemistry, Morehead State University, Morehead, KY, United States."
+      ]
+    },
+    {
+      "last_name": "Flannigan",
+      "fore_name": "Mollee D",
+      "initials": "MD",
+      "name": "Mollee D Flannigan",
+      "affiliations": [
+        "Department of Biology and Chemistry, Morehead State University, Morehead, KY, United States."
+      ]
+    },
+    {
+      "last_name": "Chariker",
+      "fore_name": "Julia H",
+      "initials": "JH",
+      "name": "Julia H Chariker",
+      "affiliations": [
+        "Kentucky IDeA Networks of Biomedical Research Excellence (KY INBRE) Bioinformatics Core, University of Louisville, Louisville, KY, United States."
+      ]
+    },
+    {
+      "last_name": "Hare",
+      "fore_name": "Janelle M",
+      "initials": "JM",
+      "name": "Janelle M Hare",
+      "affiliations": [
+        "Department of Biology and Chemistry, Morehead State University, Morehead, KY, United States."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Frontiers in cellular and infection microbiology",
+    "iso_abbreviation": "Front Cell Infect Microbiol",
+    "issn": "2235-2988",
+    "issn_type": "Electronic",
+    "volume": "13",
+    "pub_year": "2023"
+  },
+  "start_page": "1324091",
+  "pages": "1324091",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Acinetobacter baumannii",
+    "DNA Damage",
+    "Transcriptome",
+    "DNA Repair",
+    "Bacterial Proteins"
+  ],
+  "article_ids": {
+    "pubmed": "38274737",
+    "pmc": "PMC10808703",
+    "doi": "10.3389/fcimb.2023.1324091"
+  },
+  "doi": "10.3389/fcimb.2023.1324091",
+  "pmc_id": "PMC10808703",
+  "dates": {
+    "completed": "2024-01-29",
+    "revised": "2024-10-23"
+  },
+  "chemicals": [
+    "Bacterial Proteins"
+  ],
+  "grants": [
+    {
+      "grant_id": "P20 GM103436",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R15 GM085722",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:15:21.343406",
+    "pmid": "38274737"
+  }
+}

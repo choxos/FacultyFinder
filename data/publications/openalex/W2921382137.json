@@ -1,0 +1,209 @@
+{
+  "openalex_id": "W2921382137",
+  "doi": "https://doi.org/10.1080/19427867.2019.1585682",
+  "title": "Evaluating the effect of MIPM on vehicle detection performance",
+  "abstract": "The introduction of new techniques to improve the robustness and accuracy of vehicle detection is always important for the intelligent transportation system as it may face different problems and challenges. Conventional image-based vehicle detection methods have presented difficulties in acquiring good images due to perspective and background noise, poor lighting and weather conditions. We propose a high-accurate, vehicle detection method by using Modified Inverse Perspective Mapping. Thus, the perspective effect is removed, and then the Hough transform was applied to extract road lines and lanes. Gaussian Mixture Model and chromaticity-based strategy were applied to segment the moving vehicles and tackle shadow effects, respectively. We evaluated the performance of the proposed method under recorded videos in Madrid and Tehran (with different weather conditions at urban and interurban areas). Results indicate that the proposed approach is feasible, and more accurate compared to others, especially when facing bad weather conditions and lighting variations in different environments.",
+  "authors": [
+    {
+      "display_name": "Nastaran Yaghoobi Ershadi",
+      "id": "A5062576899",
+      "orcid": "https://orcid.org/0000-0002-1112-2068",
+      "institutions": [
+        {
+          "id": "I88060688",
+          "display_name": "Universidad Politécnica de Madrid",
+          "country_code": "ES",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Nastaran Yaghoobi Ershadi"
+    },
+    {
+      "display_name": "José Manuel Menéndez",
+      "id": "A5090122038",
+      "orcid": "https://orcid.org/0000-0003-0584-2250",
+      "institutions": [
+        {
+          "id": "I88060688",
+          "display_name": "Universidad Politécnica de Madrid",
+          "country_code": "ES",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "José Manuel Menéndez"
+    },
+    {
+      "display_name": "David Jiménez",
+      "id": "A5015883220",
+      "orcid": "https://orcid.org/0000-0002-7382-4276",
+      "institutions": [
+        {
+          "id": "I88060688",
+          "display_name": "Universidad Politécnica de Madrid",
+          "country_code": "ES",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Jiménez Bermejo"
+    }
+  ],
+  "publication_year": 2019,
+  "publication_date": "2019-03-08",
+  "type": "article",
+  "cited_by_count": 3,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S70779598",
+    "display_name": "Transportation Letters",
+    "issn_l": "1942-7867",
+    "issn": [
+      "1942-7867",
+      "1942-7875"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320547"
+  },
+  "volume": "12",
+  "issue": "4",
+  "first_page": "257",
+  "last_page": "273",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.705643
+    },
+    {
+      "id": "C63479239",
+      "display_name": "Robustness (evolution)",
+      "level": 3,
+      "score": 0.6821183
+    },
+    {
+      "id": "C200518788",
+      "display_name": "Hough transform",
+      "level": 3,
+      "score": 0.6646621
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.63650334
+    },
+    {
+      "id": "C117797892",
+      "display_name": "Shadow (psychology)",
+      "level": 2,
+      "score": 0.6155781
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.6079025
+    },
+    {
+      "id": "C12713177",
+      "display_name": "Perspective (graphical)",
+      "level": 2,
+      "score": 0.58207583
+    },
+    {
+      "id": "C2779671548",
+      "display_name": "Interurban",
+      "level": 2,
+      "score": 0.5676183
+    },
+    {
+      "id": "C99498987",
+      "display_name": "Noise (video)",
+      "level": 3,
+      "score": 0.41135633
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.24355072
+    },
+    {
+      "id": "C22212356",
+      "display_name": "Transport engineering",
+      "level": 1,
+      "score": 0.20040315
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.1559233
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C542102704",
+      "display_name": "Psychotherapist",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10331",
+      "display_name": "Video Surveillance and Tracking Methods",
+      "score": 0.9998
+    },
+    {
+      "id": "T11099",
+      "display_name": "Autonomous Vehicle Technology and Safety",
+      "score": 0.9997
+    },
+    {
+      "id": "T13282",
+      "display_name": "Automated Road and Building Extraction",
+      "score": 0.9984
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1080/19427867.2019.1585682",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:02:22.811264",
+  "source_database": "OpenAlex"
+}

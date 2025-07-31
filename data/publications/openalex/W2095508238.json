@@ -1,0 +1,266 @@
+{
+  "openalex_id": "W2095508238",
+  "doi": "https://doi.org/10.1109/tec.2005.847961",
+  "title": "Fault Detection and Diagnosis in an Induction Machine Drive: A Pattern Recognition Approach Based on Concordia Stator Mean Current Vector",
+  "abstract": "The aim of this paper is to study the feasibility of fault detection and diagnosis in a three-phase inverter feeding an induction motor. The proposed approach is a sensor-based technique using the mains current measurement. A localization domain made with seven patterns is built with the stator Concordia mean current vector. One is dedicated to the healthy domain and the last six are to each inverter switch. A probabilistic approach for the definition of the boundaries increases the robustness of the method against the uncertainties due to measurements and to the PWM. In high-power equipment where it is crucial to detect and diagnose the inverter faulty switch, a simple algorithm compares the patterns and generates a Boolean indicating the faulty device. In low-power applications (less than 1 kW) where only fault detection is required, a radial basis function (RBF) evolving architecture neural network is used to build the healthy operation area. Simulated experimental results on 0.3- and 1.5-kW induction motor drives show the feasibility of the proposed approach.",
+  "authors": [
+    {
+      "display_name": "Demba Diallo",
+      "id": "A5013681068",
+      "orcid": "https://orcid.org/0000-0002-4421-6175",
+      "institutions": [
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Diallo"
+    },
+    {
+      "display_name": "Mohamed Benbouzid",
+      "id": "A5035730211",
+      "orcid": "https://orcid.org/0000-0002-4844-508X",
+      "institutions": [
+        {
+          "id": "I125749732",
+          "display_name": "Western University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M.E.H. Benbouzid"
+    },
+    {
+      "display_name": "Denis Hamad",
+      "id": "A5084523165",
+      "orcid": "https://orcid.org/0000-0001-6000-8707",
+      "institutions": [
+        {
+          "id": "I2802487185",
+          "display_name": "Université du littoral côte d'opale",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Hamad"
+    },
+    {
+      "display_name": "X. Pierre",
+      "id": "A5046078011",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4647051",
+          "display_name": "Université de Picardie Jules Verne",
+          "country_code": "FR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "X. Pierre"
+    }
+  ],
+  "publication_year": 2005,
+  "publication_date": "2005-08-16",
+  "type": "article",
+  "cited_by_count": 222,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S64770346",
+    "display_name": "IEEE Transactions on Energy Conversion",
+    "issn_l": "0885-8969",
+    "issn": [
+      "0885-8969",
+      "1558-0059"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "20",
+  "issue": "3",
+  "first_page": "512",
+  "last_page": "519",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://hal.science/hal-00526691/document",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2776529397",
+      "display_name": "Stator",
+      "level": 2,
+      "score": 0.76416636
+    },
+    {
+      "id": "C63479239",
+      "display_name": "Robustness (evolution)",
+      "level": 3,
+      "score": 0.75558627
+    },
+    {
+      "id": "C80962145",
+      "display_name": "Induction motor",
+      "level": 3,
+      "score": 0.7017697
+    },
+    {
+      "id": "C11190779",
+      "display_name": "Inverter",
+      "level": 3,
+      "score": 0.6305676
+    },
+    {
+      "id": "C50644808",
+      "display_name": "Artificial neural network",
+      "level": 2,
+      "score": 0.5429717
+    },
+    {
+      "id": "C47446073",
+      "display_name": "Control theory (sociology)",
+      "level": 3,
+      "score": 0.49720815
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.48406926
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.4819117
+    },
+    {
+      "id": "C175551986",
+      "display_name": "Fault (geology)",
+      "level": 2,
+      "score": 0.45827365
+    },
+    {
+      "id": "C152745839",
+      "display_name": "Fault detection and isolation",
+      "level": 3,
+      "score": 0.44970298
+    },
+    {
+      "id": "C55000061",
+      "display_name": "Current sensor",
+      "level": 3,
+      "score": 0.43649137
+    },
+    {
+      "id": "C92746544",
+      "display_name": "Pulse-width modulation",
+      "level": 3,
+      "score": 0.42954156
+    },
+    {
+      "id": "C24326235",
+      "display_name": "Electronic engineering",
+      "level": 1,
+      "score": 0.4143137
+    },
+    {
+      "id": "C133731056",
+      "display_name": "Control engineering",
+      "level": 1,
+      "score": 0.356934
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.26771897
+    },
+    {
+      "id": "C165801399",
+      "display_name": "Voltage",
+      "level": 2,
+      "score": 0.20952526
+    },
+    {
+      "id": "C119599485",
+      "display_name": "Electrical engineering",
+      "level": 1,
+      "score": 0.124690086
+    },
+    {
+      "id": "C2775924081",
+      "display_name": "Control (management)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C172707124",
+      "display_name": "Actuator",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C55493867",
+      "display_name": "Biochemistry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C185592680",
+      "display_name": "Chemistry",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C165205528",
+      "display_name": "Seismology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10220",
+      "display_name": "Machine Fault Diagnosis Techniques",
+      "score": 0.9987
+    },
+    {
+      "id": "T10228",
+      "display_name": "Multilevel Inverters and Converters",
+      "score": 0.9939
+    },
+    {
+      "id": "T10504",
+      "display_name": "Sensorless Control of Electric Motors",
+      "score": 0.9903
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tec.2005.847961",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:01:44.882592",
+  "source_database": "OpenAlex"
+}

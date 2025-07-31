@@ -1,0 +1,157 @@
+{
+  "pmid": "37164244",
+  "uid": "37164244",
+  "title": "Deep learning to refine the identification of high-quality clinical research articles from the biomedical literature: Performance evaluation.",
+  "abstract": "BACKGROUND: Identifying practice-ready evidence-based journal articles in medicine is a challenge due to the sheer volume of biomedical research publications. Newer approaches to support evidence discovery apply deep learning techniques to improve the efficiency and accuracy of classifying sound evidence. OBJECTIVE: To determine how well deep learning models using variants of Bidirectional Encoder Representations from Transformers (BERT) identify high-quality evidence with high clinical relevance from the biomedical literature for consideration in clinical practice. METHODS: We fine-tuned variations of BERT models (BERTBASE, BioBERT, BlueBERT, and PubMedBERT) and compared their performance in classifying articles based on methodological quality criteria. The dataset used for fine-tuning models included titles and abstracts of >160,000 PubMed records from 2012 to 2020 that were of interest to human health which had been manually labeled based on meeting established critical appraisal criteria for methodological rigor. The data was randomly divided into 80:10:10 sets for training, validating, and testing. In addition to using the full unbalanced set, the training data was randomly undersampled into four balanced datasets to assess performance and select the best performing model. For each of the four sets, one model that maintained sensitivity (recall) at ≥99% was selected and were ensembled. The best performing model was evaluated in a prospective, blinded test and applied to an established reference standard, the Clinical Hedges dataset. RESULTS: In training, three of the four selected best performing models were trained using BioBERTBASE. The ensembled model did not boost performance compared with the best individual model. Hence a solo BioBERT-based model (named DL-PLUS) was selected for further testing as it was computationally more efficient. The model had high recall (>99%) and 60% to 77% specificity in a prospective evaluation conducted with blinded research associates and saved >60% of the work required to identify high quality articles. CONCLUSIONS: Deep learning using pretrained language models and a large dataset of classified articles produced models with improved specificity while maintaining >99% recall. The resulting DL-PLUS model identifies high-quality, clinically relevant articles from PubMed at the time of publication. The model improves the efficiency of a literature surveillance program, which allows for faster dissemination of appraised research.",
+  "authors": [
+    {
+      "last_name": "Lokker",
+      "fore_name": "Cynthia",
+      "initials": "C",
+      "name": "Cynthia Lokker",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada. Electronic address: lokkerc@mcmaster.ca."
+      ]
+    },
+    {
+      "last_name": "Bagheri",
+      "fore_name": "Elham",
+      "initials": "E",
+      "name": "Elham Bagheri",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Abdelkader",
+      "fore_name": "Wael",
+      "initials": "W",
+      "name": "Wael Abdelkader",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Parrish",
+      "fore_name": "Rick",
+      "initials": "R",
+      "name": "Rick Parrish",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Afzal",
+      "affiliations": [
+        "Department of Computing, Birmingham City University, Birmingham, UK."
+      ]
+    },
+    {
+      "last_name": "Navarro",
+      "fore_name": "Tamara",
+      "initials": "T",
+      "name": "Tamara Navarro",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Cotoi",
+      "fore_name": "Chris",
+      "initials": "C",
+      "name": "Chris Cotoi",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Germini",
+      "fore_name": "Federico",
+      "initials": "F",
+      "name": "Federico Germini",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada; Department of Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Linkins",
+      "fore_name": "Lori",
+      "initials": "L",
+      "name": "Lori Linkins",
+      "affiliations": [
+        "Department of Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Haynes",
+      "fore_name": "R Brian",
+      "initials": "RB",
+      "name": "R Brian Haynes",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada; Department of Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Chu",
+      "fore_name": "Lingyang",
+      "initials": "L",
+      "name": "Lingyang Chu",
+      "affiliations": [
+        "Department of Computing and Software, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Iorio",
+      "fore_name": "Alfonso",
+      "initials": "A",
+      "name": "Alfonso Iorio",
+      "affiliations": [
+        "Health Information Research Unit, Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada; Department of Medicine, McMaster University, Hamilton, Ontario, Canada."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Journal of biomedical informatics",
+    "iso_abbreviation": "J Biomed Inform",
+    "issn": "1532-0480",
+    "issn_type": "Electronic",
+    "volume": "142",
+    "pub_year": "2023",
+    "pub_month": "Jun"
+  },
+  "start_page": "104384",
+  "pages": "104384",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Deep Learning",
+    "Biomedical Research",
+    "Clinical Relevance",
+    "Language",
+    "PubMed",
+    "Natural Language Processing"
+  ],
+  "article_ids": {
+    "pubmed": "37164244",
+    "doi": "10.1016/j.jbi.2023.104384",
+    "pii": "S1532-0464(23)00105-3"
+  },
+  "doi": "10.1016/j.jbi.2023.104384",
+  "dates": {
+    "completed": "2023-06-05",
+    "revised": "2023-06-13"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:40:11.227735",
+    "pmid": "37164244"
+  }
+}

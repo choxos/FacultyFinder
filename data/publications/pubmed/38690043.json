@@ -1,0 +1,161 @@
+{
+  "pmid": "38690043",
+  "uid": "38690043",
+  "title": "Predicting short-term thromboembolic risk following Roux-en-Y gastric bypass using supervised machine learning.",
+  "abstract": "BACKGROUND: Roux-en-Y gastric bypass (RYGB) is a widely recognized bariatric procedure that is particularly beneficial for patients with class III obesity. It aids in significant weight loss and improves obesity-related medical conditions. Despite its effectiveness, postoperative care still has challenges. Clinical evidence shows that venous thromboembolism (VTE) is a leading cause of 30-d morbidity and mortality after RYGB. Therefore, a clear unmet need exists for a tailored risk assessment tool for VTE in RYGB candidates. AIM: To develop and internally validate a scoring system determining the individualized risk of 30-d VTE in patients undergoing RYGB. METHODS: Using the 2016-2021 Metabolic and Bariatric Surgery Accreditation Quality Improvement Program, data from 6526 patients (body mass index ≥ 40 kg/m[2]) who underwent RYGB were analyzed. A backward elimination multivariate analysis identified predictors of VTE characterized by pulmonary embolism and/or deep venous thrombosis within 30 d of RYGB. The resultant risk scores were derived from the coefficients of statistically significant variables. The performance of the model was evaluated using receiver operating curves through 5-fold cross-validation. RESULTS: Of the 26 initial variables, six predictors were identified. These included a history of chronic obstructive pulmonary disease with a regression coefficient (Coef) of 2.54 (P < 0.001), length of stay (Coef 0.08, P < 0.001), prior deep venous thrombosis (Coef 1.61, P < 0.001), hemoglobin A1c > 7% (Coef 1.19, P < 0.001), venous stasis history (Coef 1.43, P < 0.001), and preoperative anticoagulation use (Coef 1.24, P < 0.001). These variables were weighted according to their regression coefficients in an algorithm that was generated for the model predicting 30-d VTE risk post-RYGB. The risk model's area under the curve (AUC) was 0.79 [95% confidence interval (CI): 0.63-0.81], showing good discriminatory power, achieving a sensitivity of 0.60 and a specificity of 0.91. Without training, the same model performed satisfactorily in patients with laparoscopic sleeve gastrectomy with an AUC of 0.63 (95%CI: 0.62-0.64) and endoscopic sleeve gastroplasty with an AUC of 0.76 (95%CI: 0.75-0.78). CONCLUSION: This simple risk model uses only six variables to assist clinicians in the preoperative risk stratification of RYGB patients, offering insights into factors that heighten the risk of VTE events.",
+  "authors": [
+    {
+      "last_name": "Ali",
+      "fore_name": "Hassam",
+      "initials": "H",
+      "name": "Hassam Ali",
+      "affiliations": [
+        "Department of Gastroenterology, East Carolina University Brody School of Medicine, Greenville, NC 27834, United States."
+      ]
+    },
+    {
+      "last_name": "Inayat",
+      "fore_name": "Faisal",
+      "initials": "F",
+      "name": "Faisal Inayat",
+      "affiliations": [
+        "Department of Internal Medicine, Allama Iqbal Medical College, Lahore, Punjab 54550, Pakistan. faisalinayat@hotmail.com."
+      ]
+    },
+    {
+      "last_name": "Moond",
+      "fore_name": "Vishali",
+      "initials": "V",
+      "name": "Vishali Moond",
+      "affiliations": [
+        "Department of Internal Medicine, Saint Peter's University Hospital and Robert Wood Johnson Medical School, New Brunswick, NJ 08901, United States."
+      ]
+    },
+    {
+      "last_name": "Chaudhry",
+      "fore_name": "Ahtshamullah",
+      "initials": "A",
+      "name": "Ahtshamullah Chaudhry",
+      "affiliations": [
+        "Department of Internal Medicine, St. Dominic's Hospital, Jackson, MS 39216, United States."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Arslan",
+      "initials": "A",
+      "name": "Arslan Afzal",
+      "affiliations": [
+        "Department of Gastroenterology, East Carolina University Brody School of Medicine, Greenville, NC 27834, United States."
+      ]
+    },
+    {
+      "last_name": "Anjum",
+      "fore_name": "Zauraiz",
+      "initials": "Z",
+      "name": "Zauraiz Anjum",
+      "affiliations": [
+        "Department of Internal Medicine, Rochester General Hospital, Rochester, NY 14621, United States."
+      ]
+    },
+    {
+      "last_name": "Tahir",
+      "fore_name": "Hamza",
+      "initials": "H",
+      "name": "Hamza Tahir",
+      "affiliations": [
+        "Department of Internal Medicine, Jefferson Einstein Hospital, Philadelphia, PA 19141, United States."
+      ]
+    },
+    {
+      "last_name": "Anwar",
+      "fore_name": "Muhammad Sajeel",
+      "initials": "MS",
+      "name": "Muhammad Sajeel Anwar",
+      "affiliations": [
+        "Department of Internal Medicine, UHS Wilson Medical Center, Johnson, NY 13790, United States."
+      ]
+    },
+    {
+      "last_name": "Dahiya",
+      "fore_name": "Dushyant Singh",
+      "initials": "DS",
+      "name": "Dushyant Singh Dahiya",
+      "affiliations": [
+        "Division of Gastroenterology, Hepatology and Motility, The University of Kansas School of Medicine, Kansas, KS 66160, United States."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad Sohaib",
+      "initials": "MS",
+      "name": "Muhammad Sohaib Afzal",
+      "affiliations": [
+        "Department of Internal Medicine, Louisiana State University Health, Shreveport, LA 71103, United States."
+      ]
+    },
+    {
+      "last_name": "Nawaz",
+      "fore_name": "Gul",
+      "initials": "G",
+      "name": "Gul Nawaz",
+      "affiliations": [
+        "Department of Internal Medicine, Allama Iqbal Medical College, Lahore, Punjab 54550, Pakistan."
+      ]
+    },
+    {
+      "last_name": "Sohail",
+      "fore_name": "Amir H",
+      "initials": "AH",
+      "name": "Amir H Sohail",
+      "affiliations": [
+        "Department of Surgery, University of New Mexico School of Medicine, Albuquerque, NM 87106, United States."
+      ]
+    },
+    {
+      "last_name": "Aziz",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Aziz",
+      "affiliations": [
+        "Department of Gastroenterology and Hepatology, The University of Toledo, Toledo, OH 43606, United States."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "World journal of gastrointestinal surgery",
+    "iso_abbreviation": "World J Gastrointest Surg",
+    "issn": "1948-9366",
+    "issn_type": "Print",
+    "volume": "16",
+    "issue": "4",
+    "pub_year": "2024",
+    "pub_month": "Apr",
+    "pub_day": "27"
+  },
+  "start_page": "1097",
+  "end_page": "1108",
+  "pages": "1097-1108",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "38690043",
+    "pmc": "PMC11056662",
+    "doi": "10.4240/wjgs.v16.i4.1097"
+  },
+  "doi": "10.4240/wjgs.v16.i4.1097",
+  "pmc_id": "PMC11056662",
+  "dates": {
+    "revised": "2024-05-02"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:15.132275",
+    "pmid": "38690043"
+  }
+}

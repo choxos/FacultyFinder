@@ -1,0 +1,315 @@
+{
+  "pmid": "34508027",
+  "uid": "34508027",
+  "title": "Machine Learning Used to Compare the Diagnostic Accuracy of Risk Factors, Clinical Signs and Biomarkers and to Develop a New Prediction Model for Neonatal Early-onset Sepsis.",
+  "abstract": "BACKGROUND: Current strategies for risk stratification and prediction of neonatal early-onset sepsis (EOS) are inefficient and lack diagnostic performance. The aim of this study was to use machine learning to analyze the diagnostic accuracy of risk factors (RFs), clinical signs and biomarkers and to develop a prediction model for culture-proven EOS. We hypothesized that the contribution to diagnostic accuracy of biomarkers is higher than of RFs or clinical signs. STUDY DESIGN: Secondary analysis of the prospective international multicenter NeoPInS study. Neonates born after completed 34 weeks of gestation with antibiotic therapy due to suspected EOS within the first 72 hours of life participated. Primary outcome was defined as predictive performance for culture-proven EOS with variables known at the start of antibiotic therapy. Machine learning was used in form of a random forest classifier. RESULTS: One thousand six hundred eighty-five neonates treated for suspected infection were analyzed. Biomarkers were superior to clinical signs and RFs for prediction of culture-proven EOS. C-reactive protein and white blood cells were most important for the prediction of the culture result. Our full model achieved an area-under-the-receiver-operating-characteristic-curve of 83.41% (±8.8%) and an area-under-the-precision-recall-curve of 28.42% (±11.5%). The predictive performance of the model with RFs alone was comparable with random. CONCLUSIONS: Biomarkers have to be considered in algorithms for the management of neonates suspected of EOS. A 2-step approach with a screening tool for all neonates in combination with our model in the preselected population with an increased risk for EOS may have the potential to reduce the start of unnecessary antibiotics.",
+  "authors": [
+    {
+      "last_name": "Stocker",
+      "fore_name": "Martin",
+      "initials": "M",
+      "name": "Martin Stocker",
+      "affiliations": [
+        "From the Department of Paediatrics, Neonatal and Paediatric Intensive Care Unit, Children's Hospital Lucerne, Lucerne."
+      ]
+    },
+    {
+      "last_name": "Daunhawer",
+      "fore_name": "Imant",
+      "initials": "I",
+      "name": "Imant Daunhawer",
+      "affiliations": [
+        "Department of Computer Science, ETH Zurich, Switzerland."
+      ]
+    },
+    {
+      "last_name": "van Herk",
+      "fore_name": "Wendy",
+      "initials": "W",
+      "name": "Wendy van Herk",
+      "affiliations": [
+        "Department of Paediatrics, Division of Paediatric Infectious Diseases and Immunology, Erasmus MC University Medical Centre-Sophia Children's Hospital, Rotterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "El Helou",
+      "fore_name": "Salhab",
+      "initials": "S",
+      "name": "Salhab El Helou",
+      "affiliations": [
+        "Division of Neonatology, McMaster University Children's Hospital, Hamilton Health Sciences, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Dutta",
+      "fore_name": "Sourabh",
+      "initials": "S",
+      "name": "Sourabh Dutta",
+      "affiliations": [
+        "Division of Neonatology, McMaster University Children's Hospital, Hamilton Health Sciences, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Schuerman",
+      "fore_name": "Frank A B A",
+      "initials": "FABA",
+      "name": "Frank A B A Schuerman",
+      "affiliations": [
+        "Department of Neonatal Intensive Care Unit, Isala Women and Children's Hospital, Zwolle."
+      ]
+    },
+    {
+      "last_name": "van den Tooren-de Groot",
+      "fore_name": "Rita K",
+      "initials": "RK",
+      "name": "Rita K van den Tooren-de Groot",
+      "affiliations": [
+        "Department of Paediatrics, Haaglanden Medical Centre, 's Gravenhage, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Wieringa",
+      "fore_name": "Jantien W",
+      "initials": "JW",
+      "name": "Jantien W Wieringa",
+      "affiliations": [
+        "Department of Paediatrics, Haaglanden Medical Centre, 's Gravenhage, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Janota",
+      "fore_name": "Jan",
+      "initials": "J",
+      "name": "Jan Janota",
+      "affiliations": [
+        "Department of Obstetrics and Gynecology, Motol University Hospital, Second Medical Faculty, Prague, Czech Republic."
+      ]
+    },
+    {
+      "last_name": "van der Meer-Kappelle",
+      "fore_name": "Laura H",
+      "initials": "LH",
+      "name": "Laura H van der Meer-Kappelle",
+      "affiliations": [
+        "Department of Neonatology, Reinier de Graaf Gasthuis, Delft."
+      ]
+    },
+    {
+      "last_name": "Moonen",
+      "fore_name": "Rob",
+      "initials": "R",
+      "name": "Rob Moonen",
+      "affiliations": [
+        "Department of Neonatology, Zuyderland Medical Centre, Heerlen."
+      ]
+    },
+    {
+      "last_name": "Sie",
+      "fore_name": "Sintha D",
+      "initials": "SD",
+      "name": "Sintha D Sie",
+      "affiliations": [
+        "Department of Neonatology, Amsterdam UMC, Vrije Universiteit Amsterdam, Amsterdam."
+      ]
+    },
+    {
+      "last_name": "de Vries",
+      "fore_name": "Esther",
+      "initials": "E",
+      "name": "Esther de Vries",
+      "affiliations": [
+        "Department of Jeroen Bosch Academy Research, Jeroen Bosch Hospital, 's-Hertogenbosch.",
+        "Department of Tranzo, Tilburg University, Tilburg."
+      ]
+    },
+    {
+      "last_name": "Donker",
+      "fore_name": "Albertine E",
+      "initials": "AE",
+      "name": "Albertine E Donker",
+      "affiliations": [
+        "Department of Paediatrics, Maxima Medical Centre, Veldhoven, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Zimmerman",
+      "fore_name": "Urs",
+      "initials": "U",
+      "name": "Urs Zimmerman",
+      "affiliations": [
+        "Department of Paediatrics, Kantonsspital Winterthur, Winterthur."
+      ]
+    },
+    {
+      "last_name": "Schlapbach",
+      "fore_name": "Luregn J",
+      "initials": "LJ",
+      "name": "Luregn J Schlapbach",
+      "affiliations": [
+        "Neonatal and Pediatric Intensive Care Unit, Children`s Research Center, University Children's Hospital Zurich, Zurich, Switzerland."
+      ]
+    },
+    {
+      "last_name": "de Mol",
+      "fore_name": "Amerik C",
+      "initials": "AC",
+      "name": "Amerik C de Mol",
+      "affiliations": [
+        "Department of Neonatology, Albert Schweitzer Hospital, Dordrecht."
+      ]
+    },
+    {
+      "last_name": "Hoffmann-Haringsma",
+      "fore_name": "Angelique",
+      "initials": "A",
+      "name": "Angelique Hoffmann-Haringsma",
+      "affiliations": [
+        "Department of Neonatology, Sint Franciscus Gasthuis, Rotterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Roy",
+      "fore_name": "Madan",
+      "initials": "M",
+      "name": "Madan Roy",
+      "affiliations": [
+        "Department of Neonatology, St. Josephs Healthcare, Hamilton Health Sciences, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Tomaske",
+      "fore_name": "Maren",
+      "initials": "M",
+      "name": "Maren Tomaske",
+      "affiliations": [
+        "Department of Paediatrics, Stadtspital Triemli, Zürich, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Kornelisse",
+      "fore_name": "René F",
+      "initials": "RF",
+      "name": "René F Kornelisse",
+      "affiliations": [
+        "Department of Paediatrics, Division of Neonatology, Erasmus MC University Medical Centre-Sophia Children's Hospital, Rotterdam."
+      ]
+    },
+    {
+      "last_name": "van Gijsel",
+      "fore_name": "Juliette",
+      "initials": "J",
+      "name": "Juliette van Gijsel",
+      "affiliations": [
+        "Therapeuticum Utrecht, Utrecht."
+      ]
+    },
+    {
+      "last_name": "Plötz",
+      "fore_name": "Frans B",
+      "initials": "FB",
+      "name": "Frans B Plötz",
+      "affiliations": [
+        "Department of Pediatrics, Tergooi Hospital, Blaricum, the Netherlands and Amsterdam University Medical Center, Department of Pediatrics, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Wellmann",
+      "fore_name": "Sven",
+      "initials": "S",
+      "name": "Sven Wellmann",
+      "affiliations": [
+        "Department of Neonatology, University Children's Hospital Regensburg (KUNO), University of Regensburg, Regensburg, Germany."
+      ]
+    },
+    {
+      "last_name": "Achten",
+      "fore_name": "Niek B",
+      "initials": "NB",
+      "name": "Niek B Achten",
+      "affiliations": [
+        "Department of Pediatrics, Tergooi Hospital, Blaricum, the Netherlands and Amsterdam University Medical Center, Department of Pediatrics, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Lehnick",
+      "fore_name": "Dirk",
+      "initials": "D",
+      "name": "Dirk Lehnick",
+      "affiliations": [
+        "Department of Health Sciences and Medicine, Head Biostatistics and Methodology, University of Lucerne, Lucerne, Switzerland."
+      ]
+    },
+    {
+      "last_name": "van Rossum",
+      "fore_name": "Annemarie M C",
+      "initials": "AMC",
+      "name": "Annemarie M C van Rossum",
+      "affiliations": [
+        "Department of Paediatrics, Division of Paediatric Infectious Diseases and Immunology, Erasmus MC University Medical Centre-Sophia Children's Hospital, Rotterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Vogt",
+      "fore_name": "Julia E",
+      "initials": "JE",
+      "name": "Julia E Vogt",
+      "affiliations": [
+        "From the Department of Paediatrics, Neonatal and Paediatric Intensive Care Unit, Children's Hospital Lucerne, Lucerne."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "The Pediatric infectious disease journal",
+    "iso_abbreviation": "Pediatr Infect Dis J",
+    "issn": "1532-0987",
+    "issn_type": "Electronic",
+    "volume": "41",
+    "issue": "3",
+    "pub_year": "2022",
+    "pub_month": "Mar",
+    "pub_day": "01"
+  },
+  "start_page": "248",
+  "end_page": "254",
+  "pages": "248-254",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Anti-Bacterial Agents",
+    "Biomarkers",
+    "C-Reactive Protein",
+    "Female",
+    "Humans",
+    "Infant",
+    "Infant, Newborn",
+    "Machine Learning",
+    "Male",
+    "Neonatal Sepsis",
+    "Prospective Studies",
+    "ROC Curve",
+    "Risk Factors"
+  ],
+  "article_ids": {
+    "pubmed": "34508027",
+    "doi": "10.1097/INF.0000000000003344",
+    "pii": "00006454-202203000-00022"
+  },
+  "doi": "10.1097/INF.0000000000003344",
+  "dates": {
+    "completed": "2022-03-07",
+    "revised": "2023-09-12"
+  },
+  "chemicals": [
+    "Anti-Bacterial Agents",
+    "Biomarkers",
+    "C-Reactive Protein"
+  ],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:19:52.501818",
+    "pmid": "34508027"
+  }
+}

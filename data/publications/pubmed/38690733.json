@@ -1,0 +1,564 @@
+{
+  "pmid": "38690733",
+  "uid": "38690733",
+  "title": "Integrated longitudinal multiomics study identifies immune programs associated with acute COVID-19 severity and mortality.",
+  "abstract": "BACKGROUNDPatients hospitalized for COVID-19 exhibit diverse clinical outcomes, with outcomes for some individuals diverging over time even though their initial disease severity appears similar to that of other patients. A systematic evaluation of molecular and cellular profiles over the full disease course can link immune programs and their coordination with progression heterogeneity.METHODSWe performed deep immunophenotyping and conducted longitudinal multiomics modeling, integrating 10 assays for 1,152 Immunophenotyping Assessment in a COVID-19 Cohort (IMPACC) study participants and identifying several immune cascades that were significant drivers of differential clinical outcomes.RESULTSIncreasing disease severity was driven by a temporal pattern that began with the early upregulation of immunosuppressive metabolites and then elevated levels of inflammatory cytokines, signatures of coagulation, formation of neutrophil extracellular traps, and T cell functional dysregulation. A second immune cascade, predictive of 28-day mortality among critically ill patients, was characterized by reduced total plasma Igs and B cells and dysregulated IFN responsiveness. We demonstrated that the balance disruption between IFN-stimulated genes and IFN inhibitors is a crucial biomarker of COVID-19 mortality, potentially contributing to failure of viral clearance in patients with fatal illness.CONCLUSIONOur longitudinal multiomics profiling study revealed temporal coordination across diverse omics that potentially explain the disease progression, providing insights that can inform the targeted development of therapies for patients hospitalized with COVID-19, especially those who are critically ill.TRIAL REGISTRATIONClinicalTrials.gov NCT04378777.FUNDINGNIH (5R01AI135803-03, 5U19AI118608-04, 5U19AI128910-04, 4U19AI090023-11, 4U19AI118610-06, R01AI145835-01A1S1, 5U19AI062629-17, 5U19AI057229-17, 5U19AI125357-05, 5U19AI128913-03, 3U19AI077439-13, 5U54AI142766-03, 5R01AI104870-07, 3U19AI089992-09, 3U19AI128913-03, and 5T32DA018926-18); NIAID, NIH (3U19AI1289130, U19AI128913-04S1, and R01AI122220); and National Science Foundation (DMS2310836).",
+  "authors": [
+    {
+      "last_name": "Gygi",
+      "fore_name": "Jeremy P",
+      "initials": "JP",
+      "name": "Jeremy P Gygi",
+      "affiliations": [
+        "Yale School of Medicine, New Haven, Connecticut, USA."
+      ]
+    },
+    {
+      "last_name": "Maguire",
+      "fore_name": "Cole",
+      "initials": "C",
+      "name": "Cole Maguire",
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Patel",
+      "fore_name": "Ravi K",
+      "initials": "RK",
+      "name": "Ravi K Patel",
+      "affiliations": [
+        "UCSF, San Francisco, California, USA."
+      ]
+    },
+    {
+      "last_name": "Shinde",
+      "fore_name": "Pramod",
+      "initials": "P",
+      "name": "Pramod Shinde",
+      "affiliations": [
+        "La Jolla Institute for Immunology, La Jolla, California, USA."
+      ]
+    },
+    {
+      "last_name": "Konstorum",
+      "fore_name": "Anna",
+      "initials": "A",
+      "name": "Anna Konstorum",
+      "affiliations": [
+        "Yale School of Medicine, New Haven, Connecticut, USA."
+      ]
+    },
+    {
+      "last_name": "Shannon",
+      "fore_name": "Casey P",
+      "initials": "CP",
+      "name": "Casey P Shannon",
+      "affiliations": [
+        "Centre for Heart Lung Innovation, University of British Columbia, Vancouver, Canada.",
+        "Prevention of Organ Failure (PROOF) Centre of Excellence, Providence Research, Vancouver, British Columbia, Canada."
+      ]
+    },
+    {
+      "last_name": "Xu",
+      "fore_name": "Leqi",
+      "initials": "L",
+      "name": "Leqi Xu",
+      "affiliations": [
+        "Yale School of Public Health, New Haven, Connecticut, USA."
+      ]
+    },
+    {
+      "last_name": "Hoch",
+      "fore_name": "Annmarie",
+      "initials": "A",
+      "name": "Annmarie Hoch",
+      "affiliations": [
+        "Clinical and Data Coordinating Center (CDCC) and.",
+        "Precision Vaccines Program, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Jayavelu",
+      "fore_name": "Naresh Doni",
+      "initials": "ND",
+      "name": "Naresh Doni Jayavelu",
+      "affiliations": [
+        "Benaroya Research Institute, Seattle, Washington, USA."
+      ]
+    },
+    {
+      "last_name": "Haddad",
+      "fore_name": "Elias K",
+      "initials": "EK",
+      "name": "Elias K Haddad",
+      "affiliations": [
+        "Drexel University, Tower Health Hospital, Philadelphia, Pennsylvania, USA."
+      ]
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "last_name": "Reed",
+      "fore_name": "Elaine F",
+      "initials": "EF",
+      "name": "Elaine F Reed",
+      "affiliations": [
+        "David Geffen School of Medicine at the UCLA, Los Angeles, California, USA."
+      ]
+    },
+    {
+      "last_name": "Kraft",
+      "fore_name": "Monica",
+      "initials": "M",
+      "name": "Monica Kraft",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, New York, USA."
+      ]
+    },
+    {
+      "last_name": "McComsey",
+      "fore_name": "Grace A",
+      "initials": "GA",
+      "name": "Grace A McComsey",
+      "affiliations": [
+        "Case Western Reserve University and University Hospitals of Cleveland, Cleveland, Ohio, USA."
+      ]
+    },
+    {
+      "last_name": "Metcalf",
+      "fore_name": "Jordan P",
+      "initials": "JP",
+      "name": "Jordan P Metcalf",
+      "affiliations": [
+        "Oklahoma University Health Sciences Center, Oklahoma City, Oklahoma, USA."
+      ]
+    },
+    {
+      "last_name": "Ozonoff",
+      "fore_name": "Al",
+      "initials": "A",
+      "name": "Al Ozonoff",
+      "affiliations": [
+        "Clinical and Data Coordinating Center (CDCC) and.",
+        "Precision Vaccines Program, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA.",
+        "Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Department of Pediatrics, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Esserman",
+      "fore_name": "Denise",
+      "initials": "D",
+      "name": "Denise Esserman",
+      "affiliations": [
+        "Yale School of Public Health, New Haven, Connecticut, USA."
+      ]
+    },
+    {
+      "last_name": "Cairns",
+      "fore_name": "Charles B",
+      "initials": "CB",
+      "name": "Charles B Cairns",
+      "affiliations": [
+        "Drexel University, Tower Health Hospital, Philadelphia, Pennsylvania, USA."
+      ]
+    },
+    {
+      "last_name": "Rouphael",
+      "fore_name": "Nadine",
+      "initials": "N",
+      "name": "Nadine Rouphael",
+      "affiliations": [
+        "Emory School of Medicine, Atlanta, Georgia, USA."
+      ]
+    },
+    {
+      "last_name": "Bosinger",
+      "fore_name": "Steven E",
+      "initials": "SE",
+      "name": "Steven E Bosinger",
+      "affiliations": [
+        "Emory School of Medicine, Atlanta, Georgia, USA."
+      ]
+    },
+    {
+      "last_name": "Kim-Schulze",
+      "fore_name": "Seunghee",
+      "initials": "S",
+      "name": "Seunghee Kim-Schulze",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, New York, USA."
+      ]
+    },
+    {
+      "last_name": "Krammer",
+      "fore_name": "Florian",
+      "initials": "F",
+      "name": "Florian Krammer",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, New York, USA.",
+        "Ignaz Semmelweis Institute, Interuniversity Institute for Infection Research, Medical University of Vienna, Vienna, Austria."
+      ]
+    },
+    {
+      "last_name": "Rosen",
+      "fore_name": "Lindsey B",
+      "initials": "LB",
+      "name": "Lindsey B Rosen",
+      "affiliations": [
+        "National Institute of Allergy and Infectious Diseases (NIAID), NIH, Bethesda, Maryland, USA."
+      ]
+    },
+    {
+      "last_name": "van Bakel",
+      "fore_name": "Harm",
+      "initials": "H",
+      "name": "Harm van Bakel",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, New York, USA."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Wilson",
+      "affiliations": [
+        "UCSF, San Francisco, California, USA."
+      ]
+    },
+    {
+      "last_name": "Eckalbar",
+      "fore_name": "Walter L",
+      "initials": "WL",
+      "name": "Walter L Eckalbar",
+      "affiliations": [
+        "UCSF, San Francisco, California, USA."
+      ]
+    },
+    {
+      "last_name": "Maecker",
+      "fore_name": "Holden T",
+      "initials": "HT",
+      "name": "Holden T Maecker",
+      "affiliations": [
+        "Stanford University School of Medicine, Palo Alto, California, USA."
+      ]
+    },
+    {
+      "last_name": "Langelier",
+      "fore_name": "Charles R",
+      "initials": "CR",
+      "name": "Charles R Langelier",
+      "affiliations": [
+        "UCSF, San Francisco, California, USA."
+      ]
+    },
+    {
+      "last_name": "Steen",
+      "fore_name": "Hanno",
+      "initials": "H",
+      "name": "Hanno Steen",
+      "affiliations": [
+        "Precision Vaccines Program, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA.",
+        "Department of Pathology, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Altman",
+      "fore_name": "Matthew C",
+      "initials": "MC",
+      "name": "Matthew C Altman",
+      "affiliations": [
+        "Benaroya Research Institute, Seattle, Washington, USA."
+      ]
+    },
+    {
+      "last_name": "Montgomery",
+      "fore_name": "Ruth R",
+      "initials": "RR",
+      "name": "Ruth R Montgomery",
+      "affiliations": [
+        "Yale School of Medicine, New Haven, Connecticut, USA."
+      ]
+    },
+    {
+      "last_name": "Levy",
+      "fore_name": "Ofer",
+      "initials": "O",
+      "name": "Ofer Levy",
+      "affiliations": [
+        "Precision Vaccines Program, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA.",
+        "Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA.",
+        "Department of Pediatrics, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Melamed",
+      "fore_name": "Esther",
+      "initials": "E",
+      "name": "Esther Melamed",
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Pulendran",
+      "fore_name": "Bali",
+      "initials": "B",
+      "name": "Bali Pulendran",
+      "affiliations": [
+        "Stanford University School of Medicine, Palo Alto, California, USA."
+      ]
+    },
+    {
+      "last_name": "Diray-Arce",
+      "fore_name": "Joann",
+      "initials": "J",
+      "name": "Joann Diray-Arce",
+      "affiliations": [
+        "Clinical and Data Coordinating Center (CDCC) and.",
+        "Precision Vaccines Program, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA.",
+        "Department of Pediatrics, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Smolen",
+      "fore_name": "Kinga K",
+      "initials": "KK",
+      "name": "Kinga K Smolen",
+      "affiliations": [
+        "Precision Vaccines Program, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA.",
+        "Department of Pediatrics, Boston Children's Hospital and Harvard Medical School, Boston, Massachusetts, USA."
+      ]
+    },
+    {
+      "last_name": "Fragiadakis",
+      "fore_name": "Gabriela K",
+      "initials": "GK",
+      "name": "Gabriela K Fragiadakis",
+      "affiliations": [
+        "UCSF, San Francisco, California, USA."
+      ]
+    },
+    {
+      "last_name": "Becker",
+      "fore_name": "Patrice M",
+      "initials": "PM",
+      "name": "Patrice M Becker",
+      "affiliations": [
+        "National Institute of Allergy and Infectious Diseases (NIAID), NIH, Bethesda, Maryland, USA."
+      ]
+    },
+    {
+      "last_name": "Sekaly",
+      "fore_name": "Rafick P",
+      "initials": "RP",
+      "name": "Rafick P Sekaly",
+      "affiliations": [
+        "Case Western Reserve University and University Hospitals of Cleveland, Cleveland, Ohio, USA."
+      ]
+    },
+    {
+      "last_name": "Ehrlich",
+      "fore_name": "Lauren Ir",
+      "initials": "LI",
+      "name": "Lauren Ir Ehrlich",
+      "affiliations": [
+        "The University of Texas at Austin, Austin, Texas, USA."
+      ]
+    },
+    {
+      "last_name": "Fourati",
+      "fore_name": "Slim",
+      "initials": "S",
+      "name": "Slim Fourati",
+      "affiliations": [
+        "Case Western Reserve University and University Hospitals of Cleveland, Cleveland, Ohio, USA."
+      ]
+    },
+    {
+      "last_name": "Peters",
+      "fore_name": "Bjoern",
+      "initials": "B",
+      "name": "Bjoern Peters",
+      "affiliations": [
+        "La Jolla Institute for Immunology, La Jolla, California, USA.",
+        "Department of Medicine, UCSD, La Jolla, California, USA."
+      ]
+    },
+    {
+      "last_name": "Kleinstein",
+      "fore_name": "Steven H",
+      "initials": "SH",
+      "name": "Steven H Kleinstein",
+      "affiliations": [
+        "Yale School of Medicine, New Haven, Connecticut, USA."
+      ]
+    },
+    {
+      "last_name": "Guan",
+      "fore_name": "Leying",
+      "initials": "L",
+      "name": "Leying Guan",
+      "affiliations": [
+        "Yale School of Public Health, New Haven, Connecticut, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "The Journal of clinical investigation",
+    "iso_abbreviation": "J Clin Invest",
+    "issn": "1558-8238",
+    "issn_type": "Electronic",
+    "volume": "134",
+    "issue": "9",
+    "pub_year": "2024",
+    "pub_month": "May",
+    "pub_day": "01"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Observational Study",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Adult",
+    "Aged",
+    "Female",
+    "Humans",
+    "Male",
+    "Middle Aged",
+    "COVID-19",
+    "Cytokines",
+    "Longitudinal Studies",
+    "Multiomics",
+    "Severity of Illness Index"
+  ],
+  "article_ids": {
+    "pubmed": "38690733",
+    "pmc": "PMC11060740",
+    "doi": "10.1172/JCI176640",
+    "pii": "176640"
+  },
+  "doi": "10.1172/JCI176640",
+  "pmc_id": "PMC11060740",
+  "dates": {
+    "completed": "2024-05-01",
+    "revised": "2025-03-11"
+  },
+  "chemicals": [
+    "Cytokines"
+  ],
+  "grants": [
+    {
+      "grant_id": "U19 AI090023",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U54 AI142766",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI057229",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI062629",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI118610",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI128910",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI104870",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 DA018926",
+      "agency": "NIDA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI167891",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI167903",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI125357",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI145835",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI128913",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI132774",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI118608",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UL1 TR001863",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI122220",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI077439",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AI135803",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U19 AI089992",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.857738",
+    "pmid": "38690733"
+  }
+}

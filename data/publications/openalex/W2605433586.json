@@ -1,0 +1,641 @@
+{
+  "openalex_id": "W2605433586",
+  "doi": "https://doi.org/10.1016/j.rse.2017.03.015",
+  "title": "The Australian Geoscience Data Cube — Foundations and lessons learned",
+  "abstract": "The Australian Geoscience Data Cube (AGDC) aims to realise the full potential of Earth observation data holdings by addressing the Big Data challenges of volume, velocity, and variety that otherwise limit the usefulness of Earth observation data. There have been several iterations and AGDC version 2 is a major advance on previous work. The foundations and core components of the AGDC are: (1) data preparation, including geometric and radiometric corrections to Earth observation data to produce standardised surface reflectance measurements that support time-series analysis, and collection management systems which track the provenance of each Data Cube product and formalise re-processing decisions; (2) the software environment used to manage and interact with the data; and (3) the supporting high performance computing environment provided by the Australian National Computational Infrastructure (NCI). A growing number of examples demonstrate that our data cube approach allows analysts to extract rich new information from Earth observation time series, including through new methods that draw on the full spatial and temporal coverage of the Earth observation archives. To enable easy-uptake of the AGDC, and to facilitate future cooperative development, our code is developed under an open-source, Apache License, Version 2.0. This open-source approach is enabling other organisations, including the Committee on Earth Observing Satellites (CEOS), to explore the use of similar data cubes in developing countries.",
+  "authors": [
+    {
+      "display_name": "Adam Lewis",
+      "id": "A5080825330",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Adam Lewis"
+    },
+    {
+      "display_name": "Simon Oliver",
+      "id": "A5072849744",
+      "orcid": "https://orcid.org/0000-0002-2886-4850",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Simon Oliver"
+    },
+    {
+      "display_name": "Leo Lymburner",
+      "id": "A5055165082",
+      "orcid": "https://orcid.org/0000-0002-1274-1792",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Leo Lymburner"
+    },
+    {
+      "display_name": "Ben Evans",
+      "id": "A5101957110",
+      "orcid": "https://orcid.org/0000-0002-6719-2671",
+      "institutions": [
+        {
+          "id": "I118347636",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ben Evans"
+    },
+    {
+      "display_name": "Lesley Wyborn",
+      "id": "A5004401344",
+      "orcid": "https://orcid.org/0000-0001-5976-4943",
+      "institutions": [
+        {
+          "id": "I118347636",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lesley Wyborn"
+    },
+    {
+      "display_name": "Norman Mueller",
+      "id": "A5020380417",
+      "orcid": "https://orcid.org/0000-0002-8533-7969",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Norman Mueller"
+    },
+    {
+      "display_name": "Gregory Raevksi",
+      "id": "A5080550040",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gregory Raevksi"
+    },
+    {
+      "display_name": "Jeremy Hooke",
+      "id": "A5086432135",
+      "orcid": "https://orcid.org/0000-0001-6846-4360",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeremy Hooke"
+    },
+    {
+      "display_name": "Rob Woodcock",
+      "id": "A5036118133",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1292875679",
+          "display_name": "Commonwealth Scientific and Industrial Research Organisation",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rob Woodcock"
+    },
+    {
+      "display_name": "Joshua Sixsmith",
+      "id": "A5109501198",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joshua Sixsmith"
+    },
+    {
+      "display_name": "Wenjun Wu",
+      "id": "A5112360151",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wenjun Wu"
+    },
+    {
+      "display_name": "Peter Tan",
+      "id": "A5112508786",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peter Tan"
+    },
+    {
+      "display_name": "Fuqin Li",
+      "id": "A5030234376",
+      "orcid": "https://orcid.org/0000-0003-2434-6420",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fuqin Li"
+    },
+    {
+      "display_name": "Brian Killough",
+      "id": "A5021997499",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1319063186",
+          "display_name": "Langley Research Center",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brian Killough"
+    },
+    {
+      "display_name": "Stuart Minchin",
+      "id": "A5077797185",
+      "orcid": "https://orcid.org/0000-0002-0149-292X",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stuart Minchin"
+    },
+    {
+      "display_name": "Dale Roberts",
+      "id": "A5102981295",
+      "orcid": "https://orcid.org/0000-0002-1369-2232",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        },
+        {
+          "id": "I118347636",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dale Roberts"
+    },
+    {
+      "display_name": "Damien Ayers",
+      "id": "A5056737148",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Damien Ayers"
+    },
+    {
+      "display_name": "B. K. Bala",
+      "id": "A5102732994",
+      "orcid": "https://orcid.org/0000-0003-2830-0825",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Biswajit Bala"
+    },
+    {
+      "display_name": "John L. Dwyer",
+      "id": "A5013546564",
+      "orcid": "https://orcid.org/0000-0002-8281-0896",
+      "institutions": [
+        {
+          "id": "I1286329397",
+          "display_name": "United States Geological Survey",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John Dwyer"
+    },
+    {
+      "display_name": "Arnold G. Dekker",
+      "id": "A5026813080",
+      "orcid": "https://orcid.org/0000-0002-8160-6498",
+      "institutions": [
+        {
+          "id": "I1292875679",
+          "display_name": "Commonwealth Scientific and Industrial Research Organisation",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Arnold Dekker"
+    },
+    {
+      "display_name": "Trevor Dhu",
+      "id": "A5083657981",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Trevor Dhu"
+    },
+    {
+      "display_name": "Andrew Hicks",
+      "id": "A5021684378",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew Hicks"
+    },
+    {
+      "display_name": "Alex Ip",
+      "id": "A5052839099",
+      "orcid": "https://orcid.org/0000-0001-8937-8904",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alex Ip"
+    },
+    {
+      "display_name": "Matthew B.J. Purss",
+      "id": "A5081265214",
+      "orcid": "https://orcid.org/0000-0003-3987-2650",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matt Purss"
+    },
+    {
+      "display_name": "Clare Richards",
+      "id": "A5110561873",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I118347636",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Clare Richards"
+    },
+    {
+      "display_name": "Stephen Sagar",
+      "id": "A5103061683",
+      "orcid": "https://orcid.org/0000-0001-9568-9661",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephen Sagar"
+    },
+    {
+      "display_name": "Claire Trenham",
+      "id": "A5032322634",
+      "orcid": "https://orcid.org/0000-0003-4258-9936",
+      "institutions": [
+        {
+          "id": "I118347636",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Claire Trenham"
+    },
+    {
+      "display_name": "Peter Wang",
+      "id": "A5100756928",
+      "orcid": "https://orcid.org/0000-0002-0682-6861",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peter Wang"
+    },
+    {
+      "display_name": "Lanwei Wang",
+      "id": "A5009649519",
+      "orcid": "https://orcid.org/0009-0002-4703-6847",
+      "institutions": [
+        {
+          "id": "I1331816111",
+          "display_name": "Geoscience Australia",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lan-Wei Wang"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-04-12",
+  "type": "article",
+  "cited_by_count": 307,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S141808269",
+    "display_name": "Remote Sensing of Environment",
+    "issn_l": "0034-4257",
+    "issn": [
+      "0034-4257",
+      "1879-0704"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "202",
+  "issue": null,
+  "first_page": "276",
+  "last_page": "292",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://doi.org/10.1016/j.rse.2017.03.015",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C78168278",
+      "display_name": "Data cube",
+      "level": 2,
+      "score": 0.82916504
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.64698684
+    },
+    {
+      "id": "C39399123",
+      "display_name": "Earth observation",
+      "level": 3,
+      "score": 0.64571726
+    },
+    {
+      "id": "C75684735",
+      "display_name": "Big data",
+      "level": 2,
+      "score": 0.51931924
+    },
+    {
+      "id": "C1965285",
+      "display_name": "Earth science",
+      "level": 1,
+      "score": 0.5158069
+    },
+    {
+      "id": "C2777904410",
+      "display_name": "Software",
+      "level": 2,
+      "score": 0.50269794
+    },
+    {
+      "id": "C2780560020",
+      "display_name": "License",
+      "level": 2,
+      "score": 0.4983163
+    },
+    {
+      "id": "C1668388",
+      "display_name": "Data management",
+      "level": 2,
+      "score": 0.48060867
+    },
+    {
+      "id": "C2522767166",
+      "display_name": "Data science",
+      "level": 1,
+      "score": 0.45728844
+    },
+    {
+      "id": "C136197465",
+      "display_name": "Variety (cybernetics)",
+      "level": 2,
+      "score": 0.4502867
+    },
+    {
+      "id": "C62649853",
+      "display_name": "Remote sensing",
+      "level": 1,
+      "score": 0.4479984
+    },
+    {
+      "id": "C77088390",
+      "display_name": "Database",
+      "level": 1,
+      "score": 0.42820305
+    },
+    {
+      "id": "C53051483",
+      "display_name": "Cube (algebra)",
+      "level": 2,
+      "score": 0.4233258
+    },
+    {
+      "id": "C124101348",
+      "display_name": "Data mining",
+      "level": 1,
+      "score": 0.32140428
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.21607935
+    },
+    {
+      "id": "C19269812",
+      "display_name": "Satellite",
+      "level": 2,
+      "score": 0.14377782
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.13065398
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C114614502",
+      "display_name": "Combinatorics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C146978453",
+      "display_name": "Aerospace engineering",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C111919701",
+      "display_name": "Operating system",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12157",
+      "display_name": "Geochemistry and Geologic Mapping",
+      "score": 0.9745
+    },
+    {
+      "id": "T11588",
+      "display_name": "Atmospheric and Environmental Gas Dynamics",
+      "score": 0.9588
+    },
+    {
+      "id": "T13067",
+      "display_name": "Geological Modeling and Analysis",
+      "score": 0.9392
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.rse.2017.03.015",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:03:03.271263",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,95 @@
+{
+  "pmid": "34770698",
+  "uid": "34770698",
+  "title": "Contrastive Learning for 3D Point Clouds Classification and Shape Completion.",
+  "abstract": "In this paper, we present the idea of Self Supervised learning on the shape completion and classification of point clouds. Most 3D shape completion pipelines utilize AutoEncoders to extract features from point clouds used in downstream tasks such as classification, segmentation, detection, and other related applications. Our idea is to add contrastive learning into AutoEncoders to encourage global feature learning of the point cloud classes. It is performed by optimizing triplet loss. Furthermore, local feature representations learning of point cloud is performed by adding the Chamfer distance function. To evaluate the performance of our approach, we utilize the PointNet classifier. We also extend the number of classes for evaluation from 4 to 10 to show the generalization ability of the learned features. Based on our results, embeddings generated from the contrastive AutoEncoder enhances shape completion and classification performance from 84.2% to 84.9% of point clouds achieving the state-of-the-art results with 10 classes.",
+  "authors": [
+    {
+      "last_name": "Nazir",
+      "fore_name": "Danish",
+      "initials": "D",
+      "name": "Danish Nazir",
+      "affiliations": [
+        "Department of Computer Science, Technical University of Kaiserslautern, 67663 Kaiserslautern, Germany.",
+        "Mindgarage, Technical University of Kaiserslautern, 67663 Kaiserslautern, Germany."
+      ],
+      "orcid": "0000-0001-6364-8427"
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad Zeshan",
+      "initials": "MZ",
+      "name": "Muhammad Zeshan Afzal",
+      "affiliations": [
+        "Department of Computer Science, Technical University of Kaiserslautern, 67663 Kaiserslautern, Germany.",
+        "Mindgarage, Technical University of Kaiserslautern, 67663 Kaiserslautern, Germany.",
+        "German Research Institute for Artificial Intelligence (DFKI), 67663 Kaiserslautern, Germany."
+      ],
+      "orcid": "0000-0002-0536-6867"
+    },
+    {
+      "last_name": "Pagani",
+      "fore_name": "Alain",
+      "initials": "A",
+      "name": "Alain Pagani",
+      "affiliations": [
+        "German Research Institute for Artificial Intelligence (DFKI), 67663 Kaiserslautern, Germany."
+      ]
+    },
+    {
+      "last_name": "Liwicki",
+      "fore_name": "Marcus",
+      "initials": "M",
+      "name": "Marcus Liwicki",
+      "affiliations": [
+        "Department of Computer Science, Luleå University of Technology, 971 87 Luleå, Sweden."
+      ],
+      "orcid": "0000-0003-4029-6574"
+    },
+    {
+      "last_name": "Stricker",
+      "fore_name": "Didier",
+      "initials": "D",
+      "name": "Didier Stricker",
+      "affiliations": [
+        "Department of Computer Science, Technical University of Kaiserslautern, 67663 Kaiserslautern, Germany.",
+        "German Research Institute for Artificial Intelligence (DFKI), 67663 Kaiserslautern, Germany."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Sensors (Basel, Switzerland)",
+    "iso_abbreviation": "Sensors (Basel)",
+    "issn": "1424-8220",
+    "issn_type": "Electronic",
+    "volume": "21",
+    "issue": "21",
+    "pub_year": "2021",
+    "pub_month": "Nov",
+    "pub_day": "06"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "34770698",
+    "pmc": "PMC8587100",
+    "doi": "10.3390/s21217392",
+    "pii": "s21217392"
+  },
+  "doi": "10.3390/s21217392",
+  "pmc_id": "PMC8587100",
+  "dates": {
+    "completed": "2021-11-16",
+    "revised": "2021-11-18"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:14.982426",
+    "pmid": "34770698"
+  }
+}

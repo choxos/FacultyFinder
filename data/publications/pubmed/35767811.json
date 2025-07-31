@@ -1,0 +1,183 @@
+{
+  "pmid": "35767811",
+  "uid": "35767811",
+  "title": "Patients With Femoral Neck Fractures Are at Risk for Conversion to Arthroplasty After Internal Fixation: A Machine-learning Algorithm.",
+  "abstract": "BACKGROUND: Femoral neck fractures are common and are frequently treated with internal fixation. A major disadvantage of internal fixation is the substantially high number of conversions to arthroplasty because of nonunion, malunion, avascular necrosis, or implant failure. A clinical prediction model identifying patients at high risk of conversion to arthroplasty may help clinicians in selecting patients who could have benefited from arthroplasty initially. QUESTION/PURPOSE: What is the predictive performance of a machine-learning (ML) algorithm to predict conversion to arthroplasty within 24 months after internal fixation in patients with femoral neck fractures? METHODS: We included 875 patients from the Fixation using Alternative Implants for the Treatment of Hip fractures (FAITH) trial. The FAITH trial consisted of patients with low-energy femoral neck fractures who were randomly assigned to receive a sliding hip screw or cancellous screws for internal fixation. Of these patients, 18% (155 of 875) underwent conversion to THA or hemiarthroplasty within the first 24 months. All patients were randomly divided into a training set (80%) and test set (20%). First, we identified 27 potential patient and fracture characteristics that may have been associated with our primary outcome, based on biomechanical rationale and previous studies. Then, random forest algorithms (an ML learning, decision tree-based algorithm that selects variables) identified 10 predictors of conversion: BMI, cardiac disease, Garden classification, use of cardiac medication, use of pulmonary medication, age, lung disease, osteoarthritis, sex, and the level of the fracture line. Based on these variables, five different ML algorithms were trained to identify patterns related to conversion. The predictive performance of these trained ML algorithms was assessed on the training and test sets based on the following performance measures: (1) discrimination (the model's ability to distinguish patients who had conversion from those who did not; expressed with the area under the receiver operating characteristic curve [AUC]), (2) calibration (the plotted estimated versus the observed probabilities; expressed with the calibration curve intercept and slope), and (3) the overall model performance (Brier score: a composite of discrimination and calibration). RESULTS: None of the five ML algorithms performed well in predicting conversion to arthroplasty in the training set and the test set; AUCs of the algorithms in the training set ranged from 0.57 to 0.64, slopes of calibration plots ranged from 0.53 to 0.82, calibration intercepts ranged from -0.04 to 0.05, and Brier scores ranged from 0.14 to 0.15. The algorithms were further evaluated in the test set; AUCs ranged from 0.49 to 0.73, calibration slopes ranged from 0.17 to 1.29, calibration intercepts ranged from -1.28 to 0.34, and Brier scores ranged from 0.13 to 0.15. CONCLUSION: The predictive performance of the trained algorithms was poor, despite the use of one of the best datasets available worldwide on this subject. If the current dataset consisted of different variables or more patients, the performance may have been better. Also, various reasons for conversion to arthroplasty were pooled in this study, but the separate prediction of underlying pathology (such as, avascular necrosis or nonunion) may be more precise. Finally, it may be possible that it is inherently difficult to predict conversion to arthroplasty based on preoperative variables alone. Therefore, future studies should aim to include more variables and to differentiate between the various reasons for arthroplasty. LEVEL OF EVIDENCE: Level III, prognostic study.",
+  "authors": [
+    {
+      "last_name": "van de Kuit",
+      "fore_name": "Anouk",
+      "initials": "A",
+      "name": "Anouk van de Kuit",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, University Medical Center Groningen, University of Groningen, Groningen, the Netherlands."
+      ],
+      "orcid": "0000-0003-2571-458"
+    },
+    {
+      "last_name": "Oosterhoff",
+      "fore_name": "Jacobien H F",
+      "initials": "JHF",
+      "name": "Jacobien H F Oosterhoff",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, Massachusetts General Hospital, Harvard Medical School, Boston, MA, USA.",
+        "Department of Orthopaedic Surgery, Amsterdam UMC, University of Amsterdam, Amsterdam, the Netherlands."
+      ]
+    },
+    {
+      "last_name": "Dijkstra",
+      "fore_name": "Hidde",
+      "initials": "H",
+      "name": "Hidde Dijkstra",
+      "affiliations": [
+        "Department of Trauma Surgery, University Medical Centre Groningen, University of Groningen, Groningen, the Netherlands."
+      ]
+    },
+    {
+      "last_name": "Sprague",
+      "fore_name": "Sheila",
+      "initials": "S",
+      "name": "Sheila Sprague",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence and Impact, McMaster University, Hamilton, ON, Canada.",
+        "Division of Orthopaedic Surgery, Department of Surgery, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0003-1466-8063"
+    },
+    {
+      "last_name": "Bzovsky",
+      "fore_name": "Sofia",
+      "initials": "S",
+      "name": "Sofia Bzovsky",
+      "affiliations": [
+        "Division of Orthopaedic Surgery, Department of Surgery, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Bhandari",
+      "fore_name": "Mohit",
+      "initials": "M",
+      "name": "Mohit Bhandari",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence and Impact, McMaster University, Hamilton, ON, Canada.",
+        "Division of Orthopaedic Surgery, Department of Surgery, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Swiontkowski",
+      "fore_name": "Marc",
+      "initials": "M",
+      "name": "Marc Swiontkowski",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, University of Minnesota, Minneapolis, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Schemitsch",
+      "fore_name": "Emil H",
+      "initials": "EH",
+      "name": "Emil H Schemitsch",
+      "affiliations": [
+        "Department of Surgery, Western University, London, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "IJpma",
+      "fore_name": "Frank F A",
+      "initials": "FFA",
+      "name": "Frank F A IJpma",
+      "affiliations": [
+        "Department of Trauma Surgery, University Medical Centre Groningen, University of Groningen, Groningen, the Netherlands."
+      ]
+    },
+    {
+      "last_name": "Poolman",
+      "fore_name": "Rudolf W",
+      "initials": "RW",
+      "name": "Rudolf W Poolman",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, University Medical Center Leiden, Leiden University, Leiden, the Netherlands."
+      ]
+    },
+    {
+      "last_name": "Doornberg",
+      "fore_name": "Job N",
+      "initials": "JN",
+      "name": "Job N Doornberg",
+      "affiliations": [
+        "Department of Orthopaedic Surgery, University Medical Center Groningen, University of Groningen, Groningen, the Netherlands.",
+        "Department of Trauma Surgery, University Medical Centre Groningen, University of Groningen, Groningen, the Netherlands.",
+        "Department of Orthopaedic and Trauma Surgery, Flinders Medical Centre, Flinders University, Adelaide, Australia."
+      ]
+    },
+    {
+      "last_name": "Hendrickx",
+      "fore_name": "Laurent A M",
+      "initials": "LAM",
+      "name": "Laurent A M Hendrickx",
+      "affiliations": [
+        "Department of Surgery, Sint-Antonius Ziekenhuis, Nieuwegein, Utrecht, the Netherlands."
+      ]
+    },
+    {
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Clinical orthopaedics and related research",
+    "iso_abbreviation": "Clin Orthop Relat Res",
+    "issn": "1528-1132",
+    "issn_type": "Electronic",
+    "volume": "480",
+    "issue": "12",
+    "pub_year": "2022",
+    "pub_month": "Dec",
+    "pub_day": "01"
+  },
+  "start_page": "2350",
+  "end_page": "2360",
+  "pages": "2350-2360",
+  "language": "eng",
+  "publication_types": [
+    "Randomized Controlled Trial",
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Prognosis",
+    "Models, Statistical",
+    "Femoral Neck Fractures",
+    "Arthroplasty, Replacement, Hip",
+    "Fracture Fixation, Internal",
+    "Algorithms",
+    "Machine Learning",
+    "Necrosis",
+    "Retrospective Studies",
+    "Treatment Outcome"
+  ],
+  "article_ids": {
+    "pubmed": "35767811",
+    "pmc": "PMC9653184",
+    "doi": "10.1097/CORR.0000000000002283",
+    "pii": "00003086-990000000-00785"
+  },
+  "doi": "10.1097/CORR.0000000000002283",
+  "pmc_id": "PMC9653184",
+  "dates": {
+    "completed": "2023-01-06",
+    "revised": "2023-12-02"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 AR055267",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:08:44.477942",
+    "pmid": "35767811"
+  }
+}

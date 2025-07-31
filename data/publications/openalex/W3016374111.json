@@ -1,0 +1,604 @@
+{
+  "openalex_id": "W3016374111",
+  "doi": "https://doi.org/10.1002/wat2.1436",
+  "title": "Zero or not? Causes and consequences of zero‐flow stream gage readings",
+  "abstract": "Abstract Streamflow observations can be used to understand, predict, and contextualize hydrologic, ecological, and biogeochemical processes and conditions in streams. Stream gages are point measurements along rivers where streamflow is measured, and are often used to infer upstream watershed‐scale processes. When stream gages read zero, this may indicate that the stream has dried at this location; however, zero‐flow readings can also be caused by a wide range of other factors. Our ability to identify whether or not a zero‐flow gage reading indicates a dry fluvial system has far reaching environmental implications. Incorrect identification and interpretation by the data user can lead to inaccurate hydrologic, ecological, and/or biogeochemical predictions from models and analyses. Here, we describe several causes of zero‐flow gage readings: frozen surface water, flow reversals, instrument error, and natural or human‐driven upstream source losses or bypass flow. For these examples, we discuss the implications of zero‐flow interpretations. We also highlight additional methods for determining flow presence, including direct observations, statistical methods, and hydrologic models, which can be applied to interpret causes of zero‐flow gage readings and implications for reach‐ and watershed‐scale dynamics. Such efforts are necessary to improve our ability to understand and predict surface flow activation, cessation, and connectivity across river networks. Developing this integrated understanding of the wide range of possible meanings of zero‐flows will only attain greater importance in a more variable and changing hydrologic climate. This article is categorized under: Science of Water &gt; Methods Science of Water &gt; Hydrological Processes Water and Life &gt; Conservation, Management, and Awareness",
+  "authors": [
+    {
+      "display_name": "Margaret Zimmer",
+      "id": "A5003018267",
+      "orcid": "https://orcid.org/0000-0001-8287-1923",
+      "institutions": [
+        {
+          "id": "I185103710",
+          "display_name": "University of California, Santa Cruz",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Margaret A. Zimmer"
+    },
+    {
+      "display_name": "Kendra E. Kaiser",
+      "id": "A5054990526",
+      "orcid": "https://orcid.org/0000-0003-1773-6236",
+      "institutions": [
+        {
+          "id": "I120156002",
+          "display_name": "Boise State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kendra E. Kaiser"
+    },
+    {
+      "display_name": "Joanna R. Blaszczak",
+      "id": "A5059865004",
+      "orcid": "https://orcid.org/0000-0001-5122-0829",
+      "institutions": [
+        {
+          "id": "I134113660",
+          "display_name": "University of Nevada, Reno",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I4210135981",
+          "display_name": "Louisiana Department of Natural Resources",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joanna R. Blaszczak"
+    },
+    {
+      "display_name": "Samuel C. Zipper",
+      "id": "A5023354663",
+      "orcid": "https://orcid.org/0000-0002-8735-5757",
+      "institutions": [
+        {
+          "id": "I146416000",
+          "display_name": "University of Kansas",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Samuel C. Zipper"
+    },
+    {
+      "display_name": "John C. Hammond",
+      "id": "A5052668803",
+      "orcid": "https://orcid.org/0000-0002-4935-0736",
+      "institutions": [
+        {
+          "id": "I1286329397",
+          "display_name": "United States Geological Survey",
+          "country_code": "US",
+          "type": "government"
+        },
+        {
+          "id": "I1302767020",
+          "display_name": "District of Columbia Water and Sewer Authority",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John C. Hammond"
+    },
+    {
+      "display_name": "Ken M. Fritz",
+      "id": "A5078643016",
+      "orcid": "https://orcid.org/0000-0002-3831-2531",
+      "institutions": [
+        {
+          "id": "I1302368450",
+          "display_name": "Environmental Protection Agency",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ken M. Fritz"
+    },
+    {
+      "display_name": "Katie H. Costigan",
+      "id": "A5031625816",
+      "orcid": "https://orcid.org/0000-0002-5706-7439",
+      "institutions": [
+        {
+          "id": "I79516672",
+          "display_name": "University of Louisiana at Lafayette",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Katie H. Costigan"
+    },
+    {
+      "display_name": "Jacob D. Hosen",
+      "id": "A5085271996",
+      "orcid": "https://orcid.org/0000-0003-2559-0687",
+      "institutions": [
+        {
+          "id": "I219193219",
+          "display_name": "Purdue University West Lafayette",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jacob Hosen"
+    },
+    {
+      "display_name": "Sarah E. Godsey",
+      "id": "A5052173662",
+      "orcid": "https://orcid.org/0000-0001-6529-7886",
+      "institutions": [
+        {
+          "id": "I106969075",
+          "display_name": "Idaho State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sarah E. Godsey"
+    },
+    {
+      "display_name": "George H. Allen",
+      "id": "A5029388001",
+      "orcid": "https://orcid.org/0000-0001-8301-5301",
+      "institutions": [
+        {
+          "id": "I91045830",
+          "display_name": "Texas A&M University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "George H. Allen"
+    },
+    {
+      "display_name": "Stephanie K. Kampf",
+      "id": "A5063105459",
+      "orcid": "https://orcid.org/0000-0001-8991-2679",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephanie Kampf"
+    },
+    {
+      "display_name": "Ryan M. Burrows",
+      "id": "A5015929037",
+      "orcid": "https://orcid.org/0000-0002-3296-1864",
+      "institutions": [
+        {
+          "id": "I11701301",
+          "display_name": "Griffith University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ryan M. Burrows"
+    },
+    {
+      "display_name": "Corey A. Krabbenhoft",
+      "id": "A5027338611",
+      "orcid": "https://orcid.org/0000-0002-2630-8287",
+      "institutions": [
+        {
+          "id": "I1327163397",
+          "display_name": "State University of New York",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Corey A. Krabbenhoft"
+    },
+    {
+      "display_name": "Walter K. Dodds",
+      "id": "A5019262810",
+      "orcid": "https://orcid.org/0000-0002-6666-8930",
+      "institutions": [
+        {
+          "id": "I189590672",
+          "display_name": "Kansas State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Walter Dodds"
+    },
+    {
+      "display_name": "Rebecca L. Hale",
+      "id": "A5078225497",
+      "orcid": "https://orcid.org/0000-0002-3552-3691",
+      "institutions": [
+        {
+          "id": "I106969075",
+          "display_name": "Idaho State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rebecca Hale"
+    },
+    {
+      "display_name": "Julian D. Olden",
+      "id": "A5018591830",
+      "orcid": "https://orcid.org/0000-0003-2143-1187",
+      "institutions": [
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Julian D. Olden"
+    },
+    {
+      "display_name": "Margaret Shanafield",
+      "id": "A5028668138",
+      "orcid": "https://orcid.org/0000-0003-1710-1548",
+      "institutions": [
+        {
+          "id": "I169541294",
+          "display_name": "Flinders University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Margaret Shanafield"
+    },
+    {
+      "display_name": "Amanda Delvecchia",
+      "id": "A5070863467",
+      "orcid": "https://orcid.org/0000-0003-4252-5991",
+      "institutions": [
+        {
+          "id": "I6750721",
+          "display_name": "University of Montana",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amanda G. DelVecchia"
+    },
+    {
+      "display_name": "Adam S. Ward",
+      "id": "A5072370658",
+      "orcid": "https://orcid.org/0000-0002-6376-0061",
+      "institutions": [
+        {
+          "id": "I4210119109",
+          "display_name": "Indiana University Bloomington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Adam S. Ward"
+    },
+    {
+      "display_name": "Meryl C. Mims",
+      "id": "A5021045878",
+      "orcid": "https://orcid.org/0000-0003-0570-988X",
+      "institutions": [
+        {
+          "id": "I859038795",
+          "display_name": "Virginia Tech",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Meryl C. Mims"
+    },
+    {
+      "display_name": "Thibault Datry",
+      "id": "A5087237909",
+      "orcid": "https://orcid.org/0000-0003-1390-6736",
+      "institutions": [
+        {
+          "id": "I4210096512",
+          "display_name": "Communauté urbaine de Lyon",
+          "country_code": "FR",
+          "type": "other"
+        },
+        {
+          "id": "I4210088668",
+          "display_name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thibault Datry"
+    },
+    {
+      "display_name": "Michael T. Bogan",
+      "id": "A5080349465",
+      "orcid": "https://orcid.org/0000-0002-8150-8476",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael T. Bogan"
+    },
+    {
+      "display_name": "Kate S. Boersma",
+      "id": "A5042845340",
+      "orcid": "https://orcid.org/0000-0002-0707-3283",
+      "institutions": [
+        {
+          "id": "I160856358",
+          "display_name": "University of San Diego",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kate S. Boersma"
+    },
+    {
+      "display_name": "Michelle H. Busch",
+      "id": "A5066558780",
+      "orcid": "https://orcid.org/0000-0003-4536-3000",
+      "institutions": [
+        {
+          "id": "I8692664",
+          "display_name": "University of Oklahoma",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michelle H. Busch"
+    },
+    {
+      "display_name": "C. Nathan Jones",
+      "id": "A5038339435",
+      "orcid": "https://orcid.org/0000-0002-5804-0510",
+      "institutions": [
+        {
+          "id": "I17301866",
+          "display_name": "University of Alabama",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Nathan Jones"
+    },
+    {
+      "display_name": "Amy J. Burgin",
+      "id": "A5025079697",
+      "orcid": "https://orcid.org/0000-0001-8489-4002",
+      "institutions": [
+        {
+          "id": "I146416000",
+          "display_name": "University of Kansas",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amy J. Burgin"
+    },
+    {
+      "display_name": "Daniel C. Allen",
+      "id": "A5033902454",
+      "orcid": "https://orcid.org/0000-0002-0451-0564",
+      "institutions": [
+        {
+          "id": "I8692664",
+          "display_name": "University of Oklahoma",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel C. Allen"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-04-13",
+  "type": "article",
+  "cited_by_count": 116,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2764490608",
+    "display_name": "Wiley Interdisciplinary Reviews Water",
+    "issn_l": "2049-1948",
+    "issn": [
+      "2049-1948"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "7",
+  "issue": "3",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://hal.science/hal-03106304/document",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C53739315",
+      "display_name": "Streamflow",
+      "level": 3,
+      "score": 0.7559519
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.59514517
+    },
+    {
+      "id": "C38349280",
+      "display_name": "Flow (mathematics)",
+      "level": 2,
+      "score": 0.52858925
+    },
+    {
+      "id": "C76886044",
+      "display_name": "Hydrology (agriculture)",
+      "level": 2,
+      "score": 0.51636136
+    },
+    {
+      "id": "C150547873",
+      "display_name": "Watershed",
+      "level": 2,
+      "score": 0.5159086
+    },
+    {
+      "id": "C126197015",
+      "display_name": "Hydrological modelling",
+      "level": 2,
+      "score": 0.47475794
+    },
+    {
+      "id": "C2778755073",
+      "display_name": "Scale (ratio)",
+      "level": 2,
+      "score": 0.46894976
+    },
+    {
+      "id": "C71915725",
+      "display_name": "Biogeochemical cycle",
+      "level": 2,
+      "score": 0.43697888
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.3330546
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.22384632
+    },
+    {
+      "id": "C18903297",
+      "display_name": "Ecology",
+      "level": 1,
+      "score": 0.20269045
+    },
+    {
+      "id": "C205649164",
+      "display_name": "Geography",
+      "level": 0,
+      "score": 0.20134139
+    },
+    {
+      "id": "C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "score": 0.1442203
+    },
+    {
+      "id": "C57879066",
+      "display_name": "Mechanics",
+      "level": 1,
+      "score": 0.13059998
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.11846125
+    },
+    {
+      "id": "C126645576",
+      "display_name": "Drainage basin",
+      "level": 2,
+      "score": 0.094842374
+    },
+    {
+      "id": "C58640448",
+      "display_name": "Cartography",
+      "level": 1,
+      "score": 0.07471478
+    },
+    {
+      "id": "C187320778",
+      "display_name": "Geotechnical engineering",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10330",
+      "display_name": "Hydrology and Watershed Management Studies",
+      "score": 0.9996
+    },
+    {
+      "id": "T10302",
+      "display_name": "Fish Ecology and Management Studies",
+      "score": 0.9992
+    },
+    {
+      "id": "T10577",
+      "display_name": "Hydrology and Sediment Transport Processes",
+      "score": 0.9981
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1002/wat2.1436",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:46:50.415585",
+  "source_database": "OpenAlex"
+}

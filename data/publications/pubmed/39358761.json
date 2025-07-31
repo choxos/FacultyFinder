@@ -1,0 +1,159 @@
+{
+  "pmid": "39358761",
+  "uid": "39358761",
+  "title": "Improving analysis of cognitive outcomes in cardiovascular trials using different statistical approaches.",
+  "abstract": "BACKGROUND: The Mini-Mental State Examination (MMSE) and the Montreal Cognitive Assessment (MoCA) questionnaires are commonly used to measure global cognition in clinical trials. Because these scales are discrete and bounded with ceiling and floor effects and highly skewed, their analysis as continuous outcomes presents challenges. Normality assumptions of linear regression models are usually violated, which may result in failure to detect associations with variables of interest. METHODS: Alternative approaches to analyzing the results of these cognitive batteries include transformations (standardization, square root, or log transformation) of the scores in the multivariate linear regression (MLR) model, the use of nonlinear beta-binomial regression (which is not dependent on the assumption of normality), or Tobit regression, which adds a latent variable to account for bounded data. We aim to empirically compare the model performance of all proposed approaches using four large randomized controlled trials (ORIGIN, TRANSCEND, COMPASS, and NAVIGATE-ESUS), and using as metrics the Akaike information criterion (AIC). We also compared the treatment effects for the methods that have the same unit of measure (i.e., untransformed MLR, beta-binomial, and Tobit). RESULTS: The beta-binomial consistently demonstrated superior model performance, with the lowest AIC values among nearly all the approaches considered, followed by the MLR with square root and log transformations across all four studies. Notably, in ORIGIN, a substantial AIC reduction was observed when comparing the untransformed MLR to the beta-binomial, whereas other studies had relatively small AIC reductions. The beta-binomial model also resulted in a significant treatment effect in ORIGIN, while the untransformed MLR and Tobit regression showed no significance. The other three studies had similar and insignificant treatment effects among the three approaches. CONCLUSION: When analyzing discrete and bounded outcomes, such as cognitive scores, as continuous variables, a beta-binomial regression model improves model performance, avoids spurious significance, and allows for a direct interpretation of the actual cognitive measure. TRIALS REGISTRATION: ORIGIN (NCT00069784). Registered on October 1, 2003; TRANSCEND (NCT00153101). Registered on September 9, 2005; COMPASS (NCT01776424). Registered on January 24, 2013; NAVIGATE-ESUS (NCT02313909). Registered on December 8, 2014.",
+  "authors": [
+    {
+      "last_name": "Lee",
+      "fore_name": "Shun Fu",
+      "initials": "SF",
+      "name": "Shun Fu Lee",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Hamilton, ON, Canada. shunfu.lee@phri.ca.",
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada. shunfu.lee@phri.ca."
+      ],
+      "orcid": "0000-0001-9795-1045"
+    },
+    {
+      "last_name": "Whiteley",
+      "fore_name": "William",
+      "initials": "W",
+      "name": "William Whiteley",
+      "affiliations": [
+        "Centre for Clinical Brain Sciences, University of Edinburgh, Edinburgh, UK.",
+        "Nuffield Department of Population Health, University of Oxford, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "Bosch",
+      "fore_name": "Jackie",
+      "initials": "J",
+      "name": "Jackie Bosch",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Hamilton, ON, Canada.",
+        "School of Rehabilitation Science, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Sherlock",
+      "fore_name": "Laura",
+      "initials": "L",
+      "name": "Laura Sherlock",
+      "affiliations": [
+        "Centre for Clinical Brain Sciences, University of Edinburgh, Edinburgh, UK."
+      ]
+    },
+    {
+      "last_name": "Cukierman-Yaffe",
+      "fore_name": "Tali",
+      "initials": "T",
+      "name": "Tali Cukierman-Yaffe",
+      "affiliations": [
+        "Department of Epidemiology and Preventive Medicine, Sackler Faculty of Medicine, School of Public Health, Tel Aviv University, Tel-Aviv, Israel.",
+        "Institute of Endocrinology, Sheba Medical Center, Tel Hashomer, Ramat Gan, Israel."
+      ]
+    },
+    {
+      "last_name": "O'Donnell",
+      "fore_name": "Martin",
+      "initials": "M",
+      "name": "Martin O'Donnell",
+      "affiliations": [
+        "HRB-Clinical Research Facility, National University of Ireland, Galway, Ireland.",
+        "Department of Geriatric and Stroke Medicine, Galway University Hospital, Newcastle Road, Galway, Ireland."
+      ]
+    },
+    {
+      "last_name": "Eikelboom",
+      "fore_name": "John W",
+      "initials": "JW",
+      "name": "John W Eikelboom",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Hamilton, ON, Canada.",
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Gerstein",
+      "fore_name": "Hertzel C",
+      "initials": "HC",
+      "name": "Hertzel C Gerstein",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Hamilton, ON, Canada.",
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Bangdiwala",
+      "fore_name": "Shrikant I",
+      "initials": "SI",
+      "name": "Shrikant I Bangdiwala",
+      "affiliations": [
+        "Population Health Research Institute, McMaster University, Hamilton, ON, Canada.",
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada."
+      ]
+    },
+    {
+      "last_name": "Muniz-Terrera",
+      "fore_name": "Graciela",
+      "initials": "G",
+      "name": "Graciela Muniz-Terrera",
+      "affiliations": [
+        "Centre for Clinical Brain Sciences, University of Edinburgh, Edinburgh, UK.",
+        "Ohio University Heritage College of Osteopathic Medicine, Athens, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Trials",
+    "iso_abbreviation": "Trials",
+    "issn": "1745-6215",
+    "issn_type": "Electronic",
+    "volume": "25",
+    "issue": "1",
+    "pub_year": "2024",
+    "pub_month": "Oct",
+    "pub_day": "02"
+  },
+  "start_page": "644",
+  "pages": "644",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Comparative Study"
+  ],
+  "keywords": [
+    "Humans",
+    "Cardiovascular Diseases",
+    "Cognition",
+    "Data Interpretation, Statistical",
+    "Linear Models",
+    "Mental Status and Dementia Tests",
+    "Models, Statistical",
+    "Multivariate Analysis",
+    "Predictive Value of Tests",
+    "Randomized Controlled Trials as Topic",
+    "Research Design",
+    "Treatment Outcome"
+  ],
+  "article_ids": {
+    "pubmed": "39358761",
+    "pmc": "PMC11446089",
+    "doi": "10.1186/s13063-024-08482-2",
+    "pii": "10.1186/s13063-024-08482-2"
+  },
+  "doi": "10.1186/s13063-024-08482-2",
+  "pmc_id": "PMC11446089",
+  "dates": {
+    "completed": "2024-10-02",
+    "revised": "2024-10-05"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:35:13.662739",
+    "pmid": "39358761"
+  }
+}

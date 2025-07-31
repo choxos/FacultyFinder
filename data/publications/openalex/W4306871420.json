@@ -1,0 +1,725 @@
+{
+  "openalex_id": "W4306871420",
+  "doi": "https://doi.org/10.1111/rth2.12812",
+  "title": "Abstracts from the CanVECTOR 2022 Annual Conference October 14th, 2022",
+  "abstract": "Background: Pulmonary embolism (PE) can be misdiagnosed when emergency physicians do not consider PE as a potential diagnosis.Little research has focused on who should be tested for PE.Aim: To develop a predictive model which identifies underlying PE diagnosis in emergency department patients.Methods: Using linked population-level administrative data from Ontario (Canada), we analyzed the first patient emergency department visit in each calendar year between 2015 and 2019.Patients were classified as presenting with PE if they were diagnosed with PE on that visit, within the following 30 days if there was no hospitalization, within seven days of hospitalization without surgery, or else prior to surgery within seven days.We collected patient data on age, sex, cancer, prior DVT and PE, pregnancy, coronary artery disease, COPD, diabetes, stroke, anticoagulant use, atrial fibrillation, recent hospitalization, recent surgery, presenting complaint and triage score.Logistic regression and 10-fold cross-validation were used to derive a model which predicts the diagnosis of PE for the year 2015, and subsequently validated the model performance on each calendar year 2016-2019.Results: We analyzed 7,024,111 emergency department visits with 18,751 cases of PE.Mean age 48.6, 52% female, 3% history of cancer, 1.7% stroke, 1% prior PE, 1.6% prior DVT, 1.9% recent admission and 4.4% recent surgery.Our final model predicting a diagnosis of PE contained age, prior PE, prior DVT, presenting complaint and triage category.The area under the curve for the predicting PE was 82.8 in 2015, and 84.5, 81.3, 78.4 and 80.6 for each subsequent year.The optimal cut-off gave sensitivity estimates between 69.4%-74.4% and specificity estimates 73.7%-76.0%for each of the 5 years. Conclusion:We derived a model which accurately predicts the diagnosis of PE in emergency department patients, with the potential to trigger PE testing in the emergency department.",
+  "authors": [
+    {
+      "display_name": "Miriam Kimpton",
+      "id": "A5027382439",
+      "orcid": "https://orcid.org/0000-0002-3545-3750",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Miriam Kimpton"
+    },
+    {
+      "display_name": "Zachary Liederman",
+      "id": "A5085828578",
+      "orcid": "https://orcid.org/0000-0002-1755-1701",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zachary Liederman"
+    },
+    {
+      "display_name": "Shannon M. Bates",
+      "id": "A5037848403",
+      "orcid": "https://orcid.org/0000-0003-2183-113X",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shannon Bates"
+    },
+    {
+      "display_name": "Ed Conway",
+      "id": "A5103297491",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ed Conway"
+    },
+    {
+      "display_name": "Susan R. Kahn",
+      "id": "A5077857331",
+      "orcid": "https://orcid.org/0000-0002-5667-8916",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Susan Kahn"
+    },
+    {
+      "display_name": "Paul Kim",
+      "id": "A5100763846",
+      "orcid": "https://orcid.org/0000-0002-1755-6182",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul Kim"
+    },
+    {
+      "display_name": "Sudeep Shivakumar",
+      "id": "A5018625771",
+      "orcid": "https://orcid.org/0000-0003-0239-1802",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sudeep Shivakumar"
+    },
+    {
+      "display_name": "Deborah Siegal",
+      "id": "A5081541193",
+      "orcid": "https://orcid.org/0000-0003-3806-3245",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Deborah Siegal"
+    },
+    {
+      "display_name": "Nicole Langlois",
+      "id": "A5064640518",
+      "orcid": "https://orcid.org/0000-0002-4953-6549",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicole Langlois"
+    },
+    {
+      "display_name": "Dennis Christopher",
+      "id": "A5112874385",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210093451",
+          "display_name": "Windsor Regional Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dennis Christopher"
+    },
+    {
+      "display_name": "Keerat Grewal",
+      "id": "A5085282167",
+      "orcid": "https://orcid.org/0000-0002-2252-1371",
+      "institutions": [
+        {
+          "id": "I4210149858",
+          "display_name": "Schwartz/Reisman Emergency Medicine Institute",
+          "country_code": "CA",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I1291836623",
+          "display_name": "Mount Sinai Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I125749732",
+          "display_name": "Western University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Keerat Grewal"
+    },
+    {
+      "display_name": "Fabrice I. Mowbray",
+      "id": "A5051546214",
+      "orcid": "https://orcid.org/0000-0002-8844-5850",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I74413500",
+          "display_name": "University of Windsor",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fabrice Mowbray"
+    },
+    {
+      "display_name": "Somayeh Ghazalbash",
+      "id": "A5103218023",
+      "orcid": "https://orcid.org/0000-0002-5070-0553",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Somayeh Ghazalbash"
+    },
+    {
+      "display_name": "Manaf Zargoush",
+      "id": "A5113780709",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Manaf Zargoush"
+    },
+    {
+      "display_name": "Kerstin de Wit",
+      "id": "A5088939197",
+      "orcid": "https://orcid.org/0000-0003-2763-6474",
+      "institutions": [
+        {
+          "id": "I204722609",
+          "display_name": "Queen's University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kerstin De Wit"
+    },
+    {
+      "display_name": "D Candidate",
+      "id": "A5095530374",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D Candidate"
+    },
+    {
+      "display_name": "A. M. Clarke",
+      "id": "A5043008952",
+      "orcid": "https://orcid.org/0000-0002-1292-8020",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ashley Clarke"
+    },
+    {
+      "display_name": "Leslie Skeith",
+      "id": "A5034149468",
+      "orcid": "https://orcid.org/0000-0002-5587-398X",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Leslie Skeith"
+    },
+    {
+      "display_name": "Robert Kerley",
+      "id": "A5095530375",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Kerley"
+    },
+    {
+      "display_name": "Prism S. Schneider",
+      "id": "A5068471682",
+      "orcid": "https://orcid.org/0000-0002-2653-6503",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Prism Schneider"
+    },
+    {
+      "display_name": "Veroncia Deyoung",
+      "id": "A5109590130",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Veroncia Deyoung"
+    },
+    {
+      "display_name": "Hasam Madarati",
+      "id": "A5044085896",
+      "orcid": "https://orcid.org/0000-0003-0983-678X",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hasam Madarati"
+    },
+    {
+      "display_name": "Colin A. Kretz",
+      "id": "A5066029896",
+      "orcid": "https://orcid.org/0000-0001-7979-7603",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I168635309",
+          "display_name": "University of Calgary",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I4210155985",
+          "display_name": "Thrombosis and Atherosclerosis Research Institute",
+          "country_code": "CA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Colin Kretz"
+    },
+    {
+      "display_name": "Alex Dipierdomenico",
+      "id": "A5048905855",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210093451",
+          "display_name": "Windsor Regional Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alex Dipierdomenico"
+    },
+    {
+      "display_name": "Anna Guo",
+      "id": "A5010133977",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210093451",
+          "display_name": "Windsor Regional Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anna Guo"
+    },
+    {
+      "display_name": "Indryas Woldie",
+      "id": "A5076248594",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210093451",
+          "display_name": "Windsor Regional Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Indryas Woldie"
+    },
+    {
+      "display_name": "Grant Favell",
+      "id": "A5079708635",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210149858",
+          "display_name": "Schwartz/Reisman Emergency Medicine Institute",
+          "country_code": "CA",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I1291836623",
+          "display_name": "Mount Sinai Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I125749732",
+          "display_name": "Western University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Grant Favell"
+    },
+    {
+      "display_name": "Abdulkadir Hussein",
+      "id": "A5091078192",
+      "orcid": "https://orcid.org/0000-0002-8683-5935",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I74413500",
+          "display_name": "University of Windsor",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Abdulkadir Hussein"
+    },
+    {
+      "display_name": "Andrea Cervi",
+      "id": "A5086810714",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210093451",
+          "display_name": "Windsor Regional Hospital",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrea Cervi"
+    }
+  ],
+  "publication_year": 2022,
+  "publication_date": "2022-10-01",
+  "type": "article",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210185368",
+    "display_name": "Research and Practice in Thrombosis and Haemostasis",
+    "issn_l": "2475-0379",
+    "issn": [
+      "2475-0379"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "6",
+  "issue": "S2",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/rth2.12812",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.2925142
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12422",
+      "display_name": "Radiomics and Machine Learning in Medical Imaging",
+      "score": 0.0674
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1111/rth2.12812",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/rth2.12812",
+  "retrieved_date": "2025-07-30T16:04:18.505068",
+  "source_database": "OpenAlex"
+}

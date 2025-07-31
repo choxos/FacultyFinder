@@ -1,0 +1,491 @@
+{
+  "pmid": "35389781",
+  "uid": "35389781",
+  "title": "Single-cell RNA-seq reveals cell type-specific molecular and genetic associations to lupus.",
+  "abstract": "Systemic lupus erythematosus (SLE) is a heterogeneous autoimmune disease. Knowledge of circulating immune cell types and states associated with SLE remains incomplete. We profiled more than 1.2 million peripheral blood mononuclear cells (162 cases, 99 controls) with multiplexed single-cell RNA sequencing (mux-seq). Cases exhibited elevated expression of type 1 interferon-stimulated genes (ISGs) in monocytes, reduction of naïve CD4[+] T cells that correlated with monocyte ISG expression, and expansion of repertoire-restricted cytotoxic GZMH[+] CD8[+] T cells. Cell type-specific expression features predicted case-control status and stratified patients into two molecular subtypes. We integrated dense genotyping data to map cell type-specific cis-expression quantitative trait loci and to link SLE-associated variants to cell type-specific expression. These results demonstrate mux-seq as a systematic approach to characterize cellular composition, identify transcriptional signatures, and annotate genetic variants associated with SLE.",
+  "authors": [
+    {
+      "last_name": "Perez",
+      "fore_name": "Richard K",
+      "initials": "RK",
+      "name": "Richard K Perez",
+      "affiliations": [
+        "School of Medicine, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-8230-1832"
+    },
+    {
+      "last_name": "Gordon",
+      "fore_name": "M Grace",
+      "initials": "MG",
+      "name": "M Grace Gordon",
+      "affiliations": [
+        "Biological and Medical Informatics Graduate Program, University of California, San Francisco, CA, USA.",
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA.",
+        "Department of Bioengineering and Therapeutic Sciences, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0003-4321-9187"
+    },
+    {
+      "last_name": "Subramaniam",
+      "fore_name": "Meena",
+      "initials": "M",
+      "name": "Meena Subramaniam",
+      "affiliations": [
+        "Biological and Medical Informatics Graduate Program, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0003-1534-567X"
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Min Cheol",
+      "initials": "MC",
+      "name": "Min Cheol Kim",
+      "affiliations": [
+        "School of Medicine, University of California, San Francisco, CA, USA.",
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA.",
+        "Medical Scientist Training Program, University of California, San Francisco, CA, USA.",
+        "UC Berkeley-UCSF Graduate Program in Bioengineering, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-9005-590X"
+    },
+    {
+      "last_name": "Hartoularos",
+      "fore_name": "George C",
+      "initials": "GC",
+      "name": "George C Hartoularos",
+      "affiliations": [
+        "Biological and Medical Informatics Graduate Program, University of California, San Francisco, CA, USA.",
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-6980-2368"
+    },
+    {
+      "last_name": "Targ",
+      "fore_name": "Sasha",
+      "initials": "S",
+      "name": "Sasha Targ",
+      "affiliations": [
+        "School of Medicine, University of California, San Francisco, CA, USA.",
+        "Biological and Medical Informatics Graduate Program, University of California, San Francisco, CA, USA.",
+        "Medical Scientist Training Program, University of California, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Sun",
+      "fore_name": "Yang",
+      "initials": "Y",
+      "name": "Yang Sun",
+      "affiliations": [
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0002-9344-8060"
+    },
+    {
+      "last_name": "Ogorodnikov",
+      "fore_name": "Anton",
+      "initials": "A",
+      "name": "Anton Ogorodnikov",
+      "affiliations": [
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Bueno",
+      "fore_name": "Raymund",
+      "initials": "R",
+      "name": "Raymund Bueno",
+      "affiliations": [
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-8534-9399"
+    },
+    {
+      "last_name": "Lu",
+      "fore_name": "Andrew",
+      "initials": "A",
+      "name": "Andrew Lu",
+      "affiliations": [
+        "UCLA-Caltech Medical Scientist Training Program, Los Angeles, CA, USA."
+      ],
+      "orcid": "0000-0002-7594-6445"
+    },
+    {
+      "last_name": "Thompson",
+      "fore_name": "Mike",
+      "initials": "M",
+      "name": "Mike Thompson",
+      "affiliations": [
+        "Department of Computer Science, University of California, Los Angeles, CA, USA."
+      ],
+      "orcid": "0000-0003-1546-0512"
+    },
+    {
+      "last_name": "Rappoport",
+      "fore_name": "Nadav",
+      "initials": "N",
+      "name": "Nadav Rappoport",
+      "affiliations": [
+        "Department of Software and Information Systems Engineering, Ben-Gurion University of the Negev, Be'er Sheva, Israel."
+      ],
+      "orcid": "0000-0002-7218-2558"
+    },
+    {
+      "last_name": "Dahl",
+      "fore_name": "Andrew",
+      "initials": "A",
+      "name": "Andrew Dahl",
+      "affiliations": [
+        "Section of Genetic Medicine, Department of Medicine, University of Chicago, Chicago, IL 60637, USA."
+      ],
+      "orcid": "0000-0001-6520-4766"
+    },
+    {
+      "last_name": "Lanata",
+      "fore_name": "Cristina M",
+      "initials": "CM",
+      "name": "Cristina M Lanata",
+      "affiliations": [
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Rosalind Russell/Ephraim P. Engleman Rheumatology Research Center, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0002-6017-4921"
+    },
+    {
+      "last_name": "Matloubian",
+      "fore_name": "Mehrdad",
+      "initials": "M",
+      "name": "Mehrdad Matloubian",
+      "affiliations": [
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Rosalind Russell/Ephraim P. Engleman Rheumatology Research Center, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-6233-985X"
+    },
+    {
+      "last_name": "Maliskova",
+      "fore_name": "Lenka",
+      "initials": "L",
+      "name": "Lenka Maliskova",
+      "affiliations": [
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA.",
+        "Department of Epidemiology and Biostatistics, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-7677-3833"
+    },
+    {
+      "last_name": "Kwek",
+      "fore_name": "Serena S",
+      "initials": "SS",
+      "name": "Serena S Kwek",
+      "affiliations": [
+        "Division of Hematology/Oncology, Department of Medicine, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-5097-2711"
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Tony",
+      "initials": "T",
+      "name": "Tony Li",
+      "affiliations": [
+        "Division of Hematology/Oncology, Department of Medicine, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-7432-0646"
+    },
+    {
+      "last_name": "Slyper",
+      "fore_name": "Michal",
+      "initials": "M",
+      "name": "Michal Slyper",
+      "affiliations": [
+        "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+      ],
+      "orcid": "0000-0002-3002-0366"
+    },
+    {
+      "last_name": "Waldman",
+      "fore_name": "Julia",
+      "initials": "J",
+      "name": "Julia Waldman",
+      "affiliations": [
+        "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+      ],
+      "orcid": "0000-0002-0584-5833"
+    },
+    {
+      "last_name": "Dionne",
+      "fore_name": "Danielle",
+      "initials": "D",
+      "name": "Danielle Dionne",
+      "affiliations": [
+        "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+      ],
+      "orcid": "0000-0002-8338-4323"
+    },
+    {
+      "last_name": "Rozenblatt-Rosen",
+      "fore_name": "Orit",
+      "initials": "O",
+      "name": "Orit Rozenblatt-Rosen",
+      "affiliations": [
+        "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA."
+      ],
+      "orcid": "0000-0001-6313-3570"
+    },
+    {
+      "last_name": "Fong",
+      "fore_name": "Lawrence",
+      "initials": "L",
+      "name": "Lawrence Fong",
+      "affiliations": [
+        "Division of Hematology/Oncology, Department of Medicine, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0002-6428-428X"
+    },
+    {
+      "last_name": "Dall'Era",
+      "fore_name": "Maria",
+      "initials": "M",
+      "name": "Maria Dall'Era",
+      "affiliations": [
+        "School of Medicine, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-7439-2316"
+    },
+    {
+      "last_name": "Balliu",
+      "fore_name": "Brunilda",
+      "initials": "B",
+      "name": "Brunilda Balliu",
+      "affiliations": [
+        "Department of Computational Medicine, David Geffen School of Medicine, University of California, Los Angeles, CA, USA."
+      ],
+      "orcid": "0000-0001-8953-804X"
+    },
+    {
+      "last_name": "Regev",
+      "fore_name": "Aviv",
+      "initials": "A",
+      "name": "Aviv Regev",
+      "affiliations": [
+        "Klarman Cell Observatory, Broad Institute, Cambridge, MA, USA.",
+        "Koch Institute for Integrative Cancer Research, Massachusetts Institute of Technology, Cambridge, MA 02139, USA.",
+        "Howard Hughes Medical Institute, Department of Biology, Massachusetts Institute of Technology, Cambridge, MA 02139, USA."
+      ],
+      "orcid": "0000-0003-3293-3158"
+    },
+    {
+      "last_name": "Yazdany",
+      "fore_name": "Jinoos",
+      "initials": "J",
+      "name": "Jinoos Yazdany",
+      "affiliations": [
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0002-3508-4094"
+    },
+    {
+      "last_name": "Criswell",
+      "fore_name": "Lindsey A",
+      "initials": "LA",
+      "name": "Lindsey A Criswell",
+      "affiliations": [
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA.",
+        "Rosalind Russell/Ephraim P. Engleman Rheumatology Research Center, University of California, San Francisco, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Zaitlen",
+      "fore_name": "Noah",
+      "initials": "N",
+      "name": "Noah Zaitlen",
+      "affiliations": [
+        "Center for Neurobehavioral Genetics, Semel Institute for Neuroscience and Human Behavior, University of California, Los Angeles, CA, USA."
+      ],
+      "orcid": "0000-0002-3553-3670"
+    },
+    {
+      "last_name": "Ye",
+      "fore_name": "Chun Jimmie",
+      "initials": "CJ",
+      "name": "Chun Jimmie Ye",
+      "affiliations": [
+        "Division of Rheumatology, Department of Medicine, University of California, San Francisco, CA, USA.",
+        "Institute for Human Genetics, University of California, San Francisco, CA, USA.",
+        "Rosalind Russell/Ephraim P. Engleman Rheumatology Research Center, University of California, San Francisco, CA, USA.",
+        "Department of Epidemiology and Biostatistics, University of California, San Francisco, CA, USA.",
+        "Parker Institute for Cancer Immunotherapy, San Francisco, CA, USA.",
+        "Chan Zuckerberg Biohub, San Francisco, CA 94158, USA.",
+        "Bakar Computational Health Sciences Institute, University of California, San Francisco, CA, USA."
+      ],
+      "orcid": "0000-0001-6560-3783"
+    }
+  ],
+  "journal": {
+    "title": "Science (New York, N.Y.)",
+    "iso_abbreviation": "Science",
+    "issn": "1095-9203",
+    "issn_type": "Electronic",
+    "volume": "376",
+    "issue": "6589",
+    "pub_year": "2022",
+    "pub_month": "Apr",
+    "pub_day": "08"
+  },
+  "start_page": "eabf1970",
+  "pages": "eabf1970",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "CD8-Positive T-Lymphocytes",
+    "Case-Control Studies",
+    "Humans",
+    "Interferon Type I",
+    "Leukocytes, Mononuclear",
+    "Lupus Erythematosus, Systemic",
+    "RNA-Seq",
+    "Transcription, Genetic"
+  ],
+  "article_ids": {
+    "pubmed": "35389781",
+    "mid": "NIHMS1810790",
+    "pmc": "PMC9297655",
+    "doi": "10.1126/science.abf1970"
+  },
+  "doi": "10.1126/science.abf1970",
+  "pmc_id": "PMC9297655",
+  "dates": {
+    "completed": "2022-04-15",
+    "revised": "2025-05-30"
+  },
+  "chemicals": [
+    "Interferon Type I"
+  ],
+  "grants": [
+    {
+      "grant_id": "K24 AR074534",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA227237",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG012079",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R03 DE025665",
+      "agency": "NIDCR NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 GM142112",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 MH125252",
+      "agency": "NIMH NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R35 CA253175",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P30 AR070155",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA194511",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AR071522",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG009080",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA223484",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01DP005120",
+      "agency": "ACL HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 DP005120",
+      "agency": "NCCDPHP CDC HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K25 HL121295",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HG012192",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "F31 HG011007",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "agency": "Howard Hughes Medical Institute",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HG006399",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 HG002536",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HG011345",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R21 AI133337",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:51:49.736717",
+    "pmid": "35389781"
+  }
+}

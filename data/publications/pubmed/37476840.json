@@ -1,0 +1,122 @@
+{
+  "pmid": "37476840",
+  "uid": "37476840",
+  "title": "Expert and deep learning model identification of iEEG seizures and seizure onset times.",
+  "abstract": "Hundreds of 90-s iEEG records are typically captured from each NeuroPace RNS System patient between clinic visits. While these records provide invaluable information about the patient's electrographic seizure and interictal activity patterns, manually classifying them into electrographic seizure/non-seizure activity, and manually identifying the seizure onset channels and times is an extremely time-consuming process. A convolutional neural network based Electrographic Seizure Classifier (ESC) model was developed in an earlier study. In this study, the classification model is tested against iEEG annotations provided by three expert reviewers board certified in epilepsy. The three experts individually annotated 3,874 iEEG channels from 36, 29, and 35 patients with leads in the mesiotemporal (MTL), neocortical (NEO), and MTL + NEO regions, respectively. The ESC model's seizure/non-seizure classification scores agreed with the three reviewers at 88.7%, 89.6%, and 84.3% which was similar to how reviewers agreed with each other (92.9%-86.4%). On iEEG channels with all 3 experts in agreement (83.2%), the ESC model had an agreement score of 93.2%. Additionally, the ESC model's certainty scores reflected combined reviewer certainty scores. When 0, 1, 2 and 3 (out of 3) reviewers annotated iEEG channels as electrographic seizures, the ESC model's seizure certainty scores were in the range: [0.12-0.19], [0.32-0.42], [0.61-0.70], and [0.92-0.95] respectively. The ESC model was used as a starting-point model for training a second Seizure Onset Detection (SOD) model. For this task, seizure onset times were manually annotated on a relatively small number of iEEG channels (4,859 from 50 patients). Experiments showed that fine-tuning the ESC models with augmented data (30,768 iEEG channels) resulted in a better validation performance (on 20% of the manually annotated data) compared to training with only the original data (3.1s vs 4.4s median absolute error). Similarly, using the ESC model weights as the starting point for fine-tuning instead of other model weight initialization methods provided significant advantage in SOD model validation performance (3.1s vs 4.7s and 3.5s median absolute error). Finally, on iEEG channels where three expert annotations of seizure onset times were within 1.5 s, the SOD model's seizure onset time prediction was within 1.7 s of expert annotation.",
+  "authors": [
+    {
+      "last_name": "Arcot Desai",
+      "fore_name": "Sharanya",
+      "initials": "S",
+      "name": "Sharanya Arcot Desai",
+      "affiliations": [
+        "NeuroPace, Inc., Mountain View, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad Furqan",
+      "initials": "MF",
+      "name": "Muhammad Furqan Afzal",
+      "affiliations": [
+        "NeuroPace, Inc., Mountain View, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Barry",
+      "fore_name": "Wade",
+      "initials": "W",
+      "name": "Wade Barry",
+      "affiliations": [
+        "NeuroPace, Inc., Mountain View, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Kuo",
+      "fore_name": "Jonathan",
+      "initials": "J",
+      "name": "Jonathan Kuo",
+      "affiliations": [
+        "Department of Neurology, University of Southern California, Los Angeles, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Benard",
+      "fore_name": "Shawna",
+      "initials": "S",
+      "name": "Shawna Benard",
+      "affiliations": [
+        "Department of Neurology, University of Southern California, Los Angeles, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Traner",
+      "fore_name": "Christopher",
+      "initials": "C",
+      "name": "Christopher Traner",
+      "affiliations": [
+        "Department of Neurology, Yale University, New Haven, CT, United States."
+      ]
+    },
+    {
+      "last_name": "Tcheng",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Tcheng",
+      "affiliations": [
+        "NeuroPace, Inc., Mountain View, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Seale",
+      "fore_name": "Cairn",
+      "initials": "C",
+      "name": "Cairn Seale",
+      "affiliations": [
+        "NeuroPace, Inc., Mountain View, CA, United States."
+      ]
+    },
+    {
+      "last_name": "Morrell",
+      "fore_name": "Martha",
+      "initials": "M",
+      "name": "Martha Morrell",
+      "affiliations": [
+        "NeuroPace, Inc., Mountain View, CA, United States.",
+        "Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, United States."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Frontiers in neuroscience",
+    "iso_abbreviation": "Front Neurosci",
+    "issn": "1662-4548",
+    "issn_type": "Print",
+    "volume": "17",
+    "pub_year": "2023"
+  },
+  "start_page": "1156838",
+  "pages": "1156838",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "37476840",
+    "pmc": "PMC10354337",
+    "doi": "10.3389/fnins.2023.1156838"
+  },
+  "doi": "10.3389/fnins.2023.1156838",
+  "pmc_id": "PMC10354337",
+  "dates": {
+    "revised": "2023-07-22"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:15.081933",
+    "pmid": "37476840"
+  }
+}

@@ -1,0 +1,677 @@
+{
+  "openalex_id": "W3188474407",
+  "doi": "https://doi.org/10.1186/s13059-021-02433-9",
+  "title": "Community-wide hackathons to identify central themes in single-cell multi-omics",
+  "abstract": "We wish to acknowledge the following funding bodies:\r\n\r\nNational Health of Medical Research Council Career Development Fellowship AU, (KALC); Chan Zuckerberg initiative (AJA, VJC, ACC);\r\n\r\nAustralian Research Council (AJA, KALC, MER);\r\n\r\nNational Institute of Health, (EFDM, AD, SH);\r\n\r\nNational Cancer Institute, (EFDM, VJC, CSG, GCY, EJF);\r\n\r\nChair of bioinformatics in oncology of the CRCT (INSERM, Fondation Toulouse Cancer Sante, Pierre Fabre Research Institute, (AC, VP);\r\n\r\nFondation Toulouse Cancer Sante, (AC, VP);\r\n\r\nPierre Fabre Research Institute, (AC, VP);\r\n\r\nMichael Smith Foundation for Health Research, (AS);\r\n\r\nMitacs, (AS);\r\n\r\nKavli Neuroscience Discovery Institute, (GLSO);\r\n\r\nJohns Hopkins Provost Postdoctoral Fellowship, (GLSO);\r\n\r\nNational Human Genome Research Institute, NIH, (JDW, VJC, CSG, WM, MIL);\r\n\r\nNational Institute of Allergy and Infectious Diseases, NIH, (JDW, SH);\r\n\r\nNational Institute of Mental Health, NIH, (JDW, MIL);\r\n\r\nEMBL PhD program, (RA);\r\n\r\nNational Institutes of Health, National Institute on Aging, (GCY);\r\n\r\nDoD, (ACC);\r\n\r\nNational Institute of Health, National Institute of Dental and Craniofacial Research, (EJF);\r\n\r\nLustgarten Foundation, (EJF);\r\n\r\nEmerson Foundation, (EJF);\r\n\r\nAllegheny Health Network, (EJF).",
+  "authors": [
+    {
+      "display_name": "Kim‐Anh Lê Cao",
+      "id": "A5091163780",
+      "orcid": "https://orcid.org/0000-0003-3923-1116",
+      "institutions": [
+        {
+          "id": "I4210166212",
+          "display_name": "Melbourne Genomics Health Alliance",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Kim-Anh Lê Cao"
+    },
+    {
+      "display_name": "Al J. Abadi",
+      "id": "A5016779001",
+      "orcid": "https://orcid.org/0000-0002-4146-2848",
+      "institutions": [
+        {
+          "id": "I4210166212",
+          "display_name": "Melbourne Genomics Health Alliance",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Al J. Abadi"
+    },
+    {
+      "display_name": "Emily F. Davis-Marcisak",
+      "id": "A5037017402",
+      "orcid": "https://orcid.org/0000-0001-8624-1013",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Emily F. Davis-Marcisak"
+    },
+    {
+      "display_name": "Lauren L. Hsu",
+      "id": "A5063114416",
+      "orcid": "https://orcid.org/0000-0002-6035-7381",
+      "institutions": [
+        {
+          "id": "I4210117453",
+          "display_name": "Dana-Farber Cancer Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lauren Hsu"
+    },
+    {
+      "display_name": "Arshi Arora",
+      "id": "A5082707379",
+      "orcid": "https://orcid.org/0000-0002-4040-1787",
+      "institutions": [
+        {
+          "id": "I1334819555",
+          "display_name": "Memorial Sloan Kettering Cancer Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Arshi Arora"
+    },
+    {
+      "display_name": "Alexis Coullomb",
+      "id": "A5073496026",
+      "orcid": "https://orcid.org/0000-0003-3164-6640",
+      "institutions": [
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I154526488",
+          "display_name": "Inserm",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210087620",
+          "display_name": "Centre de Recherche en Cancérologie de Toulouse",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexis Coullomb"
+    },
+    {
+      "display_name": "Atul Deshpande",
+      "id": "A5082454884",
+      "orcid": "https://orcid.org/0000-0001-5144-6924",
+      "institutions": [
+        {
+          "id": "I4210164401",
+          "display_name": "Sidney Kimmel Comprehensive Cancer Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Atul Deshpande"
+    },
+    {
+      "display_name": "Yuzhou Feng",
+      "id": "A5047741086",
+      "orcid": "https://orcid.org/0000-0002-2955-4053",
+      "institutions": [
+        {
+          "id": "I4210166212",
+          "display_name": "Melbourne Genomics Health Alliance",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuzhou Feng"
+    },
+    {
+      "display_name": "Pratheepa Jeganathan",
+      "id": "A5077963588",
+      "orcid": "https://orcid.org/0000-0002-6467-0180",
+      "institutions": [
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pratheepa Jeganathan"
+    },
+    {
+      "display_name": "Melanie Loth",
+      "id": "A5063702240",
+      "orcid": "https://orcid.org/0000-0003-2717-8258",
+      "institutions": [
+        {
+          "id": "I4210164401",
+          "display_name": "Sidney Kimmel Comprehensive Cancer Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Melanie Loth"
+    },
+    {
+      "display_name": "Chen Meng",
+      "id": "A5009094417",
+      "orcid": "https://orcid.org/0000-0002-5968-6719",
+      "institutions": [
+        {
+          "id": "I62916508",
+          "display_name": "Technical University of Munich",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chen Meng"
+    },
+    {
+      "display_name": "Wancen Mu",
+      "id": "A5014212936",
+      "orcid": "https://orcid.org/0000-0002-5061-7581",
+      "institutions": [
+        {
+          "id": "I1333535994",
+          "display_name": "University of North Carolina Health Care",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I114027177",
+          "display_name": "University of North Carolina at Chapel Hill",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wancen Mu"
+    },
+    {
+      "display_name": "Véra Pancaldi",
+      "id": "A5059222814",
+      "orcid": "https://orcid.org/0000-0002-7433-624X",
+      "institutions": [
+        {
+          "id": "I4210087620",
+          "display_name": "Centre de Recherche en Cancérologie de Toulouse",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I134560555",
+          "display_name": "Université Toulouse III - Paul Sabatier",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I154526488",
+          "display_name": "Inserm",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vera Pancaldi"
+    },
+    {
+      "display_name": "Kris Sankaran",
+      "id": "A5083577035",
+      "orcid": "https://orcid.org/0000-0002-9415-1971",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kris Sankaran"
+    },
+    {
+      "display_name": "Dario Righelli",
+      "id": "A5075149591",
+      "orcid": "https://orcid.org/0000-0003-1504-3583",
+      "institutions": [
+        {
+          "id": "I138689650",
+          "display_name": "University of Padua",
+          "country_code": "IT",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dario Righelli"
+    },
+    {
+      "display_name": "Amrit Singh",
+      "id": "A5059355777",
+      "orcid": "https://orcid.org/0000-0002-7475-1646",
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amrit Singh"
+    },
+    {
+      "display_name": "Joshua Sodicoff",
+      "id": "A5075533817",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joshua S. Sodicoff"
+    },
+    {
+      "display_name": "Genevieve Stein-O’Brien",
+      "id": "A5069366529",
+      "orcid": "https://orcid.org/0000-0001-8681-9110",
+      "institutions": [
+        {
+          "id": "I4210164401",
+          "display_name": "Sidney Kimmel Comprehensive Cancer Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Genevieve L. Stein-O’Brien"
+    },
+    {
+      "display_name": "Ayshwarya Subramanian",
+      "id": "A5031387460",
+      "orcid": "https://orcid.org/0000-0002-4134-7612",
+      "institutions": [
+        {
+          "id": "I107606265",
+          "display_name": "Broad Institute",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ayshwarya Subramanian"
+    },
+    {
+      "display_name": "Joshua D. Welch",
+      "id": "A5032755605",
+      "orcid": "https://orcid.org/0000-0002-5869-2391",
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joshua D. Welch"
+    },
+    {
+      "display_name": "Yue You",
+      "id": "A5044840054",
+      "orcid": "https://orcid.org/0000-0003-3883-445X",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yue You"
+    },
+    {
+      "display_name": "Ricard Argelaguet",
+      "id": "A5005275806",
+      "orcid": "https://orcid.org/0000-0003-3199-3722",
+      "institutions": [
+        {
+          "id": "I1302113299",
+          "display_name": "Babraham Institute",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ricard Argelaguet"
+    },
+    {
+      "display_name": "Vincent J. Carey",
+      "id": "A5081015175",
+      "orcid": "https://orcid.org/0000-0003-4046-0063",
+      "institutions": [
+        {
+          "id": "I1283280774",
+          "display_name": "Brigham and Women's Hospital",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vincent J. Carey"
+    },
+    {
+      "display_name": "Ruben Dries",
+      "id": "A5000624568",
+      "orcid": "https://orcid.org/0000-0001-7650-7754",
+      "institutions": [
+        {
+          "id": "I1286490081",
+          "display_name": "Boston Medical Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ruben Dries"
+    },
+    {
+      "display_name": "Casey S. Greene",
+      "id": "A5050692257",
+      "orcid": "https://orcid.org/0000-0001-8713-9213",
+      "institutions": [
+        {
+          "id": "I921990950",
+          "display_name": "University of Colorado Denver",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Casey S. Greene"
+    },
+    {
+      "display_name": "Susan Holmes",
+      "id": "A5003674456",
+      "orcid": "https://orcid.org/0000-0002-2208-8168",
+      "institutions": [
+        {
+          "id": "I97018004",
+          "display_name": "Stanford University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Susan Holmes"
+    },
+    {
+      "display_name": "Michael I. Love",
+      "id": "A5049770701",
+      "orcid": "https://orcid.org/0000-0001-8401-0545",
+      "institutions": [
+        {
+          "id": "I1333535994",
+          "display_name": "University of North Carolina Health Care",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I114027177",
+          "display_name": "University of North Carolina at Chapel Hill",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael I. Love"
+    },
+    {
+      "display_name": "Matthew E. Ritchie",
+      "id": "A5015434839",
+      "orcid": "https://orcid.org/0000-0002-7383-0609",
+      "institutions": [
+        {
+          "id": "I196021976",
+          "display_name": "Walter and Eliza Hall Institute of Medical Research",
+          "country_code": "AU",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthew E. Ritchie"
+    },
+    {
+      "display_name": "Guo‐Cheng Yuan",
+      "id": "A5038587862",
+      "orcid": "https://orcid.org/0000-0002-2283-4714",
+      "institutions": [
+        {
+          "id": "I98704320",
+          "display_name": "Icahn School of Medicine at Mount Sinai",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guo-Cheng Yuan"
+    },
+    {
+      "display_name": "Aedín C. Culhane",
+      "id": "A5082180580",
+      "orcid": "https://orcid.org/0000-0002-1395-9734",
+      "institutions": [
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Aedin C. Culhane"
+    },
+    {
+      "display_name": "Elana J. Fertig",
+      "id": "A5027701541",
+      "orcid": "https://orcid.org/0000-0003-3204-342X",
+      "institutions": [
+        {
+          "id": "I2799853436",
+          "display_name": "Johns Hopkins Medicine",
+          "country_code": "US",
+          "type": "healthcare"
+        },
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elana Fertig"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-08-05",
+  "type": "letter",
+  "cited_by_count": 11,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S81160022",
+    "display_name": "Genome biology",
+    "issn_l": "1474-7596",
+    "issn": [
+      "1474-7596",
+      "1474-760X"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320256"
+  },
+  "volume": "22",
+  "issue": "1",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-021-02433-9",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C161191863",
+      "display_name": "Library science",
+      "level": 1,
+      "score": 0.6893991
+    },
+    {
+      "id": "C3020741442",
+      "display_name": "Research council",
+      "level": 3,
+      "score": 0.6066721
+    },
+    {
+      "id": "C74909509",
+      "display_name": "Gerontology",
+      "level": 1,
+      "score": 0.37063664
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.3244565
+    },
+    {
+      "id": "C512399662",
+      "display_name": "Family medicine",
+      "level": 1,
+      "score": 0.32174128
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.08711389
+    },
+    {
+      "id": "C41895202",
+      "display_name": "Linguistics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C2778137410",
+      "display_name": "Government (linguistics)",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11289",
+      "display_name": "Single-cell and spatial transcriptomics",
+      "score": 0.9967
+    },
+    {
+      "id": "T13280",
+      "display_name": "Biomedical and Engineering Education",
+      "score": 0.9907
+    },
+    {
+      "id": "T11642",
+      "display_name": "Genomics and Rare Diseases",
+      "score": 0.9254
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1186/s13059-021-02433-9",
+  "pdf_url": "https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-021-02433-9",
+  "retrieved_date": "2025-07-30T14:13:17.312203",
+  "source_database": "OpenAlex"
+}

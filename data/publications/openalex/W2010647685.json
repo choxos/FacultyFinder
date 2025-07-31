@@ -1,0 +1,265 @@
+{
+  "openalex_id": "W2010647685",
+  "doi": "https://doi.org/10.1017/s0016672311000358",
+  "title": "Fine tuning genomic evaluations in dairy cattle through SNP pre-selection with the Elastic-Net algorithm",
+  "abstract": "For genomic selection methods, the statistical challenge is to estimate the effect of each of the available single-nucleotide polymorphism (SNP). In a context where the number of SNPs (p) is much higher than the number of bulls (n), this task may lead to a poor estimation of these SNP effects if, as for genomic BLUP (gBLUP), all SNPs have a non-null effect. An alternative is to use approaches that have been developed specifically to solve the 'p >> n' problem. This is the case of variable selection methods and among them, we focus on the Elastic-Net (EN) algorithm that is a penalized regression approach. Performances of EN, gBLUP and pedigree-based BLUP were compared with data from three French dairy cattle breeds, giving very encouraging results for EN. We tried to push further the idea of improving SNP effect estimates by considering fewer of them. This variable selection strategy was considered both in the case of gBLUP and EN by adding an SNP pre-selection step based on quantitative trait locus (QTL) detection. Similar results were observed with or without a pre-selection step, in terms of correlations between direct genomic value (DGV) and observed daughter yield deviation in a validation data set. However, when applied to the EN algorithm, this strategy led to a substantial reduction of the number of SNPs included in the prediction equation. In a context where the number of genotyped animals and the number of SNPs gets larger and larger, SNP pre-selection strongly alleviates computing requirements and ensures that national evaluations can be completed within a reasonable time frame.",
+  "authors": [
+    {
+      "display_name": "Pascal Croiseau",
+      "id": "A5052268634",
+      "orcid": "https://orcid.org/0000-0001-6493-2892",
+      "institutions": [
+        {
+          "id": "I1314251682",
+          "display_name": "Institut National de la Recherche Agronomique",
+          "country_code": "MA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "PASCAL CROISEAU"
+    },
+    {
+      "display_name": "Andrés Legarra",
+      "id": "A5003213201",
+      "orcid": "https://orcid.org/0000-0001-8893-7620",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "ANDRÉS LEGARRA"
+    },
+    {
+      "display_name": "F. Guillaume",
+      "id": "A5013364316",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "FRANÇOIS GUILLAUME"
+    },
+    {
+      "display_name": "Sébastien Fritz",
+      "id": "A5090323018",
+      "orcid": "https://orcid.org/0000-0002-3378-1048",
+      "institutions": [
+        {
+          "id": "I4210138008",
+          "display_name": "Terres Univia",
+          "country_code": "FR",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "SÉBASTIEN FRITZ"
+    },
+    {
+      "display_name": "Aurélia Baur",
+      "id": "A5010212376",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210138008",
+          "display_name": "Terres Univia",
+          "country_code": "FR",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "AURÉLIA BAUR"
+    },
+    {
+      "display_name": "Carine Colombani",
+      "id": "A5009823112",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "CARINE COLOMBANI"
+    },
+    {
+      "display_name": "Christian P. Robert",
+      "id": "A5080652581",
+      "orcid": "https://orcid.org/0000-0001-6635-3261",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "CHRISTÈLE ROBERT-GRANIÉ"
+    },
+    {
+      "display_name": "Didier Boichard",
+      "id": "A5043772141",
+      "orcid": "https://orcid.org/0000-0003-0361-2961",
+      "institutions": [
+        {
+          "id": "I1314251682",
+          "display_name": "Institut National de la Recherche Agronomique",
+          "country_code": "MA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "DIDIER BOICHARD"
+    },
+    {
+      "display_name": "Vincent Ducrocq",
+      "id": "A5073249281",
+      "orcid": "https://orcid.org/0000-0002-1503-5199",
+      "institutions": [
+        {
+          "id": "I1314251682",
+          "display_name": "Institut National de la Recherche Agronomique",
+          "country_code": "MA",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "VINCENT DUCROCQ"
+    }
+  ],
+  "publication_year": 2011,
+  "publication_date": "2011-12-01",
+  "type": "article",
+  "cited_by_count": 23,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S31188771",
+    "display_name": "Genetics Research",
+    "issn_l": "0016-6723",
+    "issn": [
+      "0016-6723",
+      "1469-5073"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311721"
+  },
+  "volume": "93",
+  "issue": "6",
+  "first_page": "409",
+  "last_page": "417",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/942268A13F6C2015B3EF4408BCDEBE6B/S0016672311000358a.pdf/div-class-title-fine-tuning-genomic-evaluations-in-dairy-cattle-through-snp-pre-selection-with-the-elastic-net-algorithm-div.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C103545067",
+      "display_name": "Best linear unbiased prediction",
+      "level": 3,
+      "score": 0.7317374
+    },
+    {
+      "id": "C2992444039",
+      "display_name": "Genomic selection",
+      "level": 5,
+      "score": 0.72095287
+    },
+    {
+      "id": "C81917197",
+      "display_name": "Selection (genetic algorithm)",
+      "level": 2,
+      "score": 0.5943595
+    },
+    {
+      "id": "C153209595",
+      "display_name": "Single-nucleotide polymorphism",
+      "level": 4,
+      "score": 0.5937951
+    },
+    {
+      "id": "C139275648",
+      "display_name": "SNP",
+      "level": 5,
+      "score": 0.56586087
+    },
+    {
+      "id": "C2779343474",
+      "display_name": "Context (archaeology)",
+      "level": 2,
+      "score": 0.5486744
+    },
+    {
+      "id": "C81941488",
+      "display_name": "Quantitative trait locus",
+      "level": 3,
+      "score": 0.44937044
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.42569804
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.4219349
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.34306014
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.322783
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.30402577
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.16955411
+    },
+    {
+      "id": "C135763542",
+      "display_name": "Genotype",
+      "level": 3,
+      "score": 0.13572332
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10594",
+      "display_name": "Genetic and phenotypic traits in livestock",
+      "score": 1.0
+    },
+    {
+      "id": "T11468",
+      "display_name": "Genetic Mapping and Diversity in Plants and Animals",
+      "score": 0.9953
+    },
+    {
+      "id": "T11229",
+      "display_name": "Genetics and Plant Breeding",
+      "score": 0.9864
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1017/s0016672311000358",
+  "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/942268A13F6C2015B3EF4408BCDEBE6B/S0016672311000358a.pdf/div-class-title-fine-tuning-genomic-evaluations-in-dairy-cattle-through-snp-pre-selection-with-the-elastic-net-algorithm-div.pdf",
+  "retrieved_date": "2025-07-30T15:25:18.520447",
+  "source_database": "OpenAlex"
+}

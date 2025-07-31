@@ -1,0 +1,202 @@
+{
+  "openalex_id": "W2883050121",
+  "doi": null,
+  "title": "Fuzzy sliding mode control for cart Inverted Pendulum system / Belal Ahmed Abdelaziz Elsayed",
+  "abstract": "Cart Inverted Pendulum (CIP) is a benchmark problem in nonlinear automatic control which has numerous applications, such as two wheeled mobile robot and under actuated robots. The objective of this study is to design a swinging-up controller with a robust sliding mode stabilization controller for CIP, and to apply the proposed controller on a real CIP. Two third-order differential equations were derived to create a combining model for the cart-pendulum with its DC motor dynamics, where the motor voltage is considered as the system input. The friction force between the cart and rail was included in the system equations through a nonlinear friction model. A Fuzzy Swinging-up controller was designed to swing the pendulum toward the upright position, with consideration of the cart rail limits. Once the pendulum reaches the upward position, Sliding Mode Controller (SMC) is activated, to balance the system. For comparison purposes, a Linear Quadratic Regulator Controller (LQRC) was design and compared with proposed SMC. Simulation and experimental results have shown a significant improvement of the proposed SMC over LQRC where, the pendulum angle oscillations were decreased by 80% in the real implementation.",
+  "authors": [
+    {
+      "display_name": "Belal Ahmed",
+      "id": "A5065888762",
+      "orcid": "https://orcid.org/0000-0001-5605-9464",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Belal Ahmed"
+    },
+    {
+      "display_name": "Abdelaziz Elsayed",
+      "id": "A5043495913",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Abdelaziz Elsayed"
+    }
+  ],
+  "publication_year": 2013,
+  "publication_date": "2013-05-28",
+  "type": "dissertation",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C47446073",
+      "display_name": "Control theory (sociology)",
+      "level": 3,
+      "score": 0.87314576
+    },
+    {
+      "id": "C192921069",
+      "display_name": "Inverted pendulum",
+      "level": 3,
+      "score": 0.7852639
+    },
+    {
+      "id": "C203479927",
+      "display_name": "Controller (irrigation)",
+      "level": 2,
+      "score": 0.6191468
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.5532835
+    },
+    {
+      "id": "C110639684",
+      "display_name": "Pendulum",
+      "level": 2,
+      "score": 0.51193607
+    },
+    {
+      "id": "C58166",
+      "display_name": "Fuzzy logic",
+      "level": 2,
+      "score": 0.50715995
+    },
+    {
+      "id": "C158622935",
+      "display_name": "Nonlinear system",
+      "level": 2,
+      "score": 0.5014589
+    },
+    {
+      "id": "C133731056",
+      "display_name": "Control engineering",
+      "level": 1,
+      "score": 0.4606957
+    },
+    {
+      "id": "C36662352",
+      "display_name": "Sliding mode control",
+      "level": 3,
+      "score": 0.4520762
+    },
+    {
+      "id": "C76684090",
+      "display_name": "DC motor",
+      "level": 2,
+      "score": 0.4145366
+    },
+    {
+      "id": "C198082294",
+      "display_name": "Position (finance)",
+      "level": 2,
+      "score": 0.41341215
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.31621563
+    },
+    {
+      "id": "C2775924081",
+      "display_name": "Control (management)",
+      "level": 2,
+      "score": 0.14497533
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.1350106
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.08438432
+    },
+    {
+      "id": "C78519656",
+      "display_name": "Mechanical engineering",
+      "level": 1,
+      "score": 0.06658721
+    },
+    {
+      "id": "C119599485",
+      "display_name": "Electrical engineering",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C10138342",
+      "display_name": "Finance",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C6557445",
+      "display_name": "Agronomy",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C162324750",
+      "display_name": "Economics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11615",
+      "display_name": "Control and Dynamics of Mobile Robots",
+      "score": 0.9835
+    },
+    {
+      "id": "T10586",
+      "display_name": "Robotic Path Planning Algorithms",
+      "score": 0.9003
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "http://studentsrepo.um.edu.my/8421/",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:16:04.112358",
+  "source_database": "OpenAlex"
+}

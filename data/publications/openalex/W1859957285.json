@@ -1,0 +1,986 @@
+{
+  "openalex_id": "W1859957285",
+  "doi": "https://doi.org/10.1088/0067-0049/221/1/11",
+  "title": "CANDELS VISUAL CLASSIFICATIONS: SCHEME, DATA RELEASE, AND FIRST RESULTS",
+  "abstract": "We have undertaken an ambitious program to visually classify all galaxies in the five CANDELS fields down to H<24.5 involving the dedicated efforts of 65 individual classifiers. Once completed, we expect to have detailed morphological classifications for over 50,000 galaxies up to z<4 over all the fields. Here, we present our detailed visual classification scheme, which was designed to cover a wide range of CANDELS science goals. This scheme includes the basic Hubble sequence types, but also includes a detailed look at mergers and interactions, the clumpiness of galaxies, $k$-corrections, and a variety of other structural properties. In this paper, we focus on the first field to be completed -- GOODS-S. The wide area coverage spanning the full field includes 7634 galaxies that have been classified by at least three different people. In the deep area of the field, 2534 galaxies have been classified by at least five different people at three different depths. With this paper, we release to the public all of the visual classifications in GOODS-S along with the GUI that we developed to classify galaxies. We find that the level of agreement among classifiers is good and depends on both the galaxy magnitude and the galaxy type, with disks showing the highest level of agreement and irregulars the lowest. A comparison of our classifications with the Sersic index and rest-frame colors shows a clear separation between disk and spheroid populations. Finally, we explore morphological k-corrections between the V-band and H-band observations and find that a small fraction (84 galaxies in total) are classified as being very different between these two bands. These galaxies typically have very clumpy and extended morphology or are very faint in the V-band.",
+  "authors": [
+    {
+      "display_name": "Jeyhan S. Kartaltepe",
+      "id": "A5086020534",
+      "orcid": "https://orcid.org/0000-0001-9187-3605",
+      "institutions": [
+        {
+          "id": "I155173764",
+          "display_name": "Rochester Institute of Technology",
+          "country_code": "US",
+          "type": "education"
+        },
+        {
+          "id": "I2801948628",
+          "display_name": "Kitt Peak National Observatory",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Jeyhan S. Kartaltepe"
+    },
+    {
+      "display_name": "Mark Mozena",
+      "id": "A5009664004",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I185103710",
+          "display_name": "University of California, Santa Cruz",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mark Mozena"
+    },
+    {
+      "display_name": "Dale D. Kocevski",
+      "id": "A5077145341",
+      "orcid": "https://orcid.org/0000-0002-8360-3880",
+      "institutions": [
+        {
+          "id": "I143302722",
+          "display_name": "University of Kentucky",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dale Kocevski"
+    },
+    {
+      "display_name": "Daniel H. McIntosh",
+      "id": "A5073154205",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I75421653",
+          "display_name": "University of Missouri–Kansas City",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daniel H. McIntosh"
+    },
+    {
+      "display_name": "Jennifer M. Lotz",
+      "id": "A5037646322",
+      "orcid": "https://orcid.org/0000-0003-3130-5643",
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennifer Lotz"
+    },
+    {
+      "display_name": "Eric F. Bell",
+      "id": "A5047186596",
+      "orcid": "https://orcid.org/0000-0002-5564-9873",
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eric F. Bell"
+    },
+    {
+      "display_name": "Sandy M. Faber",
+      "id": "A5103536555",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I185103710",
+          "display_name": "University of California, Santa Cruz",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sandy Faber"
+    },
+    {
+      "display_name": "Henry C. Ferguson",
+      "id": "A5042305541",
+      "orcid": "https://orcid.org/0000-0001-7113-2738",
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Harry Ferguson"
+    },
+    {
+      "display_name": "David C. Koo",
+      "id": "A5063009942",
+      "orcid": "https://orcid.org/0000-0003-3385-6799",
+      "institutions": [
+        {
+          "id": "I185103710",
+          "display_name": "University of California, Santa Cruz",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Koo"
+    },
+    {
+      "display_name": "Robert Bassett",
+      "id": "A5023344443",
+      "orcid": "https://orcid.org/0000-0001-9760-7519",
+      "institutions": [
+        {
+          "id": "I57093077",
+          "display_name": "Swinburne University of Technology",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Bassett"
+    },
+    {
+      "display_name": "Maksym Bernyk",
+      "id": "A5035212231",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I57093077",
+          "display_name": "Swinburne University of Technology",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Maksym Bernyk"
+    },
+    {
+      "display_name": "Kirsten Blancato",
+      "id": "A5089762463",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I189731429",
+          "display_name": "Wellesley College",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2801948628",
+          "display_name": "Kitt Peak National Observatory",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kirsten Blancato"
+    },
+    {
+      "display_name": "F. Bournaud",
+      "id": "A5090261441",
+      "orcid": "https://orcid.org/0000-0002-5743-0250",
+      "institutions": [
+        {
+          "id": "I4210086977",
+          "display_name": "Astrophysique, Instrumentation et Modélisation",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210128565",
+          "display_name": "CEA Paris-Saclay",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Frederic Bournaud"
+    },
+    {
+      "display_name": "P. Cassata",
+      "id": "A5048538677",
+      "orcid": "https://orcid.org/0000-0002-6716-4400",
+      "institutions": [
+        {
+          "id": "I4210097422",
+          "display_name": "Laboratoire d’Astrophysique de Marseille",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I21491767",
+          "display_name": "Aix-Marseille Université",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paolo Cassata"
+    },
+    {
+      "display_name": "M. Castellano",
+      "id": "A5058519861",
+      "orcid": "https://orcid.org/0000-0001-9875-8263",
+      "institutions": [
+        {
+          "id": "I2800313864",
+          "display_name": "Astronomical Observatory of Rome",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marco Castellano"
+    },
+    {
+      "display_name": "Edmond Cheung",
+      "id": "A5044217369",
+      "orcid": "https://orcid.org/0000-0001-8546-1428",
+      "institutions": [
+        {
+          "id": "I185103710",
+          "display_name": "University of California, Santa Cruz",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Edmond Cheung"
+    },
+    {
+      "display_name": "Christopher J. Conselice",
+      "id": "A5040325171",
+      "orcid": "https://orcid.org/0000-0003-1949-7638",
+      "institutions": [
+        {
+          "id": "I142263535",
+          "display_name": "University of Nottingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher J. Conselice"
+    },
+    {
+      "display_name": "Darren Croton",
+      "id": "A5076417031",
+      "orcid": "https://orcid.org/0000-0002-5009-512X",
+      "institutions": [
+        {
+          "id": "I57093077",
+          "display_name": "Swinburne University of Technology",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Darren Croton"
+    },
+    {
+      "display_name": "T. Dahlén",
+      "id": "A5080828915",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tomas Dahlen"
+    },
+    {
+      "display_name": "D. F. de Mello",
+      "id": "A5047339047",
+      "orcid": "https://orcid.org/0000-0003-1624-8425",
+      "institutions": [
+        {
+          "id": "I168959743",
+          "display_name": "University of America",
+          "country_code": "US",
+          "type": "education"
+        },
+        {
+          "id": "I84470341",
+          "display_name": "Catholic University of America",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Duilia F. de Mello"
+    },
+    {
+      "display_name": "Laura DeGroot",
+      "id": "A5027972696",
+      "orcid": "https://orcid.org/0000-0001-9022-665X",
+      "institutions": [
+        {
+          "id": "I103635307",
+          "display_name": "University of California, Riverside",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laura DeGroot"
+    },
+    {
+      "display_name": "J. L. Donley",
+      "id": "A5017469177",
+      "orcid": "https://orcid.org/0000-0002-6589-2017",
+      "institutions": [
+        {
+          "id": "I1343871089",
+          "display_name": "Los Alamos National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jennifer Donley"
+    },
+    {
+      "display_name": "Javiera Guedes",
+      "id": "A5103801062",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I35440088",
+          "display_name": "ETH Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Javiera Guedes"
+    },
+    {
+      "display_name": "Norman A. Grogin",
+      "id": "A5025299515",
+      "orcid": "https://orcid.org/0000-0001-9440-8872",
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Norman Grogin"
+    },
+    {
+      "display_name": "Nimish P. Hathi",
+      "id": "A5029531883",
+      "orcid": "https://orcid.org/0000-0001-6145-5090",
+      "institutions": [
+        {
+          "id": "I103635307",
+          "display_name": "University of California, Riverside",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nimish Hathi"
+    },
+    {
+      "display_name": "Matt Hilton",
+      "id": "A5047144392",
+      "orcid": "https://orcid.org/0000-0002-8490-8117",
+      "institutions": [
+        {
+          "id": "I95023434",
+          "display_name": "University of KwaZulu-Natal",
+          "country_code": "ZA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matt Hilton"
+    },
+    {
+      "display_name": "Brett Hollon",
+      "id": "A5007140712",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I75421653",
+          "display_name": "University of Missouri–Kansas City",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brett Hollon"
+    },
+    {
+      "display_name": "Anton M. Koekemoer",
+      "id": "A5043083140",
+      "orcid": "https://orcid.org/0000-0002-6610-2048",
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anton Koekemoer"
+    },
+    {
+      "display_name": "Nick Liu",
+      "id": "A5106465033",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I139025015",
+          "display_name": "Pioneer (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nick Liu"
+    },
+    {
+      "display_name": "Ray A. Lucas",
+      "id": "A5107830285",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ray A. Lucas"
+    },
+    {
+      "display_name": "Marie Martig",
+      "id": "A5085763615",
+      "orcid": "https://orcid.org/0000-0001-5454-1492",
+      "institutions": [
+        {
+          "id": "I57093077",
+          "display_name": "Swinburne University of Technology",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marie Martig"
+    },
+    {
+      "display_name": "Elizabeth McGrath",
+      "id": "A5109901942",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I27504731",
+          "display_name": "Colby College",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elizabeth McGrath"
+    },
+    {
+      "display_name": "Conor McPartland",
+      "id": "A5014183442",
+      "orcid": "https://orcid.org/0000-0003-0639-025X",
+      "institutions": [
+        {
+          "id": "I1331384533",
+          "display_name": "University of Hawaii System",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Conor McPartland"
+    },
+    {
+      "display_name": "Bahram Mobasher",
+      "id": "A5110720225",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I103635307",
+          "display_name": "University of California, Riverside",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bahram Mobasher"
+    },
+    {
+      "display_name": "Alice Morlock",
+      "id": "A5089490786",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I142263535",
+          "display_name": "University of Nottingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alice Morlock"
+    },
+    {
+      "display_name": "Erin O’Leary",
+      "id": "A5108076332",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I5444425",
+          "display_name": "Macalester College",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I2801948628",
+          "display_name": "Kitt Peak National Observatory",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Erin O’Leary"
+    },
+    {
+      "display_name": "Mike Peth",
+      "id": "A5106424521",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mike Peth"
+    },
+    {
+      "display_name": "J. Pforr",
+      "id": "A5075527069",
+      "orcid": "https://orcid.org/0000-0002-3414-8391",
+      "institutions": [
+        {
+          "id": "I2801948628",
+          "display_name": "Kitt Peak National Observatory",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Janine Pforr"
+    },
+    {
+      "display_name": "Annalisa Pillepich",
+      "id": "A5078649440",
+      "orcid": "https://orcid.org/0000-0003-1065-9274",
+      "institutions": [
+        {
+          "id": "I4210124175",
+          "display_name": "Center for Astrophysics Harvard & Smithsonian",
+          "country_code": "US",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Annalisa Pillepich"
+    },
+    {
+      "display_name": "D. J. Rosario",
+      "id": "A5010300919",
+      "orcid": "https://orcid.org/0000-0002-0001-3587",
+      "institutions": [
+        {
+          "id": "I4210109156",
+          "display_name": "Max Planck Institute for Astronomy",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Rosario"
+    },
+    {
+      "display_name": "Emmaris Soto",
+      "id": "A5073606676",
+      "orcid": "https://orcid.org/0000-0002-2390-0584",
+      "institutions": [
+        {
+          "id": "I168959743",
+          "display_name": "University of America",
+          "country_code": "US",
+          "type": "education"
+        },
+        {
+          "id": "I84470341",
+          "display_name": "Catholic University of America",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Emmaris Soto"
+    },
+    {
+      "display_name": "Amber Straughn",
+      "id": "A5113512337",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1306266525",
+          "display_name": "Goddard Space Flight Center",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amber Straughn"
+    },
+    {
+      "display_name": "O. Grace Telford",
+      "id": "A5057187752",
+      "orcid": "https://orcid.org/0000-0003-4122-7749",
+      "institutions": [
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Olivia Telford"
+    },
+    {
+      "display_name": "Ben Sunnquist",
+      "id": "A5011944590",
+      "orcid": "https://orcid.org/0000-0003-3759-8707",
+      "institutions": [
+        {
+          "id": "I75421653",
+          "display_name": "University of Missouri–Kansas City",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ben Sunnquist"
+    },
+    {
+      "display_name": "Jonathan R. Trump",
+      "id": "A5069758807",
+      "orcid": "https://orcid.org/0000-0002-1410-0470",
+      "institutions": [
+        {
+          "id": "I130769515",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan Trump"
+    },
+    {
+      "display_name": "Benjamin J. Weiner",
+      "id": "A5045256947",
+      "orcid": "https://orcid.org/0000-0001-6065-7483",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Benjamin Weiner"
+    },
+    {
+      "display_name": "Stijn Wuyts",
+      "id": "A5060901790",
+      "orcid": "https://orcid.org/0000-0003-3735-1931",
+      "institutions": [
+        {
+          "id": "I4210091772",
+          "display_name": "Max Planck Institute for Extraterrestrial Physics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stijn Wuyts"
+    },
+    {
+      "display_name": "Hanae Inami",
+      "id": "A5046181082",
+      "orcid": "https://orcid.org/0000-0003-4268-0393",
+      "institutions": [
+        {
+          "id": "I2801948628",
+          "display_name": "Kitt Peak National Observatory",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hanae Inami"
+    },
+    {
+      "display_name": "Susan Kassin",
+      "id": "A5111384643",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Susan Kassin"
+    },
+    {
+      "display_name": "Caterina Lani",
+      "id": "A5108124826",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I142263535",
+          "display_name": "University of Nottingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Caterina Lani"
+    },
+    {
+      "display_name": "Gregory B. Poole",
+      "id": "A5070372165",
+      "orcid": "https://orcid.org/0000-0003-1777-7388",
+      "institutions": [
+        {
+          "id": "I165779595",
+          "display_name": "The University of Melbourne",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gregory B. Poole"
+    },
+    {
+      "display_name": "Zachary Rizer",
+      "id": "A5106424523",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I75421653",
+          "display_name": "University of Missouri–Kansas City",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zachary Rizer"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-10-28",
+  "type": "article",
+  "cited_by_count": 134,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S183686791",
+    "display_name": "The Astrophysical Journal Supplement Series",
+    "issn_l": "0067-0049",
+    "issn": [
+      "0067-0049",
+      "1538-4365"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311669"
+  },
+  "volume": "221",
+  "issue": "1",
+  "first_page": "11",
+  "last_page": "11",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "http://arxiv.org/pdf/1401.2455",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C98444146",
+      "display_name": "Galaxy",
+      "level": 2,
+      "score": 0.74454695
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.5837897
+    },
+    {
+      "id": "C13460635",
+      "display_name": "Classification scheme",
+      "level": 2,
+      "score": 0.5801088
+    },
+    {
+      "id": "C44870925",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.5258175
+    },
+    {
+      "id": "C2780428219",
+      "display_name": "Cover (algebra)",
+      "level": 2,
+      "score": 0.48308113
+    },
+    {
+      "id": "C9652623",
+      "display_name": "Field (mathematics)",
+      "level": 2,
+      "score": 0.42230734
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.34438035
+    },
+    {
+      "id": "C23123220",
+      "display_name": "Information retrieval",
+      "level": 1,
+      "score": 0.22194332
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.12419349
+    },
+    {
+      "id": "C78519656",
+      "display_name": "Mechanical engineering",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C202444582",
+      "display_name": "Pure mathematics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10026",
+      "display_name": "Galaxies: Formation, Evolution, Phenomena",
+      "score": 0.999
+    },
+    {
+      "id": "T10111",
+      "display_name": "Remote Sensing in Agriculture",
+      "score": 0.9798
+    },
+    {
+      "id": "T10531",
+      "display_name": "Advanced Vision and Imaging",
+      "score": 0.9666
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1088/0067-0049/221/1/11",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:43:05.706604",
+  "source_database": "OpenAlex"
+}

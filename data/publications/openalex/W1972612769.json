@@ -1,0 +1,237 @@
+{
+  "openalex_id": "W1972612769",
+  "doi": "https://doi.org/10.1109/tpds.2013.16",
+  "title": "On the Knowledge Soundness of a Cooperative Provable Data Possession Scheme in Multicloud Storage",
+  "abstract": "Provable data possession (PDP) is a probabilistic proof technique for cloud service providers (CSPs) to prove the clients' data integrity without downloading the whole data. In 2012, Zhu et al. proposed the construction of an efficient PDP scheme for multicloud storage. They studied the existence of multiple CSPs to cooperatively store and maintain the clients' data. Then, based on homomorphic verifiable response and hash index hierarchy, they presented a cooperative PDP (CPDP) scheme from the bilinear pairings. They claimed that their scheme satisfied the security property of knowledge soundness. It is regretful that this comment shows that any malicious CSP or the malicious organizer (O) can generate the valid response which can pass the verification even if they have deleted all the stored data, i.e., Zhu et al.'s CPDP scheme cannot satisfy the property of knowledge soundness. Then, we discuss the origin and severity of the security flaws. It implies that the attacker can get the pay without storing the clients' data. It is important to clarify the scientific fact to design more secure and practical CPDP scheme in Zhu et al.'s system architecture and security model.",
+  "authors": [
+    {
+      "display_name": "Huaqun Wang",
+      "id": "A5082859576",
+      "orcid": "https://orcid.org/0000-0001-7254-6465",
+      "institutions": [
+        {
+          "id": "I107982497",
+          "display_name": "Dalian Ocean University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Huaqun Wang"
+    },
+    {
+      "display_name": "Yuqing Zhang",
+      "id": "A5100401884",
+      "orcid": "https://orcid.org/0000-0001-8306-7195",
+      "institutions": [
+        {
+          "id": "I19820366",
+          "display_name": "Chinese Academy of Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuqing Zhang"
+    }
+  ],
+  "publication_year": 2013,
+  "publication_date": "2013-01-14",
+  "type": "article",
+  "cited_by_count": 61,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S97130795",
+    "display_name": "IEEE Transactions on Parallel and Distributed Systems",
+    "issn_l": "1045-9219",
+    "issn": [
+      "1045-9219",
+      "1558-2183",
+      "2161-9883"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "25",
+  "issue": "1",
+  "first_page": "264",
+  "last_page": "267",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.80640304
+    },
+    {
+      "id": "C39920170",
+      "display_name": "Soundness",
+      "level": 2,
+      "score": 0.7596946
+    },
+    {
+      "id": "C85847156",
+      "display_name": "Verifiable secret sharing",
+      "level": 3,
+      "score": 0.6537566
+    },
+    {
+      "id": "C158338273",
+      "display_name": "Homomorphic encryption",
+      "level": 3,
+      "score": 0.63947487
+    },
+    {
+      "id": "C77618280",
+      "display_name": "Scheme (mathematics)",
+      "level": 2,
+      "score": 0.5900532
+    },
+    {
+      "id": "C99138194",
+      "display_name": "Hash function",
+      "level": 2,
+      "score": 0.5699328
+    },
+    {
+      "id": "C49937458",
+      "display_name": "Probabilistic logic",
+      "level": 2,
+      "score": 0.46485412
+    },
+    {
+      "id": "C79974875",
+      "display_name": "Cloud computing",
+      "level": 2,
+      "score": 0.45881137
+    },
+    {
+      "id": "C176329583",
+      "display_name": "Zero-knowledge proof",
+      "level": 3,
+      "score": 0.45385346
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.44815645
+    },
+    {
+      "id": "C38369872",
+      "display_name": "Security analysis",
+      "level": 2,
+      "score": 0.43350527
+    },
+    {
+      "id": "C189950617",
+      "display_name": "Property (philosophy)",
+      "level": 2,
+      "score": 0.42954996
+    },
+    {
+      "id": "C33762810",
+      "display_name": "Data integrity",
+      "level": 2,
+      "score": 0.42414176
+    },
+    {
+      "id": "C80444323",
+      "display_name": "Theoretical computer science",
+      "level": 1,
+      "score": 0.39681825
+    },
+    {
+      "id": "C148730421",
+      "display_name": "Encryption",
+      "level": 2,
+      "score": 0.34525275
+    },
+    {
+      "id": "C178489894",
+      "display_name": "Cryptography",
+      "level": 2,
+      "score": 0.3032601
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.12308738
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.088882685
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C177264268",
+      "display_name": "Set (abstract data type)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C111919701",
+      "display_name": "Operating system",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C138885662",
+      "display_name": "Philosophy",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C111472728",
+      "display_name": "Epistemology",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11614",
+      "display_name": "Cloud Data Security Solutions",
+      "score": 0.9999
+    },
+    {
+      "id": "T10237",
+      "display_name": "Cryptography and Data Security",
+      "score": 0.9948
+    },
+    {
+      "id": "T11424",
+      "display_name": "Security and Verification in Computing",
+      "score": 0.9313
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tpds.2013.16",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:05:12.041696",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,195 @@
+{
+  "openalex_id": "W2083570493",
+  "doi": "https://doi.org/10.1109/tdsc.2012.49",
+  "title": "Secure Overlay Cloud Storage with Access Control and Assured Deletion",
+  "abstract": "We can now outsource data backups off-site to third-party cloud storage services so as to reduce data management costs. However, we must provide security guarantees for the outsourced data, which is now maintained by third parties. We design and implement FADE, a secure overlay cloud storage system that achieves fine-grained, policy-based access control and file assured deletion. It associates outsourced files with file access policies, and assuredly deletes files to make them unrecoverable to anyone upon revocations of file access policies. To achieve such security goals, FADE is built upon a set of cryptographic key operations that are self-maintained by a quorum of key managers that are independent of third-party clouds. In particular, FADE acts as an overlay system that works seamlessly atop today's cloud storage services. We implement a proof-of-concept prototype of FADE atop Amazon S3, one of today's cloud storage services. We conduct extensive empirical studies, and demonstrate that FADE provides security protection for outsourced data, while introducing only minimal performance and monetary cost overhead. Our work provides insights of how to incorporate value-added security features into today's cloud storage services.",
+  "authors": [
+    {
+      "display_name": "Yang Tang",
+      "id": "A5028570509",
+      "orcid": "https://orcid.org/0000-0002-2750-8029",
+      "institutions": [
+        {
+          "id": "I78577930",
+          "display_name": "Columbia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yang Tang"
+    },
+    {
+      "display_name": "Patrick P. C. Lee",
+      "id": "A5012129385",
+      "orcid": "https://orcid.org/0000-0002-4501-4364",
+      "institutions": [
+        {
+          "id": "I177725633",
+          "display_name": "Chinese University of Hong Kong",
+          "country_code": "HK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patrick P.C. Lee"
+    },
+    {
+      "display_name": "John C. S. Lui",
+      "id": "A5068489266",
+      "orcid": "https://orcid.org/0000-0001-7466-0384",
+      "institutions": [
+        {
+          "id": "I177725633",
+          "display_name": "Chinese University of Hong Kong",
+          "country_code": "HK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John C.S. Lui"
+    },
+    {
+      "display_name": "Radia Perlman",
+      "id": "A5113716598",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1343180700",
+          "display_name": "Intel (United States)",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Radia Perlman"
+    }
+  ],
+  "publication_year": 2012,
+  "publication_date": "2012-07-03",
+  "type": "article",
+  "cited_by_count": 235,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S133795288",
+    "display_name": "IEEE Transactions on Dependable and Secure Computing",
+    "issn_l": "1545-5971",
+    "issn": [
+      "1545-5971",
+      "1941-0018",
+      "2160-9209"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320439"
+  },
+  "volume": "9",
+  "issue": "6",
+  "first_page": "903",
+  "last_page": "916",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "http://www.cs.cuhk.hk/~cslui/PUBLICATION/tdsc12_tech.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.8136965
+    },
+    {
+      "id": "C2777059624",
+      "display_name": "Cloud storage",
+      "level": 3,
+      "score": 0.7160602
+    },
+    {
+      "id": "C79974875",
+      "display_name": "Cloud computing",
+      "level": 2,
+      "score": 0.6648765
+    },
+    {
+      "id": "C527821871",
+      "display_name": "Access control",
+      "level": 2,
+      "score": 0.57247746
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.56446004
+    },
+    {
+      "id": "C46934059",
+      "display_name": "Outsourcing",
+      "level": 2,
+      "score": 0.4778209
+    },
+    {
+      "id": "C31258907",
+      "display_name": "Computer network",
+      "level": 1,
+      "score": 0.4456683
+    },
+    {
+      "id": "C2779960059",
+      "display_name": "Overhead (engineering)",
+      "level": 2,
+      "score": 0.42820257
+    },
+    {
+      "id": "C26517878",
+      "display_name": "Key (lock)",
+      "level": 2,
+      "score": 0.42477477
+    },
+    {
+      "id": "C111919701",
+      "display_name": "Operating system",
+      "level": 1,
+      "score": 0.26913494
+    },
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11614",
+      "display_name": "Cloud Data Security Solutions",
+      "score": 0.9999
+    },
+    {
+      "id": "T10237",
+      "display_name": "Cryptography and Data Security",
+      "score": 0.9996
+    },
+    {
+      "id": "T10270",
+      "display_name": "Blockchain Technology Applications and Security",
+      "score": 0.9951
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/tdsc.2012.49",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:59:57.465712",
+  "source_database": "OpenAlex"
+}

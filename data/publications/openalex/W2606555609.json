@@ -1,0 +1,2161 @@
+{
+  "openalex_id": "W2606555609",
+  "doi": "https://doi.org/10.18653/v1/2023.emnlp-main",
+  "title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+  "abstract": "Message from the Program Co-ChairsWelcome to EMNLP 2023, one of the most-attended conferences in the field of Natural Language Processing, held in \"hybrid\" mode this year serving both virtual and in-person participants in Singapore, where we have increased the number of Findings papers to be more inclusive and to showcase the diversity and quality of research in our field. Submission and AcceptanceEMNLP 2023 received 4,909 full paper submissions, the largest number to date.This number includes 134 ARR papers that were committed to EMNLP (see further discussion of ARR below).256 papers were desk rejected for various reasons (missing limitation section, anonymity policy, multiple submission policy or formatting violations), leaving us with submissions that were fully reviewed.This is a recordbreaking number of submissions, an increase of 719 submissions over last year.Based on the reviewers, area chairs and senior area chair comments, we have tried to keep the EMNLP 2023 main acceptance rates similar to previous events while increasing the number of Findings.We accepted 1,105 papers to the main conference including 9 nominated by the Computational Linguistics (CL) journal, and 49 by the Transactions of the Association of Computational Linguistics (TACL).Out of these, 234 are oral presentations and 871 poster presentations.We also accepted 1,060 papers for \"Findings of EMNLP\".Additionally, a total of 77 and 52 submissions were accepted to be presented in the Industry and Demo tracks, respectively.More statistics on the accepted papers can be found below.",
+  "authors": [
+    {
+      "display_name": "Jong Cheol Park",
+      "id": "A5100641120",
+      "orcid": "https://orcid.org/0000-0002-8859-5111",
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jong Park"
+    },
+    {
+      "display_name": "Mathieu Emily",
+      "id": "A5072252702",
+      "orcid": "https://orcid.org/0000-0001-9101-6689",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M Emily"
+    },
+    {
+      "display_name": "Niranjan Balasubramanian",
+      "id": "A5101768349",
+      "orcid": "https://orcid.org/0000-0003-4187-9368",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Niranjan Balasubramanian"
+    },
+    {
+      "display_name": "Antoine Bosselut",
+      "id": "A5088410008",
+      "orcid": "https://orcid.org/0000-0001-8968-9649",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Antoine Bosselut"
+    },
+    {
+      "display_name": "Ronan Le Bras",
+      "id": "A5024879161",
+      "orcid": "https://orcid.org/0000-0003-2439-6938",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ronan Le Bras"
+    },
+    {
+      "display_name": "Nouha Dziri",
+      "id": "A5049618494",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nouha Dziri"
+    },
+    {
+      "display_name": "Xiang Li",
+      "id": "A5100330993",
+      "orcid": "https://orcid.org/0000-0001-5471-1236",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiang Li"
+    },
+    {
+      "display_name": "Xuezhe Ma",
+      "id": "A5078672329",
+      "orcid": "https://orcid.org/0000-0001-7582-1653",
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xuezhe Ma"
+    },
+    {
+      "display_name": "Navonil Majumder",
+      "id": "A5007003459",
+      "orcid": "https://orcid.org/0000-0002-1449-617X",
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Navonil Majumder"
+    },
+    {
+      "display_name": "Debjit Paul",
+      "id": "A5042400301",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Debjit Paul"
+    },
+    {
+      "display_name": "Soujanya Poriya",
+      "id": "A5099791258",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Soujanya Poriya"
+    },
+    {
+      "display_name": "Simon Razniewski",
+      "id": "A5058717031",
+      "orcid": "https://orcid.org/0000-0002-5410-218X",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Simon Razniewski"
+    },
+    {
+      "display_name": "Dan Roth",
+      "id": "A5023802054",
+      "orcid": "https://orcid.org/0009-0002-1447-5173",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dan Roth"
+    },
+    {
+      "display_name": "Keisuke Sakagu-",
+      "id": "A5099791261",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Keisuke Sakagu- Chi"
+    },
+    {
+      "display_name": "Niket Tandon",
+      "id": "A5052882677",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Niket Tandon"
+    },
+    {
+      "display_name": "Somak Aditya",
+      "id": "A5071844229",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Somak Aditya"
+    },
+    {
+      "display_name": "Abhijnan Chakraborty",
+      "id": "A5040381142",
+      "orcid": "https://orcid.org/0000-0003-0908-1639",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Abhijnan Chakraborty"
+    },
+    {
+      "display_name": "Elena Field",
+      "id": "A5110487581",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elena Field"
+    },
+    {
+      "display_name": "Andrew Halterman",
+      "id": "A5060472601",
+      "orcid": "https://orcid.org/0000-0001-9716-9555",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew Halterman"
+    },
+    {
+      "display_name": "Abram Handler",
+      "id": "A5026207393",
+      "orcid": "https://orcid.org/0000-0002-8663-2628",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Abram Handler"
+    },
+    {
+      "display_name": "Kristen Johnson",
+      "id": "A5044758718",
+      "orcid": "https://orcid.org/0000-0003-0788-7217",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kristen Johnson"
+    },
+    {
+      "display_name": "Katherine A. Keith",
+      "id": "A5062069583",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Katherine Keith"
+    },
+    {
+      "display_name": "Ashique Khudabukhsh",
+      "id": "A5111177457",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ashique Khudabukhsh"
+    },
+    {
+      "display_name": "Srijan Kumar",
+      "id": "A5056142478",
+      "orcid": "https://orcid.org/0000-0002-5796-3532",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Srijan Kumar"
+    },
+    {
+      "display_name": "Sumeet Kumar",
+      "id": "A5010750488",
+      "orcid": "https://orcid.org/0000-0003-1214-5701",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sumeet Kumar"
+    },
+    {
+      "display_name": "Ka-Wei Lee",
+      "id": "A5100299269",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ka-Wei Lee"
+    },
+    {
+      "display_name": "Animesh Mukherjee",
+      "id": "A5020991141",
+      "orcid": "https://orcid.org/0000-0003-4534-0044",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Animesh Mukherjee"
+    },
+    {
+      "display_name": "Usman Naseem",
+      "id": "A5077006200",
+      "orcid": "https://orcid.org/0000-0003-0191-7171",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Usman Naseem"
+    },
+    {
+      "display_name": "Brendan O’Connor",
+      "id": "A5023365550",
+      "orcid": "https://orcid.org/0000-0002-6857-1614",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brendan O'connor"
+    },
+    {
+      "display_name": "Alice Oh",
+      "id": "A5054771988",
+      "orcid": "https://orcid.org/0000-0002-7884-3038",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alice Oh"
+    },
+    {
+      "display_name": "Eugenia Ha Rim Rho",
+      "id": "A5054447687",
+      "orcid": "https://orcid.org/0000-0002-0961-4397",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eugenia Rho"
+    },
+    {
+      "display_name": "Koustuv Saha",
+      "id": "A5057029055",
+      "orcid": "https://orcid.org/0000-0002-8872-2934",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Koustuv Saha"
+    },
+    {
+      "display_name": "Hannah Schwartz",
+      "id": "A5006615905",
+      "orcid": "https://orcid.org/0000-0003-3988-3798",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H Schwartz"
+    },
+    {
+      "display_name": "Qinlan Shen",
+      "id": "A5049185781",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qinlan Shen"
+    },
+    {
+      "display_name": "Rob Voigt",
+      "id": "A5070966744",
+      "orcid": "https://orcid.org/0000-0003-3743-0322",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rob Voigt"
+    },
+    {
+      "display_name": "Justine Zhang Dialogue",
+      "id": "A5099791272",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Justine Zhang Dialogue"
+    },
+    {
+      "display_name": "Interactive Technologies for Speech-Based Systems",
+      "id": "A5074178573",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Interactive Systems"
+    },
+    {
+      "display_name": "Malihe Alikhani",
+      "id": "A5025559955",
+      "orcid": "https://orcid.org/0000-0002-1315-2228",
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Malihe Alikhani"
+    },
+    {
+      "display_name": "Paul Crook",
+      "id": "A5077286440",
+      "orcid": "https://orcid.org/0000-0002-0252-0769",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul Crook"
+    },
+    {
+      "display_name": "Devamanyu Hazarika",
+      "id": "A5074760783",
+      "orcid": "https://orcid.org/0000-0002-0241-7163",
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Devamanyu Hazarika"
+    },
+    {
+      "display_name": "Simon Keizer",
+      "id": "A5062392738",
+      "orcid": "https://orcid.org/0000-0003-0173-8966",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Simon Keizer"
+    },
+    {
+      "display_name": "Yuchen Bill",
+      "id": "A5095554704",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuchen Bill"
+    },
+    {
+      "display_name": "Odhisattwa Lin",
+      "id": "A5112270922",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Odhisattwa Lin"
+    },
+    {
+      "display_name": "Alexandros Majumder",
+      "id": "A5113805856",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alexandros Majumder"
+    },
+    {
+      "display_name": "Xiaojun Papangelis",
+      "id": "A5099791273",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaojun Papangelis"
+    },
+    {
+      "display_name": "Samira Quan",
+      "id": "A5112270923",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Samira Quan"
+    },
+    {
+      "display_name": "Lei Shaikh",
+      "id": "A5099791274",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lei Shaikh"
+    },
+    {
+      "display_name": "Anthony Shu",
+      "id": "A5112868543",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anthony Shu"
+    },
+    {
+      "display_name": "Fan- Ghua Sicilia",
+      "id": "A5099791275",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fan- Ghua Sicilia"
+    },
+    {
+      "display_name": "Ye Zhou",
+      "id": "A5021737513",
+      "orcid": "https://orcid.org/0000-0003-3644-1847",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhou Ye"
+    },
+    {
+      "display_name": "Yi Yu",
+      "id": "A5100745222",
+      "orcid": "https://orcid.org/0000-0002-0294-6620",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yi Yu"
+    },
+    {
+      "display_name": "Pragmatics Zhang Discourse",
+      "id": "A5099791276",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pragmatics Zhang Discourse"
+    },
+    {
+      "display_name": "Yufang Hardmeier",
+      "id": "A5099791277",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yufang Hardmeier"
+    },
+    {
+      "display_name": "Feng Hou",
+      "id": "A5101193260",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Feng Hou"
+    },
+    {
+      "display_name": "ShaoHua Jiang",
+      "id": "A5112270924",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shafiq Jiang"
+    },
+    {
+      "display_name": "Murathan Joty",
+      "id": "A5099791278",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Murathan Joty"
+    },
+    {
+      "display_name": "Ekaterina Kurfalı",
+      "id": "A5099791279",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ekaterina Kurfalı"
+    },
+    {
+      "display_name": "Jessy Junyi",
+      "id": "A5099791280",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jessy Junyi"
+    },
+    {
+      "display_name": "Janet Yang",
+      "id": "A5101920284",
+      "orcid": "https://orcid.org/0000-0002-4237-7493",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Janet Yang"
+    },
+    {
+      "display_name": "Sharid Liu",
+      "id": "A5100299270",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sharid Liu"
+    },
+    {
+      "display_name": "Vincent Loáiciga",
+      "id": "A5099791281",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vincent Loáiciga"
+    },
+    {
+      "display_name": "Tatjana Ng",
+      "id": "A5110487582",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tatjana Ng"
+    },
+    {
+      "display_name": "Seba- Stian Scheffler",
+      "id": "A5099791282",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Seba- Stian Scheffler"
+    },
+    {
+      "display_name": "Manfred Schuster",
+      "id": "A5110487583",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Manfred Schuster"
+    },
+    {
+      "display_name": "Juntao Stede",
+      "id": "A5099791283",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Juntao Stede"
+    },
+    {
+      "display_name": "Amir Yu",
+      "id": "A5102262241",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amir Yu"
+    },
+    {
+      "display_name": "Cody Zeldes",
+      "id": "A5099791284",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cody Zeldes"
+    },
+    {
+      "display_name": "Patrick Blakeney",
+      "id": "A5099791285",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Patrick Blakeney"
+    },
+    {
+      "display_name": "Hsiang‐Ting Chen",
+      "id": "A5036805602",
+      "orcid": "https://orcid.org/0000-0003-0873-2698",
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tim Chen"
+    },
+    {
+      "display_name": "Beyza Dettmers",
+      "id": "A5099791286",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Beyza Dettmers"
+    },
+    {
+      "display_name": "Utku Ermis",
+      "id": "A5099791287",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Utku Ermis"
+    },
+    {
+      "display_name": "Sara Evci",
+      "id": "A5099791288",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sara Evci"
+    },
+    {
+      "display_name": "Yuhang Hooker",
+      "id": "A5099791289",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuhang Hooker"
+    },
+    {
+      "display_name": "Bradley Li",
+      "id": "A5100299271",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bradley Li"
+    },
+    {
+      "display_name": "Vishvak Mcdanel",
+      "id": "A5099791290",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vishvak Mcdanel"
+    },
+    {
+      "display_name": "Jonas Murahari",
+      "id": "A5099791291",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonas Murahari"
+    },
+    {
+      "display_name": "E. W. Pfeiffer",
+      "id": "A5111848476",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Edoardo Pfeiffer"
+    },
+    {
+      "display_name": "Mohammad Ponti",
+      "id": "A5110487584",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mohammad Ponti"
+    },
+    {
+      "display_name": "An- Dreas Rostami",
+      "id": "A5099791292",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "An- Dreas Rostami"
+    },
+    {
+      "display_name": "Tal Rücklé",
+      "id": "A5099791293",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tal Rücklé"
+    },
+    {
+      "display_name": "Roy Schuster",
+      "id": "A5108628289",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Roy Schuster"
+    },
+    {
+      "display_name": "Dustin Schwartz",
+      "id": "A5103746401",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dustin Schwartz"
+    },
+    {
+      "display_name": "Mengzhou Wright",
+      "id": "A5112270925",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mengzhou Wright"
+    },
+    {
+      "display_name": "Ahmet Xia",
+      "id": "A5113805857",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ahmet Xia"
+    },
+    {
+      "display_name": "Ethics In Üstün",
+      "id": "A5081132292",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ethics In Üstün"
+    },
+    {
+      "display_name": "Marta Nlp",
+      "id": "A5099791294",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marta Nlp"
+    },
+    {
+      "display_name": "Kathleen Costa-Jussà",
+      "id": "A5099791295",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kathleen Costa-Jussà"
+    },
+    {
+      "display_name": "Lea Fraser",
+      "id": "A5105367593",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lea Fraser"
+    },
+    {
+      "display_name": "Dirk Frermann",
+      "id": "A5099791296",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dirk Frermann"
+    },
+    {
+      "display_name": "Anne Hovy",
+      "id": "A5099791297",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anne Hovy"
+    },
+    {
+      "display_name": "Margot Lauscher",
+      "id": "A5112270926",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Margot Lauscher"
+    },
+    {
+      "display_name": "Preslav Mie- Skes",
+      "id": "A5099791298",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Preslav Mie- Skes"
+    },
+    {
+      "display_name": "Debora Nakov",
+      "id": "A5099791299",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Debora Nakov"
+    },
+    {
+      "display_name": "Chan Nozza",
+      "id": "A5099791300",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chan Nozza"
+    },
+    {
+      "display_name": "S.-Y. PARK",
+      "id": "A5111704845",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        },
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sherif Park"
+    },
+    {
+      "display_name": "Zeerak Saad",
+      "id": "A5110487585",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zeerak Saad"
+    },
+    {
+      "display_name": "Jieyu Talat",
+      "id": "A5099791301",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jieyu Talat"
+    },
+    {
+      "display_name": "Human-Centered Zhao",
+      "id": "A5108628290",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Human-Centered Zhao"
+    },
+    {
+      "display_name": "Cecilia Nlp",
+      "id": "A5099791302",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cecilia Nlp"
+    },
+    {
+      "display_name": "J. Alm",
+      "id": "A5110548050",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210126580",
+          "display_name": "RIKEN Center for Advanced Intelligence Project",
+          "country_code": "JP",
+          "type": "facility"
+        },
+        {
+          "id": "I4210096147",
+          "display_name": "Mongolia International University",
+          "country_code": "MN",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeffrey Alm"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-01-01",
+  "type": "paratext",
+  "cited_by_count": 373,
+  "is_retracted": false,
+  "is_paratext": true,
+  "language": "en",
+  "source": {
+    "id": "S4363608991",
+    "display_name": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2023.emnlp-main.0.pdf",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.71162117
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.39495826
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.2015
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2023.emnlp-main",
+  "pdf_url": "https://aclanthology.org/2023.emnlp-main.0.pdf",
+  "retrieved_date": "2025-07-30T14:29:32.316380",
+  "source_database": "OpenAlex"
+}

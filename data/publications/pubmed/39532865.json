@@ -1,0 +1,267 @@
+{
+  "pmid": "39532865",
+  "uid": "39532865",
+  "title": "Inter-chromosomal contacts demarcate genome topology along a spatial gradient.",
+  "abstract": "Non-homologous chromosomal contacts (NHCCs) between different chromosomes participate considerably in gene and genome regulation. Due to analytical challenges, NHCCs are currently considered as singular, stochastic events, and their extent and fundamental principles across cell types remain controversial. We develop a supervised and unsupervised learning algorithm, termed Signature, to call NHCCs in Hi-C datasets to advance our understanding of genome topology. Signature reveals 40,282 NHCCs and their properties across 62 Hi-C datasets of 53 diploid human cell types. Genomic regions of NHCCs are gene-dense, highly expressed, and harbor genes for cell-specific and sex-specific functions. Extensive inter-telomeric and inter-centromeric clustering occurs across cell types [Rabl's configuration] and 61 NHCCs are consistently found at the nuclear speckles. These constitutive 'anchor loci' facilitate an axis of genome activity whilst cell-type-specific NHCCs act in discrete hubs. Our results suggest that non-random chromosome positioning is supported by constitutive NHCCs that shape genome topology along an off-centered spatial gradient of genome activity.",
+  "authors": [
+    {
+      "last_name": "Mokhtaridoost",
+      "fore_name": "Milad",
+      "initials": "M",
+      "name": "Milad Mokhtaridoost",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada."
+      ],
+      "orcid": "0000-0001-6185-4251"
+    },
+    {
+      "last_name": "Chalmers",
+      "fore_name": "Jordan J",
+      "initials": "JJ",
+      "name": "Jordan J Chalmers",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, ON, M5S 1A8, Canada."
+      ],
+      "orcid": "0000-0002-8656-3386"
+    },
+    {
+      "last_name": "Soleimanpoor",
+      "fore_name": "Marzieh",
+      "initials": "M",
+      "name": "Marzieh Soleimanpoor",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada."
+      ],
+      "orcid": "0009-0008-5524-6928"
+    },
+    {
+      "last_name": "McMurray",
+      "fore_name": "Brandon J",
+      "initials": "BJ",
+      "name": "Brandon J McMurray",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada."
+      ],
+      "orcid": "0000-0003-3394-0667"
+    },
+    {
+      "last_name": "Lato",
+      "fore_name": "Daniella F",
+      "initials": "DF",
+      "name": "Daniella F Lato",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada."
+      ],
+      "orcid": "0000-0002-9263-8532"
+    },
+    {
+      "last_name": "Nguyen",
+      "fore_name": "Son C",
+      "initials": "SC",
+      "name": "Son C Nguyen",
+      "affiliations": [
+        "Penn Epigenetics Institute, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA.",
+        "Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ],
+      "orcid": "0000-0003-2187-1027"
+    },
+    {
+      "last_name": "Musienko",
+      "fore_name": "Viktoria",
+      "initials": "V",
+      "name": "Viktoria Musienko",
+      "affiliations": [
+        "Jena University Hospital, Friedrich Schiller University, Institute of Human Genetics, Am Klinikum 1, 07747, Jena, Germany."
+      ]
+    },
+    {
+      "last_name": "Nash",
+      "fore_name": "Joshua O",
+      "initials": "JO",
+      "name": "Joshua O Nash",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada.",
+        "Laboratory of Medicine and Pathobiology, University of Toronto, Toronto, ON, Canada."
+      ],
+      "orcid": "0009-0003-2718-2262"
+    },
+    {
+      "last_name": "Espeso-Gil",
+      "fore_name": "Sergio",
+      "initials": "S",
+      "name": "Sergio Espeso-Gil",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada."
+      ],
+      "orcid": "0000-0001-9145-3870"
+    },
+    {
+      "last_name": "Ahmed",
+      "fore_name": "Sameen",
+      "initials": "S",
+      "name": "Sameen Ahmed",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, ON, M5S 1A8, Canada."
+      ]
+    },
+    {
+      "last_name": "Delfosse",
+      "fore_name": "Kate",
+      "initials": "K",
+      "name": "Kate Delfosse",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada."
+      ]
+    },
+    {
+      "last_name": "Browning",
+      "fore_name": "Jared W L",
+      "initials": "JWL",
+      "name": "Jared W L Browning",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, ON, M5S 1A8, Canada."
+      ]
+    },
+    {
+      "last_name": "Barutcu",
+      "fore_name": "A Rasim",
+      "initials": "AR",
+      "name": "A Rasim Barutcu",
+      "affiliations": [
+        "Donnelly Centre, University of Toronto, Toronto, ON, M5S 3E1, Canada."
+      ],
+      "orcid": "0000-0002-4838-8695"
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael D",
+      "initials": "MD",
+      "name": "Michael D Wilson",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, ON, M5S 1A8, Canada."
+      ],
+      "orcid": "0000-0002-4015-3066"
+    },
+    {
+      "last_name": "Liehr",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Liehr",
+      "affiliations": [
+        "Jena University Hospital, Friedrich Schiller University, Institute of Human Genetics, Am Klinikum 1, 07747, Jena, Germany."
+      ],
+      "orcid": "0000-0003-1672-3054"
+    },
+    {
+      "last_name": "Shlien",
+      "fore_name": "Adam",
+      "initials": "A",
+      "name": "Adam Shlien",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada.",
+        "Laboratory of Medicine and Pathobiology, University of Toronto, Toronto, ON, Canada."
+      ],
+      "orcid": "0000-0002-0368-5370"
+    },
+    {
+      "last_name": "Aref",
+      "fore_name": "Samin",
+      "initials": "S",
+      "name": "Samin Aref",
+      "affiliations": [
+        "Department of Mechanical and Industrial Engineering, University of Toronto, Toronto, ON, M5S3G8, Canada."
+      ],
+      "orcid": "0000-0002-5870-9253"
+    },
+    {
+      "last_name": "Joyce",
+      "fore_name": "Eric F",
+      "initials": "EF",
+      "name": "Eric F Joyce",
+      "affiliations": [
+        "Penn Epigenetics Institute, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA.",
+        "Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Weise",
+      "fore_name": "Anja",
+      "initials": "A",
+      "name": "Anja Weise",
+      "affiliations": [
+        "Jena University Hospital, Friedrich Schiller University, Institute of Human Genetics, Am Klinikum 1, 07747, Jena, Germany."
+      ]
+    },
+    {
+      "last_name": "Maass",
+      "fore_name": "Philipp G",
+      "initials": "PG",
+      "name": "Philipp G Maass",
+      "affiliations": [
+        "Genetics and Genome Biology Program, SickKids Research Institute, Toronto, ON, M5G 0A4, Canada. philipp.maass@sickkids.ca.",
+        "Department of Molecular Genetics, University of Toronto, Toronto, ON, M5S 1A8, Canada. philipp.maass@sickkids.ca."
+      ],
+      "orcid": "0000-0002-2742-8301"
+    }
+  ],
+  "journal": {
+    "title": "Nature communications",
+    "iso_abbreviation": "Nat Commun",
+    "issn": "2041-1723",
+    "issn_type": "Electronic",
+    "volume": "15",
+    "issue": "1",
+    "pub_year": "2024",
+    "pub_month": "Nov",
+    "pub_day": "13"
+  },
+  "start_page": "9813",
+  "pages": "9813",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Humans",
+    "Genome, Human",
+    "Chromosomes, Human",
+    "Algorithms",
+    "Centromere",
+    "Telomere",
+    "Chromosome Positioning",
+    "Female"
+  ],
+  "article_ids": {
+    "pubmed": "39532865",
+    "pmc": "PMC11557711",
+    "doi": "10.1038/s41467-024-53983-y",
+    "pii": "10.1038/s41467-024-53983-y"
+  },
+  "doi": "10.1038/s41467-024-53983-y",
+  "pmc_id": "PMC11557711",
+  "dates": {
+    "completed": "2024-11-12",
+    "revised": "2025-05-21"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "PJT 173542",
+      "agency": "Gouvernement du Canada | Instituts de Recherche en Santé du Canada | CIHR Skin Research Training Centre (Skin Research Training Centre)"
+    },
+    {
+      "grant_id": "RGPIN-2020-04180",
+      "agency": "Canadian Network for Research and Innovation in Machining Technology, Natural Sciences and Engineering Research Council of Canada (NSERC Canadian Network for Research and Innovation in Machining Technology)"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.881659",
+    "pmid": "39532865"
+  }
+}

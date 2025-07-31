@@ -1,0 +1,185 @@
+{
+  "openalex_id": "W4390956207",
+  "doi": "https://doi.org/10.1109/jstars.2024.3355220",
+  "title": "ANED-Net: Adaptive Noise Estimation and Despeckling Network for SAR Image",
+  "abstract": "Synthetic aperture radar (SAR) images are often affected by a type of multiplicative noise known as \"speckle\" due to their active imaging characteristics.This property complicates the processing and interpretation of SAR images. While deep learning techniques have demonstrated success in despeckling many models are tailored to specific noise levels. This specificity can limit a model's ability to generalize to real SAR images with varying noise levels, potentially leading to over-smoothing or over-focusing on specific details. To address these challenges, we present the Adaptive Noise Estimation and Despeckling Network (ANED-Net). This network consists of a noise-level estimation phase and a noise-level-guided non-blind denoising phase. During the non-blind denoising phase, we develop a Noise Feature-Guided Denoising Network (NFGDN). This network integrates a hierarchical encoder-decoder denoising module based on the Transformer block (T-unet) and a Denoising Enhancement Control (DEC) block. Together, they skillfully capture both local and global dependencies inherent in SAR images, facilitating effective noise removal. Furthermore, we also introduce a Deep-attention mechanism to counteract the attentional collapse observed when the Transformer is extended in depth, enhancing the network's feature extraction capability and strengthening the model's denoising performance. Extensive tests on synthetic and real images show that ANED-Net is robust to different noise scenarios. It effectively mitigates speckle noise even at unspecified levels, and outperforms many established methods.",
+  "authors": [
+    {
+      "display_name": "Xu Wang",
+      "id": "A5004246719",
+      "orcid": "https://orcid.org/0000-0003-1266-5547",
+      "institutions": [
+        {
+          "id": "I151727225",
+          "display_name": "Harbin Engineering University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xu Wang"
+    },
+    {
+      "display_name": "Yanxia Wu",
+      "id": "A5027083552",
+      "orcid": "https://orcid.org/0000-0001-8384-9234",
+      "institutions": [
+        {
+          "id": "I151727225",
+          "display_name": "Harbin Engineering University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yanxia Wu"
+    },
+    {
+      "display_name": "Changting Shi",
+      "id": "A5088221094",
+      "orcid": "https://orcid.org/0000-0002-3912-0099",
+      "institutions": [
+        {
+          "id": "I151727225",
+          "display_name": "Harbin Engineering University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Changting Shi"
+    },
+    {
+      "display_name": "Ye Yuan",
+      "id": "A5067180512",
+      "orcid": "https://orcid.org/0000-0002-8210-5054",
+      "institutions": [
+        {
+          "id": "I151727225",
+          "display_name": "Harbin Engineering University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ye Yuan"
+    },
+    {
+      "display_name": "Xue Zhang",
+      "id": "A5103087364",
+      "orcid": "https://orcid.org/0009-0004-7567-8614",
+      "institutions": [
+        {
+          "id": "I151727225",
+          "display_name": "Harbin Engineering University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xue Zhang"
+    }
+  ],
+  "publication_year": 2024,
+  "publication_date": "2024-01-01",
+  "type": "article",
+  "cited_by_count": 4,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S117727964",
+    "display_name": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "issn_l": "1939-1404",
+    "issn": [
+      "1939-1404",
+      "2151-1535"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "17",
+  "issue": null,
+  "first_page": "4036",
+  "last_page": "4051",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://ieeexplore.ieee.org/ielx7/4609443/4609444/10401972.pdf",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.6846302
+    },
+    {
+      "id": "C99498987",
+      "display_name": "Noise (video)",
+      "level": 3,
+      "score": 0.5901088
+    },
+    {
+      "id": "C87360688",
+      "display_name": "Synthetic aperture radar",
+      "level": 2,
+      "score": 0.5215661
+    },
+    {
+      "id": "C29265498",
+      "display_name": "Noise measurement",
+      "level": 3,
+      "score": 0.5110661
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.49722603
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.42936093
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.40253043
+    },
+    {
+      "id": "C163294075",
+      "display_name": "Noise reduction",
+      "level": 2,
+      "score": 0.25881928
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10688",
+      "display_name": "Image and Signal Denoising Methods",
+      "score": 0.9999
+    },
+    {
+      "id": "T11038",
+      "display_name": "Advanced SAR Imaging Techniques",
+      "score": 0.9956
+    },
+    {
+      "id": "T10271",
+      "display_name": "Seismic Imaging and Inversion Techniques",
+      "score": 0.9956
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/jstars.2024.3355220",
+  "pdf_url": "https://ieeexplore.ieee.org/ielx7/4609443/4609444/10401972.pdf",
+  "retrieved_date": "2025-07-30T16:04:56.486590",
+  "source_database": "OpenAlex"
+}

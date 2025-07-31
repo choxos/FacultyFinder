@@ -1,0 +1,352 @@
+{
+  "openalex_id": "W3202255162",
+  "doi": "https://doi.org/10.1029/2021ms002520",
+  "title": "Coupling the U.K. Earth System Model to Dynamic Models of the Greenland and Antarctic Ice Sheets",
+  "abstract": "Abstract The physical interactions between ice sheets and the atmosphere and ocean around them are major factors in determining the state of the climate system, yet many current Earth System models omit them entirely or treat them very simply. In this work we describe how models of the Greenland and Antarctic ice sheets have been incorporated into the global U.K. Earth System model (UKESM1) via substantial technical developments with a two‐way coupling that passes fluxes of energy and water, and the topography of the ice sheet surface and ice shelf base, between the component models. File‐based coupling outside the running model executables is used throughout to pass information between the components, which we show is both physically appropriate and convenient within the UKESM1 structure. Ice sheet surface mass balance is computed in the land surface model using multi‐layer snowpacks in subgrid‐scale elevation ranges and compares well to the results of regional climate models. Ice shelf front discharge forms icebergs, which drift and melt in the ocean. Ice shelf basal mass balance is simulated using the full three‐dimensional ocean model representation of the circulation in ice‐shelf cavities. We show a range of example results, including from simulations with changes in ice sheet height and thickness of hundreds of meters, and changes in ice sheet grounding line and land‐terminating margin of many tens of kilometres, demonstrating that the coupled model is computationally stable when subject to significant changes in ice sheet geometry.",
+  "authors": [
+    {
+      "display_name": "Robin S. Smith",
+      "id": "A5040802558",
+      "orcid": "https://orcid.org/0000-0001-7479-7778",
+      "institutions": [
+        {
+          "id": "I71052956",
+          "display_name": "University of Reading",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Robin S. Smith"
+    },
+    {
+      "display_name": "Pierre Mathiot",
+      "id": "A5066489861",
+      "orcid": "https://orcid.org/0000-0002-2001-0762",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I899635006",
+          "display_name": "Université Grenoble Alpes",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pierre Mathiot"
+    },
+    {
+      "display_name": "Antony Siahaan",
+      "id": "A5012451413",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1319328641",
+          "display_name": "British Antarctic Survey",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Antony Siahaan"
+    },
+    {
+      "display_name": "Victoria Lee",
+      "id": "A5106085115",
+      "orcid": "https://orcid.org/0000-0003-2244-4756",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Victoria Lee"
+    },
+    {
+      "display_name": "Stephen Cornford",
+      "id": "A5027937656",
+      "orcid": "https://orcid.org/0000-0003-1844-274X",
+      "institutions": [
+        {
+          "id": "I39586589",
+          "display_name": "Swansea University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephen L. Cornford"
+    },
+    {
+      "display_name": "Jonathan M. Gregory",
+      "id": "A5052200612",
+      "orcid": "https://orcid.org/0000-0003-1296-8644",
+      "institutions": [
+        {
+          "id": "I71052956",
+          "display_name": "University of Reading",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan M. Gregory"
+    },
+    {
+      "display_name": "A. J. Payne",
+      "id": "A5031669742",
+      "orcid": "https://orcid.org/0000-0001-8825-8425",
+      "institutions": [
+        {
+          "id": "I36234482",
+          "display_name": "University of Bristol",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Antony J. Payne"
+    },
+    {
+      "display_name": "Adrian Jenkins",
+      "id": "A5057113419",
+      "orcid": "https://orcid.org/0000-0002-9117-0616",
+      "institutions": [
+        {
+          "id": "I1319328641",
+          "display_name": "British Antarctic Survey",
+          "country_code": "GB",
+          "type": "government"
+        },
+        {
+          "id": "I32394136",
+          "display_name": "Northumbria University",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Adrian Jenkins"
+    },
+    {
+      "display_name": "Paul R. Holland",
+      "id": "A5087976683",
+      "orcid": "https://orcid.org/0000-0001-8370-289X",
+      "institutions": [
+        {
+          "id": "I1319328641",
+          "display_name": "British Antarctic Survey",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Paul R. Holland"
+    },
+    {
+      "display_name": "Jeff Ridley",
+      "id": "A5088002256",
+      "orcid": "https://orcid.org/0000-0002-2612-9924",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeff K. Ridley"
+    },
+    {
+      "display_name": "Colin Jones",
+      "id": "A5088643928",
+      "orcid": "https://orcid.org/0000-0002-7221-8127",
+      "institutions": [
+        {
+          "id": "I130828816",
+          "display_name": "University of Leeds",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Colin G. Jones"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-09-29",
+  "type": "article",
+  "cited_by_count": 103,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S185824406",
+    "display_name": "Journal of Advances in Modeling Earth Systems",
+    "issn_l": "1942-2466",
+    "issn": [
+      "1942-2466"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "13",
+  "issue": "10",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2021MS002520",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.73374015
+    },
+    {
+      "id": "C123750103",
+      "display_name": "Ice sheet",
+      "level": 2,
+      "score": 0.7058177
+    },
+    {
+      "id": "C174252726",
+      "display_name": "Ice divide",
+      "level": 5,
+      "score": 0.6421211
+    },
+    {
+      "id": "C87547467",
+      "display_name": "Ice shelf",
+      "level": 4,
+      "score": 0.6334151
+    },
+    {
+      "id": "C134543767",
+      "display_name": "Ice-sheet model",
+      "level": 5,
+      "score": 0.63226175
+    },
+    {
+      "id": "C81820708",
+      "display_name": "Ice stream",
+      "level": 4,
+      "score": 0.54097575
+    },
+    {
+      "id": "C2780021526",
+      "display_name": "Greenland ice sheet",
+      "level": 3,
+      "score": 0.5101262
+    },
+    {
+      "id": "C12481700",
+      "display_name": "Iceberg",
+      "level": 3,
+      "score": 0.50060296
+    },
+    {
+      "id": "C2780223605",
+      "display_name": "Antarctic ice sheet",
+      "level": 4,
+      "score": 0.49341932
+    },
+    {
+      "id": "C16335420",
+      "display_name": "Antarctic sea ice",
+      "level": 4,
+      "score": 0.46433485
+    },
+    {
+      "id": "C197435368",
+      "display_name": "Cryosphere",
+      "level": 3,
+      "score": 0.44401687
+    },
+    {
+      "id": "C161798024",
+      "display_name": "Arctic ice pack",
+      "level": 3,
+      "score": 0.43739727
+    },
+    {
+      "id": "C136894858",
+      "display_name": "Sea ice",
+      "level": 2,
+      "score": 0.4363427
+    },
+    {
+      "id": "C126603772",
+      "display_name": "Sea ice growth processes",
+      "level": 5,
+      "score": 0.41619846
+    },
+    {
+      "id": "C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "score": 0.41134894
+    },
+    {
+      "id": "C8058405",
+      "display_name": "Geophysics",
+      "level": 1,
+      "score": 0.3736354
+    },
+    {
+      "id": "C111368507",
+      "display_name": "Oceanography",
+      "level": 1,
+      "score": 0.2042557
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10644",
+      "display_name": "Cryospheric studies and observations",
+      "score": 1.0
+    },
+    {
+      "id": "T11333",
+      "display_name": "Climate change and permafrost",
+      "score": 0.9964
+    },
+    {
+      "id": "T10017",
+      "display_name": "Geology and Paleoclimatology Research",
+      "score": 0.996
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1029/2021ms002520",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2021MS002520",
+  "retrieved_date": "2025-07-30T15:33:18.581048",
+  "source_database": "OpenAlex"
+}

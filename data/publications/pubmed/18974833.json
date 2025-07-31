@@ -1,0 +1,509 @@
+{
+  "pmid": "18974833",
+  "uid": "18974833",
+  "title": "Concept, design and implementation of a cardiovascular gene-centric 50 k SNP array for large-scale genomic association studies.",
+  "abstract": "A wealth of genetic associations for cardiovascular and metabolic phenotypes in humans has been accumulating over the last decade, in particular a large number of loci derived from recent genome wide association studies (GWAS). True complex disease-associated loci often exert modest effects, so their delineation currently requires integration of diverse phenotypic data from large studies to ensure robust meta-analyses. We have designed a gene-centric 50 K single nucleotide polymorphism (SNP) array to assess potentially relevant loci across a range of cardiovascular, metabolic and inflammatory syndromes. The array utilizes a \"cosmopolitan\" tagging approach to capture the genetic diversity across approximately 2,000 loci in populations represented in the HapMap and SeattleSNPs projects. The array content is informed by GWAS of vascular and inflammatory disease, expression quantitative trait loci implicated in atherosclerosis, pathway based approaches and comprehensive literature searching. The custom flexibility of the array platform facilitated interrogation of loci at differing stringencies, according to a gene prioritization strategy that allows saturation of high priority loci with a greater density of markers than the existing GWAS tools, particularly in African HapMap samples. We also demonstrate that the IBC array can be used to complement GWAS, increasing coverage in high priority CVD-related loci across all major HapMap populations. DNA from over 200,000 extensively phenotyped individuals will be genotyped with this array with a significant portion of the generated data being released into the academic domain facilitating in silico replication attempts, analyses of rare variants and cross-cohort meta-analyses in diverse populations. These datasets will also facilitate more robust secondary analyses, such as explorations with alternative genetic models, epistasis and gene-environment interactions.",
+  "authors": [
+    {
+      "last_name": "Keating",
+      "fore_name": "Brendan J",
+      "initials": "BJ",
+      "name": "Brendan J Keating",
+      "affiliations": [
+        "The Institute for Translational Medicine and Therapeutics, School of Medicine, University of Pennsylvania, Philadelphia, Pennsylvannia, USA."
+      ]
+    },
+    {
+      "last_name": "Tischfield",
+      "fore_name": "Sam",
+      "initials": "S",
+      "name": "Sam Tischfield",
+      "affiliations": []
+    },
+    {
+      "last_name": "Murray",
+      "fore_name": "Sarah S",
+      "initials": "SS",
+      "name": "Sarah S Murray",
+      "affiliations": []
+    },
+    {
+      "last_name": "Bhangale",
+      "fore_name": "Tushar",
+      "initials": "T",
+      "name": "Tushar Bhangale",
+      "affiliations": []
+    },
+    {
+      "last_name": "Price",
+      "fore_name": "Thomas S",
+      "initials": "TS",
+      "name": "Thomas S Price",
+      "affiliations": []
+    },
+    {
+      "last_name": "Glessner",
+      "fore_name": "Joseph T",
+      "initials": "JT",
+      "name": "Joseph T Glessner",
+      "affiliations": []
+    },
+    {
+      "last_name": "Galver",
+      "fore_name": "Luana",
+      "initials": "L",
+      "name": "Luana Galver",
+      "affiliations": []
+    },
+    {
+      "last_name": "Barrett",
+      "fore_name": "Jeffrey C",
+      "initials": "JC",
+      "name": "Jeffrey C Barrett",
+      "affiliations": []
+    },
+    {
+      "last_name": "Grant",
+      "fore_name": "Struan F A",
+      "initials": "SF",
+      "name": "Struan F A Grant",
+      "affiliations": []
+    },
+    {
+      "last_name": "Farlow",
+      "fore_name": "Deborah N",
+      "initials": "DN",
+      "name": "Deborah N Farlow",
+      "affiliations": []
+    },
+    {
+      "last_name": "Chandrupatla",
+      "fore_name": "Hareesh R",
+      "initials": "HR",
+      "name": "Hareesh R Chandrupatla",
+      "affiliations": []
+    },
+    {
+      "last_name": "Hansen",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Hansen",
+      "affiliations": []
+    },
+    {
+      "last_name": "Ajmal",
+      "fore_name": "Saad",
+      "initials": "S",
+      "name": "Saad Ajmal",
+      "affiliations": []
+    },
+    {
+      "last_name": "Papanicolaou",
+      "fore_name": "George J",
+      "initials": "GJ",
+      "name": "George J Papanicolaou",
+      "affiliations": []
+    },
+    {
+      "last_name": "Guo",
+      "fore_name": "Yiran",
+      "initials": "Y",
+      "name": "Yiran Guo",
+      "affiliations": []
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Mingyao",
+      "initials": "M",
+      "name": "Mingyao Li",
+      "affiliations": []
+    },
+    {
+      "last_name": "Derohannessian",
+      "fore_name": "Stephanie",
+      "initials": "S",
+      "name": "Stephanie Derohannessian",
+      "affiliations": []
+    },
+    {
+      "last_name": "de Bakker",
+      "fore_name": "Paul I W",
+      "initials": "PI",
+      "name": "Paul I W de Bakker",
+      "affiliations": []
+    },
+    {
+      "last_name": "Bailey",
+      "fore_name": "Swneke D",
+      "initials": "SD",
+      "name": "Swneke D Bailey",
+      "affiliations": []
+    },
+    {
+      "last_name": "Montpetit",
+      "fore_name": "Alexandre",
+      "initials": "A",
+      "name": "Alexandre Montpetit",
+      "affiliations": []
+    },
+    {
+      "last_name": "Edmondson",
+      "fore_name": "Andrew C",
+      "initials": "AC",
+      "name": "Andrew C Edmondson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Taylor",
+      "fore_name": "Kent",
+      "initials": "K",
+      "name": "Kent Taylor",
+      "affiliations": []
+    },
+    {
+      "last_name": "Gai",
+      "fore_name": "Xiaowu",
+      "initials": "X",
+      "name": "Xiaowu Gai",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Susanna S",
+      "initials": "SS",
+      "name": "Susanna S Wang",
+      "affiliations": []
+    },
+    {
+      "last_name": "Fornage",
+      "fore_name": "Myriam",
+      "initials": "M",
+      "name": "Myriam Fornage",
+      "affiliations": []
+    },
+    {
+      "last_name": "Shaikh",
+      "fore_name": "Tamim",
+      "initials": "T",
+      "name": "Tamim Shaikh",
+      "affiliations": []
+    },
+    {
+      "last_name": "Groop",
+      "fore_name": "Leif",
+      "initials": "L",
+      "name": "Leif Groop",
+      "affiliations": []
+    },
+    {
+      "last_name": "Boehnke",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Boehnke",
+      "affiliations": []
+    },
+    {
+      "last_name": "Hall",
+      "fore_name": "Alistair S",
+      "initials": "AS",
+      "name": "Alistair S Hall",
+      "affiliations": []
+    },
+    {
+      "last_name": "Hattersley",
+      "fore_name": "Andrew T",
+      "initials": "AT",
+      "name": "Andrew T Hattersley",
+      "affiliations": []
+    },
+    {
+      "last_name": "Frackelton",
+      "fore_name": "Edward",
+      "initials": "E",
+      "name": "Edward Frackelton",
+      "affiliations": []
+    },
+    {
+      "last_name": "Patterson",
+      "fore_name": "Nick",
+      "initials": "N",
+      "name": "Nick Patterson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Chiang",
+      "fore_name": "Charleston W K",
+      "initials": "CW",
+      "name": "Charleston W K Chiang",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Cecelia E",
+      "initials": "CE",
+      "name": "Cecelia E Kim",
+      "affiliations": []
+    },
+    {
+      "last_name": "Fabsitz",
+      "fore_name": "Richard R",
+      "initials": "RR",
+      "name": "Richard R Fabsitz",
+      "affiliations": []
+    },
+    {
+      "last_name": "Ouwehand",
+      "fore_name": "Willem",
+      "initials": "W",
+      "name": "Willem Ouwehand",
+      "affiliations": []
+    },
+    {
+      "last_name": "Price",
+      "fore_name": "Alkes L",
+      "initials": "AL",
+      "name": "Alkes L Price",
+      "affiliations": []
+    },
+    {
+      "last_name": "Munroe",
+      "fore_name": "Patricia",
+      "initials": "P",
+      "name": "Patricia Munroe",
+      "affiliations": []
+    },
+    {
+      "last_name": "Caulfield",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Caulfield",
+      "affiliations": []
+    },
+    {
+      "last_name": "Drake",
+      "fore_name": "Thomas",
+      "initials": "T",
+      "name": "Thomas Drake",
+      "affiliations": []
+    },
+    {
+      "last_name": "Boerwinkle",
+      "fore_name": "Eric",
+      "initials": "E",
+      "name": "Eric Boerwinkle",
+      "affiliations": []
+    },
+    {
+      "last_name": "Reich",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Reich",
+      "affiliations": []
+    },
+    {
+      "last_name": "Whitehead",
+      "fore_name": "A Stephen",
+      "initials": "AS",
+      "name": "A Stephen Whitehead",
+      "affiliations": []
+    },
+    {
+      "last_name": "Cappola",
+      "fore_name": "Thomas P",
+      "initials": "TP",
+      "name": "Thomas P Cappola",
+      "affiliations": []
+    },
+    {
+      "last_name": "Samani",
+      "fore_name": "Nilesh J",
+      "initials": "NJ",
+      "name": "Nilesh J Samani",
+      "affiliations": []
+    },
+    {
+      "last_name": "Lusis",
+      "fore_name": "A Jake",
+      "initials": "AJ",
+      "name": "A Jake Lusis",
+      "affiliations": []
+    },
+    {
+      "last_name": "Schadt",
+      "fore_name": "Eric",
+      "initials": "E",
+      "name": "Eric Schadt",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "James G",
+      "initials": "JG",
+      "name": "James G Wilson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Koenig",
+      "fore_name": "Wolfgang",
+      "initials": "W",
+      "name": "Wolfgang Koenig",
+      "affiliations": []
+    },
+    {
+      "last_name": "McCarthy",
+      "fore_name": "Mark I",
+      "initials": "MI",
+      "name": "Mark I McCarthy",
+      "affiliations": []
+    },
+    {
+      "last_name": "Kathiresan",
+      "fore_name": "Sekar",
+      "initials": "S",
+      "name": "Sekar Kathiresan",
+      "affiliations": []
+    },
+    {
+      "last_name": "Gabriel",
+      "fore_name": "Stacey B",
+      "initials": "SB",
+      "name": "Stacey B Gabriel",
+      "affiliations": []
+    },
+    {
+      "last_name": "Hakonarson",
+      "fore_name": "Hakon",
+      "initials": "H",
+      "name": "Hakon Hakonarson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Anand",
+      "fore_name": "Sonia S",
+      "initials": "SS",
+      "name": "Sonia S Anand",
+      "affiliations": []
+    },
+    {
+      "last_name": "Reilly",
+      "fore_name": "Muredach",
+      "initials": "M",
+      "name": "Muredach Reilly",
+      "affiliations": []
+    },
+    {
+      "last_name": "Engert",
+      "fore_name": "James C",
+      "initials": "JC",
+      "name": "James C Engert",
+      "affiliations": []
+    },
+    {
+      "last_name": "Nickerson",
+      "fore_name": "Deborah A",
+      "initials": "DA",
+      "name": "Deborah A Nickerson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Rader",
+      "fore_name": "Daniel J",
+      "initials": "DJ",
+      "name": "Daniel J Rader",
+      "affiliations": []
+    },
+    {
+      "last_name": "Hirschhorn",
+      "fore_name": "Joel N",
+      "initials": "JN",
+      "name": "Joel N Hirschhorn",
+      "affiliations": []
+    },
+    {
+      "last_name": "Fitzgerald",
+      "fore_name": "Garret A",
+      "initials": "GA",
+      "name": "Garret A Fitzgerald",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "PloS one",
+    "iso_abbreviation": "PLoS One",
+    "issn": "1932-6203",
+    "issn_type": "Electronic",
+    "volume": "3",
+    "issue": "10",
+    "pub_year": "2008"
+  },
+  "start_page": "e3583",
+  "pages": "e3583",
+  "language": "eng",
+  "publication_types": [
+    "Evaluation Study",
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Cardiovascular Diseases",
+    "Concept Formation",
+    "Gene Frequency",
+    "Genome-Wide Association Study",
+    "Genotype",
+    "Humans",
+    "Oligonucleotide Array Sequence Analysis",
+    "Polymorphism, Single Nucleotide",
+    "Population Groups",
+    "Quality Control",
+    "Research Design"
+  ],
+  "article_ids": {
+    "pubmed": "18974833",
+    "pmc": "PMC2571995",
+    "doi": "10.1371/journal.pone.0003583"
+  },
+  "doi": "10.1371/journal.pone.0003583",
+  "pmc_id": "PMC2571995",
+  "dates": {
+    "completed": "2009-02-12",
+    "revised": "2025-05-29"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "U54 RR023567",
+      "agency": "NCRR NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL088577",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC065226",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-65226",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HL066642",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 HL66642",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:04:13.534646",
+    "pmid": "18974833"
+  }
+}

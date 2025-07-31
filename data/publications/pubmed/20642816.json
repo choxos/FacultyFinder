@@ -1,0 +1,89 @@
+{
+  "pmid": "20642816",
+  "uid": "20642816",
+  "title": "Experimental validation of convection-diffusion discretisation scheme employed for computational modelling of biological mass transport.",
+  "abstract": "BACKGROUND: The finite volume solver Fluent (Lebanon, NH, USA) is a computational fluid dynamics software employed to analyse biological mass-transport in the vasculature. A principal consideration for computational modelling of blood-side mass-transport is convection-diffusion discretisation scheme selection. Due to numerous discretisation schemes available when developing a mass-transport numerical model, the results obtained should either be validated against benchmark theoretical solutions or experimentally obtained results. METHODS: An idealised aneurysm model was selected for the experimental and computational mass-transport analysis of species concentration due to its well-defined recirculation region within the aneurysmal sac, allowing species concentration to vary slowly with time. The experimental results were obtained from fluid samples extracted from a glass aneurysm model, using the direct spectrophometric concentration measurement technique. The computational analysis was conducted using the four convection-diffusion discretisation schemes available to the Fluent user, including the First-Order Upwind, the Power Law, the Second-Order Upwind and the Quadratic Upstream Interpolation for Convective Kinetics (QUICK) schemes. The fluid has a diffusivity of 3.125 x 10-10 m2/s in water, resulting in a Peclet number of 2,560,000, indicating strongly convection-dominated flow. RESULTS: The discretisation scheme applied to the solution of the convection-diffusion equation, for blood-side mass-transport within the vasculature, has a significant influence on the resultant species concentration field. The First-Order Upwind and the Power Law schemes produce similar results. The Second-Order Upwind and QUICK schemes also correlate well but differ considerably from the concentration contour plots of the First-Order Upwind and Power Law schemes. The computational results were then compared to the experimental findings. An average error of 140% and 116% was demonstrated between the experimental results and those obtained from the First-Order Upwind and Power Law schemes, respectively. However, both the Second-Order upwind and QUICK schemes accurately predict species concentration under high Peclet number, convection-dominated flow conditions. CONCLUSION: Convection-diffusion discretisation scheme selection has a strong influence on resultant species concentration fields, as determined by CFD. Furthermore, either the Second-Order or QUICK discretisation schemes should be implemented when numerically modelling convection-dominated mass-transport conditions. Finally, care should be taken not to utilize computationally inexpensive discretisation schemes at the cost of accuracy in resultant species concentration.",
+  "authors": [
+    {
+      "last_name": "Carroll",
+      "fore_name": "Gráinne T",
+      "initials": "GT",
+      "name": "Gráinne T Carroll",
+      "affiliations": [
+        "Centre for Applied Biomedical Engineering Research (CABER), Department of Mechanical and Aeronautical Engineering, and the Materials and Surface Science Institute, University of Limerick, Limerick, Ireland."
+      ]
+    },
+    {
+      "last_name": "Devereux",
+      "fore_name": "Paul D",
+      "initials": "PD",
+      "name": "Paul D Devereux",
+      "affiliations": []
+    },
+    {
+      "last_name": "Ku",
+      "fore_name": "David N",
+      "initials": "DN",
+      "name": "David N Ku",
+      "affiliations": []
+    },
+    {
+      "last_name": "McGloughlin",
+      "fore_name": "Timothy M",
+      "initials": "TM",
+      "name": "Timothy M McGloughlin",
+      "affiliations": []
+    },
+    {
+      "last_name": "Walsh",
+      "fore_name": "Michael T",
+      "initials": "MT",
+      "name": "Michael T Walsh",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Biomedical engineering online",
+    "iso_abbreviation": "Biomed Eng Online",
+    "issn": "1475-925X",
+    "issn_type": "Electronic",
+    "volume": "9",
+    "pub_year": "2010",
+    "pub_month": "Jul",
+    "pub_day": "19"
+  },
+  "start_page": "34",
+  "pages": "34",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Validation Study"
+  ],
+  "keywords": [
+    "Aneurysm",
+    "Biological Transport",
+    "Computer Simulation",
+    "Diffusion",
+    "Models, Biological"
+  ],
+  "article_ids": {
+    "pubmed": "20642816",
+    "pmc": "PMC2918622",
+    "doi": "10.1186/1475-925X-9-34",
+    "pii": "1475-925X-9-34"
+  },
+  "doi": "10.1186/1475-925X-9-34",
+  "pmc_id": "PMC2918622",
+  "dates": {
+    "completed": "2010-10-12",
+    "revised": "2021-10-20"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:05:22.727106",
+    "pmid": "20642816"
+  }
+}

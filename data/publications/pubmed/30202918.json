@@ -1,0 +1,121 @@
+{
+  "pmid": "30202918",
+  "uid": "30202918",
+  "title": "The impact of different sources of heterogeneity on loss of accuracy from genomic prediction models.",
+  "abstract": "Cross-study validation (CSV) of prediction models is an alternative to traditional cross-validation (CV) in domains where multiple comparable datasets are available. Although many studies have noted potential sources of heterogeneity in genomic studies, to our knowledge none have systematically investigated their intertwined impacts on prediction accuracy across studies. We employ a hybrid parametric/non-parametric bootstrap method to realistically simulate publicly available compendia of microarray, RNA-seq, and whole metagenome shotgun microbiome studies of health outcomes. Three types of heterogeneity between studies are manipulated and studied: (i) imbalances in the prevalence of clinical and pathological covariates, (ii) differences in gene covariance that could be caused by batch, platform, or tumor purity effects, and (iii) differences in the \"true\" model that associates gene expression and clinical factors to outcome. We assess model accuracy, while altering these factors. Lower accuracy is seen in CSV than in CV. Surprisingly, heterogeneity in known clinical covariates and differences in gene covariance structure have very limited contributions in the loss of accuracy when validating in new studies. However, forcing identical generative models greatly reduces the within/across study difference. These results, observed consistently for multiple disease outcomes and omics platforms, suggest that the most easily identifiable sources of study heterogeneity are not necessarily the primary ones that undermine the ability to accurately replicate the accuracy of omics prediction models in new studies. Unidentified heterogeneity, such as could arise from unmeasured confounding, may be more important.",
+  "authors": [
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "Graduate Program in Bioinformatics, Boston University, 24 Cummington Mall, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Bernau",
+      "fore_name": "Christoph",
+      "initials": "C",
+      "name": "Christoph Bernau",
+      "affiliations": [
+        "Department of Medical Informatics, Biometry and Epidemiology, University of Munich, Marchioninistr. 15, Munich, Germany."
+      ]
+    },
+    {
+      "last_name": "Parmigiani",
+      "fore_name": "Giovanni",
+      "initials": "G",
+      "name": "Giovanni Parmigiani",
+      "affiliations": [
+        "Department of Biostatistics and Computational Biology, Dana-Farber Cancer Institute, 3 Blackfan Cir, Boston, MA, USA.",
+        "Department of Biostatistics, Harvard TH Chan School of Public Health, 677 Huntington Ave, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Waldron",
+      "fore_name": "Levi",
+      "initials": "L",
+      "name": "Levi Waldron",
+      "affiliations": [
+        "Graduate School of Public Health and Health Policy, Institute for Implementation Science in Population Health, City University of New York, 55 W 125th St, New York, NY, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Biostatistics (Oxford, England)",
+    "iso_abbreviation": "Biostatistics",
+    "issn": "1468-4357",
+    "issn_type": "Electronic",
+    "volume": "21",
+    "issue": "2",
+    "pub_year": "2020",
+    "pub_month": "Apr",
+    "pub_day": "01"
+  },
+  "start_page": "253",
+  "end_page": "268",
+  "pages": "253-268",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Biostatistics",
+    "Genetic Research",
+    "Genomics",
+    "Humans",
+    "Metagenome",
+    "Microarray Analysis",
+    "Microbiota",
+    "Models, Biological",
+    "Models, Statistical",
+    "Sequence Analysis, RNA"
+  ],
+  "article_ids": {
+    "pubmed": "30202918",
+    "pmc": "PMC7868050",
+    "doi": "10.1093/biostatistics/kxy044",
+    "pii": "5092386"
+  },
+  "doi": "10.1093/biostatistics/kxy044",
+  "pmc_id": "PMC7868050",
+  "dates": {
+    "completed": "2020-12-28",
+    "revised": "2022-04-29"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 CA142832",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R03 CA191447",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U24 CA180996",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "RC4 CA156551",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 CA174206",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.289485",
+    "pmid": "30202918"
+  }
+}

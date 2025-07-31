@@ -1,0 +1,89 @@
+{
+  "pmid": "39537123",
+  "uid": "39537123",
+  "title": "ViTAD: Leveraging modified vision transformer for Alzheimer's disease multi-stage classification from brain MRI scans.",
+  "abstract": "Alzheimer's disease (AD) is a progressive neurological disorder that significantly impairs cognitive functions, particularly memory and thinking skills. The presence of AD in millions of individuals worldwide constitutes a substantial global health challenge. Timely and accurate diagnosis of AD is critical for effective management and improved patient outcomes. This study introduces ViTAD, an innovative method for classifying five stages of AD from brain MRI images, leveraging a Vision Transformer (ViT) model. The proposed model modifies Google's ViT architecture, incorporating fine-tuned hyperparameters and additional layers to enhance its performance for AD stage detection. The dataset comprises 1,296 brain MRI images from the ADNI dataset, covering five stages of AD: Cognitively Normal (CN), Early Mild Cognitive Impairment (EMCI), Late Mild Cognitive Impairment (LMCI), Mild Cognitive Impairment (MCI), and Alzheimer's Disease (AD). Our preprocessing pipeline includes grayscale to RGB conversion, image cropping, and the application of a Laplacian sharpening filter to enhance image clarity. Data augmentation was performed using horizontal/vertical flips, zoom, and rotation to ensure model robustness. We allocated 85% of the dataset for training and 15% for testing. Upon training the model for 20 epochs with a learning rate of 0.0001, ViTAD achieved a remarkable 99.98% accuracy, with 100% precision and an F1-score of 1.00. ViTAD's superior performance in the multi-class classification task outperforms several conventional CNN-based models such as DenseNet and EfficientNet, which struggled with the 5-class AD detection task. Additionally, ViTAD demonstrated high efficiency, achieving optimal accuracy within only 8 epochs, far surpassing traditional CNN models in speed and accuracy. These findings highlight the significant potential of ViTAD as an automated, accurate, and efficient tool for early diagnosis of AD, offering valuable support in clinical settings.",
+  "authors": [
+    {
+      "last_name": "Mahmud Joy",
+      "fore_name": "Md Ashif",
+      "initials": "MA",
+      "name": "Md Ashif Mahmud Joy",
+      "affiliations": [
+        "United International University, Department of Computer Science and Engineering, Dhaka, Bangladesh; University of Scholars, Department of Computer Science and Engineering, Dhaka, Bangladesh. Electronic address: mjoy172067@bscse.uiu.ac.bd."
+      ]
+    },
+    {
+      "last_name": "Nasrin",
+      "fore_name": "Shamima",
+      "initials": "S",
+      "name": "Shamima Nasrin",
+      "affiliations": [
+        "United International University, Department of Computer Science and Engineering, Dhaka, Bangladesh."
+      ]
+    },
+    {
+      "last_name": "Siddiqua",
+      "fore_name": "Ayesha",
+      "initials": "A",
+      "name": "Ayesha Siddiqua",
+      "affiliations": [
+        "Northern University Bangladesh, Department of Computer Science and Engineering, Dhaka, Bangladesh."
+      ]
+    },
+    {
+      "last_name": "Farid",
+      "fore_name": "Dewan Md",
+      "initials": "DM",
+      "name": "Dewan Md Farid",
+      "affiliations": [
+        "United International University, Department of Computer Science and Engineering, Dhaka, Bangladesh."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Brain research",
+    "iso_abbreviation": "Brain Res",
+    "issn": "1872-6240",
+    "issn_type": "Electronic",
+    "volume": "1847",
+    "pub_year": "2025",
+    "pub_month": "Jan",
+    "pub_day": "15"
+  },
+  "start_page": "149302",
+  "pages": "149302",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Alzheimer Disease",
+    "Humans",
+    "Magnetic Resonance Imaging",
+    "Cognitive Dysfunction",
+    "Brain",
+    "Aged",
+    "Female",
+    "Male",
+    "Image Processing, Computer-Assisted",
+    "Aged, 80 and over"
+  ],
+  "article_ids": {
+    "pubmed": "39537123",
+    "doi": "10.1016/j.brainres.2024.149302",
+    "pii": "S0006-8993(24)00556-0"
+  },
+  "doi": "10.1016/j.brainres.2024.149302",
+  "dates": {
+    "completed": "2024-12-08",
+    "revised": "2024-12-08"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:58:43.287714",
+    "pmid": "39537123"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "pmid": "39935005",
+  "uid": "39935005",
+  "title": "Increasing COVID-19 Testing and Vaccination Uptake in the Take Care Texas Community-Based Randomized Trial: Adaptive Geospatial Analysis.",
+  "abstract": "BACKGROUND: Geospatial data science can be a powerful tool to aid the design, reach, efficiency, and impact of community-based intervention trials. The project titled Take Care Texas aims to develop and test an adaptive, multilevel, community-based intervention to increase COVID-19 testing and vaccination uptake among vulnerable populations in 3 Texas regions: Harris County, Cameron County, and Northeast Texas. OBJECTIVE: We aimed to develop a novel procedure for adaptive selections of census block groups (CBGs) to include in the community-based randomized trial for the Take Care Texas project. METHODS: CBG selection was conducted across 3 Texas regions over a 17-month period (May 2021 to October 2022). We developed persistent and recent COVID-19 burden metrics, using real-time SARS-CoV-2 monitoring data to capture dynamic infection patterns. To identify vulnerable populations, we also developed a CBG-level community disparity index, using 12 contextual social determinants of health (SDOH) measures from US census data. In each adaptive round, we determined the priority CBGs based on their COVID-19 burden and disparity index, ensuring geographic separation to minimize intervention \"spillover.\" Community input and feedback from local partners and health workers further refined the selection. The selected CBGs were then randomized into 2 intervention arms-multilevel intervention and just-in-time adaptive intervention-and 1 control arm, using covariate adaptive randomization, at a 1:1:1 ratio. We developed interactive data dashboards, which included maps displaying the locations of selected CBGs and community-level information, to inform the selection process and guide intervention delivery. Selection and randomization occurred across 10 adaptive rounds. RESULTS: A total of 120 CBGs were selected and followed the stepped planning and interventions, with 60 in Harris County, 30 in Cameron County, and 30 in Northeast Texas counties. COVID-19 burden presented substantial temporal changes and local variations across CBGs. COVID-19 burden and community disparity exhibited some common geographical patterns but also displayed distinct variations, particularly at different time points throughout this study. This underscores the importance of incorporating both real-time monitoring data and contextual SDOH in the selection process. CONCLUSIONS: The novel procedure integrated real-time monitoring data and geospatial data science to enhance the design and adaptive delivery of a community-based randomized trial. Adaptive selection effectively prioritized the most in-need communities and allowed for a rigorous evaluation of community-based interventions in a multilevel trial. This methodology has broad applicability and can be adapted to other public health intervention and prevention programs, providing a powerful tool for improving population health and addressing health disparities.",
+  "authors": [
+    {
+      "last_name": "Zhang",
+      "fore_name": "Kehe",
+      "initials": "K",
+      "name": "Kehe Zhang",
+      "affiliations": [
+        "Department of Biostatistics and Data Science, School of Public Health, The University of Texas Health Science Center at Houston, 1200 Pressler St., RAS-E819, Houston, TX, 77030, United States, 1 7135009581.",
+        "Center for Spatial-Temporal Modeling for Applications in Population Sciences, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0001-8013-265X"
+    },
+    {
+      "last_name": "Hunyadi",
+      "fore_name": "Jocelyn V",
+      "initials": "JV",
+      "name": "Jocelyn V Hunyadi",
+      "affiliations": [
+        "Department of Biostatistics and Data Science, School of Public Health, The University of Texas Health Science Center at Houston, 1200 Pressler St., RAS-E819, Houston, TX, 77030, United States, 1 7135009581.",
+        "Center for Spatial-Temporal Modeling for Applications in Population Sciences, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0002-1503-9640"
+    },
+    {
+      "last_name": "de Oliveira Otto",
+      "fore_name": "Marcia C",
+      "initials": "MC",
+      "name": "Marcia C de Oliveira Otto",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0002-4585-0688"
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Miryoung",
+      "initials": "M",
+      "name": "Miryoung Lee",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, The University of Texas Health Science Center at Houston, Brownsville, TX, United States."
+      ],
+      "orcid": "0000-0003-4088-304X"
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Zitong",
+      "initials": "Z",
+      "name": "Zitong Zhang",
+      "affiliations": [
+        "Department of Biostatistics and Data Science, School of Public Health, The University of Texas Health Science Center at Houston, 1200 Pressler St., RAS-E819, Houston, TX, 77030, United States, 1 7135009581."
+      ],
+      "orcid": "0000-0002-5336-2449"
+    },
+    {
+      "last_name": "Ramphul",
+      "fore_name": "Ryan",
+      "initials": "R",
+      "name": "Ryan Ramphul",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0001-9415-223X"
+    },
+    {
+      "last_name": "Yamal",
+      "fore_name": "Jose-Miguel",
+      "initials": "JM",
+      "name": "Jose-Miguel Yamal",
+      "affiliations": [
+        "Department of Biostatistics and Data Science, School of Public Health, The University of Texas Health Science Center at Houston, 1200 Pressler St., RAS-E819, Houston, TX, 77030, United States, 1 7135009581."
+      ],
+      "orcid": "0000-0003-2505-0090"
+    },
+    {
+      "last_name": "Yaseen",
+      "fore_name": "Ashraf",
+      "initials": "A",
+      "name": "Ashraf Yaseen",
+      "affiliations": [
+        "Department of Biostatistics and Data Science, School of Public Health, The University of Texas Health Science Center at Houston, 1200 Pressler St., RAS-E819, Houston, TX, 77030, United States, 1 7135009581."
+      ],
+      "orcid": "0000-0002-0598-3419"
+    },
+    {
+      "last_name": "Morrison",
+      "fore_name": "Alanna C",
+      "initials": "AC",
+      "name": "Alanna C Morrison",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0001-6381-4296"
+    },
+    {
+      "last_name": "Sharma",
+      "fore_name": "Shreela",
+      "initials": "S",
+      "name": "Shreela Sharma",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States.",
+        "Center for Health Equity, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0002-4668-5020"
+    },
+    {
+      "last_name": "Rahbar",
+      "fore_name": "Mohammad Hossein",
+      "initials": "MH",
+      "name": "Mohammad Hossein Rahbar",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States.",
+        "Biostatistics/Epidemiology/Research Design Component, Center for Clinical and Translational Sciences, The University of Texas Health Science Center at Houston, Houston, TX, United States.",
+        "Department of Internal Medicine, Division of Clinical and Translational Sciences, McGovern Medical School, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0003-4608-9445"
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Xu",
+      "initials": "X",
+      "name": "Xu Zhang",
+      "affiliations": [
+        "Department of Internal Medicine, Division of Clinical and Translational Sciences, McGovern Medical School, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0003-2707-8927"
+    },
+    {
+      "last_name": "Linder",
+      "fore_name": "Stephen",
+      "initials": "S",
+      "name": "Stephen Linder",
+      "affiliations": [
+        "Department of Management, Policy and Community Health, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0003-1316-4496"
+    },
+    {
+      "last_name": "Marko",
+      "fore_name": "Dritana",
+      "initials": "D",
+      "name": "Dritana Marko",
+      "affiliations": [
+        "Department of Quantitative and Qualitative Health Sciences, University of Texas School of Public Health San Antonio, San Antonio, TX, United States."
+      ],
+      "orcid": "0000-0002-0433-6949"
+    },
+    {
+      "last_name": "Roy",
+      "fore_name": "Rachel White",
+      "initials": "RW",
+      "name": "Rachel White Roy",
+      "affiliations": [
+        "Harris County Public Health, Houston, TX, United States."
+      ],
+      "orcid": "0009-0000-2957-4399"
+    },
+    {
+      "last_name": "Banerjee",
+      "fore_name": "Deborah",
+      "initials": "D",
+      "name": "Deborah Banerjee",
+      "affiliations": [
+        "Houston Health Department, Houston, TX, United States."
+      ],
+      "orcid": "0009-0001-3139-516X"
+    },
+    {
+      "last_name": "Guajardo",
+      "fore_name": "Esmeralda",
+      "initials": "E",
+      "name": "Esmeralda Guajardo",
+      "affiliations": [
+        "Cameron County Public Health, San Benito, TX, United States."
+      ],
+      "orcid": "0000-0003-4790-1132"
+    },
+    {
+      "last_name": "Crum",
+      "fore_name": "Michelle",
+      "initials": "M",
+      "name": "Michelle Crum",
+      "affiliations": [
+        "Department of Preventive Medicine and Population Health, School of Medicine, The University of Texas at Tyler, Tyler, TX, United States."
+      ],
+      "orcid": "0009-0004-5812-3633"
+    },
+    {
+      "last_name": "Reininger",
+      "fore_name": "Belinda",
+      "initials": "B",
+      "name": "Belinda Reininger",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, The University of Texas Health Science Center at Houston, Brownsville, TX, United States."
+      ],
+      "orcid": "0000-0003-4446-9735"
+    },
+    {
+      "last_name": "Fernandez",
+      "fore_name": "Maria E",
+      "initials": "ME",
+      "name": "Maria E Fernandez",
+      "affiliations": [
+        "Department of Health Promotion and Behavior Sciences, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0002-7979-7379"
+    },
+    {
+      "last_name": "Bauer",
+      "fore_name": "Cici",
+      "initials": "C",
+      "name": "Cici Bauer",
+      "affiliations": [
+        "Department of Biostatistics and Data Science, School of Public Health, The University of Texas Health Science Center at Houston, 1200 Pressler St., RAS-E819, Houston, TX, 77030, United States, 1 7135009581.",
+        "Center for Spatial-Temporal Modeling for Applications in Population Sciences, School of Public Health, The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "orcid": "0000-0002-2337-7965"
+    }
+  ],
+  "journal": {
+    "title": "JMIR formative research",
+    "iso_abbreviation": "JMIR Form Res",
+    "issn": "2561-326X",
+    "issn_type": "Electronic",
+    "volume": "9",
+    "pub_year": "2025",
+    "pub_month": "Feb",
+    "pub_day": "11"
+  },
+  "start_page": "e62802",
+  "pages": "e62802",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Randomized Controlled Trial"
+  ],
+  "keywords": [
+    "Humans",
+    "Texas",
+    "COVID-19",
+    "COVID-19 Testing",
+    "SARS-CoV-2",
+    "COVID-19 Vaccines",
+    "Vaccination",
+    "Spatial Analysis",
+    "Female",
+    "Vulnerable Populations",
+    "Male"
+  ],
+  "article_ids": {
+    "pubmed": "39935005",
+    "pmc": "PMC11835599",
+    "doi": "10.2196/62802",
+    "pii": "v9i1e62802"
+  },
+  "doi": "10.2196/62802",
+  "pmc_id": "PMC11835599",
+  "dates": {
+    "completed": "2025-02-12",
+    "revised": "2025-05-12"
+  },
+  "chemicals": [
+    "COVID-19 Vaccines"
+  ],
+  "grants": [
+    {
+      "grant_id": "P30 ES030285",
+      "agency": "NIEHS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 TR004355",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UL1 TR003167",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:54:40.822724",
+    "pmid": "39935005"
+  }
+}

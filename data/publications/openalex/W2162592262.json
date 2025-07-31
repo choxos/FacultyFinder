@@ -1,0 +1,235 @@
+{
+  "openalex_id": "W2162592262",
+  "doi": "https://doi.org/10.1038/msb.2011.85",
+  "title": "Lyapunov exponents and phase diagrams reveal multi‐factorial control over TRAIL‐induced apoptosis",
+  "abstract": "Article22 November 2011Open Access Source Data Lyapunov exponents and phase diagrams reveal multi-factorial control over TRAIL-induced apoptosis Bree B Aldridge Bree B Aldridge Department of Systems Biology, Center for Cell Decision Processes, Harvard Medical School, MA, USA Department of Biological Engineering, Center for Cell Decision Processes, Massachusetts Institute of Technology, Cambridge, MA, USA Present address: Department of Immunology and Infectious Diseases, Harvard School of Public Health, Boston, MA 02115, USA Search for more papers by this author Suzanne Gaudet Suzanne Gaudet Department of Systems Biology, Center for Cell Decision Processes, Harvard Medical School, MA, USA Present address: Department of Cancer Biology and Center for Cancer Systems Biology, Dana-Farber Cancer Institute, and Department of Genetics, Harvard Medical School, Boston, MA 02115, USA Search for more papers by this author Douglas A Lauffenburger Douglas A Lauffenburger Department of Biological Engineering, Center for Cell Decision Processes, Massachusetts Institute of Technology, Cambridge, MA, USA Search for more papers by this author Peter K Sorger Corresponding Author Peter K Sorger Department of Systems Biology, Center for Cell Decision Processes, Harvard Medical School, MA, USA Department of Biological Engineering, Center for Cell Decision Processes, Massachusetts Institute of Technology, Cambridge, MA, USA Search for more papers by this author Bree B Aldridge Bree B Aldridge Department of Systems Biology, Center for Cell Decision Processes, Harvard Medical School, MA, USA Department of Biological Engineering, Center for Cell Decision Processes, Massachusetts Institute of Technology, Cambridge, MA, USA Present address: Department of Immunology and Infectious Diseases, Harvard School of Public Health, Boston, MA 02115, USA Search for more papers by this author Suzanne Gaudet Suzanne Gaudet Department of Systems Biology, Center for Cell Decision Processes, Harvard Medical School, MA, USA Present address: Department of Cancer Biology and Center for Cancer Systems Biology, Dana-Farber Cancer Institute, and Department of Genetics, Harvard Medical School, Boston, MA 02115, USA Search for more papers by this author Douglas A Lauffenburger Douglas A Lauffenburger Department of Biological Engineering, Center for Cell Decision Processes, Massachusetts Institute of Technology, Cambridge, MA, USA Search for more papers by this author Peter K Sorger Corresponding Author Peter K Sorger Department of Systems Biology, Center for Cell Decision Processes, Harvard Medical School, MA, USA Department of Biological Engineering, Center for Cell Decision Processes, Massachusetts Institute of Technology, Cambridge, MA, USA Search for more papers by this author Author Information Bree B Aldridge1,2,‡, Suzanne Gaudet1,‡, Douglas A Lauffenburger2 and Peter K Sorger 1,2 1Department of Systems Biology, Center for Cell Decision Processes, Harvard Medical School, MA, USA 2Department of Biological Engineering, Center for Cell Decision Processes, Massachusetts Institute of Technology, Cambridge, MA, USA ‡These authors contributed equally to this wor *Corresponding author. Department of Systems Biology, Center for Cell Decision Processes, WAB Room 438, Harvard Medical School, 200 Longwood Avenue, Boston, MA 02115, USA. Tel.: +1 617 432 6901/6902; Fax: +1 617 432 5012; E-mail: [email protected] Molecular Systems Biology (2011)7:553https://doi.org/10.1038/msb.2011.85 Present address: Department of Immunology and Infectious Diseases, Harvard School of Public Health, Boston, MA 02115, USA Present address: Department of Cancer Biology and Center for Cancer Systems Biology, Dana-Farber Cancer Institute, and Department of Genetics, Harvard Medical School, Boston, MA 02115, USA PDFDownload PDF of article text and main figures. Peer ReviewDownload a summary of the editorial decision process including editorial decision letters, reviewer comments and author responses to feedback. ToolsAdd to favoritesDownload CitationsTrack CitationsPermissions ShareFacebookTwitterLinked InMendeleyWechatReddit Figures & Info Receptor-mediated apoptosis proceeds via two pathways: one requiring only a cascade of initiator and effector caspases (type I behavior) and the second requiring an initiator–effector caspase cascade and mitochondrial outer membrane permeabilization (type II behavior). Here, we investigate factors controlling type I versus II phenotypes by performing Lyapunov exponent analysis of an ODE-based model of cell death. The resulting phase diagrams predict that the ratio of XIAP to pro-caspase-3 concentrations plays a key regulatory role: type I behavior predominates when the ratio is low and type II behavior when the ratio is high. Cell-to-cell variability in phenotype is observed when the ratio is close to the type I versus II boundary. By positioning multiple tumor cell lines on the phase diagram we confirm these predictions. We also extend phase space analysis to mutations affecting the rate of caspase-3 ubiquitylation by XIAP, predicting and showing that such mutations abolish all-or-none control over activation of effector caspases. Thus, phase diagrams derived from Lyapunov exponent analysis represent a means to study multi-factorial control over a complex biochemical pathway. Synopsis Kinetic modeling, phase diagrams analysis, and quantitative single-cell experiments are combined to investigate how multiple factors, including the XIAP:caspase-3 ratio and ligand concentration, regulate receptor-mediated apoptosis. In mammalian cells, extrinsic (receptor-mediated) apoptosis is triggered by binding of extracellular death ligands such as tumor necrosis factor (TNF) and TRAIL (TNF-related apoptosis-inducing ligand) to cognate receptors. When death receptors are activated, death inducing signaling complexes (DISCs) assemble causing activation and cleavage of initiator pro-caspases-8 and -10, which then cleave effector pro-caspases-3 and -7 in a multi-enzyme cascade (Riedl and Shi, 2004). Active effector caspases digest essential cellular proteins and activate the CAD nucleases that cleave genomic DNA, thereby killing cells. This cascade of DISC assembly followed by initiator and then effector caspase activation is sufficient to kill so-called type I cells (e.g. B lymphocytes), but most cell types exhibit a type II behavior in which mitochondrial outer membrane permeabilization (MOMP) is an essential step in the march to death (Scaffidi et al, 1998; Barnhart et al, 2003; Letai, 2008). Identifying factors that determine whether cells are type I or II is of practical and theoretical interest. From a practical perspective, whether a cell requires MOMP for apoptosis determines the potency of Bcl2 and similar oncogenes, the efficacy of anti-Bcl2 drugs such as navitoclax (ABT-263), and the sensitivity of cells to TRAIL and anti-TRAIL receptor antibodies, which are also investigational anti-cancer drugs (Newsom-Davis et al, 2009). From a theoretical perspective, the type I versus II choice exemplifies a common situation in mammalian cells in which overlapping signaling pathways play a greater or lesser role in controlling cell fate depending on cell type: it is remarkable that a simple three-step (receptor→initiator caspase→effector caspase) process is sufficient to trigger apoptosis in some cell types but that a much more complex route involving MOMP is required in others. Attempts to understand why some cells require MOMP for cell death and others do not have identified differences in the oligomeric state of death ligand receptors and the efficiency of DISC formation as important variables. In cells in which DISCs form efficiently, initiator caspases are cleaved rapidly and sufficient effector pro-caspases are processed into their active forms to kill cells (type I cells; Scaffidi et al, 1999b). In type II cells, DISC formation seems to be less efficient, and it has been proposed that MOMP is required to amplify weak initiator caspase signals and thereby generate lethal effector caspase levels (Barnhart et al, 2003). However, it has recently become apparent that XIAP also plays a role in type I versus II choice: in XIAP knockout mice, liver cells switch from a type II to a type I phenotype (Jost et al, 2009) and XIAP is observed to be involved in the survival of type I cells treated with death ligands in culture (Maas et al, 2010). In this paper, we attempt to place these observations in a quantitative context by analyzing a computational model of extrinsic cell death using a method drawn from dynamical system analysis, direct finite-time Lyapunov exponent (DLE) analysis. Our implementation of DLE analysis relates changes in the concentrations of protein in a model to an outcome several hours later. We computed DLEs for six regulators of apoptosis over a range of concentrations determined experimentally to represent a natural range of variation in parental or genetically modified tumor cell lines. This generated a phase space onto which individual cell lines could be mapped using quantitative immunoblotting data. Cell-to-cell variation was estimated by flow cytometry and also mapped onto the phase space. The most interesting regions of the space were those in which a small change in one or more initial protein concentration resulted in a dramatic change in phenotype. Such a boundary or separatrix was observed in slices of phase space corresponding XIAP versus pro-caspase-3 concentration (the [XIAP]:[caspase-3] ratio). In cells in which the ratio is low, a type I phenotype is predicted to occur; when the ratio is high, a type II phenotype is favored; and in cell lines that lie close to the separatrix, cell-to-cell variability is expected, with some cells exhibiting a type I phenotype and others a type II behavior. DLE analysis shows that the [XIAP]:[caspase-3] ratio is not the only controlling factor in type I versus II control: as receptor activity or ligand concentration increase, the position of the separatrix changes so as to expand the region in which the type I phenotype is favored. We tested these predictions by manipulating XIAP and ligand levels in multiple cell lines and then followed cell death by imaging, flow cytometry, or clonogenic assays. We observed that when XIAP was knocked out (by homologous recombination) in the HCT116 colorectal cancer line, cells shifted from a pure type II to a type I phenotype, as predicted from the DLE phase diagram. SKW6.4 B-cell lymphoma cells were predicted to lie at a position in phase space that is insensitive to XIAP levels (within the range achievable by over-expression) and we confirmed this experimentally. Finally, T47D breast cancer cells were predicted—and observed—to straddle the separatrix and to exhibit cell-to-cell variability in fate, with some cells showing a type I and others a type II phenotype. As the concentration of TRAIL was increased, the ratio of type I to type II T47D cells increased, confirming the prediction that this ratio is controlled in a multi-factorial manner. To extend our approach to mutations that change protein activity rather than protein level, we simulated the effects of changing rate constants that control ubiquitylation of caspase-3 following its binding to XIAP. We generated cells carrying a truncated form of XIAP that lacks the RING domain (XIAPΔRING) and cannot mediate the ubiquitylation of caspase-3 (this truncation leaves the affinity of XIAP for caspase-3 unchanged). We predicted and demonstrated experimentally that expression of XIAPΔRING disrupts normal snap-action control over caspase-3 activation. Our findings not only advance understanding of extrinsic apoptosis but also constitute a proof of principle for an approach to quantitative modeling of dynamic regulatory processes in diverse cell types. Introduction In mammalian cells, once the commitment to apoptosis has been made, caspase-mediated protein degradation must proceed to completion lest cells survive with damaged genomes. At a biochemical level, this involves all-or-none activation of potent effector caspases (caspase-3 and caspase-7). Extrinsic apoptosis, induced by extracellular death ligands such as Fas ligand (FasL), tumor necrosis factor (TNF), or TRAIL (TNF-related apoptosis-inducing ligand), begins with assembly of death inducing signaling complexes (DISCs) on receptor intracellular tails. Initiator pro-caspases (caspase-8 and caspase-10) dimerize at the DISC, leading to activation and concomitant cleavage of inhibitory pro-domains. In type I cells, a cascade of activated initiator (caspase-8/10) and effector (caspase-3/7) caspases is sufficient to generate a lethal level of caspase activity and mitochondrial outer membrane permeabilization (MOMP) is not required. In cells that exhibit type II behavior, active caspase-8/10 still cleaves pro-caspase-3/7 but MOMP is required for death (Scaffidi et al, 1998). Type I and type II phenotypes are generally assumed to be mutually exclusive: most epithelial cells exhibit a type II phenotype but some immune cells and cells having a 'mesenchymal' expression profile exhibit a type I phenotype (Algeciras-Schimnich et al, 2003). Identifying factors that control type I versus II apoptosis is not only relevant to understanding regulation of extrinsic apoptosis in immune editing, tumor surveillance and cancer therapy but also exemplifies the more general challenge of determining how different cell types use distinct but overlapping pathways to control essential physiological processes. MOMP, the event controlling apoptosis in type II cells, is triggered by caspase-8/10-mediated cleavage of Bid into its active form (tBid) followed by tBid-mediated changes in the conformation and activity of Bak and Bax (Letai, 2008). Active Bak/Bax molecules are able to self-assemble into pores in the mitochondrial outer membrane but assembly is inhibited by anti-apoptotic members of the Bcl2 protein family. When levels of active Bak/Bax exceed those of anti-apoptotic Bcl2 proteins, pores form suddenly, allowing Smac/DIABLO and cytochrome c to translocate into the cytosol (Letai, 2008). Smac-mediated inhibition of XIAP, a protein that negatively regulates active caspase-3/7, and apoptosome-mediated cleavage of pro-caspase-3/7 generates a burst of active effector caspase able to cleave essential cellular substrates and cause cell death. Experiments with membrane-bound and soluble FasL suggest that a key distinction between type I and type II cells is the rate of DISC assembly and the consequent efficiency of pro-caspase-8/10 activation (Algeciras-Schimnich et al, 2003). In type I cells, caspase-8/10 is activated sufficiently rapidly to cleave pro-caspase-3/7 and trigger death (Scaffidi et al, 1998; Barnhart et al, 2003). In type II cells, the generation of active caspase-8/10 is proposed to be less efficient and MOMP is therefore necessary to amplify a weak initiator caspase signal (Barnhart et al, 2003). However, other studies suggest an important role for XIAP in determining the balance between type I and type II death (Eissing et al, 2004; Jost et al, 2009). Using a mass-action model developed in our laboratory to describe key biochemical steps in extrinsic apoptosis (EARM1.4; Box 1; Albeck et al, 2008a, 2008b; Spencer et al, 2009), we searched for factors influencing type I and type II behaviors. This involved identifying factors that determined whether or not MOMP was required for efficient effector caspase activation. Such an analysis can be performed in a straightforward manner using the method of direct finite-time Lyapunov exponent analysis (DLEs; Box 2; Aldridge et al, 2006b; Rateitschak and Wolkenhauer, 2010). DLEs measure the influence of changes in initial protein concentrations on the future state of a model; in the case of EARM1.4, we examined timescales determined experimentally to be relevant to caspase activation in TRAIL-treated cells (∼8 h). When DLE analysis was used to compute a six-dimensional phase diagram of type I or II phenotypes, a distinct boundary (a separatrix) was observed to cut across multiple dimensions in concentration phase space (separatrices are described in Box 2). The shape of the separatrix implied that control over type I versus II phenotypes was multi-factorial: DISC activity and ligand levels were determinative for some protein concentrations whereas XIAP and caspase-3 levels were important across the entire sampled space. To test these predictions experimentally, we placed four tumor cell lines on the DLE landscape, focusing on two-dimensional slices corresponding to the [XIAP]:[caspase-3] ratio. We found that the separatrix correctly predicted whether a cell line was type I or type II. In the case of T47D cells, the [XIAP]:[caspase-3] ratio placed them close to the separatrix and experiments confirmed a mixed type I and type II phenotype. We also extended our analysis to changes in rate constants, focusing on mutations that reduced the rate of XIAP-mediated ubiquitylation of caspase-3. When this reaction was blocked modeling predicted, and experiments confirmed, a phenotype distinct from either type I or II behavior in which snap-action control over cleavage of effector caspase substrates was lost. Based on these observations, we propose that DLE-based phase diagrams will prove generally useful in understanding multi-factorial control of cellular biochemistry in different cell types. Box 1 Modeling receptor-mediated apoptosis. Box 1 Figure EARM1.4 network diagram. Schematic adapted from Albeck et al (2008b). The mass-action model used in the current paper, extrinsic apoptosis reaction model (EARM1.4), is closely related to previously published models that have been validated using live- and fixed-cell imaging, flow cytometry of caspase substrates, and biochemical analysis of normal and RNAi-treated HeLa cells (Albeck et al, 2008a, 2008b; Spencer et al, 2009). Model compartments are assumed to be well mixed and protein translocation is modeled as an elementary reaction in which proteins move between three compartments (cell surface, cytoplasm, and mitochondrial inter-membrane space). As in Spencer et al (2009), EARM1.4 includes protein synthesis (ks) and degradation (kdeg) reactions but some rate constant have been changed to improve goodness of fit (red arrows in Box 1 Figure summarize changes relative to Albeck et al (2008b); see Supplementary Tables SI–SIII for lists of model reactions and initial concentration and rate parameter values). Except for active caspase-3, the half-lives of proteins species are assumed to be 24 h, an approximation that is satisfactory because the model is relatively insensitive to changes in these rates. EARM1.4 successfully reproduces initiator and effector caspase dynamics in multiple cell types across a range of ligand doses and under various conditions of RNAi-mediated protein depletion (Albeck et al, 2008a, 2008b). EARM1.4 encompasses proteins activated by binding of TRAIL to DR4/5 receptors that ultimately cause cleavage of effector caspase substrates and cell death. EARM1.4 focuses on reactions regulating MOMP and caspase-3 activity; it does not model the formation of DISCs or the activation of caspase-8/10 in detail. However, two mechanisms negatively regulating caspase-8 are included in simplified form: competitive binding of FLIP and pro-caspase-8 to the DISC and reversible inhibition of processed caspase-8 by Bar. This level of detail is sufficient to explore the role of TRAIL, TRAIL receptor, and caspase-8/10 concentrations on downstream events, but it does not capture key events in receptor oligomerization. Two pathways link initiator and effector caspases. In the direct pathway, the sole mechanism required in type I cells, active caspase-8 cleaves pro-caspase-3; this activates the enzyme and allows it to cleave PARP. In the model, a positive feedback between effector and initiator caspases is mediated by caspase-6. Even though it is not yet completely clear how strong this feedback is in cells or whether proteins other than caspase-6 are involved, variation in caspase-6 levels in EARM1.4 can still be regarded as a means to alter the strength of a feedback mechanism that involves multiple proteins. Recent work suggests that this mechanism for caspase-8/10 activation is inefficient (Oberst et al, 2010; Wurstle et al, 2010) and feedback is therefore modeled as being weak in EARM1.4. In type II cells, MOMP, which also links initiator and effector caspases, is required for caspase-3 activation. MOMP-dependent translocation of cytochrome c from mitochondria to the cytosol leads to apoptosome formation and activation of caspase-9, another initiator caspase capable of cleaving pro-caspase-3. MOMP also causes cytosolic translocation of Smac, which binds to the effector caspase inhibitor XIAP, thereby inactivating it and relieving inhibition of caspase-3 activity. The analysis in this paper shows that the ratio of caspase-3 to XIAP levels is a major determinant of type I versus II behavior: when the ratio is low, XIAP is able to hold processed caspase-3 in check prior to MOMP. When the ratio is high, sufficient active caspase-3 accumulates to kill cells in the absence of MOMP. Many species in EARM1.4 are devoted to the regulation of MOMP but the process is nonetheless represented in a highly simplified manner. The pathway leading to MOMP begins with cleavage of Bid by active caspase-8 to form tBid. tBid can either be sequestered in the cytoplasm by an Mcl-1-like protein or bind to and activate Bax. Active Bax multimerizes and translocates to the mitochondrial outer membrane where it is inhibited by Bcl2 but once active, membrane-bound Bax levels exceed those of Bcl2, MOMP occurs, leading to translocation of Smac and cytochrome c to the cytosol, as described above. EARM1.4 does not attempt to model the full complexity of the Bcl2 protein family, instead representing all Bcl2 family activators by Bid, all anti-apoptotic family members by Bcl2 and Mcl-1 and all pore forming proteins by Bax. Nonetheless, a good match is observed between simulations and single-cell data on MOMP dynamics over a wide range of conditions (Albeck et al, 2008a, 2008b). Values for the initial concentrations of proteins in the model for which validated antibodies are available were determined by quantitative immunoblotting of extracts from HCT116 cells (see Box 1 Figure, purple, and Supplementary Table SII) and then adjusted for other cell lines using the ratios listed in Table I; for simplicity, all cells were modeled as having the same cell volume. When modeling the effect of deleting the RING domain of XIAP, the rate constant for the ubiquitylation of caspase-3 by XIAP (kc8) was set to zero. When cycloheximide was included in an experiment, synthesis terms in the corresponding simulations were set to 15% of their nominal values (Supplementary Table SII; Ceccarini and Eagle, 1976). Degradation rates were set assuming a half-life of 24 h as in Spencer et al (2009) except that the XIAP-independent rate of degradation of active caspase-3 (kr14) was set to fivefold higher to account for the observed instability of caspase-3 in HCT116ΔXIAP cells (BBA and PKS, unpublished data). Box 2 Model analysis using Lyapunov exponents. Box 2 Figure Multi-dimensional views of the phase space and a type I versus II DLE separatrix. DLE analysis is inherently multi-dimensional and phase diagrams can be visualized in different subspaces. On the left, three three-dimensional views are shown of a separatrix cutting through phase space for [XIAP]0, [caspase-3]0, and [caspase-8]0 at different concentrations of TRAIL. The two-dimensional phase diagrams on the right represent slices of the three-dimensional matrix under the baseline ligand condition (as indicated by the projected red and green outlines). The goal of this paper was to determine whether measured differences in protein concentrations could explain how cell lines sharing a common set of apoptotic regulators respond differently to death ligands. In some contexts, such a question could be approached using bifurcation analysis but this is challenging with a model as large as EARM1.4. More importantly, model steady states (as used for bifurcation analysis) are not reflective of the transient signals that determines whether cells live or die (see also Aldridge et al, 2006b). Lyapunov exponents are a simple means to compute the effects on model output arising from changes in initial protein concentrations. Because each protein present at t=0 gives rise to multiple species that differ in intracellular localization, extent of post-translational modification, incorporation into molecular complexes, etc., variation in initial protein concentrations generates unintuitive and complex changes in cellular biochemistry that vary from one cell type to the next. The critical dynamical variable in the current work is the level of cEC-S (species 23 'cPARP' in EARM1.4); accumulation of cEC-S is assumed to reflect commitment to death (although this is not necessarily true in cell lines such as SKW6.4; see text for details). We represent the findings of our analyses using 'phase space diagrams' that depict outcomes across a range of protein concentrations observed in actual tumor cell lines. This approach assumes that rate constants and other critical model parameters remain the same across these cell lines. An exception to this rule involves the analysis of HCT116 cells carrying XIAPΔRING; in this case, we assumed that the rate of XIAP-mediated ubiquitylation of cleaved caspase-3 was zero (i.e. kc8=0). In principle, it would be possible to compute a phase diagram, or parameter-space diagram, for all rates in EARM1.4, but we have not yet implemented the algorithms to do this efficiently. A priori we expect some differences in initial protein concentrations to have a major impact on model outcome and others to have a smaller impact. To capture the magnitude of the deviation at a discrete point in time, we compute the multi-dimensional difference between model trajectories arising from neighboring sets of initial conditions. We quantify this difference by computing a DLE (Equation 1). where DLE(t, x0) is the exponent at time t and x and x0 are vectors that describe the concentrations of model species at time t and t=0, respectively. λmax is the maximum eigenvalue of the matrix. DLEs were computed over a grid of initial conditions whose range was chosen based on observed protein concentrations in tumor cell lines, thereby generating a multi-dimensional matrix of DLEs. The most informative regions of the matrix are those with high DLE values, which denote regions in which small changes in initial conditions result in dramatic changes in model output. Contiguous high DLE values define separatrices, membrane-like surfaces that separate regions of parameter space giving rise to different cEC-S dynamics. Separatrices are analogous to boundary layers in a physical phase diagram, for example between liquid, solid, and gas phases of water over a range of values for temperature and pressure. In the current work, we seek to distinguish type I and type II phenotypes in extrinsic apoptosis and therefore perform simulations with Bcl2 levels set at a level sufficiently high to block MOMP (the nominal value for [Bcl2]0 in HCT116 cells is 2 × 104 mol/cell; over-expression was modeled as [Bcl2]0=2 × 105 mol/cell). Initial conditions resulting in type I phenotypes were defined as those in which simulated final cEC-S levels were similar in the presence and absence of Bcl2 over-expression; conditions resulting in type II phenotypes where those in which Bcl2 over-expression blocked cEC-S accumulation. Based on preliminary analysis with a coarse grid, we concentrated on detailed DLE analysis of six model species. This gave rise to a six-dimensional matrix but, for clarity, the figures in this paper represent two-dimensional projections. Different cell lines were placed on these projections based on measuring protein levels by quantitative immunoblotting (Box 1 Table; Supplementary Figure S1) with cell-to-cell variability estimated by flow cytometry (Box 2 Table). Cell-to-cell variability was denoted on the phase diagrams by representing initial protein concentrations in each cell line as an ellipsoid (Figure 1B). Proteins other than those analyzed here also vary from one cell line to the next but the apparent success of DLE analysis suggests that these differences are not major determinants of extrinsic apoptosis in the cell lines we have studied, under our experimental conditions (alternatively, co-variation in other determinants may effectively cancel out their effects). Nonetheless, we expect that the levels of many additional proteins will contribute to TRAIL sensitivity; it will be possible to analyze these proteins using updated models and DLE phase diagrams with additional dimensions. The idea of analyzing dynamical systems with respect to their states at a future point in time has recently re-emerged as an important technique in diverse areas of natural science. For example, methods fundamentally similar to Lyapunov exponent analysis have been used to study the structure of fluid flow in the waters of Monterey Bay and other complex habitats. The 'Lagrangrian coherent structures' calculated using Lyapunov exponents define boundaries between currents that specify where pollutants will collect, exemplifying the wide applicability of DLE-style analysis (Coulliette et al, 2007). Results A DLE-based phase map predicts the [XIAP]:[caspase-3] ratio to control type I versus II phenotypes To determine which proteins control the choice between type I and type II phenotypes during apoptosis, we computed DLEs for a previously published ordinary differential equation model describi",
+  "authors": [
+    {
+      "display_name": "Bree B. Aldridge",
+      "id": "A5062282640",
+      "orcid": "https://orcid.org/0000-0003-2236-1424",
+      "institutions": [
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bree B Aldridge"
+    },
+    {
+      "display_name": "Suzanne Gaudet",
+      "id": "A5089810766",
+      "orcid": "https://orcid.org/0000-0002-5701-2825",
+      "institutions": [
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Suzanne Gaudet"
+    },
+    {
+      "display_name": "Douglas A. Lauffenburger",
+      "id": "A5060106170",
+      "orcid": "https://orcid.org/0000-0002-0050-989X",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Douglas A Lauffenburger"
+    },
+    {
+      "display_name": "Peter K. Sorger",
+      "id": "A5063426870",
+      "orcid": "https://orcid.org/0000-0002-3364-1838",
+      "institutions": [
+        {
+          "id": "I136199984",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Peter K Sorger"
+    }
+  ],
+  "publication_year": 2011,
+  "publication_date": "2011-01-01",
+  "type": "article",
+  "cited_by_count": 65,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S200893805",
+    "display_name": "Molecular Systems Biology",
+    "issn_l": "1744-4292",
+    "issn": [
+      "1744-4292"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319965"
+  },
+  "volume": "7",
+  "issue": "1",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1038/msb.2011.85",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.78489506
+    },
+    {
+      "id": "C191544260",
+      "display_name": "Lyapunov exponent",
+      "level": 3,
+      "score": 0.542112
+    },
+    {
+      "id": "C190283241",
+      "display_name": "Apoptosis",
+      "level": 2,
+      "score": 0.5318002
+    },
+    {
+      "id": "C85906118",
+      "display_name": "Phase diagram",
+      "level": 3,
+      "score": 0.43840337
+    },
+    {
+      "id": "C183763347",
+      "display_name": "Factorial",
+      "level": 2,
+      "score": 0.41350862
+    },
+    {
+      "id": "C2775924081",
+      "display_name": "Control (management)",
+      "level": 2,
+      "score": 0.379742
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.36278665
+    },
+    {
+      "id": "C44280652",
+      "display_name": "Phase (matter)",
+      "level": 2,
+      "score": 0.3454886
+    },
+    {
+      "id": "C47446073",
+      "display_name": "Control theory (sociology)",
+      "level": 3,
+      "score": 0.32553333
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.20436391
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.19147158
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.18067983
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.14301673
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.13568577
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.11144501
+    },
+    {
+      "id": "C158622935",
+      "display_name": "Nonlinear system",
+      "level": 2,
+      "score": 0.092184424
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10294",
+      "display_name": "Cell death mechanisms and regulation",
+      "score": 0.9915
+    },
+    {
+      "id": "T10407",
+      "display_name": "Lipid Membrane Structure and Behavior",
+      "score": 0.9414
+    },
+    {
+      "id": "T10077",
+      "display_name": "Neuroscience and Neuropharmacology Research",
+      "score": 0.9354
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1038/msb.2011.85",
+  "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1038/msb.2011.85",
+  "retrieved_date": "2025-07-30T14:14:12.386637",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,90 @@
+{
+  "pmid": "23692710",
+  "uid": "23692710",
+  "title": "Simulating an emergency department: the importance of modeling the interactions between physicians and delegates in a discrete event simulation.",
+  "abstract": "BACKGROUND: Computer simulation studies of the emergency department (ED) are often patient driven and consider the physician as a human resource whose primary activity is interacting directly with the patient. In many EDs, physicians supervise delegates such as residents, physician assistants and nurse practitioners each with different skill sets and levels of independence. The purpose of this study is to present an alternative approach where physicians and their delegates in the ED are modeled as interacting pseudo-agents in a discrete event simulation (DES) and to compare it with the traditional approach ignoring such interactions. METHODS: The new approach models a hierarchy of heterogeneous interacting pseudo-agents in a DES, where pseudo-agents are entities with embedded decision logic. The pseudo-agents represent a physician and delegate, where the physician plays a senior role to the delegate (i.e. treats high acuity patients and acts as a consult for the delegate). A simple model without the complexity of the ED is first created in order to validate the building blocks (programming) used to create the pseudo-agents and their interaction (i.e. consultation). Following validation, the new approach is implemented in an ED model using data from an Ontario hospital. Outputs from this model are compared with outputs from the ED model without the interacting pseudo-agents. They are compared based on physician and delegate utilization, patient waiting time for treatment, and average length of stay. Additionally, we conduct sensitivity analyses on key parameters in the model. RESULTS: In the hospital ED model, comparisons between the approach with interaction and without showed physician utilization increase from 23% to 41% and delegate utilization increase from 56% to 71%. Results show statistically significant mean time differences for low acuity patients between models. Interaction time between physician and delegate results in increased ED length of stay and longer waits for beds. CONCLUSION: This example shows the importance of accurately modeling physician relationships and the roles in which they treat patients. Neglecting these relationships could lead to inefficient resource allocation due to inaccurate estimates of physician and delegate time spent on patient related activities and length of stay.",
+  "authors": [
+    {
+      "last_name": "Lim",
+      "fore_name": "Morgan E",
+      "initials": "ME",
+      "name": "Morgan E Lim",
+      "affiliations": [
+        "Department of Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, ON, Canada. limme@mcmaster.ca"
+      ]
+    },
+    {
+      "last_name": "Worster",
+      "fore_name": "Andrew",
+      "initials": "A",
+      "name": "Andrew Worster",
+      "affiliations": []
+    },
+    {
+      "last_name": "Goeree",
+      "fore_name": "Ron",
+      "initials": "R",
+      "name": "Ron Goeree",
+      "affiliations": []
+    },
+    {
+      "last_name": "Tarride",
+      "fore_name": "Jean-Éric",
+      "initials": "JÉ",
+      "name": "Jean-Éric Tarride",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "BMC medical informatics and decision making",
+    "iso_abbreviation": "BMC Med Inform Decis Mak",
+    "issn": "1472-6947",
+    "issn_type": "Electronic",
+    "volume": "13",
+    "pub_year": "2013",
+    "pub_month": "May",
+    "pub_day": "22"
+  },
+  "start_page": "59",
+  "pages": "59",
+  "language": "eng",
+  "publication_types": [
+    "Comparative Study",
+    "Journal Article"
+  ],
+  "keywords": [
+    "Canada",
+    "Computer Simulation",
+    "Delegation, Professional",
+    "Efficiency, Organizational",
+    "Emergency Service, Hospital",
+    "Humans",
+    "Interprofessional Relations",
+    "Models, Theoretical",
+    "Organizational Culture",
+    "Patient Acuity",
+    "Physicians",
+    "Professional Role",
+    "Time Factors",
+    "Triage"
+  ],
+  "article_ids": {
+    "pubmed": "23692710",
+    "pmc": "PMC3664080",
+    "doi": "10.1186/1472-6947-13-59",
+    "pii": "1472-6947-13-59"
+  },
+  "doi": "10.1186/1472-6947-13-59",
+  "pmc_id": "PMC3664080",
+  "dates": {
+    "completed": "2013-09-30",
+    "revised": "2021-10-21"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T15:01:09.622003",
+    "pmid": "23692710"
+  }
+}

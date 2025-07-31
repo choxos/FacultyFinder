@@ -1,0 +1,81 @@
+{
+  "pmid": "24641974",
+  "uid": "24641974",
+  "title": "SAMURAI: Sensitivity analysis of a meta-analysis with unpublished but registered analytical investigations (software).",
+  "abstract": "BACKGROUND: The non-availability of clinical trial results contributes to publication bias, diminishing the validity of systematic reviews and meta-analyses. Although clinical trial registries have been established to reduce non-publication, the results from over half of all trials registered in ClinicalTrials.gov remain unpublished even 30 months after completion. Our goals were i) to utilize information available in registries (specifically, the number and sample sizes of registered unpublished studies) to gauge the sensitivity of a meta-analysis estimate of the effect size and its confidence interval to the non-publication of studies and ii) to develop user-friendly open-source software to perform this quantitative sensitivity analysis. METHODS: The open-source software, the R package SAMURAI, was developed using R functions available in the R package metafor. The utility of SAMURAI is illustrated with two worked examples. RESULTS: Our open-source software SAMURAI, can handle meta-analytic datasets of clinical trials with two independent treatment arms. Both binary and continuous outcomes are supported. For each unpublished study, the dataset requires only the sample sizes of each treatment arm and the user predicted 'outlook' for the studies. The user can specify five outlooks ranging from 'very positive' (i.e., very favorable towards intervention) to 'very negative' (i.e., very favorable towards control).SAMURAI assumes that control arms of unpublished studies have effects similar to the effect across control arms of published studies. For each experimental arm of an unpublished study, utilizing the user-provided outlook, SAMURAI randomly generates an effect estimate using a probability distribution, which may be based on a summary effect across published trials. SAMURAI then calculates the estimated summary treatment effect with a random effects model (DerSimonian & Laird method), and outputs the result as a forest plot. CONCLUSIONS: To our knowledge, SAMURAI is currently the only tool that allows systematic reviewers to incorporate information about sample sizes of treatment groups in registered but unpublished clinical trials in their assessment of the potential impact of publication bias on meta-analyses. SAMURAI produces forest plots for visualizing how inclusion of registered unpublished studies might change the results of a meta-analysis. We hope systematic reviewers will find SAMURAI to be a useful addition to their toolkit.",
+  "authors": [
+    {
+      "last_name": "Kim",
+      "fore_name": "Noory Y",
+      "initials": "NY",
+      "name": "Noory Y Kim",
+      "affiliations": []
+    },
+    {
+      "last_name": "Bangdiwala",
+      "fore_name": "Shrikant I",
+      "initials": "SI",
+      "name": "Shrikant I Bangdiwala",
+      "affiliations": [
+        "Department of Biostatistics, University of North Carolina, Chapel Hill, NC, 27599, USA. kant@unc.edu."
+      ]
+    },
+    {
+      "last_name": "Thaler",
+      "fore_name": "Kylie",
+      "initials": "K",
+      "name": "Kylie Thaler",
+      "affiliations": []
+    },
+    {
+      "last_name": "Gartlehner",
+      "fore_name": "Gerald",
+      "initials": "G",
+      "name": "Gerald Gartlehner",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Systematic reviews",
+    "iso_abbreviation": "Syst Rev",
+    "issn": "2046-4053",
+    "issn_type": "Electronic",
+    "volume": "3",
+    "pub_year": "2014",
+    "pub_month": "Mar",
+    "pub_day": "18"
+  },
+  "start_page": "27",
+  "pages": "27",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Meta-Analysis as Topic",
+    "Publications",
+    "Registries",
+    "Sample Size",
+    "Software"
+  ],
+  "article_ids": {
+    "pubmed": "24641974",
+    "pmc": "PMC4021727",
+    "doi": "10.1186/2046-4053-3-27",
+    "pii": "2046-4053-3-27"
+  },
+  "doi": "10.1186/2046-4053-3-27",
+  "pmc_id": "PMC4021727",
+  "dates": {
+    "completed": "2014-09-26",
+    "revised": "2021-10-21"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:06:39.884571",
+    "pmid": "24641974"
+  }
+}

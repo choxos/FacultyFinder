@@ -1,0 +1,83 @@
+{
+  "pmid": "34460365",
+  "uid": "34460365",
+  "title": "OneFlow: One-Class Flow for Anomaly Detection Based on a Minimal Volume Region.",
+  "abstract": "We propose OneFlow - a flow-based one-class classifier for anomaly (outlier) detection that finds a minimal volume bounding region. Contrary to density-based methods, OneFlow is constructed in such a way that its result typically does not depend on the structure of outliers. This is caused by the fact that during training the gradient of the cost function is propagated only over the points located near to the decision boundary (behavior similar to the support vectors in SVM). The combination of flow models and a Bernstein quantile estimator allows OneFlow to find a parametric form of bounding region, which can be useful in various applications including describing shapes from 3D point clouds. Experiments show that the proposed model outperforms related methods on real-world anomaly detection problems.",
+  "authors": [
+    {
+      "last_name": "Maziarka",
+      "fore_name": "Lukasz",
+      "initials": "L",
+      "name": "Lukasz Maziarka",
+      "affiliations": []
+    },
+    {
+      "last_name": "Smieja",
+      "fore_name": "Marek",
+      "initials": "M",
+      "name": "Marek Smieja",
+      "affiliations": []
+    },
+    {
+      "last_name": "Sendera",
+      "fore_name": "Marcin",
+      "initials": "M",
+      "name": "Marcin Sendera",
+      "affiliations": []
+    },
+    {
+      "last_name": "Struski",
+      "fore_name": "Lukasz",
+      "initials": "L",
+      "name": "Lukasz Struski",
+      "affiliations": []
+    },
+    {
+      "last_name": "Tabor",
+      "fore_name": "Jacek",
+      "initials": "J",
+      "name": "Jacek Tabor",
+      "affiliations": []
+    },
+    {
+      "last_name": "Spurek",
+      "fore_name": "Przemyslaw",
+      "initials": "P",
+      "name": "Przemyslaw Spurek",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "IEEE transactions on pattern analysis and machine intelligence",
+    "iso_abbreviation": "IEEE Trans Pattern Anal Mach Intell",
+    "issn": "1939-3539",
+    "issn_type": "Electronic",
+    "volume": "44",
+    "issue": "11",
+    "pub_year": "2022",
+    "pub_month": "Nov"
+  },
+  "start_page": "8508",
+  "end_page": "8519",
+  "pages": "8508-8519",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "34460365",
+    "doi": "10.1109/TPAMI.2021.3108223"
+  },
+  "doi": "10.1109/TPAMI.2021.3108223",
+  "dates": {
+    "revised": "2022-10-05"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:59:37.887306",
+    "pmid": "34460365"
+  }
+}

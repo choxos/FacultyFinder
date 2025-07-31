@@ -1,0 +1,406 @@
+{
+  "pmid": "30262806",
+  "uid": "30262806",
+  "title": "Clinical cancer genomic profiling by three-platform sequencing of whole genome, whole exome and transcriptome.",
+  "abstract": "To evaluate the potential of an integrated clinical test to detect diverse classes of somatic and germline mutations relevant to pediatric oncology, we performed three-platform whole-genome (WGS), whole exome (WES) and transcriptome (RNA-Seq) sequencing of tumors and normal tissue from 78 pediatric cancer patients in a CLIA-certified, CAP-accredited laboratory. Our analysis pipeline achieves high accuracy by cross-validating variants between sequencing types, thereby removing the need for confirmatory testing, and facilitates comprehensive reporting in a clinically-relevant timeframe. Three-platform sequencing has a positive predictive value of 97-99, 99, and 91% for somatic SNVs, indels and structural variations, respectively, based on independent experimental verification of 15,225 variants. We report 240 pathogenic variants across all cases, including 84 of 86 known from previous diagnostic testing (98% sensitivity). Combined WES and RNA-Seq, the current standard for precision oncology, achieved only 78% sensitivity. These results emphasize the critical need for incorporating WGS in pediatric oncology testing.",
+  "authors": [
+    {
+      "last_name": "Rusch",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Rusch",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ],
+      "orcid": "0000-0002-5363-1848"
+    },
+    {
+      "last_name": "Nakitandwe",
+      "fore_name": "Joy",
+      "initials": "J",
+      "name": "Joy Nakitandwe",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Shurtleff",
+      "fore_name": "Sheila",
+      "initials": "S",
+      "name": "Sheila Shurtleff",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Newman",
+      "fore_name": "Scott",
+      "initials": "S",
+      "name": "Scott Newman",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Zhaojie",
+      "initials": "Z",
+      "name": "Zhaojie Zhang",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Edmonson",
+      "fore_name": "Michael N",
+      "initials": "MN",
+      "name": "Michael N Edmonson",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ],
+      "orcid": "0000-0003-0339-700X"
+    },
+    {
+      "last_name": "Parker",
+      "fore_name": "Matthew",
+      "initials": "M",
+      "name": "Matthew Parker",
+      "affiliations": [
+        "Sheffield Bioinformatics Core, University of Sheffield, 345a Glossop Road, Sheffield, S10 2HQ, UK."
+      ]
+    },
+    {
+      "last_name": "Jiao",
+      "fore_name": "Yuannian",
+      "initials": "Y",
+      "name": "Yuannian Jiao",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ],
+      "orcid": "0000-0002-8987-2782"
+    },
+    {
+      "last_name": "Ma",
+      "fore_name": "Xiaotu",
+      "initials": "X",
+      "name": "Xiaotu Ma",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Liu",
+      "fore_name": "Yanling",
+      "initials": "Y",
+      "name": "Yanling Liu",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Gu",
+      "fore_name": "Jiali",
+      "initials": "J",
+      "name": "Jiali Gu",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Walsh",
+      "fore_name": "Michael F",
+      "initials": "MF",
+      "name": "Michael F Walsh",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Oncology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Becksfort",
+      "fore_name": "Jared",
+      "initials": "J",
+      "name": "Jared Becksfort",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Thrasher",
+      "fore_name": "Andrew",
+      "initials": "A",
+      "name": "Andrew Thrasher",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Yongjin",
+      "initials": "Y",
+      "name": "Yongjin Li",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "McMurry",
+      "fore_name": "James",
+      "initials": "J",
+      "name": "James McMurry",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Information Services, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Hedlund",
+      "fore_name": "Erin",
+      "initials": "E",
+      "name": "Erin Hedlund",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Patel",
+      "fore_name": "Aman",
+      "initials": "A",
+      "name": "Aman Patel",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ],
+      "orcid": "0000-0002-5757-2697"
+    },
+    {
+      "last_name": "Easton",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Easton",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Yergeau",
+      "fore_name": "Donald",
+      "initials": "D",
+      "name": "Donald Yergeau",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Vadodaria",
+      "fore_name": "Bhavin",
+      "initials": "B",
+      "name": "Bhavin Vadodaria",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Tatevossian",
+      "fore_name": "Ruth G",
+      "initials": "RG",
+      "name": "Ruth G Tatevossian",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ],
+      "orcid": "0000-0002-1653-3026"
+    },
+    {
+      "last_name": "Raimondi",
+      "fore_name": "Susana",
+      "initials": "S",
+      "name": "Susana Raimondi",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Hedges",
+      "fore_name": "Dale",
+      "initials": "D",
+      "name": "Dale Hedges",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Xiang",
+      "initials": "X",
+      "name": "Xiang Chen",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ],
+      "orcid": "0000-0002-2499-8261"
+    },
+    {
+      "last_name": "Hagiwara",
+      "fore_name": "Kohei",
+      "initials": "K",
+      "name": "Kohei Hagiwara",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "McGee",
+      "fore_name": "Rose",
+      "initials": "R",
+      "name": "Rose McGee",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Oncology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ],
+      "orcid": "0000-0001-7392-6515"
+    },
+    {
+      "last_name": "Robinson",
+      "fore_name": "Giles W",
+      "initials": "GW",
+      "name": "Giles W Robinson",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Oncology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Klco",
+      "fore_name": "Jeffery M",
+      "initials": "JM",
+      "name": "Jeffery M Klco",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ],
+      "orcid": "0000-0003-2961-6960"
+    },
+    {
+      "last_name": "Gruber",
+      "fore_name": "Tanja A",
+      "initials": "TA",
+      "name": "Tanja A Gruber",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA.",
+        "Department of Oncology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA."
+      ]
+    },
+    {
+      "last_name": "Ellison",
+      "fore_name": "David W",
+      "initials": "DW",
+      "name": "David W Ellison",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA. david.ellison@stjude.org.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA. david.ellison@stjude.org."
+      ]
+    },
+    {
+      "last_name": "Downing",
+      "fore_name": "James R",
+      "initials": "JR",
+      "name": "James R Downing",
+      "affiliations": [
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA. james.downing@stjude.org.",
+        "Department of Pathology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA. james.downing@stjude.org."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Jinghui",
+      "initials": "J",
+      "name": "Jinghui Zhang",
+      "affiliations": [
+        "Department of Computational Biology, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA. jinghui.zhang@stjude.org.",
+        "Pediatric Cancer Genome Project, St. Jude Children's Research Hospital, 262 Danny Thomas Place, Memphis, TN, 38105, USA. jinghui.zhang@stjude.org."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Nature communications",
+    "iso_abbreviation": "Nat Commun",
+    "issn": "2041-1723",
+    "issn_type": "Electronic",
+    "volume": "9",
+    "issue": "1",
+    "pub_year": "2018",
+    "pub_month": "Sep",
+    "pub_day": "27"
+  },
+  "start_page": "3962",
+  "pages": "3962",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Child",
+    "Exome",
+    "Genetic Variation",
+    "Genome, Human",
+    "Genomics",
+    "Humans",
+    "Neoplasms",
+    "Sequence Analysis, DNA",
+    "Transcriptome"
+  ],
+  "article_ids": {
+    "pubmed": "30262806",
+    "pmc": "PMC6160438",
+    "doi": "10.1038/s41467-018-06485-7",
+    "pii": "10.1038/s41467-018-06485-7"
+  },
+  "doi": "10.1038/s41467-018-06485-7",
+  "pmc_id": "PMC6160438",
+  "dates": {
+    "completed": "2018-12-31",
+    "revised": "2019-09-27"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "P01 CA096832",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P30 CA021765",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:05:22.932908",
+    "pmid": "30262806"
+  }
+}

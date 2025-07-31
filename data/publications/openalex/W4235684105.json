@@ -1,0 +1,230 @@
+{
+  "openalex_id": "W4235684105",
+  "doi": "https://doi.org/10.1137/1.9781611973099.97",
+  "title": "Resource Augmentation for Weighted Flow-time explained by Dual Fitting",
+  "abstract": "Previous chapter Next chapter Full AccessProceedings Proceedings of the 2012 Annual ACM-SIAM Symposium on Discrete Algorithms (SODA)Resource Augmentation for Weighted Flow-time explained by Dual FittingS. Anand, Naveen Garg, and Amit KumarS. Anand, Naveen Garg, and Amit Kumarpp.1228 - 1241Chapter DOI:https://doi.org/10.1137/1.9781611973099.97PDFBibTexSections ToolsAdd to favoritesExport CitationTrack CitationsEmail SectionsAboutAbstract We propose a general dual-fitting technique for analyzing online scheduling algorithms in the unrelated machines setting where the objective function involves weighted flow-time, and we allow the machines of the on-line algorithm to have (1 + ε)-extra speed than the offline optimum (the so-called speed augmentation model). Typically, such algorithms are analyzed using non-trivial potential functions which yield little insight into the proof technique. We propose that one can often analyze such algorithms by looking at the dual (or Lagrangian dual) of the linear (or convex) program for the corresponding scheduling problem, and finding a feasible dual solution as the on-line algorithm proceeds. As representative cases, we get the following results: For the problem of minimizing weighted flow-time, we give an O (1/ε)-competitive greedy algorithm. This is an improvement by a factor of 1/ε on the competitive ratio of the greedy algorithm of Chadha-Garg-Kumar-Muralidhara. For the problem of minimizing weighted ℓk norm of flow-time, we show that a greedy algorithm gives an -competitive ratio. This marginally improves the result of Im and Moseley. For the problem of minimizing weighted flow-time plus energy, and when the energy function f(s) is equal to sγ, γ > 1, we show that a natural greedy algorithm is O(γ2)-competitive. Prior to our work, such a result was known for the related machines setting only (Gupta-Krishnaswamy-Pruhs). Previous chapter Next chapter RelatedDetails Published:2012ISBN:978-1-61197-210-8eISBN:978-1-61197-309-9 https://doi.org/10.1137/1.9781611973099Book Series Name:ProceedingsBook Code:PR141Book Pages:xiii + 1757",
+  "authors": [
+    {
+      "display_name": "S. Anand",
+      "id": "A5041750815",
+      "orcid": "https://orcid.org/0000-0002-4378-2941",
+      "institutions": [
+        {
+          "id": "I68891433",
+          "display_name": "Indian Institute of Technology Delhi",
+          "country_code": "IN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Anand"
+    },
+    {
+      "display_name": "Naveen Garg",
+      "id": "A5045952512",
+      "orcid": "https://orcid.org/0000-0001-7923-4464",
+      "institutions": [
+        {
+          "id": "I68891433",
+          "display_name": "Indian Institute of Technology Delhi",
+          "country_code": "IN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Naveen Garg"
+    },
+    {
+      "display_name": "Amit Kumar",
+      "id": "A5029407896",
+      "orcid": "https://orcid.org/0000-0002-3965-6627",
+      "institutions": [
+        {
+          "id": "I68891433",
+          "display_name": "Indian Institute of Technology Delhi",
+          "country_code": "IN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Amit Kumar"
+    }
+  ],
+  "publication_year": 2012,
+  "publication_date": "2012-01-17",
+  "type": "article",
+  "cited_by_count": 56,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "1228",
+  "last_page": "1241",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://doi.org/10.1137/1.9781611973099.97",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C102408133",
+      "display_name": "Competitive analysis",
+      "level": 3,
+      "score": 0.63139856
+    },
+    {
+      "id": "C126255220",
+      "display_name": "Mathematical optimization",
+      "level": 1,
+      "score": 0.5911407
+    },
+    {
+      "id": "C206729178",
+      "display_name": "Scheduling (production processes)",
+      "level": 2,
+      "score": 0.5645965
+    },
+    {
+      "id": "C196921405",
+      "display_name": "Online algorithm",
+      "level": 2,
+      "score": 0.5306177
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.5061371
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.49057025
+    },
+    {
+      "id": "C157469704",
+      "display_name": "Maximum flow problem",
+      "level": 2,
+      "score": 0.48537767
+    },
+    {
+      "id": "C191795146",
+      "display_name": "Norm (philosophy)",
+      "level": 2,
+      "score": 0.4677691
+    },
+    {
+      "id": "C2780980858",
+      "display_name": "Dual (grammatical number)",
+      "level": 2,
+      "score": 0.4670462
+    },
+    {
+      "id": "C99545648",
+      "display_name": "Minimum-cost flow problem",
+      "level": 3,
+      "score": 0.4610907
+    },
+    {
+      "id": "C112680207",
+      "display_name": "Regular polygon",
+      "level": 2,
+      "score": 0.42985752
+    },
+    {
+      "id": "C145446738",
+      "display_name": "Convex function",
+      "level": 3,
+      "score": 0.41115892
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.3948443
+    },
+    {
+      "id": "C77553402",
+      "display_name": "Upper and lower bounds",
+      "level": 2,
+      "score": 0.21878037
+    },
+    {
+      "id": "C114809511",
+      "display_name": "Flow network",
+      "level": 2,
+      "score": 0.19815525
+    },
+    {
+      "id": "C142362112",
+      "display_name": "Art",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C124952713",
+      "display_name": "Literature",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C17744445",
+      "display_name": "Political science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C199539241",
+      "display_name": "Law",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12288",
+      "display_name": "Optimization and Search Problems",
+      "score": 1.0
+    },
+    {
+      "id": "T10551",
+      "display_name": "Scheduling and Optimization Algorithms",
+      "score": 0.9986
+    },
+    {
+      "id": "T10720",
+      "display_name": "Complexity and Algorithms in Graphs",
+      "score": 0.9936
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1137/1.9781611973099.97",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:35:06.450437",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,369 @@
+{
+  "openalex_id": "W1985051351",
+  "doi": "https://doi.org/10.1186/1471-2156-4-s1-s1",
+  "title": "Genetic Analysis Workshop 13: Analysis of Longitudinal Family Data for Complex Diseases and Related Risk Factors",
+  "abstract": "Genetic Epidemiology 25 (Supplement 1): S1–S4 (2003) Genetic Analysis Workshop 13: Introduction to Workshop Summaries Laura Almasy, 1 n L. Adrienne Cupples, 2 E. Warwick Daw, 3 Daniel Levy, 4 Duncan Thomas, 5 John P. Rice, 6 Susan Santangelo, 7 and Jean W. MacCluer 1 Department of Genetics, Southwest Foundation for Biomedical Research, San Antonio, Texas Department of Biostatistics, Boston University School of Public Health, Boston, Massachusetts Department of Epidemiology, University of Texas M.D. Anderson Cancer Center, Houston, Texas Framingham Heart Study, National Heart, Lung, and Blood Institute, Framingham, Massachusetts Department of Preventive Medicine, University of Southern California, Los Angeles, California Department of Psychiatry, Washington University School of Medicine, St. Louis, Missouri Psychiatric and Neurodevelopmental Genetics Unit, Massachusetts General Hospital, Harvard Medical School, Boston, Massachusetts Grant sponsor: National Institutes of Health; Grant number: GM31575. Correspondence to: Laura Almasy, Department of Genetics, Southwest Foundation for Biomedical Research, P.O. Box 760549, San Antonio, TX 78245-0549. E-mail: almasy@darwin.sfbr.org Published online in Wiley InterScience (www.interscience.wiley.com) DOI: 10.1002/gepi.10278 n INTRODUCTION The Genetic Analysis Workshops (GAWs) began in 1982 as a collaborative effort among researchers of various disciplines to evaluate and compare statistical genetics methods. For each GAW, one or more topics are chosen that relate to current analytical and methodological issues in statistical genetics of complex phenotypes. For each work- shop, sets of simulated and real data are dis- tributed to researchers worldwide who submit the results of their analyses of these data for pre- sentation at GAW. The workshop itself is a 2 12 -day meeting comparing and contrasting the many different approaches used to analyze the data. New methods are introduced, old methods are evaluated in new contexts, and diverse analytical schemes are explored on the level playing field of a common data set. More information about GAW, including details of upcoming workshops, may be found at http://www.sfbr.org/external/gaw/ welcome.html. GAW13 was held November 11–14, 2002, in New Orleans, Louisiana. The 117 contributions sub- mitted to GAW13 were organized into 11 pre- sentation groups of 6–14 papers each. Within each group, a co-author with previous GAW experience was asked to serve as group leader to facilitate group discussion, organize an oral presentation for the group, and take the lead in writing the group summary papers collected in this volume. Eight presentation groups were organized around com- mon methodological themes: derived phenotypes, & 2003 Wiley-Liss, Inc. methods for longitudinal analysis, consistency of genetic analyses across time, missing data and pedigree or genotyping errors, effects of covari- ates, pleiotropy and multivariate analyses, data mining/neural networks/tree-based methods, and development and extension of linkage methods. The remaining three presentation groups con- tained papers united by a common focus on particular phenotypes: analysis of blood pressure and hypertension phenotypes, analysis of obesity/ diabetes/lipid phenotypes, and analysis of tobacco and alcohol phenotypes. Of the original 117 GAW13 contributions, 101 were published as a supplement to BMC Genetics [Almasy et al., 2003]. It is these 101 peer-reviewed, published papers that are summarized in the present volume. Summaries have long been a part of the GAW proceedings. For many years, a single individual was charged with the Herculean task of summar- izing all the GAW contributions, using a particular data set. As of GAW11, there were as many as 67 individual contributions to be summarized for a given data set, and the task was divided among pairs of individuals. With the increasing GAW participation, it also became increasingly difficult to accommodate individual oral presentation of each paper within the schedule of the workshop. For GAW12, a new format was introduced both for workshop presentations and for summary papers. Individual contributions with common themes were assigned to presentation groups that had a single oral presentation at the work- shop. In the GAW12 proceedings [Wijsman et al.,",
+  "authors": [
+    {
+      "display_name": "Laura Almasy",
+      "id": "A5001935511",
+      "orcid": "https://orcid.org/0000-0002-9184-8124",
+      "institutions": [
+        {
+          "id": "I1289525096",
+          "display_name": "Texas Biomedical Research Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Laura Almasy"
+    },
+    {
+      "display_name": "Christopher I. Amos",
+      "id": "A5028989565",
+      "orcid": "https://orcid.org/0000-0002-8540-7023",
+      "institutions": [
+        {
+          "id": "I1343551460",
+          "display_name": "The University of Texas MD Anderson Cancer Center",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher I Amos"
+    },
+    {
+      "display_name": "Joan E. Bailey‐Wilson",
+      "id": "A5038440162",
+      "orcid": "https://orcid.org/0000-0002-9153-2920",
+      "institutions": [
+        {
+          "id": "I4210090236",
+          "display_name": "National Human Genome Research Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1299303238",
+          "display_name": "National Institutes of Health",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joan E Bailey-Wilson"
+    },
+    {
+      "display_name": "Rita M. Cantor",
+      "id": "A5110142276",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rita M Cantor"
+    },
+    {
+      "display_name": "Cashell E. Jaquish",
+      "id": "A5006658658",
+      "orcid": "https://orcid.org/0000-0003-3319-3729",
+      "institutions": [
+        {
+          "id": "I4210106489",
+          "display_name": "National Heart Lung and Blood Institute",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1299303238",
+          "display_name": "National Institutes of Health",
+          "country_code": "US",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cashell E Jaquish"
+    },
+    {
+      "display_name": "María Martínez",
+      "id": "A5050979549",
+      "orcid": "https://orcid.org/0000-0003-2180-4537",
+      "institutions": [
+        {
+          "id": "I154526488",
+          "display_name": "Inserm",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Maria Martinez"
+    },
+    {
+      "display_name": "Rosalind J. Neuman",
+      "id": "A5109058347",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I204465549",
+          "display_name": "Washington University in St. Louis",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Rosalind J Neuman"
+    },
+    {
+      "display_name": "Jane M. Olson",
+      "id": "A5108197423",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I58956616",
+          "display_name": "Case Western Reserve University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jane M Olson"
+    },
+    {
+      "display_name": "Lyle J. Palmer",
+      "id": "A5036671564",
+      "orcid": "https://orcid.org/0000-0002-1628-3055",
+      "institutions": [
+        {
+          "id": "I2799971621",
+          "display_name": "Harry Perkins Institute of Medical Research",
+          "country_code": "AU",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lyle J Palmer"
+    },
+    {
+      "display_name": "Stephen S. Rich",
+      "id": "A5070735232",
+      "orcid": "https://orcid.org/0000-0003-3872-7793",
+      "institutions": [
+        {
+          "id": "I47251452",
+          "display_name": "Wake Forest University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephen S Rich"
+    },
+    {
+      "display_name": "M. Anne Spence",
+      "id": "A5024992700",
+      "orcid": "https://orcid.org/0009-0007-4843-4640",
+      "institutions": [
+        {
+          "id": "I204250578",
+          "display_name": "University of California, Irvine",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M Anne Spence"
+    },
+    {
+      "display_name": "Jean W. MacCluer",
+      "id": "A5108211698",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1289525096",
+          "display_name": "Texas Biomedical Research Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jean W MacCluer"
+    }
+  ],
+  "publication_year": 2003,
+  "publication_date": "2003-01-01",
+  "type": "article",
+  "cited_by_count": 18,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S155074040",
+    "display_name": "BMC Genomic Data",
+    "issn_l": "2730-6844",
+    "issn": [
+      "2730-6844"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320256"
+  },
+  "volume": "4",
+  "issue": "Suppl 1",
+  "first_page": "S1",
+  "last_page": "S1",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://bmcgenomdata.biomedcentral.com/counter/pdf/10.1186/1471-2156-4-S1-S1",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C140556311",
+      "display_name": "Biostatistics",
+      "level": 3,
+      "score": 0.6734921
+    },
+    {
+      "id": "C177860879",
+      "display_name": "Genetic epidemiology",
+      "level": 3,
+      "score": 0.5466656
+    },
+    {
+      "id": "C111815664",
+      "display_name": "Framingham Heart Study",
+      "level": 4,
+      "score": 0.5188447
+    },
+    {
+      "id": "C161191863",
+      "display_name": "Library science",
+      "level": 1,
+      "score": 0.5054147
+    },
+    {
+      "id": "C74909509",
+      "display_name": "Gerontology",
+      "level": 1,
+      "score": 0.47395134
+    },
+    {
+      "id": "C138816342",
+      "display_name": "Public health",
+      "level": 2,
+      "score": 0.42524296
+    },
+    {
+      "id": "C2993838110",
+      "display_name": "Medical school",
+      "level": 2,
+      "score": 0.41414547
+    },
+    {
+      "id": "C555299818",
+      "display_name": "Statistical genetics",
+      "level": 5,
+      "score": 0.41055688
+    },
+    {
+      "id": "C107130276",
+      "display_name": "Epidemiology",
+      "level": 2,
+      "score": 0.38295624
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.37713712
+    },
+    {
+      "id": "C512399662",
+      "display_name": "Family medicine",
+      "level": 1,
+      "score": 0.3232637
+    },
+    {
+      "id": "C509550671",
+      "display_name": "Medical education",
+      "level": 1,
+      "score": 0.2507714
+    },
+    {
+      "id": "C2779134260",
+      "display_name": "Disease",
+      "level": 2,
+      "score": 0.19350833
+    },
+    {
+      "id": "C11783203",
+      "display_name": "Framingham Risk Score",
+      "level": 3,
+      "score": 0.18645415
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.183436
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.15216473
+    },
+    {
+      "id": "C189206191",
+      "display_name": "Genomics",
+      "level": 4,
+      "score": 0.13471052
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.10774961
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.10663086
+    },
+    {
+      "id": "C141231307",
+      "display_name": "Genome",
+      "level": 3,
+      "score": 0.0
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10261",
+      "display_name": "Genetic Associations and Epidemiology",
+      "score": 0.9613
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1186/1471-2156-4-s1-s1",
+  "pdf_url": "https://bmcgenomdata.biomedcentral.com/counter/pdf/10.1186/1471-2156-4-S1-S1",
+  "retrieved_date": "2025-07-30T14:12:07.445290",
+  "source_database": "OpenAlex"
+}

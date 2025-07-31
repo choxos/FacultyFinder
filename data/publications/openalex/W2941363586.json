@@ -1,0 +1,170 @@
+{
+  "openalex_id": "W2941363586",
+  "doi": "https://doi.org/10.1097/01.ju.0000555241.27498.f6",
+  "title": "PD07-08 MACHINE LEARNING TO PREDICT RECURRENCE OF LOCALIZED RENAL CELL CARCINOMA",
+  "abstract": "You have accessJournal of UrologyKidney Cancer: Epidemiology & Evaluation/Staging/Surveillance I (PD07)1 Apr 2019PD07-08 MACHINE LEARNING TO PREDICT RECURRENCE OF LOCALIZED RENAL CELL CARCINOMA Yanbo Guo*, Luis Braga, and Anil Kapoor Yanbo Guo*Yanbo Guo* More articles by this author , Luis BragaLuis Braga More articles by this author , and Anil KapoorAnil Kapoor More articles by this author View All Author Informationhttps://doi.org/10.1097/01.JU.0000555241.27498.f6AboutPDF ToolsAdd to favoritesDownload CitationsTrack CitationsPermissionsReprints ShareFacebookLinked InTwitterEmail Abstract INTRODUCTION AND OBJECTIVES: The incidence of renal cell carcinoma (RCC) has increased. This has been largely explained by the increased use of diagnostic imaging, leading to the incidental discovery of localized tumors. Localized RCC has a five-year survival rate of nearly 90% but there remains a 20 to 30% risk of recurrence after curative treatment. Thus, these patients are placed on routine surveillance with annual abdominal imaging at a minimum. However, there is no consensus on surveillance protocols as recurrence rates vary greatly between patients. Current guidelines stratify patients between two to three risk categories based upon their pathologic grade, tumor and node (T & N) stage. Nomograms that incorporate other variables are available but they also rely upon pathologic findings. Our objective is to use a cloud-based machine learning (ML) platform to develop a model for recurrence after curative treatment of localized RCC using pre and post-operative variables. METHODS: A de-identified localized RCC database from our institution was uploaded to the Microsoft® Azure Machine Learning Studio. The variables were categorized and missing values were cleaned. The dataset was then split into a training and a testing group. Two ML models were trained, a two-class neuro network model and a two-class boosted decision tree model, both fundamental and common approaches in ML. These models were then evaluated using the area under curve (AUC) of a receiver operator characteristic curve and compared to determine the optimized model. RESULTS: 697 patients were a part of the dataset. Variables included were age, sex, tumor laterality, radical or partial nephrectomy, T & N staging, margin status and Fuhrman grade. The optimized model achieved an AUC of 0.877. Setting a threshold to maximize sensitivity, there was a sensitivity of 89.47%, a specificity of 71.95%, and positive predictive value of 3.19. CONCLUSIONS: We built an accurate RCC recurrence prediction model using an accessible cloud-based ML platform. This approach offers advantages over traditional statistics, including the ability to easily incorporate new data and rapidly distribute updates. Our institution's dataset is a part of a larger national dataset which we aim to incorporate into future iterations. At its current stage, this model's performance still favourably compares to existing nomograms. With more accurate prognostication of recurrence, we can better counsel patients and individualize surveillance strategies, allowing us to minimize ineffective investigations and identify high-risk patients who truly benefit from close follow up. Source of Funding: Kidney Cancer Research Network of Canada and Canadian Urologic Oncology Group Research Trainee Award Hamilton, Canada© 2019 by American Urological Association Education and Research, Inc.FiguresReferencesRelatedDetails Volume 201Issue Supplement 4April 2019Page: e145-e145 Advertisement Copyright & Permissions© 2019 by American Urological Association Education and Research, Inc.MetricsAuthor Information Yanbo Guo* More articles by this author Luis Braga More articles by this author Anil Kapoor More articles by this author Expand All Advertisement PDF downloadLoading ...",
+  "authors": [
+    {
+      "display_name": "Yanbo Guo",
+      "id": "A5113866916",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Yanbo Guo*"
+    },
+    {
+      "display_name": "Luis H. Braga",
+      "id": "A5038944132",
+      "orcid": "https://orcid.org/0000-0002-3953-7353",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Luis Braga"
+    },
+    {
+      "display_name": "Anil Kapoor",
+      "id": "A5013185325",
+      "orcid": "https://orcid.org/0000-0001-9180-8029",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Anil Kapoor"
+    }
+  ],
+  "publication_year": 2019,
+  "publication_date": "2019-04-01",
+  "type": "article",
+  "cited_by_count": 3,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S30525748",
+    "display_name": "The Journal of Urology",
+    "issn_l": "0022-5347",
+    "issn": [
+      "0022-5347",
+      "1527-3792"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315671"
+  },
+  "volume": "201",
+  "issue": "Supplement 4",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://www.auajournals.org/doi/pdf/10.1097/01.JU.0000555241.27498.f6",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.9306401
+    },
+    {
+      "id": "C34626388",
+      "display_name": "Nomogram",
+      "level": 2,
+      "score": 0.8119811
+    },
+    {
+      "id": "C2777472916",
+      "display_name": "Renal cell carcinoma",
+      "level": 2,
+      "score": 0.69530267
+    },
+    {
+      "id": "C146357865",
+      "display_name": "Stage (stratigraphy)",
+      "level": 2,
+      "score": 0.43454543
+    },
+    {
+      "id": "C2780091936",
+      "display_name": "T-stage",
+      "level": 3,
+      "score": 0.41506508
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.40269855
+    },
+    {
+      "id": "C126838900",
+      "display_name": "Radiology",
+      "level": 1,
+      "score": 0.40094292
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.3532964
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.3454912
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.33834353
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.3038799
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10449",
+      "display_name": "Renal cell carcinoma treatment",
+      "score": 0.9858
+    },
+    {
+      "id": "T12422",
+      "display_name": "Radiomics and Machine Learning in Medical Imaging",
+      "score": 0.9275
+    },
+    {
+      "id": "T10458",
+      "display_name": "Bladder and Urothelial Cancer Treatments",
+      "score": 0.9039
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1097/01.ju.0000555241.27498.f6",
+  "pdf_url": "https://www.auajournals.org/doi/pdf/10.1097/01.JU.0000555241.27498.f6",
+  "retrieved_date": "2025-07-30T14:19:33.341983",
+  "source_database": "OpenAlex"
+}

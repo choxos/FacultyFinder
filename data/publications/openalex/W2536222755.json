@@ -1,0 +1,227 @@
+{
+  "openalex_id": "W2536222755",
+  "doi": "https://doi.org/10.1109/embc.2016.7592201",
+  "title": "3D small structure detection in medical image using texture analysis",
+  "abstract": "Small structure segmentation from medical images is a challenging problem yet has important applications. Examples are labeling cell, lesion and glomeruli for disease diagnosis, just to name a few. Though extensive research has proposed various detectors for this type of problem, most are 2D detectors. Recently, we have developed a Hessian based 3D detector to segment small structures from medical images (e.g., MRI). In our detector, two 3D geometrical features: regional blobness and flatness, in conjunction with the intensity features are fully utilized to serve the segmentation purpose. The objective of this research is to further improve the 3D detector with additions of texture features. Medical images contain rich information which can be presented as texture, the local characteristics pattern of image intensity. We hypothesize the Hessian based detector extended with the 3D texture features is expected to have improved performance in segmenting small structures. To thoroughly evaluate the contributions from the textual features, 25 synthetic images and 6 real world rat MR images are studied. It is observed the combination of intensity, blobness, and two texture features: intensity standard deviation and entropy improves performance in synthetic dataset by about 19% in F-score, and performs as well as other detectors on rat MR images.",
+  "authors": [
+    {
+      "display_name": "Fei Gao",
+      "id": "A5101652486",
+      "orcid": "https://orcid.org/0000-0001-5675-1899",
+      "institutions": [
+        {
+          "id": "I55732556",
+          "display_name": "Arizona State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Fei Gao"
+    },
+    {
+      "display_name": "Min Zhang",
+      "id": "A5100744463",
+      "orcid": "https://orcid.org/0000-0002-8681-5889",
+      "institutions": [
+        {
+          "id": "I4210125099",
+          "display_name": "Mayo Clinic in Arizona",
+          "country_code": "US",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Min Zhang"
+    },
+    {
+      "display_name": "Teresa Wu",
+      "id": "A5069823101",
+      "orcid": "https://orcid.org/0000-0002-0529-7048",
+      "institutions": [
+        {
+          "id": "I55732556",
+          "display_name": "Arizona State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Teresa Wu"
+    },
+    {
+      "display_name": "Kevin M. Bennett",
+      "id": "A5002902508",
+      "orcid": "https://orcid.org/0000-0003-1706-4660",
+      "institutions": [
+        {
+          "id": "I117965899",
+          "display_name": "University of Hawaiʻi at Mānoa",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kevin M. Bennett"
+    }
+  ],
+  "publication_year": 2016,
+  "publication_date": "2016-08-01",
+  "type": "article",
+  "cited_by_count": 7,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "6433",
+  "last_page": "6436",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C94915269",
+      "display_name": "Detector",
+      "level": 2,
+      "score": 0.7738886
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.7582147
+    },
+    {
+      "id": "C203616005",
+      "display_name": "Hessian matrix",
+      "level": 2,
+      "score": 0.6456396
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.6163765
+    },
+    {
+      "id": "C89600930",
+      "display_name": "Segmentation",
+      "level": 2,
+      "score": 0.59018975
+    },
+    {
+      "id": "C31972630",
+      "display_name": "Computer vision",
+      "level": 1,
+      "score": 0.58765817
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.55213153
+    },
+    {
+      "id": "C63099799",
+      "display_name": "Image texture",
+      "level": 4,
+      "score": 0.51720154
+    },
+    {
+      "id": "C2781195486",
+      "display_name": "Texture (cosmology)",
+      "level": 3,
+      "score": 0.5076753
+    },
+    {
+      "id": "C124504099",
+      "display_name": "Image segmentation",
+      "level": 3,
+      "score": 0.4612874
+    },
+    {
+      "id": "C2778530986",
+      "display_name": "Flatness (cosmology)",
+      "level": 3,
+      "score": 0.4211977
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.21710661
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.19603378
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.15266612
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C26405456",
+      "display_name": "Cosmology",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C28826006",
+      "display_name": "Applied mathematics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10052",
+      "display_name": "Medical Image Segmentation Techniques",
+      "score": 0.9985
+    },
+    {
+      "id": "T10627",
+      "display_name": "Advanced Image and Video Retrieval Techniques",
+      "score": 0.9975
+    },
+    {
+      "id": "T10824",
+      "display_name": "Image Retrieval and Classification Techniques",
+      "score": 0.9963
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/embc.2016.7592201",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:17:19.689361",
+  "source_database": "OpenAlex"
+}

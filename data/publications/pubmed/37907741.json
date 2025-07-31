@@ -1,0 +1,343 @@
+{
+  "pmid": "37907741",
+  "uid": "37907741",
+  "title": "SARS-CoV-2 infection engenders heterogeneous ribonucleoprotein interactions to impede translation elongation in the lungs.",
+  "abstract": "Translational regulation in tissue environments during in vivo viral pathogenesis has rarely been studied due to the lack of translatomes from virus-infected tissues, although a series of translatome studies using in vitro cultured cells with viral infection have been reported. In this study, we exploited tissue-optimized ribosome profiling (Ribo-seq) and severe-COVID-19 model mice to establish the first temporal translation profiles of virus and host genes in the lungs during SARS-CoV-2 pathogenesis. Our datasets revealed not only previously unknown targets of translation regulation in infected tissues but also hitherto unreported molecular signatures that contribute to tissue pathology after SARS-CoV-2 infection. Specifically, we observed gradual increases in pseudoribosomal ribonucleoprotein (RNP) interactions that partially overlapped the trails of ribosomes, being likely involved in impeding translation elongation. Contemporaneously developed ribosome heterogeneity with predominantly dysregulated 5 S rRNP association supported the malfunction of elongating ribosomes. Analyses of canonical Ribo-seq reads (ribosome footprints) highlighted two obstructive characteristics to host gene expression: ribosome stalling on codons within transmembrane domain-coding regions and compromised translation of immunity- and metabolism-related genes with upregulated transcription. Our findings collectively demonstrate that the abrogation of translation integrity may be one of the most critical factors contributing to pathogenesis after SARS-CoV-2 infection of tissues.",
+  "authors": [
+    {
+      "last_name": "Kim",
+      "fore_name": "Junsoo",
+      "initials": "J",
+      "name": "Junsoo Kim",
+      "affiliations": [
+        "Center for RNA Research, Institute for Basic Science (IBS), Seoul National University, Seoul, Republic of Korea.",
+        "Interdisciplinary Program in Bioinformatics, Seoul National University, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Youn",
+      "fore_name": "Daehwa",
+      "initials": "D",
+      "name": "Daehwa Youn",
+      "affiliations": [
+        "Department of Biomedical Science and Engineering, Gwangju Institute of Science and Technology (GIST), Gwangju, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Choi",
+      "fore_name": "Seunghoon",
+      "initials": "S",
+      "name": "Seunghoon Choi",
+      "affiliations": [
+        "Korea Mouse Phenotyping Center (KMPC), Seoul National University, Seoul, Republic of Korea.",
+        "Laboratory of Developmental Biology and Genomics, Research Institute for Veterinary Science, and BK 21 PLUS Program for Creative Veterinary Science Research, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Youn Woo",
+      "initials": "YW",
+      "name": "Youn Woo Lee",
+      "affiliations": [
+        "Department of Nuclear Medicine, Seoul National University Bundang Hospital, Seongnam, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Sumberzul",
+      "fore_name": "Dulguun",
+      "initials": "D",
+      "name": "Dulguun Sumberzul",
+      "affiliations": [
+        "Department of Biomedical Science and Engineering, Gwangju Institute of Science and Technology (GIST), Gwangju, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Yoon",
+      "fore_name": "Jeongeun",
+      "initials": "J",
+      "name": "Jeongeun Yoon",
+      "affiliations": [
+        "Department of Biomedical Science and Engineering, Gwangju Institute of Science and Technology (GIST), Gwangju, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Hanju",
+      "initials": "H",
+      "name": "Hanju Lee",
+      "affiliations": [
+        "Center for RNA Research, Institute for Basic Science (IBS), Seoul National University, Seoul, Republic of Korea.",
+        "Interdisciplinary Program in Bioinformatics, Seoul National University, Seoul, Republic of Korea."
+      ],
+      "orcid": "0000-0003-4889-9871"
+    },
+    {
+      "last_name": "Bae",
+      "fore_name": "Jong Woo",
+      "initials": "JW",
+      "name": "Jong Woo Bae",
+      "affiliations": [
+        "Center for RNA Research, Institute for Basic Science (IBS), Seoul National University, Seoul, Republic of Korea.",
+        "School of Biological Sciences, Seoul National University, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Noh",
+      "fore_name": "Hyuna",
+      "initials": "H",
+      "name": "Hyuna Noh",
+      "affiliations": [
+        "Korea Mouse Phenotyping Center (KMPC), Seoul National University, Seoul, Republic of Korea."
+      ],
+      "orcid": "0000-0003-4806-6730"
+    },
+    {
+      "last_name": "On",
+      "fore_name": "Dain",
+      "initials": "D",
+      "name": "Dain On",
+      "affiliations": [
+        "Korea Mouse Phenotyping Center (KMPC), Seoul National University, Seoul, Republic of Korea.",
+        "Laboratory of Developmental Biology and Genomics, Research Institute for Veterinary Science, and BK 21 PLUS Program for Creative Veterinary Science Research, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Hong",
+      "fore_name": "Seung-Min",
+      "initials": "SM",
+      "name": "Seung-Min Hong",
+      "affiliations": [
+        "Laboratory of Avian Diseases, Research Institute for Veterinary Science, and BK 21 PLUS Program for Creative Veterinary Science Research, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "An",
+      "fore_name": "Se-Hee",
+      "initials": "SH",
+      "name": "Se-Hee An",
+      "affiliations": [
+        "Laboratory of Avian Diseases, Research Institute for Veterinary Science, and BK 21 PLUS Program for Creative Veterinary Science Research, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Jang",
+      "fore_name": "Hui Jeong",
+      "initials": "HJ",
+      "name": "Hui Jeong Jang",
+      "affiliations": [
+        "Department of Nuclear Medicine, Seoul National University Bundang Hospital, Seongnam, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Seo Yeon",
+      "initials": "SY",
+      "name": "Seo Yeon Kim",
+      "affiliations": [
+        "Preclinical Research Center, Seoul National University Bundang Hospital, Seongnam, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Young Been",
+      "initials": "YB",
+      "name": "Young Been Kim",
+      "affiliations": [
+        "Preclinical Research Center, Seoul National University Bundang Hospital, Seongnam, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Hwang",
+      "fore_name": "Ji-Yeon",
+      "initials": "JY",
+      "name": "Ji-Yeon Hwang",
+      "affiliations": [
+        "Preclinical Research Center, Seoul National University Bundang Hospital, Seongnam, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Hyo-Jung",
+      "initials": "HJ",
+      "name": "Hyo-Jung Lee",
+      "affiliations": [
+        "Department of Periodontology, Section of Dentistry, Seoul National University Bundang Hospital, Seongnam, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Bin Kim",
+      "fore_name": "Hong",
+      "initials": "H",
+      "name": "Hong Bin Kim",
+      "affiliations": [
+        "Department of Internal Medicine, Seoul National University Bundang Hospital, Seoul National University College of Medicine, Seongnam, Republic of Korea."
+      ],
+      "orcid": "0000-0001-6262-372X"
+    },
+    {
+      "last_name": "Park",
+      "fore_name": "Jun Won",
+      "initials": "JW",
+      "name": "Jun Won Park",
+      "affiliations": [
+        "Division of Biomedical Convergence, College of Biomedical Science, Kangwon National University, ChunCheon, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Yun",
+      "fore_name": "Jun-Won",
+      "initials": "JW",
+      "name": "Jun-Won Yun",
+      "affiliations": [
+        "Laboratory of Veterinary Toxicology, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Shin",
+      "fore_name": "Jeon-Soo",
+      "initials": "JS",
+      "name": "Jeon-Soo Shin",
+      "affiliations": [
+        "Severance Biomedical Science Institute, Graduate School of Medical Science, Brain Korea 21 Project, Yonsei University College of Medicine, Seoul, Republic of Korea."
+      ],
+      "orcid": "0000-0002-8294-3234"
+    },
+    {
+      "last_name": "Seo",
+      "fore_name": "Jun-Young",
+      "initials": "JY",
+      "name": "Jun-Young Seo",
+      "affiliations": [
+        "Severance Biomedical Science Institute, Graduate School of Medical Science, Brain Korea 21 Project, Yonsei University College of Medicine, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Nam",
+      "fore_name": "Ki Taek",
+      "initials": "KT",
+      "name": "Ki Taek Nam",
+      "affiliations": [
+        "Severance Biomedical Science Institute, Graduate School of Medical Science, Brain Korea 21 Project, Yonsei University College of Medicine, Seoul, Republic of Korea."
+      ],
+      "orcid": "0000-0001-5292-1280"
+    },
+    {
+      "last_name": "Choi",
+      "fore_name": "Kang-Seuk",
+      "initials": "KS",
+      "name": "Kang-Seuk Choi",
+      "affiliations": [
+        "Laboratory of Avian Diseases, Research Institute for Veterinary Science, and BK 21 PLUS Program for Creative Veterinary Science Research, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Ho-Young",
+      "initials": "HY",
+      "name": "Ho-Young Lee",
+      "affiliations": [
+        "Department of Nuclear Medicine, Seoul National University Bundang Hospital, Seongnam, Republic of Korea. debobkr@gmail.com.",
+        "Department of Nuclear Medicine, Seoul National University, College of Medicine, Seoul, Republic of Korea. debobkr@gmail.com."
+      ]
+    },
+    {
+      "last_name": "Chang",
+      "fore_name": "Hyeshik",
+      "initials": "H",
+      "name": "Hyeshik Chang",
+      "affiliations": [
+        "Center for RNA Research, Institute for Basic Science (IBS), Seoul National University, Seoul, Republic of Korea. hyeshik@snu.ac.kr.",
+        "Interdisciplinary Program in Bioinformatics, Seoul National University, Seoul, Republic of Korea. hyeshik@snu.ac.kr.",
+        "School of Biological Sciences, Seoul National University, Seoul, Republic of Korea. hyeshik@snu.ac.kr."
+      ],
+      "orcid": "0000-0002-9812-8015"
+    },
+    {
+      "last_name": "Seong",
+      "fore_name": "Je Kyung",
+      "initials": "JK",
+      "name": "Je Kyung Seong",
+      "affiliations": [
+        "Interdisciplinary Program in Bioinformatics, Seoul National University, Seoul, Republic of Korea. snumouse@snu.ac.kr.",
+        "Korea Mouse Phenotyping Center (KMPC), Seoul National University, Seoul, Republic of Korea. snumouse@snu.ac.kr.",
+        "Laboratory of Developmental Biology and Genomics, Research Institute for Veterinary Science, and BK 21 PLUS Program for Creative Veterinary Science Research, College of Veterinary Medicine, Seoul National University, Seoul, Republic of Korea. snumouse@snu.ac.kr.",
+        "Interdisciplinary Program and BIO MAX Institute, Seoul National University, Seoul, Republic of Korea. snumouse@snu.ac.kr."
+      ],
+      "orcid": "0000-0003-1177-6958"
+    },
+    {
+      "last_name": "Cho",
+      "fore_name": "Jun",
+      "initials": "J",
+      "name": "Jun Cho",
+      "affiliations": [
+        "Department of Biomedical Science and Engineering, Gwangju Institute of Science and Technology (GIST), Gwangju, Republic of Korea. juncho@gist.ac.kr."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Experimental & molecular medicine",
+    "iso_abbreviation": "Exp Mol Med",
+    "issn": "2092-6413",
+    "issn_type": "Electronic",
+    "volume": "55",
+    "issue": "12",
+    "pub_year": "2023",
+    "pub_month": "Dec"
+  },
+  "start_page": "2541",
+  "end_page": "2552",
+  "pages": "2541-2552",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Animals",
+    "Mice",
+    "RNA, Messenger",
+    "COVID-19",
+    "SARS-CoV-2",
+    "Protein Biosynthesis",
+    "Lung"
+  ],
+  "article_ids": {
+    "pubmed": "37907741",
+    "pmc": "PMC10767024",
+    "doi": "10.1038/s12276-023-01110-0",
+    "pii": "10.1038/s12276-023-01110-0"
+  },
+  "doi": "10.1038/s12276-023-01110-0",
+  "pmc_id": "PMC10767024",
+  "dates": {
+    "completed": "2024-01-08",
+    "revised": "2024-01-21"
+  },
+  "chemicals": [
+    "RNA, Messenger"
+  ],
+  "grants": [
+    {
+      "grant_id": "2020R1C1C1003667",
+      "agency": "National Research Foundation of Korea (NRF)"
+    },
+    {
+      "grant_id": "RS-2023-00209176",
+      "agency": "National Research Foundation of Korea (NRF)"
+    },
+    {
+      "grant_id": "2019R1-A6A1A10073437",
+      "agency": "National Research Foundation of Korea (NRF)"
+    },
+    {
+      "grant_id": "2021R1C1C1010758",
+      "agency": "National Research Foundation of Korea (NRF)"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:13:17.095352",
+    "pmid": "37907741"
+  }
+}

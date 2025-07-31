@@ -1,0 +1,179 @@
+{
+  "pmid": "38916936",
+  "uid": "38916936",
+  "title": "Making Science Computable Using Evidence-Based Medicine on Fast Healthcare Interoperability Resources: Standards Development Project.",
+  "abstract": "BACKGROUND: Evidence-based medicine (EBM) has the potential to improve health outcomes, but EBM has not been widely integrated into the systems used for research or clinical decision-making. There has not been a scalable and reusable computer-readable standard for distributing research results and synthesized evidence among creators, implementers, and the ultimate users of that evidence. Evidence that is more rapidly updated, synthesized, disseminated, and implemented would improve both the delivery of EBM and evidence-based health care policy. OBJECTIVE: This study aimed to introduce the EBM on Fast Healthcare Interoperability Resources (FHIR) project (EBMonFHIR), which is extending the methods and infrastructure of Health Level Seven (HL7) FHIR to provide an interoperability standard for the electronic exchange of health-related scientific knowledge. METHODS: As an ongoing process, the project creates and refines FHIR resources to represent evidence from clinical studies and syntheses of those studies and develops tools to assist with the creation and visualization of FHIR resources. RESULTS: The EBMonFHIR project created FHIR resources (ie, ArtifactAssessment, Citation, Evidence, EvidenceReport, and EvidenceVariable) for representing evidence. The COVID-19 Knowledge Accelerator (COKA) project, now Health Evidence Knowledge Accelerator (HEvKA), took this work further and created FHIR resources that express EvidenceReport, Citation, and ArtifactAssessment concepts. The group is (1) continually refining FHIR resources to support the representation of EBM; (2) developing controlled terminology related to EBM (ie, study design, statistic type, statistical model, and risk of bias); and (3) developing tools to facilitate the visualization and data entry of EBM information into FHIR resources, including human-readable interfaces and JSON viewers. CONCLUSIONS: EBMonFHIR resources in conjunction with other FHIR resources can support relaying EBM components in a manner that is interoperable and consumable by downstream tools and health information technology systems to support the users of evidence.",
+  "authors": [
+    {
+      "last_name": "Soares",
+      "fore_name": "Andrey",
+      "initials": "A",
+      "name": "Andrey Soares",
+      "affiliations": [
+        "Department of Medicine, University of Colorado Anschutz Medical Campus, Aurora, CO, United States."
+      ],
+      "orcid": "0000-0003-4319-9411"
+    },
+    {
+      "last_name": "Schilling",
+      "fore_name": "Lisa M",
+      "initials": "LM",
+      "name": "Lisa M Schilling",
+      "affiliations": [
+        "Department of Medicine, University of Colorado Anschutz Medical Campus, Aurora, CO, United States."
+      ],
+      "orcid": "0000-0002-6878-189X"
+    },
+    {
+      "last_name": "Richardson",
+      "fore_name": "Joshua",
+      "initials": "J",
+      "name": "Joshua Richardson",
+      "affiliations": [
+        "Center for Informatics, Research Triangle Institute International, Berkeley, CA, United States."
+      ],
+      "orcid": "0000-0003-3066-2673"
+    },
+    {
+      "last_name": "Kommadi",
+      "fore_name": "Bhagvan",
+      "initials": "B",
+      "name": "Bhagvan Kommadi",
+      "affiliations": [
+        "Quantica Computacao, Hyderabad, India.",
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States."
+      ],
+      "orcid": "0000-0002-1098-1792"
+    },
+    {
+      "last_name": "Subbian",
+      "fore_name": "Vignesh",
+      "initials": "V",
+      "name": "Vignesh Subbian",
+      "affiliations": [
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States.",
+        "College of Public Health, Department of Epidemiology and Biostatistics, University of Arizona, Tucson, AZ, United States."
+      ],
+      "orcid": "0000-0001-9974-8382"
+    },
+    {
+      "last_name": "Dehnbostel",
+      "fore_name": "Joanne",
+      "initials": "J",
+      "name": "Joanne Dehnbostel",
+      "affiliations": [
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States.",
+        "Computable Publishing LLC, Franklin, NC, United States."
+      ],
+      "orcid": "0000-0002-9896-9842"
+    },
+    {
+      "last_name": "Shahin",
+      "fore_name": "Khalid",
+      "initials": "K",
+      "name": "Khalid Shahin",
+      "affiliations": [
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States.",
+        "Computable Publishing LLC, Franklin, NC, United States."
+      ],
+      "orcid": "0000-0002-3526-7667"
+    },
+    {
+      "last_name": "Robinson",
+      "fore_name": "Karen A",
+      "initials": "KA",
+      "name": "Karen A Robinson",
+      "affiliations": [
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States.",
+        "Department of Medicine, Johns Hopkins School of Medicine, Baltimore, MD, United States."
+      ],
+      "orcid": "0000-0003-1021-7820"
+    },
+    {
+      "last_name": "Afzal",
+      "fore_name": "Muhammad",
+      "initials": "M",
+      "name": "Muhammad Afzal",
+      "affiliations": [
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States.",
+        "Department of Computing and Data Science, Birmingham City University, England, United Kingdom."
+      ],
+      "orcid": "0000-0002-7851-2327"
+    },
+    {
+      "last_name": "Lehmann",
+      "fore_name": "Harold P",
+      "initials": "HP",
+      "name": "Harold P Lehmann",
+      "affiliations": [
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States.",
+        "Department of Medicine, Johns Hopkins School of Medicine, Baltimore, MD, United States."
+      ],
+      "orcid": "0000-0002-7698-219X"
+    },
+    {
+      "last_name": "Kunnamo",
+      "fore_name": "Ilkka",
+      "initials": "I",
+      "name": "Ilkka Kunnamo",
+      "affiliations": [
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States.",
+        "Duodecim Publishing Company Ltd, Helsinki, Finland."
+      ],
+      "orcid": "0000-0002-4817-6991"
+    },
+    {
+      "last_name": "Alper",
+      "fore_name": "Brian S",
+      "initials": "BS",
+      "name": "Brian S Alper",
+      "affiliations": [
+        "Scientific Knowledge Accelerator Foundation, Franklin, NC, United States.",
+        "Computable Publishing LLC, Franklin, NC, United States."
+      ],
+      "orcid": "0000-0003-4300-4928"
+    }
+  ],
+  "journal": {
+    "title": "Journal of medical Internet research",
+    "iso_abbreviation": "J Med Internet Res",
+    "issn": "1438-8871",
+    "issn_type": "Electronic",
+    "volume": "26",
+    "pub_year": "2024",
+    "pub_month": "Jun",
+    "pub_day": "25"
+  },
+  "start_page": "e54265",
+  "pages": "e54265",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Evidence-Based Medicine",
+    "Humans",
+    "Health Information Interoperability",
+    "COVID-19",
+    "Health Level Seven"
+  ],
+  "article_ids": {
+    "pubmed": "38916936",
+    "pmc": "PMC11234056",
+    "doi": "10.2196/54265",
+    "pii": "v26i1e54265"
+  },
+  "doi": "10.2196/54265",
+  "pmc_id": "PMC11234056",
+  "dates": {
+    "completed": "2024-06-25",
+    "revised": "2024-07-12"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:02:15.142663",
+    "pmid": "38916936"
+  }
+}

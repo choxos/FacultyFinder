@@ -1,0 +1,126 @@
+{
+  "pmid": "28454568",
+  "uid": "28454568",
+  "title": "Double-adjustment in propensity score matching analysis: choosing a threshold for considering residual imbalance.",
+  "abstract": "BACKGROUND: Double-adjustment can be used to remove confounding if imbalance exists after propensity score (PS) matching. However, it is not always possible to include all covariates in adjustment. We aimed to find the optimal imbalance threshold for entering covariates into regression. METHODS: We conducted a series of Monte Carlo simulations on virtual populations of 5,000 subjects. We performed PS 1:1 nearest-neighbor matching on each sample. We calculated standardized mean differences across groups to detect any remaining imbalance in the matched samples. We examined 25 thresholds (from 0.01 to 0.25, stepwise 0.01) for considering residual imbalance. The treatment effect was estimated using logistic regression that contained only those covariates considered to be unbalanced by these thresholds. RESULTS: We showed that regression adjustment could dramatically remove residual confounding bias when it included all of the covariates with a standardized difference greater than 0.10. The additional benefit was negligible when we also adjusted for covariates with less imbalance. We found that the mean squared error of the estimates was minimized under the same conditions. CONCLUSION: If covariate balance is not achieved, we recommend reiterating PS modeling until standardized differences below 0.10 are achieved on most covariates. In case of remaining imbalance, a double adjustment might be worth considering.",
+  "authors": [
+    {
+      "last_name": "Nguyen",
+      "fore_name": "Tri-Long",
+      "initials": "TL",
+      "name": "Tri-Long Nguyen",
+      "affiliations": [
+        "Laboratory of Biostatistics, Epidemiology, Clinical Research and Health Economics, UPRES EA2415, Montpellier University, Montpellier, France.",
+        "Departments of Anesthesia & Clinical Epidemiology and Biostatistics, Michael DeGroote School of Medicine, Faculty of Health Sciences, McMaster University and the Perioperative Research Group, Population Health Research Institute, Hamilton, Canada."
+      ]
+    },
+    {
+      "last_name": "Collins",
+      "fore_name": "Gary S",
+      "initials": "GS",
+      "name": "Gary S Collins",
+      "affiliations": [
+        "Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, Botnar Research Centre, University of Oxford, Windmill Road, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "Spence",
+      "fore_name": "Jessica",
+      "initials": "J",
+      "name": "Jessica Spence",
+      "affiliations": [
+        "Departments of Anesthesia & Clinical Epidemiology and Biostatistics, Michael DeGroote School of Medicine, Faculty of Health Sciences, McMaster University and the Perioperative Research Group, Population Health Research Institute, Hamilton, Canada."
+      ]
+    },
+    {
+      "last_name": "Daurès",
+      "fore_name": "Jean-Pierre",
+      "initials": "JP",
+      "name": "Jean-Pierre Daurès",
+      "affiliations": [
+        "Laboratory of Biostatistics, Epidemiology, Clinical Research and Health Economics, UPRES EA2415, Montpellier University, Montpellier, France."
+      ]
+    },
+    {
+      "last_name": "Devereaux",
+      "fore_name": "P J",
+      "initials": "PJ",
+      "name": "P J Devereaux",
+      "affiliations": [
+        "Departments of Anesthesia & Clinical Epidemiology and Biostatistics, Michael DeGroote School of Medicine, Faculty of Health Sciences, McMaster University and the Perioperative Research Group, Population Health Research Institute, Hamilton, Canada.",
+        "Departments of Medicine, Michael DeGroote School of Medicine, Faculty of Health Sciences, McMaster University, Hamilton, Canada."
+      ]
+    },
+    {
+      "last_name": "Landais",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Landais",
+      "affiliations": [
+        "Laboratory of Biostatistics, Epidemiology, Clinical Research and Health Economics, UPRES EA2415, Montpellier University, Montpellier, France.",
+        "Department of Biostatistics, Clinical Research and Medical Informatics, Nîmes University Hospital, Nîmes, France."
+      ]
+    },
+    {
+      "last_name": "Le Manach",
+      "fore_name": "Yannick",
+      "initials": "Y",
+      "name": "Yannick Le Manach",
+      "affiliations": [
+        "Departments of Anesthesia & Clinical Epidemiology and Biostatistics, Michael DeGroote School of Medicine, Faculty of Health Sciences, McMaster University and the Perioperative Research Group, Population Health Research Institute, Hamilton, Canada. yannick.lemanach@phri.ca."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "BMC medical research methodology",
+    "iso_abbreviation": "BMC Med Res Methodol",
+    "issn": "1471-2288",
+    "issn_type": "Electronic",
+    "volume": "17",
+    "issue": "1",
+    "pub_year": "2017",
+    "pub_month": "Apr",
+    "pub_day": "28"
+  },
+  "start_page": "78",
+  "pages": "78",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Bias",
+    "Computer Simulation",
+    "Humans",
+    "Logistic Models",
+    "Models, Statistical",
+    "Monte Carlo Method",
+    "Propensity Score"
+  ],
+  "article_ids": {
+    "pubmed": "28454568",
+    "pmc": "PMC5408373",
+    "doi": "10.1186/s12874-017-0338-0",
+    "pii": "10.1186/s12874-017-0338-0"
+  },
+  "doi": "10.1186/s12874-017-0338-0",
+  "pmc_id": "PMC5408373",
+  "dates": {
+    "completed": "2018-03-09",
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "16895",
+      "agency": "Cancer Research UK",
+      "country": "United Kingdom"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:59:58.310619",
+    "pmid": "28454568"
+  }
+}

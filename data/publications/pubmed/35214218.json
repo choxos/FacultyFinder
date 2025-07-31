@@ -1,0 +1,106 @@
+{
+  "pmid": "35214218",
+  "uid": "35214218",
+  "title": "Lean Neural Networks for Autonomous Radar Waveform Design.",
+  "abstract": "In recent years, neural networks have exploded in popularity, revolutionizing the domains of computer vision, natural language processing, and autonomous systems. This is due to neural networks ability to approximate complex non-linear functions. Despite their effectiveness, they generally require large labeled data sets and considerable processing power for both training and prediction. Some of these bottlenecks have been mitigated by recent increased availability of high-quality data sets, improvements in neural network development software, and greater hardware support. Due to algorithmic bloat, neural network inference times and imprecision make them undesirable for some problems where fast classical algorithm solutions already exist, other classes of algorithms, such as convex optimization, with non-trivial execution times could be reduced using neural solutions. These algorithms could be replaced with light-weight neural networks, benefiting from their high degree of parallelization and high accuracy when properly trained. Previous work has explored how low size, weight, and power (low SWaP) neural networks and neuromorphic computing can be used to improve autonomous radar waveform design techniques that currently rely on convex optimization. Autonomous radar waveform design helps meet the need for interference mitigation caused by an ever-growing number of consumer and commercial technologies which pollute the radio frequency (RF) spectrum. Spectral notching, a radar waveform design technique, augments transmitted radar waveforms to avoid frequencies with excessive interference while maintaining the integrity of the waveform. In this paper, we extend that work, demonstrating that lean neural networks and specialized hardware can improve inference time for waveform design without sacrificing accuracy. Our lean neural solution incorporates problem-specific information into the layer structures and loss functions to decrease network size and improve accuracy. We provide model outcomes implemented on radio frequency system on a chip (RFSoC) hardware that support our simulation results. Our neural network solution decreases inference time on traditional CPU hardware by 1057× and on GPU hardware accelerators by 883× while maintaining 99% cosine similarity.",
+  "authors": [
+    {
+      "last_name": "Baietto",
+      "fore_name": "Anthony",
+      "initials": "A",
+      "name": "Anthony Baietto",
+      "affiliations": [
+        "Department of Computer Science and Engineering, The Ohio State University, Columbus, OH 43210, USA.",
+        "Applied Research Solutions, Beavercreek, OH 45440, USA."
+      ],
+      "orcid": "0000-0002-8769-4548"
+    },
+    {
+      "last_name": "Boubin",
+      "fore_name": "Jayson",
+      "initials": "J",
+      "name": "Jayson Boubin",
+      "affiliations": [
+        "Department of Computer Science and Engineering, The Ohio State University, Columbus, OH 43210, USA.",
+        "Applied Research Solutions, Beavercreek, OH 45440, USA."
+      ]
+    },
+    {
+      "last_name": "Farr",
+      "fore_name": "Patrick",
+      "initials": "P",
+      "name": "Patrick Farr",
+      "affiliations": [
+        "Applied Research Solutions, Beavercreek, OH 45440, USA."
+      ]
+    },
+    {
+      "last_name": "Bihl",
+      "fore_name": "Trevor J",
+      "initials": "TJ",
+      "name": "Trevor J Bihl",
+      "affiliations": [
+        "Sensors Directorate, Air Force Research Laboratory, Wright-Patterson Air Force Base, OH 45433, USA."
+      ]
+    },
+    {
+      "last_name": "Jones",
+      "fore_name": "Aaron M",
+      "initials": "AM",
+      "name": "Aaron M Jones",
+      "affiliations": [
+        "Sensors Directorate, Air Force Research Laboratory, Wright-Patterson Air Force Base, OH 45433, USA."
+      ]
+    },
+    {
+      "last_name": "Stewart",
+      "fore_name": "Christopher",
+      "initials": "C",
+      "name": "Christopher Stewart",
+      "affiliations": [
+        "Department of Computer Science and Engineering, The Ohio State University, Columbus, OH 43210, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Sensors (Basel, Switzerland)",
+    "iso_abbreviation": "Sensors (Basel)",
+    "issn": "1424-8220",
+    "issn_type": "Electronic",
+    "volume": "22",
+    "issue": "4",
+    "pub_year": "2022",
+    "pub_month": "Feb",
+    "pub_day": "09"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Computer Simulation",
+    "Computers",
+    "Neural Networks, Computer",
+    "Radar"
+  ],
+  "article_ids": {
+    "pubmed": "35214218",
+    "pmc": "PMC8876171",
+    "doi": "10.3390/s22041317",
+    "pii": "s22041317"
+  },
+  "doi": "10.3390/s22041317",
+  "pmc_id": "PMC8876171",
+  "dates": {
+    "completed": "2022-03-01",
+    "revised": "2022-03-01"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:31:25.684728",
+    "pmid": "35214218"
+  }
+}

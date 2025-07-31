@@ -1,0 +1,136 @@
+{
+  "pmid": "31536833",
+  "uid": "31536833",
+  "title": "Pharmacoinformatics-based identification of potential bioactive compounds against Ebola virus protein VP24.",
+  "abstract": "BACKGROUND: The impact of Ebola virus disease (EVD) is devastating with concomitant high fatalities. Currently, various drugs and vaccines are at different stages of development, corroborating the need to identify new therapeutic molecules. The VP24 protein of the Ebola virus (EBOV) plays a key role in the pathology and replication of the EVD. The VP24 protein interferes with the host immune response to viral infections and promotes nucleocapsid formation, thus making it a viable drug target. This study sought to identify putative lead compounds from the African flora with potential to inhibit the activity of the EBOV VP24 protein using pharmacoinformatics and molecular docking. METHODS: An integrated library of 7675 natural products originating from Africa obtained from the AfroDB and NANPDB databases, as well as known inhibitors were screened against VP24 (PDB ID: 4M0Q) utilising AutoDock Vina after energy minimization using GROMACS. The top 19 compounds were physicochemically and pharmacologically profiled using ADMET Predictor™, SwissADME and DataWarrior. The mechanisms of binding between the molecules and EBOV VP24 were characterised using LigPlot+. The performance of the molecular docking was evaluated by generating a receiver operating characteristic (ROC) by screening known inhibitors and decoys against EBOV VP24. The prediction of activity spectra for substances (PASS) and machine learning-based Open Bayesian models were used to predict the anti-viral and anti-Ebola activity of the molecules, respectively. RESULTS: Four natural products, namely, ZINC000095486070, ZINC000003594643, ZINC000095486008 and sarcophine were found to be potential EBOV VP24-inhibitiory molecules. The molecular docking results showed that ZINC000095486070 had high binding affinity of -9.7 kcal/mol with EBOV VP24, which was greater than those of the known VP24-inhibitors used as standards in the study including Ouabain, Nilotinib, Clomiphene, Torimefene, Miglustat and BCX4430. The area under the curve of the generated ROC for evaluating the performance of the molecular docking was 0.77, which was considered acceptable. The predicted promising molecules were also validated using induced-fit docking with the receptor using Schrödinger and molecular mechanics Poisson-Boltzmann surface area (MM-PBSA) calculations. The molecules had better binding mechanisms and were pharmacologically profiled to have plausible efficacies, negligible toxicity as well as suitable for designing anti-Ebola scaffolds. ZINC000095486008 and sarcophine (NANPDB135) were predicted to possess anti-viral activity, while ZINC000095486070 and ZINC000003594643 to be anti-Ebola compounds. CONCLUSION: The identified compounds are potential inhibitors worthy of further development as EBOV biotherapeutic agents. The scaffolds of the compounds could also serve as building blocks for designing novel Ebola inhibitors.",
+  "authors": [
+    {
+      "last_name": "Kwofie",
+      "fore_name": "Samuel K",
+      "initials": "SK",
+      "name": "Samuel K Kwofie",
+      "affiliations": [
+        "Department of Biomedical Engineering, School of Engineering Sciences, College of Basic & Applied Sciences, University of Ghana, PMB LG 77, Legon, Accra, Ghana; West African Center for Cell Biology of Infectious Pathogens, Department of Biochemistry, Cell and Molecular Biology, College of Basic and Applied Sciences, University of Ghana, Accra, Ghana; Department of Medicine, Loyola University Medical Center, Maywood, IL, 60153, USA. Electronic address: skkwofie@ug.edu.gh."
+      ]
+    },
+    {
+      "last_name": "Broni",
+      "fore_name": "Emmanuel",
+      "initials": "E",
+      "name": "Emmanuel Broni",
+      "affiliations": [
+        "Department of Biomedical Engineering, School of Engineering Sciences, College of Basic & Applied Sciences, University of Ghana, PMB LG 77, Legon, Accra, Ghana."
+      ]
+    },
+    {
+      "last_name": "Teye",
+      "fore_name": "Joshua",
+      "initials": "J",
+      "name": "Joshua Teye",
+      "affiliations": [
+        "Department of Biomedical Engineering, School of Engineering Sciences, College of Basic & Applied Sciences, University of Ghana, PMB LG 77, Legon, Accra, Ghana."
+      ]
+    },
+    {
+      "last_name": "Quansah",
+      "fore_name": "Erasmus",
+      "initials": "E",
+      "name": "Erasmus Quansah",
+      "affiliations": [
+        "Department of Parasitology, Noguchi Memorial Institute for Medical Research (NMIMR), College of Health Sciences (CHS), University of Ghana, P.O. Box LG 581, Legon, Accra, Ghana."
+      ]
+    },
+    {
+      "last_name": "Issah",
+      "fore_name": "Ibrahim",
+      "initials": "I",
+      "name": "Ibrahim Issah",
+      "affiliations": [
+        "Department of Biomedical Engineering, School of Engineering Sciences, College of Basic & Applied Sciences, University of Ghana, PMB LG 77, Legon, Accra, Ghana."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael D",
+      "initials": "MD",
+      "name": "Michael D Wilson",
+      "affiliations": [
+        "Department of Medicine, Loyola University Medical Center, Maywood, IL, 60153, USA; Department of Parasitology, Noguchi Memorial Institute for Medical Research (NMIMR), College of Health Sciences (CHS), University of Ghana, P.O. Box LG 581, Legon, Accra, Ghana."
+      ]
+    },
+    {
+      "last_name": "Miller",
+      "fore_name": "Whelton A",
+      "initials": "WA",
+      "name": "Whelton A Miller",
+      "affiliations": [
+        "Department of Medicine, Loyola University Medical Center, Maywood, IL, 60153, USA; Department of Chemical and Biomolecular Engineering, School of Engineering and Applied Science, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Tiburu",
+      "fore_name": "Elvis K",
+      "initials": "EK",
+      "name": "Elvis K Tiburu",
+      "affiliations": [
+        "Department of Biomedical Engineering, School of Engineering Sciences, College of Basic & Applied Sciences, University of Ghana, PMB LG 77, Legon, Accra, Ghana; West African Center for Cell Biology of Infectious Pathogens, Department of Biochemistry, Cell and Molecular Biology, College of Basic and Applied Sciences, University of Ghana, Accra, Ghana."
+      ]
+    },
+    {
+      "last_name": "Bonney",
+      "fore_name": "Joseph H K",
+      "initials": "JHK",
+      "name": "Joseph H K Bonney",
+      "affiliations": [
+        "Department of Virology, Noguchi Memorial Institute for Medical Research (NMIMR), College of Health Sciences (CHS), University of Ghana, P.O. Box LG 581, Legon, Accra, Ghana."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Computers in biology and medicine",
+    "iso_abbreviation": "Comput Biol Med",
+    "issn": "1879-0534",
+    "issn_type": "Electronic",
+    "volume": "113",
+    "pub_year": "2019",
+    "pub_month": "Oct"
+  },
+  "start_page": "103414",
+  "pages": "103414",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Antiviral Agents",
+    "Ebolavirus",
+    "Hemorrhagic Fever, Ebola",
+    "Humans",
+    "Molecular Docking Simulation",
+    "Molecular Dynamics Simulation",
+    "Phytochemicals",
+    "Viral Proteins"
+  ],
+  "article_ids": {
+    "pubmed": "31536833",
+    "doi": "10.1016/j.compbiomed.2019.103414",
+    "pii": "S0010-4825(19)30291-4"
+  },
+  "doi": "10.1016/j.compbiomed.2019.103414",
+  "dates": {
+    "completed": "2020-09-16",
+    "revised": "2020-09-16"
+  },
+  "chemicals": [
+    "Antiviral Agents",
+    "Phytochemicals",
+    "VP24 protein, Ebola virus",
+    "Viral Proteins"
+  ],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.540324",
+    "pmid": "31536833"
+  }
+}

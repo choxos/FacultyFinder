@@ -1,0 +1,1118 @@
+{
+  "openalex_id": "W2281221830",
+  "doi": "https://doi.org/10.1093/mnras/stw395",
+  "title": "From spin noise to systematics: stochastic processes in the first International Pulsar Timing Array data release",
+  "abstract": "We analyse the stochastic properties of the 49 pulsars that comprise the first International Pulsar Timing Array (IPTA) data release. We use Bayesian methodology, performing model selection to determine the optimal description of the stochastic signals present in each pulsar. In addition to spin-noise and dispersion-measure (DM) variations, these models can include timing noise unique to a single observing system, or frequency band. We show the improved radio-frequency coverage and presence of overlapping data from different observing systems in the IPTA data set enables us to separate both system and band-dependent effects with much greater efficacy than in the individual PTA data sets. For example, we show that PSR J1643$-$1224 has, in addition to DM variations, significant band-dependent noise that is coherent between PTAs which we interpret as coming from time-variable scattering or refraction in the ionised interstellar medium. Failing to model these different contributions appropriately can dramatically alter the astrophysical interpretation of the stochastic signals observed in the residuals. In some cases, the spectral exponent of the spin noise signal can vary from 1.6 to 4 depending upon the model, which has direct implications for the long-term sensitivity of the pulsar to a stochastic gravitational-wave (GW) background. By using a more appropriate model, however, we can greatly improve a pulsar's sensitivity to GWs. For example, including system and band-dependent signals in the PSR J0437$-$4715 data set improves the upper limit on a fiducial GW background by $\\sim 60\\%$ compared to a model that includes DM variations and spin-noise only.",
+  "authors": [
+    {
+      "display_name": "L. Lentati",
+      "id": "A5034792105",
+      "orcid": "https://orcid.org/0000-0002-0646-0599",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "L. Lentati"
+    },
+    {
+      "display_name": "R. M. Shannon",
+      "id": "A5016391781",
+      "orcid": "https://orcid.org/0000-0002-7285-6348",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "R. M. Shannon"
+    },
+    {
+      "display_name": "W. A. Coles",
+      "id": "A5072252950",
+      "orcid": "https://orcid.org/0000-0002-5714-7471",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "W. A. Coles"
+    },
+    {
+      "display_name": "J. P. W. Verbiest",
+      "id": "A5047513060",
+      "orcid": "https://orcid.org/0000-0002-4088-896X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "J. P. W. Verbiest"
+    },
+    {
+      "display_name": "Rutger van Haasteren",
+      "id": "A5051657765",
+      "orcid": "https://orcid.org/0000-0002-6428-2620",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "R. van Haasteren"
+    },
+    {
+      "display_name": "Justin A. Ellis",
+      "id": "A5101581248",
+      "orcid": "https://orcid.org/0000-0003-1715-974X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "J. A. Ellis"
+    },
+    {
+      "display_name": "R. N. Caballero",
+      "id": "A5007990699",
+      "orcid": "https://orcid.org/0000-0001-9084-9427",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "R. N. Caballero"
+    },
+    {
+      "display_name": "R. N. Manchester",
+      "id": "A5028491443",
+      "orcid": "https://orcid.org/0000-0001-9445-5732",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "R. N. Manchester"
+    },
+    {
+      "display_name": "Zaven Arzoumanian",
+      "id": "A5080561663",
+      "orcid": "https://orcid.org/0009-0008-6187-8753",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Z. Arzoumanian"
+    },
+    {
+      "display_name": "S. Babak",
+      "id": "A5006144170",
+      "orcid": "https://orcid.org/0000-0001-7469-4250",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Babak"
+    },
+    {
+      "display_name": "C. Bassa",
+      "id": "A5010079439",
+      "orcid": "https://orcid.org/0000-0002-1429-9010",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "C. G. Bassa"
+    },
+    {
+      "display_name": "N. D. R. Bhat",
+      "id": "A5030580980",
+      "orcid": "https://orcid.org/0000-0002-8383-5059",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "N. D. R. Bhat"
+    },
+    {
+      "display_name": "P. Brem",
+      "id": "A5045609556",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "P. Brem"
+    },
+    {
+      "display_name": "M. Burgay",
+      "id": "A5072582905",
+      "orcid": "https://orcid.org/0000-0002-8265-4344",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M. Burgay"
+    },
+    {
+      "display_name": "Sarah Burke-Spolaor",
+      "id": "A5029852719",
+      "orcid": "https://orcid.org/0000-0003-4052-7838",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Burke-Spolaor"
+    },
+    {
+      "display_name": "D. J. Champion",
+      "id": "A5011936430",
+      "orcid": "https://orcid.org/0000-0003-1361-7723",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "D. Champion"
+    },
+    {
+      "display_name": "Shami Chatterjee",
+      "id": "A5056398451",
+      "orcid": "https://orcid.org/0000-0002-2878-1502",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Chatterjee"
+    },
+    {
+      "display_name": "I. Cognard",
+      "id": "A5006134581",
+      "orcid": "https://orcid.org/0000-0002-1775-9692",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "I. Cognard"
+    },
+    {
+      "display_name": "J. M. Cordes",
+      "id": "A5004827872",
+      "orcid": "https://orcid.org/0000-0002-4049-1882",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "J. M. Cordes"
+    },
+    {
+      "display_name": "Shi Dai",
+      "id": "A5076119363",
+      "orcid": "https://orcid.org/0000-0002-9618-2499",
+      "institutions": [
+        {
+          "id": "I20231570",
+          "display_name": "Peking University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Dai"
+    },
+    {
+      "display_name": "Paul Demorest",
+      "id": "A5059638806",
+      "orcid": "https://orcid.org/0000-0002-6664-965X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "P. Demorest"
+    },
+    {
+      "display_name": "G. Desvignes",
+      "id": "A5052243752",
+      "orcid": "https://orcid.org/0000-0003-3922-4055",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "G. Desvignes"
+    },
+    {
+      "display_name": "Timothy Dolch",
+      "id": "A5021279290",
+      "orcid": "https://orcid.org/0000-0001-8885-6388",
+      "institutions": [
+        {
+          "id": "I39913132",
+          "display_name": "Hillsdale College",
+          "country_code": "US",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Dolch"
+    },
+    {
+      "display_name": "R. D. Ferdman",
+      "id": "A5035744059",
+      "orcid": "https://orcid.org/0000-0002-2223-1235",
+      "institutions": [
+        {
+          "id": "I5023651",
+          "display_name": "McGill University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. D. Ferdman"
+    },
+    {
+      "display_name": "Emmanuel Fonseca",
+      "id": "A5087315310",
+      "orcid": "https://orcid.org/0000-0001-8384-5049",
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Fonseca"
+    },
+    {
+      "display_name": "J. R. Gair",
+      "id": "A5011973729",
+      "orcid": "https://orcid.org/0000-0002-1671-3668",
+      "institutions": [
+        {
+          "id": "I98677209",
+          "display_name": "University of Edinburgh",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. R. Gair"
+    },
+    {
+      "display_name": "M. E. Gonzalez",
+      "id": "A5017224476",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I141074466",
+          "display_name": "Vancouver Coastal Health",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. E. Gonzalez"
+    },
+    {
+      "display_name": "E. Graikou",
+      "id": "A5008975556",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "E. Graikou"
+    },
+    {
+      "display_name": "L. Guillemot",
+      "id": "A5091186797",
+      "orcid": "https://orcid.org/0000-0002-9049-8716",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "L. Guillemot"
+    },
+    {
+      "display_name": "J. W. T. Hessels",
+      "id": "A5069227312",
+      "orcid": "https://orcid.org/0000-0003-2317-1446",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. W. T. Hessels"
+    },
+    {
+      "display_name": "G. Hobbs",
+      "id": "A5081228919",
+      "orcid": "https://orcid.org/0000-0003-1502-100X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "G. Hobbs"
+    },
+    {
+      "display_name": "G. H. Janssen",
+      "id": "A5079081056",
+      "orcid": "https://orcid.org/0000-0003-3068-3677",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "G. H. Janssen"
+    },
+    {
+      "display_name": "G. Jones",
+      "id": "A5049185235",
+      "orcid": "https://orcid.org/0000-0002-1657-5912",
+      "institutions": [
+        {
+          "id": "I78577930",
+          "display_name": "Columbia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Jones"
+    },
+    {
+      "display_name": "R. Karuppusamy",
+      "id": "A5078693731",
+      "orcid": "https://orcid.org/0000-0002-5307-2919",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "R. Karuppusamy"
+    },
+    {
+      "display_name": "M. J. Keith",
+      "id": "A5073994859",
+      "orcid": "https://orcid.org/0000-0001-5567-5492",
+      "institutions": [
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Keith"
+    },
+    {
+      "display_name": "M. Kerr",
+      "id": "A5066502046",
+      "orcid": "https://orcid.org/0000-0002-0893-4073",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M. Kerr"
+    },
+    {
+      "display_name": "M. Krämer",
+      "id": "A5003133702",
+      "orcid": "https://orcid.org/0000-0002-7615-7499",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M. Kramer"
+    },
+    {
+      "display_name": "Michael T. Lam",
+      "id": "A5033670886",
+      "orcid": "https://orcid.org/0000-0003-0721-651X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M. T. Lam"
+    },
+    {
+      "display_name": "P. D. Lasky",
+      "id": "A5000611658",
+      "orcid": "https://orcid.org/0000-0003-3763-1386",
+      "institutions": [
+        {
+          "id": "I56590836",
+          "display_name": "Monash University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. D. Lasky"
+    },
+    {
+      "display_name": "A. Lassus",
+      "id": "A5074021585",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Lassus"
+    },
+    {
+      "display_name": "P. Lazarus",
+      "id": "A5044456791",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "P. Lazarus"
+    },
+    {
+      "display_name": "T. Joseph W. Lazio",
+      "id": "A5113893347",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "T. J. W. Lazio"
+    },
+    {
+      "display_name": "K. J. Lee",
+      "id": "A5078092870",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210105842",
+          "display_name": "Kavli Institute for Theoretical Sciences",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I20231570",
+          "display_name": "Peking University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. J. Lee"
+    },
+    {
+      "display_name": "L. Levin",
+      "id": "A5016021237",
+      "orcid": "https://orcid.org/0000-0002-2034-2986",
+      "institutions": [
+        {
+          "id": "I12097938",
+          "display_name": "West Virginia University",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Levin"
+    },
+    {
+      "display_name": "K. Liu",
+      "id": "A5091340332",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "K. Liu"
+    },
+    {
+      "display_name": "Ryan S. Lynch",
+      "id": "A5044442833",
+      "orcid": "https://orcid.org/0000-0001-5229-7430",
+      "institutions": [
+        {
+          "id": "I2609998029",
+          "display_name": "National Radio Astronomy Observatory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. S. Lynch"
+    },
+    {
+      "display_name": "Dustin R. Madison",
+      "id": "A5000450163",
+      "orcid": "https://orcid.org/0000-0003-2285-0404",
+      "institutions": [
+        {
+          "id": "I2609998029",
+          "display_name": "National Radio Astronomy Observatory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. R. Madison"
+    },
+    {
+      "display_name": "James W. McKee",
+      "id": "A5016708288",
+      "orcid": "https://orcid.org/0000-0002-2885-8485",
+      "institutions": [
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. McKee"
+    },
+    {
+      "display_name": "M. A. McLaughlin",
+      "id": "A5017251529",
+      "orcid": "https://orcid.org/0000-0001-7697-7422",
+      "institutions": [
+        {
+          "id": "I12097938",
+          "display_name": "West Virginia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. McLaughlin"
+    },
+    {
+      "display_name": "Sean T. McWilliams",
+      "id": "A5028335452",
+      "orcid": "https://orcid.org/0000-0003-2397-8290",
+      "institutions": [
+        {
+          "id": "I12097938",
+          "display_name": "West Virginia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. T. McWilliams"
+    },
+    {
+      "display_name": "Chiara M. F. Mingarelli",
+      "id": "A5057355965",
+      "orcid": "https://orcid.org/0000-0002-4307-1322",
+      "institutions": [
+        {
+          "id": "I122411786",
+          "display_name": "California Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. M. F. Mingarelli"
+    },
+    {
+      "display_name": "D. J. Nice",
+      "id": "A5028940848",
+      "orcid": "https://orcid.org/0000-0002-6709-2566",
+      "institutions": [
+        {
+          "id": "I184759092",
+          "display_name": "Lafayette College",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. J. Nice"
+    },
+    {
+      "display_name": "S. Osłowski",
+      "id": "A5003985421",
+      "orcid": "https://orcid.org/0000-0003-0289-0732",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. Osłowski"
+    },
+    {
+      "display_name": "Timothy T. Pennucci",
+      "id": "A5047667839",
+      "orcid": "https://orcid.org/0000-0001-5465-2889",
+      "institutions": [
+        {
+          "id": "I51556381",
+          "display_name": "University of Virginia",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. T. Pennucci"
+    },
+    {
+      "display_name": "B. B. P. Perera",
+      "id": "A5071983894",
+      "orcid": "https://orcid.org/0000-0002-8509-5947",
+      "institutions": [
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. B. P. Perera"
+    },
+    {
+      "display_name": "D. Perrodin",
+      "id": "A5083349550",
+      "orcid": "https://orcid.org/0000-0002-1806-2483",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "D. Perrodin"
+    },
+    {
+      "display_name": "Antoine Petiteau",
+      "id": "A5039076119",
+      "orcid": "https://orcid.org/0000-0002-7371-9695",
+      "institutions": [
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I169173203",
+          "display_name": "Délégation Paris 7",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Petiteau"
+    },
+    {
+      "display_name": "Andrea Possenti",
+      "id": "A5019085291",
+      "orcid": "https://orcid.org/0000-0001-5902-3731",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Possenti"
+    },
+    {
+      "display_name": "S. M. Ransom",
+      "id": "A5023309913",
+      "orcid": "https://orcid.org/0000-0001-5799-9714",
+      "institutions": [
+        {
+          "id": "I2609998029",
+          "display_name": "National Radio Astronomy Observatory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. M. Ransom"
+    },
+    {
+      "display_name": "Daniel J. Reardon",
+      "id": "A5020713881",
+      "orcid": "https://orcid.org/0000-0002-2035-4688",
+      "institutions": [
+        {
+          "id": "I56590836",
+          "display_name": "Monash University",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Reardon"
+    },
+    {
+      "display_name": "P. A. Rosado",
+      "id": "A5055025492",
+      "orcid": "https://orcid.org/0000-0002-2333-2935",
+      "institutions": [
+        {
+          "id": "I57093077",
+          "display_name": "Swinburne University of Technology",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. A. Rosado"
+    },
+    {
+      "display_name": "S. A. Sanidas",
+      "id": "A5024209504",
+      "orcid": "https://orcid.org/0000-0002-5956-5546",
+      "institutions": [
+        {
+          "id": "I887064364",
+          "display_name": "University of Amsterdam",
+          "country_code": "NL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. A. Sanidas"
+    },
+    {
+      "display_name": "Alberto Sesana",
+      "id": "A5013212715",
+      "orcid": "https://orcid.org/0000-0003-4961-1606",
+      "institutions": [
+        {
+          "id": "I79619799",
+          "display_name": "University of Birmingham",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Sesana"
+    },
+    {
+      "display_name": "G. Shaifullah",
+      "id": "A5041242053",
+      "orcid": "https://orcid.org/0000-0002-8452-4834",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "G. Shaifullah"
+    },
+    {
+      "display_name": "Xavier Siemens",
+      "id": "A5058214105",
+      "orcid": "https://orcid.org/0000-0002-7778-2990",
+      "institutions": [
+        {
+          "id": "I43579087",
+          "display_name": "University of Wisconsin–Milwaukee",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "X. Siemens"
+    },
+    {
+      "display_name": "R. Smits",
+      "id": "A5014033205",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "R. Smits"
+    },
+    {
+      "display_name": "I. H. Stairs",
+      "id": "A5033512268",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I141945490",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. Stairs"
+    },
+    {
+      "display_name": "B. W. Stappers",
+      "id": "A5065846192",
+      "orcid": "https://orcid.org/0000-0001-9242-7041",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "B. Stappers"
+    },
+    {
+      "display_name": "Daniel R. Stinebring",
+      "id": "A5069168543",
+      "orcid": "https://orcid.org/0000-0002-1797-3277",
+      "institutions": [
+        {
+          "id": "I70571728",
+          "display_name": "Oberlin College",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. R. Stinebring"
+    },
+    {
+      "display_name": "K. Stovall",
+      "id": "A5066295873",
+      "orcid": "https://orcid.org/0000-0002-7261-594X",
+      "institutions": [
+        {
+          "id": "I169521973",
+          "display_name": "University of New Mexico",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Stovall"
+    },
+    {
+      "display_name": "Joseph K. Swiggum",
+      "id": "A5086627438",
+      "orcid": "https://orcid.org/0000-0002-1075-3837",
+      "institutions": [
+        {
+          "id": "I12097938",
+          "display_name": "West Virginia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Swiggum"
+    },
+    {
+      "display_name": "Stephen R. Taylor",
+      "id": "A5076893965",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "S. R. Taylor"
+    },
+    {
+      "display_name": "G. Theureau",
+      "id": "A5080148719",
+      "orcid": "https://orcid.org/0000-0002-3649-276X",
+      "institutions": [
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210089183",
+          "display_name": "Laboratoire Univers et Théories",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Theureau"
+    },
+    {
+      "display_name": "C. Tiburzi",
+      "id": "A5013835213",
+      "orcid": "https://orcid.org/0000-0001-6651-4811",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "C. Tiburzi"
+    },
+    {
+      "display_name": "Lawrence Toomey",
+      "id": "A5021246345",
+      "orcid": "https://orcid.org/0000-0003-3186-3266",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "L. Toomey"
+    },
+    {
+      "display_name": "Michele Vallisneri",
+      "id": "A5035867684",
+      "orcid": "https://orcid.org/0000-0002-4162-0033",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M. Vallisneri"
+    },
+    {
+      "display_name": "W. van Straten",
+      "id": "A5032745702",
+      "orcid": "https://orcid.org/0000-0003-2519-7375",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "W. van Straten"
+    },
+    {
+      "display_name": "A. Vecchio",
+      "id": "A5107308483",
+      "orcid": "https://orcid.org/0000-0002-6254-1617",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Vecchio"
+    },
+    {
+      "display_name": "J.-B. Wang",
+      "id": "A5075261401",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2800999641",
+          "display_name": "Xinjiang Astronomical Observatory",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J.-B. Wang"
+    },
+    {
+      "display_name": "Y. Wang",
+      "id": "A5004598422",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I47720641",
+          "display_name": "Huazhong University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Y. Wang"
+    },
+    {
+      "display_name": "X. P. You",
+      "id": "A5101509725",
+      "orcid": "https://orcid.org/0000-0002-8314-475X",
+      "institutions": [
+        {
+          "id": "I142108993",
+          "display_name": "Southwest University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "X. P. You"
+    },
+    {
+      "display_name": "Weiwei Zhu",
+      "id": "A5016223122",
+      "orcid": "https://orcid.org/0000-0001-5105-4058",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "W. W. Zhu"
+    },
+    {
+      "display_name": "X. J. Zhu",
+      "id": "A5033053320",
+      "orcid": "https://orcid.org/0000-0001-7049-6468",
+      "institutions": [
+        {
+          "id": "I177877127",
+          "display_name": "The University of Western Australia",
+          "country_code": "AU",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "X.-J. Zhu"
+    }
+  ],
+  "publication_year": 2016,
+  "publication_date": "2016-02-19",
+  "type": "article",
+  "cited_by_count": 98,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S195663288",
+    "display_name": "Monthly Notices of the Royal Astronomical Society",
+    "issn_l": "0035-8711",
+    "issn": [
+      "0035-8711",
+      "1365-8711",
+      "1365-2966"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311648"
+  },
+  "volume": "458",
+  "issue": "2",
+  "first_page": "2161",
+  "last_page": "2187",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://academic.oup.com/mnras/article-pdf/458/2/2161/18241404/stw395.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.95418
+    },
+    {
+      "id": "C110363677",
+      "display_name": "Pulsar",
+      "level": 2,
+      "score": 0.92001885
+    },
+    {
+      "id": "C99498987",
+      "display_name": "Noise (video)",
+      "level": 3,
+      "score": 0.5923647
+    },
+    {
+      "id": "C44870925",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.5529653
+    },
+    {
+      "id": "C190330329",
+      "display_name": "Gravitational wave",
+      "level": 2,
+      "score": 0.5154134
+    },
+    {
+      "id": "C21200559",
+      "display_name": "Sensitivity (control systems)",
+      "level": 2,
+      "score": 0.46337336
+    },
+    {
+      "id": "C58489278",
+      "display_name": "Data set",
+      "level": 2,
+      "score": 0.44206578
+    },
+    {
+      "id": "C121864883",
+      "display_name": "Statistical physics",
+      "level": 1,
+      "score": 0.38002372
+    },
+    {
+      "id": "C30475298",
+      "display_name": "Computational physics",
+      "level": 1,
+      "score": 0.34861875
+    },
+    {
+      "id": "C1276947",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.32603627
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.120970786
+    },
+    {
+      "id": "C24326235",
+      "display_name": "Electronic engineering",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C127413603",
+      "display_name": "Engineering",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10463",
+      "display_name": "Pulsars and Gravitational Waves Research",
+      "score": 1.0
+    },
+    {
+      "id": "T12450",
+      "display_name": "Radio Astronomy Observations and Technology",
+      "score": 0.9979
+    },
+    {
+      "id": "T10095",
+      "display_name": "Cosmology and Gravitation Theories",
+      "score": 0.9948
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1093/mnras/stw395",
+  "pdf_url": "https://academic.oup.com/mnras/article-pdf/458/2/2161/18241404/stw395.pdf",
+  "retrieved_date": "2025-07-30T15:43:50.710100",
+  "source_database": "OpenAlex"
+}

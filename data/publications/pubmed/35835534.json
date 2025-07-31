@@ -1,0 +1,159 @@
+{
+  "pmid": "35835534",
+  "uid": "35835534",
+  "title": "Exploration of machine learning methods to predict systemic lupus erythematosus hospitalizations.",
+  "abstract": "OBJECTIVES: Systemic lupus erythematosus (SLE) is a heterogeneous disease characterized by disease flares which can require hospitalization. Our objective was to apply machine learning methods to predict hospitalizations for SLE from electronic health record (EHR) data. METHODS: We identified patients with SLE in a longitudinal EHR-based cohort with ≥2 outpatient rheumatology visits between 2012 and 2019. We applied multiple machine learning methods to predict hospitalizations with a primary diagnosis code for SLE, including decision tree, random forest, naive Bayes, logistic regression, and an ensemble method. Candidate predictors were derived from structured EHR features, including demographics, laboratory tests, medications, ICD-9/10 codes for SLE manifestations, and healthcare utilization. We used two approaches to assess these variables over longitudinal follow-up, including the incorporation of lagged features to capture changes over time of clinical data. The performance of each model was evaluated by overall accuracy, the F statistic, and the area under the receiver operator curve (AUC). RESULTS: We identified 1996 patients with SLE. 4.6% were hospitalized for SLE in their most recent year of follow-up. Random forest models had highest performance in predicting SLE hospitalizations, with AUC 0.751 and AUC 0.772 for two approaches (averaging and progressive), respectively. The leading predictors of SLE hospitalizations included dsDNA positivity, C3 level, blood cell counts, and inflammatory markers as well as age and albumin. CONCLUSION: We have demonstrated that machine learning methods can predict SLE hospitalizations. We identified key predictors of these events including known markers of SLE disease activity; further validation in external cohorts is warranted.",
+  "authors": [
+    {
+      "last_name": "Jorge",
+      "fore_name": "April M",
+      "initials": "AM",
+      "name": "April M Jorge",
+      "affiliations": [
+        "Division of Rheumatology, Allergy, and Immunology, Harvard Medical School, 2348Massachusetts General Hospital, Boston, MA, USA."
+      ],
+      "orcid": "0000-0001-6935-880X"
+    },
+    {
+      "last_name": "Smith",
+      "fore_name": "Dylan",
+      "initials": "D",
+      "name": "Dylan Smith",
+      "affiliations": [
+        "Department of Computer and Information Sciences, 5923Fordham University, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Wu",
+      "fore_name": "Zhiyao",
+      "initials": "Z",
+      "name": "Zhiyao Wu",
+      "affiliations": [
+        "Department of Computer and Information Sciences, 5923Fordham University, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Chowdhury",
+      "fore_name": "Tashrif",
+      "initials": "T",
+      "name": "Tashrif Chowdhury",
+      "affiliations": [
+        "Department of Computer and Information Sciences, 5923Fordham University, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Costenbader",
+      "fore_name": "Karen",
+      "initials": "K",
+      "name": "Karen Costenbader",
+      "affiliations": [
+        "Division of Rheumatology, Inflammation, and Immunity, Harvard Medical School, 1861Brigham and Women's Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "Division of Rheumatology, Allergy, and Immunology, Harvard Medical School, 2348Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Choi",
+      "fore_name": "Hyon K",
+      "initials": "HK",
+      "name": "Hyon K Choi",
+      "affiliations": [
+        "Division of Rheumatology, Allergy, and Immunology, Harvard Medical School, 2348Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Feldman",
+      "fore_name": "Candace H",
+      "initials": "CH",
+      "name": "Candace H Feldman",
+      "affiliations": [
+        "Division of Rheumatology, Inflammation, and Immunity, Harvard Medical School, 1861Brigham and Women's Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Zhao",
+      "fore_name": "Yijun",
+      "initials": "Y",
+      "name": "Yijun Zhao",
+      "affiliations": [
+        "Department of Computer and Information Sciences, 5923Fordham University, New York, NY, USA."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Lupus",
+    "iso_abbreviation": "Lupus",
+    "issn": "1477-0962",
+    "issn_type": "Electronic",
+    "volume": "31",
+    "issue": "11",
+    "pub_year": "2022",
+    "pub_month": "Oct"
+  },
+  "start_page": "1296",
+  "end_page": "1305",
+  "pages": "1296-1305",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Albumins",
+    "Bayes Theorem",
+    "Biomarkers",
+    "Hospitalization",
+    "Humans",
+    "Lupus Erythematosus, Systemic",
+    "Machine Learning"
+  ],
+  "article_ids": {
+    "pubmed": "35835534",
+    "mid": "NIHMS1821574",
+    "pmc": "PMC9547899",
+    "doi": "10.1177/09612033221114805"
+  },
+  "doi": "10.1177/09612033221114805",
+  "pmc_id": "PMC9547899",
+  "dates": {
+    "completed": "2022-10-11",
+    "revised": "2024-09-10"
+  },
+  "chemicals": [
+    "Albumins",
+    "Biomarkers"
+  ],
+  "grants": [
+    {
+      "grant_id": "K23 AR079040",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K24 AR066109",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "L30 AR076110",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 AR057327",
+      "agency": "NIAMS NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.516190",
+    "pmid": "35835534"
+  }
+}

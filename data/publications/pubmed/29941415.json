@@ -1,0 +1,122 @@
+{
+  "pmid": "29941415",
+  "uid": "29941415",
+  "title": "A Deep Learning Method to Automatically Identify Reports of Scientifically Rigorous Clinical Research from the Biomedical Literature: Comparative Analytic Study.",
+  "abstract": "BACKGROUND: A major barrier to the practice of evidence-based medicine is efficiently finding scientifically sound studies on a given clinical topic. OBJECTIVE: To investigate a deep learning approach to retrieve scientifically sound treatment studies from the biomedical literature. METHODS: We trained a Convolutional Neural Network using a noisy dataset of 403,216 PubMed citations with title and abstract as features. The deep learning model was compared with state-of-the-art search filters, such as PubMed's Clinical Query Broad treatment filter, McMaster's textword search strategy (no Medical Subject Heading, MeSH, terms), and Clinical Query Balanced treatment filter. A previously annotated dataset (Clinical Hedges) was used as the gold standard. RESULTS: The deep learning model obtained significantly lower recall than the Clinical Queries Broad treatment filter (96.9% vs 98.4%; P<.001); and equivalent recall to McMaster's textword search (96.9% vs 97.1%; P=.57) and Clinical Queries Balanced filter (96.9% vs 97.0%; P=.63). Deep learning obtained significantly higher precision than the Clinical Queries Broad filter (34.6% vs 22.4%; P<.001) and McMaster's textword search (34.6% vs 11.8%; P<.001), but was significantly lower than the Clinical Queries Balanced filter (34.6% vs 40.9%; P<.001). CONCLUSIONS: Deep learning performed well compared to state-of-the-art search filters, especially when citations were not indexed. Unlike previous machine learning approaches, the proposed deep learning model does not require feature engineering, or time-sensitive or proprietary features, such as MeSH terms and bibliometrics. Deep learning is a promising approach to identifying reports of scientifically rigorous clinical research. Further work is needed to optimize the deep learning model and to assess generalizability to other areas, such as diagnosis, etiology, and prognosis.",
+  "authors": [
+    {
+      "last_name": "Del Fiol",
+      "fore_name": "Guilherme",
+      "initials": "G",
+      "name": "Guilherme Del Fiol",
+      "affiliations": [
+        "University of Utah, Department of Biomedical Informatics, Salt Lake City, UT, United States."
+      ],
+      "orcid": "0000-0001-9954-6799"
+    },
+    {
+      "last_name": "Michelson",
+      "fore_name": "Matthew",
+      "initials": "M",
+      "name": "Matthew Michelson",
+      "affiliations": [
+        "Evid Science, Los Angeles, CA, United States.",
+        "InferLink Corporation, Los Angeles, CA, United States."
+      ],
+      "orcid": "0000-0003-3346-2132"
+    },
+    {
+      "last_name": "Iorio",
+      "fore_name": "Alfonso",
+      "initials": "A",
+      "name": "Alfonso Iorio",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada.",
+        "Department of Medicine, Faculty of Health Sciences, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-3331-8766"
+    },
+    {
+      "last_name": "Cotoi",
+      "fore_name": "Chris",
+      "initials": "C",
+      "name": "Chris Cotoi",
+      "affiliations": [
+        "Health Information Research Unit, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0001-7029-0582"
+    },
+    {
+      "last_name": "Haynes",
+      "fore_name": "R Brian",
+      "initials": "RB",
+      "name": "R Brian Haynes",
+      "affiliations": [
+        "Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, ON, Canada.",
+        "Department of Medicine, Faculty of Health Sciences, McMaster University, Hamilton, ON, Canada."
+      ],
+      "orcid": "0000-0002-1453-3196"
+    }
+  ],
+  "journal": {
+    "title": "Journal of medical Internet research",
+    "iso_abbreviation": "J Med Internet Res",
+    "issn": "1438-8871",
+    "issn_type": "Electronic",
+    "volume": "20",
+    "issue": "6",
+    "pub_year": "2018",
+    "pub_month": "Jun",
+    "pub_day": "25"
+  },
+  "start_page": "e10281",
+  "pages": "e10281",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, U.S. Gov't, Non-P.H.S."
+  ],
+  "keywords": [
+    "Deep Learning",
+    "Humans",
+    "Information Storage and Retrieval",
+    "Neural Networks, Computer",
+    "PubMed"
+  ],
+  "article_ids": {
+    "pubmed": "29941415",
+    "pmc": "PMC6037944",
+    "doi": "10.2196/10281",
+    "pii": "v20i6e10281"
+  },
+  "doi": "10.2196/10281",
+  "pmc_id": "PMC6037944",
+  "dates": {
+    "completed": "2019-07-10",
+    "revised": "2023-05-10"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 LM011416",
+      "agency": "NLM NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R18 DK123372",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U24 CA204800",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:29:27.185487",
+    "pmid": "29941415"
+  }
+}

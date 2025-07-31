@@ -1,0 +1,428 @@
+{
+  "pmid": "40280028",
+  "uid": "40280028",
+  "title": "Artificial intelligence-driven genotype-epigenotype-phenotype approaches to resolve challenges in syndrome diagnostics.",
+  "abstract": "BACKGROUND: Decisions to split two or more phenotypic manifestations related to genetic variations within the same gene can be challenging, especially during the early stages of syndrome discovery. Genotype-based diagnostics with artificial intelligence (AI)-driven approaches using next-generation phenotyping (NGP) and DNA methylation (DNAm) can be utilized to expedite syndrome delineation within a single gene. METHODS: We utilized an expanded cohort of 56 patients (22 previously unpublished individuals) with truncating variants in the MN1 gene and attempted different methods to assess plausible strategies to objectively delineate phenotypic differences between the C-Terminal Truncation (CTT) and N-Terminal Truncation (NTT) groups. This involved transcriptomics analysis on available patient fibroblast samples and AI-assisted approaches, including a new statistical method of GestaltMatcher on facial photos and blood DNAm analysis using a support vector machine (SVM) model. FINDINGS: RNA-seq analysis was unable to show a significant difference in transcript expression despite our previous hypothesis that NTT variants would induce nonsense mediated decay. DNAm analysis on nine blood DNA samples revealed an episignature for the CTT group. In parallel, the new statistical method of GestaltMatcher objectively distinguished the CTT and NTT groups with a low requirement for cohort number. Validation of this approach was performed on syndromes with known DNAm signatures of SRCAP, SMARCA2 and ADNP to demonstrate the effectiveness of this approach. INTERPRETATION: We demonstrate the potential of using AI-based technologies to leverage genotype, phenotype and epigenetics data in facilitating splitting decisions in diagnosis of syndromes with minimal sample requirement. FUNDING: The specific funding of this article is provided in the acknowledgements section.",
+  "authors": [
+    {
+      "last_name": "Mak",
+      "fore_name": "Christopher C Y",
+      "initials": "CCY",
+      "name": "Christopher C Y Mak",
+      "affiliations": [
+        "Department of Paediatrics and Adolescent Medicine, School of Clinical Medicine, The University of Hong Kong, Hong Kong SAR, China."
+      ]
+    },
+    {
+      "last_name": "Klinkhammer",
+      "fore_name": "Hannah",
+      "initials": "H",
+      "name": "Hannah Klinkhammer",
+      "affiliations": [
+        "Institute for Genomic Statistics and Bioinformatics, University Hospital Bonn, Rheinische Friedrich-Wilhelms-Universität Bonn, Bonn, Germany; Institute for Medical Biometry, Informatics and Epidemiology, University Hospital Bonn, Rheinische Friedrich-Wilhelms-Universität Bonn, Bonn, Germany."
+      ]
+    },
+    {
+      "last_name": "Choufani",
+      "fore_name": "Sanaa",
+      "initials": "S",
+      "name": "Sanaa Choufani",
+      "affiliations": [
+        "Genetics and Genome Biology Program, Research Institute, The Hospital for Sick Children, Toronto, ON, M5G 1X8, Canada."
+      ]
+    },
+    {
+      "last_name": "Reko",
+      "fore_name": "Nikola",
+      "initials": "N",
+      "name": "Nikola Reko",
+      "affiliations": [
+        "Genetics and Genome Biology Program, Research Institute, The Hospital for Sick Children, Toronto, ON, M5G 1X8, Canada."
+      ]
+    },
+    {
+      "last_name": "Christman",
+      "fore_name": "Angela K",
+      "initials": "AK",
+      "name": "Angela K Christman",
+      "affiliations": [
+        "Department of Pediatrics, University of Washington, Seattle, WA, 98195, USA."
+      ]
+    },
+    {
+      "last_name": "Pisan",
+      "fore_name": "Elise",
+      "initials": "E",
+      "name": "Elise Pisan",
+      "affiliations": [
+        "Laboratory of Embryology and Genetics of Human Malformations, Institut National de la Santé et de la Recherche Médicale (INSERM) UMR 1163, Institut Imagine, Université Paris Cité, Paris, 75015, France."
+      ]
+    },
+    {
+      "last_name": "Chui",
+      "fore_name": "Martin M C",
+      "initials": "MMC",
+      "name": "Martin M C Chui",
+      "affiliations": [
+        "Department of Paediatrics and Adolescent Medicine, School of Clinical Medicine, The University of Hong Kong, Hong Kong SAR, China."
+      ]
+    },
+    {
+      "last_name": "Lee",
+      "fore_name": "Mianne",
+      "initials": "M",
+      "name": "Mianne Lee",
+      "affiliations": [
+        "Department of Paediatrics and Adolescent Medicine, School of Clinical Medicine, The University of Hong Kong, Hong Kong SAR, China."
+      ]
+    },
+    {
+      "last_name": "Leduc",
+      "fore_name": "Fiona",
+      "initials": "F",
+      "name": "Fiona Leduc",
+      "affiliations": [
+        "CHU Lille, Centre de Référence Anomalies du Développement et Syndromes Malformatifs, Lille, F-59000, France."
+      ]
+    },
+    {
+      "last_name": "Dempsey",
+      "fore_name": "Jennifer C",
+      "initials": "JC",
+      "name": "Jennifer C Dempsey",
+      "affiliations": [
+        "Department of Pediatrics, University of Washington, Seattle, WA, 98195, USA."
+      ]
+    },
+    {
+      "last_name": "Sanchez-Lara",
+      "fore_name": "Pedro A",
+      "initials": "PA",
+      "name": "Pedro A Sanchez-Lara",
+      "affiliations": [
+        "Department of Pediatrics, Cedars-Sinai Medical Center, Los Angeles, CA, USA; Department of Pediatrics, Guerin Children's at Cedars Sinai Medical Center, Los Angeles, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Bombei",
+      "fore_name": "Hannah M",
+      "initials": "HM",
+      "name": "Hannah M Bombei",
+      "affiliations": [
+        "Division of Medical Genetics and Genomics, Stead Family Department of Pediatrics, University of Iowa Hospitals, Iowa City, IA, USA."
+      ]
+    },
+    {
+      "last_name": "Bernat",
+      "fore_name": "John A",
+      "initials": "JA",
+      "name": "John A Bernat",
+      "affiliations": [
+        "Division of Medical Genetics and Genomics, Stead Family Department of Pediatrics, University of Iowa Hospitals, Iowa City, IA, USA."
+      ]
+    },
+    {
+      "last_name": "Faivre",
+      "fore_name": "Laurence",
+      "initials": "L",
+      "name": "Laurence Faivre",
+      "affiliations": [
+        "Centre de Génétique et Centre de Référence Anomalies du Développement et Syndromes Malformatifs, FHU TRANSLAD, Institut GIMI, Hôpital d'Enfants, CHU Dijon-Bourgogne, Dijon, France; Equipe GAD INSERM UMR1231, Université de Bourgogne Franche Comté, Dijon, France."
+      ]
+    },
+    {
+      "last_name": "Mau-Them",
+      "fore_name": "Frederic Tran",
+      "initials": "FT",
+      "name": "Frederic Tran Mau-Them",
+      "affiliations": [
+        "Centre de Génétique et Centre de Référence Anomalies du Développement et Syndromes Malformatifs, FHU TRANSLAD, Institut GIMI, Hôpital d'Enfants, CHU Dijon-Bourgogne, Dijon, France; UF 6254 Innovation en diagnostic Génomique des Maladies Rares, Centre Hospitalier Universitaire de Dijon, Dijon, France."
+      ]
+    },
+    {
+      "last_name": "Palafoll",
+      "fore_name": "Irene Valenzuela",
+      "initials": "IV",
+      "name": "Irene Valenzuela Palafoll",
+      "affiliations": [
+        "Department of Clinical and Molecular Genetics, University Hospital Vall d'Hebron and Medicine Genetics Group, Valle Hebron Research Institute, Barcelona, Spain."
+      ]
+    },
+    {
+      "last_name": "Canham",
+      "fore_name": "Natalie",
+      "initials": "N",
+      "name": "Natalie Canham",
+      "affiliations": [
+        "Liverpool Centre for Genomic Medicine, Liverpool Women's Hospital, Crown Street, Liverpool, UK."
+      ]
+    },
+    {
+      "last_name": "Sarkar",
+      "fore_name": "Ajoy",
+      "initials": "A",
+      "name": "Ajoy Sarkar",
+      "affiliations": [
+        "Department of Clinical Genetics, Nottingham University Hospitals National Health Service Trust, Nottingham, NG5 1PB, UK."
+      ]
+    },
+    {
+      "last_name": "Zarate",
+      "fore_name": "Yuri A",
+      "initials": "YA",
+      "name": "Yuri A Zarate",
+      "affiliations": [
+        "Section of Genetics and Metabolism, University of Arkansas for Medical Sciences, Little Rock, AR, 72701, USA; Division of Genetics and Metabolism, University of Kentucky, Lexington, KY, USA."
+      ]
+    },
+    {
+      "last_name": "Callewaert",
+      "fore_name": "Bert",
+      "initials": "B",
+      "name": "Bert Callewaert",
+      "affiliations": [
+        "Center for Medical Genetics, Ghent University Hospital, Ghent, Belgium; Department of Biomolecular Medicine, Ghent University, Ghent, Belgium."
+      ]
+    },
+    {
+      "last_name": "Bukowska-Olech",
+      "fore_name": "Ewelina",
+      "initials": "E",
+      "name": "Ewelina Bukowska-Olech",
+      "affiliations": [
+        "Department of Laboratory Diagnostics, Poznan University of Medical Sciences, Poznan, Poland."
+      ]
+    },
+    {
+      "last_name": "Jamsheer",
+      "fore_name": "Aleksander",
+      "initials": "A",
+      "name": "Aleksander Jamsheer",
+      "affiliations": [
+        "Department of Medical Genetics, Poznan University of Medical Sciences, Poznan, Poland; Diagnostyka GENESIS, Center for Medical Genetics in Poznan, Poland."
+      ]
+    },
+    {
+      "last_name": "Zankl",
+      "fore_name": "Andreas",
+      "initials": "A",
+      "name": "Andreas Zankl",
+      "affiliations": [
+        "Department of Clinical Genetics, The Children's Hospital at Westmead, Sydney, Australia; Faculty of Medicine and Health, The University of Sydney, Sydney, Australia; Garvan Institute of Medical Research, Sydney, Australia."
+      ]
+    },
+    {
+      "last_name": "Willems",
+      "fore_name": "Marjolaine",
+      "initials": "M",
+      "name": "Marjolaine Willems",
+      "affiliations": [
+        "Unité INSERM U 1051, Département de Génétique Médicale, CHRU de Montpellier, Montpellier, France."
+      ]
+    },
+    {
+      "last_name": "Duncan",
+      "fore_name": "Laura",
+      "initials": "L",
+      "name": "Laura Duncan",
+      "affiliations": [
+        "Department of Pediatrics at Vanderbilt University Medical Center, Nashville, TN, USA."
+      ]
+    },
+    {
+      "last_name": "Isidor",
+      "fore_name": "Bertrand",
+      "initials": "B",
+      "name": "Bertrand Isidor",
+      "affiliations": [
+        "Service de Génétique Médicale and L'institut du Thorax, CHU Nantes, Nantes Université, CNRS, INSERM, Nantes, France."
+      ]
+    },
+    {
+      "last_name": "Cogne",
+      "fore_name": "Benjamin",
+      "initials": "B",
+      "name": "Benjamin Cogne",
+      "affiliations": [
+        "Medical Genetics Service, Nantes University Hospital Center, Nantes, France."
+      ]
+    },
+    {
+      "last_name": "Boute",
+      "fore_name": "Odile",
+      "initials": "O",
+      "name": "Odile Boute",
+      "affiliations": [
+        "CHU Lille, Centre de Référence Anomalies du Développement et Syndromes Malformatifs, Lille, F-59000, France."
+      ]
+    },
+    {
+      "last_name": "Vanlerberghe",
+      "fore_name": "Clémence",
+      "initials": "C",
+      "name": "Clémence Vanlerberghe",
+      "affiliations": [
+        "CHU Lille, Centre de Référence Anomalies du Développement et Syndromes Malformatifs, Lille, F-59000, France."
+      ]
+    },
+    {
+      "last_name": "Goldenberg",
+      "fore_name": "Alice",
+      "initials": "A",
+      "name": "Alice Goldenberg",
+      "affiliations": [
+        "Normandie Univ, UNIROUEN, Inserm U1245, CHU Rouen, Department of Genetics and Reference Center for Developmental Disorders, FHU G4 Génomique, Rouen, F-76000, France."
+      ]
+    },
+    {
+      "last_name": "Stolerman",
+      "fore_name": "Elliot",
+      "initials": "E",
+      "name": "Elliot Stolerman",
+      "affiliations": [
+        "Greenwood Genetic Center, SC, USA."
+      ]
+    },
+    {
+      "last_name": "Low",
+      "fore_name": "Karen J",
+      "initials": "KJ",
+      "name": "Karen J Low",
+      "affiliations": [
+        "Centre for Academic Child Health, Bristol Medical School, University of Bristol, UK; Department of Clinical Genetics, UHBW NHS Trust, Bristol, UK."
+      ]
+    },
+    {
+      "last_name": "Gilard",
+      "fore_name": "Vianney",
+      "initials": "V",
+      "name": "Vianney Gilard",
+      "affiliations": [
+        "Department of Pediatric Neurosurgery, Rouen University Hospital, Rouen, 76000, France."
+      ]
+    },
+    {
+      "last_name": "Amiel",
+      "fore_name": "Jeanne",
+      "initials": "J",
+      "name": "Jeanne Amiel",
+      "affiliations": [
+        "Laboratory of Embryology and Genetics of Human Malformations, Institut National de la Santé et de la Recherche Médicale (INSERM) UMR 1163, Institut Imagine, Université Paris Cité, Paris, 75015, France."
+      ]
+    },
+    {
+      "last_name": "Lin",
+      "fore_name": "Angela E",
+      "initials": "AE",
+      "name": "Angela E Lin",
+      "affiliations": [
+        "Medical Genetics, Mass General for Children, Boston, MA, 02114, USA."
+      ]
+    },
+    {
+      "last_name": "Gordon",
+      "fore_name": "Christopher T",
+      "initials": "CT",
+      "name": "Christopher T Gordon",
+      "affiliations": [
+        "Laboratory of Embryology and Genetics of Human Malformations, Institut National de la Santé et de la Recherche Médicale (INSERM) UMR 1163, Institut Imagine, Université Paris Cité, Paris, 75015, France."
+      ]
+    },
+    {
+      "last_name": "Doherty",
+      "fore_name": "Dan",
+      "initials": "D",
+      "name": "Dan Doherty",
+      "affiliations": [
+        "Department of Pediatrics, University of Washington, Seattle, WA, 98195, USA."
+      ]
+    },
+    {
+      "last_name": "Krawitz",
+      "fore_name": "Peter M",
+      "initials": "PM",
+      "name": "Peter M Krawitz",
+      "affiliations": [
+        "Institute for Genomic Statistics and Bioinformatics, University Hospital Bonn, Rheinische Friedrich-Wilhelms-Universität Bonn, Bonn, Germany."
+      ]
+    },
+    {
+      "last_name": "Weksberg",
+      "fore_name": "Rosanna",
+      "initials": "R",
+      "name": "Rosanna Weksberg",
+      "affiliations": [
+        "Genetics and Genome Biology Program, Research Institute, The Hospital for Sick Children, Toronto, ON, M5G 1X8, Canada; Division of Clinical and Metabolic Genetics, Department of Pediatrics, The Hospital for Sick Children, University of Toronto, Toronto, ON, M5G 1X8, Canada. Electronic address: rweksb@sickkids.ca."
+      ]
+    },
+    {
+      "last_name": "Hsieh",
+      "fore_name": "Tzung-Chien",
+      "initials": "TC",
+      "name": "Tzung-Chien Hsieh",
+      "affiliations": [
+        "Institute for Genomic Statistics and Bioinformatics, University Hospital Bonn, Rheinische Friedrich-Wilhelms-Universität Bonn, Bonn, Germany. Electronic address: thsieh@uni-bonn.de."
+      ]
+    },
+    {
+      "last_name": "Chung",
+      "fore_name": "Brian H Y",
+      "initials": "BHY",
+      "name": "Brian H Y Chung",
+      "affiliations": [
+        "Department of Paediatrics and Adolescent Medicine, School of Clinical Medicine, The University of Hong Kong, Hong Kong SAR, China. Electronic address: bhychung@hku.hk."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "EBioMedicine",
+    "iso_abbreviation": "EBioMedicine",
+    "issn": "2352-3964",
+    "issn_type": "Electronic",
+    "volume": "115",
+    "pub_year": "2025",
+    "pub_month": "May"
+  },
+  "start_page": "105677",
+  "pages": "105677",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Artificial Intelligence",
+    "Phenotype",
+    "DNA Methylation",
+    "Genotype",
+    "Genetic Association Studies",
+    "Female",
+    "Syndrome",
+    "Male",
+    "Epigenesis, Genetic",
+    "Tumor Suppressor Proteins",
+    "Epigenomics",
+    "Gene Expression Profiling"
+  ],
+  "article_ids": {
+    "pubmed": "40280028",
+    "pmc": "PMC12242594",
+    "doi": "10.1016/j.ebiom.2025.105677",
+    "pii": "S2352-3964(25)00121-5"
+  },
+  "doi": "10.1016/j.ebiom.2025.105677",
+  "pmc_id": "PMC12242594",
+  "dates": {
+    "completed": "2025-05-16",
+    "revised": "2025-07-12"
+  },
+  "chemicals": [
+    "Tumor Suppressor Proteins"
+  ],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:19:34.824749",
+    "pmid": "40280028"
+  }
+}

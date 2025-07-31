@@ -1,0 +1,149 @@
+{
+  "openalex_id": "W4393517081",
+  "doi": "https://doi.org/10.5281/zenodo.7628297",
+  "title": "Smart house measurements",
+  "abstract": "<strong>Load Forecasting Dataset</strong> <strong>Readme File</strong> VARLAB – The Centre for Research &amp; Technology, Hellas [CERTH] - Informatics and Telematics Institute [ITI] - https://varlab.iti.gr/ Authors: Chrysovalantis-George Kontoulis, Georgios Stavropoulos, Dimosthenis Ioannidis <strong>Publication Date:</strong> February -, 2023 This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreements No. 957406 (TERMINET). 1.Introduction This dataset features information from a smarthome located at Greece, which features the Mediterranean climate. The building is utilized as a modern workplace that is being used for various every day activities. It is equipped with numerous smart devices and appliances, from smart lights to smart a elevator, while also featuring PVTs. 2.Dataset Overview 2.1Dataset Collection The system is built on multiple communication protocols including EnOcean, Zigbee, Modbus, BACnet, and, LTE/IEEE 802.15.4 at 2.4GHz. For the sensor data collection, a raspberry Pi microcontroller was used, and data were subsequently transmitted to the storage database. The extraction period of the data is between <strong>2021-01-01 through 2022-12-20</strong>. Along this period there is a total of 66619 unique recordings and the time granularity of the data is set to <strong>15 minutes</strong> for all devices. 2.2Data Peculiarities The place is occupied from Monday to Friday from 9:00 AM GMT+2 (Greenwich Mean Time) all the way through 5:00 PM GMT+2. Note that the building is not active during Greek public holidays, but some computers or servers might be on and consuming electrical energy. Also, there are some irregularities in the data reporting consistency at summer, Christmas &amp; Easter as the building is not occupied for a long time of period. Timestamps of the dataset are in the GMT+2 timezone. 2.3Dataset Structure This dataset includes a total of six features and it can be used for Electrical, Thermal and Cooling Load forecasting. <em>Electricity Consumption</em> is the consumption of the whole house, <em>Air-condition Status </em>is either 1 or 0 for on and off, respectively, <em>Luminance</em> is how bright a space is, <em>Light</em> <em>Dimming</em> is the dimming of the lights in each room. Finally we have the <em>Indoor Temperature</em> for each room and the <em>Outdoor Temperature</em>. Data are extracted from four rooms in total. Note that in rooms 1 and 3, there is only one indoor temperature device, thus values are identical for <em>temperature_room_1</em> and <em>temperature_room_3</em>. Note that sensors have some null values, which is generally either due to inactivity, e.g., the <em>Light</em> <em>Dimming</em> sensor and the <em>Air-condition Status</em> are event-based or due to potential system downtime. The provided dataset is stored in csv format. A brief overview of the dataset is presented at the Table 3.1. Table 2.1 Dataset overview <strong>Censor</strong> <strong>Symbolic Naming</strong> <strong>Measurement </strong><strong>U</strong><strong>nit</strong> <strong>Electricity Consumption</strong> KWh_S_total kWh <strong>Air-condition Status</strong> status_room_0 status_room_1 status_room_2 status_room_3 - <strong>Luminance</strong> luminance_room_0 luminance_room_1 luminance_room_2 luminance_room_3 Lux <strong>Light Dimming</strong> dimming_room_0 dimming_room_1 dimming_room_2 dimming_room_3 % <strong>Indoor Temperature</strong> temperature_room_0 temperature_room_1 temperature_room_2 temperature_room_3 °C <strong>Outdoor Temperature</strong> airTemperature °C 2.4Descriptive Statistics Table 2.2 provides a brief overview of the key statistical characteristics of the data to. The table presents a summary of important metrics and measures, including measure of central tendency such as the mean, as well as measures of variability such as the standard deviation. Table 2.2 Descriptive Statistics <strong>Symbolic Naming</strong> <strong>Values Count</strong> <strong>Mean</strong> <strong>Std</strong> <strong>Min</strong> <strong>Max</strong> <strong>KWh_S_total</strong> 62877 71511,16 52235,30 2,22 135494,70 <strong>status_room_0</strong> <strong>status_room_1</strong> <strong>status_room_2</strong> <strong>status_room_3</strong> 16689 14357 13302 13388 0,38 0,15 0,27 0,26 0,49 0,36 0,44 0,44 0,00 0,00 0,00 0,00 1,00 1,00 1,00 1,00 <strong>luminance_room_0</strong> <strong>luminance_room_1</strong> <strong>luminance_room_2</strong> <strong>luminance_room_3</strong> 31676 14727 6799 23993 169,93 165,95 99.71 205,66 294,60 267,69 157,40 304,14 0.00 0.00 0.00 0.00 1024,00 1024,00 1024,00 1024,00 <strong>dimming_room_0</strong> <strong>dimming_room_1</strong> <strong>dimming_room_2</strong> <strong>dimming_room_3</strong> 432 683 8 608 1,95 41.29 15,00 42,40 11,23 40.32 22,68 43,43 0,00 0,00 0,00 0, 00 100,00 100,00 50,00 100,00 <strong>temperature_room_0</strong> <strong>temperature_room_1</strong> <strong>temperature_room_2</strong> <strong>temperature_room_3</strong> 26915 33786 34778 33786 27,50 24,28 23,89 24,28 4,44 2,96 4,52 2,96 17,54 13,95 7,95 13,95 44,30 34,62 35,59 34,62 <strong>airTemperature</strong> 47647 16,91 8,62 -4,52 40,28 3.Acknowledgment This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreements No. 957406 (TERMINET).",
+  "authors": [
+    {
+      "display_name": "Georgios Stavropoulos",
+      "id": "A5045793629",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210093649",
+          "display_name": "Information Technologies Institute",
+          "country_code": "GR",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210134249",
+          "display_name": "Centre for Research and Technology Hellas",
+          "country_code": "GR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Georgios Stavropoulos"
+    },
+    {
+      "display_name": "Dimosthenis Ioannidis",
+      "id": "A5000323469",
+      "orcid": "https://orcid.org/0000-0002-5747-2186",
+      "institutions": [
+        {
+          "id": "I4210093649",
+          "display_name": "Information Technologies Institute",
+          "country_code": "GR",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210134249",
+          "display_name": "Centre for Research and Technology Hellas",
+          "country_code": "GR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dimosthenis Ioannidis"
+    },
+    {
+      "display_name": "Charilaos Kaliakatsos",
+      "id": "A5092246623",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210093649",
+          "display_name": "Information Technologies Institute",
+          "country_code": "GR",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210134249",
+          "display_name": "Centre for Research and Technology Hellas",
+          "country_code": "GR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Charilaos Kaliakatsos"
+    },
+    {
+      "display_name": "Chrysovalantis Kontoulis",
+      "id": "A5014643384",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210093649",
+          "display_name": "Information Technologies Institute",
+          "country_code": "GR",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210134249",
+          "display_name": "Centre for Research and Technology Hellas",
+          "country_code": "GR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chrysovalantis Kontoulis"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-02-10",
+  "type": "dataset",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4306400562",
+    "display_name": "Zenodo (CERN European Organization for Nuclear Research)",
+    "issn_l": null,
+    "issn": null,
+    "type": "repository",
+    "host_organization": "https://openalex.org/I67311998"
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://zenodo.org/record/7628297",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.3064788
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10121",
+      "display_name": "Building Energy and Comfort Optimization",
+      "score": 0.4692
+    },
+    {
+      "id": "T12222",
+      "display_name": "IoT-based Smart Home Systems",
+      "score": 0.4146
+    },
+    {
+      "id": "T14353",
+      "display_name": "Wireless Sensor Networks for Data Analysis",
+      "score": 0.4082
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://zenodo.org/record/7628297",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:48:51.695551",
+  "source_database": "OpenAlex"
+}

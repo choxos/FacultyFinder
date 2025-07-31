@@ -1,0 +1,1436 @@
+{
+  "pmid": "36038634",
+  "uid": "36038634",
+  "title": "Large-scale sequencing identifies multiple genes and rare variants associated with Crohn's disease susceptibility.",
+  "abstract": "Genome-wide association studies (GWASs) have identified hundreds of loci associated with Crohn's disease (CD). However, as with all complex diseases, robust identification of the genes dysregulated by noncoding variants typically driving GWAS discoveries has been challenging. Here, to complement GWASs and better define actionable biological targets, we analyzed sequence data from more than 30,000 patients with CD and 80,000 population controls. We directly implicate ten genes in general onset CD for the first time to our knowledge via association to coding variation, four of which lie within established CD GWAS loci. In nine instances, a single coding variant is significantly associated, and in the tenth, ATG4C, we see additionally a significantly increased burden of very rare coding variants in CD cases. In addition to reiterating the central role of innate and adaptive immune cells as well as autophagy in CD pathogenesis, these newly associated genes highlight the emerging role of mesenchymal cells in the development and maintenance of intestinal inflammation.",
+  "authors": [
+    {
+      "last_name": "Sazonovs",
+      "fore_name": "Aleksejs",
+      "initials": "A",
+      "name": "Aleksejs Sazonovs",
+      "affiliations": [
+        "Genomics of Inflammation and Immunity Group, Human Genetics Programme, Wellcome Sanger Institute, Wellcome Genome Campus, Hinxton, UK."
+      ]
+    },
+    {
+      "last_name": "Stevens",
+      "fore_name": "Christine R",
+      "initials": "CR",
+      "name": "Christine R Stevens",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Analytic and Translational Genetics Unit, Department of Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ],
+      "orcid": "0000-0002-2621-2234"
+    },
+    {
+      "last_name": "Venkataraman",
+      "fore_name": "Guhan R",
+      "initials": "GR",
+      "name": "Guhan R Venkataraman",
+      "affiliations": [
+        "Department of Biomedical Data Science, Stanford University, Stanford, CA, USA."
+      ],
+      "orcid": "0000-0003-0754-6631"
+    },
+    {
+      "last_name": "Yuan",
+      "fore_name": "Kai",
+      "initials": "K",
+      "name": "Kai Yuan",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Analytic and Translational Genetics Unit, Department of Medicine, Massachusetts General Hospital, Boston, MA, USA."
+      ],
+      "orcid": "0000-0002-8460-6581"
+    },
+    {
+      "last_name": "Avila",
+      "fore_name": "Brandon",
+      "initials": "B",
+      "name": "Brandon Avila",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Abreu",
+      "fore_name": "Maria T",
+      "initials": "MT",
+      "name": "Maria T Abreu",
+      "affiliations": [
+        "Crohn's and Colitis Center, Leonard M. Miller School of Medicine, University of Miami, Miami, FL, USA."
+      ]
+    },
+    {
+      "last_name": "Ahmad",
+      "fore_name": "Tariq",
+      "initials": "T",
+      "name": "Tariq Ahmad",
+      "affiliations": [
+        "Royal Devon and Exeter Hospital, Exeter, UK."
+      ]
+    },
+    {
+      "last_name": "Allez",
+      "fore_name": "Matthieu",
+      "initials": "M",
+      "name": "Matthieu Allez",
+      "affiliations": [
+        "Hopital Saint-Louis, APHP, Universite de Paris, INSERM U1160, Paris, France."
+      ]
+    },
+    {
+      "last_name": "Ananthakrishnan",
+      "fore_name": "Ashwin N",
+      "initials": "AN",
+      "name": "Ashwin N Ananthakrishnan",
+      "affiliations": [
+        "Division of Gastroenterology, Crohn's and Colitis Center, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Atzmon",
+      "fore_name": "Gil",
+      "initials": "G",
+      "name": "Gil Atzmon",
+      "affiliations": [
+        "Department for Human Biology, University of Haifa, Haifa, Israel.",
+        "Departments of Medicine and Genetics, Albert Einstein College of Medicine, Bronx, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Baras",
+      "fore_name": "Aris",
+      "initials": "A",
+      "name": "Aris Baras",
+      "affiliations": [
+        "Regeneron Genetics Center, Tarrytown, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Barrett",
+      "fore_name": "Jeffrey C",
+      "initials": "JC",
+      "name": "Jeffrey C Barrett",
+      "affiliations": [
+        "Human Genetics Programme, Wellcome Sanger Institute, Wellcome Genome Campus, Hinxton, UK."
+      ]
+    },
+    {
+      "last_name": "Barzilai",
+      "fore_name": "Nir",
+      "initials": "N",
+      "name": "Nir Barzilai",
+      "affiliations": [
+        "Departments of Medicine and Genetics, Albert Einstein College of Medicine, Bronx, NY, USA.",
+        "The Institute for Aging Research, The Nathan Shock Center of Excellence in the Basic Biology of Aging and the Paul F. Glenn Center for the Biology of Human Aging Research at Albert Einstein College of Medicine of Yeshiva University, Bronx, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Beaugerie",
+      "fore_name": "Laurent",
+      "initials": "L",
+      "name": "Laurent Beaugerie",
+      "affiliations": [
+        "Gastroenterology Department, Sorbonne Universite, Saint Antoine Hospital, Paris, France."
+      ]
+    },
+    {
+      "last_name": "Beecham",
+      "fore_name": "Ashley",
+      "initials": "A",
+      "name": "Ashley Beecham",
+      "affiliations": [
+        "John P. Hussman Institute for Human Genomics, Leonard M. Miller School of Medicine, University of Miami, Miami, FL, USA.",
+        "The Dr. John T. Macdonald Foundation Department of Human Genetics, Leonard M. Miller School of Medicine, University of Miami, Miami, FL, USA."
+      ]
+    },
+    {
+      "last_name": "Bernstein",
+      "fore_name": "Charles N",
+      "initials": "CN",
+      "name": "Charles N Bernstein",
+      "affiliations": [
+        "University of Manitoba, Winnipeg, Manitoba, Canada."
+      ]
+    },
+    {
+      "last_name": "Bitton",
+      "fore_name": "Alain",
+      "initials": "A",
+      "name": "Alain Bitton",
+      "affiliations": [
+        "McGill University and McGill University Health Centre, Montreal, Quebec, Canada."
+      ]
+    },
+    {
+      "last_name": "Bokemeyer",
+      "fore_name": "Bernd",
+      "initials": "B",
+      "name": "Bernd Bokemeyer",
+      "affiliations": [
+        "Department of Internal Medicine, University Medical Center Schleswig-Holstein, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "Chan",
+      "fore_name": "Andrew",
+      "initials": "A",
+      "name": "Andrew Chan",
+      "affiliations": [
+        "Clinical and Translational Epidemiology Unit, Massachusetts General Hospital, Boston, MA, USA.",
+        "Channing Division of Network Medicine, Department of Medicine, Brigham and Womens Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Chung",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Chung",
+      "affiliations": [
+        "Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Cleynen",
+      "fore_name": "Isabelle",
+      "initials": "I",
+      "name": "Isabelle Cleynen",
+      "affiliations": [
+        "Department of Human Genetics, KU Leuven, Leuven, Belgium."
+      ]
+    },
+    {
+      "last_name": "Cosnes",
+      "fore_name": "Jacques",
+      "initials": "J",
+      "name": "Jacques Cosnes",
+      "affiliations": [
+        "Professeur Chef de Service chez APHP and Universite Paris-6, Paris, France."
+      ]
+    },
+    {
+      "last_name": "Cutler",
+      "fore_name": "David J",
+      "initials": "DJ",
+      "name": "David J Cutler",
+      "affiliations": [
+        "Department of Human Genetics, Emory University, Atlanta, GA, USA.",
+        "Emory University School of Medicine and Children's Healthcare of Atlanta, Atlanta, GA, USA."
+      ]
+    },
+    {
+      "last_name": "Daly",
+      "fore_name": "Allan",
+      "initials": "A",
+      "name": "Allan Daly",
+      "affiliations": [
+        "Human Genetics Informatics, Wellcome Sanger Institute, Wellcome Genome Campus, Hinxton, UK."
+      ]
+    },
+    {
+      "last_name": "Damas",
+      "fore_name": "Oriana M",
+      "initials": "OM",
+      "name": "Oriana M Damas",
+      "affiliations": [
+        "University of Miami, Miami, FL, USA."
+      ]
+    },
+    {
+      "last_name": "Datta",
+      "fore_name": "Lisa W",
+      "initials": "LW",
+      "name": "Lisa W Datta",
+      "affiliations": [
+        "Meyerhoff Inflammatory Bowel Disease Center, Department of Medicine, Johns Hopkins University School of Medicine, Baltimore, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Dawany",
+      "fore_name": "Noor",
+      "initials": "N",
+      "name": "Noor Dawany",
+      "affiliations": [
+        "Children's Hospital of Philadelphia, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Devoto",
+      "fore_name": "Marcella",
+      "initials": "M",
+      "name": "Marcella Devoto",
+      "affiliations": [
+        "Children's Hospital of Philadelphia, University of Pennsylvania, Philadelphia, PA, USA.",
+        "University of Rome Sapienza, Rome, Italy.",
+        "IRGB - CNR, Cagliari, Italy.",
+        "Perelman School of Medicine, University of Pennsylvania, Philadelphia, USA."
+      ]
+    },
+    {
+      "last_name": "Dodge",
+      "fore_name": "Sheila",
+      "initials": "S",
+      "name": "Sheila Dodge",
+      "affiliations": [
+        "Genomics Platform, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Ellinghaus",
+      "fore_name": "Eva",
+      "initials": "E",
+      "name": "Eva Ellinghaus",
+      "affiliations": [
+        "Christian-Albrechts-University of Kiel and University Medical Center Schleswig-Holstein, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "Fachal",
+      "fore_name": "Laura",
+      "initials": "L",
+      "name": "Laura Fachal",
+      "affiliations": [
+        "Genomics of Inflammation and Immunity Group, Human Genetics Programme, Wellcome Sanger Institute, Wellcome Genome Campus, Hinxton, UK."
+      ]
+    },
+    {
+      "last_name": "Farkkila",
+      "fore_name": "Martti",
+      "initials": "M",
+      "name": "Martti Farkkila",
+      "affiliations": [
+        "Helsinki University Central Hospital, Helsinki, Finland."
+      ]
+    },
+    {
+      "last_name": "Faubion",
+      "fore_name": "William",
+      "initials": "W",
+      "name": "William Faubion",
+      "affiliations": [
+        "Mayo Clinic, Rochester, Rochester, MN, USA."
+      ]
+    },
+    {
+      "last_name": "Ferreira",
+      "fore_name": "Manuel",
+      "initials": "M",
+      "name": "Manuel Ferreira",
+      "affiliations": [
+        "Regeneron Genetics Center, Tarrytown, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Franchimont",
+      "fore_name": "Denis",
+      "initials": "D",
+      "name": "Denis Franchimont",
+      "affiliations": [
+        "Erasme Hospital, ULB, Brussels, Belgium."
+      ]
+    },
+    {
+      "last_name": "Gabriel",
+      "fore_name": "Stacey B",
+      "initials": "SB",
+      "name": "Stacey B Gabriel",
+      "affiliations": [
+        "Genomics Platform, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Ge",
+      "fore_name": "Tian",
+      "initials": "T",
+      "name": "Tian Ge",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Psychiatric and Neurodevelopmental Genetics Unit, Center for Genomic Medicine, Massachusetts General Hospital, Boston, MA, USA.",
+        "Center for Precision Psychiatry, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Georges",
+      "fore_name": "Michel",
+      "initials": "M",
+      "name": "Michel Georges",
+      "affiliations": [
+        "University of Liège, ULG, Liège, Belgium."
+      ]
+    },
+    {
+      "last_name": "Gettler",
+      "fore_name": "Kyle",
+      "initials": "K",
+      "name": "Kyle Gettler",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Giri",
+      "fore_name": "Mamta",
+      "initials": "M",
+      "name": "Mamta Giri",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Glaser",
+      "fore_name": "Benjamin",
+      "initials": "B",
+      "name": "Benjamin Glaser",
+      "affiliations": [
+        "Department of Endocrinology and Metabolism, Hadassah Medical Center and Faculty of Medicine, Hebrew University of Jerusalem, Jerusalem, Israel."
+      ]
+    },
+    {
+      "last_name": "Goerg",
+      "fore_name": "Siegfried",
+      "initials": "S",
+      "name": "Siegfried Goerg",
+      "affiliations": [
+        "University Medical Center Schleswig-Holstein, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "Goyette",
+      "fore_name": "Philippe",
+      "initials": "P",
+      "name": "Philippe Goyette",
+      "affiliations": [
+        "Research Center Montreal Heart Institute, Montreal, Quebec, Canada."
+      ]
+    },
+    {
+      "last_name": "Graham",
+      "fore_name": "Daniel",
+      "initials": "D",
+      "name": "Daniel Graham",
+      "affiliations": [
+        "Infectious Disease and Microbiome Program, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Computational and Integrative Biology, Massachusetts General Hospital, Boston, MA, USA.",
+        "Department of Molecular Biology, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Hämäläinen",
+      "fore_name": "Eija",
+      "initials": "E",
+      "name": "Eija Hämäläinen",
+      "affiliations": [
+        "Institute for Molecular Medicine Finland, FIMM, HiLIFE, University of Helsinki, Helsinki, Finland."
+      ]
+    },
+    {
+      "last_name": "Haritunians",
+      "fore_name": "Talin",
+      "initials": "T",
+      "name": "Talin Haritunians",
+      "affiliations": [
+        "F. Widjaja Foundation Inflammatory Bowel and Immunobiology Research Institute, Cedars Sinai Medical Center, Los Angeles, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Heap",
+      "fore_name": "Graham A",
+      "initials": "GA",
+      "name": "Graham A Heap",
+      "affiliations": [
+        "Royal Devon and Exeter Hospital, Exeter, UK."
+      ]
+    },
+    {
+      "last_name": "Hiltunen",
+      "fore_name": "Mikko",
+      "initials": "M",
+      "name": "Mikko Hiltunen",
+      "affiliations": [
+        "Institute of Biomedicine, University of Eastern Finland, Kuopio, Finland."
+      ]
+    },
+    {
+      "last_name": "Hoeppner",
+      "fore_name": "Marc",
+      "initials": "M",
+      "name": "Marc Hoeppner",
+      "affiliations": [
+        "Christian-Albrechts-University of Kiel, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "Horowitz",
+      "fore_name": "Julie E",
+      "initials": "JE",
+      "name": "Julie E Horowitz",
+      "affiliations": [
+        "Regeneron Genetics Center, Tarrytown, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Irving",
+      "fore_name": "Peter",
+      "initials": "P",
+      "name": "Peter Irving",
+      "affiliations": [
+        "Department of Gastroenterology, Guys and Saint Thomas Hospital, London, UK.",
+        "School of Immunology and Microbial Sciences, Kings College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Iyer",
+      "fore_name": "Vivek",
+      "initials": "V",
+      "name": "Vivek Iyer",
+      "affiliations": [
+        "Human Genetics Informatics, Wellcome Sanger Institute, Wellcome Genome Campus, Hinxton, UK."
+      ]
+    },
+    {
+      "last_name": "Jalas",
+      "fore_name": "Chaim",
+      "initials": "C",
+      "name": "Chaim Jalas",
+      "affiliations": [
+        "Director of Genetic Resources and Services, Center for Rare Jewish Genetic Disorders, Bonei Olam, Brooklyn, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Kelsen",
+      "fore_name": "Judith",
+      "initials": "J",
+      "name": "Judith Kelsen",
+      "affiliations": [
+        "Children's Hospital of Philadelphia, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Khalili",
+      "fore_name": "Hamed",
+      "initials": "H",
+      "name": "Hamed Khalili",
+      "affiliations": [
+        "Clinical and Translational Epidemiology Unit, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Kirschner",
+      "fore_name": "Barbara S",
+      "initials": "BS",
+      "name": "Barbara S Kirschner",
+      "affiliations": [
+        "Department of Gastroenterology, University of Chicago Medicine, Chicago, IL, USA."
+      ]
+    },
+    {
+      "last_name": "Kontula",
+      "fore_name": "Kimmo",
+      "initials": "K",
+      "name": "Kimmo Kontula",
+      "affiliations": [
+        "Department of Medicine, Helsinki University Hospital, and Research Program for Clinical and Molecular Metabolism, University of Helsinki, Helsinki, Finland."
+      ]
+    },
+    {
+      "last_name": "Koskela",
+      "fore_name": "Jukka T",
+      "initials": "JT",
+      "name": "Jukka T Koskela",
+      "affiliations": [
+        "Institute for Molecular Medicine Finland, FIMM, HiLIFE, University of Helsinki, Helsinki, Finland."
+      ]
+    },
+    {
+      "last_name": "Kugathasan",
+      "fore_name": "Subra",
+      "initials": "S",
+      "name": "Subra Kugathasan",
+      "affiliations": [
+        "Emory University School of Medicine and Children's Healthcare of Atlanta, Atlanta, GA, USA."
+      ]
+    },
+    {
+      "last_name": "Kupcinskas",
+      "fore_name": "Juozas",
+      "initials": "J",
+      "name": "Juozas Kupcinskas",
+      "affiliations": [
+        "Department of Gastroenterology and Institute for Digestive Research, Lithuanian University of Health Sciences, Kaunas, Lithuania."
+      ]
+    },
+    {
+      "last_name": "Lamb",
+      "fore_name": "Christopher A",
+      "initials": "CA",
+      "name": "Christopher A Lamb",
+      "affiliations": [
+        "Translational and Clinical Research Institute, Newcastle University, Newcastle upon Tyne, UK.",
+        "Department of Gastroenterology, Newcastle upon Tyne Hospitals NHS Foundation Trust, Newcastle upon Tyne, UK."
+      ],
+      "orcid": "0000-0002-7271-4956"
+    },
+    {
+      "last_name": "Laudes",
+      "fore_name": "Matthias",
+      "initials": "M",
+      "name": "Matthias Laudes",
+      "affiliations": [
+        "University Medical Center Schleswig-Holstein, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "Lévesque",
+      "fore_name": "Chloé",
+      "initials": "C",
+      "name": "Chloé Lévesque",
+      "affiliations": [
+        "Research Center Montreal Heart Institute, Montreal, Quebec, Canada."
+      ]
+    },
+    {
+      "last_name": "Levine",
+      "fore_name": "Adam P",
+      "initials": "AP",
+      "name": "Adam P Levine",
+      "affiliations": [
+        "University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Lewis",
+      "fore_name": "James D",
+      "initials": "JD",
+      "name": "James D Lewis",
+      "affiliations": [
+        "Perelman School of Medicine, University of Pennsylvania, Philadelphia, USA.",
+        "Crohn's and Colitis Foundation, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Liefferinckx",
+      "fore_name": "Claire",
+      "initials": "C",
+      "name": "Claire Liefferinckx",
+      "affiliations": [
+        "Erasme Hospital, ULB, Brussels, Belgium."
+      ]
+    },
+    {
+      "last_name": "Loescher",
+      "fore_name": "Britt-Sabina",
+      "initials": "BS",
+      "name": "Britt-Sabina Loescher",
+      "affiliations": [
+        "Christian-Albrechts-University of Kiel and University Medical Center Schleswig-Holstein, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "Louis",
+      "fore_name": "Edouard",
+      "initials": "E",
+      "name": "Edouard Louis",
+      "affiliations": [
+        "University of Liège, ULG, Liège, Belgium."
+      ]
+    },
+    {
+      "last_name": "Mansfield",
+      "fore_name": "John",
+      "initials": "J",
+      "name": "John Mansfield",
+      "affiliations": [
+        "Translational and Clinical Research Institute, Newcastle University, Newcastle upon Tyne, UK.",
+        "Department of Gastroenterology, Newcastle upon Tyne Hospitals NHS Foundation Trust, Newcastle upon Tyne, UK."
+      ]
+    },
+    {
+      "last_name": "May",
+      "fore_name": "Sandra",
+      "initials": "S",
+      "name": "Sandra May",
+      "affiliations": [
+        "Christian-Albrechts-University of Kiel and University Medical Center Schleswig-Holstein, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "McCauley",
+      "fore_name": "Jacob L",
+      "initials": "JL",
+      "name": "Jacob L McCauley",
+      "affiliations": [
+        "John P. Hussman Institute for Human Genomics, Leonard M. Miller School of Medicine, University of Miami, Miami, FL, USA.",
+        "The Dr. John T. Macdonald Foundation Department of Human Genetics, Leonard M. Miller School of Medicine, University of Miami, Miami, FL, USA."
+      ]
+    },
+    {
+      "last_name": "Mengesha",
+      "fore_name": "Emebet",
+      "initials": "E",
+      "name": "Emebet Mengesha",
+      "affiliations": [
+        "F. Widjaja Foundation Inflammatory Bowel and Immunobiology Research Institute, Cedars Sinai Medical Center, Los Angeles, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Mni",
+      "fore_name": "Myriam",
+      "initials": "M",
+      "name": "Myriam Mni",
+      "affiliations": [
+        "University of Liège, ULG, Liège, Belgium."
+      ]
+    },
+    {
+      "last_name": "Moayyedi",
+      "fore_name": "Paul",
+      "initials": "P",
+      "name": "Paul Moayyedi",
+      "affiliations": [
+        "McMaster University, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Moran",
+      "fore_name": "Christopher J",
+      "initials": "CJ",
+      "name": "Christopher J Moran",
+      "affiliations": [
+        "Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Newberry",
+      "fore_name": "Rodney D",
+      "initials": "RD",
+      "name": "Rodney D Newberry",
+      "affiliations": [
+        "Washington University School of Medicine, St. Louis, MO, USA."
+      ]
+    },
+    {
+      "last_name": "O'Charoen",
+      "fore_name": "Sirimon",
+      "initials": "S",
+      "name": "Sirimon O'Charoen",
+      "affiliations": [
+        "Crohn's and Colitis Foundation, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Okou",
+      "fore_name": "David T",
+      "initials": "DT",
+      "name": "David T Okou",
+      "affiliations": [
+        "Emory University School of Medicine and Children's Healthcare of Atlanta, Atlanta, GA, USA.",
+        "Institut National de Sante Publique (INSP), Abidjan, Côte d'Ivoire."
+      ]
+    },
+    {
+      "last_name": "Oldenburg",
+      "fore_name": "Bas",
+      "initials": "B",
+      "name": "Bas Oldenburg",
+      "affiliations": [
+        "Department of Gastroenterology and Hepatology, University Medical Centre Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Ostrer",
+      "fore_name": "Harry",
+      "initials": "H",
+      "name": "Harry Ostrer",
+      "affiliations": [
+        "Albert Einstein College of Medicine, Bronx, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Palotie",
+      "fore_name": "Aarno",
+      "initials": "A",
+      "name": "Aarno Palotie",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Analytic and Translational Genetics Unit, Department of Medicine, Massachusetts General Hospital, Boston, MA, USA.",
+        "Institute for Molecular Medicine Finland, FIMM, HiLIFE, University of Helsinki, Helsinki, Finland.",
+        "Department of Neurology, Massachusetts General Hospital, Boston, MA, USA.",
+        "Department of Psychiatry, Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Paquette",
+      "fore_name": "Jean",
+      "initials": "J",
+      "name": "Jean Paquette",
+      "affiliations": [
+        "Research Center Montreal Heart Institute, Montreal, Quebec, Canada."
+      ]
+    },
+    {
+      "last_name": "Pekow",
+      "fore_name": "Joel",
+      "initials": "J",
+      "name": "Joel Pekow",
+      "affiliations": [
+        "Department of Gastroenterology, University of Chicago Medicine, Chicago, IL, USA."
+      ]
+    },
+    {
+      "last_name": "Peter",
+      "fore_name": "Inga",
+      "initials": "I",
+      "name": "Inga Peter",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Pierik",
+      "fore_name": "Marieke J",
+      "initials": "MJ",
+      "name": "Marieke J Pierik",
+      "affiliations": [
+        "Department of Gastroenterology and Hepatology, Maastricht University Medical Centre, Maastricht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Ponsioen",
+      "fore_name": "Cyriel Y",
+      "initials": "CY",
+      "name": "Cyriel Y Ponsioen",
+      "affiliations": [
+        "Department of Gastroenterology and Hepatology, Amsterdam University Medical Centres, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Pontikos",
+      "fore_name": "Nikolas",
+      "initials": "N",
+      "name": "Nikolas Pontikos",
+      "affiliations": [
+        "University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Prescott",
+      "fore_name": "Natalie",
+      "initials": "N",
+      "name": "Natalie Prescott",
+      "affiliations": [
+        "Department of Medical and Molecular Genetics, Kings College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Pulver",
+      "fore_name": "Ann E",
+      "initials": "AE",
+      "name": "Ann E Pulver",
+      "affiliations": [
+        "School of Medicine, Johns Hopkins University, Baltimore, MD, USA."
+      ]
+    },
+    {
+      "last_name": "Rahmouni",
+      "fore_name": "Souad",
+      "initials": "S",
+      "name": "Souad Rahmouni",
+      "affiliations": [
+        "University of Liège, ULG, Liège, Belgium."
+      ]
+    },
+    {
+      "last_name": "Rice",
+      "fore_name": "Daniel L",
+      "initials": "DL",
+      "name": "Daniel L Rice",
+      "affiliations": [
+        "Genomics of Inflammation and Immunity Group, Human Genetics Programme, Wellcome Sanger Institute, Wellcome Genome Campus, Hinxton, UK."
+      ]
+    },
+    {
+      "last_name": "Saavalainen",
+      "fore_name": "Päivi",
+      "initials": "P",
+      "name": "Päivi Saavalainen",
+      "affiliations": [
+        "Research Programs Unit, Immunobiology, University of Helsinki, Helsinki, Finland."
+      ]
+    },
+    {
+      "last_name": "Sands",
+      "fore_name": "Bruce",
+      "initials": "B",
+      "name": "Bruce Sands",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Sartor",
+      "fore_name": "R Balfour",
+      "initials": "RB",
+      "name": "R Balfour Sartor",
+      "affiliations": [
+        "Center for Gastrointestinal Biology and Disease, University of North Carolina School of Medicine, Chapel Hill, NC, USA."
+      ]
+    },
+    {
+      "last_name": "Schiff",
+      "fore_name": "Elena R",
+      "initials": "ER",
+      "name": "Elena R Schiff",
+      "affiliations": [
+        "University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Schreiber",
+      "fore_name": "Stefan",
+      "initials": "S",
+      "name": "Stefan Schreiber",
+      "affiliations": [
+        "Christian-Albrechts-University of Kiel and University Medical Center Schleswig-Holstein, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "Schumm",
+      "fore_name": "L Philip",
+      "initials": "LP",
+      "name": "L Philip Schumm",
+      "affiliations": [
+        "Department of Public Health Sciences, University of Chicago, Chicago, IL, USA."
+      ]
+    },
+    {
+      "last_name": "Segal",
+      "fore_name": "Anthony W",
+      "initials": "AW",
+      "name": "Anthony W Segal",
+      "affiliations": [
+        "University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Seksik",
+      "fore_name": "Philippe",
+      "initials": "P",
+      "name": "Philippe Seksik",
+      "affiliations": [
+        "Gastroenterology Department, Sorbonne Universite, Saint Antoine Hospital, Paris, France."
+      ]
+    },
+    {
+      "last_name": "Shawky",
+      "fore_name": "Rasha",
+      "initials": "R",
+      "name": "Rasha Shawky",
+      "affiliations": [
+        "IBD BioResource, NIHR BioResource, Cambridge University Hospitals NHS Foundation Trust, Cambridge, UK."
+      ]
+    },
+    {
+      "last_name": "Sheikh",
+      "fore_name": "Shehzad Z",
+      "initials": "SZ",
+      "name": "Shehzad Z Sheikh",
+      "affiliations": [
+        "Center for Gastrointestinal Biology and Disease, University of North Carolina School of Medicine, Chapel Hill, NC, USA."
+      ]
+    },
+    {
+      "last_name": "Silverberg",
+      "fore_name": "Mark S",
+      "initials": "MS",
+      "name": "Mark S Silverberg",
+      "affiliations": [
+        "Mount Sinai Hospital, Toronto, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Simmons",
+      "fore_name": "Alison",
+      "initials": "A",
+      "name": "Alison Simmons",
+      "affiliations": [
+        "MRC Human Immunology Unit, NIHR Biomedical Research Centre, Radcliffe Department of Medicine, University of Oxford, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "Skeiceviciene",
+      "fore_name": "Jurgita",
+      "initials": "J",
+      "name": "Jurgita Skeiceviciene",
+      "affiliations": [
+        "Department of Gastroenterology and Institute for Digestive Research, Lithuanian University of Health Sciences, Kaunas, Lithuania."
+      ]
+    },
+    {
+      "last_name": "Sokol",
+      "fore_name": "Harry",
+      "initials": "H",
+      "name": "Harry Sokol",
+      "affiliations": [
+        "Gastroenterology Department, Sorbonne Universite, Saint Antoine Hospital, Paris, France."
+      ]
+    },
+    {
+      "last_name": "Solomonson",
+      "fore_name": "Matthew",
+      "initials": "M",
+      "name": "Matthew Solomonson",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Somineni",
+      "fore_name": "Hari",
+      "initials": "H",
+      "name": "Hari Somineni",
+      "affiliations": [
+        "Department of Pediatrics, Emory University School of Medicine and Children's Healthcare of Atlanta, Atlanta, GA, USA."
+      ]
+    },
+    {
+      "last_name": "Sun",
+      "fore_name": "Dylan",
+      "initials": "D",
+      "name": "Dylan Sun",
+      "affiliations": [
+        "Regeneron Genetics Center, Tarrytown, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Targan",
+      "fore_name": "Stephan",
+      "initials": "S",
+      "name": "Stephan Targan",
+      "affiliations": [
+        "F. Widjaja Foundation Inflammatory Bowel and Immunobiology Research Institute, Cedars Sinai Medical Center, Los Angeles, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Turner",
+      "fore_name": "Dan",
+      "initials": "D",
+      "name": "Dan Turner",
+      "affiliations": [
+        "Shaare Zedek Medical Center, Jerusalem, Israel."
+      ]
+    },
+    {
+      "last_name": "Uhlig",
+      "fore_name": "Holm H",
+      "initials": "HH",
+      "name": "Holm H Uhlig",
+      "affiliations": [
+        "Translational Gastroenterology Unit and Biomedical Research Centre, Nuffield Department of Clinical Medicine, Experimental Medicine Division, University of Oxford, Oxford, UK.",
+        "Department of Pediatrics, John Radcliffe Hospital, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "van der Meulen",
+      "fore_name": "Andrea E",
+      "initials": "AE",
+      "name": "Andrea E van der Meulen",
+      "affiliations": [
+        "Department of Gastroenterology and Hepatology, Leiden University Medical Center, Leiden, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Vermeire",
+      "fore_name": "Séverine",
+      "initials": "S",
+      "name": "Séverine Vermeire",
+      "affiliations": [
+        "University Hospitals Leuven, Leuven, Belgium.",
+        "Department of Chronic Diseases and Metabolism, KU Leuven, Leuven, Belgium."
+      ]
+    },
+    {
+      "last_name": "Verstockt",
+      "fore_name": "Sare",
+      "initials": "S",
+      "name": "Sare Verstockt",
+      "affiliations": [
+        "Department of Chronic Diseases and Metabolism, KU Leuven, Leuven, Belgium."
+      ]
+    },
+    {
+      "last_name": "Voskuil",
+      "fore_name": "Michiel D",
+      "initials": "MD",
+      "name": "Michiel D Voskuil",
+      "affiliations": [
+        "Department of Gastroenterology and Hepatology, University of Groningen and University Medical Center Groningen, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Winter",
+      "fore_name": "Harland S",
+      "initials": "HS",
+      "name": "Harland S Winter",
+      "affiliations": [
+        "Massachusetts General Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Young",
+      "fore_name": "Justine",
+      "initials": "J",
+      "name": "Justine Young",
+      "affiliations": [
+        "Crohn's and Colitis Foundation, New York, NY, USA."
+      ]
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "last_name": "Duerr",
+      "fore_name": "Richard H",
+      "initials": "RH",
+      "name": "Richard H Duerr",
+      "affiliations": [
+        "University of Pittsburgh, Pittsburgh, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Franke",
+      "fore_name": "Andre",
+      "initials": "A",
+      "name": "Andre Franke",
+      "affiliations": [
+        "Christian-Albrechts-University of Kiel and University Medical Center Schleswig-Holstein, Kiel, Germany."
+      ]
+    },
+    {
+      "last_name": "Brant",
+      "fore_name": "Steven R",
+      "initials": "SR",
+      "name": "Steven R Brant",
+      "affiliations": [
+        "Meyerhoff Inflammatory Bowel Disease Center, Department of Medicine, Johns Hopkins University School of Medicine, Baltimore, MD, USA.",
+        "Crohn's Colitis Center of New Jersey, Department of Medicine, Rutgers Robert Wood Johnson Medical School and Department of Genetics and the Human Genetics Institute of New Jersey, Rutgers University, New Brunswick and Piscataway, NJ, USA."
+      ]
+    },
+    {
+      "last_name": "Cho",
+      "fore_name": "Judy",
+      "initials": "J",
+      "name": "Judy Cho",
+      "affiliations": [
+        "Icahn School of Medicine at Mount Sinai, New York, NY, USA."
+      ]
+    },
+    {
+      "last_name": "Weersma",
+      "fore_name": "Rinse K",
+      "initials": "RK",
+      "name": "Rinse K Weersma",
+      "affiliations": [
+        "Department of Gastroenterology and Hepatology, University of Groningen and University Medical Center Groningen, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Parkes",
+      "fore_name": "Miles",
+      "initials": "M",
+      "name": "Miles Parkes",
+      "affiliations": [
+        "Department of Gastroenterology, Cambridge University Hospitals NHS Foundation Trust, Cambridge, UK."
+      ]
+    },
+    {
+      "last_name": "Xavier",
+      "fore_name": "Ramnik J",
+      "initials": "RJ",
+      "name": "Ramnik J Xavier",
+      "affiliations": [
+        "Infectious Disease and Microbiome Program, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Computational and Integrative Biology, Massachusetts General Hospital, Boston, MA, USA.",
+        "Department of Molecular Biology, Massachusetts General Hospital, Boston, MA, USA.",
+        "Kurt Isselbacher Professor of Medicine at Harvard Medical School, Cambridge, MA, USA.",
+        "Core Institute Member, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Klarman Cell Observatory, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Immunology Program, The Broad Institute of MIT and Harvard, Cambridge, MA, USA.",
+        "Center for Microbiome Informatics and Therapeutics at MIT, Massachusetts Institute of Technology, Cambridge, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Rivas",
+      "fore_name": "Manuel A",
+      "initials": "MA",
+      "name": "Manuel A Rivas",
+      "affiliations": [
+        "Department of Biomedical Data Science, Stanford University, Stanford, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Rioux",
+      "fore_name": "John D",
+      "initials": "JD",
+      "name": "John D Rioux",
+      "affiliations": [
+        "Research Center Montreal Heart Institute, Montreal, Quebec, Canada.",
+        "Faculty of Medicine, Université de Montréal, Montreal, Canada."
+      ]
+    },
+    {
+      "last_name": "McGovern",
+      "fore_name": "Dermot P B",
+      "initials": "DPB",
+      "name": "Dermot P B McGovern",
+      "affiliations": [
+        "F. Widjaja Foundation Inflammatory Bowel and Immunobiology Research Institute, Cedars Sinai Medical Center, Los Angeles, CA, USA."
+      ]
+    },
+    {
+      "last_name": "Huang",
+      "fore_name": "Hailiang",
+      "initials": "H",
+      "name": "Hailiang Huang",
+      "affiliations": [
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, MA, USA. hhuang@broadinstitute.org.",
+        "Analytic and Translational Genetics Unit, Department of Medicine, Massachusetts General Hospital, Boston, MA, USA. hhuang@broadinstitute.org."
+      ]
+    },
+    {
+      "last_name": "Anderson",
+      "fore_name": "Carl A",
+      "initials": "CA",
+      "name": "Carl A Anderson",
+      "affiliations": [
+        "Genomics of Inflammation and Immunity Group, Human Genetics Programme, Wellcome Sanger Institute, Wellcome Genome Campus, Hinxton, UK. carl.anderson@sanger.ac.uk."
+      ]
+    },
+    {
+      "last_name": "Daly",
+      "fore_name": "Mark J",
+      "initials": "MJ",
+      "name": "Mark J Daly",
+      "affiliations": [
+        "Program in Medical and Population Genetics, The Broad Institute of MIT and Harvard, Cambridge, MA, USA. mjdaly@broadinstitute.org.",
+        "Stanley Center for Psychiatric Research, The Broad Institute of MIT and Harvard, Cambridge, MA, USA. mjdaly@broadinstitute.org.",
+        "Analytic and Translational Genetics Unit, Department of Medicine, Massachusetts General Hospital, Boston, MA, USA. mjdaly@broadinstitute.org.",
+        "Institute for Molecular Medicine Finland, FIMM, HiLIFE, University of Helsinki, Helsinki, Finland. mjdaly@broadinstitute.org."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Nature genetics",
+    "iso_abbreviation": "Nat Genet",
+    "issn": "1546-1718",
+    "issn_type": "Electronic",
+    "volume": "54",
+    "issue": "9",
+    "pub_year": "2022",
+    "pub_month": "Sep"
+  },
+  "start_page": "1275",
+  "end_page": "1283",
+  "pages": "1275-1283",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Crohn Disease",
+    "Genetic Predisposition to Disease",
+    "Genome-Wide Association Study",
+    "Humans",
+    "Polymorphism, Single Nucleotide"
+  ],
+  "article_ids": {
+    "pubmed": "36038634",
+    "mid": "NIHMS1828858",
+    "pmc": "PMC9700438",
+    "doi": "10.1038/s41588-022-01156-2",
+    "pii": "10.1038/s41588-022-01156-2"
+  },
+  "doi": "10.1038/s41588-022-01156-2",
+  "pmc_id": "PMC9700438",
+  "dates": {
+    "completed": "2022-09-15",
+    "revised": "2025-05-30"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "P01 DK094779",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "206194",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "K01 DK114379",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MR/M00533X/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "R01 HG010140",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 DK062423",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MC_UU_00008/7",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MC_UU_12010/7",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "U54 HG003067",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 DK062413",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "UM1 HG008895",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P30 DK043351",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "agency": "Department of Health",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "U01 DK062432",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 DK104844",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MC_PC_MR/S025952/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "108413/A/15/D",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "U01 HG009080",
+      "agency": "NHGRI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K23 DK117054",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 DK111843",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P30 AG038072",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 DK127044",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MR/S036377/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "P01 DK046763",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "P30 DK052574",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 DK062420",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "U01 DK062431",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 DK087694",
+      "agency": "NIDDK NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:45:00.436822",
+    "pmid": "36038634"
+  }
+}

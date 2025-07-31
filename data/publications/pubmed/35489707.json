@@ -1,0 +1,112 @@
+{
+  "pmid": "35489707",
+  "uid": "35489707",
+  "title": "Development of a manufacturer-independent convolutional neural network for the automated identification of vertebral compression fractures in vertebral fracture assessment images using active learning.",
+  "abstract": "BACKGROUND: Convolutional neural networks (CNNs) can identify vertebral compression fractures in GE vertebral fracture assessment (VFA) images with high balanced accuracy, but performance against Hologic VFAs is unknown. To obtain good classification performance, supervised machine learning requires balanced and labeled training data. Active learning is an iterative data annotation process with the ability to reduce the cost of labeling medical image data and reduce class imbalance. PURPOSE: To train CNNs to identify vertebral fractures in Hologic VFAs using an active learning approach, and evaluate the ability of CNNs to generalize to both Hologic and GE VFA images. METHODS: VFAs were obtained from the OsteoLaus Study (labeled Hologic Discovery A, n = 2726), the Manitoba Bone Mineral Density Program (labeled GE Prodigy and iDXA, n = 12,742), and the Canadian Longitudinal Study on Aging (CLSA, unlabeled Hologic Discovery A, n = 17,190). Unlabeled CLSA VFAs were split into five equal-sized partitions (n = 3438) and reviewed sequentially using active learning. Based on predicted fracture probability, 17.6% (n = 3032) of the unlabeled VFAs were selected for expert review using the modified algorithm-based qualitative (mABQ) method. CNNs were simultaneously trained on Hologic, GE dual-energy and GE single-energy VFAs. Two ensemble CNNs were constructed using the maximum and mean predicted probability from six separately trained CNNs that differed due to stochastic variation. CNNs were evaluated against the OsteoLaus validation set (n = 408) during the active learning process; ensemble performance was measured against the OsteoLaus test set (n = 819). RESULTS: The baseline CNN, prior to active learning, achieved 55.0% sensitivity, 97.9% specificity, 57.9% positive predictive value (PPV), F1-score 56.4%. Through active learning, 2942 CLSA Hologic VFAs (492 fractures) were added to the training data-increasing the proportion of Hologic VFAs with fractures from 4.2% to 12.5%. With active learning, CNN performance improved to 80.0% sensitivity, 99.7% specificity, 94.1% PPV, F1-score 86.5%. The CNN maximum ensemble achieved 91.9% sensitivity (100% for grade 3 and 95.5% for grade 2 fractures), 99.0% specificity, 81.0% PPV, F1-score 86.1%. CONCLUSION: Simultaneously training on a composite dataset consisting of both Hologic and GE VFAs allowed for the development of a single manufacturer-independent CNN that generalized to both scanner types with good classification performance. Active learning can reduce class imbalance and produce an effective medical image classifier while only labeling a subset of available unlabeled image data-thereby reducing the time and cost required to train a machine learning model.",
+  "authors": [
+    {
+      "last_name": "Monchka",
+      "fore_name": "Barret A",
+      "initials": "BA",
+      "name": "Barret A Monchka",
+      "affiliations": [
+        "University of Manitoba, Winnipeg, Manitoba, Canada. Electronic address: Barret.Monchka@umanitoba.ca."
+      ]
+    },
+    {
+      "last_name": "Schousboe",
+      "fore_name": "John T",
+      "initials": "JT",
+      "name": "John T Schousboe",
+      "affiliations": [
+        "University of Minnesota, Minneapolis, Minnesota, USA."
+      ]
+    },
+    {
+      "last_name": "Davidson",
+      "fore_name": "Michael J",
+      "initials": "MJ",
+      "name": "Michael J Davidson",
+      "affiliations": [
+        "University of Manitoba, Winnipeg, Manitoba, Canada."
+      ]
+    },
+    {
+      "last_name": "Kimelman",
+      "fore_name": "Douglas",
+      "initials": "D",
+      "name": "Douglas Kimelman",
+      "affiliations": [
+        "University of Manitoba, Winnipeg, Manitoba, Canada."
+      ]
+    },
+    {
+      "last_name": "Hans",
+      "fore_name": "Didier",
+      "initials": "D",
+      "name": "Didier Hans",
+      "affiliations": [
+        "Lausanne University Hospital, Lausanne, Switzerland."
+      ]
+    },
+    {
+      "last_name": "Raina",
+      "fore_name": "Parminder",
+      "initials": "P",
+      "name": "Parminder Raina",
+      "affiliations": [
+        "Department of Health Evidence & Impact, Faculty of Health Sciences, McMaster University, Hamilton, Ontario, Canada; McMaster Institute for Research on Aging, Hamilton, Ontario, Canada."
+      ]
+    },
+    {
+      "last_name": "Leslie",
+      "fore_name": "William D",
+      "initials": "WD",
+      "name": "William D Leslie",
+      "affiliations": [
+        "University of Manitoba, Winnipeg, Manitoba, Canada."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Bone",
+    "iso_abbreviation": "Bone",
+    "issn": "1873-2763",
+    "issn_type": "Electronic",
+    "volume": "161",
+    "pub_year": "2022",
+    "pub_month": "Aug"
+  },
+  "start_page": "116427",
+  "pages": "116427",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Canada",
+    "Fractures, Compression",
+    "Humans",
+    "Longitudinal Studies",
+    "Neural Networks, Computer",
+    "Spinal Fractures"
+  ],
+  "article_ids": {
+    "pubmed": "35489707",
+    "doi": "10.1016/j.bone.2022.116427",
+    "pii": "S8756-3282(22)00103-X"
+  },
+  "doi": "10.1016/j.bone.2022.116427",
+  "dates": {
+    "completed": "2022-06-15",
+    "revised": "2022-07-15"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:53:30.181105",
+    "pmid": "35489707"
+  }
+}

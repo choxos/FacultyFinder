@@ -1,0 +1,322 @@
+{
+  "openalex_id": "W3158213854",
+  "doi": "https://doi.org/10.3389/fonc.2021.680918",
+  "title": "Hippo Pathway Core Genes Based Prognostic Signature and Immune Infiltration Patterns in Lung Squamous Cell Carcinoma",
+  "abstract": "Background We investigated the prognostic effects and their patterns of immune infiltration of hippo pathway core genes in lung squamous cell carcinoma, in order to find some clues for underlying mechanisms of LUSC tumorigenesis and help developing new therapeutic methods. Methods The mutational data, transcriptome data and corresponding clinical medical information of LUSC patients were extracted from The Cancer Genome Atlas (TCGA) database. Differential expression genes (DEGs) and Gene Ontology (GO), Kyoto Encyclopedia of Genes and Genomes (KEGG) analyses were explored. Survival analysis for the hippo core genes and the prognostic model were performed. Immune infiltration was estimated by CIBERSORT algorithm and some immune checkpoints-related genes were further investigated. Results Overall, 551 LUSC samples were included in our study, consisting of 502 LUSC tumor samples and 49 adjacent normal samples, respectively. There were 1910 up-regulated DEGs and 2253 down-regulated DEGs were finally identified. The top five mutational hippo pathway core genes were LATS1 (4%), WWC1 (2%), TAOK1 (2%), TAOK3 (2%), and TAOK2 (2%), respectively. the mutation of LATS2 was highly associated with co-mutational NF2 (P &amp;lt;0.05) and TAOK1 (P &amp;lt;0.05). In survival analyses, we found only WWC1 (log-rank p = 0.046, HR = 1.32, 95% CI = 1–1.73) and LATS2 (log-rank p = 0.013, HR = 1.41, 95%CI = 1.08–1.86) had significant prognostic roles. After getting the three subgroups according to the subtyping results, we demonstrated that T cell gamma delta (p = 5.78e-6), B cell memory (p = 4.61e-4) and T cell CD4+ memory resting (p = 2.65e-5) had significant differences among the three groups. SIGLEC15 (P &amp;lt;0.01) and CD274 (P &amp;lt;0.05) also had statistical differences among the three subgroups. Conclusions Our study verified the prognostic roles of WWC1 and LATS2 in LUSC patients. Immune checkpoints-related genes SIGLEC15 and CD274 had statistical differences among the three subgroups, which may provide new perceptions on the molecular mechanisms in LUSC and maybe helpful for precisely selecting specific LUSC patients with potential immunotherapy benefits.",
+  "authors": [
+    {
+      "display_name": "Chang Gu",
+      "id": "A5059646965",
+      "orcid": "https://orcid.org/0000-0002-8997-2900",
+      "institutions": [
+        {
+          "id": "I4210127126",
+          "display_name": "Shanghai Pulmonary Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I116953780",
+          "display_name": "Tongji University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chang Gu"
+    },
+    {
+      "display_name": "Jiafei Chen",
+      "id": "A5101824956",
+      "orcid": "https://orcid.org/0000-0003-0919-1547",
+      "institutions": [
+        {
+          "id": "I4210127126",
+          "display_name": "Shanghai Pulmonary Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I116953780",
+          "display_name": "Tongji University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jiafei Chen"
+    },
+    {
+      "display_name": "Xuening Dang",
+      "id": "A5078953832",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210110011",
+          "display_name": "Shanghai Cancer Institute",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I2801518579",
+          "display_name": "XinHua Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I183067930",
+          "display_name": "Shanghai Jiao Tong University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xuening Dang"
+    },
+    {
+      "display_name": "Chunji Chen",
+      "id": "A5028189664",
+      "orcid": "https://orcid.org/0000-0003-0587-7680",
+      "institutions": [
+        {
+          "id": "I2802608112",
+          "display_name": "Shanghai Chest Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I183067930",
+          "display_name": "Shanghai Jiao Tong University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chunji Chen"
+    },
+    {
+      "display_name": "Zhenyu Huang",
+      "id": "A5059844880",
+      "orcid": "https://orcid.org/0000-0002-0341-6824",
+      "institutions": [
+        {
+          "id": "I4210110011",
+          "display_name": "Shanghai Cancer Institute",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I2801518579",
+          "display_name": "XinHua Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I183067930",
+          "display_name": "Shanghai Jiao Tong University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhenyu Huang"
+    },
+    {
+      "display_name": "Weidong Shen",
+      "id": "A5023064755",
+      "orcid": "https://orcid.org/0000-0002-1712-9324",
+      "institutions": [
+        {
+          "id": "I205349734",
+          "display_name": "Hokkaido University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Weidong Shen"
+    },
+    {
+      "display_name": "Xin Shi",
+      "id": "A5069142544",
+      "orcid": "https://orcid.org/0000-0002-9260-7584",
+      "institutions": [
+        {
+          "id": "I2802608112",
+          "display_name": "Shanghai Chest Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I183067930",
+          "display_name": "Shanghai Jiao Tong University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Xin Shi"
+    },
+    {
+      "display_name": "Chenyang Dai",
+      "id": "A5103111549",
+      "orcid": "https://orcid.org/0000-0001-9609-0343",
+      "institutions": [
+        {
+          "id": "I116953780",
+          "display_name": "Tongji University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210127126",
+          "display_name": "Shanghai Pulmonary Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Chenyang Dai"
+    },
+    {
+      "display_name": "Chang Chen",
+      "id": "A5100449499",
+      "orcid": "https://orcid.org/0000-0003-2841-1250",
+      "institutions": [
+        {
+          "id": "I4210127126",
+          "display_name": "Shanghai Pulmonary Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I116953780",
+          "display_name": "Tongji University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Chang Chen"
+    }
+  ],
+  "publication_year": 2021,
+  "publication_date": "2021-04-29",
+  "type": "article",
+  "cited_by_count": 33,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2596394214",
+    "display_name": "Frontiers in Oncology",
+    "issn_l": "2234-943X",
+    "issn": [
+      "2234-943X"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320527"
+  },
+  "volume": "11",
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.frontiersin.org/articles/10.3389/fonc.2021.680918/pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C152724338",
+      "display_name": "KEGG",
+      "level": 5,
+      "score": 0.86246586
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.670928
+    },
+    {
+      "id": "C172512520",
+      "display_name": "Hippo signaling pathway",
+      "level": 3,
+      "score": 0.6189831
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.59827965
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.5967637
+    },
+    {
+      "id": "C555283112",
+      "display_name": "Carcinogenesis",
+      "level": 3,
+      "score": 0.55095375
+    },
+    {
+      "id": "C162317418",
+      "display_name": "Transcriptome",
+      "level": 4,
+      "score": 0.54332215
+    },
+    {
+      "id": "C8891405",
+      "display_name": "Immune system",
+      "level": 2,
+      "score": 0.5316292
+    },
+    {
+      "id": "C18431079",
+      "display_name": "Gene expression profiling",
+      "level": 4,
+      "score": 0.4498427
+    },
+    {
+      "id": "C150194340",
+      "display_name": "Gene expression",
+      "level": 3,
+      "score": 0.2963937
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.20688307
+    }
+  ],
+  "topics": [
+    {
+      "id": "T12065",
+      "display_name": "Hippo pathway signaling and YAP/TAZ",
+      "score": 0.9998
+    },
+    {
+      "id": "T11297",
+      "display_name": "Ferroptosis and cancer prognosis",
+      "score": 0.9965
+    },
+    {
+      "id": "T10604",
+      "display_name": "RNA Research and Splicing",
+      "score": 0.9949
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3389/fonc.2021.680918",
+  "pdf_url": "https://www.frontiersin.org/articles/10.3389/fonc.2021.680918/pdf",
+  "retrieved_date": "2025-07-30T14:25:00.318691",
+  "source_database": "OpenAlex"
+}

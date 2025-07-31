@@ -1,0 +1,153 @@
+{
+  "openalex_id": "W3121710731",
+  "doi": "https://doi.org/10.20944/preprints202008.0245.v1",
+  "title": "COVID-19 and the Epistemology of Epidemiological Models at the Dawn of AI",
+  "abstract": "The models used to estimate disease transmission, susceptibility and severity determine what epidemiology can (and cannot tell) us about COVID-19. These include: &amp;lsquo;model organisms&amp;rsquo; chosen for their phylogenetic/aetiological similarities; multivariable statistical models to estimate the strength/direction of (potentially causal) relationships between variables (through &amp;lsquo;causal inference&amp;rsquo;), and the (past/future) value of unmeasured variables (through &amp;lsquo;classification/prediction&amp;rsquo;); and a range of modelling techniques to predict beyond the available data (through &amp;lsquo;extrapolation&amp;rsquo;), compare different hypothetical scenarios (through &amp;lsquo;simulation&amp;rsquo;), and estimate key features of dynamic processes (through &amp;lsquo;projection&amp;rsquo;). Each of these models: address different questions using different techniques; involve assumptions that require careful assessment; and are vulnerable to generic and specific biases that can undermine the validity and interpretation of their findings. It is therefore necessary that the models used: can actually address the questions posed; and have been competently applied. In this regard, it is important to stress that extrapolation, simulation and projection cannot offer accurate predictions of future events when the underlying mechanisms (and the contexts involved) are poorly understood and subject to change. Given the importance of understanding such mechanisms/contexts, and the limited opportunity for experimentation during outbreaks of novel diseases, the use of multivariable statistical models to estimate the strength/direction of potentially causal relationships between two variables (and the biases incurred through their misapplication/misinterpretation) warrant particular attention. Such models must be carefully designed to address: &amp;lsquo;selection-collider bias&amp;rsquo;, &amp;lsquo;unadjusted confounding bias&amp;rsquo; and &amp;lsquo;inferential mediator adjustment bias&amp;rsquo; &amp;ndash; all of which can introduce effects capable of enhancing, masking or reversing the estimated (true) causal relationship between the two variables examined. Selection-collider bias occurs when these two variables independently cause a third (the &amp;lsquo;collider&amp;rsquo;), and when this collider determines/reflects the basis for selection in the analysis. It is likely to affect all incompletely representative samples, although its effects will be most pronounced wherever selection is constrained (e.g. analyses focusing on infected/hospitalised individuals). Unadjusted confounding bias disrupts the estimated (true) causal relationship between two variables when: these share one (or more) common cause(s); and when the effects of these causes have not been adjusted for in the analyses (e.g. whenever confounders are unknown/unmeasured). Inferentially similar biases can occur when: one (or more) variable(s) (or &amp;lsquo;mediators&amp;rsquo;) fall on the causal path between the two variables examined (i.e. when such mediators are caused by one of the variables and are causes of the other); and when these mediators are adjusted for in the analysis. Such adjustment is commonplace when: mediators are mistaken for confounders; prediction models are mistakenly repurposed for causal inference; or mediator adjustment is used to estimate direct and indirect causal relationships (in a mistaken attempt at &amp;lsquo;mediation analysis&amp;rsquo;). These three biases are central to ongoing and unresolved epistemological tensions within epidemiology. All have substantive implications for our understanding of COVID-19, and the future application of artificial intelligence to &amp;lsquo;data-driven&amp;rsquo; modelling of similar phenomena. Nonetheless, competently applied and carefully interpreted, multivariable statistical models may yet provide sufficient insight into mechanisms and contexts to permit more accurate projections of future disease outbreaks.",
+  "authors": [
+    {
+      "display_name": "George T. H. Ellison",
+      "id": "A5082481295",
+      "orcid": "https://orcid.org/0000-0001-8914-6812",
+      "institutions": [
+        {
+          "id": "I185852735",
+          "display_name": "University of Lancashire",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "George Ellison"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-08-10",
+  "type": "preprint",
+  "cited_by_count": 1,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://doi.org/10.20944/preprints202008.0245.v1",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C158600405",
+      "display_name": "Causal inference",
+      "level": 2,
+      "score": 0.57441175
+    },
+    {
+      "id": "C2776214188",
+      "display_name": "Inference",
+      "level": 2,
+      "score": 0.4806658
+    },
+    {
+      "id": "C149782125",
+      "display_name": "Econometrics",
+      "level": 1,
+      "score": 0.4737288
+    },
+    {
+      "id": "C2776916960",
+      "display_name": "Warrant",
+      "level": 2,
+      "score": 0.4414489
+    },
+    {
+      "id": "C527412718",
+      "display_name": "Interpretation (philosophy)",
+      "level": 2,
+      "score": 0.4409307
+    },
+    {
+      "id": "C132459708",
+      "display_name": "Extrapolation",
+      "level": 2,
+      "score": 0.43116546
+    },
+    {
+      "id": "C2522767166",
+      "display_name": "Data science",
+      "level": 1,
+      "score": 0.34622478
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.34254107
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.24742994
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.21445549
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.21410623
+    },
+    {
+      "id": "C162324750",
+      "display_name": "Economics",
+      "level": 0,
+      "score": 0.18926033
+    },
+    {
+      "id": "C106159729",
+      "display_name": "Financial economics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10410",
+      "display_name": "COVID-19 epidemiological studies",
+      "score": 0.9964
+    },
+    {
+      "id": "T12492",
+      "display_name": "Zoonotic diseases and public health",
+      "score": 0.9152
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.20944/preprints202008.0245.v1",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:48:51.690349",
+  "source_database": "OpenAlex"
+}

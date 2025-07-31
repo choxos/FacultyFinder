@@ -82,13 +82,13 @@ Each publication now contains **complete research metadata**:
 ### **Test Enhanced Fields (RECOMMENDED)**
 ```bash
 # Verify complete field extraction with one faculty
-python3 pubmed_faculty_searcher.py data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv --max 1 --delay 1
+python pubmed_faculty_searcher.py data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv --max 1 --delay 1
 ```
 
 ### **Production with Complete Data**
 ```bash
 # Process all 281 faculty with enhanced extraction
-python3 pubmed_faculty_searcher.py data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv --delay 3
+python pubmed_faculty_searcher.py data/faculties/CA/ON/CA-ON-002_mcmaster.ca/mcmaster_hei_faculty.csv --delay 3
 ```
 
 ## 📈 **Data Analysis Capabilities - MASSIVELY ENHANCED**
@@ -173,3 +173,33 @@ The enhanced system now provides research-grade data suitable for:
 4. **Integrate with research analytics** tools for advanced insights
 
 **The enhanced data opens up entirely new research analysis possibilities!** 🚀 
+
+## Output Structure
+
+### Publication JSON Files
+Each publication is saved as an individual JSON file containing comprehensive metadata extracted from PubMed XML:
+
+**Location**: `data/publications/pubmed/[pmid].json`
+
+### Faculty Tracking CSVs
+Each faculty member gets a tracking CSV that links them to their publications:
+
+**Location**: `data/faculties/[country]/[province]/[university_code_website]/publications/[faculty_id].csv`
+
+**Important**: The folder naming follows the pattern `university_code_website` (e.g., `CA-ON-002_mcmaster.ca`), where:
+- `university_code`: From the universities CSV (e.g., CA-ON-002) 
+- `website`: From the universities CSV (e.g., mcmaster.ca)
+
+Example path: `data/faculties/CA/ON/CA-ON-002_mcmaster.ca/publications/CA-ON-002-00001.csv`
+
+**CSV Format**:
+```csv
+pmid,current_affiliation
+34567890,TRUE
+34567891,FALSE
+34567892,TRUE
+```
+
+**Affiliation Status**:
+- `TRUE`: Publication found in both author-only AND author+affiliation searches (current institution)
+- `FALSE`: Publication found only in author-only search (likely from previous affiliation) 

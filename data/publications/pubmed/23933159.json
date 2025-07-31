@@ -1,0 +1,143 @@
+{
+  "pmid": "23933159",
+  "uid": "23933159",
+  "title": "Large precursor tolerance database search - a simple approach for estimation of the amount of spectra with precursor mass shifts in proteomic data.",
+  "abstract": "UNLABELLED: Mass measurement and precursor mass assignment are independent processes in proteomic data acquisition. Due to misassignments to C-13 peak, or for other reasons, extensive precursor mass shifts (i.e., deviations of the measured from calculated precursor neutral masses) in LC-MS/MS data obtained with the high-accuracy LTQ-Orbitrap mass spectrometers have been reported in previous studies. Although computational methods for post-acquisition reassignment to monoisotopic mass have been developed to curate the MS/MS spectra prior to database search, a simpler method for estimating the fraction of spectra with precursor mass shift so as to determine whether the data require curation remains desirable. Here, we provide the evidence that an easy approach, which applies a large precursor tolerance (2.1Da or higher) in SEQUEST search against a forward and decoy protein sequence database and then filters the data with PeptideProphet peptide identification probability (p≥0.9), could detect most of the MS/MS spectra containing inaccurate precursor masses. Furthermore, through the implementation of artificial mass shifts on 4000 randomly selected MS/MS spectra, which originally had accurate precursor mass assigned by the mass spectrometers, we demonstrated that the accuracy of the precursor mass has almost negligible influence on the efficacy and fidelity of peptide identification. BIOLOGICAL SIGNIFICANCE: Integral precursor mass shift is a known problem and thus proteomic data should be handled and analyzed properly to avoid losing important protein identification and/or quantification information. A quick and easy approach for estimating the number of MS/MS spectra with inaccurate precursor mass assignments would be helpful for evaluating the performance of the instrument, determining whether the data requires curation prior to database search or should be searched with specific search parameter(s). Here we demonstrated most of the MS/MS spectra with inaccurate mass assignments (integral or non-integral changes) that could be easily identified by database search with large precursor tolerance windows.",
+  "authors": [
+    {
+      "last_name": "Weng",
+      "fore_name": "Rueyhung Roc",
+      "initials": "RR",
+      "name": "Rueyhung Roc Weng",
+      "affiliations": [
+        "Institute of Biotechnology in Medicine, National Yang Ming University, Taipei, Taiwan, ROC."
+      ]
+    },
+    {
+      "last_name": "Chu",
+      "fore_name": "Lichieh Julie",
+      "initials": "LJ",
+      "name": "Lichieh Julie Chu",
+      "affiliations": []
+    },
+    {
+      "last_name": "Shu",
+      "fore_name": "Hung-Wei",
+      "initials": "HW",
+      "name": "Hung-Wei Shu",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wu",
+      "fore_name": "Timothy H",
+      "initials": "TH",
+      "name": "Timothy H Wu",
+      "affiliations": []
+    },
+    {
+      "last_name": "Chen",
+      "fore_name": "Mengchieh Claire",
+      "initials": "MC",
+      "name": "Mengchieh Claire Chen",
+      "affiliations": []
+    },
+    {
+      "last_name": "Chang",
+      "fore_name": "Yuwei",
+      "initials": "Y",
+      "name": "Yuwei Chang",
+      "affiliations": []
+    },
+    {
+      "last_name": "Tsai",
+      "fore_name": "Yihsuan Shannon",
+      "initials": "YS",
+      "name": "Yihsuan Shannon Tsai",
+      "affiliations": []
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael C",
+      "initials": "MC",
+      "name": "Michael C Wilson",
+      "affiliations": []
+    },
+    {
+      "last_name": "Tsay",
+      "fore_name": "Yeou-Guang",
+      "initials": "YG",
+      "name": "Yeou-Guang Tsay",
+      "affiliations": []
+    },
+    {
+      "last_name": "Goodlett",
+      "fore_name": "David R",
+      "initials": "DR",
+      "name": "David R Goodlett",
+      "affiliations": []
+    },
+    {
+      "last_name": "Ng",
+      "fore_name": "Wailap Victor",
+      "initials": "WV",
+      "name": "Wailap Victor Ng",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Journal of proteomics",
+    "iso_abbreviation": "J Proteomics",
+    "issn": "1876-7737",
+    "issn_type": "Electronic",
+    "volume": "91",
+    "pub_year": "2013",
+    "pub_month": "Oct",
+    "pub_day": "08"
+  },
+  "start_page": "375",
+  "end_page": "384",
+  "pages": "375-84",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Bacterial Proteins",
+    "Carbon Isotopes",
+    "Cell Line, Tumor",
+    "Databases, Protein",
+    "Expressed Sequence Tags",
+    "Halobacterium salinarum",
+    "Humans",
+    "Peptides",
+    "Probability",
+    "Proteome",
+    "Proteomics",
+    "Reproducibility of Results",
+    "Software",
+    "Tandem Mass Spectrometry"
+  ],
+  "article_ids": {
+    "pubmed": "23933159",
+    "doi": "10.1016/j.jprot.2013.07.030",
+    "pii": "S1874-3919(13)00435-1"
+  },
+  "doi": "10.1016/j.jprot.2013.07.030",
+  "dates": {
+    "completed": "2014-10-12",
+    "revised": "2022-03-09"
+  },
+  "chemicals": [
+    "Bacterial Proteins",
+    "Carbon Isotopes",
+    "Peptides",
+    "Proteome"
+  ],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.267254",
+    "pmid": "23933159"
+  }
+}

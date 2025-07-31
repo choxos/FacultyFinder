@@ -1,0 +1,240 @@
+{
+  "openalex_id": "W2890052694",
+  "doi": "https://doi.org/10.15252/msb.20178102",
+  "title": "Synthetic circuits reveal how mechanisms of gene regulatory networks constrain evolution",
+  "abstract": "Article10 September 2018Open Access Transparent process Synthetic circuits reveal how mechanisms of gene regulatory networks constrain evolution Yolanda Schaerli Corresponding Author Yolanda Schaerli [email protected] orcid.org/0000-0002-9083-7343 Department of Fundamental Microbiology, University of Lausanne, Lausanne, Switzerland Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland Search for more papers by this author Alba Jiménez Alba Jiménez Systems Biology Program, Centre for Genomic Regulation (CRG), Universitat Pompeu Fabra, Barcelona, Spain Search for more papers by this author José M Duarte José M Duarte Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland Search for more papers by this author Ljiljana Mihajlovic Ljiljana Mihajlovic Department of Fundamental Microbiology, University of Lausanne, Lausanne, Switzerland Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland Search for more papers by this author Julien Renggli Julien Renggli Independent Researcher, St-Sulpice, Switzerland Search for more papers by this author Mark Isalan Mark Isalan Department of Life Sciences, Imperial College London, London, UK Imperial College Centre for Synthetic Biology, Imperial College London, London, UK Search for more papers by this author James Sharpe James Sharpe Systems Biology Program, Centre for Genomic Regulation (CRG), Universitat Pompeu Fabra, Barcelona, Spain Institucio Catalana de Recerca i Estudis Avancats (ICREA), Barcelona, Spain EMBL Barcelona, European Molecular Biology Laboratory, Barcelona, Spain Search for more papers by this author Andreas Wagner Corresponding Author Andreas Wagner [email protected] orcid.org/0000-0003-4299-3840 Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland The Swiss Institute of Bioinformatics, Lausanne, Switzerland The Santa Fe Institute, Santa Fe, NM, USA Search for more papers by this author Yolanda Schaerli Corresponding Author Yolanda Schaerli [email protected] orcid.org/0000-0002-9083-7343 Department of Fundamental Microbiology, University of Lausanne, Lausanne, Switzerland Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland Search for more papers by this author Alba Jiménez Alba Jiménez Systems Biology Program, Centre for Genomic Regulation (CRG), Universitat Pompeu Fabra, Barcelona, Spain Search for more papers by this author José M Duarte José M Duarte Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland Search for more papers by this author Ljiljana Mihajlovic Ljiljana Mihajlovic Department of Fundamental Microbiology, University of Lausanne, Lausanne, Switzerland Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland Search for more papers by this author Julien Renggli Julien Renggli Independent Researcher, St-Sulpice, Switzerland Search for more papers by this author Mark Isalan Mark Isalan Department of Life Sciences, Imperial College London, London, UK Imperial College Centre for Synthetic Biology, Imperial College London, London, UK Search for more papers by this author James Sharpe James Sharpe Systems Biology Program, Centre for Genomic Regulation (CRG), Universitat Pompeu Fabra, Barcelona, Spain Institucio Catalana de Recerca i Estudis Avancats (ICREA), Barcelona, Spain EMBL Barcelona, European Molecular Biology Laboratory, Barcelona, Spain Search for more papers by this author Andreas Wagner Corresponding Author Andreas Wagner [email protected] orcid.org/0000-0003-4299-3840 Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland The Swiss Institute of Bioinformatics, Lausanne, Switzerland The Santa Fe Institute, Santa Fe, NM, USA Search for more papers by this author Author Information Yolanda Schaerli *,1,2, Alba Jiménez3, José M Duarte2, Ljiljana Mihajlovic1,2, Julien Renggli4, Mark Isalan5,6, James Sharpe3,7,8 and Andreas Wagner *,2,9,10 1Department of Fundamental Microbiology, University of Lausanne, Lausanne, Switzerland 2Department of Evolutionary Biology and Environmental Studies, University of Zurich, Zürich, Switzerland 3Systems Biology Program, Centre for Genomic Regulation (CRG), Universitat Pompeu Fabra, Barcelona, Spain 4Independent Researcher, St-Sulpice, Switzerland 5Department of Life Sciences, Imperial College London, London, UK 6Imperial College Centre for Synthetic Biology, Imperial College London, London, UK 7Institucio Catalana de Recerca i Estudis Avancats (ICREA), Barcelona, Spain 8EMBL Barcelona, European Molecular Biology Laboratory, Barcelona, Spain 9The Swiss Institute of Bioinformatics, Lausanne, Switzerland 10The Santa Fe Institute, Santa Fe, NM, USA *Corresponding author. Tel: +41 (0) 21 692 56 02; E-mail: [email protected] *Corresponding author. Tel: +41 (0) 44 635 61 41; E-mail: [email protected] Molecular Systems Biology (2018)14:e8102https://doi.org/10.15252/msb.20178102 PDFDownload PDF of article text and main figures. Peer ReviewDownload a summary of the editorial decision process including editorial decision letters, reviewer comments and author responses to feedback. ToolsAdd to favoritesDownload CitationsTrack CitationsPermissions ShareFacebookTwitterLinked InMendeleyWechatReddit Figures & Info Abstract Phenotypic variation is the raw material of adaptive Darwinian evolution. The phenotypic variation found in organismal development is biased towards certain phenotypes, but the molecular mechanisms behind such biases are still poorly understood. Gene regulatory networks have been proposed as one cause of constrained phenotypic variation. However, most pertinent evidence is theoretical rather than experimental. Here, we study evolutionary biases in two synthetic gene regulatory circuits expressed in Escherichia coli that produce a gene expression stripe—a pivotal pattern in embryonic development. The two parental circuits produce the same phenotype, but create it through different regulatory mechanisms. We show that mutations cause distinct novel phenotypes in the two networks and use a combination of experimental measurements, mathematical modelling and DNA sequencing to understand why mutations bring forth only some but not other novel gene expression phenotypes. Our results reveal that the regulatory mechanisms of networks restrict the possible phenotypic variation upon mutation. Consequently, seemingly equivalent networks can indeed be distinct in how they constrain the outcome of further evolution. Synopsis Analyses in synthetic circuits show that mutations result in distinct novel phenotypes in two circuits that showed the same phenotype before mutation. This constrained phenotypic variation is caused by differences in the circuits' regulatory mechanisms. Two synthetic circuits expressed in E. coli that produce the same phenotype, but through different regulatory mechanisms, are used to study the molecular mechanisms underlying constrained phenotypic variation during evolution. The two networks create different spectra of novel phenotypes after mutation. A combination of experimental measurements, mathematical modeling and DNA sequencing shows that the regulatory mechanisms restrict the phenotypic variation that becomes accessible upon mutation. Introduction The ability of biological systems to bring forth novel and beneficial phenotypes as a consequence of genetic mutations is essential for evolutionary adaptation and innovation. This ability is encapsulated in the concept of evolvability (Kirschner & Gerhart, 1998; Wagner, 2005b). Evolvability can be limited by evolutionary constraints, which are biases or limitations in the production of novel phenotypes (Smith et al, 1985). An example of such constraints comes from laboratory selection experiments with butterfly populations for enhanced wing eyespot colours (Allen et al, 2008). Selection was able to increase the amount of black or gold colouring in the two eyespots simultaneously, but was unable to do so for the two different colours independently in the two eyespots. Constrained variation can have multiple genetic and developmental causes that can be difficult to disentangle in a complex developing organism (Arnold, 1992; Wagner, 2011). Therefore, few experimental demonstrations of evolutionary constraints exist. What is more, 30 years after this concept rose to prominence (Smith et al, 1985), we still do not understand the mechanistic causes of evolutionary constraints. The instructions for an organism's development are encoded in gene regulatory networks (GRNs)—networks of interacting transcription factors that control gene expression in both time and space (Davidson, 2006). Mutations in the cis-regulatory regions of GRNs play an important part in evolutionary adaptation and innovation (Prud'homme et al, 2007; Wray, 2007; Payne & Wagner, 2014). Examples include the evolution of the vertebrate spine (Guerreiro et al, 2013), of wing pigmentation in butterflies (Beldade & Brakefield, 2002) and of hindwing reduction in flies (Carroll et al, 2001). GRNs are thus primary candidates for systems that might lead to the production of constrained variation (Gompel & Carroll, 2003; Sorrells et al, 2015). However, no experimental work exists to find out whether GRNs might constrain novel gene expression phenotypes, and what the mechanistic causes of such constraints might be. These questions require us to study the relationship between genotypic and phenotypic changes in GRNs. Computational models of gene regulation provide one avenue to understand such genotype–phenotype maps (MacCarthy et al, 2003; Wagner, 2005a; Ma et al, 2006; Ciliberti et al, 2007a,b; Francois et al, 2007; Cotterell & Sharpe, 2010; Francois, 2014; Payne & Wagner, 2015). Such models predict that GRNs with different topologies—qualitatively different patterns of interaction between a GRN's genes—can achieve the same gene expression phenotypes, while they differ in their ability to bring forth novel phenotypes through DNA mutations (MacCarthy et al, 2003; Ciliberti et al, 2007a,b; Francois et al, 2007; Jimenez et al, 2015; Payne & Wagner, 2015). However, experimental validation of the latter prediction is still lacking. To help fill the gaps in experimental evidence, we here use the toolbox of synthetic biology. It allows us to create novel GRNs by assembling well-characterised parts. We are therefore no longer limited to studying GRNs in situ, that is, in one or few well-studied organisms where influences of genetic background or environment may be difficult to control. Instead, we can construct and modify synthetic GRNs to understand the properties and potential of GRNs to create novel phenotypes (Wall et al, 2004; Mukherji & van Oudenaarden, 2009; Lim et al, 2013; Wang et al, 2016; Bodi et al, 2017; Davies, 2017). We previously built multiple 3-gene synthetic networks that display the same gene expression phenotype, but create this phenotype through different regulatory mechanisms (Schaerli et al, 2014), where different regulatory dynamics and regulatory interactions among network genes result in different spatiotemporal gene expression profiles (Cotterell & Sharpe, 2010; Schaerli et al, 2014; Jimenez et al, 2015). The final phenotype is a \"stripe\" of gene expression (low–high–low) along a spatial axis in response to a chemical concentration gradient that is analogous to a morphogen gradient in development. A GRN's ability to \"interpret\" a gradient by producing such stripes is crucial in the development of many organisms and body structures, such as axial patterning of the Drosophila embryo and vertebrate neural tube differentiation (Stanojevic et al, 1991; Wolpert, 1996; Lander, 2007; Rogers & Schier, 2011; Sagner & Briscoe, 2017). The question of which regulatory mechanisms can produce stripes is therefore itself crucial for developmental genetics (Francois et al, 2007; Cotterell & Sharpe, 2010). Here, we go beyond this question to ask whether different GRNs that have the same phenotype (a \"stripe\" of gene expression) can produce different novel (i.e. \"non-stripe\") gene expression phenotypes in response to mutations, and if so, why. Specifically, we use here two synthetic circuits that employ different regulatory mechanisms to produce a striped gene expression pattern. Both of these circuits are hosted by Escherichia coli bacteria. When these bacteria are grown as a lawn in the presence of a concentration gradient of the morphogen analogue, they display a spatially striped gene expression pattern (Fig 1C). We introduced random mutations into the regulatory regions of these circuits and analysed the resulting phenotypes. The two circuits indeed produce a different spectrum of novel gene expression phenotypes. That is, the gene expression variation they produce is constrained. To identify the mechanistic causes of these constraints, we combined experimental DNA sequence and phenotypic data with a mathematical model of gene expression dynamics. Figure 1. Topologies, synthetic implementations and expression profiles of the networks studied Topologies of the networks using the opposing gradients (left) and concurring gradients (right) mechanisms. Arrow: activation; small horizontal arrow: constitutive promoter; bar: repression; red: morphogen input receiver gene; blue: intermediate loop gene; green: stripe output gene. Synthetic implementations of the circuits (Schaerli et al, 2014). Open rectangle: open reading frame; filled rectangle: operator; bent arrow: promoter. All genes carry a degradation tag [LVA (Andersen et al, 1998) or UmuD (Gonzalez et al, 1998)]. Indicated variants of T7 promoter, SP6 promoter and LacO were used (Schaerli et al, 2014). J23114 and J23100 are constitutive promoters (http://partsregistry.org/Promoters/Catalog/Anderson). Rectangles: Schematic drawings of spatiotemporal course of gene expression (colour-coded) as in (A) for the two networks (see Box 1). The expression level of the \"green\" gene is the phenotypic \"output\" of the network. Corresponding simulations (Code EV1) are shown in Appendix Fig S7. Circles: bacterial lawns display green fluorescent rings as a function of radial arabinose gradients from central paper discs (white). Images were taken 6 h after addition of arabinose. Figure adapted from Schaerli et al (2014). Download figure Download PowerPoint Results Two networks with distinct regulatory mechanisms differ in their mutant phenotype distributions Figure 1 shows the topologies (Fig 1A) and the molecular implementations (Fig 1B) of our two starting networks, which we had constructed and characterised previously (Schaerli et al, 2014). Briefly, their regulatory input is the sugar arabinose, which serves as a molecular analogue of a developmental morphogen. The arabinose is sensed by the arabinose-responsive promoter pBAD that acts in a concentration-dependent manner. The observable network output is fluorescence, which is produced by superfolder green fluorescent protein (GFP; Pedelacq et al, 2006). Positive regulatory interactions are encoded by T7 and SP6 phage RNA polymerases (RNAPs), which start transcription at T7 or SP6 promoters, respectively. Negative interactions are encoded by the transcriptional repressors LacI (lactose operon repressor protein) and TetR (tetracycline repressor). They inhibit transcription when bound to their operator sites (LacO, TetO), which are placed downstream of promoters. The two networks employ distinct mechanisms to produce a gene expression stripe pattern (Cotterell & Sharpe, 2010; Schaerli et al, 2014; Jimenez et al, 2015). We call these mechanisms the \"opposing gradients\" and the \"concurring gradients\" mechanisms. They essentially correspond to the well-studied type 2 and type 3 incoherent feedforward motifs (FFM; Mangan & Alon, 2003; see Box 1 for explanations). Figure 1C schematically shows the temporal expression profiles of the three genes and their steady-state profiles (last panel) of the three genes (colour-coded as in Fig 1A) under varying arabinose concentrations, as previously determined experimentally (Schaerli et al, 2014). Whereas the opposing gradients mechanism is known to be involved in Drosophila melanogaster anterior–posterior patterning (hunchback, knirps, krüppel; Jaeger, 2011), to the best of our knowledge the concurring gradients mechanism has so far not been observed in a natural stripe-forming regulatory network. However, previous studies added this network to the repertoire of possible stripe-forming mechanisms (Rodrigo & Elena, 2011; Munteanu et al, 2014; Schaerli et al, 2014). Box 1. Two starting circuits producing stripes through two different mechanisms Opposing gradients mechanism (Incoherent FFM type 2): The \"red\" gene [with the open reading frames (ORFs) for LacI and TetR encoded on the same transcript] is activated by the \"morphogen\" arabinose (vertical arrow). Its products thus form a gradient of increasing concentration with increasing arabinose concentration. The \"blue\" gene (LacI) and the \"green\" gene (GFP) are expressed from constitutive promoters. However, the \"blue\" gene is also repressed by the \"red\" gene product (TetR). Thus, the \"blue\" gene product forms an opposing gradient with respect to the gradient of the \"red\" gene product. Both the \"blue\" (LacI) and \"red\" (LacI) gene products repress the \"green\" gene. The GFP thus reaches a high expression only at medium morphogen concentration where the repression from the \"red\" and \"blue\" genes is low. Concurring gradients mechanism (Incoherent FFM type 3): The \"red\" gene (with the ORFs for SP6 RNA polymerase (RNAP) and LacI encoded on the same transcript) is activated by the \"morphogen\" arabinose, just as in the previous circuit. Its expression thus also mimics the arabinose gradient. However, in this circuit the \"red\" gene product SP6 RNAP activates the \"blue\" gene, which thus forms a concurring gradient with respect to the gradient of the \"red\" gene product. The \"green\" gene is activated by the \"blue\" gene (T7 RNAP) and repressed by LacI of the \"red\" gene. Its maximum expression occurs at medium arabinose concentration where there is already activation from the \"blue\" gene, but not yet a high level of repression of the \"red\" gene. We introduced mutations into the regulatory regions of these two networks by replacing the wild-type regulatory sequence with semi-randomised weighted oligonucleotides (Isalan, 2006). Resulting average mutation rates per regulatory regions ranged from 2.6 to 3.5 mutations (mainly point mutations and < 5% of insertions and deletions) per regulatory region with individual mutants carrying 1–9 mutations (Dataset EV1, Appendix Table S4). For each of our two networks, we first generated three libraries of mutant networks in which mutations were restricted to regulatory regions of the \"red\", \"blue\" or \"green\" gene (Fig 1). After plating cells from a population whose members harboured a synthetic network variant, we randomly picked colonies, grew them in liquid culture and measured their GFP expression at low (0%), middle (0.0002%) and high (0.2%) arabinose concentrations (Appendix Fig S1, Dataset EV2). We classified the observed fluorescence phenotypes into six categories (Fig 2A; see Materials and Methods for exact definitions): \"stripe\", \"increase\", \"decrease\", \"flat\" and \"broken\" (all expression values below a threshold) and \"other\" (phenotypes that do not fall in any of the previous categories). Figure 2. Different networks create different spectra of novel phenotypes after mutation Phenotype categories used in this study. See Materials and Methods for exact definitions. [ara], arabinose concentration. The colours of the axes are used throughout the paper to colour-code the phenotypes. Experimentally observed phenotype distributions when mutating one regulatory region at a time for the opposing (left) and concurring (right) gradients networks. The pie charts summarise the spectrum of all mutant phenotypes observed in a network. The data are based on 234 and 215 mutants of the opposing and concurring gradients networks, respectively. The GFP expression level (fluorescence normalised by the absorbance) of each individual mutant at medium arabinose concentration is compared to the GFP expression levels at low (x-axis) and high arabinose (y-axis) concentrations. The numbers written close to each phenotype group are the average mutation rates for that group. We omitted the \"broken\" phenotype from this analysis, as the networks with this phenotype do not show any significant GFP expression. Experimentally observed phenotype distributions as displayed in (B and C), grouped according to the mutated gene. Download figure Download PowerPoint Figure 2B summarises the spectrum of phenotypes we observed after mutagenesis. We first note that both networks are to some extent robust to mutations; that is, a considerable fraction of mutations do not change the \"stripe\" phenotype (black sectors in Fig 2B). What is more, the two types of networks we study differ in their robustness. Averaged across the three genes, 45.5% of analysed mutants preserve the \"stripe\" phenotype in the concurring gradients network, whereas only 32.9% do so in the opposing gradients network. The concurring gradients network is thus significantly more robust to mutations [Chi-square goodness-of-fit test, χ2 (1, N = 215) = 13.67, P = 0.0002]. Next, we note that within any one of the two networks the novel phenotypes do not occur at the same frequency, providing evidence for the biased production of novel phenotypes, where certain types of phenotypes are more common than others. We also observed differences in the types of novel phenotypes between the two networks. For example, 8.2% of mutants of the opposing gradients networks show a \"flat\" GFP expression phenotype, where the GFP expression is invariant to arabinose concentrations (yellow sector in Fig 2B). In contrast, mutations in the concurring gradients network did not produce a single such phenotype. In addition, mutations in the opposing gradients network are more likely to create a \"decrease\" phenotype (purple, 29.8% of all novel phenotypes) rather than an \"increase\" phenotype (orange, 15.4%). For the concurring gradients network, the opposite is true: mutations are more likely to create \"increase\" (23.0%) rather than \"decrease\" (18.1%) phenotypes. Next, we analysed the GFP expression levels of the measured phenotypes quantitatively (Fig 2C). To this end, we compared the GFP expression at medium arabinose concentration to those at high (y-axis) and at low arabinose concentrations (x-axis). We note that the previously classified phenotypes (Fig 2A) form well-separated clusters in this analysis. For example, networks in the bottom-right quadrant correspond to \"stripe\" phenotypes, because their pattern is described as an increase (positive x-axis) followed by a decrease (negative y-axis) in expression. Consequently, \"decrease\" and \"increase\" phenotypes occupy the upper-right and bottom-left quadrants, respectively. We also sequenced the mutated regulatory regions of all analysed networks and find a weak association between the number of mutations a network carries, and the extent to which its observed phenotype differs from the starting \"stripe\" phenotype (as quantified through the Euclidean distance; Appendix Fig S2). Subsequently, we analysed the differences in novel phenotypes created by mutations in specific regulatory regions (i.e. of the \"red\", \"blue\" or \"green\" gene). Within any one of the two network types, regulatory mutations in the \"red\" gene most often create \"increase\" phenotypes (Fig 2D, pie charts left to the \"red\" genes), whereas those in the \"blue\" gene most often create \"decrease\" phenotypes (Fig 2D, pie charts at the bottom of the \"blue\" genes), and those in the \"green\" gene preferably create \"broken\" phenotypes (Fig 2D, pie charts to the right of the \"green\" genes). As a consequence, not all phenotypes can be reached by introducing mutations in the regulatory region of any of the three genes. For example, in the opposing gradient network, the \"increase\" phenotype is only reachable by introducing mutations into the \"red\" gene, but not in the \"blue\" and \"green\" genes. The two networks differ in the spectrum of novel phenotypes that mutations in individual genes create, which is especially obvious for mutations in the \"green\" gene: unless regulatory mutations in this gene lead to a complete loss of expression (\"broken\"), the opposing gradients network is > 5 times more likely to create a \"flat\" phenotype (23.2%) than a \"decrease\" phenotype (4.1%). In contrast, the concurrent gradients network does not produce any \"flat\" phenotype at all, but readily produces \"increase\" phenotypes (4.5%). In sum, mutations in networks which start with the same phenotype (single \"stripe\" formation), but which have alternative topologies and regulatory mechanisms, create different kinds of novel phenotypes. Hence, phenotypic variation is subject to constraints, and these constraints differ between regulatory regions and networks. Differences in constrained variation can be explained by differences in the regulatory mechanisms behind stripe formation We next asked whether the regulatory mechanisms contributing to stripe formation can help explain these phenotypic constraints. In doing so, we focused on novel phenotypes produced by regulatory mutations in the \"green\" gene, because such mutations produced the most distinct spectrum of novel phenotypes (Fig 2D). Also, the regulation of this gene is most complex, because it receives two regulatory inputs instead of just one for the other genes (Fig 1). (Similar analyses for the \"red\" and \"blue\" genes can be found in Appendix Figs S3–S5.) To address this question, we first used a mathematical model that we had developed previously and validated experimentally to describe the regulatory dynamics of our networks (Schaerli et al, 2014). Briefly, the model uses Hill-like functions to represent gene regulation changes based on equilibrium binding of transcription factors to their DNA binding sites (Bintu et al, 2005; see Table 1, and Appendix Model Description and Appendix Tables S1 and S2 for details). The unmutated (\"wild-type\") model for each circuit used parameter values determined in our previous study (Schaerli et al, 2014). Into these models, we now introduced quantitative changes in the parameters relating to the promoter activity (binding constants of activators and transcription rates) and to the operator activity (binding constants of repressors), in order to predict phenotypes that are accessible by mutations (see Materials and Methods for details). We represent the unmutated network as a point in parameter space, and study regions near this point that are accessible by mutations, and the novel phenotypes they contain (Dichtel-Danjoy & Felix, 2004). For each parameter we varied, we chose to examine a uniform distribution in a range between zero and 110% of the starting/wild-type parameter values, because available mutagenesis data for the components used in the \"green\" genes of our synthetic circuits (Niland et al, 1996; Imburgio et al, 2000; Shin et al, 2000) suggest that most mutations decrease a parameter value rather than increasing it. Table 1. Model (Schaerli et al, 2014) and biological meaning of parameters for the \"green\" genes of the opposing and concurring gradients networks, respectively Definition Name Parameter relates to Opposing gradients a Basal transcription rates from the free promoter b Transcription rate when LacI is bound c Binding constant of LacI n Hill coefficient (multimerisation or cooperativity) Concurring gradients a Basal transcription rate in absence of T7 RNAP b Transcription rate when T7 RNAP is bound c Binding constant of T7 RNAP d Binding constant of LacI e Transcription rate when T7 RNAP + LacI are bound f Cooperativity/competition constant of T7 RNAP/LacI n Hill coefficient (multimerisation or cooperativity) m Hill coefficient (multimerisation or cooperativity) The complete model for both networks can be found in the Appendix Tables S1 and S2. We visualise the results in phenotype diagrams (Fig 3A and Appendix Fig S2), which are projections of the higher-dimensional parameter space onto two dimensions (Jimenez et al, 2015). These diagrams are built as pixelated images in which for each combination of parameter values (for each \"pixel\") the model predicts the resulting phenotype and assigns the corresponding colour (see legend, Fig 3A). In these diagrams, a parameter value of 100% corresponds to the wild-type value and other values in this region are expressed as a percentage of the wild-type. For example, the black region in Fig 3 corresponds to mutant parameter combinations that maintain the \"stripe\" phenotype. Its area is therefore a measure for a network's robustness to parameter changes. Overall, these diagrams provide information on which parameters must be mutated, and by how much, in order to access a given phenotype. Figure 3. The same parameter change leads to different phenotypes in the two network types Phenotype diagrams for parameters that describe the activity of the \"green\" gene. Horizontal and vertical axes indicate promoter and operator activities of the \"green\" gene relative to the wild-type value (WT, 100%). All parameters affecting the promoter or operator were varied jointly and to the same extent. Colours indicate phenotypes predicte",
+  "authors": [
+    {
+      "display_name": "Yolanda Schaerli",
+      "id": "A5028014828",
+      "orcid": "https://orcid.org/0000-0002-9083-7343",
+      "institutions": [
+        {
+          "id": "I97565354",
+          "display_name": "University of Lausanne",
+          "country_code": "CH",
+          "type": "funder"
+        },
+        {
+          "id": "I202697423",
+          "display_name": "University of Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yolanda Schaerli"
+    },
+    {
+      "display_name": "Alba Jiménez",
+      "id": "A5102003262",
+      "orcid": "https://orcid.org/0000-0002-9014-5857",
+      "institutions": [
+        {
+          "id": "I170486558",
+          "display_name": "Universitat Pompeu Fabra",
+          "country_code": "ES",
+          "type": "funder"
+        },
+        {
+          "id": "I4210137962",
+          "display_name": "Centre for Genomic Regulation",
+          "country_code": "ES",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Alba Jiménez"
+    },
+    {
+      "display_name": "José M. Duarte",
+      "id": "A5003460293",
+      "orcid": "https://orcid.org/0000-0002-9544-5621",
+      "institutions": [
+        {
+          "id": "I202697423",
+          "display_name": "University of Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "José M Duarte"
+    },
+    {
+      "display_name": "Ljiljana Mihajlovic",
+      "id": "A5031049461",
+      "orcid": "https://orcid.org/0009-0007-5921-9831",
+      "institutions": [
+        {
+          "id": "I202697423",
+          "display_name": "University of Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        },
+        {
+          "id": "I97565354",
+          "display_name": "University of Lausanne",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ljiljana Mihajlovic"
+    },
+    {
+      "display_name": "Julien Renggli",
+      "id": "A5015606365",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Julien Renggli"
+    },
+    {
+      "display_name": "Mark Isalan",
+      "id": "A5047211034",
+      "orcid": "https://orcid.org/0000-0002-4652-0365",
+      "institutions": [
+        {
+          "id": "I47508984",
+          "display_name": "Imperial College London",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mark Isalan"
+    },
+    {
+      "display_name": "James Sharpe",
+      "id": "A5075973380",
+      "orcid": "https://orcid.org/0000-0002-1434-9743",
+      "institutions": [
+        {
+          "id": "I170486558",
+          "display_name": "Universitat Pompeu Fabra",
+          "country_code": "ES",
+          "type": "funder"
+        },
+        {
+          "id": "I4210137962",
+          "display_name": "Centre for Genomic Regulation",
+          "country_code": "ES",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I11932220",
+          "display_name": "Institució Catalana de Recerca i Estudis Avançats",
+          "country_code": "ES",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210097140",
+          "display_name": "European Molecular Biology Laboratory",
+          "country_code": "ES",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James Sharpe"
+    },
+    {
+      "display_name": "Andreas Wagner",
+      "id": "A5079730045",
+      "orcid": "https://orcid.org/0000-0003-4299-3840",
+      "institutions": [
+        {
+          "id": "I202697423",
+          "display_name": "University of Zurich",
+          "country_code": "CH",
+          "type": "funder"
+        },
+        {
+          "id": "I12708293",
+          "display_name": "SIB Swiss Institute of Bioinformatics",
+          "country_code": "CH",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I1308548392",
+          "display_name": "Santa Fe Institute",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andreas Wagner"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-09-01",
+  "type": "article",
+  "cited_by_count": 66,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S200893805",
+    "display_name": "Molecular Systems Biology",
+    "issn_l": "1744-4292",
+    "issn": [
+      "1744-4292"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319965"
+  },
+  "volume": "14",
+  "issue": "9",
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://doi.org/10.15252/msb.20178102",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C161191863",
+      "display_name": "Library science",
+      "level": 1,
+      "score": 0.50308913
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.4650655
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.17695531
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10621",
+      "display_name": "Gene Regulatory Network Analysis",
+      "score": 0.9999
+    },
+    {
+      "id": "T10878",
+      "display_name": "CRISPR and Genetic Engineering",
+      "score": 0.9989
+    },
+    {
+      "id": "T11764",
+      "display_name": "Evolution and Genetic Dynamics",
+      "score": 0.994
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.15252/msb.20178102",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:36:56.067229",
+  "source_database": "OpenAlex"
+}

@@ -1,0 +1,881 @@
+{
+  "openalex_id": "W2077456416",
+  "doi": "https://doi.org/10.1086/508185",
+  "title": "<i>Spitzer</i>Survey of the Large Magellanic Cloud: Surveying the Agents of a Galaxy?s Evolution (SAGE). I. Overview and Initial Results",
+  "abstract": "We are performing a uniform and unbiased, ~7x7 degrees imaging survey of the Large Magellanic Cloud (LMC), using the IRAC and MIPS instruments on board the Spitzer Space Telescope in order to survey the agents of a galaxy's evolution (SAGE), the interstellar medium (ISM) and stars in the LMC. The detection of diffuse ISM with column densities >1.2x10^21 H cm^-2 permits detailed studies of dust processes in the ISM. SAGE's point source sensitivity enables a complete census of newly formed stars with masses >3 solar masses that will determine the current star formation rate in the LMC. SAGE's detection of evolved stars with mass loss rates >1x10^-8 solar masses per year will quantify the rate at which evolved stars inject mass into the ISM of the LMC. The observing strategy includes two epochs in 2005, separated by three months, that both mitigate instrumental artifacts and constrain source variability. The SAGE data are non-proprietary. The data processing includes IRAC and MIPS pipelines and a database for mining the point source catalogs, which will be released to the community in support of Spitzer proposal cycles 4 and 5. We present initial results on the epoch 1 data with a special focus on the N79 and N83 region. The SAGE epoch 1 point source catalog has ~4 million sources. The point source counts are highest for the IRAC 3.6 microns band and decrease dramatically towards longer wavelengths consistent with the fact that stars dominate the point source catalogs and that the dusty objects, e.g. young stellar objects and dusty evolved stars that detected at the longer wavelengths, are rare in comparison. We outline a strategy for identifying foreground MW stars, that may comprise as much as 18% of the source list, and background galaxies, that may comprise ~12% of the source list.",
+  "authors": [
+    {
+      "display_name": "M. Meixner",
+      "id": "A5026218827",
+      "orcid": "https://orcid.org/0000-0002-0522-3743",
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Margaret Meixner"
+    },
+    {
+      "display_name": "Karl D. Gordon",
+      "id": "A5051018099",
+      "orcid": "https://orcid.org/0000-0001-5340-6774",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karl D. Gordon"
+    },
+    {
+      "display_name": "R. Indebetouw",
+      "id": "A5090925746",
+      "orcid": "https://orcid.org/0000-0002-4663-6827",
+      "institutions": [
+        {
+          "id": "I51556381",
+          "display_name": "University of Virginia",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Remy Indebetouw"
+    },
+    {
+      "display_name": "Joseph L. Hora",
+      "id": "A5026483485",
+      "orcid": "https://orcid.org/0000-0002-5599-4650",
+      "institutions": [
+        {
+          "id": "I4210124175",
+          "display_name": "Center for Astrophysics Harvard & Smithsonian",
+          "country_code": "US",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Joseph L. Hora"
+    },
+    {
+      "display_name": "B. A. Whitney",
+      "id": "A5108706596",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1298453700",
+          "display_name": "Space Science Institute",
+          "country_code": "US",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Barbara Whitney"
+    },
+    {
+      "display_name": "Robert Blum",
+      "id": "A5029744497",
+      "orcid": "https://orcid.org/0000-0002-8622-4237",
+      "institutions": [
+        {
+          "id": "I4210140583",
+          "display_name": "Cerro Tololo Inter-American Observatory",
+          "country_code": "CL",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Blum"
+    },
+    {
+      "display_name": "W. T. Reach",
+      "id": "A5020264369",
+      "orcid": "https://orcid.org/0000-0001-8362-4094",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William Reach"
+    },
+    {
+      "display_name": "Jean‐Philippe Bernard",
+      "id": "A5107392279",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2799535048",
+          "display_name": "Centre National d'Études Spatiales",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jean‐Philippe Bernard"
+    },
+    {
+      "display_name": "M. R. Meade",
+      "id": "A5109973787",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Marilyn Meade"
+    },
+    {
+      "display_name": "B. Babler",
+      "id": "A5079197777",
+      "orcid": "https://orcid.org/0000-0002-6984-5752",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Brian Babler"
+    },
+    {
+      "display_name": "C. W. Engelbracht",
+      "id": "A5024680064",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Charles W. Engelbracht"
+    },
+    {
+      "display_name": "Bi‐Qing For",
+      "id": "A5043688429",
+      "orcid": "https://orcid.org/0000-0002-0196-5248",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bi‐Qing For"
+    },
+    {
+      "display_name": "K. A. Misselt",
+      "id": "A5089400895",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Karl Misselt"
+    },
+    {
+      "display_name": "U. Vijh",
+      "id": "A5088069195",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Uma Vijh"
+    },
+    {
+      "display_name": "Claus Leitherer",
+      "id": "A5042936481",
+      "orcid": "https://orcid.org/0000-0003-2685-4488",
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Claus Leitherer"
+    },
+    {
+      "display_name": "Martin Cohen",
+      "id": "A5113500393",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin Cohen"
+    },
+    {
+      "display_name": "E. Churchwell",
+      "id": "A5048119858",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ed B. Churchwell"
+    },
+    {
+      "display_name": "F. Boulanger",
+      "id": "A5020141845",
+      "orcid": "https://orcid.org/0000-0003-1097-6042",
+      "institutions": [
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I2801766991",
+          "display_name": "Institut d'Astrophysique de Paris",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Francois Boulanger"
+    },
+    {
+      "display_name": "J. A. Frogel",
+      "id": "A5084311092",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1313867356",
+          "display_name": "Association of Universities For Research In Astronomy",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jay A. Frogel"
+    },
+    {
+      "display_name": "Y. Fukui",
+      "id": "A5070168437",
+      "orcid": "https://orcid.org/0000-0002-8966-9856",
+      "institutions": [
+        {
+          "id": "I60134161",
+          "display_name": "Nagoya University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yasuo Fukui"
+    },
+    {
+      "display_name": "J. S. Gallagher",
+      "id": "A5051735253",
+      "orcid": "https://orcid.org/0000-0001-8608-0408",
+      "institutions": [
+        {
+          "id": "I135310074",
+          "display_name": "University of Wisconsin–Madison",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jay Gallagher"
+    },
+    {
+      "display_name": "Varoujan Gorjian",
+      "id": "A5036064666",
+      "orcid": "https://orcid.org/0000-0002-8990-2101",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Varoujan Gorjian"
+    },
+    {
+      "display_name": "Jason Harris",
+      "id": "A5070454516",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jason Harris"
+    },
+    {
+      "display_name": "Douglas Kelly",
+      "id": "A5057398831",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Douglas Kelly"
+    },
+    {
+      "display_name": "Akiko Kawamura",
+      "id": "A5009303805",
+      "orcid": "https://orcid.org/0000-0001-7813-0380",
+      "institutions": [
+        {
+          "id": "I60134161",
+          "display_name": "Nagoya University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Akiko Kawamura"
+    },
+    {
+      "display_name": "So Young Kim",
+      "id": "A5100338578",
+      "orcid": "https://orcid.org/0000-0002-7361-4930",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "SoYoung Kim"
+    },
+    {
+      "display_name": "William B. Latter",
+      "id": "A5013773200",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "William B. Latter"
+    },
+    {
+      "display_name": "S. C. Madden",
+      "id": "A5086494315",
+      "orcid": "https://orcid.org/0000-0003-3229-2899",
+      "institutions": [
+        {
+          "id": "I2738703131",
+          "display_name": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Suzanne Madden"
+    },
+    {
+      "display_name": "F. Kemper",
+      "id": "A5007552018",
+      "orcid": "https://orcid.org/0000-0003-2743-8240",
+      "institutions": [
+        {
+          "id": "I51556381",
+          "display_name": "University of Virginia",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ciska Markwick‐Kemper"
+    },
+    {
+      "display_name": "Akira Mizuno",
+      "id": "A5056217295",
+      "orcid": "https://orcid.org/0000-0002-6414-6143",
+      "institutions": [
+        {
+          "id": "I60134161",
+          "display_name": "Nagoya University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Akira Mizuno"
+    },
+    {
+      "display_name": "N. Mizuno",
+      "id": "A5021442515",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I60134161",
+          "display_name": "Nagoya University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Norikazu Mizuno"
+    },
+    {
+      "display_name": "J. R. Mould",
+      "id": "A5003779512",
+      "orcid": "https://orcid.org/0000-0003-3820-1740",
+      "institutions": [
+        {
+          "id": "I2801948628",
+          "display_name": "Kitt Peak National Observatory",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jeremy Mould"
+    },
+    {
+      "display_name": "A. Nota",
+      "id": "A5058940776",
+      "orcid": "https://orcid.org/0009-0007-8087-6975",
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Antonella Nota"
+    },
+    {
+      "display_name": "M. S. Oey",
+      "id": "A5044100968",
+      "orcid": "https://orcid.org/0000-0002-5808-1320",
+      "institutions": [
+        {
+          "id": "I27837315",
+          "display_name": "University of Michigan",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M.S. Oey"
+    },
+    {
+      "display_name": "Knut Olsen",
+      "id": "A5000458293",
+      "orcid": "https://orcid.org/0000-0002-7134-8296",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Knut Olsen"
+    },
+    {
+      "display_name": "Toshikazu Onishi",
+      "id": "A5081197891",
+      "orcid": "https://orcid.org/0000-0001-7826-3837",
+      "institutions": [
+        {
+          "id": "I60134161",
+          "display_name": "Nagoya University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Toshikazu Onishi"
+    },
+    {
+      "display_name": "R. Paladini",
+      "id": "A5024095636",
+      "orcid": "https://orcid.org/0000-0002-5158-243X",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Roberta Paladini"
+    },
+    {
+      "display_name": "N. Panagia",
+      "id": "A5004420981",
+      "orcid": "https://orcid.org/0000-0002-2515-5653",
+      "institutions": [
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nino Panagia"
+    },
+    {
+      "display_name": "Pablo G. Pérez‐González",
+      "id": "A5049563283",
+      "orcid": "https://orcid.org/0000-0003-4528-5639",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Pablo Perez‐Gonzalez"
+    },
+    {
+      "display_name": "Hiroshi Shibai",
+      "id": "A5103507423",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I60134161",
+          "display_name": "Nagoya University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hiroshi Shibai"
+    },
+    {
+      "display_name": "Shuji Sato",
+      "id": "A5105524889",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I60134161",
+          "display_name": "Nagoya University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shuji Sato"
+    },
+    {
+      "display_name": "L. J. Smith",
+      "id": "A5051840211",
+      "orcid": "https://orcid.org/0000-0002-0806-168X",
+      "institutions": [
+        {
+          "id": "I45129253",
+          "display_name": "University College London",
+          "country_code": "GB",
+          "type": "funder"
+        },
+        {
+          "id": "I1297127228",
+          "display_name": "Space Telescope Science Institute",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Linda Smith"
+    },
+    {
+      "display_name": "L. Staveley‐Smith",
+      "id": "A5049123839",
+      "orcid": "https://orcid.org/0000-0002-8057-0294",
+      "institutions": [
+        {
+          "id": "I4210101388",
+          "display_name": "Health Sciences and Nutrition",
+          "country_code": "AU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lister Staveley‐Smith"
+    },
+    {
+      "display_name": "A. G. G. M. Tielens",
+      "id": "A5064747549",
+      "orcid": "https://orcid.org/0000-0003-0306-0028",
+      "institutions": [
+        {
+          "id": "I1280536761",
+          "display_name": "Ames Research Center",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. G. G. M. Tielens"
+    },
+    {
+      "display_name": "Toshiya Ueta",
+      "id": "A5031023643",
+      "orcid": "https://orcid.org/0000-0003-0735-578X",
+      "institutions": [
+        {
+          "id": "I1280536761",
+          "display_name": "Ames Research Center",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I131651094",
+          "display_name": "University of Denver",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Toshiya Ueta"
+    },
+    {
+      "display_name": "Schuyler D. Van Dyk",
+      "id": "A5066585994",
+      "orcid": "https://orcid.org/0000-0001-9038-9950",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Schuyler Van Dyk"
+    },
+    {
+      "display_name": "Kevin Volk",
+      "id": "A5075199609",
+      "orcid": "https://orcid.org/0000-0002-3824-8832",
+      "institutions": [
+        {
+          "id": "I4210100831",
+          "display_name": "Gemini North Observatory",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kevin Volk"
+    },
+    {
+      "display_name": "M. W. Werner",
+      "id": "A5081451517",
+      "orcid": "https://orcid.org/0000-0003-4990-189X",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Werner"
+    },
+    {
+      "display_name": "Dennis Zaritsky",
+      "id": "A5014198619",
+      "orcid": "https://orcid.org/0000-0002-5177-727X",
+      "institutions": [
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dennis Zaritsky"
+    }
+  ],
+  "publication_year": 2006,
+  "publication_date": "2006-01-01",
+  "type": "article",
+  "cited_by_count": 627,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S100695177",
+    "display_name": "The Astronomical Journal",
+    "issn_l": "0004-6256",
+    "issn": [
+      "0004-6256",
+      "1538-3881"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311669"
+  },
+  "volume": "132",
+  "issue": "6",
+  "first_page": "2268",
+  "last_page": "2288",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://iopscience.iop.org/article/10.1086/508185/pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.9223232
+    },
+    {
+      "id": "C98444146",
+      "display_name": "Galaxy",
+      "level": 2,
+      "score": 0.7142603
+    },
+    {
+      "id": "C44870925",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.68621665
+    },
+    {
+      "id": "C1276947",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.6810589
+    },
+    {
+      "id": "C150846664",
+      "display_name": "Stars",
+      "level": 2,
+      "score": 0.6434166
+    },
+    {
+      "id": "C103783831",
+      "display_name": "Point source",
+      "level": 2,
+      "score": 0.5861611
+    },
+    {
+      "id": "C2781010120",
+      "display_name": "Large Magellanic Cloud",
+      "level": 3,
+      "score": 0.52665895
+    },
+    {
+      "id": "C125857072",
+      "display_name": "Star formation",
+      "level": 3,
+      "score": 0.516947
+    },
+    {
+      "id": "C522977591",
+      "display_name": "Spitzer Space Telescope",
+      "level": 3,
+      "score": 0.47092953
+    },
+    {
+      "id": "C196939603",
+      "display_name": "Interstellar medium",
+      "level": 3,
+      "score": 0.42441037
+    },
+    {
+      "id": "C120665830",
+      "display_name": "Optics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10477",
+      "display_name": "Astrophysics and Star Formation Studies",
+      "score": 0.9999
+    },
+    {
+      "id": "T10039",
+      "display_name": "Stellar, planetary, and galactic studies",
+      "score": 0.9999
+    },
+    {
+      "id": "T12917",
+      "display_name": "Astronomy and Astrophysical Research",
+      "score": 0.9997
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1086/508185",
+  "pdf_url": "https://iopscience.iop.org/article/10.1086/508185/pdf",
+  "retrieved_date": "2025-07-30T15:05:44.640798",
+  "source_database": "OpenAlex"
+}

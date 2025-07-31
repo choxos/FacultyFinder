@@ -1,0 +1,248 @@
+{
+  "openalex_id": "W2766362701",
+  "doi": "https://doi.org/10.1021/acs.chemmater.7b03500",
+  "title": "Materials Synthesis Insights from Scientific Literature via Text Extraction and Machine Learning",
+  "abstract": "In the past several years, Materials Genome Initiative (MGI) efforts have produced myriad examples of computationally designed materials in the fields of energy storage, catalysis, thermoelectrics, and hydrogen storage as well as large data resources that are used to screen for potentially transformative compounds. The bottleneck in high-throughput materials design has thus shifted to materials synthesis, which motivates our development of a methodology to automatically compile materials synthesis parameters across tens of thousands of scholarly publications using natural language processing techniques. To demonstrate our framework’s capabilities, we examine the synthesis conditions for various metal oxides across more than 12 thousand manuscripts. We then apply machine learning methods to predict the critical parameters needed to synthesize titania nanotubes via hydrothermal methods and verify this result against known mechanisms. Finally, we demonstrate the capacity for transfer learning by using machine learning models to predict synthesis outcomes on materials systems not included in the training set and thereby outperform heuristic strategies.",
+  "authors": [
+    {
+      "display_name": "Edward Kim",
+      "id": "A5100728163",
+      "orcid": "https://orcid.org/0000-0002-0781-5531",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Edward Kim"
+    },
+    {
+      "display_name": "Kevin Huang",
+      "id": "A5062032121",
+      "orcid": "https://orcid.org/0000-0002-0300-9911",
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kevin Huang"
+    },
+    {
+      "display_name": "Adam M. Saunders",
+      "id": "A5043091646",
+      "orcid": "https://orcid.org/0000-0003-2912-9759",
+      "institutions": [
+        {
+          "id": "I24603500",
+          "display_name": "University of Massachusetts Amherst",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Adam Saunders"
+    },
+    {
+      "display_name": "Andrew McCallum",
+      "id": "A5107835063",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24603500",
+          "display_name": "University of Massachusetts Amherst",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Andrew McCallum"
+    },
+    {
+      "display_name": "Gerbrand Ceder",
+      "id": "A5014983956",
+      "orcid": "https://orcid.org/0000-0001-9275-3605",
+      "institutions": [
+        {
+          "id": "I95457486",
+          "display_name": "University of California, Berkeley",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gerbrand Ceder"
+    },
+    {
+      "display_name": "Elsa Olivetti",
+      "id": "A5073567771",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I63966007",
+          "display_name": "Massachusetts Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Elsa Olivetti"
+    }
+  ],
+  "publication_year": 2017,
+  "publication_date": "2017-10-19",
+  "type": "article",
+  "cited_by_count": 432,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S66104727",
+    "display_name": "Chemistry of Materials",
+    "issn_l": "0897-4756",
+    "issn": [
+      "0897-4756",
+      "1520-5002"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320006"
+  },
+  "volume": "29",
+  "issue": "21",
+  "first_page": "9436",
+  "last_page": "9444",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://escholarship.org/content/qt6qz8b1c6/qt6qz8b1c6.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2780513914",
+      "display_name": "Bottleneck",
+      "level": 2,
+      "score": 0.82723606
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.65436536
+    },
+    {
+      "id": "C70587473",
+      "display_name": "Transformative learning",
+      "level": 2,
+      "score": 0.5485155
+    },
+    {
+      "id": "C169590947",
+      "display_name": "Compiler",
+      "level": 2,
+      "score": 0.51117235
+    },
+    {
+      "id": "C173801870",
+      "display_name": "Heuristic",
+      "level": 2,
+      "score": 0.4404688
+    },
+    {
+      "id": "C157764524",
+      "display_name": "Throughput",
+      "level": 3,
+      "score": 0.41677624
+    },
+    {
+      "id": "C171250308",
+      "display_name": "Nanotechnology",
+      "level": 1,
+      "score": 0.39355618
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.38350692
+    },
+    {
+      "id": "C119857082",
+      "display_name": "Machine learning",
+      "level": 1,
+      "score": 0.34275907
+    },
+    {
+      "id": "C192562407",
+      "display_name": "Materials science",
+      "level": 0,
+      "score": 0.240987
+    },
+    {
+      "id": "C199360897",
+      "display_name": "Programming language",
+      "level": 1,
+      "score": 0.09986982
+    },
+    {
+      "id": "C15744967",
+      "display_name": "Psychology",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C76155785",
+      "display_name": "Telecommunications",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C19417346",
+      "display_name": "Pedagogy",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C149635348",
+      "display_name": "Embedded system",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C555944384",
+      "display_name": "Wireless",
+      "level": 2,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11948",
+      "display_name": "Machine Learning in Materials Science",
+      "score": 1.0
+    },
+    {
+      "id": "T10030",
+      "display_name": "Electrocatalysts for Energy Conversion",
+      "score": 0.9845
+    },
+    {
+      "id": "T10211",
+      "display_name": "Computational Drug Discovery Methods",
+      "score": 0.9565
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1021/acs.chemmater.7b03500",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:12:54.083702",
+  "source_database": "OpenAlex"
+}

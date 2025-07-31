@@ -1,0 +1,122 @@
+{
+  "pmid": "38610364",
+  "uid": "38610364",
+  "title": "Sybil Attacks Detection and Traceability Mechanism Based on Beacon Packets in Connected Automobile Vehicles.",
+  "abstract": "Connected Automobile Vehicles (CAVs) enable cooperative driving and traffic management by sharing traffic information between them and other vehicles and infrastructures. However, malicious vehicles create Sybil vehicles by forging multiple identities and sharing false location information with CAVs, misleading their decisions and behaviors. The existing work on defending against Sybil attacks has almost exclusively focused on detecting Sybil vehicles, ignoring the traceability of malicious vehicles. As a result, they cannot fundamentally alleviate Sybil attacks. In this work, we focus on tracking the attack source of malicious vehicles by using a novel detection mechanism that relies on vehicle broadcast beacon packets. Firstly, the roadside units (RSUs) randomly instruct vehicles to perform customized key broadcasting and listening within communication range. This allows the vehicle to prove its physical presence by broadcasting. Then, RSU analyzes the beacon packets listened to by the vehicle and constructs a neighbor graph between the vehicles based on the customized particular fields in the beacon packets. Finally, the vehicle's credibility is determined by calculating the edge success probability of vehicles in the neighbor graph, ultimately achieving the detection of Sybil vehicles and tracing malicious vehicles. The experimental results demonstrate that our scheme achieves the real-time detection and tracking of Sybil vehicles, with precision and recall rates of 98.53% and 95.93%, respectively, solving the challenge of existing detection schemes failing to combat Sybil attacks from the root.",
+  "authors": [
+    {
+      "last_name": "Zhu",
+      "fore_name": "Yaling",
+      "initials": "Y",
+      "name": "Yaling Zhu",
+      "affiliations": [
+        "The School of Cyberspace Security, Hainan University, Haikou 570208, China."
+      ],
+      "orcid": "0009-0003-2208-2959"
+    },
+    {
+      "last_name": "Zeng",
+      "fore_name": "Jia",
+      "initials": "J",
+      "name": "Jia Zeng",
+      "affiliations": [
+        "The School of Cyberspace Security, Hainan University, Haikou 570208, China."
+      ]
+    },
+    {
+      "last_name": "Weng",
+      "fore_name": "Fangchen",
+      "initials": "F",
+      "name": "Fangchen Weng",
+      "affiliations": [
+        "The School of Cyberspace Security, Hainan University, Haikou 570208, China."
+      ]
+    },
+    {
+      "last_name": "Han",
+      "fore_name": "Dan",
+      "initials": "D",
+      "name": "Dan Han",
+      "affiliations": [
+        "The School of Cyberspace Security, Hainan University, Haikou 570208, China."
+      ]
+    },
+    {
+      "last_name": "Yang",
+      "fore_name": "Yiyu",
+      "initials": "Y",
+      "name": "Yiyu Yang",
+      "affiliations": [
+        "The School of Cyberspace Security, Hainan University, Haikou 570208, China.",
+        "The National Computer Intrusion Protection Center, University of Chinese Academy of Sciences, Beijing 101408, China."
+      ]
+    },
+    {
+      "last_name": "Li",
+      "fore_name": "Xiaoqi",
+      "initials": "X",
+      "name": "Xiaoqi Li",
+      "affiliations": [
+        "The School of Cyberspace Security, Hainan University, Haikou 570208, China."
+      ],
+      "orcid": "0000-0002-6012-9178"
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "The School of Cyberspace Security, Hainan University, Haikou 570208, China.",
+        "The National Computer Intrusion Protection Center, University of Chinese Academy of Sciences, Beijing 101408, China."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Sensors (Basel, Switzerland)",
+    "iso_abbreviation": "Sensors (Basel)",
+    "issn": "1424-8220",
+    "issn_type": "Electronic",
+    "volume": "24",
+    "issue": "7",
+    "pub_year": "2024",
+    "pub_month": "Mar",
+    "pub_day": "27"
+  },
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "38610364",
+    "pmc": "PMC11014042",
+    "doi": "10.3390/s24072153",
+    "pii": "s24072153"
+  },
+  "doi": "10.3390/s24072153",
+  "pmc_id": "PMC11014042",
+  "dates": {
+    "revised": "2024-04-15"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "GHYF2022010",
+      "agency": "Key Research and Development Science and Technol- 692 ogy of Hainan Province"
+    },
+    {
+      "grant_id": "RZ2100003340",
+      "agency": "Research Startup Foundation of Hainan University"
+    },
+    {
+      "grant_id": "U1836210",
+      "agency": "National Natural Science Foundation of China"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.665578",
+    "pmid": "38610364"
+  }
+}

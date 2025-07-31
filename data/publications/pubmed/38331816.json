@@ -1,0 +1,139 @@
+{
+  "pmid": "38331816",
+  "uid": "38331816",
+  "title": "Prediction of emergency department revisits among child and youth mental health outpatients using deep learning techniques.",
+  "abstract": "BACKGROUND: The proportion of Canadian youth seeking mental health support from an emergency department (ED) has risen in recent years. As EDs typically address urgent mental health crises, revisiting an ED may represent unmet mental health needs. Accurate ED revisit prediction could aid early intervention and ensure efficient healthcare resource allocation. We examine the potential increased accuracy and performance of graph neural network (GNN) machine learning models compared to recurrent neural network (RNN), and baseline conventional machine learning and regression models for predicting ED revisit in electronic health record (EHR) data. METHODS: This study used EHR data for children and youth aged 4-17 seeking services at McMaster Children's Hospital's Child and Youth Mental Health Program outpatient service to develop and evaluate GNN and RNN models to predict whether a child/youth with an ED visit had an ED revisit within 30 days. GNN and RNN models were developed and compared against conventional baseline models. Model performance for GNN, RNN, XGBoost, decision tree and logistic regression models was evaluated using F1 scores. RESULTS: The GNN model outperformed the RNN model by an F1-score increase of 0.0511 and the best performing conventional machine learning model by an F1-score increase of 0.0470. Precision, recall, receiver operating characteristic (ROC) curves, and positive and negative predictive values showed that the GNN model performed the best, and the RNN model performed similarly to the XGBoost model. Performance increases were most noticeable for recall and negative predictive value than for precision and positive predictive value. CONCLUSIONS: This study demonstrates the improved accuracy and potential utility of GNN models in predicting ED revisits among children and youth, although model performance may not be sufficient for clinical implementation. Given the improvements in recall and negative predictive value, GNN models should be further explored to develop algorithms that can inform clinical decision-making in ways that facilitate targeted interventions, optimize resource allocation, and improve outcomes for children and youth.",
+  "authors": [
+    {
+      "last_name": "Saggu",
+      "fore_name": "Simran",
+      "initials": "S",
+      "name": "Simran Saggu",
+      "affiliations": [
+        "Department of Health Research Methodology, Evidence & Impact, McMaster University, 1280 Main St W, Hamilton, Ontario, L8S 4K1, Canada."
+      ]
+    },
+    {
+      "last_name": "Daneshvar",
+      "fore_name": "Hirad",
+      "initials": "H",
+      "name": "Hirad Daneshvar",
+      "affiliations": [
+        "Department of Electrical, Computer and Biomedical Engineering, Toronto Metropolitan University, 350 Victoria Street, Toronto, Ontario, M5B 2K3, Canada."
+      ]
+    },
+    {
+      "last_name": "Samavi",
+      "fore_name": "Reza",
+      "initials": "R",
+      "name": "Reza Samavi",
+      "affiliations": [
+        "Department of Electrical, Computer and Biomedical Engineering, Toronto Metropolitan University, 350 Victoria Street, Toronto, Ontario, M5B 2K3, Canada."
+      ]
+    },
+    {
+      "last_name": "Pires",
+      "fore_name": "Paulo",
+      "initials": "P",
+      "name": "Paulo Pires",
+      "affiliations": [
+        "Department of Psychiatry & Behavioural Neurosciences, McMaster University, 1280 Main St W, Hamilton, Ontario, L8S 4K1, Canada.",
+        "McMaster Children's Hospital, Hamilton Health Sciences, 1200 Main St West, Hamilton, Ontario, L8N 3Z5, Canada."
+      ]
+    },
+    {
+      "last_name": "Sassi",
+      "fore_name": "Roberto B",
+      "initials": "RB",
+      "name": "Roberto B Sassi",
+      "affiliations": [
+        "Department of Psychiatry, University of British Columbia, UBC Vancouver Campus, Vancouver, BC, V6T 2A1, Canada."
+      ]
+    },
+    {
+      "last_name": "Doyle",
+      "fore_name": "Thomas E",
+      "initials": "TE",
+      "name": "Thomas E Doyle",
+      "affiliations": [
+        "Department of Electrical & Computer Engineering, McMaster University, 1280 Main St W, Hamilton, Ontario, L8S 4K1, Canada."
+      ]
+    },
+    {
+      "last_name": "Zhao",
+      "fore_name": "Judy",
+      "initials": "J",
+      "name": "Judy Zhao",
+      "affiliations": [
+        "McMaster Children's Hospital, Hamilton Health Sciences, 1200 Main St West, Hamilton, Ontario, L8N 3Z5, Canada."
+      ]
+    },
+    {
+      "last_name": "Mauluddin",
+      "fore_name": "Ahmad",
+      "initials": "A",
+      "name": "Ahmad Mauluddin",
+      "affiliations": [
+        "McMaster Children's Hospital, Hamilton Health Sciences, 1200 Main St West, Hamilton, Ontario, L8N 3Z5, Canada."
+      ]
+    },
+    {
+      "last_name": "Duncan",
+      "fore_name": "Laura",
+      "initials": "L",
+      "name": "Laura Duncan",
+      "affiliations": [
+        "Department of Psychiatry & Behavioural Neurosciences, McMaster University, 1280 Main St W, Hamilton, Ontario, L8S 4K1, Canada. duncanlj@mcmaster.ca.",
+        "McMaster Children's Hospital, Hamilton Health Sciences, 1200 Main St West, Hamilton, Ontario, L8N 3Z5, Canada. duncanlj@mcmaster.ca."
+      ],
+      "orcid": "0000-0001-7120-6629"
+    }
+  ],
+  "journal": {
+    "title": "BMC medical informatics and decision making",
+    "iso_abbreviation": "BMC Med Inform Decis Mak",
+    "issn": "1472-6947",
+    "issn_type": "Electronic",
+    "volume": "24",
+    "issue": "1",
+    "pub_year": "2024",
+    "pub_month": "Feb",
+    "pub_day": "08"
+  },
+  "start_page": "42",
+  "pages": "42",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Child",
+    "Humans",
+    "Adolescent",
+    "Hospitalization",
+    "Deep Learning",
+    "Outpatients",
+    "Mental Health",
+    "Canada",
+    "Emergency Service, Hospital"
+  ],
+  "article_ids": {
+    "pubmed": "38331816",
+    "pmc": "PMC10854017",
+    "doi": "10.1186/s12911-024-02450-1",
+    "pii": "10.1186/s12911-024-02450-1"
+  },
+  "doi": "10.1186/s12911-024-02450-1",
+  "pmc_id": "PMC10854017",
+  "dates": {
+    "completed": "2024-02-14",
+    "revised": "2024-02-14"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:19:40.667212",
+    "pmid": "38331816"
+  }
+}

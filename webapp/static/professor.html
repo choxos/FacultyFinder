@@ -4,18 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Profile - FacultyFinder</title>
-    <meta name="description" content="Detailed faculty profile with academic information, research areas, publications, and contact details.">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="FacultyFinder helps researchers discover ideal faculty collaborators across universities worldwide using AI-powered matching and comprehensive academic profiles.">
+    <meta name="keywords" content="faculty finder, academic collaboration, research, universities, professors, global, worldwide">
+    <meta name="author" content="FacultyFinder Team">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
-
-    <!-- Custom CSS Theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
     <link rel="stylesheet" href="/static/css/facultyfinder.css">
-    <link rel="stylesheet" href="/static/css/filter-fixes.css">
+    
+    <!-- Fixed navbar padding -->
+    <style>
+        body {
+            padding-top: 76px; /* Accommodate fixed navbar height */
+        }
+        
+        @media (max-width: 991.98px) {
+            body {
+                padding-top: 70px; /* Smaller padding for mobile */
+            }
+        }
+        
+        /* Enhanced Navigation Styling */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.75rem 1rem !important;
+            margin: 0 0.2rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            color: #495057 !important;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+            color: #007bff !important;
+            transform: translateY(-1px);
+        }
+        
+        .navbar-nav .nav-link.active {
+            background-color: #e3f2fd;
+            color: #1976d2 !important;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+        }
+        
+        .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1976d2 !important;
+        }
+        
+        .navbar-brand:hover {
+            color: #1565c0 !important;
+        }
+        
+        .navbar-nav .nav-link i {
+            font-size: 0.85rem;
+            margin-right: 0.4rem;
+        }
+        
+        /* Dropdown improvements */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 0.5rem 0;
+        }
+        
+        .dropdown-item {
+            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+        
+        /* Button styling */
+        .navbar .btn {
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 991.98px) {
+            .navbar-nav .nav-link {
+                font-size: 0.95rem;
+                padding: 0.6rem 1rem !important;
+                margin: 0.1rem 0;
+            }
+            
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Subtle animation for navbar */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .navbar {
+            animation: fadeInDown 0.6s ease-out;
+        }
+    </style>
     
     <!-- Structured Data -->
     <script type="application/ld+json" id="structured-data">
@@ -33,43 +153,39 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="/">
-                <i class="fas fa-graduation-cap me-2"></i>FacultyFinder
+                <i class="fas fa-graduation-cap text-primary me-2"></i>
+                FacultyFinder
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/countries">Countries</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/universities">Universities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/faculties">Faculty</a>
+                        <a class="nav-link" href="/faculties">Faculties</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/countries">Countries</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/ai-assistant">AI Assistant</a>
+                        <a class="nav-link" href="/ai-assistant">
+                            <i class="fas fa-robot me-1"></i>AI Assistant
+                        </a>
                     </li>
                 </ul>
-                
-                <div class="d-flex align-items-center">
-                    <a class="btn btn-outline-primary me-2" href="/login">
-                        <i class="fas fa-sign-in-alt me-1"></i>Sign In
-                    </a>
-                    <a class="btn btn-primary" href="/register">
-                        <i class="fas fa-user-plus me-1"></i>Sign Up
-                    </a>
-                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="/login">
+                            <i class="fas fa-sign-in-alt me-1"></i>Sign In
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -94,165 +210,315 @@
         </div>
     </div>
 
-    <!-- Professor Profile Content -->
-    <div id="professor-content" class="container py-4" style="display: none;">
-        <!-- Professor Header -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <div class="facultyfinder-card p-4">
-                    <div class="row align-items-center">
-                        <div class="col-lg-8">
-                            <div class="d-flex align-items-center mb-3">
-                                <div>
-                                    <h1 class="mb-1" id="professor-name"></h1>
-                                    <p class="text-muted mb-1" id="professor-other-name" style="display: none;"></p>
-                                    <div class="d-flex align-items-center gap-3 flex-wrap" id="professor-badges">
-                                        <!-- Position and employment badges will be added here -->
+    <!-- Main Content -->
+    <main class="main-content">
+        <div id="professor-content" class="container" style="display: none;">
+            <!-- Professor Header -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="facultyfinder-card p-4">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div>
+                                        <h1 class="mb-1" id="professor-name">Professor Name</h1>
+                                        <div class="d-flex align-items-center gap-3 flex-wrap" id="professor-badges">
+                                            <!-- Position and employment badges will be added here -->
+                                        </div>
                                     </div>
+                                </div>
+                                
+                                <div class="mb-3" id="affiliation-section">
+                                    <h5 class="text-primary mb-2">
+                                        <i class="fas fa-building me-2"></i>
+                                        <span id="department-link">Department</span>
+                                    </h5>
+                                    <p class="mb-1">
+                                        <i class="fas fa-university me-2"></i>
+                                        <strong id="university-link">University</strong>
+                                        <span id="university-website-link"></span>
+                                    </p>
+                                    <p class="text-muted mb-0" id="location-section">
+                                        <i class="fas fa-map-marker-alt me-2"></i>
+                                        <span id="location-text">Location</span>
+                                        <span id="maps-link"></span>
+                                    </p>
                                 </div>
                             </div>
                             
-                            <div class="mb-3">
-                                <h5 class="text-primary mb-2">
-                                    <i class="fas fa-building me-2"></i>
-                                    <span id="professor-affiliation">University Affiliation</span>
-                                </h5>
-                                <p class="text-muted mb-1" id="professor-department"></p>
-                                <p class="text-muted small" id="professor-location"></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 text-lg-end">
-                            <div class="row text-center">
-                                <div class="col-4">
-                                    <div class="stat-item">
-                                        <div class="stat-number text-primary fw-bold" id="publication-count">0</div>
-                                        <div class="stat-label">Publications</div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-item">
-                                        <div class="stat-number text-success fw-bold" id="citation-count">0</div>
-                                        <div class="stat-label">Citations</div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-item">
-                                        <div class="stat-number text-warning fw-bold" id="h-index">0</div>
-                                        <div class="stat-label">H-index</div>
-                                    </div>
+                            <div class="col-lg-4 text-lg-end">
+                                <!-- Contact Information -->
+                                <div class="d-flex flex-column gap-2" id="header-contact-buttons">
+                                    <!-- Contact buttons will be populated here -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="row">
-            <!-- Main Content -->
-            <div class="col-lg-8">
-                <!-- Academic Information -->
-                <div class="facultyfinder-card p-4 mb-4">
-                    <h3 class="mb-3">
-                        <i class="fas fa-graduation-cap text-primary me-2"></i>
-                        Academic Information
-                    </h3>
+            
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Academic Information -->
+                    <div class="facultyfinder-card p-4 mb-4">
+                        <h3 class="mb-3">
+                            <i class="fas fa-graduation-cap text-primary me-2"></i>
+                            Academic Information
+                        </h3>
+                        
+                        <!-- Degrees -->
+                        <div class="mb-3" id="degrees-section" style="display: none;">
+                            <h5>Degrees</h5>
+                            <div class="degrees-list" id="degrees-list">
+                                <!-- Degrees will be populated here -->
+                            </div>
+                        </div>
+                        
+                        <!-- Other Affiliations -->
+                        <div class="mb-3" id="other-affiliations-section" style="display: none;">
+                            <h5>Other Affiliations</h5>
+                            <div class="other-departments" id="other-affiliations-list">
+                                <!-- Other affiliations will be populated here -->
+                            </div>
+                        </div>
+                        
+                        <!-- Memberships -->
+                        <div class="mb-3" id="memberships-section" style="display: none;">
+                            <h5>Memberships</h5>
+                            <div class="research-areas" id="memberships-list">
+                                <!-- Memberships will be populated here -->
+                            </div>
+                        </div>
+                        
+                        <!-- Canada Research Chair -->
+                        <div class="mb-3" id="canada-research-chair-section" style="display: none;">
+                            <h5>Canada Research Chair</h5>
+                            <p class="text-success" id="canada-research-chair-text"></p>
+                        </div>
+                        
+                        <!-- Director Positions -->
+                        <div class="mb-3" id="director-section" style="display: none;">
+                            <h5>Director Positions</h5>
+                            <p id="director-text"></p>
+                        </div>
+                    </div>
                     
                     <!-- Research Areas -->
-                    <div class="mb-4" id="research-areas-section">
-                        <h5>Research Areas</h5>
-                        <div id="research-areas-list">
+                    <div class="facultyfinder-card p-4 mb-4" id="research-areas-card" style="display: none;">
+                        <h3 class="mb-3">
+                            <i class="fas fa-microscope text-primary me-2"></i>
+                            Research Areas
+                        </h3>
+                        <div class="research-areas" id="research-areas-list">
                             <!-- Research areas badges will be populated here -->
                         </div>
                     </div>
                     
-                    <!-- Degrees -->
-                    <div class="mb-4" id="degrees-section" style="display: none;">
-                        <h5>Degrees</h5>
-                        <div id="degrees-list">
-                            <!-- Degrees will be populated here -->
+                    <!-- Publications -->
+                    <div class="facultyfinder-card p-4 mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="mb-0">
+                                <i class="fas fa-file-alt text-primary me-2"></i>
+                                Publications
+                            </h3>
+                            <span class="badge bg-primary" id="publications-count" style="display: none;"></span>
+                        </div>
+                        
+                        <div id="publications-list">
+                            <div class="text-center py-4">
+                                <i class="fas fa-file-alt fa-2x text-muted mb-2"></i>
+                                <p class="text-muted">No publications found in our database.</p>
+                                <small class="text-muted">Publications may not be indexed yet or may be under a different name variation.</small>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Research Interests -->
-                    <div class="mb-4" id="research-interests-section" style="display: none;">
-                        <h5>Research Interests</h5>
-                        <div id="research-interests-content">
-                            <!-- Research interests will be populated here -->
+                    <!-- Collaborators -->
+                    <div class="facultyfinder-card p-4" id="collaborators-section" style="display: none;">
+                        <h3 class="mb-3">
+                            <i class="fas fa-users text-primary me-2"></i>
+                            Frequent Collaborators
+                        </h3>
+                        <div class="row" id="collaborators-list">
+                            <!-- Collaborators will be populated here -->
                         </div>
                     </div>
                 </div>
-
-                <!-- Publications Section -->
-                <div class="facultyfinder-card p-4 mb-4">
-                    <h3 class="mb-3">
-                        <i class="fas fa-file-alt text-primary me-2"></i>
-                        Recent Publications
-                    </h3>
-                    <div id="publications-list">
-                        <p class="text-muted">Loading recent publications...</p>
-                    </div>
-                    <div class="text-center mt-3">
-                        <button class="btn btn-outline-primary" id="load-more-publications">
-                            <i class="fas fa-plus me-1"></i>Load More Publications
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <!-- Academic Profiles -->
-                <div class="facultyfinder-card p-4 mb-4">
-                    <h4 class="mb-3">
-                        <i class="fas fa-link text-primary me-2"></i>
-                        Academic Profiles
-                    </h4>
-                    <div class="d-grid gap-2" id="academic-profiles">
-                        <!-- Academic profile links will be populated here -->
-                    </div>
-                </div>
                 
-                <!-- Contact Information -->
-                <div class="facultyfinder-card p-4">
-                    <h4 class="mb-3">
-                        <i class="fas fa-address-card text-primary me-2"></i>
-                        Contact Information
-                    </h4>
-                    <div id="contact-info">
-                        <!-- Contact information will be populated here -->
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Quick Stats -->
+                    <div class="facultyfinder-card p-4 mb-4" id="publication-metrics-section" style="display: none;">
+                        <h4 class="mb-3">
+                            <i class="fas fa-chart-bar text-primary me-2"></i>
+                            Publication Metrics
+                        </h4>
+                        <div class="row text-center" id="publication-metrics">
+                            <!-- Publication metrics will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Academic Profiles -->
+                    <div class="facultyfinder-card p-4 mb-4">
+                        <h4 class="mb-3">
+                            <i class="fas fa-link text-primary me-2"></i>
+                            Academic Profiles
+                        </h4>
+                        <div class="d-grid gap-2" id="academic-profiles">
+                            <!-- Academic profile links will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="facultyfinder-card p-4 mb-4" id="social-media-section" style="display: none;">
+                        <h4 class="mb-3">
+                            <i class="fas fa-share-alt text-primary me-2"></i>
+                            Social Media
+                        </h4>
+                        <div class="d-grid gap-2" id="social-media-links">
+                            <!-- Social media links will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="facultyfinder-card p-4">
+                        <h4 class="mb-3">
+                            <i class="fas fa-address-card text-primary me-2"></i>
+                            Contact Information
+                        </h4>
+                        <div id="contact-info">
+                            <!-- Contact information will be populated here -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- Citation Network and Metrics Section -->
+        <div class="row mb-4" id="citation-network-row" style="display: none;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-network-wired me-2"></i>
+                            Citation Network & Metrics
+                            <div class="float-end">
+                                <button id="updateCitationsBtn" class="btn btn-sm btn-outline-primary" 
+                                        onclick="updateCitations()">
+                                    <i class="fas fa-sync-alt me-1"></i>Update Citations
+                                </button>
+                            </div>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Citation Metrics -->
+                        <div class="row mb-4" id="citation-metrics-section" style="display: none;">
+                            <div class="col-md-6">
+                                <h6>Citation Metrics</h6>
+                                <div class="row" id="citation-metrics">
+                                    <!-- Citation metrics will be populated here -->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Top Cited Papers</h6>
+                                <div class="top-papers-list" id="top-cited-papers">
+                                    <p class="text-muted">No citation data available yet.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Citation Network Visualization -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>Collaboration & Citation Network</h6>
+                                <div id="citation-network" style="height: 400px; border: 1px solid #dee2e6; border-radius: 8px;">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <div class="text-center">
+                                            <i class="fas fa-network-wired fa-3x text-muted mb-3"></i>
+                                            <p class="text-muted">
+                                                No citation network data available. Click "Update Citations" to fetch data.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Network Legend -->
+                        <div class="row mt-3" id="network-legend" style="display: none;">
+                            <div class="col-12">
+                                <div class="network-legend">
+                                    <h6>Network Legend</h6>
+                                    <div class="d-flex flex-wrap">
+                                        <div class="legend-item me-3">
+                                            <span class="legend-color" style="background-color: #e74c3c;"></span>
+                                            Central Professor
+                                        </div>
+                                        <div class="legend-item me-3">
+                                            <span class="legend-color" style="background-color: #3498db;"></span>
+                                            Co-authors
+                                        </div>
+                                        <div class="legend-item me-3">
+                                            <span class="legend-color" style="background-color: #2ecc71;"></span>
+                                            Cited Colleagues
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <h5>FacultyFinder</h5>
-                    <p class="text-muted">Discover academic experts and research collaborators worldwide.</p>
+                <div class="col-md-6">
+                    <h5>
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        FacultyFinder
+                    </h5>
+                    <p class="text-muted mb-3">
+                        Connecting researchers with their ideal academic collaborators worldwide.
+                    </p>
+                    <p class="mb-0">
+                        &copy; 2025 FacultyFinder. All rights reserved.
+                    </p>
                 </div>
-                <div class="col-lg-4">
-                    <h6>Quick Links</h6>
+                <div class="col-md-3">
+                    <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
                     <ul class="list-unstyled">
-                        <li><a href="/universities" class="text-muted text-decoration-none">Universities</a></li>
-                        <li><a href="/faculties" class="text-muted text-decoration-none">Faculty</a></li>
-                        <li><a href="/countries" class="text-muted text-decoration-none">Countries</a></li>
-                        <li><a href="/api/docs" class="text-muted text-decoration-none">API Documentation</a></li>
+                        <li class="mb-2"><a href="/faculties" class="text-light text-decoration-none">Faculty Search</a></li>
+                        <li class="mb-2"><a href="/universities" class="text-light text-decoration-none">Universities</a></li>
+                        <li class="mb-2"><a href="/countries" class="text-light text-decoration-none">Countries</a></li>
+                        <li class="mb-2"><a href="/ai-assistant" class="text-light text-decoration-none">AI Assistant</a></li>
+                        <li class="mb-2"><a href="/about" class="text-light text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="/api" class="text-light text-decoration-none">API Documentation</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <h6>Connect With Us</h6>
-                    <p class="text-muted">Built for the global academic community</p>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
+                    </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="text-muted mb-0">&copy; 2025 FacultyFinder. All rights reserved.</p>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted small mb-0">
+                        &copy; 2025 FacultyFinder. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="/privacy-policy" class="text-decoration-none text-muted small me-3">Privacy Policy</a>
+                    <a href="/terms-of-service" class="text-decoration-none text-muted small">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -260,12 +526,13 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JavaScript -->
+    
+    <!-- Custom JS -->
     <script src="/static/js/facultyfinder.js"></script>
-
+    
     <script>
         const API_BASE = '/api/v1';
+        let currentProfessor = null;
         
         // Get professor ID from URL
         const pathParts = window.location.pathname.split('/');
@@ -279,6 +546,7 @@
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const professor = await response.json();
+                currentProfessor = professor;
                 
                 displayProfessorProfile(professor);
                 
@@ -299,79 +567,311 @@
 
             // Professor header
             document.getElementById('professor-name').textContent = professor.name;
-            if (professor.other_name) {
-                const otherNameEl = document.getElementById('professor-other-name');
-                otherNameEl.textContent = `(${professor.other_name})`;
-                otherNameEl.style.display = 'block';
-            }
 
             // Badges
+            displayBadges(professor);
+            
+            // Affiliation information
+            displayAffiliation(professor);
+            
+            // Header contact buttons
+            displayHeaderContactButtons(professor);
+            
+            // Academic information sections
+            displayAcademicInformation(professor);
+
+            // Research areas
+            displayResearchAreas(professor.research_areas);
+
+            // Publications
+            displayPublications(professor);
+            
+            // Publication metrics
+            displayPublicationMetrics(professor);
+
+            // Academic profiles
+            displayAcademicProfiles(professor);
+            
+            // Social media
+            displaySocialMedia(professor);
+
+            // Contact information
+            displayContactInfo(professor);
+            
+            // Show citation network section
+            document.getElementById('citation-network-row').style.display = 'block';
+        }
+        
+        function displayBadges(professor) {
             const badgesContainer = document.getElementById('professor-badges');
+            badgesContainer.innerHTML = '';
+            
             if (professor.position) {
                 const positionBadge = document.createElement('span');
                 positionBadge.className = `position-badge ${professor.position.toLowerCase().replace(/\s+/g, '-')}`;
                 positionBadge.textContent = professor.position;
                 badgesContainer.appendChild(positionBadge);
             }
+            
             if (professor.full_time) {
                 const fullTimeBadge = document.createElement('span');
                 fullTimeBadge.className = 'badge bg-success';
                 fullTimeBadge.textContent = 'Full-time';
                 badgesContainer.appendChild(fullTimeBadge);
             }
+            
             if (professor.adjunct) {
                 const adjunctBadge = document.createElement('span');
                 adjunctBadge.className = 'badge bg-secondary';
                 adjunctBadge.textContent = 'Adjunct';
                 badgesContainer.appendChild(adjunctBadge);
             }
-
-            // Affiliation
-            document.getElementById('professor-affiliation').textContent = professor.university_name || 'Unknown University';
+        }
+        
+        function displayAffiliation(professor) {
+            // Department
+            const departmentLink = document.getElementById('department-link');
             if (professor.department) {
-                document.getElementById('professor-department').textContent = professor.department;
+                departmentLink.innerHTML = `
+                    <a href="/faculties?department=${encodeURIComponent(professor.department)}" 
+                       class="text-decoration-none department-link"
+                       title="View all faculty in ${professor.department}">
+                        ${professor.department}
+                    </a>
+                `;
+            } else {
+                departmentLink.textContent = 'Department not specified';
             }
-
-            // Statistics
-            document.getElementById('publication-count').textContent = professor.publication_count || professor.total_publications || 0;
-            document.getElementById('citation-count').textContent = professor.citation_count || 0;
-            document.getElementById('h-index').textContent = professor.h_index || 0;
-
-            // Research areas
-            displayResearchAreas(professor.research_areas);
-
-            // Academic profiles
-            displayAcademicProfiles(professor);
-
-            // Contact information
-            displayContactInfo(professor);
+            
+            // University
+            const universityLink = document.getElementById('university-link');
+            if (professor.university_name) {
+                const universityParam = professor.university_code || professor.university_name;
+                universityLink.innerHTML = `
+                    <a href="/faculties?university=${encodeURIComponent(universityParam)}" 
+                       class="text-decoration-none university-link"
+                       title="View all faculty at ${professor.university_name}">
+                        ${professor.university_name}
+                    </a>
+                `;
+            } else {
+                universityLink.textContent = 'Unknown University';
+            }
+            
+            // University website link
+            const websiteLink = document.getElementById('university-website-link');
+            if (professor.university_website) {
+                websiteLink.innerHTML = `
+                    <a href="${professor.university_website}" target="_blank" 
+                       class="text-decoration-none ms-2 website-link"
+                       title="Visit ${professor.university_name} website">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                `;
+            }
+            
+            // Location and maps
+            const locationText = document.getElementById('location-text');
+            const mapsLink = document.getElementById('maps-link');
+            if (professor.city && professor.province_state) {
+                locationText.textContent = `${professor.city}, ${professor.province_state}, ${professor.country}`;
+                
+                const mapsQuery = professor.address 
+                    ? `${professor.university_name}, ${professor.address}`
+                    : `${professor.university_name}, ${professor.city}, ${professor.province_state}, ${professor.country}`;
+                    
+                mapsLink.innerHTML = `
+                    <a href="https://www.google.com/maps/search/${encodeURIComponent(mapsQuery)}" 
+                       target="_blank" 
+                       class="text-decoration-none ms-2 maps-link"
+                       title="View ${professor.university_name} on Google Maps">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                `;
+            }
+        }
+        
+        function displayHeaderContactButtons(professor) {
+            const container = document.getElementById('header-contact-buttons');
+            container.innerHTML = '';
+            
+            if (professor.email) {
+                const emailBtn = document.createElement('a');
+                emailBtn.href = `mailto:${professor.email}`;
+                emailBtn.className = 'btn btn-outline-primary';
+                emailBtn.innerHTML = '<i class="fas fa-envelope me-2"></i>Email';
+                container.appendChild(emailBtn);
+            }
+            
+            if (professor.phone) {
+                const phoneBtn = document.createElement('a');
+                phoneBtn.href = `tel:${professor.phone}`;
+                phoneBtn.className = 'btn btn-outline-secondary';
+                phoneBtn.innerHTML = `<i class="fas fa-phone me-2"></i>${professor.phone}`;
+                container.appendChild(phoneBtn);
+            }
+            
+            if (professor.website) {
+                const websiteBtn = document.createElement('a');
+                websiteBtn.href = professor.website;
+                websiteBtn.target = '_blank';
+                websiteBtn.className = 'btn btn-outline-info';
+                websiteBtn.innerHTML = '<i class="fas fa-globe me-2"></i>Website';
+                container.appendChild(websiteBtn);
+            }
+        }
+        
+        function displayAcademicInformation(professor) {
+            // Degrees
+            if (professor.degrees) {
+                const degreesSection = document.getElementById('degrees-section');
+                const degreesList = document.getElementById('degrees-list');
+                degreesSection.style.display = 'block';
+                
+                const degrees = professor.degrees.split(';');
+                degreesList.innerHTML = '';
+                degrees.forEach(degree => {
+                    if (degree.trim()) {
+                        const degreeType = degree.trim().split(' ')[0];
+                        const degreeSpan = document.createElement('span');
+                        degreeSpan.className = 'degree-badge';
+                        degreeSpan.innerHTML = `
+                            <a href="/faculties?degree=${encodeURIComponent(degreeType)}" 
+                               class="badge bg-primary text-decoration-none degree-link"
+                               title="View all faculty with ${degreeType}">
+                                ${degree.trim()}
+                            </a>
+                        `;
+                        degreesList.appendChild(degreeSpan);
+                    }
+                });
+            }
+            
+            // Other departments/affiliations
+            if (professor.other_departments) {
+                const affiliationsSection = document.getElementById('other-affiliations-section');
+                const affiliationsList = document.getElementById('other-affiliations-list');
+                affiliationsSection.style.display = 'block';
+                
+                const departments = professor.other_departments.split(';');
+                affiliationsList.innerHTML = '';
+                departments.forEach(dept => {
+                    if (dept.trim()) {
+                        const deptBadge = document.createElement('a');
+                        deptBadge.href = `/faculties?department=${encodeURIComponent(dept.trim())}`;
+                        deptBadge.className = 'badge bg-secondary text-decoration-none me-1 mb-1 department-badge';
+                        deptBadge.title = `View faculty in ${dept.trim()}`;
+                        deptBadge.textContent = dept.trim();
+                        affiliationsList.appendChild(deptBadge);
+                    }
+                });
+            }
+            
+            // Memberships
+            if (professor.memberships) {
+                const membershipsSection = document.getElementById('memberships-section');
+                const membershipsList = document.getElementById('memberships-list');
+                membershipsSection.style.display = 'block';
+                
+                const memberships = professor.memberships.split(';');
+                membershipsList.innerHTML = '';
+                memberships.forEach(membership => {
+                    if (membership.trim()) {
+                        const membershipSpan = document.createElement('span');
+                        membershipSpan.className = 'research-area-tag';
+                        membershipSpan.textContent = membership.trim();
+                        membershipsList.appendChild(membershipSpan);
+                    }
+                });
+            }
+            
+            // Canada Research Chair
+            if (professor.canada_research_chair) {
+                const chairSection = document.getElementById('canada-research-chair-section');
+                const chairText = document.getElementById('canada-research-chair-text');
+                chairSection.style.display = 'block';
+                chairText.innerHTML = `<strong>${professor.canada_research_chair}</strong>`;
+            }
+            
+            // Director positions
+            if (professor.director) {
+                const directorSection = document.getElementById('director-section');
+                const directorText = document.getElementById('director-text');
+                directorSection.style.display = 'block';
+                directorText.textContent = professor.director;
+            }
         }
 
         function displayResearchAreas(researchAreas) {
+            const card = document.getElementById('research-areas-card');
             const container = document.getElementById('research-areas-list');
+            
             if (researchAreas) {
                 let areas = [];
                 if (typeof researchAreas === 'string') {
-                    areas = researchAreas.split(',').map(area => area.trim());
+                    areas = researchAreas.split(';').map(area => area.trim()).filter(area => area);
                 } else if (Array.isArray(researchAreas)) {
-                    areas = researchAreas;
+                    areas = researchAreas.filter(area => area);
                 }
                 
                 if (areas.length > 0) {
+                    card.style.display = 'block';
                     container.innerHTML = '';
                     areas.forEach(area => {
-                        if (area) {
-                            const badge = document.createElement('span');
-                            badge.className = 'badge bg-light text-dark border me-2 mb-2';
-                            badge.textContent = area;
-                            container.appendChild(badge);
-                        }
+                        const badge = document.createElement('span');
+                        badge.className = 'badge bg-light text-dark border px-3 py-2 research-area-badge me-2 mb-2';
+                        badge.textContent = area.charAt(0).toUpperCase() + area.slice(1);
+                        container.appendChild(badge);
                     });
-                } else {
-                    container.innerHTML = '<p class="text-muted">No research areas specified</p>';
                 }
-            } else {
-                container.innerHTML = '<p class="text-muted">No research areas specified</p>';
+            }
+        }
+        
+        function displayPublications(professor) {
+            const publicationsList = document.getElementById('publications-list');
+            const publicationsCount = document.getElementById('publications-count');
+            
+            // For now, show placeholder since we need to implement publication fetching
+            // This would typically fetch from another API endpoint
+            if (professor.publication_count > 0) {
+                publicationsCount.textContent = `${professor.publication_count} publications`;
+                publicationsCount.style.display = 'inline';
+                
+                publicationsList.innerHTML = `
+                    <div class="text-center py-4">
+                        <i class="fas fa-file-alt fa-2x text-muted mb-2"></i>
+                        <p class="text-muted">Publications data loading...</p>
+                        <small class="text-muted">Publication details will be loaded from external databases.</small>
+                    </div>
+                `;
+            }
+        }
+        
+        function displayPublicationMetrics(professor) {
+            const section = document.getElementById('publication-metrics-section');
+            const container = document.getElementById('publication-metrics');
+            
+            if (professor.publication_count > 0 || professor.total_publications > 0) {
+                section.style.display = 'block';
+                
+                const metrics = [
+                    { label: 'Total Publications', value: professor.publication_count || professor.total_publications || 0, class: 'text-primary' },
+                    { label: 'Citations', value: professor.citation_count || 0, class: 'text-success' },
+                    { label: 'H-Index', value: professor.h_index || 0, class: 'text-warning' }
+                ];
+                
+                container.innerHTML = '';
+                metrics.forEach(metric => {
+                    const col = document.createElement('div');
+                    col.className = 'col-4 mb-3';
+                    col.innerHTML = `
+                        <div class="publication-metric">
+                            <div class="h4 mb-1 ${metric.class}">${metric.value}</div>
+                            <small class="text-muted">${metric.label}</small>
+                        </div>
+                    `;
+                    container.appendChild(col);
+                });
             }
         }
 
@@ -403,6 +903,45 @@
                 container.innerHTML = '<p class="text-muted">No academic profiles available</p>';
             }
         }
+        
+        function displaySocialMedia(professor) {
+            const section = document.getElementById('social-media-section');
+            const container = document.getElementById('social-media-links');
+            
+            const socialProfiles = [];
+            
+            if (professor.twitter) {
+                socialProfiles.push({
+                    name: 'X (Twitter)',
+                    url: `https://x.com/${professor.twitter}`,
+                    icon: 'fab fa-x-twitter',
+                    class: 'btn-outline-dark'
+                });
+            }
+            
+            if (professor.linkedin) {
+                socialProfiles.push({
+                    name: 'LinkedIn',
+                    url: `https://www.linkedin.com/in/${professor.linkedin}`,
+                    icon: 'fab fa-linkedin',
+                    class: 'btn-outline-primary'
+                });
+            }
+            
+            if (socialProfiles.length > 0) {
+                section.style.display = 'block';
+                container.innerHTML = '';
+                
+                socialProfiles.forEach(profile => {
+                    const link = document.createElement('a');
+                    link.href = profile.url;
+                    link.target = '_blank';
+                    link.className = `btn ${profile.class} btn-sm`;
+                    link.innerHTML = `<i class="${profile.icon} me-2"></i>${profile.name}`;
+                    container.appendChild(link);
+                });
+            }
+        }
 
         function displayContactInfo(professor) {
             const container = document.getElementById('contact-info');
@@ -429,6 +968,13 @@
                 phoneDiv.className = 'mb-2';
                 phoneDiv.innerHTML = `<strong>Phone:</strong><br><a href="tel:${professor.phone}">${professor.phone}</a>`;
                 container.appendChild(phoneDiv);
+            }
+            
+            if (professor.fax) {
+                const faxDiv = document.createElement('div');
+                faxDiv.className = 'mb-2';
+                faxDiv.innerHTML = `<strong>Fax:</strong><br>${professor.fax}`;
+                container.appendChild(faxDiv);
             }
 
             if (professor.uni_page) {
@@ -460,6 +1006,29 @@
             }
 
             document.getElementById('structured-data').textContent = JSON.stringify(structuredData);
+        }
+        
+        function updateCitations() {
+            if (!currentProfessor) return;
+            
+            const btn = document.getElementById('updateCitationsBtn');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Updating...';
+            btn.disabled = true;
+            
+            // This would call the citation update API
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-sync-alt me-1"></i>Update Citations';
+                btn.disabled = false;
+                
+                // Show a notification that the update was requested
+                const notification = document.createElement('div');
+                notification.className = 'alert alert-info alert-dismissible fade show';
+                notification.innerHTML = `
+                    Citation update requested. This may take a few minutes to process.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                document.querySelector('.container').insertBefore(notification, document.querySelector('.row'));
+            }, 2000);
         }
 
         function showErrorMessage() {

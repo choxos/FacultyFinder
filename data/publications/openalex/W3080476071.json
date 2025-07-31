@@ -1,0 +1,724 @@
+{
+  "openalex_id": "W3080476071",
+  "doi": "https://doi.org/10.1007/s15010-020-01503-7",
+  "title": "A highly specific and sensitive serological assay detects SARS-CoV-2 antibody levels in COVID-19 patients that correlate with neutralization",
+  "abstract": "The severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) pandemic challenges national health systems and the global economy. Monitoring of infection rates and seroprevalence can guide public health measures to combat the pandemic. This depends on reliable tests on active and former infections. Here, we set out to develop and validate a specific and sensitive enzyme linked immunosorbent assay (ELISA) for detection of anti-SARS-CoV-2 antibody levels.In our ELISA, we used SARS-CoV-2 receptor-binding domain (RBD) and a stabilized version of the spike (S) ectodomain as antigens. We assessed sera from patients infected with seasonal coronaviruses, SARS-CoV-2 and controls. We determined and monitored IgM-, IgA- and IgG-antibody responses towards these antigens. In addition, for a panel of 22 sera, virus neutralization and ELISA parameters were measured and correlated.The RBD-based ELISA detected SARS-CoV-2-directed antibodies, did not cross-react with seasonal coronavirus antibodies and correlated with virus neutralization (R2 = 0.89). Seroconversion started at 5 days after symptom onset and led to robust antibody levels at 10 days after symptom onset. We demonstrate high specificity (99.3%; N = 1000) and sensitivity (92% for IgA, 96% for IgG and 98% for IgM; > 10 days after PCR-proven infection; N = 53) in serum.With the described RBD-based ELISA protocol, we provide a reliable test for seroepidemiological surveys. Due to high specificity and strong correlation with virus neutralization, the RBD ELISA holds great potential to become a preferred tool to assess thresholds of protective immunity after infection and vaccination.",
+  "authors": [
+    {
+      "display_name": "David Peterhoff",
+      "id": "A5010962396",
+      "orcid": "https://orcid.org/0000-0001-5911-6233",
+      "institutions": [
+        {
+          "id": "I4210140742",
+          "display_name": "Institute of Medical Microbiology and Hygiene",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "David Peterhoff"
+    },
+    {
+      "display_name": "Vivian Glück",
+      "id": "A5090759898",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vivian Glück"
+    },
+    {
+      "display_name": "Matthias Vogel",
+      "id": "A5033886882",
+      "orcid": "https://orcid.org/0000-0003-4814-3900",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthias Vogel"
+    },
+    {
+      "display_name": "Philipp Schuster",
+      "id": "A5001486924",
+      "orcid": "https://orcid.org/0009-0008-2088-2756",
+      "institutions": [
+        {
+          "id": "I4210140742",
+          "display_name": "Institute of Medical Microbiology and Hygiene",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Philipp Schuster"
+    },
+    {
+      "display_name": "Anja Schütz",
+      "id": "A5108202146",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210140742",
+          "display_name": "Institute of Medical Microbiology and Hygiene",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Anja Schütz"
+    },
+    {
+      "display_name": "Philip Neubert",
+      "id": "A5082527159",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Philip Neubert"
+    },
+    {
+      "display_name": "Veruschka Albert",
+      "id": "A5014757231",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Veruschka Albert"
+    },
+    {
+      "display_name": "Stefanie Frisch",
+      "id": "A5013643329",
+      "orcid": "https://orcid.org/0000-0001-7200-3284",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stefanie Frisch"
+    },
+    {
+      "display_name": "Mara Kießling",
+      "id": "A5059868869",
+      "orcid": "https://orcid.org/0000-0001-5626-2227",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mara Kiessling"
+    },
+    {
+      "display_name": "Philip Pervan",
+      "id": "A5046849266",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Philip Pervan"
+    },
+    {
+      "display_name": "Maren Caroline Frogner Werner",
+      "id": "A5003031707",
+      "orcid": "https://orcid.org/0000-0003-0988-5223",
+      "institutions": [
+        {
+          "id": "I4210140742",
+          "display_name": "Institute of Medical Microbiology and Hygiene",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Maren Werner"
+    },
+    {
+      "display_name": "Nicole Ritter",
+      "id": "A5045652628",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicole Ritter"
+    },
+    {
+      "display_name": "Leon Babl",
+      "id": "A5045858265",
+      "orcid": "https://orcid.org/0000-0003-3279-8910",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Leon Babl"
+    },
+    {
+      "display_name": "Maria Deichner",
+      "id": "A5063581116",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Maria Deichner"
+    },
+    {
+      "display_name": "Frank Hanses",
+      "id": "A5025503541",
+      "orcid": "https://orcid.org/0000-0002-0007-8014",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Frank Hanses"
+    },
+    {
+      "display_name": "Matthias Lubnow",
+      "id": "A5016590108",
+      "orcid": "https://orcid.org/0000-0002-4402-1810",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matthias Lubnow"
+    },
+    {
+      "display_name": "Thomas Müller",
+      "id": "A5100661928",
+      "orcid": "https://orcid.org/0000-0001-8726-6052",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Müller"
+    },
+    {
+      "display_name": "Dirk Lunz",
+      "id": "A5031861257",
+      "orcid": "https://orcid.org/0000-0002-4913-0311",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Dirk Lunz"
+    },
+    {
+      "display_name": "Florian Hitzenbichler",
+      "id": "A5035875325",
+      "orcid": "https://orcid.org/0000-0003-4374-2787",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Florian Hitzenbichler"
+    },
+    {
+      "display_name": "Franz Audebert",
+      "id": "A5112678703",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Franz Audebert"
+    },
+    {
+      "display_name": "Viola Hähnel",
+      "id": "A5089404937",
+      "orcid": "https://orcid.org/0000-0003-4115-8405",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Viola Hähnel"
+    },
+    {
+      "display_name": "Robert Offner",
+      "id": "A5030200967",
+      "orcid": "https://orcid.org/0000-0003-0160-8248",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert Offner"
+    },
+    {
+      "display_name": "Martina Müller",
+      "id": "A5112442936",
+      "orcid": "https://orcid.org/0000-0002-9976-8161",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martina Müller"
+    },
+    {
+      "display_name": "Stephan Schmid",
+      "id": "A5035541816",
+      "orcid": "https://orcid.org/0000-0003-2222-2926",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stephan Schmid"
+    },
+    {
+      "display_name": "Ralph Burkhardt",
+      "id": "A5022779311",
+      "orcid": "https://orcid.org/0000-0003-1924-1202",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ralph Burkhardt"
+    },
+    {
+      "display_name": "Thomas Glück",
+      "id": "A5113715449",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210088153",
+          "display_name": "Kreisklinik Trostberg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thomas Glück"
+    },
+    {
+      "display_name": "Michael Koller",
+      "id": "A5072723216",
+      "orcid": "https://orcid.org/0000-0001-5252-6010",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael Koller"
+    },
+    {
+      "display_name": "Hans Helmut Niller",
+      "id": "A5110932651",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210140742",
+          "display_name": "Institute of Medical Microbiology and Hygiene",
+          "country_code": "DE",
+          "type": "facility"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hans Helmut Niller"
+    },
+    {
+      "display_name": "Bernhard Gräf",
+      "id": "A5022170044",
+      "orcid": "https://orcid.org/0000-0001-9055-3925",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bernhard Graf"
+    },
+    {
+      "display_name": "Bernd Salzberger",
+      "id": "A5069557337",
+      "orcid": "https://orcid.org/0000-0002-9182-0455",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bernd Salzberger"
+    },
+    {
+      "display_name": "Jürgen J. Wenzel",
+      "id": "A5083381016",
+      "orcid": "https://orcid.org/0000-0001-8422-6581",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jürgen J. Wenzel"
+    },
+    {
+      "display_name": "Jonathan Jantsch",
+      "id": "A5075963414",
+      "orcid": "https://orcid.org/0000-0001-6944-2913",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jonathan Jantsch"
+    },
+    {
+      "display_name": "André Gessner",
+      "id": "A5054344760",
+      "orcid": "https://orcid.org/0000-0003-4316-2408",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "André Gessner"
+    },
+    {
+      "display_name": "Bárbara Schmidt",
+      "id": "A5085866340",
+      "orcid": "https://orcid.org/0000-0003-0059-0349",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Barbara Schmidt"
+    },
+    {
+      "display_name": "Ralf Wagner",
+      "id": "A5020871813",
+      "orcid": "https://orcid.org/0000-0002-2029-3846",
+      "institutions": [
+        {
+          "id": "I3129555431",
+          "display_name": "University Hospital Regensburg",
+          "country_code": "DE",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ralf Wagner"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-08-21",
+  "type": "article",
+  "cited_by_count": 140,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S119914596",
+    "display_name": "Infection",
+    "issn_l": "0300-8126",
+    "issn": [
+      "0300-8126",
+      "1439-0973"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319900"
+  },
+  "volume": "49",
+  "issue": "1",
+  "first_page": "75",
+  "last_page": "82",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://link.springer.com/content/pdf/10.1007/s15010-020-01503-7.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2777451964",
+      "display_name": "Seroconversion",
+      "level": 3,
+      "score": 0.7609341
+    },
+    {
+      "id": "C14086860",
+      "display_name": "Neutralization",
+      "level": 3,
+      "score": 0.76020956
+    },
+    {
+      "id": "C45189115",
+      "display_name": "Serology",
+      "level": 3,
+      "score": 0.7468004
+    },
+    {
+      "id": "C159047783",
+      "display_name": "Virology",
+      "level": 1,
+      "score": 0.74351656
+    },
+    {
+      "id": "C159654299",
+      "display_name": "Antibody",
+      "level": 2,
+      "score": 0.71880955
+    },
+    {
+      "id": "C2778494684",
+      "display_name": "Seroprevalence",
+      "level": 4,
+      "score": 0.6769858
+    },
+    {
+      "id": "C2777648638",
+      "display_name": "Coronavirus",
+      "level": 5,
+      "score": 0.5647097
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.51574594
+    },
+    {
+      "id": "C3007834351",
+      "display_name": "Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+      "level": 5,
+      "score": 0.5029687
+    },
+    {
+      "id": "C147483822",
+      "display_name": "Antigen",
+      "level": 2,
+      "score": 0.49095276
+    },
+    {
+      "id": "C2522874641",
+      "display_name": "Virus",
+      "level": 2,
+      "score": 0.4881881
+    },
+    {
+      "id": "C89623803",
+      "display_name": "Pandemic",
+      "level": 5,
+      "score": 0.4433634
+    },
+    {
+      "id": "C203014093",
+      "display_name": "Immunology",
+      "level": 1,
+      "score": 0.44259557
+    },
+    {
+      "id": "C138894074",
+      "display_name": "Plaque reduction neutralization test",
+      "level": 4,
+      "score": 0.42144045
+    },
+    {
+      "id": "C3008058167",
+      "display_name": "Coronavirus disease 2019 (COVID-19)",
+      "level": 4,
+      "score": 0.34349573
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.32994705
+    },
+    {
+      "id": "C524204448",
+      "display_name": "Infectious disease (medical specialty)",
+      "level": 3,
+      "score": 0.16537148
+    },
+    {
+      "id": "C2779134260",
+      "display_name": "Disease",
+      "level": 2,
+      "score": 0.1530272
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.11335558
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10118",
+      "display_name": "SARS-CoV-2 and COVID-19 Research",
+      "score": 1.0
+    },
+    {
+      "id": "T11754",
+      "display_name": "SARS-CoV-2 detection and testing",
+      "score": 0.9989
+    },
+    {
+      "id": "T10041",
+      "display_name": "COVID-19 Clinical Research Studies",
+      "score": 0.998
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1007/s15010-020-01503-7",
+  "pdf_url": "https://link.springer.com/content/pdf/10.1007/s15010-020-01503-7.pdf",
+  "retrieved_date": "2025-07-30T15:40:28.908574",
+  "source_database": "OpenAlex"
+}

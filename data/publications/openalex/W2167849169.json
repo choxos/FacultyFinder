@@ -1,0 +1,257 @@
+{
+  "openalex_id": "W2167849169",
+  "doi": "https://doi.org/10.1109/iaw.2006.1652080",
+  "title": "P3ARM: Privacy-Preserving Protocol for Association Rule Mining",
+  "abstract": "The ability to mine large volumes of distributed datasets enables more precise decision making. However, privacy concerns should be carefully addressed when mining datasets distributed over autonomous sites. We propose a new privacy-preserving protocol for association rule mining (P3ARM) over horizontally partitioned data. P3ARM is based on a distributed implementation of the Apriori algorithm. The key idea is to arbitrary assign polling sites to collect itemsets' supports in encrypted forms using homomorphic encryption techniques. A pair of polling sites is assigned for each itemset. Polling sites are different for consecutive rounds of the protocol to reduce the potential for collusion. Our performance analysis shows that P3ARM significantly outperforms a leading existing protocol. Moreover, P3ARM is scalable in the number of sites and the volume of data",
+  "authors": [
+    {
+      "display_name": "Iman Saleh",
+      "id": "A5010107290",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I859038795",
+          "display_name": "Virginia Tech",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. Saleh"
+    },
+    {
+      "display_name": "Ahmed Mokhtar",
+      "id": "A5077852853",
+      "orcid": "https://orcid.org/0000-0002-8959-6722",
+      "institutions": [
+        {
+          "id": "I84524832",
+          "display_name": "Alexandria University",
+          "country_code": "EG",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Mokhtar"
+    },
+    {
+      "display_name": "Amin Shoukry",
+      "id": "A5048030732",
+      "orcid": "https://orcid.org/0000-0002-8024-3795",
+      "institutions": [
+        {
+          "id": "I84524832",
+          "display_name": "Alexandria University",
+          "country_code": "EG",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Shoukry"
+    },
+    {
+      "display_name": "Mohamed Eltoweissy",
+      "id": "A5078696271",
+      "orcid": "https://orcid.org/0000-0003-1224-4195",
+      "institutions": [
+        {
+          "id": "I859038795",
+          "display_name": "Virginia Tech",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Eltoweissy"
+    }
+  ],
+  "publication_year": 2006,
+  "publication_date": "2006-07-21",
+  "type": "article",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "76",
+  "last_page": "83",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C204854418",
+      "display_name": "Polling",
+      "level": 2,
+      "score": 0.8728023
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.8276067
+    },
+    {
+      "id": "C193524817",
+      "display_name": "Association rule learning",
+      "level": 2,
+      "score": 0.7965468
+    },
+    {
+      "id": "C48044578",
+      "display_name": "Scalability",
+      "level": 2,
+      "score": 0.6629825
+    },
+    {
+      "id": "C158338273",
+      "display_name": "Homomorphic encryption",
+      "level": 3,
+      "score": 0.6626575
+    },
+    {
+      "id": "C2780385302",
+      "display_name": "Protocol (science)",
+      "level": 3,
+      "score": 0.6143106
+    },
+    {
+      "id": "C2781198186",
+      "display_name": "Collusion",
+      "level": 2,
+      "score": 0.6072202
+    },
+    {
+      "id": "C124101348",
+      "display_name": "Data mining",
+      "level": 1,
+      "score": 0.5923619
+    },
+    {
+      "id": "C148730421",
+      "display_name": "Encryption",
+      "level": 2,
+      "score": 0.5828069
+    },
+    {
+      "id": "C26517878",
+      "display_name": "Key (lock)",
+      "level": 2,
+      "score": 0.52810895
+    },
+    {
+      "id": "C11045955",
+      "display_name": "ElGamal encryption",
+      "level": 4,
+      "score": 0.46585828
+    },
+    {
+      "id": "C81440476",
+      "display_name": "Apriori algorithm",
+      "level": 3,
+      "score": 0.42843586
+    },
+    {
+      "id": "C147224247",
+      "display_name": "Bloom filter",
+      "level": 2,
+      "score": 0.4166425
+    },
+    {
+      "id": "C120314980",
+      "display_name": "Distributed computing",
+      "level": 1,
+      "score": 0.36031628
+    },
+    {
+      "id": "C31258907",
+      "display_name": "Computer network",
+      "level": 1,
+      "score": 0.33410105
+    },
+    {
+      "id": "C203062551",
+      "display_name": "Public-key cryptography",
+      "level": 3,
+      "score": 0.25013995
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.1997799
+    },
+    {
+      "id": "C77088390",
+      "display_name": "Database",
+      "level": 1,
+      "score": 0.16309631
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C204787440",
+      "display_name": "Alternative medicine",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C142724271",
+      "display_name": "Pathology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C162324750",
+      "display_name": "Economics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C175444787",
+      "display_name": "Microeconomics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10764",
+      "display_name": "Privacy-Preserving Technologies in Data",
+      "score": 0.9996
+    },
+    {
+      "id": "T10538",
+      "display_name": "Data Mining Algorithms and Applications",
+      "score": 0.9977
+    },
+    {
+      "id": "T11652",
+      "display_name": "Imbalanced Data Classification Techniques",
+      "score": 0.997
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/iaw.2006.1652080",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:16:04.152203",
+  "source_database": "OpenAlex"
+}

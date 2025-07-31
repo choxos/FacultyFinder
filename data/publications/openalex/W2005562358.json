@@ -1,0 +1,258 @@
+{
+  "openalex_id": "W2005562358",
+  "doi": "https://doi.org/10.1080/10556780600795748",
+  "title": "Global convergence of the DY conjugate gradient method with Armijo line search for unconstrained optimization problems",
+  "abstract": "Generally, global convergence of the conjugate gradient methods for unconstrained optimization problems needs Wolfe line search or strong Wolfe line search. In this article, we propose a cautious DY conjugate gradient method and prove that this method with Armijo line search converges globally if the objective function has Lipschitz continuous gradients. We also present some preliminary numerical results to show the efficiency of the proposed method.",
+  "authors": [
+    {
+      "display_name": "Li Zhang",
+      "id": "A5100425518",
+      "orcid": "https://orcid.org/0000-0002-1617-5943",
+      "institutions": [
+        {
+          "id": "I56934997",
+          "display_name": "Changsha University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Li Zhang"
+    },
+    {
+      "display_name": "Weijun Zhou",
+      "id": "A5007686068",
+      "orcid": "https://orcid.org/0000-0002-1471-9644",
+      "institutions": [
+        {
+          "id": "I56934997",
+          "display_name": "Changsha University of Science and Technology",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Weijun Zhou"
+    },
+    {
+      "display_name": "Donghui Li",
+      "id": "A5108101461",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I16609230",
+          "display_name": "Hunan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Donghui Li"
+    }
+  ],
+  "publication_year": 2006,
+  "publication_date": "2006-06-01",
+  "type": "article",
+  "cited_by_count": 4,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S103047102",
+    "display_name": "Optimization methods & software",
+    "issn_l": "1026-7670",
+    "issn": [
+      "1026-7670",
+      "1029-4937",
+      "1055-6788"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320547"
+  },
+  "volume": "22",
+  "issue": "3",
+  "first_page": "511",
+  "last_page": "517",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C85522705",
+      "display_name": "Line search",
+      "level": 3,
+      "score": 0.89506936
+    },
+    {
+      "id": "C81184566",
+      "display_name": "Conjugate gradient method",
+      "level": 2,
+      "score": 0.8869296
+    },
+    {
+      "id": "C26362088",
+      "display_name": "Nonlinear conjugate gradient method",
+      "level": 4,
+      "score": 0.82030225
+    },
+    {
+      "id": "C22324862",
+      "display_name": "Lipschitz continuity",
+      "level": 2,
+      "score": 0.7687154
+    },
+    {
+      "id": "C2777303404",
+      "display_name": "Convergence (economics)",
+      "level": 2,
+      "score": 0.6618691
+    },
+    {
+      "id": "C198562538",
+      "display_name": "Derivation of the conjugate gradient method",
+      "level": 5,
+      "score": 0.64561665
+    },
+    {
+      "id": "C91394653",
+      "display_name": "Conjugate residual method",
+      "level": 4,
+      "score": 0.63961804
+    },
+    {
+      "id": "C126255220",
+      "display_name": "Mathematical optimization",
+      "level": 1,
+      "score": 0.61193174
+    },
+    {
+      "id": "C115680565",
+      "display_name": "Gradient method",
+      "level": 2,
+      "score": 0.580722
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.57933813
+    },
+    {
+      "id": "C198352243",
+      "display_name": "Line (geometry)",
+      "level": 2,
+      "score": 0.55515754
+    },
+    {
+      "id": "C28826006",
+      "display_name": "Applied mathematics",
+      "level": 1,
+      "score": 0.43930614
+    },
+    {
+      "id": "C153258448",
+      "display_name": "Gradient descent",
+      "level": 3,
+      "score": 0.4345391
+    },
+    {
+      "id": "C14036430",
+      "display_name": "Function (biology)",
+      "level": 2,
+      "score": 0.43224874
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.29863298
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.13622212
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.06648457
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.05097899
+    },
+    {
+      "id": "C50644808",
+      "display_name": "Artificial neural network",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C162324750",
+      "display_name": "Economics",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C178635117",
+      "display_name": "RADIUS",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C50522688",
+      "display_name": "Economic growth",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C38652104",
+      "display_name": "Computer security",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C78458016",
+      "display_name": "Evolutionary biology",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10963",
+      "display_name": "Advanced Optimization Algorithms Research",
+      "score": 0.9998
+    },
+    {
+      "id": "T12661",
+      "display_name": "Iterative Methods for Nonlinear Equations",
+      "score": 0.9948
+    },
+    {
+      "id": "T10545",
+      "display_name": "Optimization and Variational Analysis",
+      "score": 0.9877
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1080/10556780600795748",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T16:04:56.481062",
+  "source_database": "OpenAlex"
+}

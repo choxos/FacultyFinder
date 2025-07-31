@@ -1,0 +1,1047 @@
+{
+  "pmid": "24474739",
+  "uid": "24474739",
+  "title": "Mendelian randomization of blood lipids for coronary heart disease.",
+  "abstract": "AIMS: To investigate the causal role of high-density lipoprotein cholesterol (HDL-C) and triglycerides in coronary heart disease (CHD) using multiple instrumental variables for Mendelian randomization. METHODS AND RESULTS: We developed weighted allele scores based on single nucleotide polymorphisms (SNPs) with established associations with HDL-C, triglycerides, and low-density lipoprotein cholesterol (LDL-C). For each trait, we constructed two scores. The first was unrestricted, including all independent SNPs associated with the lipid trait identified from a prior meta-analysis (threshold P < 2 × 10(-6)); and the second a restricted score, filtered to remove any SNPs also associated with either of the other two lipid traits at P ≤ 0.01. Mendelian randomization meta-analyses were conducted in 17 studies including 62,199 participants and 12,099 CHD events. Both the unrestricted and restricted allele scores for LDL-C (42 and 19 SNPs, respectively) associated with CHD. For HDL-C, the unrestricted allele score (48 SNPs) was associated with CHD (OR: 0.53; 95% CI: 0.40, 0.70), per 1 mmol/L higher HDL-C, but neither the restricted allele score (19 SNPs; OR: 0.91; 95% CI: 0.42, 1.98) nor the unrestricted HDL-C allele score adjusted for triglycerides, LDL-C, or statin use (OR: 0.81; 95% CI: 0.44, 1.46) showed a robust association. For triglycerides, the unrestricted allele score (67 SNPs) and the restricted allele score (27 SNPs) were both associated with CHD (OR: 1.62; 95% CI: 1.24, 2.11 and 1.61; 95% CI: 1.00, 2.59, respectively) per 1-log unit increment. However, the unrestricted triglyceride score adjusted for HDL-C, LDL-C, and statin use gave an OR for CHD of 1.01 (95% CI: 0.59, 1.75). CONCLUSION: The genetic findings support a causal effect of triglycerides on CHD risk, but a causal role for HDL-C, though possible, remains less certain.",
+  "authors": [
+    {
+      "last_name": "Holmes",
+      "fore_name": "Michael V",
+      "initials": "MV",
+      "name": "Michael V Holmes",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK Division of Transplant Surgery, Perelman School of Medicine, University of Pennsylvania, 3400 Spruce St, Philadelphia, PA 19104, USA mvholmes@gmail.com."
+      ]
+    },
+    {
+      "last_name": "Asselbergs",
+      "fore_name": "Folkert W",
+      "initials": "FW",
+      "name": "Folkert W Asselbergs",
+      "affiliations": [
+        "Department of Cardiology, Division Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands Durrer Center for Cardiogenetic Research, ICIN-Netherlands Heart Institute, Utrecht, The Netherlands Institute of Cardiovascular Science, Faculty of Population Health Sciences, University College London, London, UK."
+      ]
+    },
+    {
+      "last_name": "Palmer",
+      "fore_name": "Tom M",
+      "initials": "TM",
+      "name": "Tom M Palmer",
+      "affiliations": [
+        "Division of Health Sciences, Warwick Medical School, University of Warwick, Coventry, UK."
+      ]
+    },
+    {
+      "last_name": "Drenos",
+      "fore_name": "Fotios",
+      "initials": "F",
+      "name": "Fotios Drenos",
+      "affiliations": [
+        "Centre for Cardiovascular Genetics, Institute of Cardiovascular Science, University College London, Rayne Building, London WC1E 6JF, UK MRC Integrative Epidemiology Unit, School of Social and Community Medicine, University of Bristol, Oakfield House, Oakfield Grove, Bristol BS8 2BN, UK."
+      ]
+    },
+    {
+      "last_name": "Lanktree",
+      "fore_name": "Matthew B",
+      "initials": "MB",
+      "name": "Matthew B Lanktree",
+      "affiliations": [
+        "Department of Medicine, McMaster University, Hamilton, ON, Canada L8S 4L8."
+      ]
+    },
+    {
+      "last_name": "Nelson",
+      "fore_name": "Christopher P",
+      "initials": "CP",
+      "name": "Christopher P Nelson",
+      "affiliations": [
+        "Department of Cardiovascular Sciences, University of Leicester, Leicester, UK NIHR Leicester Cardiovascular Biomedical Research Unit, Glenfield Hospital, Leicester, UK."
+      ]
+    },
+    {
+      "last_name": "Dale",
+      "fore_name": "Caroline E",
+      "initials": "CE",
+      "name": "Caroline E Dale",
+      "affiliations": [
+        "Faculty of Epidemiology and Population Health, London School of Hygiene and Tropical Medicine, Keppel Street, London WC1E 7HT, UK."
+      ]
+    },
+    {
+      "last_name": "Padmanabhan",
+      "fore_name": "Sandosh",
+      "initials": "S",
+      "name": "Sandosh Padmanabhan",
+      "affiliations": [
+        "Institute of Cardiovascular and Medical Sciences, University of Glasgow, 126 University Place, Glasgow G12 8TA, UK."
+      ]
+    },
+    {
+      "last_name": "Finan",
+      "fore_name": "Chris",
+      "initials": "C",
+      "name": "Chris Finan",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Swerdlow",
+      "fore_name": "Daniel I",
+      "initials": "DI",
+      "name": "Daniel I Swerdlow",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Tragante",
+      "fore_name": "Vinicius",
+      "initials": "V",
+      "name": "Vinicius Tragante",
+      "affiliations": [
+        "Department of Cardiology, Division Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands Department of Medical Genetics, Division of Biomedical Genetics, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "van Iperen",
+      "fore_name": "Erik P A",
+      "initials": "EP",
+      "name": "Erik P A van Iperen",
+      "affiliations": [
+        "Durrer Center for Cardiogenetic Research, ICIN-Netherlands Heart Institute, Utrecht, The Netherlands Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Academic Medical Center, Amsterdam, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Sivapalaratnam",
+      "fore_name": "Suthesh",
+      "initials": "S",
+      "name": "Suthesh Sivapalaratnam",
+      "affiliations": [
+        "Department of Vascular Medicine, Academic Medical Center, Amsterdam 1105 AZ, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Shah",
+      "fore_name": "Sonia",
+      "initials": "S",
+      "name": "Sonia Shah",
+      "affiliations": [
+        "Department of Genetics Environment and Evolution, UCL Genetics Institute, 2nd Floor, Darwin Building, Gower Street, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Elbers",
+      "fore_name": "Clara C",
+      "initials": "CC",
+      "name": "Clara C Elbers",
+      "affiliations": [
+        "Department of Medical Genetics, Division of Biomedical Genetics, University Medical Center Utrecht, Utrecht, The Netherlands Center for Applied Genomics, Abramson Research Center, The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Shah",
+      "fore_name": "Tina",
+      "initials": "T",
+      "name": "Tina Shah",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Engmann",
+      "fore_name": "Jorgen",
+      "initials": "J",
+      "name": "Jorgen Engmann",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Giambartolomei",
+      "fore_name": "Claudia",
+      "initials": "C",
+      "name": "Claudia Giambartolomei",
+      "affiliations": [
+        "Department of Genetics Environment and Evolution, UCL Genetics Institute, 2nd Floor, Darwin Building, Gower Street, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "White",
+      "fore_name": "Jon",
+      "initials": "J",
+      "name": "Jon White",
+      "affiliations": [
+        "Department of Genetics Environment and Evolution, UCL Genetics Institute, 2nd Floor, Darwin Building, Gower Street, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Zabaneh",
+      "fore_name": "Delilah",
+      "initials": "D",
+      "name": "Delilah Zabaneh",
+      "affiliations": [
+        "Department of Genetics Environment and Evolution, UCL Genetics Institute, 2nd Floor, Darwin Building, Gower Street, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Sofat",
+      "fore_name": "Reecha",
+      "initials": "R",
+      "name": "Reecha Sofat",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "McLachlan",
+      "fore_name": "Stela",
+      "initials": "S",
+      "name": "Stela McLachlan",
+      "affiliations": [
+        "Centre for Population Health Sciences, University of Edinburgh, Teviot Place, Edinburgh EH8 9AG, UK."
+      ]
+    },
+    {
+      "affiliations": []
+    },
+    {
+      "last_name": "Doevendans",
+      "fore_name": "Pieter A",
+      "initials": "PA",
+      "name": "Pieter A Doevendans",
+      "affiliations": [
+        "Department of Cardiology, Division Heart and Lungs, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Balmforth",
+      "fore_name": "Anthony J",
+      "initials": "AJ",
+      "name": "Anthony J Balmforth",
+      "affiliations": [
+        "Leeds Institute of Genetics, Health and Therapeutics, University of Leeds, Leeds, UK."
+      ]
+    },
+    {
+      "last_name": "Hall",
+      "fore_name": "Alistair S",
+      "initials": "AS",
+      "name": "Alistair S Hall",
+      "affiliations": [
+        "Leeds Institute of Genetics, Health and Therapeutics, University of Leeds, Leeds, UK."
+      ]
+    },
+    {
+      "last_name": "North",
+      "fore_name": "Kari E",
+      "initials": "KE",
+      "name": "Kari E North",
+      "affiliations": [
+        "Department of Epidemiology, School of Public Health, University of North Carolina at Chapel Hill, Chapel Hill, NC 27514, USA."
+      ]
+    },
+    {
+      "last_name": "Almoguera",
+      "fore_name": "Berta",
+      "initials": "B",
+      "name": "Berta Almoguera",
+      "affiliations": [
+        "Center for Applied Genomics, Abramson Research Center, The Children's Hospital of Philadelphia, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Hoogeveen",
+      "fore_name": "Ron C",
+      "initials": "RC",
+      "name": "Ron C Hoogeveen",
+      "affiliations": [
+        "Baylor College of Medicine, Department of Medicine, Division of Atherosclerosis and Vascular Medicine, Houston, TX 77030, USA."
+      ]
+    },
+    {
+      "last_name": "Cushman",
+      "fore_name": "Mary",
+      "initials": "M",
+      "name": "Mary Cushman",
+      "affiliations": [
+        "Department of Medicine, University of Vermont, 208 South Park Dr, Colchester, VT 05446, USA Department of Pathology, University of Vermont, 208 South Park Dr, Colchester, VT 05446, USA."
+      ]
+    },
+    {
+      "last_name": "Fornage",
+      "fore_name": "Myriam",
+      "initials": "M",
+      "name": "Myriam Fornage",
+      "affiliations": [
+        "The University of Texas Health Science Center at Houston, Houston, TX, USA."
+      ]
+    },
+    {
+      "last_name": "Patel",
+      "fore_name": "Sanjay R",
+      "initials": "SR",
+      "name": "Sanjay R Patel",
+      "affiliations": [
+        "Department of Medicine, Brigham and Women's Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Redline",
+      "fore_name": "Susan",
+      "initials": "S",
+      "name": "Susan Redline",
+      "affiliations": [
+        "Department of Medicine, Brigham and Women's Hospital, Boston, MA, USA."
+      ]
+    },
+    {
+      "last_name": "Siscovick",
+      "fore_name": "David S",
+      "initials": "DS",
+      "name": "David S Siscovick",
+      "affiliations": [
+        "Cardiovascular Health Research Unit, Department of Medicine, University of Washington, Seattle, WA, USA Department of Epidemiology, University of Washington, Seattle, WA, USA."
+      ]
+    },
+    {
+      "last_name": "Tsai",
+      "fore_name": "Michael Y",
+      "initials": "MY",
+      "name": "Michael Y Tsai",
+      "affiliations": [
+        "Department of Laboratory Medicine and Pathology, University of Minnesota."
+      ]
+    },
+    {
+      "last_name": "Karczewski",
+      "fore_name": "Konrad J",
+      "initials": "KJ",
+      "name": "Konrad J Karczewski",
+      "affiliations": [
+        "Department of Genetics, Stanford University School of Medicine, Stanford, CA 94305, USA."
+      ]
+    },
+    {
+      "last_name": "Hofker",
+      "fore_name": "Marten H",
+      "initials": "MH",
+      "name": "Marten H Hofker",
+      "affiliations": [
+        "Department Pathology and Medical Biology, Medical Biology Division, Molecular Genetics, University Medical Center Groningen and Groningen University, Groningen, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Verschuren",
+      "fore_name": "W Monique",
+      "initials": "WM",
+      "name": "W Monique Verschuren",
+      "affiliations": [
+        "Centre for Prevention and Health Services Research at National Institute for Public Health and the Environment, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Bots",
+      "fore_name": "Michiel L",
+      "initials": "ML",
+      "name": "Michiel L Bots",
+      "affiliations": [
+        "Julius Center for Health Sciences and Primary Care, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "van der Schouw",
+      "fore_name": "Yvonne T",
+      "initials": "YT",
+      "name": "Yvonne T van der Schouw",
+      "affiliations": [
+        "Julius Center for Health Sciences and Primary Care, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Melander",
+      "fore_name": "Olle",
+      "initials": "O",
+      "name": "Olle Melander",
+      "affiliations": [
+        "Lund University, Malmö, Sweden."
+      ]
+    },
+    {
+      "last_name": "Dominiczak",
+      "fore_name": "Anna F",
+      "initials": "AF",
+      "name": "Anna F Dominiczak",
+      "affiliations": [
+        "Institute of Cardiovascular and Medical Sciences, University of Glasgow, 126 University Place, Glasgow G12 8TA, UK."
+      ]
+    },
+    {
+      "last_name": "Morris",
+      "fore_name": "Richard",
+      "initials": "R",
+      "name": "Richard Morris",
+      "affiliations": [
+        "Department of Primary Care and Population Health, UCL, Royal Free Campus, Rowland Hill St, London, UK."
+      ]
+    },
+    {
+      "last_name": "Ben-Shlomo",
+      "fore_name": "Yoav",
+      "initials": "Y",
+      "name": "Yoav Ben-Shlomo",
+      "affiliations": [
+        "School of Social and Community Medicine, University of Bristol."
+      ]
+    },
+    {
+      "last_name": "Price",
+      "fore_name": "Jackie",
+      "initials": "J",
+      "name": "Jackie Price",
+      "affiliations": [
+        "Centre for Population Health Sciences, University of Edinburgh, Teviot Place, Edinburgh EH8 9AG, UK."
+      ]
+    },
+    {
+      "last_name": "Kumari",
+      "fore_name": "Meena",
+      "initials": "M",
+      "name": "Meena Kumari",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Baumert",
+      "fore_name": "Jens",
+      "initials": "J",
+      "name": "Jens Baumert",
+      "affiliations": [
+        "Institute of Epidemiology II, Helmholtz Zentrum München, German Research Center for Environmental Health, Neuherberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Peters",
+      "fore_name": "Annette",
+      "initials": "A",
+      "name": "Annette Peters",
+      "affiliations": [
+        "Institute of Epidemiology II, Helmholtz Zentrum München, German Research Center for Environmental Health, Neuherberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Thorand",
+      "fore_name": "Barbara",
+      "initials": "B",
+      "name": "Barbara Thorand",
+      "affiliations": [
+        "Institute of Epidemiology II, Helmholtz Zentrum München, German Research Center for Environmental Health, Neuherberg, Germany."
+      ]
+    },
+    {
+      "last_name": "Koenig",
+      "fore_name": "Wolfgang",
+      "initials": "W",
+      "name": "Wolfgang Koenig",
+      "affiliations": [
+        "Department of Internal Medicine II-Cardiology, University of Ulm Medical Center, Ulm, Germany."
+      ]
+    },
+    {
+      "last_name": "Gaunt",
+      "fore_name": "Tom R",
+      "initials": "TR",
+      "name": "Tom R Gaunt",
+      "affiliations": [
+        "MRC Integrative Epidemiology Unit, School of Social and Community Medicine, University of Bristol, Oakfield House, Oakfield Grove, Bristol BS8 2BN, UK."
+      ]
+    },
+    {
+      "last_name": "Humphries",
+      "fore_name": "Steve E",
+      "initials": "SE",
+      "name": "Steve E Humphries",
+      "affiliations": [
+        "Centre for Cardiovascular Genetics, Institute of Cardiovascular Science, University College London, Rayne Building, London WC1E 6JF, UK."
+      ]
+    },
+    {
+      "last_name": "Clarke",
+      "fore_name": "Robert",
+      "initials": "R",
+      "name": "Robert Clarke",
+      "affiliations": [
+        "Clinical Trial Service Unit and Epidemiological Studies Unit, Nuffield Department of Population Health, University of Oxford, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "Watkins",
+      "fore_name": "Hugh",
+      "initials": "H",
+      "name": "Hugh Watkins",
+      "affiliations": [
+        "Division of Cardiovascular Medicine, Radcliffe Department of Medicine, University of Oxford, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "Farrall",
+      "fore_name": "Martin",
+      "initials": "M",
+      "name": "Martin Farrall",
+      "affiliations": [
+        "Division of Cardiovascular Medicine, Radcliffe Department of Medicine, University of Oxford, Oxford, UK."
+      ]
+    },
+    {
+      "last_name": "Wilson",
+      "fore_name": "James G",
+      "initials": "JG",
+      "name": "James G Wilson",
+      "affiliations": [
+        "Department of Physiology and Biophysics, University of Mississippi Medical Center, Jackson, MS 39216, USA."
+      ]
+    },
+    {
+      "last_name": "Rich",
+      "fore_name": "Stephen S",
+      "initials": "SS",
+      "name": "Stephen S Rich",
+      "affiliations": [
+        "Center for Public Health Genomics, University of Virginia, Charlottesville, VA 22908, USA."
+      ]
+    },
+    {
+      "last_name": "de Bakker",
+      "fore_name": "Paul I W",
+      "initials": "PI",
+      "name": "Paul I W de Bakker",
+      "affiliations": [
+        "Department of Medical Genetics, Division of Biomedical Genetics, University Medical Center Utrecht, Utrecht, The Netherlands Julius Center for Health Sciences and Primary Care, University Medical Center Utrecht, Utrecht, The Netherlands."
+      ]
+    },
+    {
+      "last_name": "Lange",
+      "fore_name": "Leslie A",
+      "initials": "LA",
+      "name": "Leslie A Lange",
+      "affiliations": [
+        "Department of Genetics, University of North Carolina School of Medicine at Chapel Hill, Chapel Hill,NC27514, USA."
+      ]
+    },
+    {
+      "last_name": "Davey Smith",
+      "fore_name": "George",
+      "initials": "G",
+      "name": "George Davey Smith",
+      "affiliations": [
+        "MRC Integrative Epidemiology Unit, School of Social and Community Medicine, University of Bristol, Oakfield House, Oakfield Grove, Bristol BS8 2BN, UK."
+      ]
+    },
+    {
+      "last_name": "Reiner",
+      "fore_name": "Alex P",
+      "initials": "AP",
+      "name": "Alex P Reiner",
+      "affiliations": [
+        "Division of Public Health Sciences, Fred Hutchinson Cancer Research Center, Seattle, WA 98109, USA."
+      ]
+    },
+    {
+      "last_name": "Talmud",
+      "fore_name": "Philippa J",
+      "initials": "PJ",
+      "name": "Philippa J Talmud",
+      "affiliations": [
+        "Centre for Cardiovascular Genetics, Institute of Cardiovascular Science, University College London, Rayne Building, London WC1E 6JF, UK."
+      ]
+    },
+    {
+      "last_name": "Kivimäki",
+      "fore_name": "Mika",
+      "initials": "M",
+      "name": "Mika Kivimäki",
+      "affiliations": [
+        "Department of Epidemiology and Public Health, University College London, 1-19 Torrington Place, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Lawlor",
+      "fore_name": "Debbie A",
+      "initials": "DA",
+      "name": "Debbie A Lawlor",
+      "affiliations": [
+        "MRC Integrative Epidemiology Unit, School of Social and Community Medicine, University of Bristol, Oakfield House, Oakfield Grove, Bristol BS8 2BN, UK."
+      ]
+    },
+    {
+      "last_name": "Dudbridge",
+      "fore_name": "Frank",
+      "initials": "F",
+      "name": "Frank Dudbridge",
+      "affiliations": [
+        "Faculty of Epidemiology and Population Health, London School of Hygiene and Tropical Medicine, Keppel Street, London WC1E 7HT, UK."
+      ]
+    },
+    {
+      "last_name": "Samani",
+      "fore_name": "Nilesh J",
+      "initials": "NJ",
+      "name": "Nilesh J Samani",
+      "affiliations": [
+        "Department of Cardiovascular Sciences, University of Leicester, Leicester, UK NIHR Leicester Cardiovascular Biomedical Research Unit, Glenfield Hospital, Leicester, UK."
+      ]
+    },
+    {
+      "last_name": "Keating",
+      "fore_name": "Brendan J",
+      "initials": "BJ",
+      "name": "Brendan J Keating",
+      "affiliations": [
+        "Division of Transplant Surgery, Perelman School of Medicine, University of Pennsylvania, 3400 Spruce St, Philadelphia, PA 19104, USA Center for Applied Genomics, Abramson Research Center, The Children's Hospital of Philadelphia, Philadelphia, PA, USA Department of Paediatrics, School of Medicine, University of Pennsylvania, Philadelphia, PA, USA."
+      ]
+    },
+    {
+      "last_name": "Hingorani",
+      "fore_name": "Aroon D",
+      "initials": "AD",
+      "name": "Aroon D Hingorani",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK."
+      ]
+    },
+    {
+      "last_name": "Casas",
+      "fore_name": "Juan P",
+      "initials": "JP",
+      "name": "Juan P Casas",
+      "affiliations": [
+        "Genetic Epidemiology Group, Institute of Cardiovacular Science, Faculty of Population Healh Sciences, University College London, 1-19 Torrington Place, London WC1E 6BT, UK Faculty of Epidemiology and Population Health, London School of Hygiene and Tropical Medicine, Keppel Street, London WC1E 7HT, UK."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "European heart journal",
+    "iso_abbreviation": "Eur Heart J",
+    "issn": "1522-9645",
+    "issn_type": "Electronic",
+    "volume": "36",
+    "issue": "9",
+    "pub_year": "2015",
+    "pub_month": "Mar",
+    "pub_day": "01"
+  },
+  "start_page": "539",
+  "end_page": "550",
+  "pages": "539-50",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Meta-Analysis",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Case-Control Studies",
+    "Cholesterol, HDL",
+    "Coronary Artery Disease",
+    "Female",
+    "Gene Frequency",
+    "Genotype",
+    "Genotyping Techniques",
+    "Humans",
+    "Male",
+    "Mendelian Randomization Analysis",
+    "Middle Aged",
+    "Polymorphism, Single Nucleotide",
+    "Risk Assessment",
+    "Triglycerides"
+  ],
+  "article_ids": {
+    "pubmed": "24474739",
+    "pmc": "PMC4344957",
+    "doi": "10.1093/eurheartj/eht571",
+    "pii": "eht571"
+  },
+  "doi": "10.1093/eurheartj/eht571",
+  "pmc_id": "PMC4344957",
+  "dates": {
+    "completed": "2015-11-30",
+    "revised": "2025-06-02"
+  },
+  "chemicals": [
+    "Cholesterol, HDL",
+    "Triglycerides"
+  ],
+  "grants": [
+    {
+      "grant_id": "N01 HC095169",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HHSN268200960009C",
+      "agency": "PHS HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055020",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-55019",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "HL36310",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MC_UU_12013/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "CZB/4/672",
+      "agency": "Chief Scientist Office",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01 HC055016",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95162",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "RG/13/2/30098",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "RG/08/008/25291",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "33014",
+      "agency": "PHS HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "PG/13/66/30442",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01WH42129-32",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055019",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "R01 HL036310",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MR/K006215/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01-HC-55022",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055021",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "RR-024156",
+      "agency": "NCRR NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95163",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-55016",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95168",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01WH32100-2",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 WH022110",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "PG/07/131/24254",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "agency": "Department of Health",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "UL1 RR024156",
+      "agency": "NCRR NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "CH/98001",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MC_UU_12019/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01-HC-95159",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01WH32108-9",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055015",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95165",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-55021",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC095159",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01WH42107-26",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-55015",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95169",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01WH32122",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95164",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "090532",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01-HC-55020",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95160",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "RG 08/008",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "R01AG1764406S1",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "RG/07/005/23633",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01WH32105-6",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055018",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01WH32111-13",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01WH32118-32119",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "090532/Z/09/Z",
+      "agency": "Wellcome Trust",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "R01 AG017644",
+      "agency": "NIA NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MR/K006584/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MR/K013351/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01-HC-95161",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC055022",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "G0802432",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "RG/13/16/30528",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01-HC-55018",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95166",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01 HC065226",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "G1000718",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MC_UU_12013/5",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01WH32115",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "MR/L01629X/1",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01WH44221",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "PG/07/133/24260",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "MC_UU_12013/8",
+      "agency": "Medical Research Council",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01-HC-65226",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "RG/10/12/28456",
+      "agency": "British Heart Foundation",
+      "country": "United Kingdom"
+    },
+    {
+      "grant_id": "N01WH24152",
+      "agency": "WHI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "N01-HC-95167",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T14:34:45.703418",
+    "pmid": "24474739"
+  }
+}

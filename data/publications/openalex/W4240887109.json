@@ -1,0 +1,302 @@
+{
+  "openalex_id": "W4240887109",
+  "doi": "https://doi.org/10.21203/rs.3.rs-21134/v1",
+  "title": "Prognostic value of an autophagy-related gene expression signature for endometrial cancer patients",
+  "abstract": "<title>Abstract</title> Background : Autophagy is associated with cancer development. Autophagy-related genes play significant roles in endometrial cancer (EC), a major gynecological malignancy worldwide, but little was known about their value as prognostic markers. Here we evaluated the value of a prognostic signature based on autophagy-related genes for EC. Methods : First, various autophagy-related genes were obtained via the Human Autophagy Database and their expression profiles were downloaded from The Cancer Genome Atlas. Second, key prognostic autophagy-related genes were identified via univariat, LASSO, and multivariate Cox regression analyses. Finally, a risk score to predict the prognosis of EC was calculated and validated by using the test and the entire data sets. Besides, gene set enrichment and somatic mutation analyses were also used for these prognostic autophagy-related genes. Results : A total of 40 differentially expressed autophagy-related genes in EC were screened and five of them were prognosis-related (CDKN1B, DLC1, EIF4EBP1, ERBB2 and GRID1). A prognostic signature was constructed based on these five genes using the train set, which stratified EC patients into high-risk and low-risk groups (P&lt;0.05). In terms of overall survival, the analyses of the test set and the entire set yielded consistent results (test set: p &lt; 0.05; entire set: p &lt; 0.05). Time-dependent ROC analysis suggested that the risk score predicted EC prognosis accurately and independently (0.674 at 1 year, 0.712 at 3 years and 0.659 at 5 years). A nomogram with clinical utility was built. Patients in the high-risk group displayed distinct mutation signatures compared with those in the low-risk group. Gene set enrichment analysis revealed high risk score was associated with tumor initiation and progression associated pathways. Conclusions : Based on five autophagy-related genes (CDKN1B, DLC1, EIF4EBP1, ERBB2 and GRID1), our model can independently predict the OS of EC patients by combining molecular signature and clinical characteristics.* Hui Wang, Xiaoling Ma, and Jinhui Liu contributed equally to this work",
+  "authors": [
+    {
+      "display_name": "Hui Wang",
+      "id": "A5100460922",
+      "orcid": "https://orcid.org/0000-0003-2791-8981",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hui Wang"
+    },
+    {
+      "display_name": "Xiaoling Ma",
+      "id": "A5085478623",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        },
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoling Ma"
+    },
+    {
+      "display_name": "Jinhui Liu",
+      "id": "A5100766359",
+      "orcid": "https://orcid.org/0000-0001-8032-5099",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jinhui Liu"
+    },
+    {
+      "display_name": "Yicong Wan",
+      "id": "A5112554561",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yicong Wan"
+    },
+    {
+      "display_name": "Yi Jiang",
+      "id": "A5103256182",
+      "orcid": "https://orcid.org/0000-0001-9600-5065",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yi Jiang"
+    },
+    {
+      "display_name": "Yankai Xia",
+      "id": "A5066824693",
+      "orcid": "https://orcid.org/0000-0003-0484-4035",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Yankai Xia"
+    },
+    {
+      "display_name": "Wenjun Cheng",
+      "id": "A5032076072",
+      "orcid": "https://orcid.org/0000-0002-3872-4384",
+      "institutions": [
+        {
+          "id": "I83519826",
+          "display_name": "Nanjing Medical University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210152119",
+          "display_name": "Jiangsu Province Hospital",
+          "country_code": "CN",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wenjun Cheng"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-04-07",
+  "type": "preprint",
+  "cited_by_count": 0,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4306402450",
+    "display_name": "Research Square (Research Square)",
+    "issn_l": null,
+    "issn": null,
+    "type": "repository",
+    "host_organization": "https://openalex.org/I4210096694"
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": null,
+  "last_page": null,
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://www.researchsquare.com/article/rs-21134/v1.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C203522944",
+      "display_name": "Autophagy",
+      "level": 3,
+      "score": 0.8144046
+    },
+    {
+      "id": "C2779696439",
+      "display_name": "Signature (topology)",
+      "level": 2,
+      "score": 0.71770024
+    },
+    {
+      "id": "C2777088508",
+      "display_name": "Endometrial cancer",
+      "level": 3,
+      "score": 0.70839834
+    },
+    {
+      "id": "C2776291640",
+      "display_name": "Value (mathematics)",
+      "level": 2,
+      "score": 0.5829933
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.5551936
+    },
+    {
+      "id": "C2779733811",
+      "display_name": "Gene signature",
+      "level": 4,
+      "score": 0.5295506
+    },
+    {
+      "id": "C502942594",
+      "display_name": "Cancer research",
+      "level": 1,
+      "score": 0.49527302
+    },
+    {
+      "id": "C150194340",
+      "display_name": "Gene expression",
+      "level": 3,
+      "score": 0.44336954
+    },
+    {
+      "id": "C143998085",
+      "display_name": "Oncology",
+      "level": 1,
+      "score": 0.4077594
+    },
+    {
+      "id": "C126322002",
+      "display_name": "Internal medicine",
+      "level": 1,
+      "score": 0.3914866
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.3851328
+    },
+    {
+      "id": "C121608353",
+      "display_name": "Cancer",
+      "level": 2,
+      "score": 0.3849142
+    },
+    {
+      "id": "C71924100",
+      "display_name": "Medicine",
+      "level": 0,
+      "score": 0.3197048
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.2267032
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.12355617
+    },
+    {
+      "id": "C190283241",
+      "display_name": "Apoptosis",
+      "level": 2,
+      "score": 0.1018354
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.088968515
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10515",
+      "display_name": "Cancer-related molecular mechanisms research",
+      "score": 0.9999
+    },
+    {
+      "id": "T10269",
+      "display_name": "Epigenetics and DNA Methylation",
+      "score": 0.9998
+    },
+    {
+      "id": "T10062",
+      "display_name": "MicroRNA in disease regulation",
+      "score": 0.9996
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.21203/rs.3.rs-21134/v1",
+  "pdf_url": "https://www.researchsquare.com/article/rs-21134/v1.pdf",
+  "retrieved_date": "2025-07-30T15:05:08.499048",
+  "source_database": "OpenAlex"
+}

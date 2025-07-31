@@ -1,0 +1,425 @@
+{
+  "pmid": "29710329",
+  "uid": "29710329",
+  "title": "Chronic Meningitis Investigated via Metagenomic Next-Generation Sequencing.",
+  "abstract": "IMPORTANCE: Identifying infectious causes of subacute or chronic meningitis can be challenging. Enhanced, unbiased diagnostic approaches are needed. OBJECTIVE: To present a case series of patients with diagnostically challenging subacute or chronic meningitis using metagenomic next-generation sequencing (mNGS) of cerebrospinal fluid (CSF) supported by a statistical framework generated from mNGS of control samples from the environment and from patients who were noninfectious. DESIGN, SETTING, AND PARTICIPANTS: In this case series, mNGS data obtained from the CSF of 94 patients with noninfectious neuroinflammatory disorders and from 24 water and reagent control samples were used to develop and implement a weighted scoring metric based on z scores at the species and genus levels for both nucleotide and protein alignments to prioritize and rank the mNGS results. Total RNA was extracted for mNGS from the CSF of 7 participants with subacute or chronic meningitis who were recruited between September 2013 and March 2017 as part of a multicenter study of mNGS pathogen discovery among patients with suspected neuroinflammatory conditions. The neurologic infections identified by mNGS in these 7 participants represented a diverse array of pathogens. The patients were referred from the University of California, San Francisco Medical Center (n = 2), Zuckerberg San Francisco General Hospital and Trauma Center (n = 2), Cleveland Clinic (n = 1), University of Washington (n = 1), and Kaiser Permanente (n = 1). A weighted z score was used to filter out environmental contaminants and facilitate efficient data triage and analysis. MAIN OUTCOMES AND MEASURES: Pathogens identified by mNGS and the ability of a statistical model to prioritize, rank, and simplify mNGS results. RESULTS: The 7 participants ranged in age from 10 to 55 years, and 3 (43%) were female. A parasitic worm (Taenia solium, in 2 participants), a virus (HIV-1), and 4 fungi (Cryptococcus neoformans, Aspergillus oryzae, Histoplasma capsulatum, and Candida dubliniensis) were identified among the 7 participants by using mNGS. Evaluating mNGS data with a weighted z score-based scoring algorithm reduced the reported microbial taxa by a mean of 87% (range, 41%-99%) when taxa with a combined score of 0 or less were removed, effectively separating bona fide pathogen sequences from spurious environmental sequences so that, in each case, the causative pathogen was found within the top 2 scoring microbes identified using the algorithm. CONCLUSIONS AND RELEVANCE: Diverse microbial pathogens were identified by mNGS in the CSF of patients with diagnostically challenging subacute or chronic meningitis, including a case of subarachnoid neurocysticercosis that defied diagnosis for 1 year, the first reported case of CNS vasculitis caused by Aspergillus oryzae, and the fourth reported case of C dubliniensis meningitis. Prioritizing metagenomic data with a scoring algorithm greatly clarified data interpretation and highlighted the problem of attributing biological significance to organisms present in control samples used for metagenomic sequencing studies.",
+  "authors": [
+    {
+      "last_name": "Wilson",
+      "fore_name": "Michael R",
+      "initials": "MR",
+      "name": "Michael R Wilson",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "O'Donovan",
+      "fore_name": "Brian D",
+      "initials": "BD",
+      "name": "Brian D O'Donovan",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Gelfand",
+      "fore_name": "Jeffrey M",
+      "initials": "JM",
+      "name": "Jeffrey M Gelfand",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Sample",
+      "fore_name": "Hannah A",
+      "initials": "HA",
+      "name": "Hannah A Sample",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Chow",
+      "fore_name": "Felicia C",
+      "initials": "FC",
+      "name": "Felicia C Chow",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco.",
+        "Division of Infectious Diseases, Department of Medicine, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Betjemann",
+      "fore_name": "John P",
+      "initials": "JP",
+      "name": "John P Betjemann",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco.",
+        "Web Editor."
+      ]
+    },
+    {
+      "last_name": "Shah",
+      "fore_name": "Maulik P",
+      "initials": "MP",
+      "name": "Maulik P Shah",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Richie",
+      "fore_name": "Megan B",
+      "initials": "MB",
+      "name": "Megan B Richie",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco.",
+        "Images in Neurology Editor."
+      ]
+    },
+    {
+      "last_name": "Gorman",
+      "fore_name": "Mark P",
+      "initials": "MP",
+      "name": "Mark P Gorman",
+      "affiliations": [
+        "Department of Neurology, Boston Children's Hospital, Boston, Massachusetts."
+      ]
+    },
+    {
+      "last_name": "Hajj-Ali",
+      "fore_name": "Rula A",
+      "initials": "RA",
+      "name": "Rula A Hajj-Ali",
+      "affiliations": [
+        "Department of Rheumatology/Immunology, Cleveland Clinic, Cleveland, Ohio."
+      ]
+    },
+    {
+      "last_name": "Calabrese",
+      "fore_name": "Leonard H",
+      "initials": "LH",
+      "name": "Leonard H Calabrese",
+      "affiliations": [
+        "Department of Rheumatology/Immunology, Cleveland Clinic, Cleveland, Ohio."
+      ]
+    },
+    {
+      "last_name": "Zorn",
+      "fore_name": "Kelsey C",
+      "initials": "KC",
+      "name": "Kelsey C Zorn",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Chow",
+      "fore_name": "Eric D",
+      "initials": "ED",
+      "name": "Eric D Chow",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Greenlee",
+      "fore_name": "John E",
+      "initials": "JE",
+      "name": "John E Greenlee",
+      "affiliations": [
+        "Neurology Service, George E. Wahlen Department of Veterans Affairs Medical Center, Salt Lake City, Utah.",
+        "Department of Neurology, University of Utah Health, Salt Lake City."
+      ]
+    },
+    {
+      "last_name": "Blum",
+      "fore_name": "Jonathan H",
+      "initials": "JH",
+      "name": "Jonathan H Blum",
+      "affiliations": [
+        "Permanente Medical Group, Inc, Oakland, California."
+      ]
+    },
+    {
+      "last_name": "Green",
+      "fore_name": "Gary",
+      "initials": "G",
+      "name": "Gary Green",
+      "affiliations": [
+        "Permanente Medical Group, Inc, Oakland, California.",
+        "Kaiser Permanente Santa Rosa Medical Center, Santa Rosa, California."
+      ]
+    },
+    {
+      "last_name": "Khan",
+      "fore_name": "Lillian M",
+      "initials": "LM",
+      "name": "Lillian M Khan",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Banerji",
+      "fore_name": "Debarko",
+      "initials": "D",
+      "name": "Debarko Banerji",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Langelier",
+      "fore_name": "Charles",
+      "initials": "C",
+      "name": "Charles Langelier",
+      "affiliations": [
+        "Division of Infectious Diseases, Department of Medicine, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Bryson-Cahn",
+      "fore_name": "Chloe",
+      "initials": "C",
+      "name": "Chloe Bryson-Cahn",
+      "affiliations": [
+        "Division of Allergy and Infectious Diseases, Department of Medicine, School of Medicine, University of Washington, Seattle."
+      ]
+    },
+    {
+      "last_name": "Harrington",
+      "fore_name": "Whitney",
+      "initials": "W",
+      "name": "Whitney Harrington",
+      "affiliations": [
+        "Department of Pediatrics, University of Washington, Seattle.",
+        "Seattle Children's Hospital, Seattle, Washington."
+      ]
+    },
+    {
+      "last_name": "Lingappa",
+      "fore_name": "Jairam R",
+      "initials": "JR",
+      "name": "Jairam R Lingappa",
+      "affiliations": [
+        "Division of Allergy and Infectious Diseases, Department of Medicine, School of Medicine, University of Washington, Seattle.",
+        "Department of Pediatrics, University of Washington, Seattle.",
+        "Department of Pediatric Infectious Diseases, Seattle Children's Hospital, Seattle, Washington.",
+        "Department of Global Health, University of Washington, Seattle."
+      ]
+    },
+    {
+      "last_name": "Shanbhag",
+      "fore_name": "Niraj M",
+      "initials": "NM",
+      "name": "Niraj M Shanbhag",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Green",
+      "fore_name": "Ari J",
+      "initials": "AJ",
+      "name": "Ari J Green",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco.",
+        "Associate Editor."
+      ]
+    },
+    {
+      "last_name": "Brew",
+      "fore_name": "Bruce J",
+      "initials": "BJ",
+      "name": "Bruce J Brew",
+      "affiliations": [
+        "Department of Neurology, St Vincent's Hospital, Darlinghurst, New South Wales, Australia.",
+        "The University of New South Wales, Sydney, New South Wales, Australia."
+      ]
+    },
+    {
+      "last_name": "Soldatos",
+      "fore_name": "Ariane",
+      "initials": "A",
+      "name": "Ariane Soldatos",
+      "affiliations": [
+        "National Institute of Neurological Disorders and Stroke, National Institutes of Health, Department of Health and Human Services Bethesda, Maryland."
+      ]
+    },
+    {
+      "last_name": "Strnad",
+      "fore_name": "Luke",
+      "initials": "L",
+      "name": "Luke Strnad",
+      "affiliations": [
+        "Division of Infectious Diseases, Department of Medicine, Oregon Health and Science University, Portland."
+      ]
+    },
+    {
+      "last_name": "Doernberg",
+      "fore_name": "Sarah B",
+      "initials": "SB",
+      "name": "Sarah B Doernberg",
+      "affiliations": [
+        "Division of Infectious Diseases, Department of Medicine, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Jay",
+      "fore_name": "Cheryl A",
+      "initials": "CA",
+      "name": "Cheryl A Jay",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Douglas",
+      "fore_name": "Vanja",
+      "initials": "V",
+      "name": "Vanja Douglas",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco."
+      ]
+    },
+    {
+      "last_name": "Josephson",
+      "fore_name": "S Andrew",
+      "initials": "SA",
+      "name": "S Andrew Josephson",
+      "affiliations": [
+        "UCSF (University of California, San Francisco) Weill Institute for Neurosciences, San Francisco, California.",
+        "Department of Neurology, UCSF, San Francisco.",
+        "Editor."
+      ]
+    },
+    {
+      "last_name": "DeRisi",
+      "fore_name": "Joseph L",
+      "initials": "JL",
+      "name": "Joseph L DeRisi",
+      "affiliations": [
+        "Department of Biochemistry and Biophysics, UCSF, San Francisco.",
+        "Chan Zuckerberg Biohub, San Francisco, California."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "JAMA neurology",
+    "iso_abbreviation": "JAMA Neurol",
+    "issn": "2168-6157",
+    "issn_type": "Electronic",
+    "volume": "75",
+    "issue": "8",
+    "pub_year": "2018",
+    "pub_month": "Aug",
+    "pub_day": "01"
+  },
+  "start_page": "947",
+  "end_page": "955",
+  "pages": "947-955",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "keywords": [
+    "Adolescent",
+    "Adult",
+    "Animals",
+    "Aspergillus oryzae",
+    "Candida",
+    "Candidiasis",
+    "Child",
+    "Chronic Disease",
+    "Cryptococcus neoformans",
+    "Female",
+    "HIV Infections",
+    "HIV-1",
+    "High-Throughput Nucleotide Sequencing",
+    "Histoplasma",
+    "Histoplasmosis",
+    "Humans",
+    "Male",
+    "Meningitis",
+    "Meningitis, Cryptococcal",
+    "Metagenome",
+    "Metagenomics",
+    "Middle Aged",
+    "Neuroaspergillosis",
+    "Neurocysticercosis",
+    "Sequence Analysis, RNA",
+    "Taenia solium",
+    "Young Adult"
+  ],
+  "article_ids": {
+    "pubmed": "29710329",
+    "pmc": "PMC5933460",
+    "doi": "10.1001/jamaneurol.2018.0463",
+    "pii": "2678438"
+  },
+  "doi": "10.1001/jamaneurol.2018.0463",
+  "pmc_id": "PMC5933460",
+  "dates": {
+    "completed": "2019-10-17",
+    "revised": "2020-01-14"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "KL2 TR000143",
+      "agency": "NCATS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 GM067547",
+      "agency": "NIGMS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 AI007044",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 EB009383",
+      "agency": "NIBIB NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 AI007641",
+      "agency": "NIAID NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K08 NS096117",
+      "agency": "NINDS NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "K23 HL138461",
+      "agency": "NHLBI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:10:00.471206",
+    "pmid": "29710329"
+  }
+}

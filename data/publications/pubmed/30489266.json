@@ -1,0 +1,123 @@
+{
+  "pmid": "30489266",
+  "uid": "30489266",
+  "title": "Hyperspectral Tissue Image Segmentation Using Semi-Supervised NMF and Hierarchical Clustering.",
+  "abstract": "Hyperspectral imaging (HSI) of tissue samples in the mid-infrared (mid-IR) range provides spectro-chemical and tissue structure information at sub-cellular spatial resolution. Disease states can be directly assessed by analyzing the mid-IR spectra of different cell types (e.g., epithelial cells) and sub-cellular components (e.g., nuclei), provided that we can accurately classify the pixels belonging to these components. The challenge is to extract information from hundreds of noisy mid-IR bands at each pixel, where each band is not very informative in itself, making annotations of unstained tissue HSI images particularly tricky. Because the tissue structure is not necessarily identical between the two sections, only a few regions in unstained HSI image can be annotated with high confidence, even when serial (or adjacent) hematoxylin and eosin stained section is used as a visual guide. In order to completely use both labeled and unlabeled pixels in training images, we have developed an HSI pixel classification method that uses semi-supervised learning for both spectral dimension reduction and hierarchical pixel clustering. Compared to the supervised classifiers, the proposed method was able to account for the vast differences in the spectra of sub-cellular components of the same cell type and to achieve an F1 score of 71.18% on twofold cross-validation across 20 tissue images. To generate further interest in this promising modality, we have released our source code and also showed that disease classification is straightforward after HSI image segmentation.",
+  "authors": [
+    {
+      "last_name": "Kumar",
+      "fore_name": "Neeraj",
+      "initials": "N",
+      "name": "Neeraj Kumar",
+      "affiliations": []
+    },
+    {
+      "last_name": "Uppala",
+      "fore_name": "Phanikrishna",
+      "initials": "P",
+      "name": "Phanikrishna Uppala",
+      "affiliations": []
+    },
+    {
+      "last_name": "Duddu",
+      "fore_name": "Karthik",
+      "initials": "K",
+      "name": "Karthik Duddu",
+      "affiliations": []
+    },
+    {
+      "last_name": "Sreedhar",
+      "fore_name": "Hari",
+      "initials": "H",
+      "name": "Hari Sreedhar",
+      "affiliations": []
+    },
+    {
+      "last_name": "Varma",
+      "fore_name": "Vishal",
+      "initials": "V",
+      "name": "Vishal Varma",
+      "affiliations": []
+    },
+    {
+      "last_name": "Guzman",
+      "fore_name": "Grace",
+      "initials": "G",
+      "name": "Grace Guzman",
+      "affiliations": []
+    },
+    {
+      "last_name": "Walsh",
+      "fore_name": "Michael",
+      "initials": "M",
+      "name": "Michael Walsh",
+      "affiliations": []
+    },
+    {
+      "last_name": "Sethi",
+      "fore_name": "Amit",
+      "initials": "A",
+      "name": "Amit Sethi",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "IEEE transactions on medical imaging",
+    "iso_abbreviation": "IEEE Trans Med Imaging",
+    "issn": "1558-254X",
+    "issn_type": "Electronic",
+    "volume": "38",
+    "issue": "5",
+    "pub_year": "2019",
+    "pub_month": "May"
+  },
+  "start_page": "1304",
+  "end_page": "1313",
+  "pages": "1304-1313",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Cluster Analysis",
+    "Colon",
+    "Colonic Diseases",
+    "Humans",
+    "Image Interpretation, Computer-Assisted",
+    "Image Processing, Computer-Assisted",
+    "Optical Imaging",
+    "Spectrophotometry, Infrared",
+    "Supervised Machine Learning"
+  ],
+  "article_ids": {
+    "pubmed": "30489266",
+    "mid": "NIHMS1528663",
+    "pmc": "PMC6548328",
+    "doi": "10.1109/TMI.2018.2883301"
+  },
+  "doi": "10.1109/TMI.2018.2883301",
+  "pmc_id": "PMC6548328",
+  "dates": {
+    "completed": "2020-03-05",
+    "revised": "2024-01-27"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R25 CA057699",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "T32 CA057699",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:05:22.938343",
+    "pmid": "30489266"
+  }
+}

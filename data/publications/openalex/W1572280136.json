@@ -1,0 +1,661 @@
+{
+  "openalex_id": "W1572280136",
+  "doi": "https://doi.org/10.1002/2014jd022375",
+  "title": "Vertical structure and physical processes of the Madden‐Julian oscillation: Exploring key model physics in climate simulations",
+  "abstract": "Abstract Aimed at reducing deficiencies in representing the Madden‐Julian oscillation (MJO) in general circulation models (GCMs), a global model evaluation project on vertical structure and physical processes of the MJO was coordinated. In this paper, results from the climate simulation component of this project are reported. It is shown that the MJO remains a great challenge in these latest generation GCMs. The systematic eastward propagation of the MJO is only well simulated in about one fourth of the total participating models. The observed vertical westward tilt with altitude of the MJO is well simulated in good MJO models but not in the poor ones. Damped Kelvin wave responses to the east of convection in the lower troposphere could be responsible for the missing MJO preconditioning process in these poor MJO models. Several process‐oriented diagnostics were conducted to discriminate key processes for realistic MJO simulations. While large‐scale rainfall partition and low‐level mean zonal winds over the Indo‐Pacific in a model are not found to be closely associated with its MJO skill, two metrics, including the low‐level relative humidity difference between high‐ and low‐rain events and seasonal mean gross moist stability, exhibit statistically significant correlations with the MJO performance. It is further indicated that increased cloud‐radiative feedback tends to be associated with reduced amplitude of intraseasonal variability, which is incompatible with the radiative instability theory previously proposed for the MJO. Results in this study confirm that inclusion of air‐sea interaction can lead to significant improvement in simulating the MJO.",
+  "authors": [
+    {
+      "display_name": "Xianan Jiang",
+      "id": "A5056917017",
+      "orcid": "https://orcid.org/0000-0002-6010-0527",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xianan Jiang"
+    },
+    {
+      "display_name": "Duane E. Waliser",
+      "id": "A5007801035",
+      "orcid": "https://orcid.org/0000-0003-4603-0494",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Duane E. Waliser"
+    },
+    {
+      "display_name": "Prince Xavier",
+      "id": "A5005320269",
+      "orcid": "https://orcid.org/0000-0002-1381-384X",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Prince K. Xavier"
+    },
+    {
+      "display_name": "J. C. Petch",
+      "id": "A5079382554",
+      "orcid": "https://orcid.org/0000-0003-1476-5103",
+      "institutions": [
+        {
+          "id": "I1293035123",
+          "display_name": "Met Office",
+          "country_code": "GB",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jon Petch"
+    },
+    {
+      "display_name": "Nicholas P. Klingaman",
+      "id": "A5029434963",
+      "orcid": "https://orcid.org/0000-0002-2927-9303",
+      "institutions": [
+        {
+          "id": "I4210112368",
+          "display_name": "National Centre for Atmospheric Science",
+          "country_code": "GB",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Nicholas P. Klingaman"
+    },
+    {
+      "display_name": "Steven J. Woolnough",
+      "id": "A5028766777",
+      "orcid": "https://orcid.org/0000-0003-0500-8514",
+      "institutions": [
+        {
+          "id": "I4210112368",
+          "display_name": "National Centre for Atmospheric Science",
+          "country_code": "GB",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven J. Woolnough"
+    },
+    {
+      "display_name": "Bin Guan",
+      "id": "A5006175803",
+      "orcid": "https://orcid.org/0000-0002-8428-5984",
+      "institutions": [
+        {
+          "id": "I1334627681",
+          "display_name": "Jet Propulsion Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bin Guan"
+    },
+    {
+      "display_name": "Gilles Bellon",
+      "id": "A5050858968",
+      "orcid": "https://orcid.org/0000-0003-3981-1225",
+      "institutions": [
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I4210113730",
+          "display_name": "Météo-France",
+          "country_code": "FR",
+          "type": "other"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gilles Bellon"
+    },
+    {
+      "display_name": "Traute Crueger",
+      "id": "A5043933302",
+      "orcid": "https://orcid.org/0000-0003-1879-8498",
+      "institutions": [
+        {
+          "id": "I149899117",
+          "display_name": "Max Planck Society",
+          "country_code": "DE",
+          "type": "nonprofit"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Traute Crueger"
+    },
+    {
+      "display_name": "Charlotte A. DeMott",
+      "id": "A5065768777",
+      "orcid": "https://orcid.org/0000-0002-3975-1288",
+      "institutions": [
+        {
+          "id": "I92446798",
+          "display_name": "Colorado State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Charlotte DeMott"
+    },
+    {
+      "display_name": "Cécile Hannay",
+      "id": "A5016101442",
+      "orcid": "https://orcid.org/0000-0001-6363-6151",
+      "institutions": [
+        {
+          "id": "I107766831",
+          "display_name": "NSF National Center for Atmospheric Research",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cecile Hannay"
+    },
+    {
+      "display_name": "Hai Lin",
+      "id": "A5000578289",
+      "orcid": "https://orcid.org/0000-0003-4353-0426",
+      "institutions": [
+        {
+          "id": "I1342547582",
+          "display_name": "Environment and Climate Change Canada",
+          "country_code": "CA",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hai Lin"
+    },
+    {
+      "display_name": "Wenting Hu",
+      "id": "A5075824213",
+      "orcid": "https://orcid.org/0000-0003-1770-4680",
+      "institutions": [
+        {
+          "id": "I4210152758",
+          "display_name": "Institute of Atmospheric Physics",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I19820366",
+          "display_name": "Chinese Academy of Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wenting Hu"
+    },
+    {
+      "display_name": "Daehyun Kim",
+      "id": "A5100374565",
+      "orcid": "https://orcid.org/0000-0001-9233-2747",
+      "institutions": [
+        {
+          "id": "I152304114",
+          "display_name": "Lamont-Doherty Earth Observatory",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I78577930",
+          "display_name": "Columbia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Daehyun Kim"
+    },
+    {
+      "display_name": "Cara‐Lyn Lappen",
+      "id": "A5074850979",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I91045830",
+          "display_name": "Texas A&M University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cara‐Lyn Lappen"
+    },
+    {
+      "display_name": "Mong‐Ming Lu",
+      "id": "A5075213907",
+      "orcid": "https://orcid.org/0000-0003-1694-034X",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Mong‐Ming Lu"
+    },
+    {
+      "display_name": "Hsi‐Yen Ma",
+      "id": "A5065446464",
+      "orcid": "https://orcid.org/0000-0002-9628-1278",
+      "institutions": [
+        {
+          "id": "I1282311441",
+          "display_name": "Lawrence Livermore National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hsi‐Yen Ma"
+    },
+    {
+      "display_name": "Tomoki Miyakawa",
+      "id": "A5052952354",
+      "orcid": "https://orcid.org/0000-0001-8465-1967",
+      "institutions": [
+        {
+          "id": "I1315852903",
+          "display_name": "Japan Agency for Marine-Earth Science and Technology",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tomoki Miyakawa"
+    },
+    {
+      "display_name": "James A. Ridout",
+      "id": "A5045996746",
+      "orcid": "https://orcid.org/0000-0003-4790-7059",
+      "institutions": [
+        {
+          "id": "I1288214837",
+          "display_name": "United States Naval Research Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "James A. Ridout"
+    },
+    {
+      "display_name": "Siegfried D. Schubert",
+      "id": "A5049082888",
+      "orcid": "https://orcid.org/0000-0002-3667-1071",
+      "institutions": [
+        {
+          "id": "I1306266525",
+          "display_name": "Goddard Space Flight Center",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Siegfried D. Schubert"
+    },
+    {
+      "display_name": "John Scinocca",
+      "id": "A5057168744",
+      "orcid": "https://orcid.org/0000-0003-2968-9094",
+      "institutions": [
+        {
+          "id": "I1342547582",
+          "display_name": "Environment and Climate Change Canada",
+          "country_code": "CA",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "John Scinocca"
+    },
+    {
+      "display_name": "Kyong‐Hwan Seo",
+      "id": "A5054143947",
+      "orcid": "https://orcid.org/0000-0001-6305-5488",
+      "institutions": [
+        {
+          "id": "I4921948",
+          "display_name": "Pusan National University",
+          "country_code": "KR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kyong‐Hwan Seo"
+    },
+    {
+      "display_name": "Eiki Shindo",
+      "id": "A5081251765",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4388446413",
+          "display_name": "Meteorological Research Institute",
+          "country_code": null,
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Eiki Shindo"
+    },
+    {
+      "display_name": "Xiaoliang Song",
+      "id": "A5102852586",
+      "orcid": "https://orcid.org/0000-0003-3113-969X",
+      "institutions": [
+        {
+          "id": "I150209017",
+          "display_name": "Scripps Institution of Oceanography",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoliang Song"
+    },
+    {
+      "display_name": "Cristiana Stan",
+      "id": "A5054244067",
+      "orcid": "https://orcid.org/0000-0002-0076-0574",
+      "institutions": [
+        {
+          "id": "I162714631",
+          "display_name": "George Mason University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cristiana Stan"
+    },
+    {
+      "display_name": "Wan‐Ling Tseng",
+      "id": "A5004643490",
+      "orcid": "https://orcid.org/0000-0002-6644-9965",
+      "institutions": [
+        {
+          "id": "I84653119",
+          "display_name": "Academia Sinica",
+          "country_code": "TW",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wan‐Ling Tseng"
+    },
+    {
+      "display_name": "Wanqiu Wang",
+      "id": "A5080243451",
+      "orcid": "https://orcid.org/0000-0001-5697-3811",
+      "institutions": [
+        {
+          "id": "I1308126019",
+          "display_name": "National Oceanic and Atmospheric Administration",
+          "country_code": "US",
+          "type": "government"
+        },
+        {
+          "id": "I4387930221",
+          "display_name": "NOAA Climate Prediction Center",
+          "country_code": null,
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wanqiu Wang"
+    },
+    {
+      "display_name": "Tongwen Wu",
+      "id": "A5037461390",
+      "orcid": "https://orcid.org/0000-0001-5187-9121",
+      "institutions": [
+        {
+          "id": "I141301092",
+          "display_name": "China Meteorological Administration",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tongwen Wu"
+    },
+    {
+      "display_name": "Xiaoqing Wu",
+      "id": "A5037095156",
+      "orcid": "https://orcid.org/0000-0001-8341-2120",
+      "institutions": [
+        {
+          "id": "I173911158",
+          "display_name": "Iowa State University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoqing Wu"
+    },
+    {
+      "display_name": "Klaus Wyser",
+      "id": "A5072426522",
+      "orcid": "https://orcid.org/0000-0001-9752-3454",
+      "institutions": [
+        {
+          "id": "I1293302089",
+          "display_name": "Swedish Meteorological and Hydrological Institute",
+          "country_code": "SE",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Klaus Wyser"
+    },
+    {
+      "display_name": "Guang J. Zhang",
+      "id": "A5029891206",
+      "orcid": "https://orcid.org/0000-0002-9712-5226",
+      "institutions": [
+        {
+          "id": "I150209017",
+          "display_name": "Scripps Institution of Oceanography",
+          "country_code": "US",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guang J. Zhang"
+    },
+    {
+      "display_name": "Hongyan Zhu",
+      "id": "A5101847788",
+      "orcid": "https://orcid.org/0000-0002-9824-3347",
+      "institutions": [
+        {
+          "id": "I1286406326",
+          "display_name": "Bureau of Meteorology",
+          "country_code": "AU",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hongyan Zhu"
+    }
+  ],
+  "publication_year": 2015,
+  "publication_date": "2015-04-10",
+  "type": "article",
+  "cited_by_count": 361,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210205282",
+    "display_name": "Journal of Geophysical Research Atmospheres",
+    "issn_l": "2169-897X",
+    "issn": [
+      "2169-897X",
+      "2169-8996"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "120",
+  "issue": "10",
+  "first_page": "4718",
+  "last_page": "4748",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://doi.org/10.1002/2014jd022375",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C117381296",
+      "display_name": "Madden–Julian oscillation",
+      "level": 3,
+      "score": 0.99097407
+    },
+    {
+      "id": "C49204034",
+      "display_name": "Climatology",
+      "level": 1,
+      "score": 0.77296406
+    },
+    {
+      "id": "C9075549",
+      "display_name": "Troposphere",
+      "level": 2,
+      "score": 0.5632663
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.5094002
+    },
+    {
+      "id": "C168754636",
+      "display_name": "Climate model",
+      "level": 3,
+      "score": 0.4683463
+    },
+    {
+      "id": "C10899652",
+      "display_name": "Convection",
+      "level": 2,
+      "score": 0.46778095
+    },
+    {
+      "id": "C2778439541",
+      "display_name": "Oscillation (cell signaling)",
+      "level": 2,
+      "score": 0.44514108
+    },
+    {
+      "id": "C91586092",
+      "display_name": "Atmospheric sciences",
+      "level": 1,
+      "score": 0.4387044
+    },
+    {
+      "id": "C74902906",
+      "display_name": "Radiative transfer",
+      "level": 2,
+      "score": 0.41991508
+    },
+    {
+      "id": "C153294291",
+      "display_name": "Meteorology",
+      "level": 1,
+      "score": 0.35421336
+    },
+    {
+      "id": "C127313418",
+      "display_name": "Geology",
+      "level": 0,
+      "score": 0.2819494
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.14638478
+    },
+    {
+      "id": "C132651083",
+      "display_name": "Climate change",
+      "level": 2,
+      "score": 0.14371818
+    },
+    {
+      "id": "C111368507",
+      "display_name": "Oceanography",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10029",
+      "display_name": "Climate variability and models",
+      "score": 0.9999
+    },
+    {
+      "id": "T10075",
+      "display_name": "Atmospheric chemistry and aerosols",
+      "score": 0.9961
+    },
+    {
+      "id": "T11320",
+      "display_name": "Atmospheric Ozone and Climate",
+      "score": 0.9953
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1002/2014jd022375",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:05:44.636574",
+  "source_database": "OpenAlex"
+}

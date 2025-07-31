@@ -1,0 +1,519 @@
+{
+  "openalex_id": "W3125651113",
+  "doi": "https://doi.org/10.1111/j.1365-2966.2009.16180.x",
+  "title": "The GALEX Arecibo SDSS Survey - I. Gas fraction scaling relations of massive galaxies and first data release",
+  "abstract": "We introduce the GALEX Arecibo SDSS Survey (GASS), an on-going large program that is gathering high quality HI-line spectra using the Arecibo radio telescope for an unbiased sample of ~1000 galaxies with stellar masses greater than 10^10 Msun and redshifts 0.025<z<0.05, selected from the SDSS spectroscopic and GALEX imaging surveys. The galaxies are observed until detected or until a low gas mass fraction limit (1.5-5%) is reached. This paper presents the first Data Release, consisting of ~20% of the final GASS sample. We use this data set to explore the main scaling relations of HI gas fraction with galaxy structure and NUV-r colour. A large fraction (~60%) of the galaxies in our sample are detected in HI. We find that the atomic gas fraction decreases strongly with stellar mass, stellar surface mass density and NUV-r colour, but is only weakly correlated with galaxy bulge-to-disk ratio (as measured by the concentration index of the r-band light). We also find that the fraction of galaxies with significant (more than a few percent) HI decreases sharply above a characteristic stellar surface mass density of 10^8.5 Msun kpc^-2. The fraction of gas-rich galaxies decreases much more smoothly with stellar mass. One of the key goals of GASS is to identify and quantify the incidence of galaxies that are transitioning between the blue, star-forming cloud and the red sequence of passively-evolving galaxies. Likely transition candidates can be identified as outliers from the mean scaling relations between gas fraction and other galaxy properties. [abridged]",
+  "authors": [
+    {
+      "display_name": "Barbara Catinella",
+      "id": "A5042798740",
+      "orcid": "https://orcid.org/0000-0002-7625-562X",
+      "institutions": [
+        {
+          "id": "I4210103661",
+          "display_name": "Max Planck Institute for Astrophysics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Barbara Catinella"
+    },
+    {
+      "display_name": "David Schiminovich",
+      "id": "A5107048470",
+      "orcid": "https://orcid.org/0000-0003-2666-4430",
+      "institutions": [
+        {
+          "id": "I78577930",
+          "display_name": "Columbia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David Schiminovich"
+    },
+    {
+      "display_name": "Guinevere Kauffmann",
+      "id": "A5052111945",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210103661",
+          "display_name": "Max Planck Institute for Astrophysics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Guinevere Kauffmann"
+    },
+    {
+      "display_name": "Silvia Fabello",
+      "id": "A5110791772",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210103661",
+          "display_name": "Max Planck Institute for Astrophysics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Silvia Fabello"
+    },
+    {
+      "display_name": "Jing Wang",
+      "id": "A5100378560",
+      "orcid": "https://orcid.org/0000-0002-6593-8820",
+      "institutions": [
+        {
+          "id": "I126520041",
+          "display_name": "University of Science and Technology of China",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4210103661",
+          "display_name": "Max Planck Institute for Astrophysics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jing Wang"
+    },
+    {
+      "display_name": "Cameron Hummels",
+      "id": "A5075959544",
+      "orcid": "https://orcid.org/0000-0002-3817-8133",
+      "institutions": [
+        {
+          "id": "I78577930",
+          "display_name": "Columbia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Cameron Hummels"
+    },
+    {
+      "display_name": "Jenna Lemonias",
+      "id": "A5059390780",
+      "orcid": "https://orcid.org/0000-0002-0282-4404",
+      "institutions": [
+        {
+          "id": "I78577930",
+          "display_name": "Columbia University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jenna Lemonias"
+    },
+    {
+      "display_name": "Seán Moran",
+      "id": "A5062044148",
+      "orcid": "https://orcid.org/0000-0002-9194-5071",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Sean M. Moran"
+    },
+    {
+      "display_name": "R. Wu",
+      "id": "A5037773419",
+      "orcid": "https://orcid.org/0000-0002-3736-5391",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ronin Wu"
+    },
+    {
+      "display_name": "Riccardo Giovanelli",
+      "id": "A5102876851",
+      "orcid": "https://orcid.org/0000-0002-1641-0042",
+      "institutions": [
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Riccardo Giovanelli"
+    },
+    {
+      "display_name": "Martha P. Haynes",
+      "id": "A5024494537",
+      "orcid": "https://orcid.org/0000-0001-5334-5166",
+      "institutions": [
+        {
+          "id": "I205783295",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martha P. Haynes"
+    },
+    {
+      "display_name": "Timothy M. Heckman",
+      "id": "A5035116183",
+      "orcid": "https://orcid.org/0000-0001-6670-6370",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Timothy M. Heckman"
+    },
+    {
+      "display_name": "Antara Basu‐Zych",
+      "id": "A5019688846",
+      "orcid": "https://orcid.org/0000-0001-8525-4920",
+      "institutions": [
+        {
+          "id": "I1306266525",
+          "display_name": "Goddard Space Flight Center",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Antara R. Basu-Zych"
+    },
+    {
+      "display_name": "Michael R. Blanton",
+      "id": "A5071423709",
+      "orcid": "https://orcid.org/0000-0003-1641-6222",
+      "institutions": [
+        {
+          "id": "I57206974",
+          "display_name": "New York University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael R. Blanton"
+    },
+    {
+      "display_name": "J. Brinchmann",
+      "id": "A5001016126",
+      "orcid": "https://orcid.org/0000-0003-4359-8797",
+      "institutions": [
+        {
+          "id": "I121797337",
+          "display_name": "Leiden University",
+          "country_code": "NL",
+          "type": "funder"
+        },
+        {
+          "id": "I4210108577",
+          "display_name": "Centre for Astrophysics of the University of Porto",
+          "country_code": "PT",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jarle Brinchmann"
+    },
+    {
+      "display_name": "Tamás Budavári",
+      "id": "A5058636306",
+      "orcid": "https://orcid.org/0000-0002-7034-4621",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tamás Budavári"
+    },
+    {
+      "display_name": "Thiago S. Gonçalves",
+      "id": "A5027234818",
+      "orcid": "https://orcid.org/0000-0003-2374-366X",
+      "institutions": [
+        {
+          "id": "I122411786",
+          "display_name": "California Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Thiago Gonçalves"
+    },
+    {
+      "display_name": "Benjamin D. Johnson",
+      "id": "A5022008443",
+      "orcid": "https://orcid.org/0000-0002-9280-7594",
+      "institutions": [
+        {
+          "id": "I4210121240",
+          "display_name": "Institute of Astronomy",
+          "country_code": "RU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Benjamin D. Johnson"
+    },
+    {
+      "display_name": "Robert C. Kennicutt",
+      "id": "A5070970580",
+      "orcid": "https://orcid.org/0000-0001-5448-1821",
+      "institutions": [
+        {
+          "id": "I4210121240",
+          "display_name": "Institute of Astronomy",
+          "country_code": "RU",
+          "type": "facility"
+        },
+        {
+          "id": "I138006243",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Robert C. Kennicutt"
+    },
+    {
+      "display_name": "Barry F. Madore",
+      "id": "A5017671909",
+      "orcid": "https://orcid.org/0000-0002-1576-1676",
+      "institutions": [
+        {
+          "id": "I4210124388",
+          "display_name": "Carnegie Observatories",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Barry F. Madore"
+    },
+    {
+      "display_name": "Christopher Martin",
+      "id": "A5103362937",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I122411786",
+          "display_name": "California Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Christopher D. Martin"
+    },
+    {
+      "display_name": "R. Michael Rich",
+      "id": "A5047482798",
+      "orcid": "https://orcid.org/0000-0003-0427-8387",
+      "institutions": [
+        {
+          "id": "I161318765",
+          "display_name": "University of California, Los Angeles",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Michael R. Rich"
+    },
+    {
+      "display_name": "L. J. Tacconi",
+      "id": "A5087379508",
+      "orcid": "https://orcid.org/0000-0002-1485-9401",
+      "institutions": [
+        {
+          "id": "I4210091772",
+          "display_name": "Max Planck Institute for Extraterrestrial Physics",
+          "country_code": "DE",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Linda J. Tacconi"
+    },
+    {
+      "display_name": "David A. Thilker",
+      "id": "A5005258823",
+      "orcid": "https://orcid.org/0000-0002-8528-7340",
+      "institutions": [
+        {
+          "id": "I145311948",
+          "display_name": "Johns Hopkins University",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "David A. Thilker"
+    },
+    {
+      "display_name": "Vivienne Wild",
+      "id": "A5091398580",
+      "orcid": "https://orcid.org/0000-0002-8956-7024",
+      "institutions": [
+        {
+          "id": "I2801766991",
+          "display_name": "Institut d'Astrophysique de Paris",
+          "country_code": "FR",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Vivienne Wild"
+    },
+    {
+      "display_name": "Ted K. Wyder",
+      "id": "A5103469760",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I122411786",
+          "display_name": "California Institute of Technology",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Ted K. Wyder"
+    }
+  ],
+  "publication_year": 2010,
+  "publication_date": "2010-02-22",
+  "type": "article",
+  "cited_by_count": 301,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S195663288",
+    "display_name": "Monthly Notices of the Royal Astronomical Society",
+    "issn_l": "0035-8711",
+    "issn": [
+      "0035-8711",
+      "1365-8711",
+      "1365-2966"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310311648"
+  },
+  "volume": "403",
+  "issue": "2",
+  "first_page": "683",
+  "last_page": "708",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://academic.oup.com/mnras/article-pdf/403/2/683/17323923/mnras0403-0683.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.92061603
+    },
+    {
+      "id": "C44870925",
+      "display_name": "Astrophysics",
+      "level": 1,
+      "score": 0.81058156
+    },
+    {
+      "id": "C98444146",
+      "display_name": "Galaxy",
+      "level": 2,
+      "score": 0.6539837
+    },
+    {
+      "id": "C168589115",
+      "display_name": "Stellar mass",
+      "level": 4,
+      "score": 0.58412683
+    },
+    {
+      "id": "C33024259",
+      "display_name": "Redshift",
+      "level": 3,
+      "score": 0.51372707
+    },
+    {
+      "id": "C89108925",
+      "display_name": "Luminous infrared galaxy",
+      "level": 3,
+      "score": 0.5136735
+    },
+    {
+      "id": "C1276947",
+      "display_name": "Astronomy",
+      "level": 1,
+      "score": 0.48527214
+    },
+    {
+      "id": "C125857072",
+      "display_name": "Star formation",
+      "level": 3,
+      "score": 0.44576207
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10026",
+      "display_name": "Galaxies: Formation, Evolution, Phenomena",
+      "score": 0.9998
+    },
+    {
+      "id": "T12917",
+      "display_name": "Astronomy and Astrophysical Research",
+      "score": 0.9972
+    },
+    {
+      "id": "T13126",
+      "display_name": "Scientific Research and Discoveries",
+      "score": 0.991
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1111/j.1365-2966.2009.16180.x",
+  "pdf_url": "https://academic.oup.com/mnras/article-pdf/403/2/683/17323923/mnras0403-0683.pdf",
+  "retrieved_date": "2025-07-30T14:43:05.708191",
+  "source_database": "OpenAlex"
+}

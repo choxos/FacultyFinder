@@ -1,0 +1,149 @@
+{
+  "pmid": "40472422",
+  "uid": "40472422",
+  "title": "Unpaired multi-modal training and single-modal testing for detecting signs of endometriosis.",
+  "abstract": "Endometriosis is a serious multifocal condition that can involve various pelvic structures, with Pouch of Douglas (POD) obliteration being a significant clinical indicator for diagnosis. To circumvent the need for invasive diagnostic procedures like laparoscopy, research has increasingly focused on imaging-based methods such as transvaginal ultrasound (TVUS) and magnetic resonance imaging (MRI). The limited diagnostic accuracy achieved through manual interpretation of these imaging techniques has driven the development of automated classifiers that can effectively utilize both modalities. However, patients often undergo only one of these two examinations, resulting in unpaired data for training and testing POD obliteration classifiers, where TVUS models tend to be more accurate than MRI models, but TVUS scanning are more operator dependent. This prompts a crucial question: Can a model be trained with unpaired TVUS and MRI data to enhance the performance of a model exclusively trained with MRI, while maintaining the high accuracy of the model individually trained with TVUS? In this paper we aim to answer this question by proposing a novel multi-modal POD obliteration classifier that is trained with unpaired TVUS and MRI data and tested using either MRI or TVUS data. Our method is the first POD obliteration classifier that can flexibly take either the TVUS or MRI data, where the model automatically focuses on the uterus region within MRI data, eliminating the need for any manual intervention. Experiments conducted on our endometriosis dataset show that our method significantly improves POD obliteration classification accuracy using MRI from AUC=0.4755 (single-modal training and testing, without automatically focusing on the uterus region) to 0.8023 (unpaired multi-modal training and single modality MRI testing, with automatic uterus region detection), while maintaining the accuracy using TVUS with AUC=0.8921 (single modality TVUS testing using either an unpaired multi-modal training or a single-modality training).",
+  "authors": [
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuan",
+      "initials": "Y",
+      "name": "Yuan Zhang",
+      "affiliations": [
+        "Australian Institute for Machine Learning (AIML), The University of Adelaide, Adelaide, SA 5000, Australia. Electronic address: yuan.zhang01@adelaide.edu.au."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Hu",
+      "initials": "H",
+      "name": "Hu Wang",
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi, United Arab Emirates."
+      ]
+    },
+    {
+      "last_name": "Butler",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Butler",
+      "affiliations": [
+        "Centre for Vision, Speech and Signal Processing (CVSSP), University of Surrey, Guildford, GU2 7XH, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Smart",
+      "fore_name": "Brandon",
+      "initials": "B",
+      "name": "Brandon Smart",
+      "affiliations": [
+        "Active Vision Laboratory, Department of Engineering Science, University of Oxford, Oxford, OX1 3PJ, United Kingdom."
+      ]
+    },
+    {
+      "last_name": "Xie",
+      "fore_name": "Yutong",
+      "initials": "Y",
+      "name": "Yutong Xie",
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi, United Arab Emirates."
+      ]
+    },
+    {
+      "last_name": "To",
+      "fore_name": "Minh-Son",
+      "initials": "MS",
+      "name": "Minh-Son To",
+      "affiliations": [
+        "Flinders Health and Medical Research Institute, Flinders University, Bedford Park, SA 5042, Australia."
+      ]
+    },
+    {
+      "last_name": "Knox",
+      "fore_name": "Steven",
+      "initials": "S",
+      "name": "Steven Knox",
+      "affiliations": [
+        "Benson Radiology, Wayville, SA 5034, Australia."
+      ]
+    },
+    {
+      "last_name": "Condous",
+      "fore_name": "George",
+      "initials": "G",
+      "name": "George Condous",
+      "affiliations": [
+        "Omni Ultrasound and Gynaecological Care, Sydney, NSW 2000, Australia."
+      ]
+    },
+    {
+      "last_name": "Leonardi",
+      "fore_name": "Mathew",
+      "initials": "M",
+      "name": "Mathew Leonardi",
+      "affiliations": [
+        "Department of Obstetrics and Gynecology, McMaster University Medical Centre, Hamilton, ON L8N 3Z5, Canada."
+      ]
+    },
+    {
+      "last_name": "Avery",
+      "fore_name": "Jodie C",
+      "initials": "JC",
+      "name": "Jodie C Avery",
+      "affiliations": [
+        "Robinson Research Institute, The University of Adelaide, North Adelaide, SA 5005, Australia."
+      ]
+    },
+    {
+      "last_name": "Hull",
+      "fore_name": "M Louise",
+      "initials": "ML",
+      "name": "M Louise Hull",
+      "affiliations": [
+        "Robinson Research Institute, The University of Adelaide, North Adelaide, SA 5005, Australia."
+      ]
+    },
+    {
+      "last_name": "Carneiro",
+      "fore_name": "Gustavo",
+      "initials": "G",
+      "name": "Gustavo Carneiro",
+      "affiliations": [
+        "Australian Institute for Machine Learning (AIML), The University of Adelaide, Adelaide, SA 5000, Australia; Centre for Vision, Speech and Signal Processing (CVSSP), University of Surrey, Guildford, GU2 7XH, United Kingdom."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "Computerized medical imaging and graphics : the official journal of the Computerized Medical Imaging Society",
+    "iso_abbreviation": "Comput Med Imaging Graph",
+    "issn": "1879-0771",
+    "issn_type": "Electronic",
+    "volume": "124",
+    "pub_year": "2025",
+    "pub_month": "May",
+    "pub_day": "29"
+  },
+  "start_page": "102575",
+  "pages": "102575",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [],
+  "article_ids": {
+    "pubmed": "40472422",
+    "doi": "10.1016/j.compmedimag.2025.102575",
+    "pii": "S0895-6111(25)00084-9"
+  },
+  "doi": "10.1016/j.compmedimag.2025.102575",
+  "dates": {
+    "revised": "2025-06-05"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "current_affiliation",
+    "retrieved_date": "2025-07-30T15:13:34.566850",
+    "pmid": "40472422"
+  }
+}

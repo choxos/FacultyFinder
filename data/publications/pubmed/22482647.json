@@ -1,0 +1,94 @@
+{
+  "pmid": "22482647",
+  "uid": "22482647",
+  "title": "The use of a multiobjective evolutionary algorithm to increase flexibility in the search for better IMRT plans.",
+  "abstract": "PURPOSE: To evaluate how a more flexible and thorough multiobjective search of feasible IMRT plans affects performance in IMRT optimization. METHODS: A multiobjective evolutionary algorithm (MOEA) was used as a tool to investigate how expanding the search space to include a wider range of penalty functions affects the quality of the set of IMRT plans produced. The MOEA uses a population of IMRT plans to generate new IMRT plans through deterministic minimization of recombined penalty functions that are weighted sums of multiple, tissue-specific objective functions. The quality of the generated plans are judged by an independent set of nonconvex, clinically relevant decision criteria, and all dominated plans are eliminated. As this process repeats itself, better plans are produced so that the population of IMRT plans will approach the Pareto front. Three different approaches were used to explore the effects of expanding the search space. First, the evolutionary algorithm used genetic optimization principles to search by simultaneously optimizing both the weights and tissue-specific dose parameters in penalty functions. Second, penalty function parameters were individually optimized for each voxel in all organs at risk (OARs) in the MOEA. Finally, a heuristic voxel-specific improvement (VSI) algorithm that can be used on any IMRT plan was developed that incrementally improves voxel-specific penalty function parameters for all structures (OARs and targets). Different approaches were compared using the concept of domination comparison applied to the sets of plans obtained by multiobjective optimization. RESULTS: MOEA optimizations that simultaneously searched both importance weights and dose parameters generated sets of IMRT plans that were superior to sets of plans produced when either type of parameter was fixed for four example prostate plans. The amount of improvement increased with greater overlap between OARs and targets. Allowing the MOEA to search for voxel-specific penalty functions improved results for simple cases with three structures but did not improve results for a more complex case with seven structures. For this modification, the amount of improvement increased with less overlap between OARs and targets. The voxel-specific improvement algorithm improved results for all cases, and its clinical relevance was demonstrated in a complex prostate and a very complex head and neck case. CONCLUSIONS: Using an evolutionary algorithm as a tool, it was found that allowing more flexibility in the search space enhanced performance. The two strategies of (a) varying the weights and reference doses in the objective function and (b) removing the constraint of equal penalties for all voxels in a structure both generated sets of plans that dominated sets of plans considered to be \"Pareto optimal\" within the conventional, more limited search space. When considering voxel-specific objectives, the very large search space can lead to convergence problems in the MOEA for complex cases, but this is not an issue for the VSI algorithm.",
+  "authors": [
+    {
+      "last_name": "Holdsworth",
+      "fore_name": "Clay",
+      "initials": "C",
+      "name": "Clay Holdsworth",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington, Seattle, WA 98195-6043, USA. choldsw@u.washington.edu"
+      ]
+    },
+    {
+      "last_name": "Kim",
+      "fore_name": "Minsun",
+      "initials": "M",
+      "name": "Minsun Kim",
+      "affiliations": []
+    },
+    {
+      "last_name": "Liao",
+      "fore_name": "Jay",
+      "initials": "J",
+      "name": "Jay Liao",
+      "affiliations": []
+    },
+    {
+      "last_name": "Phillips",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Phillips",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Medical physics",
+    "iso_abbreviation": "Med Phys",
+    "issn": "0094-2405",
+    "issn_type": "Print",
+    "volume": "39",
+    "issue": "4",
+    "pub_year": "2012",
+    "pub_month": "Apr"
+  },
+  "start_page": "2261",
+  "end_page": "2274",
+  "pages": "2261-74",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+  ],
+  "keywords": [
+    "Algorithms",
+    "Radiometry",
+    "Radiotherapy Dosage",
+    "Radiotherapy Planning, Computer-Assisted",
+    "Radiotherapy, Conformal",
+    "Software",
+    "Software Validation"
+  ],
+  "article_ids": {
+    "pubmed": "22482647",
+    "pmc": "PMC3337665",
+    "doi": "10.1118/1.3697535"
+  },
+  "doi": "10.1118/1.3697535",
+  "pmc_id": "PMC3337665",
+  "dates": {
+    "completed": "2012-07-16",
+    "revised": "2021-10-21"
+  },
+  "chemicals": [],
+  "grants": [
+    {
+      "grant_id": "R01 CA112505",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    },
+    {
+      "grant_id": "1-R01-CA112505",
+      "agency": "NCI NIH HHS",
+      "country": "United States"
+    }
+  ],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:52:16.690675",
+    "pmid": "22482647"
+  }
+}

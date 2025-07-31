@@ -1,0 +1,118 @@
+{
+  "pmid": "30465543",
+  "uid": "30465543",
+  "title": "Autosegmentation of prostate anatomy for radiation treatment planning using deep decision forests of radiomic features.",
+  "abstract": "Machine learning for image segmentation could provide expedited clinic workflow and better standardization of contour delineation. We evaluated a new model using deep decision forests of image features in order to contour pelvic anatomy on treatment planning CTs. 193 CT scans from one UK and two US institutions for patients undergoing radiotherapy treatment for prostate cancer from 2012-2016 were anonymized. A decision forest autosegmentation model was trained on a random selection of 94 images from Institution 1 and tested on 99 scans from Institution 1, 2, and 3. The accuracy of model contours was measured with the Dice similarity coefficient (DSC) and the median slice-wise Hausdorff distance (MSHD) using clinical contours as the ground truth reference. Two comparison studies were performed. The accuracy of the model was compared to four commercial software packages on twenty randomly-selected images. Additionally, inter-observer variability (IOV) of contours between three radiation oncology experts and the original contours was evaluated on ten randomly-selected images. The highest median values of DSC across all institutions were 0.94-0.97 for bladder (with interquartile range, or IQR, of 0.92-0.98) and 0.96-0.97 (IQR 0.94-0.97) for femurs. Good agreement was seen for prostate, with median DSC 0.75-0.76 (IQR 0.67-0.82), and rectum, with median DSC 0.71-0.82 (IQR 0.63-0.87). The lowest median scores were 0.49-0.70 for seminal vesicles (IQR 0.31-0.79). For the commercial software comparison, model-based segmentation produced higher DSC than atlas-based segmentation, with decision forests producing highest DSC for all organs of interest. For the interobserver study, variability in DSC between observers was similar to the agreement between the model and ground truth. Deep decision forests of radiomic features can generate contours of pelvic anatomy with reasonable agreement with physician contours. This method could be useful for automated treatment planning, and autosegmentation may improve efficiency and increase standardization in the clinic.",
+  "authors": [
+    {
+      "last_name": "Macomber",
+      "fore_name": "Meghan W",
+      "initials": "MW",
+      "name": "Meghan W Macomber",
+      "affiliations": [
+        "Department of Radiation Oncology, University of Washington, Seattle, WA, United States of America."
+      ]
+    },
+    {
+      "last_name": "Phillips",
+      "fore_name": "Mark",
+      "initials": "M",
+      "name": "Mark Phillips",
+      "affiliations": []
+    },
+    {
+      "last_name": "Tarapov",
+      "fore_name": "Ivan",
+      "initials": "I",
+      "name": "Ivan Tarapov",
+      "affiliations": []
+    },
+    {
+      "last_name": "Jena",
+      "fore_name": "Rajesh",
+      "initials": "R",
+      "name": "Rajesh Jena",
+      "affiliations": []
+    },
+    {
+      "last_name": "Nori",
+      "fore_name": "Aditya",
+      "initials": "A",
+      "name": "Aditya Nori",
+      "affiliations": []
+    },
+    {
+      "last_name": "Carter",
+      "fore_name": "David",
+      "initials": "D",
+      "name": "David Carter",
+      "affiliations": []
+    },
+    {
+      "last_name": "Folgoc",
+      "fore_name": "Loic Le",
+      "initials": "LL",
+      "name": "Loic Le Folgoc",
+      "affiliations": []
+    },
+    {
+      "last_name": "Criminisi",
+      "fore_name": "Antonio",
+      "initials": "A",
+      "name": "Antonio Criminisi",
+      "affiliations": []
+    },
+    {
+      "last_name": "Nyflot",
+      "fore_name": "Matthew J",
+      "initials": "MJ",
+      "name": "Matthew J Nyflot",
+      "affiliations": []
+    }
+  ],
+  "journal": {
+    "title": "Physics in medicine and biology",
+    "iso_abbreviation": "Phys Med Biol",
+    "issn": "1361-6560",
+    "issn_type": "Electronic",
+    "volume": "63",
+    "issue": "23",
+    "pub_year": "2018",
+    "pub_month": "Nov",
+    "pub_day": "22"
+  },
+  "start_page": "235002",
+  "pages": "235002",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Image Processing, Computer-Assisted",
+    "Male",
+    "Models, Anatomic",
+    "Observer Variation",
+    "Pattern Recognition, Automated",
+    "Prostate",
+    "Prostatic Neoplasms",
+    "Radiotherapy Planning, Computer-Assisted",
+    "Tomography, X-Ray Computed"
+  ],
+  "article_ids": {
+    "pubmed": "30465543",
+    "doi": "10.1088/1361-6560/aaeaa4"
+  },
+  "doi": "10.1088/1361-6560/aaeaa4",
+  "dates": {
+    "completed": "2019-08-26",
+    "revised": "2019-08-26"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T14:52:16.718931",
+    "pmid": "30465543"
+  }
+}

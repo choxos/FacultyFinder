@@ -1,0 +1,160 @@
+{
+  "openalex_id": "W3200540572",
+  "doi": "https://doi.org/10.58997/ejde.2020.40",
+  "title": "Complex Ginzburg-Landau equations with a delayed nonlocal perturbation",
+  "abstract": "We consider an initial boundary value problem of the complex Ginzburg-Landau equation with some delayed feedback terms proposed for the control of chemical turbulence in reaction diffusion systems. We consider the equation in a bounded domain \\(\\Omega\\subset\\mathbb{R}^{N}\\) (\\(N\\leq3\\)), $$ \\frac{\\partial u}{\\partial t}-(1+i\\epsilon)\\Delta u +(1+i\\beta) | u| ^2u-(1-i\\omega) u=F(u(x,t-\\tau)) $$ for t&amp;gt;0, with $$ F(u(x,t-\\tau)) =e^{i\\chi_0}\\big\\{ \\frac{\\mu}{| \\Omega| }\\int_{\\Omega}u(x,t-\\tau) dx+\\nu u(x,t-\\tau) \\big\\} , $$ where \\(\\mu\\), \\(\\nu\\geq0\\), \\(\\tau&gt;0\\) but the rest of real parameters \\(\\epsilon\\), \\(\\beta\\), \\(\\omega\\) and \\(\\chi_0\\) do not have a prescribed sign. We prove the existence and uniqueness of weak solutions of problem for a range of initial data and parameters. When \\(\\nu=0\\) and \\(\\mu&gt;0\\) we prove that only the initial history of the integral on \\(\\Omega\\) of the unknown on \\((-\\tau,0)\\) and a standard initial condition at t=0 are required to determine univocally the existence of a solution. We prove several qualitative properties of solutions, such as the finite extinction time (or the zero exact controllability) and the finite speed of propagation, when the term \\(|u| ^2u\\) is replaced by \\(|u| ^{m-1}u\\), for some \\(m\\in(0,1)\\). We extend to the delayed case some previous results in the literature of complex equations without any delay.&#x0D; For more information see https://ejde.math.txstate.edu/Volumes/2020/40/abstr.html",
+  "authors": [
+    {
+      "display_name": "Jesús Ildefonso Díaz Díaz",
+      "id": "A5047548796",
+      "orcid": "https://orcid.org/0000-0003-1730-9509",
+      "institutions": [
+        {
+          "id": "I121748325",
+          "display_name": "Universidad Complutense de Madrid",
+          "country_code": "ES",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jesus Ildefonso Diaz"
+    },
+    {
+      "display_name": "Juan Francisco Padial",
+      "id": "A5037501479",
+      "orcid": "https://orcid.org/0000-0001-7092-3554",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": " Juan Francisco Padial"
+    },
+    {
+      "display_name": "J. Ignacio Tello",
+      "id": "A5017913354",
+      "orcid": "https://orcid.org/0000-0003-2671-7803",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Jose Ignacio Tello"
+    },
+    {
+      "display_name": "Lourdes Tello",
+      "id": "A5019035831",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Lourdes Tello"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-04-30",
+  "type": "article",
+  "cited_by_count": 3,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S2503630715",
+    "display_name": "Electronic Journal of Differential Equations",
+    "issn_l": "1072-6691",
+    "issn": [
+      "1072-6691"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310315821"
+  },
+  "volume": "2020",
+  "issue": "01-132",
+  "first_page": "40",
+  "last_page": "40",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "diamond",
+    "oa_url": "https://ejde-ojs-txstate.tdl.org/ejde/article/download/431/384",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2779557605",
+      "display_name": "Omega",
+      "level": 2,
+      "score": 0.65758586
+    },
+    {
+      "id": "C2777021972",
+      "display_name": "Uniqueness",
+      "level": 2,
+      "score": 0.6315464
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.5975934
+    },
+    {
+      "id": "C114614502",
+      "display_name": "Combinatorics",
+      "level": 1,
+      "score": 0.53930503
+    },
+    {
+      "id": "C34388435",
+      "display_name": "Bounded function",
+      "level": 2,
+      "score": 0.5197989
+    },
+    {
+      "id": "C37914503",
+      "display_name": "Mathematical physics",
+      "level": 1,
+      "score": 0.5107298
+    },
+    {
+      "id": "C36503486",
+      "display_name": "Domain (mathematical analysis)",
+      "level": 2,
+      "score": 0.44439405
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.36925
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.31284463
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.15136924
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11187",
+      "display_name": "Nonlinear Dynamics and Pattern Formation",
+      "score": 0.9992
+    },
+    {
+      "id": "T11110",
+      "display_name": "Stability and Controllability of Differential Equations",
+      "score": 0.9992
+    },
+    {
+      "id": "T12100",
+      "display_name": "Advanced Mathematical Modeling in Engineering",
+      "score": 0.9926
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.58997/ejde.2020.40",
+  "pdf_url": "https://ejde-ojs-txstate.tdl.org/ejde/article/download/431/384",
+  "retrieved_date": "2025-07-30T15:19:27.478186",
+  "source_database": "OpenAlex"
+}

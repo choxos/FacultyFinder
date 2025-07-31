@@ -1,0 +1,263 @@
+{
+  "openalex_id": "W2889115164",
+  "doi": "https://doi.org/10.1002/gepi.22149",
+  "title": "A robust method to estimate regional polygenic correlation under misspecified linkage disequilibrium structure",
+  "abstract": "Abstract Complex traits can share a substantial proportion of their polygenic heritability. However, genome‐wide polygenic correlations between pairs of traits can mask heterogeneity in their shared polygenic effects across loci. We propose a novel method (weighted maximum likelihood‐regional polygenic correlation [RPC]) to evaluate polygenic correlation between two complex traits in small genomic regions using summary association statistics. Our method tests for evidence that the polygenic effect at a given region affects two traits concurrently. We show through simulations that our method is well calibrated, powerful, and more robust to misspecification of linkage disequilibrium than other methods under a polygenic model. As small genomic regions are more likely to harbor specific genetic effects, our method is ideal to identify heterogeneity in shared polygenic correlation across regions. We illustrate the usefulness of our method by addressing two questions related to cardiometabolic traits. First, we explored how RPC can inform on the strong epidemiological association between high‐density lipoprotein cholesterol and coronary artery disease (CAD), suggesting a key role for triglycerides metabolism. Second, we investigated the potential role of PPARγ activators in the prevention of CAD. Our results provide a compelling argument that shared heritability between complex traits is highly heterogeneous across loci.",
+  "authors": [
+    {
+      "display_name": "Guillaume Paré",
+      "id": "A5054423486",
+      "orcid": "https://orcid.org/0000-0002-6795-4760",
+      "institutions": [
+        {
+          "id": "I2802834092",
+          "display_name": "Population Health Research Institute",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        },
+        {
+          "id": "I76442945",
+          "display_name": "Hamilton Health Sciences",
+          "country_code": "CA",
+          "type": "healthcare"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Guillaume Paré"
+    },
+    {
+      "display_name": "Shihong Mao",
+      "id": "A5014844415",
+      "orcid": "https://orcid.org/0000-0002-0881-2412",
+      "institutions": [
+        {
+          "id": "I2802834092",
+          "display_name": "Population Health Research Institute",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I76442945",
+          "display_name": "Hamilton Health Sciences",
+          "country_code": "CA",
+          "type": "healthcare"
+        },
+        {
+          "id": "I98251732",
+          "display_name": "McMaster University",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shihong Mao"
+    },
+    {
+      "display_name": "Wei Q. Deng",
+      "id": "A5068756985",
+      "orcid": "https://orcid.org/0000-0003-4212-2607",
+      "institutions": [
+        {
+          "id": "I185261750",
+          "display_name": "University of Toronto",
+          "country_code": "CA",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wei Q. Deng"
+    }
+  ],
+  "publication_year": 2018,
+  "publication_date": "2018-08-29",
+  "type": "article",
+  "cited_by_count": 3,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S136352176",
+    "display_name": "Genetic Epidemiology",
+    "issn_l": "0741-0395",
+    "issn": [
+      "0741-0395",
+      "1098-2272"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320595"
+  },
+  "volume": "42",
+  "issue": "7",
+  "first_page": "636",
+  "last_page": "647",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C35605836",
+      "display_name": "Linkage disequilibrium",
+      "level": 5,
+      "score": 0.78325677
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.7230395
+    },
+    {
+      "id": "C161890455",
+      "display_name": "Heritability",
+      "level": 2,
+      "score": 0.6981072
+    },
+    {
+      "id": "C84799019",
+      "display_name": "Polygene",
+      "level": 4,
+      "score": 0.63126737
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.5600383
+    },
+    {
+      "id": "C117220453",
+      "display_name": "Correlation",
+      "level": 2,
+      "score": 0.5421449
+    },
+    {
+      "id": "C70616004",
+      "display_name": "Genetic correlation",
+      "level": 4,
+      "score": 0.485063
+    },
+    {
+      "id": "C186413461",
+      "display_name": "Genetic association",
+      "level": 5,
+      "score": 0.47189033
+    },
+    {
+      "id": "C2910691881",
+      "display_name": "Multifactorial Inheritance",
+      "level": 5,
+      "score": 0.4609087
+    },
+    {
+      "id": "C106208931",
+      "display_name": "Genome-wide association study",
+      "level": 5,
+      "score": 0.45984283
+    },
+    {
+      "id": "C81941488",
+      "display_name": "Quantitative trait locus",
+      "level": 3,
+      "score": 0.43452153
+    },
+    {
+      "id": "C9287583",
+      "display_name": "Genetic architecture",
+      "level": 4,
+      "score": 0.42192048
+    },
+    {
+      "id": "C78458016",
+      "display_name": "Evolutionary biology",
+      "level": 1,
+      "score": 0.39364132
+    },
+    {
+      "id": "C70721500",
+      "display_name": "Computational biology",
+      "level": 1,
+      "score": 0.3329972
+    },
+    {
+      "id": "C68873052",
+      "display_name": "Genetic variation",
+      "level": 3,
+      "score": 0.24597114
+    },
+    {
+      "id": "C197754878",
+      "display_name": "Haplotype",
+      "level": 4,
+      "score": 0.1748676
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.16715151
+    },
+    {
+      "id": "C180754005",
+      "display_name": "Allele",
+      "level": 3,
+      "score": 0.16519988
+    },
+    {
+      "id": "C153209595",
+      "display_name": "Single-nucleotide polymorphism",
+      "level": 4,
+      "score": 0.14502496
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.11761269
+    },
+    {
+      "id": "C135763542",
+      "display_name": "Genotype",
+      "level": 3,
+      "score": 0.09451744
+    },
+    {
+      "id": "C2524010",
+      "display_name": "Geometry",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10261",
+      "display_name": "Genetic Associations and Epidemiology",
+      "score": 0.9988
+    },
+    {
+      "id": "T11072",
+      "display_name": "Peroxisome Proliferator-Activated Receptors",
+      "score": 0.998
+    },
+    {
+      "id": "T11468",
+      "display_name": "Genetic Mapping and Diversity in Plants and Animals",
+      "score": 0.9977
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1002/gepi.22149",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:25:18.529519",
+  "source_database": "OpenAlex"
+}

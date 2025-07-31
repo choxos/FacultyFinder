@@ -1,0 +1,323 @@
+{
+  "openalex_id": "W4389523924",
+  "doi": "https://doi.org/10.18653/v1/2023.emnlp-demo.48",
+  "title": "CoLLiE: Collaborative Training of Large Language Models in an Efficient Way",
+  "abstract": "Kai Lv, Shuo Zhang, Tianle Gu, Shuhao Xing, Jiawei Hong, Keyu Chen, Xiaoran Liu, Yuqing Yang, Honglin Guo, Tengxiao Liu, Yu Sun, Qipeng Guo, Hang Yan, Xipeng Qiu. Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: System Demonstrations. 2023.",
+  "authors": [
+    {
+      "display_name": "Kai Lv",
+      "id": "A5111114902",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Kai Lv"
+    },
+    {
+      "display_name": "Shuo Zhang",
+      "id": "A5100379616",
+      "orcid": "https://orcid.org/0000-0003-4622-0669",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shuo Zhang"
+    },
+    {
+      "display_name": "Tianle Gu",
+      "id": "A5104211449",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4391012619",
+          "display_name": "Shanghai Artificial Intelligence Laboratory",
+          "country_code": null,
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tianle Gu"
+    },
+    {
+      "display_name": "Shuhao Xing",
+      "id": "A5108902766",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shuhao Xing"
+    },
+    {
+      "display_name": "Jiawei Hong",
+      "id": "A5090118088",
+      "orcid": "https://orcid.org/0000-0002-7934-5145",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jiawei Hong"
+    },
+    {
+      "display_name": "Keyu Chen",
+      "id": "A5101430780",
+      "orcid": "https://orcid.org/0000-0003-0808-2533",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Keyu Chen"
+    },
+    {
+      "display_name": "Xiaoran Liu",
+      "id": "A5100733444",
+      "orcid": "https://orcid.org/0000-0002-8883-1591",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoran Liu"
+    },
+    {
+      "display_name": "Yuqing Yang",
+      "id": "A5101421201",
+      "orcid": "https://orcid.org/0000-0003-3518-5212",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yuqing Yang"
+    },
+    {
+      "display_name": "Honglin Guo",
+      "id": "A5101889812",
+      "orcid": "https://orcid.org/0000-0003-1933-0301",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Honglin Guo"
+    },
+    {
+      "display_name": "Tengxiao Liu",
+      "id": "A5008056255",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "Tengxiao Liu"
+    },
+    {
+      "display_name": "Yu Sun",
+      "id": "A5101656209",
+      "orcid": "https://orcid.org/0000-0002-2823-8251",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yu Sun"
+    },
+    {
+      "display_name": "Qipeng Guo",
+      "id": "A5101481141",
+      "orcid": "https://orcid.org/0000-0002-8805-8789",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qipeng Guo"
+    },
+    {
+      "display_name": "Hang Yan",
+      "id": "A5100856129",
+      "orcid": "https://orcid.org/0009-0001-5600-2748",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        },
+        {
+          "id": "I4391012619",
+          "display_name": "Shanghai Artificial Intelligence Laboratory",
+          "country_code": null,
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hang Yan"
+    },
+    {
+      "display_name": "Xipeng Qiu",
+      "id": "A5044665993",
+      "orcid": "https://orcid.org/0000-0001-7163-5247",
+      "institutions": [
+        {
+          "id": "I24943067",
+          "display_name": "Fudan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xipeng Qiu"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-01-01",
+  "type": "article",
+  "cited_by_count": 2,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "",
+    "display_name": "",
+    "issn_l": "",
+    "issn": [],
+    "type": "",
+    "host_organization": ""
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "527",
+  "last_page": "542",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://aclanthology.org/2023.emnlp-demo.48.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C2777045944",
+      "display_name": "Zhàng",
+      "level": 3,
+      "score": 0.7425001
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.59870887
+    },
+    {
+      "id": "C2776085556",
+      "display_name": "Chen",
+      "level": 2,
+      "score": 0.52452075
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.37717724
+    },
+    {
+      "id": "C204321447",
+      "display_name": "Natural language processing",
+      "level": 1,
+      "score": 0.37419248
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.12946132
+    },
+    {
+      "id": "C191935318",
+      "display_name": "China",
+      "level": 2,
+      "score": 0.11686051
+    },
+    {
+      "id": "C18903297",
+      "display_name": "Ecology",
+      "level": 1,
+      "score": 0.076231
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.06718007
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.057895094
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.9761
+    },
+    {
+      "id": "T10181",
+      "display_name": "Natural Language Processing Techniques",
+      "score": 0.9453
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.18653/v1/2023.emnlp-demo.48",
+  "pdf_url": "https://aclanthology.org/2023.emnlp-demo.48.pdf",
+  "retrieved_date": "2025-07-30T16:05:12.048309",
+  "source_database": "OpenAlex"
+}

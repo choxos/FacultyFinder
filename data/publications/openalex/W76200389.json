@@ -1,0 +1,200 @@
+{
+  "openalex_id": "W76200389",
+  "doi": "https://doi.org/10.1175/2006jamc1321.1",
+  "title": "A Validation of FEM3MP with Joint Urban 2003 Data",
+  "abstract": "Abstract Under the sponsorship of the U.S. Department of Energy and U.S. Department of Homeland Security, a computational fluid dynamics (CFD) model for simulating airflow and dispersion of chemical/biological agents released in urban areas has recently been developed. This model, the Finite Element Model in 3-Dimensions and Massively Parallelized (FEM3MP), is based on solving the three-dimensional, time-dependent Navier–Stokes equations with appropriate physics submodels on massively parallel computer platforms. It employs finite-element discretization for effective treatment of complex geometries and a semi-implicit projection scheme for efficient time integration. A simplified CFD approach, using both explicitly resolved and virtual buildings, was implemented to improve further the model’s efficiency. Results from our model are continuously being verified against measured data from wind-tunnel and field studies. Herein, this model is further evaluated using observed data from intensive operation periods (IOP) 3 and 9 of the Joint Urban 2003 field study conducted in Oklahoma City, Oklahoma, in July 2003. The model simulations of wind and concentration fields in the near and intermediate regions, as well as profiles of wind speed, wind direction, friction velocity, and turbulent kinetic energy (TKE) in the urban wake region, are generally consistent with and compared reasonably well to field observations. In addition, this model was able to reproduce the observed split plume of IOP 3 and the end vortices along Park Avenue in IOP 9. The dispersion results and TKE profiles at the crane station indicate that the effects of convective mixing are relatively important for the daytime release of IOP 3 but that the stable effects are relatively unimportant for the nighttime release of IOP 9. Results of this study also suggest that the simplified CFD approach implemented in FEM3MP can be a cost-effective tool for simulating urban dispersion problems.",
+  "authors": [
+    {
+      "display_name": "Stevens T. Chan",
+      "id": "A5113487187",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1282311441",
+          "display_name": "Lawrence Livermore National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Stevens T. Chan"
+    },
+    {
+      "display_name": "Martin J. Leach",
+      "id": "A5103473304",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I1282311441",
+          "display_name": "Lawrence Livermore National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Martin J. Leach"
+    }
+  ],
+  "publication_year": 2007,
+  "publication_date": "2007-12-01",
+  "type": "article",
+  "cited_by_count": 61,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S89108927",
+    "display_name": "Journal of Applied Meteorology and Climatology",
+    "issn_l": "1558-8424",
+    "issn": [
+      "1558-8424",
+      "1558-8432"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320260"
+  },
+  "volume": "46",
+  "issue": "12",
+  "first_page": "2127",
+  "last_page": "2146",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://journals.ametsoc.org/downloadpdf/journals/apme/46/12/2006jamc1321.1.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C1633027",
+      "display_name": "Computational fluid dynamics",
+      "level": 2,
+      "score": 0.67521477
+    },
+    {
+      "id": "C73000952",
+      "display_name": "Discretization",
+      "level": 2,
+      "score": 0.5848571
+    },
+    {
+      "id": "C153294291",
+      "display_name": "Meteorology",
+      "level": 1,
+      "score": 0.56716627
+    },
+    {
+      "id": "C48939323",
+      "display_name": "Wake",
+      "level": 2,
+      "score": 0.54795784
+    },
+    {
+      "id": "C15476950",
+      "display_name": "Turbulence kinetic energy",
+      "level": 3,
+      "score": 0.5141597
+    },
+    {
+      "id": "C190475519",
+      "display_name": "Massively parallel",
+      "level": 2,
+      "score": 0.50399655
+    },
+    {
+      "id": "C196558001",
+      "display_name": "Turbulence",
+      "level": 2,
+      "score": 0.49250063
+    },
+    {
+      "id": "C135628077",
+      "display_name": "Finite element method",
+      "level": 2,
+      "score": 0.47962174
+    },
+    {
+      "id": "C140820882",
+      "display_name": "Vortex",
+      "level": 2,
+      "score": 0.44375154
+    },
+    {
+      "id": "C39432304",
+      "display_name": "Environmental science",
+      "level": 0,
+      "score": 0.43313387
+    },
+    {
+      "id": "C161067210",
+      "display_name": "Wind speed",
+      "level": 2,
+      "score": 0.41914055
+    },
+    {
+      "id": "C57879066",
+      "display_name": "Mechanics",
+      "level": 1,
+      "score": 0.41259027
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.34178415
+    },
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.25431377
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.111225426
+    },
+    {
+      "id": "C134306372",
+      "display_name": "Mathematical analysis",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C173608175",
+      "display_name": "Parallel computing",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C97355855",
+      "display_name": "Thermodynamics",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T11371",
+      "display_name": "Wind and Air Flow Studies",
+      "score": 1.0
+    },
+    {
+      "id": "T10466",
+      "display_name": "Meteorological Phenomena and Simulations",
+      "score": 0.996
+    },
+    {
+      "id": "T12081",
+      "display_name": "Aerodynamics and Fluid Dynamics Research",
+      "score": 0.995
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1175/2006jamc1321.1",
+  "pdf_url": "https://journals.ametsoc.org/downloadpdf/journals/apme/46/12/2006jamc1321.1.pdf",
+  "retrieved_date": "2025-07-30T14:42:29.020552",
+  "source_database": "OpenAlex"
+}

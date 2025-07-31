@@ -1,0 +1,229 @@
+{
+  "openalex_id": "W4386618604",
+  "doi": "https://doi.org/10.3390/electronics12183829",
+  "title": "Large Language Models as Recommendation Systems in Museums",
+  "abstract": "This paper proposes the utilization of large language models as recommendation systems for museum visitors. Since the aforementioned models lack the notion of context, they cannot work with temporal information that is often present in recommendations for cultural environments (e.g., special exhibitions or events). In this respect, the current work aims to enhance the capabilities of large language models through a fine-tuning process that incorporates contextual information and user instructions. The resulting models are expected to be capable of providing personalized recommendations that are aligned with user preferences and desires. More specifically, Generative Pre-trained Transformer 4, a knowledge-based large language model is fine-tuned and turned into a context-aware recommendation system, adapting its suggestions based on user input and specific contextual factors such as location, time of visit, and other relevant parameters. The effectiveness of the proposed approach is evaluated through certain user studies, which ensure an improved user experience and engagement within the museum environment.",
+  "authors": [
+    {
+      "display_name": "Georgios Trichopoulos",
+      "id": "A5058999463",
+      "orcid": "https://orcid.org/0000-0002-6979-2304",
+      "institutions": [
+        {
+          "id": "I98805295",
+          "display_name": "University of the Aegean",
+          "country_code": "GR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Georgios Trichopoulos"
+    },
+    {
+      "display_name": "Markos Konstantakis",
+      "id": "A5023052897",
+      "orcid": "https://orcid.org/0000-0003-0656-693X",
+      "institutions": [
+        {
+          "id": "I98805295",
+          "display_name": "University of the Aegean",
+          "country_code": "GR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Markos Konstantakis"
+    },
+    {
+      "display_name": "Georgios Alexandridis",
+      "id": "A5036405671",
+      "orcid": "https://orcid.org/0000-0002-3611-8292",
+      "institutions": [
+        {
+          "id": "I200777214",
+          "display_name": "National and Kapodistrian University of Athens",
+          "country_code": "GR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Georgios Alexandridis"
+    },
+    {
+      "display_name": "George Caridakis",
+      "id": "A5091524866",
+      "orcid": "https://orcid.org/0000-0001-9884-935X",
+      "institutions": [
+        {
+          "id": "I98805295",
+          "display_name": "University of the Aegean",
+          "country_code": "GR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "George Caridakis"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-09-10",
+  "type": "article",
+  "cited_by_count": 14,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4210202905",
+    "display_name": "Electronics",
+    "issn_l": "2079-9292",
+    "issn": [
+      "2079-9292"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310310987"
+  },
+  "volume": "12",
+  "issue": "18",
+  "first_page": "3829",
+  "last_page": "3829",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_url": "https://www.mdpi.com/2079-9292/12/18/3829/pdf?version=1694410787",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.8034143
+    },
+    {
+      "id": "C557471498",
+      "display_name": "Recommender system",
+      "level": 2,
+      "score": 0.58419776
+    },
+    {
+      "id": "C107457646",
+      "display_name": "Human–computer interaction",
+      "level": 1,
+      "score": 0.5436309
+    },
+    {
+      "id": "C98045186",
+      "display_name": "Process (computing)",
+      "level": 2,
+      "score": 0.52398914
+    },
+    {
+      "id": "C2779343474",
+      "display_name": "Context (archaeology)",
+      "level": 2,
+      "score": 0.506815
+    },
+    {
+      "id": "C137293760",
+      "display_name": "Language model",
+      "level": 2,
+      "score": 0.48936433
+    },
+    {
+      "id": "C37531588",
+      "display_name": "Exhibition",
+      "level": 2,
+      "score": 0.46346062
+    },
+    {
+      "id": "C67712803",
+      "display_name": "User modeling",
+      "level": 3,
+      "score": 0.44429022
+    },
+    {
+      "id": "C39890363",
+      "display_name": "Generative grammar",
+      "level": 2,
+      "score": 0.4422448
+    },
+    {
+      "id": "C136764020",
+      "display_name": "World Wide Web",
+      "level": 1,
+      "score": 0.4173965
+    },
+    {
+      "id": "C49774154",
+      "display_name": "Multimedia",
+      "level": 1,
+      "score": 0.3387969
+    },
+    {
+      "id": "C89505385",
+      "display_name": "User interface",
+      "level": 2,
+      "score": 0.22728992
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.21784195
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C151730666",
+      "display_name": "Paleontology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    },
+    {
+      "id": "C111919701",
+      "display_name": "Operating system",
+      "level": 1,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10203",
+      "display_name": "Recommender Systems and Techniques",
+      "score": 0.9974
+    },
+    {
+      "id": "T11714",
+      "display_name": "Multimodal Machine Learning Applications",
+      "score": 0.9961
+    },
+    {
+      "id": "T10028",
+      "display_name": "Topic Modeling",
+      "score": 0.993
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.3390/electronics12183829",
+  "pdf_url": "https://www.mdpi.com/2079-9292/12/18/3829/pdf?version=1694410787",
+  "retrieved_date": "2025-07-30T14:48:51.685165",
+  "source_database": "OpenAlex"
+}

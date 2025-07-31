@@ -1,0 +1,212 @@
+{
+  "openalex_id": "W2098110194",
+  "doi": "https://doi.org/10.1109/dcc.2010.98",
+  "title": "Maximum Mutual Information Vector Quantization of Log-Likelihood Ratios for Memory Efficient HARQ Implementations",
+  "abstract": "Modern mobile telecommunication systems, such as 3GPP LTE, make use of Hybrid Automatic Repeat reQuest (HARQ) for efficient and reliable communication between base stationsand mobile terminals. To this purpose, marginal posterior probabilities of the received bits are stored in the form of log-likelihood ratios (LLR) in order to combine information sent across different transmissions due to requests. To mitigate the effects of ever-increasing data rates that call for larger HARQ memory, vector quantization (VQ) is investigated as a technique for temporary compression of LLRs on the terminal. A capacity analysis leads to using maximum mutual information (MMI) as optimality criterion and in turn Kullback-Leibler (KL) divergence as distortion measure. Simulations run based on an LTE-like system have proven that VQ can be implemented in a computationally simple way at low rates of 2-3 bits per LLR value without compromising the system throughput.",
+  "authors": [
+    {
+      "display_name": "Matteo Danieli",
+      "id": "A5050382208",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210115791",
+          "display_name": "Center for Visual Communication (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Matteo Danieli"
+    },
+    {
+      "display_name": "Søren Forchhammer",
+      "id": "A5019279820",
+      "orcid": "https://orcid.org/0000-0002-6698-8870",
+      "institutions": [
+        {
+          "id": "I4210115791",
+          "display_name": "Center for Visual Communication (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Søren Forchhammer"
+    },
+    {
+      "display_name": "Jakob Dahl Andersen",
+      "id": "A5112300616",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210115791",
+          "display_name": "Center for Visual Communication (United States)",
+          "country_code": "US",
+          "type": "company"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jakob Dahl Andersen"
+    },
+    {
+      "display_name": "Lars Porskjær Christensen",
+      "id": "A5055479107",
+      "orcid": "https://orcid.org/0000-0002-5035-9201",
+      "institutions": [
+        {
+          "id": "I891191580",
+          "display_name": "Aalborg University",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Lars P. B. Christensen"
+    },
+    {
+      "display_name": "Søren Skovgaard Christensen",
+      "id": "A5075776299",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I2738502077",
+          "display_name": "Nokia (Finland)",
+          "country_code": "FI",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Søren Skovgaard Christensen"
+    }
+  ],
+  "publication_year": 2010,
+  "publication_date": "2010-01-01",
+  "type": "article",
+  "cited_by_count": 20,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S4306418158",
+    "display_name": "Data Compression Conference",
+    "issn_l": null,
+    "issn": null,
+    "type": "conference",
+    "host_organization": null
+  },
+  "volume": null,
+  "issue": null,
+  "first_page": "30",
+  "last_page": "39",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://backend.orbit.dtu.dk/ws/files/4564313/Danieli.pdf",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C118437007",
+      "display_name": "Hybrid automatic repeat request",
+      "level": 3,
+      "score": 0.85531545
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.6786908
+    },
+    {
+      "id": "C199833920",
+      "display_name": "Vector quantization",
+      "level": 2,
+      "score": 0.6069875
+    },
+    {
+      "id": "C152139883",
+      "display_name": "Mutual information",
+      "level": 2,
+      "score": 0.5882977
+    },
+    {
+      "id": "C171952454",
+      "display_name": "Automatic repeat request",
+      "level": 4,
+      "score": 0.5776531
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.51282674
+    },
+    {
+      "id": "C28855332",
+      "display_name": "Quantization (signal processing)",
+      "level": 2,
+      "score": 0.49488705
+    },
+    {
+      "id": "C68649174",
+      "display_name": "Base station",
+      "level": 2,
+      "score": 0.42598575
+    },
+    {
+      "id": "C171752962",
+      "display_name": "Kullback–Leibler divergence",
+      "level": 2,
+      "score": 0.4140527
+    },
+    {
+      "id": "C79403827",
+      "display_name": "Real-time computing",
+      "level": 1,
+      "score": 0.40788838
+    },
+    {
+      "id": "C31258907",
+      "display_name": "Computer network",
+      "level": 1,
+      "score": 0.2651899
+    },
+    {
+      "id": "C138660444",
+      "display_name": "Telecommunications link",
+      "level": 2,
+      "score": 0.23848349
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.08213836
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10125",
+      "display_name": "Advanced Wireless Communication Techniques",
+      "score": 0.9996
+    },
+    {
+      "id": "T10901",
+      "display_name": "Advanced Data Compression Techniques",
+      "score": 0.9994
+    },
+    {
+      "id": "T11321",
+      "display_name": "Error Correcting Code Techniques",
+      "score": 0.9989
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/dcc.2010.98",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T15:59:11.040401",
+  "source_database": "OpenAlex"
+}

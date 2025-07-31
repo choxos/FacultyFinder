@@ -1,0 +1,227 @@
+{
+  "openalex_id": "W2089858150",
+  "doi": "https://doi.org/10.1109/lgrs.2007.903065",
+  "title": "A Rapid and Automatic MRF-Based Clustering Method for SAR Images",
+  "abstract": "This letter presents a precise and rapid clustering method for synthetic aperture radar (SAR) images by embedding a Markov random field (MRF) model in the clustering space and using graph cuts (GCs) to search the optimal clusters for the data. The proposed method is optimal in the sense of maximum a posteriori (MAP). It automatically works in a two-loop way: an outer loop and an inner loop. The outer loop determines the cluster number using a pseudolikelihood information criterion based on MRF modeling, and the inner loop is designed in a ldquohardrdquo membership expectation-maximization (EM) style: in the E step, with fixed parameters, the optimal data clusters are rapidly searched under the criterion of MAP by the GC; and in the M step, the parameters are estimated using current data clusters as ldquohardrdquo membership obtained in the E step. The two steps are iterated until the inner loop converges. Experiments on both simulated and real SAR images test the performance of the algorithm.",
+  "authors": [
+    {
+      "display_name": "Gui-Song Xia",
+      "id": "A5073032922",
+      "orcid": "https://orcid.org/0000-0001-7660-6090",
+      "institutions": [
+        {
+          "id": "I37461747",
+          "display_name": "Wuhan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Gui-Song Xia"
+    },
+    {
+      "display_name": "Chu He",
+      "id": "A5100749866",
+      "orcid": "https://orcid.org/0000-0003-3662-5769",
+      "institutions": [
+        {
+          "id": "I37461747",
+          "display_name": "Wuhan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chu He"
+    },
+    {
+      "display_name": "Hong Sun",
+      "id": "A5100705870",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I37461747",
+          "display_name": "Wuhan University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hong Sun"
+    }
+  ],
+  "publication_year": 2007,
+  "publication_date": "2007-10-01",
+  "type": "article",
+  "cited_by_count": 23,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S126920919",
+    "display_name": "IEEE Geoscience and Remote Sensing Letters",
+    "issn_l": "1545-598X",
+    "issn": [
+      "1545-598X",
+      "1558-0571"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310319808"
+  },
+  "volume": "4",
+  "issue": "4",
+  "first_page": "596",
+  "last_page": "600",
+  "open_access": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C73555534",
+      "display_name": "Cluster analysis",
+      "level": 2,
+      "score": 0.74830914
+    },
+    {
+      "id": "C9810830",
+      "display_name": "Maximum a posteriori estimation",
+      "level": 3,
+      "score": 0.69057214
+    },
+    {
+      "id": "C2778045648",
+      "display_name": "Markov random field",
+      "level": 4,
+      "score": 0.63643587
+    },
+    {
+      "id": "C58716799",
+      "display_name": "Inner loop",
+      "level": 3,
+      "score": 0.60632545
+    },
+    {
+      "id": "C87360688",
+      "display_name": "Synthetic aperture radar",
+      "level": 2,
+      "score": 0.5510712
+    },
+    {
+      "id": "C153180895",
+      "display_name": "Pattern recognition (psychology)",
+      "level": 2,
+      "score": 0.5066679
+    },
+    {
+      "id": "C41008148",
+      "display_name": "Computer science",
+      "level": 0,
+      "score": 0.49850655
+    },
+    {
+      "id": "C154945302",
+      "display_name": "Artificial intelligence",
+      "level": 1,
+      "score": 0.49049085
+    },
+    {
+      "id": "C184670325",
+      "display_name": "Loop (graph theory)",
+      "level": 2,
+      "score": 0.48718518
+    },
+    {
+      "id": "C41608201",
+      "display_name": "Embedding",
+      "level": 2,
+      "score": 0.42117816
+    },
+    {
+      "id": "C11413529",
+      "display_name": "Algorithm",
+      "level": 1,
+      "score": 0.4128318
+    },
+    {
+      "id": "C33923547",
+      "display_name": "Mathematics",
+      "level": 0,
+      "score": 0.3901418
+    },
+    {
+      "id": "C124504099",
+      "display_name": "Image segmentation",
+      "level": 3,
+      "score": 0.25895357
+    },
+    {
+      "id": "C115961682",
+      "display_name": "Image (mathematics)",
+      "level": 2,
+      "score": 0.17142108
+    },
+    {
+      "id": "C49781872",
+      "display_name": "Maximum likelihood",
+      "level": 2,
+      "score": 0.11713618
+    },
+    {
+      "id": "C105795698",
+      "display_name": "Statistics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C203479927",
+      "display_name": "Controller (irrigation)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C114614502",
+      "display_name": "Combinatorics",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C6557445",
+      "display_name": "Agronomy",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10801",
+      "display_name": "Synthetic Aperture Radar (SAR) Applications and Techniques",
+      "score": 0.9854
+    },
+    {
+      "id": "T10689",
+      "display_name": "Remote-Sensing Image Classification",
+      "score": 0.9838
+    },
+    {
+      "id": "T10052",
+      "display_name": "Medical Image Segmentation Techniques",
+      "score": 0.9773
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1109/lgrs.2007.903065",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:25:53.582308",
+  "source_database": "OpenAlex"
+}

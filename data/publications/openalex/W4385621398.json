@@ -1,0 +1,1104 @@
+{
+  "openalex_id": "W4385621398",
+  "doi": "https://doi.org/10.1016/j.molp.2023.08.003",
+  "title": "A complete assembly of the rice Nipponbare reference genome",
+  "abstract": "In 2005, the current commonly used rice reference genome (Oryza sativa ssp. japonica cv. Nipponbare) was initially released by the International Rice Genome Sequencing Project (International Rice Genome Sequencing Project, 2005International Rice Genome Sequencing ProjectThe map-based sequence of the rice genome.Nature. 2005; 436: 793-800https://doi.org/10.1038/nature03895Crossref PubMed Scopus (3053) Google Scholar). Thereafter, the reference genome was further updated in 2013 with improved genome assembly (IRGSP-1.0) and gene annotations (MSU7, RAP-DB) (Kawahara et al., 2013Kawahara Y. de la Bastide M. Hamilton J.P. Kanamori H. McCombie W.R. Ouyang S. Schwartz D.C. Tanaka T. Wu J. Zhou S. et al.Improvement of the Oryza sativa Nipponbare reference genome using next generation sequence and optical map data.Rice. 2013; 6: 4https://doi.org/10.1186/1939-8433-6-4Crossref Scopus (1108) Google Scholar; Sakai et al., 2013Sakai H. Lee S.S. Tanaka T. Numa H. Kim J. Kawahara Y. Wakimoto H. Yang C.C. Iwamoto M. Abe T. et al.Rice Annotation Project Database (RAP-DB): an integrative and interactive database for rice genomics.Plant Cell Physiol. 2013; 54: e6https://doi.org/10.1093/pcp/pcs183Crossref PubMed Scopus (489) Google Scholar). In the past 10 years, this reference has been serving as one of the most important genetic resources for subsequent rice functional genomics efforts. As several rice genomes had been assembled into gapless chromosomes with only 2–5 telomeres absent (Li et al., 2021Li K. Jiang W. Hui Y. Kong M. Feng L.Y. Gao L.Z. Li P. Lu S. Gapless indica rice genome reveals synergistic contributions of active transposable elements and segmental duplications to rice genome evolution.Mol. Plant. 2021; 14: 1745-1756https://doi.org/10.1016/j.molp.2021.06.017Abstract Full Text Full Text PDF PubMed Scopus (31) Google Scholar; Song et al., 2021Song J.M. Xie W.Z. Wang S. Guo Y.X. Koo D.H. Kudrna D. Gong C. Huang Y. Feng J.W. Zhang W. et al.Two gap-free reference genomes and a global view of the centromere architecture in rice.Mol. Plant. 2021; 14: 1757-1767https://doi.org/10.1016/j.molp.2021.06.018Abstract Full Text Full Text PDF PubMed Scopus (77) Google Scholar; Zhang et al., 2022Zhang Y. Fu J. Wang K. Han X. Yan T. Su Y. Li Y. Lin Z. Qin P. Fu C. et al.The telomere-to-telomere gap-free genome of four rice parents reveals SV and PAV patterns in hybrid rice breeding.Plant Biotechnol. J. 2022; 20: 1642-1644https://doi.org/10.1111/pbi.13880Crossref PubMed Scopus (13) Google Scholar), the IRGSP-1.0 and its annotations still performed as the most widely used reference. However, limitations of sequencing technology and intricate genomic organization led to an under-representation of complex regions in this reference, leaving a total of 72 major gaps (including 19 telomeres), 167 minor gaps, and 779 unknown bases (Kawahara et al., 2013Kawahara Y. de la Bastide M. Hamilton J.P. Kanamori H. McCombie W.R. Ouyang S. Schwartz D.C. Tanaka T. Wu J. Zhou S. et al.Improvement of the Oryza sativa Nipponbare reference genome using next generation sequence and optical map data.Rice. 2013; 6: 4https://doi.org/10.1186/1939-8433-6-4Crossref Scopus (1108) Google Scholar), with an estimated length of ∼3% of the genome unsolved. To pursue a complete sequence of this foundational reference genome, we applied a hybrid assembly strategy that integrated Pacbio HiFi and Oxford Nanopore Technology (ONT) ultra-long reads to generate original contigs, which were then scaffolded onto a chromosome-level assembly with the support of the Hi-C dataset. Gap filling and terminal extension were further conducted to resolve the remaining seven gaps and one telomere region within the scaffolds. All gap-closure regions were supported with uniform coverage of ONT reads (Supplemental Figure 1). A large rDNA array was identified beside the telomere of short arm in chromosome 9 with nearly identical repeats of 45S rDNA (Supplemental Figure 2), which was artificially filled with consecutive blocks reflecting their estimated copy number (see supplemental materials and methods). This captured 93.8% of HiFi reads and 93.9% of ONT reads containing 45S rDNA by full-length mapping, but should be treated as model sequences. Following sequence polishing employing the HiFi and Illumina PE (next-generation sequencing [NGS]) reads, we produced a complete assembly of the rice reference genome, T2T-NIP (version AGIS-1.0), within which all 12 centromere and 24 telomere regions were resolved (Figure 1A). Multiple strategies were applied to evaluate the accuracy and completeness of T2T-NIP. All available primary data—including HiFi, ONT, NGS, and Hi-C—were remapped to T2T-NIP with high mapping rates of >99.6% in all datasets except for ONT reads (93.1%). All reads displayed uniform coverage across the whole genome, except for the Hi-C dataset because of large centromeres and complex regions near two telomeres (Figure 1B). Chromatin immunoprecipitation and sequencing (ChIP-seq) were conducted with the rice CENH3 antibody to identify the location and sequence of functional centromeres in T2T-NIP (Figure 1A, Supplemental Table 1, and Supplemental Figure 3). CentO-enriched regions were also identified by sequence homology to the 155- to 165-bp CentO satellite repeats (Figure 1A and Supplemental Table 1), eight of which showed similar or consistent size with a previous report as determined by fluorescence in situ hybridization (Cheng et al., 2002Cheng Z. Dong F. Langdon T. Ouyang S. Buell C.R. Gu M. Blattner F.R. Jiang J. Functional rice centromeres are marked by a satellite repeat and a centromere-specific retrotransposon.Plant Cell. 2002; 14: 1691-1704https://doi.org/10.1105/tpc.003079Crossref PubMed Scopus (321) Google Scholar). The consensus accuracy of the whole genome was estimated to be approximately one error per 5 million bases (Q63), which showed much higher sequence accuracy (Supplemental Table 2). For gene content assessment, T2T-NIP captured 99.88% of a BUSCO 1614 gene set (Supplemental Table 3), which was equal to or higher than previously reported gapless rice genomes (Li et al., 2021Li K. Jiang W. Hui Y. Kong M. Feng L.Y. Gao L.Z. Li P. Lu S. Gapless indica rice genome reveals synergistic contributions of active transposable elements and segmental duplications to rice genome evolution.Mol. Plant. 2021; 14: 1745-1756https://doi.org/10.1016/j.molp.2021.06.017Abstract Full Text Full Text PDF PubMed Scopus (31) Google Scholar; Song et al., 2021Song J.M. Xie W.Z. Wang S. Guo Y.X. Koo D.H. Kudrna D. Gong C. Huang Y. Feng J.W. Zhang W. et al.Two gap-free reference genomes and a global view of the centromere architecture in rice.Mol. Plant. 2021; 14: 1757-1767https://doi.org/10.1016/j.molp.2021.06.018Abstract Full Text Full Text PDF PubMed Scopus (77) Google Scholar; Zhang et al., 2022Zhang Y. Fu J. Wang K. Han X. Yan T. Su Y. Li Y. Lin Z. Qin P. Fu C. et al.The telomere-to-telomere gap-free genome of four rice parents reveals SV and PAV patterns in hybrid rice breeding.Plant Biotechnol. J. 2022; 20: 1642-1644https://doi.org/10.1111/pbi.13880Crossref PubMed Scopus (13) Google Scholar). A total of 1747 ribosomal RNA (rRNA) genes were identified in T2T-NIP, whereas only several hundred were identified in the IRGSP-1.0. A total of 57 359 protein-coding genes and 325 794 repeat elements (51.1%) were identified, both of which represent more than for IRGSP-1.0 (Supplemental Tables 4 and 5). In a model sequence of the 45S rDNA array, 1022 genes were annotated with support of transcriptome data (Supplemental Table 6). Among 314 protein-coding genes annotated in the gap-filling regions excluding this rDNA array, 142 genes were confirmed to be expressed in T2T-NIP and showed tissue-specific patterns (Supplemental Figure 4). With T2T-NIP, we achieved a complete sequence of the important rice reference genome with 385.7 million base pairs (Mbp), including abundant improvements compared with the prior assembly (Figure 1A and Supplemental Tables 4–6). Compared to IRGSP-1.0, T2T-NIP contains 12.5 Mbp of newly identified sequence, including rDNA arrays (33.2%), pericentromeric and centromeric regions (32.1%), transposable elements (27.1%), and telomere and subtelomeric regions (5.1%), all of which are necessary for fundamental cellular processes (Figure 1C–1E). Some of the largest gap-filling regions covered the centromeres of nine chromosomes, subtelomeric and telomeric regions of two chromosomes, and large complex and repetitive regions in three chromosomes, which are represented in IRGSP-1.0 as unknown or unresolved sequences (Figure 1A and Supplemental Table 7). In addition to these apparent gaps, other minor gap regions of IRGSP-1.0 were found to be artificial or otherwise incorrect (Supplemental Table 8). We investigated all possible 500 kb flanking regions adjacent to the 72 major gaps in IRGSP-1.0 and found that most regions far from centromeres and telomeres (39/44) showed excellent synteny with T2T-NIP, while almost all regions close to centromeric gaps (11/12) contained additional minor gaps with extensive large structural differences (e.g., deletions and inversions with lengths >20 kb) compared to T2T-NIP (Figure 1D). Additionally, four major gaps and their flanking regions with several minor gaps could be well resolved by T2T-NIP, resulting in two continuous regions of 100–117 kb (Figure 1D and Supplemental Table 7). These results demonstrated a significant update of the rice reference genome by resolving the gaps and misassembled structures probably caused by complex and large repetitive structures in IRGSP-1.0. T2T-NIP removes a long-standing barrier that has hidden 3% of the genome from sequence-based analysis, resolving all centromeric and telomeric regions. Therefore, it is important to further describe the initial analysis of a truly complete rice reference genome and to discuss its potential applications. We have produced a rich collection of annotations and omics datasets for T2T-NIP, including gene models and transposon elements (TEs), RNA sequencing, and methylation datasets, as presented in an online database (http://www.ricesuperpir.com/web/nip). To highlight the utility of these genetic resources, we demonstrate examples of complex duplicated regions in chromosomes 10 and 11 that were associated with previously unresolved gaps. The gene AGIS_Os10g035850 (denoted as LOC_Os10g43075 in IRGSP-1.0/MSU7) traversed across the boundary of a major gap at the subtelomeric region of chromosome 10, resulting in an incomplete annotation of only 76.3% of the entire gene and some misannotated exons in the previous version. T2T-NIP thus supported the correction of this gene model, including an addition of six new exons into each of its two splicing alternatives from the gap-filling region (Supplemental Figure 5). Most TE-related genes have multiple copies (paralogs) caused by repetitive sequences, which previously have always complicated their genetic analysis. When mapping NGS reads, the absence of the additional paralogs in IRGSP-1.0 causes these reads to incorrectly align to LOC_Os11g12240 (AGIS_Os11g010790), resulting in many false-positive variants (Figure 1F). When mapped to T2T-NIP, the reads show the expected coverage and a typical heterozygous variation pattern at a small region. Any variants within these paralogs, and others like them, will be overlooked when using IRGSP-1.0 as a reference, thereby promoting the importance of the release of T2T-NIP. To investigate how the T2T-NIP affects short-read variant calling, we collected NGS reads of 230 cultivated (Oryza sativa) and wild (Oryza rufipogon) rice accessions from our previous study (Shang et al., 2022Shang L. Li X. He H. Yuan Q. Song Y. Wei Z. Lin H. Hu M. Zhao F. Zhang C. et al.A super pan-genomic landscape of rice.Cell Res. 2022; 32: 878-896https://doi.org/10.1038/s41422-022-00685-zCrossref PubMed Scopus (39) Google Scholar). The cultivated collection consisted of three populations: Xian/indica (XI), Geng/japonica (GJ), and Aus (cA). The same pipeline was applied for variant calling based on T2T-NIP and IRGSP-1.0 to eliminate the interferences caused by software parameters. On average, BWA-MEM mapped an additional 1.04 × 107 (6.9%) of properly paired reads to T2T-NIP compared to IRGSP-1.0. Interestingly, even though more reads align to T2T-NIP, the subsequent per-read mismatch rate was 1.2%–8.2% lower across all populations (Figure 1G). Similarly, T2T-NIP improved other mapping characteristics such as reducing the number of misoriented read pairs (Figure 1H) and improving coverage uniformity (Figure 1I) compared to IRGSP-1.0. Within gene regions, we noted a decrease of 2.0%–4.3% in the standard deviation of read coverage with analogous improvements among all population groups (Figure 1I). From these alignments, we identified a total of 741 895 221 high-quality single-nucleotide variants and small indel variants relative to T2T-NIP (per-sample mean, 3 225 631) compared to 744 667 800 variants relative to IRGSP-1.0 (per-sample mean, 3 237 686), observing a shared decrease in the number of called variants per individual genome (Supplemental Figure 6 and Supplemental Table 9). Along with the improvement in the per-read mismatch rate, we attribute the reduction in the number of per-sample variant calls to the lower number of consensus errors, structural errors, and especially the resolution of the complex repetitive regions with correct copies in T2T-NIP (Figure 1F). This conclusion is supported by the observation that the number of heterozygous variants per sample decreased largely in all populations while their homozygous variants showed a slight increase except for GJ (Supplemental Figure 6 and Supplemental Table 9). These results demonstrated the superiority of T2T-NIP as a reference genome for more accurate mapping and variation analysis based on short reads. Next, we investigated the effects of using T2T-NIP as a reference genome for structural variant (SV) calling from published long reads (Shang et al., 2022Shang L. Li X. He H. Yuan Q. Song Y. Wei Z. Lin H. Hu M. Zhao F. Zhang C. et al.A super pan-genomic landscape of rice.Cell Res. 2022; 32: 878-896https://doi.org/10.1038/s41422-022-00685-zCrossref PubMed Scopus (39) Google Scholar). Alignment to T2T-NIP also reduced the observed mismatch rate per mapped read (Figure 1J) and the standard deviation of coverage within genes (Figure 1K) across all populations. T2T-NIP also corrected structural errors in IRGSP-1.0 and contained a complete assembly of the genome, which facilitated a much more accurate alignment, similar to what we observed for short reads (Supplemental Table S10). From these results, we observed a shared reduction (from −16.3% to −4.6%) in the number of SVs from different populations when calling variants against T2T-NIP instead of IRGSP-1.0. Similar to the results of the small variations above, the number of heterozygous variants decreased more than those of homozygous variants (Supplemental Figure 7), likely also due to improvements in resolution of the complex repetitive regions in T2T-NIP, which reduced the rare structures found in IRGSP-1.0. To supplement our variant and phenotype datasets, we conducted genome-wide association studies (GWASs) to assess potential improvements on efficiency of genetic analysis by using T2T-NIP as a reference genome instead of IRGSP-1.0. A total of 101 associated SNPs were identified for five agronomic traits, in which all associated SNPs were detected only from variant datasets relative to T2T-NIP. For example, a pleiotropic locus related to yield per plant in chromosome 1 (qYPP1) of T2T-NIP was significantly associated with both grain yield and plant height that was not identified using IRGSP-1.0 (Figure 1L–1M and Supplemental Figure 8). Gene-editing experiments and phenotype screening revealed significant differences of yield per plant and plant height between plants with wild type and function-loss mutation of a gene encoding the large subunit of ADP-glucose pyrophosphorylase, OsAGPL2 (Figure 1N and Supplemental Figure 8). A favorable haplotype of OsAGPL2 was identified, showing significantly higher yield per plant (44.7 ± 11.8 g) than the other haplotypes (Figure 1O). Additionally, we identified some T2T-NIP-specific associated SVs related to grain width (Supplemental Figure 9). These results demonstrated the enhanced efficiency of genetic analysis on population variation and gene mining based on T2T-NIP. In summary, we achieved complete sequences of the most commonly used rice reference genome in our assembly, T2T-NIP, by addressing the missing 3% of the genomic information, which represents a significant update to this important resource. T2T-NIP introduced ∼12.5 Mbp containing 1324 gene predictions, which include rDNA arrays, centromeric satellite arrays, subtelomeres, and large repeat regions, thereby unlocking these complex regions of the genome for rice variational and functional studies. All the raw sequencing reads, genome assembly, and annotations for T2T-NIP were deposited in the National Center for Biotechnology Information database under project accession number PRJNA953663 and the National Genomics Data Center database under project accession number PRJCA018610. The genome browser of T2T-NIP and its related annotations and omics datasets can also be easily accessed from our online database website (http://www.ricesuperpir.com/web/nip). This research was supported by the National Natural Science Foundation of China (32188102, 32101718), Guangdong Basic and Applied Basic Research Foundation (2023B1515020053), the Youth Innovation of Chinese Academy of Agricultural Sciences (Y20230C36), and the specific research fund of The Innovation Platform for Academicians of Hainan Province (YSPTZX202303).",
+  "authors": [
+    {
+      "display_name": "Lianguang Shang",
+      "id": "A5115595159",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Lianguang Shang"
+    },
+    {
+      "display_name": "Wenchuang He",
+      "id": "A5012562030",
+      "orcid": "https://orcid.org/0000-0001-5568-7215",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wenchuang He"
+    },
+    {
+      "display_name": "Tianyi Wang",
+      "id": "A5100399636",
+      "orcid": "https://orcid.org/0000-0002-7525-5564",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Tianyi Wang"
+    },
+    {
+      "display_name": "Yingxue Yang",
+      "id": "A5083265838",
+      "orcid": "https://orcid.org/0000-0001-9785-3613",
+      "institutions": [
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yingxue Yang"
+    },
+    {
+      "display_name": "Qiang Xu",
+      "id": "A5101814456",
+      "orcid": "https://orcid.org/0000-0002-9307-0504",
+      "institutions": [
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qiang Xu"
+    },
+    {
+      "display_name": "Xianjia Zhao",
+      "id": "A5020762553",
+      "orcid": "https://orcid.org/0009-0008-4144-9425",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xianjia Zhao"
+    },
+    {
+      "display_name": "Longbo Yang",
+      "id": "A5101231507",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Longbo Yang"
+    },
+    {
+      "display_name": "Hong Zhang",
+      "id": "A5100358725",
+      "orcid": "https://orcid.org/0000-0002-1130-3600",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hong Zhang"
+    },
+    {
+      "display_name": "Xiaoxia Li",
+      "id": "A5100348756",
+      "orcid": "https://orcid.org/0000-0002-4872-9525",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoxia Li"
+    },
+    {
+      "display_name": "Yang Lv",
+      "id": "A5014655181",
+      "orcid": "https://orcid.org/0000-0002-7179-4552",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yang Lv"
+    },
+    {
+      "display_name": "Wu Chen",
+      "id": "A5100329157",
+      "orcid": "https://orcid.org/0000-0002-4033-254X",
+      "institutions": [
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Wu Chen"
+    },
+    {
+      "display_name": "Shuo Cao",
+      "id": "A5040314090",
+      "orcid": "https://orcid.org/0009-0005-6392-8353",
+      "institutions": [
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Shuo Cao"
+    },
+    {
+      "display_name": "Xianmeng Wang",
+      "id": "A5021786582",
+      "orcid": "https://orcid.org/0000-0001-6744-2418",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xianmeng Wang"
+    },
+    {
+      "display_name": "Bin Zhang",
+      "id": "A5100392792",
+      "orcid": "https://orcid.org/0000-0001-8835-8370",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bin Zhang"
+    },
+    {
+      "display_name": "Xiangpei Liu",
+      "id": "A5024545976",
+      "orcid": "https://orcid.org/0000-0002-3567-1782",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiangpei Liu"
+    },
+    {
+      "display_name": "Xiao-Man Yu",
+      "id": "A5110379383",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoman Yu"
+    },
+    {
+      "display_name": "Huiying He",
+      "id": "A5056297612",
+      "orcid": "https://orcid.org/0000-0001-6237-2190",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Huiying He"
+    },
+    {
+      "display_name": "Wei Hua",
+      "id": "A5072629804",
+      "orcid": "https://orcid.org/0000-0002-4590-7365",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hua Wei"
+    },
+    {
+      "display_name": "Yue Leng",
+      "id": "A5108870480",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yue Leng"
+    },
+    {
+      "display_name": "Chuanlin Shi",
+      "id": "A5026051338",
+      "orcid": "https://orcid.org/0000-0003-4776-1942",
+      "institutions": [
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Chuanlin Shi"
+    },
+    {
+      "display_name": "Mingliang Guo",
+      "id": "A5104666936",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Mingliang Guo"
+    },
+    {
+      "display_name": "Zhipeng Zhang",
+      "id": "A5100410130",
+      "orcid": "https://orcid.org/0000-0002-8251-5918",
+      "institutions": [
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhipeng Zhang"
+    },
+    {
+      "display_name": "Bintao Zhang",
+      "id": "A5027904134",
+      "orcid": "https://orcid.org/0000-0002-8499-1985",
+      "institutions": [
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Bintao Zhang"
+    },
+    {
+      "display_name": "Qiaoling Yuan",
+      "id": "A5084977022",
+      "orcid": "https://orcid.org/0000-0001-8547-2944",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qiaoling Yuan"
+    },
+    {
+      "display_name": "Hongge Qian",
+      "id": "A5020668442",
+      "orcid": "https://orcid.org/0000-0002-7558-2987",
+      "institutions": [
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Hongge Qian"
+    },
+    {
+      "display_name": "Xinglan Cao",
+      "id": "A5108855510",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xinglan Cao"
+    },
+    {
+      "display_name": "Yan Cui",
+      "id": "A5100378106",
+      "orcid": "https://orcid.org/0000-0002-6833-5611",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yan Cui"
+    },
+    {
+      "display_name": "Qianqian Zhang",
+      "id": "A5100349117",
+      "orcid": "https://orcid.org/0000-0003-1955-1366",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Qianqian Zhang"
+    },
+    {
+      "display_name": "Xiaofan Dai",
+      "id": "A5102637216",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaofan Dai"
+    },
+    {
+      "display_name": "Congcong Liu",
+      "id": "A5100663039",
+      "orcid": "https://orcid.org/0000-0003-3949-4194",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Congcong Liu"
+    },
+    {
+      "display_name": "Longbiao Guo",
+      "id": "A5017401668",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210160522",
+          "display_name": "China National Rice Research Institute",
+          "country_code": "CN",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Longbiao Guo"
+    },
+    {
+      "display_name": "Yongfeng Zhou",
+      "id": "A5103050511",
+      "orcid": "https://orcid.org/0000-0003-0780-2973",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Yongfeng Zhou"
+    },
+    {
+      "display_name": "Xiaoming Zheng",
+      "id": "A5103219775",
+      "orcid": "https://orcid.org/0000-0001-8343-7846",
+      "institutions": [
+        {
+          "id": "I4210158190",
+          "display_name": "Institute of Crop Sciences",
+          "country_code": "CN",
+          "type": "nonprofit"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Xiaoming Zheng"
+    },
+    {
+      "display_name": "Jue Ruan",
+      "id": "A5088950998",
+      "orcid": "https://orcid.org/0000-0003-3713-3192",
+      "institutions": [
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Jue Ruan"
+    },
+    {
+      "display_name": "Zhukuan Cheng",
+      "id": "A5015012179",
+      "orcid": "https://orcid.org/0000-0001-8428-8010",
+      "institutions": [
+        {
+          "id": "I78978612",
+          "display_name": "Yangzhou University",
+          "country_code": "CN",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Zhukuan Cheng"
+    },
+    {
+      "display_name": "Weihua Pan",
+      "id": "A5101541692",
+      "orcid": "https://orcid.org/0000-0001-7189-7650",
+      "institutions": [
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Weihua Pan"
+    },
+    {
+      "display_name": "Qian Qian",
+      "id": "A5100728465",
+      "orcid": "https://orcid.org/0000-0002-0349-4937",
+      "institutions": [
+        {
+          "id": "I4210160522",
+          "display_name": "China National Rice Research Institute",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210088191",
+          "display_name": "Agricultural Genomics Institute at Shenzhen",
+          "country_code": "CN",
+          "type": "facility"
+        },
+        {
+          "id": "I4210138501",
+          "display_name": "Chinese Academy of Agricultural Sciences",
+          "country_code": "CN",
+          "type": "government"
+        },
+        {
+          "id": "I4210151987",
+          "display_name": "Ministry of Agriculture and Rural Affairs",
+          "country_code": "CN",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": true,
+      "raw_author_name": "Qian Qian"
+    }
+  ],
+  "publication_year": 2023,
+  "publication_date": "2023-08-01",
+  "type": "article",
+  "cited_by_count": 104,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S150334665",
+    "display_name": "Molecular Plant",
+    "issn_l": "1674-2052",
+    "issn": [
+      "1752-9859",
+      "1752-9867",
+      "1674-2052"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "16",
+  "issue": "8",
+  "first_page": "1232",
+  "last_page": "1236",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://www.cell.com/article/S1674205223002198/pdf",
+    "any_repository_has_fulltext": false
+  },
+  "concepts": [
+    {
+      "id": "C141231307",
+      "display_name": "Genome",
+      "level": 3,
+      "score": 0.7800242
+    },
+    {
+      "id": "C86803240",
+      "display_name": "Biology",
+      "level": 0,
+      "score": 0.7763506
+    },
+    {
+      "id": "C2778543611",
+      "display_name": "Oryza sativa",
+      "level": 3,
+      "score": 0.743579
+    },
+    {
+      "id": "C192953774",
+      "display_name": "Reference genome",
+      "level": 4,
+      "score": 0.5710615
+    },
+    {
+      "id": "C54355233",
+      "display_name": "Genetics",
+      "level": 1,
+      "score": 0.557973
+    },
+    {
+      "id": "C24432333",
+      "display_name": "Whole genome sequencing",
+      "level": 4,
+      "score": 0.5468854
+    },
+    {
+      "id": "C2777923347",
+      "display_name": "Oryza",
+      "level": 4,
+      "score": 0.50819993
+    },
+    {
+      "id": "C189206191",
+      "display_name": "Genomics",
+      "level": 4,
+      "score": 0.50429595
+    },
+    {
+      "id": "C104317684",
+      "display_name": "Gene",
+      "level": 2,
+      "score": 0.4656881
+    },
+    {
+      "id": "C51679486",
+      "display_name": "DNA sequencing",
+      "level": 3,
+      "score": 0.44896275
+    },
+    {
+      "id": "C89566754",
+      "display_name": "Genome project",
+      "level": 4,
+      "score": 0.42989817
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10015",
+      "display_name": "Genomics and Phylogenetic Studies",
+      "score": 0.9996
+    },
+    {
+      "id": "T10434",
+      "display_name": "Chromosomal and Genetic Variations",
+      "score": 0.9984
+    },
+    {
+      "id": "T12858",
+      "display_name": "Plant Disease Resistance and Genetics",
+      "score": 0.9959
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.molp.2023.08.003",
+  "pdf_url": "https://www.cell.com/article/S1674205223002198/pdf",
+  "retrieved_date": "2025-07-30T16:02:07.528134",
+  "source_database": "OpenAlex"
+}

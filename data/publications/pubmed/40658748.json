@@ -1,0 +1,85 @@
+{
+  "pmid": "40658748",
+  "uid": "40658748",
+  "title": "Contrastive learning enhanced pseudo-labeling for unsupervised domain adaptation in person re-identification.",
+  "abstract": "Person re-identification (ReID) technology has many applications in intelligent surveillance and public safety. However, the domain difference between the source and target domains makes the generalization ability of the model extremely challenging. To reduce the dependence on labeled data, Unsupervised Domain Adaptation (UDA) methods have become an effective way to solve this problem. However, the influence of pseudo-label generated noise on model training in existing UDA methods is still significant, resulting in limited model performance on the target domain. For this reason, this paper proposes a contrast learning-based pseudo-label refinement with probabilistic uncertainty in the unsupervised domain, adapted to Person re-identification, aiming to improve the effectiveness of the unsupervised domain adapted to Person re-identification. We first enhance the feature representation of the target domain samples based on the contrast learning technique to improve their discrimination in the feature space, thereby enhancing the cross-domain migration performance of the model. Subsequently, an innovative loss function is proposed to effectively reduce the interference of label noise on the training process by refining the generation process of pseudo-labels, which solves the negative impact of inaccurate pseudo-labels on model training. Through a series of experimental validation, the method experiments on two large-scale public datasets, Market1501 and DukeMTMC, and the Rank-1 accuracy of the proposed method reaches 91.4% and 81.4%, with the mean average precision (mAP) of 79.0% and 67.9%, respectively, which proves that the research in this paper provides a good solution for the Person re-identification task with effective technical support for label noise processing and model generalization capability improvement.",
+  "authors": [
+    {
+      "last_name": "Bai",
+      "fore_name": "Xuemei",
+      "initials": "X",
+      "name": "Xuemei Bai",
+      "affiliations": [
+        "School of Electronic Information Engineering, Changchun University of Science and Technology, Changchun, Jinlin, China."
+      ]
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Yuqing",
+      "initials": "Y",
+      "name": "Yuqing Zhang",
+      "affiliations": [
+        "School of Electronic Information Engineering, Changchun University of Science and Technology, Changchun, Jinlin, China."
+      ],
+      "orcid": "0009-0007-5389-7463"
+    },
+    {
+      "last_name": "Zhang",
+      "fore_name": "Chenjie",
+      "initials": "C",
+      "name": "Chenjie Zhang",
+      "affiliations": [
+        "School of Electronic Information Engineering, Changchun University of Science and Technology, Changchun, Jinlin, China."
+      ]
+    },
+    {
+      "last_name": "Wang",
+      "fore_name": "Zhijun",
+      "initials": "Z",
+      "name": "Zhijun Wang",
+      "affiliations": [
+        "High Performance Computing Center, Changchun Normal University, Changchun, Jinlin, China."
+      ]
+    }
+  ],
+  "journal": {
+    "title": "PloS one",
+    "iso_abbreviation": "PLoS One",
+    "issn": "1932-6203",
+    "issn_type": "Electronic",
+    "volume": "20",
+    "issue": "7",
+    "pub_year": "2025"
+  },
+  "start_page": "e0328131",
+  "pages": "e0328131",
+  "language": "eng",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "keywords": [
+    "Humans",
+    "Biometric Identification",
+    "Algorithms",
+    "Unsupervised Machine Learning"
+  ],
+  "article_ids": {
+    "pubmed": "40658748",
+    "pmc": "PMC12258581",
+    "doi": "10.1371/journal.pone.0328131",
+    "pii": "PONE-D-25-21652"
+  },
+  "doi": "10.1371/journal.pone.0328131",
+  "pmc_id": "PMC12258581",
+  "dates": {
+    "completed": "2025-07-14",
+    "revised": "2025-07-17"
+  },
+  "chemicals": [],
+  "grants": [],
+  "search_metadata": {
+    "search_type": "all_publications",
+    "retrieved_date": "2025-07-30T15:13:54.775216",
+    "pmid": "40658748"
+  }
+}

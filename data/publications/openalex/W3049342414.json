@@ -1,0 +1,2074 @@
+{
+  "openalex_id": "W3049342414",
+  "doi": "https://doi.org/10.1016/j.physrep.2020.07.006",
+  "title": "The anomalous magnetic moment of the muon in the Standard Model",
+  "abstract": "We review the present status of the Standard Model calculation of the anomalous magnetic moment of the muon. This is performed in a perturbative expansion in the fine-structure constant α and is broken down into pure QED, electroweak, and hadronic contributions. The pure QED contribution is by far the largest and has been evaluated up to and including O(α 5) with negligible numerical uncertainty. The electroweak contribution is suppressed by (m μ∕M W) 2 and only shows up at the level of the seventh significant digit. It has been evaluated up to two loops and is known to better than one percent. Hadronic contributions are the most difficult to calculate and are responsible for almost all of the theoretical uncertainty. The leading hadronic contribution appears at O(α 2) and is due to hadronic vacuum polarization, whereas at O(α 3) the hadronic light-by-light scattering contribution appears. Given the low characteristic scale of this observable, these contributions have to be calculated with nonperturbative methods, in particular, dispersion relations and the lattice approach to QCD. The largest part of this review is dedicated to a detailed account of recent efforts to improve the calculation of these two contributions with either a data-driven, dispersive approach, or a first-principle, lattice-QCD approach. The final result reads a μ SM=116591810(43)×10 −11 and is smaller than the Brookhaven measurement by 3.7σ. The experimental uncertainty will soon be reduced by up to a factor four by the new experiment currently running at Fermilab, and also by the future J-PARC experiment. This and the prospects to further reduce the theoretical uncertainty in the near future – which are also discussed here – make this quantity one of the most promising places to look for evidence of new physics.",
+  "authors": [
+    {
+      "display_name": "Tadayoshi Aoyama",
+      "id": "A5089806952",
+      "orcid": "https://orcid.org/0000-0001-7860-0725",
+      "institutions": [
+        {
+          "id": "I138728355",
+          "display_name": "High Energy Accelerator Research Organization",
+          "country_code": "JP",
+          "type": "funder"
+        },
+        {
+          "id": "I60134161",
+          "display_name": "Nagoya University",
+          "country_code": "JP",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Aoyama"
+    },
+    {
+      "display_name": "Nils Asmussen",
+      "id": "A5006530789",
+      "orcid": "https://orcid.org/0000-0003-3915-1423",
+      "institutions": [
+        {
+          "id": "I43439940",
+          "display_name": "University of Southampton",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Asmussen"
+    },
+    {
+      "display_name": "M. Benayoun",
+      "id": "A5103234901",
+      "orcid": "https://orcid.org/0000-0002-5902-7588",
+      "institutions": [
+        {
+          "id": "I4210105151",
+          "display_name": "Laboratoire de Physique Nucléaire et de Hautes Énergies",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I39804081",
+          "display_name": "Sorbonne Université",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I204730241",
+          "display_name": "Université Paris Cité",
+          "country_code": "FR",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Benayoun"
+    },
+    {
+      "display_name": "Johan Bijnens",
+      "id": "A5049418684",
+      "orcid": "https://orcid.org/0000-0002-1618-2844",
+      "institutions": [
+        {
+          "id": "I187531555",
+          "display_name": "Lund University",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Bijnens"
+    },
+    {
+      "display_name": "Thomas Blum",
+      "id": "A5055816526",
+      "orcid": "https://orcid.org/0000-0002-2866-7689",
+      "institutions": [
+        {
+          "id": "I4210158631",
+          "display_name": "RIKEN BNL Research Center",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I140172145",
+          "display_name": "University of Connecticut",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I200870766",
+          "display_name": "Brookhaven National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Blum"
+    },
+    {
+      "display_name": "Mattia Bruno",
+      "id": "A5031636569",
+      "orcid": "https://orcid.org/0000-0002-5127-4461",
+      "institutions": [
+        {
+          "id": "I67311998",
+          "display_name": "European Organization for Nuclear Research",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Bruno"
+    },
+    {
+      "display_name": "I. Caprini",
+      "id": "A5013835407",
+      "orcid": "https://orcid.org/0000-0003-3343-3200",
+      "institutions": [
+        {
+          "id": "I4210092312",
+          "display_name": "Horia Hulubei National Institute for R and D in Physics and Nuclear Engineering",
+          "country_code": "RO",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. Caprini"
+    },
+    {
+      "display_name": "C. M. Carloni Calame",
+      "id": "A5072342235",
+      "orcid": "https://orcid.org/0000-0002-7315-0638",
+      "institutions": [
+        {
+          "id": "I4210109533",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Pavia",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C.M. Carloni Calame"
+    },
+    {
+      "display_name": "Marco Cè",
+      "id": "A5102728987",
+      "orcid": "https://orcid.org/0000-0001-6906-6823",
+      "institutions": [
+        {
+          "id": "I169556180",
+          "display_name": "GSI Helmholtz Centre for Heavy Ion Research",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I197323543",
+          "display_name": "Johannes Gutenberg University Mainz",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210113347",
+          "display_name": "Helmholtz Institute Mainz",
+          "country_code": "DE",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Cè"
+    },
+    {
+      "display_name": "Gilberto Colangelo",
+      "id": "A5006347284",
+      "orcid": "https://orcid.org/0000-0003-3954-9503",
+      "institutions": [
+        {
+          "id": "I118564535",
+          "display_name": "University of Bern",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Colangelo"
+    },
+    {
+      "display_name": "F. Curciarello",
+      "id": "A5079020989",
+      "orcid": "https://orcid.org/0000-0001-5134-0732",
+      "institutions": [
+        {
+          "id": "I4210142660",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Laboratori Nazionali di Frascati",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Curciarello"
+    },
+    {
+      "display_name": "H. Czyż",
+      "id": "A5060107155",
+      "orcid": "https://orcid.org/0000-0003-4184-6945",
+      "institutions": [
+        {
+          "id": "I4210086947",
+          "display_name": "Institute of Physics",
+          "country_code": "PL",
+          "type": "facility"
+        },
+        {
+          "id": "I864159182",
+          "display_name": "University of Silesia in Katowice",
+          "country_code": "PL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Czyż"
+    },
+    {
+      "display_name": "Igor Danilkin",
+      "id": "A5033981894",
+      "orcid": "https://orcid.org/0000-0001-8950-0770",
+      "institutions": [
+        {
+          "id": "I197323543",
+          "display_name": "Johannes Gutenberg University Mainz",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. Danilkin"
+    },
+    {
+      "display_name": "M. Davier",
+      "id": "A5070030327",
+      "orcid": "https://orcid.org/0000-0002-0337-1013",
+      "institutions": [
+        {
+          "id": "I4210133362",
+          "display_name": "Institut National de Physique Nucléaire et de Physique des Particules",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I4210134832",
+          "display_name": "Laboratoire de Physique des 2 Infinis Irène Joliot-Curie",
+          "country_code": "FR",
+          "type": "facility"
+        },
+        {
+          "id": "I277688954",
+          "display_name": "Université Paris-Saclay",
+          "country_code": "FR",
+          "type": "funder"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Davier"
+    },
+    {
+      "display_name": "C. T. H. Davies",
+      "id": "A5063228506",
+      "orcid": "https://orcid.org/0000-0003-2884-0514",
+      "institutions": [
+        {
+          "id": "I7882870",
+          "display_name": "University of Glasgow",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C.T.H. Davies"
+    },
+    {
+      "display_name": "Michele Della Morte",
+      "id": "A5028842701",
+      "orcid": "https://orcid.org/0000-0003-0047-0689",
+      "institutions": [
+        {
+          "id": "I177969490",
+          "display_name": "University of Southern Denmark",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Della Morte"
+    },
+    {
+      "display_name": "S.I. Eidelman",
+      "id": "A5103791810",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        },
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S.I. Eidelman"
+    },
+    {
+      "display_name": "A. X. El-Khadra",
+      "id": "A5038578616",
+      "orcid": "https://orcid.org/0000-0001-9105-8213",
+      "institutions": [
+        {
+          "id": "I1314696892",
+          "display_name": "Fermi National Accelerator Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I157725225",
+          "display_name": "University of Illinois Urbana-Champaign",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A.X. El-Khadra"
+    },
+    {
+      "display_name": "Antoine Gérardin",
+      "id": "A5082849672",
+      "orcid": "https://orcid.org/0000-0002-8839-7166",
+      "institutions": [
+        {
+          "id": "I143002897",
+          "display_name": "Université de Toulon",
+          "country_code": "FR",
+          "type": "education"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Gérardin"
+    },
+    {
+      "display_name": "D. Giusti",
+      "id": "A5087177311",
+      "orcid": "https://orcid.org/0000-0001-8178-8407",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Giusti"
+    },
+    {
+      "display_name": "Maarten Golterman",
+      "id": "A5081013813",
+      "orcid": "https://orcid.org/0000-0003-1983-0672",
+      "institutions": [
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        },
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Golterman"
+    },
+    {
+      "display_name": "Steven Gottlieb",
+      "id": "A5065319374",
+      "orcid": "https://orcid.org/0000-0001-5712-0466",
+      "institutions": [
+        {
+          "id": "I4210119109",
+          "display_name": "Indiana University Bloomington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Steven Gottlieb"
+    },
+    {
+      "display_name": "Vera Gülpers",
+      "id": "A5059784087",
+      "orcid": "https://orcid.org/0000-0003-4555-6662",
+      "institutions": [
+        {
+          "id": "I7882870",
+          "display_name": "University of Glasgow",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Gülpers"
+    },
+    {
+      "display_name": "Franziska Hagelstein",
+      "id": "A5073455286",
+      "orcid": "https://orcid.org/0000-0002-2017-7132",
+      "institutions": [
+        {
+          "id": "I4210142660",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Laboratori Nazionali di Frascati",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Hagelstein"
+    },
+    {
+      "display_name": "Masashi Hayakawa",
+      "id": "A5025678199",
+      "orcid": "https://orcid.org/0000-0001-7252-0425",
+      "institutions": [
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        },
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Hayakawa"
+    },
+    {
+      "display_name": "Gregorio Herdoíza",
+      "id": "A5054116933",
+      "orcid": "https://orcid.org/0000-0002-8187-5671",
+      "institutions": [
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Herdoíza"
+    },
+    {
+      "display_name": "D. W. Hertzog",
+      "id": "A5080487135",
+      "orcid": "https://orcid.org/0000-0001-5614-6824",
+      "institutions": [
+        {
+          "id": "I201448701",
+          "display_name": "University of Washington",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D.W. Hertzog"
+    },
+    {
+      "display_name": "A. Hoecker",
+      "id": "A5060677802",
+      "orcid": "https://orcid.org/0000-0002-6596-9395",
+      "institutions": [
+        {
+          "id": "I67311998",
+          "display_name": "European Organization for Nuclear Research",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Hoecker"
+    },
+    {
+      "display_name": "Martin Hoferichter",
+      "id": "A5057754049",
+      "orcid": "https://orcid.org/0000-0003-1113-9377",
+      "institutions": [
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        },
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Hoferichter"
+    },
+    {
+      "display_name": "Bai-Long Hoid",
+      "id": "A5071788468",
+      "orcid": "https://orcid.org/0000-0001-9471-1740",
+      "institutions": [
+        {
+          "id": "I4210158631",
+          "display_name": "RIKEN BNL Research Center",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I200870766",
+          "display_name": "Brookhaven National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I140172145",
+          "display_name": "University of Connecticut",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B.-L. Hoid"
+    },
+    {
+      "display_name": "Renwick J. Hudspith",
+      "id": "A5063049124",
+      "orcid": "https://orcid.org/0000-0002-7420-2233",
+      "institutions": [
+        {
+          "id": "I169556180",
+          "display_name": "GSI Helmholtz Centre for Heavy Ion Research",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I197323543",
+          "display_name": "Johannes Gutenberg University Mainz",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210113347",
+          "display_name": "Helmholtz Institute Mainz",
+          "country_code": "DE",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R.J. Hudspith"
+    },
+    {
+      "display_name": "F.V. Ignatov",
+      "id": "A5017197868",
+      "orcid": "https://orcid.org/0000-0001-7061-6060",
+      "institutions": [
+        {
+          "id": "I4210142660",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Laboratori Nazionali di Frascati",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Ignatov"
+    },
+    {
+      "display_name": "Taku Izubuchi",
+      "id": "A5049061080",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Izubuchi"
+    },
+    {
+      "display_name": "F. Jegerlehner",
+      "id": "A5048956956",
+      "orcid": "https://orcid.org/0000-0002-5810-3534",
+      "institutions": [
+        {
+          "id": "I4210142660",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Laboratori Nazionali di Frascati",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "F. Jegerlehner"
+    },
+    {
+      "display_name": "Luchang Jin",
+      "id": "A5067049184",
+      "orcid": "https://orcid.org/0000-0003-0806-4183",
+      "institutions": [
+        {
+          "id": "I157725225",
+          "display_name": "University of Illinois Urbana-Champaign",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1314696892",
+          "display_name": "Fermi National Accelerator Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Jin"
+    },
+    {
+      "display_name": "Alexander Keshavarzi",
+      "id": "A5004879104",
+      "orcid": "https://orcid.org/0000-0001-9085-7283",
+      "institutions": [
+        {
+          "id": "I28407311",
+          "display_name": "University of Manchester",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Keshavarzi"
+    },
+    {
+      "display_name": "T. Kinoshita",
+      "id": "A5110045721",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Kinoshita"
+    },
+    {
+      "display_name": "Bastian Kubis",
+      "id": "A5091328951",
+      "orcid": "https://orcid.org/0000-0002-1541-6581",
+      "institutions": [
+        {
+          "id": "I67311998",
+          "display_name": "European Organization for Nuclear Research",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Kubis"
+    },
+    {
+      "display_name": "A. Kupich",
+      "id": "A5024848958",
+      "orcid": "https://orcid.org/0000-0002-6042-8776",
+      "institutions": [
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Kupich"
+    },
+    {
+      "display_name": "A. Kupść",
+      "id": "A5002445204",
+      "orcid": "https://orcid.org/0000-0003-4937-2270",
+      "institutions": [
+        {
+          "id": "I123387679",
+          "display_name": "Uppsala University",
+          "country_code": "SE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210097150",
+          "display_name": "National Centre for Nuclear Research",
+          "country_code": "PL",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Kupść"
+    },
+    {
+      "display_name": "Laetitia Laub",
+      "id": "A5042834972",
+      "orcid": "https://orcid.org/0000-0003-3340-5672",
+      "institutions": [
+        {
+          "id": "I157725225",
+          "display_name": "University of Illinois Urbana-Champaign",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1314696892",
+          "display_name": "Fermi National Accelerator Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Laub"
+    },
+    {
+      "display_name": "Christoph Lehner",
+      "id": "A5084584034",
+      "orcid": "https://orcid.org/0000-0002-3584-4567",
+      "institutions": [
+        {
+          "id": "I7882870",
+          "display_name": "University of Glasgow",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. Lehner"
+    },
+    {
+      "display_name": "Laurent Lellouch",
+      "id": "A5085045767",
+      "orcid": "https://orcid.org/0000-0002-0032-6073",
+      "institutions": [
+        {
+          "id": "I157725225",
+          "display_name": "University of Illinois Urbana-Champaign",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1314696892",
+          "display_name": "Fermi National Accelerator Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "L. Lellouch"
+    },
+    {
+      "display_name": "I.B. Logashenko",
+      "id": "A5107833572",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "I. Logashenko"
+    },
+    {
+      "display_name": "B. Malaescu",
+      "id": "A5070734925",
+      "orcid": "https://orcid.org/0000-0002-8813-3830",
+      "institutions": [
+        {
+          "id": "I67311998",
+          "display_name": "European Organization for Nuclear Research",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Malaescu"
+    },
+    {
+      "display_name": "Kim Maltman",
+      "id": "A5011631709",
+      "orcid": "https://orcid.org/0000-0001-5641-1819",
+      "institutions": [
+        {
+          "id": "I157725225",
+          "display_name": "University of Illinois Urbana-Champaign",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1314696892",
+          "display_name": "Fermi National Accelerator Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Maltman"
+    },
+    {
+      "display_name": "Marina Krstić Marinković",
+      "id": "A5049398867",
+      "orcid": "https://orcid.org/0000-0002-9883-7866",
+      "institutions": [
+        {
+          "id": "I8204097",
+          "display_name": "Ludwig-Maximilians-Universität München",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4387152517",
+          "display_name": "Instituto Superior Técnico",
+          "country_code": null,
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M.K. Marinković"
+    },
+    {
+      "display_name": "Pere Masjuan",
+      "id": "A5084099035",
+      "orcid": "https://orcid.org/0000-0002-8276-413X",
+      "institutions": [
+        {
+          "id": "I4210092312",
+          "display_name": "Horia Hulubei National Institute for R and D in Physics and Nuclear Engineering",
+          "country_code": "RO",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Masjuan"
+    },
+    {
+      "display_name": "Aaron S. Meyer",
+      "id": "A5013340845",
+      "orcid": "https://orcid.org/0000-0001-7937-8505",
+      "institutions": [
+        {
+          "id": "I43439940",
+          "display_name": "University of Southampton",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A.S. Meyer"
+    },
+    {
+      "display_name": "Harvey B. Meyer",
+      "id": "A5054527590",
+      "orcid": "https://orcid.org/0000-0001-5056-3977",
+      "institutions": [
+        {
+          "id": "I197323543",
+          "display_name": "Johannes Gutenberg University Mainz",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I169556180",
+          "display_name": "GSI Helmholtz Centre for Heavy Ion Research",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210113347",
+          "display_name": "Helmholtz Institute Mainz",
+          "country_code": "DE",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H.B. Meyer"
+    },
+    {
+      "display_name": "T. Mibe",
+      "id": "A5054550789",
+      "orcid": "https://orcid.org/0000-0001-7057-9175",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Mibe"
+    },
+    {
+      "display_name": "K. Miura",
+      "id": "A5107341967",
+      "orcid": "https://orcid.org/0000-0002-6975-0446",
+      "institutions": [
+        {
+          "id": "I1314696892",
+          "display_name": "Fermi National Accelerator Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I157725225",
+          "display_name": "University of Illinois Urbana-Champaign",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "K. Miura"
+    },
+    {
+      "display_name": "S. Müller",
+      "id": "A5101860790",
+      "orcid": "https://orcid.org/0000-0001-6273-7102",
+      "institutions": [
+        {
+          "id": "I43439940",
+          "display_name": "University of Southampton",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S.E. Müller"
+    },
+    {
+      "display_name": "M. Nio",
+      "id": "A5030585861",
+      "orcid": "https://orcid.org/0000-0001-6553-8248",
+      "institutions": [
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        },
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Nio"
+    },
+    {
+      "display_name": "Daisuke Nomura",
+      "id": "A5070516719",
+      "orcid": "https://orcid.org/0000-0002-1998-413X",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Nomura"
+    },
+    {
+      "display_name": "Andreas Nyffeler",
+      "id": "A5010117938",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I197323543",
+          "display_name": "Johannes Gutenberg University Mainz",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Nyffeler"
+    },
+    {
+      "display_name": "Vladimir Pascalutsa",
+      "id": "A5010665511",
+      "orcid": "https://orcid.org/0000-0002-2613-6104",
+      "institutions": [
+        {
+          "id": "I7882870",
+          "display_name": "University of Glasgow",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "V. Pascalutsa"
+    },
+    {
+      "display_name": "M. Passera",
+      "id": "A5026924321",
+      "orcid": "https://orcid.org/0000-0002-7471-4124",
+      "institutions": [
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        },
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Passera"
+    },
+    {
+      "display_name": "E. Pérez del Río",
+      "id": "A5077761490",
+      "orcid": "https://orcid.org/0000-0001-7761-4084",
+      "institutions": [
+        {
+          "id": "I143002897",
+          "display_name": "Université de Toulon",
+          "country_code": "FR",
+          "type": "education"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Perez del Rio"
+    },
+    {
+      "display_name": "Santiago Peris",
+      "id": "A5005122774",
+      "orcid": "https://orcid.org/0000-0001-6131-7261",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Peris"
+    },
+    {
+      "display_name": "Antonin Portelli",
+      "id": "A5044145067",
+      "orcid": "https://orcid.org/0000-0002-6059-917X",
+      "institutions": [
+        {
+          "id": "I98677209",
+          "display_name": "University of Edinburgh",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "A. Portelli"
+    },
+    {
+      "display_name": "Massimiliano Procura",
+      "id": "A5079406653",
+      "orcid": "https://orcid.org/0000-0002-1393-4537",
+      "institutions": [
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        },
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Procura"
+    },
+    {
+      "display_name": "C. F. Redmer",
+      "id": "A5109392108",
+      "orcid": null,
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "C.F. Redmer"
+    },
+    {
+      "display_name": "B. L. Roberts",
+      "id": "A5106618512",
+      "orcid": "https://orcid.org/0000-0002-5279-2316",
+      "institutions": [
+        {
+          "id": "I4210158631",
+          "display_name": "RIKEN BNL Research Center",
+          "country_code": "US",
+          "type": "facility"
+        },
+        {
+          "id": "I140172145",
+          "display_name": "University of Connecticut",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I200870766",
+          "display_name": "Brookhaven National Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B.L. Roberts"
+    },
+    {
+      "display_name": "Pablo Sánchez-Puertas",
+      "id": "A5002066034",
+      "orcid": "https://orcid.org/0000-0003-2025-1985",
+      "institutions": [
+        {
+          "id": "I4210092312",
+          "display_name": "Horia Hulubei National Institute for R and D in Physics and Nuclear Engineering",
+          "country_code": "RO",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Sánchez-Puertas"
+    },
+    {
+      "display_name": "S. I. Serednyakov",
+      "id": "A5089233753",
+      "orcid": "https://orcid.org/0000-0002-3948-9101",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Serednyakov"
+    },
+    {
+      "display_name": "B. Shwartz",
+      "id": "A5109190775",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I67311998",
+          "display_name": "European Organization for Nuclear Research",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Shwartz"
+    },
+    {
+      "display_name": "Silvano Simula",
+      "id": "A5014795518",
+      "orcid": "https://orcid.org/0000-0002-5533-6746",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Simula"
+    },
+    {
+      "display_name": "Dominik Stöckinger",
+      "id": "A5064500476",
+      "orcid": "https://orcid.org/0009-0004-5376-5135",
+      "institutions": [
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Stöckinger"
+    },
+    {
+      "display_name": "Hyejung Stöckinger-Kim",
+      "id": "A5064343490",
+      "orcid": "https://orcid.org/0000-0002-2780-5939",
+      "institutions": [
+        {
+          "id": "I1314696892",
+          "display_name": "Fermi National Accelerator Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I157725225",
+          "display_name": "University of Illinois Urbana-Champaign",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Stöckinger-Kim"
+    },
+    {
+      "display_name": "Peter Stoffer",
+      "id": "A5004867878",
+      "orcid": "https://orcid.org/0000-0001-7966-2696",
+      "institutions": [
+        {
+          "id": "I4210092312",
+          "display_name": "Horia Hulubei National Institute for R and D in Physics and Nuclear Engineering",
+          "country_code": "RO",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "P. Stoffer"
+    },
+    {
+      "display_name": "T. Teubner",
+      "id": "A5006724732",
+      "orcid": "https://orcid.org/0000-0002-0680-0776",
+      "institutions": [
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        },
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "T. Teubner"
+    },
+    {
+      "display_name": "R. G. Van de Water",
+      "id": "A5103071267",
+      "orcid": "https://orcid.org/0000-0002-1573-327X",
+      "institutions": [
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I143002897",
+          "display_name": "Université de Toulon",
+          "country_code": "FR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "R. Van de Water"
+    },
+    {
+      "display_name": "Marc Vanderhaeghen",
+      "id": "A5034773199",
+      "orcid": "https://orcid.org/0000-0003-2363-5124",
+      "institutions": [
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        },
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Vanderhaeghen"
+    },
+    {
+      "display_name": "G. Venanzoni",
+      "id": "A5011201509",
+      "orcid": "https://orcid.org/0000-0002-3525-476X",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Venanzoni"
+    },
+    {
+      "display_name": "Georg von Hippel",
+      "id": "A5026921754",
+      "orcid": "https://orcid.org/0000-0002-3318-3566",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. von Hippel"
+    },
+    {
+      "display_name": "Hartmut Wittig",
+      "id": "A5050444325",
+      "orcid": "https://orcid.org/0000-0002-5580-1900",
+      "institutions": [
+        {
+          "id": "I157725225",
+          "display_name": "University of Illinois Urbana-Champaign",
+          "country_code": "US",
+          "type": "funder"
+        },
+        {
+          "id": "I1314696892",
+          "display_name": "Fermi National Accelerator Laboratory",
+          "country_code": "US",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "H. Wittig"
+    },
+    {
+      "display_name": "Z. Zhang",
+      "id": "A5114375150",
+      "orcid": "https://orcid.org/0000-0002-7853-9079",
+      "institutions": [
+        {
+          "id": "I4210086947",
+          "display_name": "Institute of Physics",
+          "country_code": "PL",
+          "type": "facility"
+        },
+        {
+          "id": "I864159182",
+          "display_name": "University of Silesia in Katowice",
+          "country_code": "PL",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Z. Zhang"
+    },
+    {
+      "display_name": "М. Н. Ачасов",
+      "id": "A5069825136",
+      "orcid": "https://orcid.org/0000-0002-9400-8622",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "M.N. Achasov"
+    },
+    {
+      "display_name": "Adnan Bashir",
+      "id": "A5057271353",
+      "orcid": "https://orcid.org/0000-0003-3183-7316",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Bashir"
+    },
+    {
+      "display_name": "Nuno Cardoso",
+      "id": "A5015348733",
+      "orcid": "https://orcid.org/0000-0003-0777-663X",
+      "institutions": [
+        {
+          "id": "I143002897",
+          "display_name": "Université de Toulon",
+          "country_code": "FR",
+          "type": "education"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Cardoso"
+    },
+    {
+      "display_name": "Bipasha Chakraborty",
+      "id": "A5011419135",
+      "orcid": "https://orcid.org/0000-0001-6667-329X",
+      "institutions": [
+        {
+          "id": "I67311998",
+          "display_name": "European Organization for Nuclear Research",
+          "country_code": "CH",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "B. Chakraborty"
+    },
+    {
+      "display_name": "En-Hung Chao",
+      "id": "A5052936420",
+      "orcid": "https://orcid.org/0000-0001-5289-9693",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "E.-H. Chao"
+    },
+    {
+      "display_name": "Jérôme Charles",
+      "id": "A5002190211",
+      "orcid": "https://orcid.org/0000-0002-4858-192X",
+      "institutions": [
+        {
+          "id": "I187531555",
+          "display_name": "Lund University",
+          "country_code": "SE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "J. Charles"
+    },
+    {
+      "display_name": "Andreas Crivellin",
+      "id": "A5035388118",
+      "orcid": "https://orcid.org/0000-0002-6449-5845",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Crivellin"
+    },
+    {
+      "display_name": "Oleksandra Deineka",
+      "id": "A5055846356",
+      "orcid": "https://orcid.org/0000-0002-4493-9883",
+      "institutions": [
+        {
+          "id": "I177969490",
+          "display_name": "University of Southern Denmark",
+          "country_code": "DK",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "O. Deineka"
+    },
+    {
+      "display_name": "A. G. Denig",
+      "id": "A5070183304",
+      "orcid": "https://orcid.org/0000-0001-7974-5854",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A. Denig"
+    },
+    {
+      "display_name": "Carleton DeTar",
+      "id": "A5073903983",
+      "orcid": "https://orcid.org/0000-0002-0216-6771",
+      "institutions": [
+        {
+          "id": "I7882870",
+          "display_name": "University of Glasgow",
+          "country_code": "GB",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C. DeTar"
+    },
+    {
+      "display_name": "C. A. Domínguez",
+      "id": "A5012056835",
+      "orcid": "https://orcid.org/0000-0002-2114-1465",
+      "institutions": [
+        {
+          "id": "I4210109533",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Pavia",
+          "country_code": "IT",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "C.A. Dominguez"
+    },
+    {
+      "display_name": "A. E. Dorokhov",
+      "id": "A5068358247",
+      "orcid": "https://orcid.org/0000-0002-6140-4151",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "A.E. Dorokhov"
+    },
+    {
+      "display_name": "В. П. Дружинин",
+      "id": "A5070425814",
+      "orcid": "https://orcid.org/0000-0001-5452-8909",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "V.P. Druzhinin"
+    },
+    {
+      "display_name": "Gernot Eichmann",
+      "id": "A5001560741",
+      "orcid": "https://orcid.org/0000-0002-0546-2533",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "G. Eichmann"
+    },
+    {
+      "display_name": "Matteo Fael",
+      "id": "A5005231371",
+      "orcid": "https://orcid.org/0000-0002-4541-9636",
+      "institutions": [
+        {
+          "id": "I4843557",
+          "display_name": "Budker Institute of Nuclear Physics",
+          "country_code": "RU",
+          "type": "facility"
+        },
+        {
+          "id": "I188973947",
+          "display_name": "Novosibirsk State University",
+          "country_code": "RU",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "M. Fael"
+    },
+    {
+      "display_name": "Christian S. Fischer",
+      "id": "A5050480452",
+      "orcid": "https://orcid.org/0000-0001-8780-7031",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "C.S. Fischer"
+    },
+    {
+      "display_name": "E. Gámiz",
+      "id": "A5073463414",
+      "orcid": "https://orcid.org/0000-0001-5125-2687",
+      "institutions": [
+        {
+          "id": "I143002897",
+          "display_name": "Université de Toulon",
+          "country_code": "FR",
+          "type": "education"
+        },
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "E. Gámiz"
+    },
+    {
+      "display_name": "Zechariah Gelzer",
+      "id": "A5035933208",
+      "orcid": null,
+      "institutions": [
+        {
+          "id": "I864159182",
+          "display_name": "University of Silesia in Katowice",
+          "country_code": "PL",
+          "type": "funder"
+        },
+        {
+          "id": "I4210086947",
+          "display_name": "Institute of Physics",
+          "country_code": "PL",
+          "type": "facility"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "Z. Gelzer"
+    },
+    {
+      "display_name": "Jeremy Green",
+      "id": "A5035867694",
+      "orcid": "https://orcid.org/0000-0003-1978-9614",
+      "institutions": [],
+      "is_corresponding": false,
+      "raw_author_name": "J.R. Green"
+    },
+    {
+      "display_name": "Saïda Guellati-Khélifa",
+      "id": "A5005517270",
+      "orcid": "https://orcid.org/0000-0002-8412-411X",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "S. Guellati-Khelifa"
+    },
+    {
+      "display_name": "D. Hatton",
+      "id": "A5074125126",
+      "orcid": "https://orcid.org/0000-0003-4410-5595",
+      "institutions": [
+        {
+          "id": "I4210090266",
+          "display_name": "Istituto Nazionale di Fisica Nucleare, Sezione di Roma Tre",
+          "country_code": "IT",
+          "type": "facility"
+        },
+        {
+          "id": "I160013858",
+          "display_name": "Istituto Nazionale di Fisica Nucleare",
+          "country_code": "IT",
+          "type": "government"
+        },
+        {
+          "id": "I60668342",
+          "display_name": "University of Regensburg",
+          "country_code": "DE",
+          "type": "funder"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "D. Hatton"
+    },
+    {
+      "display_name": "Nils Hermansson–Truedsson",
+      "id": "A5056703859",
+      "orcid": "https://orcid.org/0000-0003-3619-2916",
+      "institutions": [
+        {
+          "id": "I1294671590",
+          "display_name": "Centre National de la Recherche Scientifique",
+          "country_code": "FR",
+          "type": "government"
+        },
+        {
+          "id": "I143002897",
+          "display_name": "Université de Toulon",
+          "country_code": "FR",
+          "type": "education"
+        }
+      ],
+      "is_corresponding": false,
+      "raw_author_name": "N. Hermansson-Truedsson"
+    }
+  ],
+  "publication_year": 2020,
+  "publication_date": "2020-08-14",
+  "type": "article",
+  "cited_by_count": 1278,
+  "is_retracted": false,
+  "is_paratext": false,
+  "language": "en",
+  "source": {
+    "id": "S48633963",
+    "display_name": "Physics Reports",
+    "issn_l": "0370-1573",
+    "issn": [
+      "0370-1573",
+      "1873-6270"
+    ],
+    "type": "journal",
+    "host_organization": "https://openalex.org/P4310320990"
+  },
+  "volume": "887",
+  "issue": null,
+  "first_page": "1",
+  "last_page": "166",
+  "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://doi.org/10.1016/j.physrep.2020.07.006",
+    "any_repository_has_fulltext": true
+  },
+  "concepts": [
+    {
+      "id": "C121332964",
+      "display_name": "Physics",
+      "level": 0,
+      "score": 0.97014046
+    },
+    {
+      "id": "C139455999",
+      "display_name": "Anomalous magnetic dipole moment",
+      "level": 3,
+      "score": 0.8111495
+    },
+    {
+      "id": "C205334942",
+      "display_name": "Muon",
+      "level": 2,
+      "score": 0.68548906
+    },
+    {
+      "id": "C188533889",
+      "display_name": "Electron magnetic dipole moment",
+      "level": 4,
+      "score": 0.55297774
+    },
+    {
+      "id": "C54553102",
+      "display_name": "Magnetic moment",
+      "level": 2,
+      "score": 0.5236863
+    },
+    {
+      "id": "C185544564",
+      "display_name": "Nuclear physics",
+      "level": 1,
+      "score": 0.51913375
+    },
+    {
+      "id": "C109214941",
+      "display_name": "Particle physics",
+      "level": 1,
+      "score": 0.51540077
+    },
+    {
+      "id": "C101454708",
+      "display_name": "Standard Model (mathematical formulation)",
+      "level": 3,
+      "score": 0.5082831
+    },
+    {
+      "id": "C179254644",
+      "display_name": "Moment (physics)",
+      "level": 2,
+      "score": 0.46853012
+    },
+    {
+      "id": "C169852918",
+      "display_name": "Magnetic dipole",
+      "level": 3,
+      "score": 0.24806303
+    },
+    {
+      "id": "C26873012",
+      "display_name": "Condensed matter physics",
+      "level": 1,
+      "score": 0.18552792
+    },
+    {
+      "id": "C115260700",
+      "display_name": "Magnetic field",
+      "level": 2,
+      "score": 0.16786349
+    },
+    {
+      "id": "C62520636",
+      "display_name": "Quantum mechanics",
+      "level": 1,
+      "score": 0.13387808
+    },
+    {
+      "id": "C166957645",
+      "display_name": "Archaeology",
+      "level": 1,
+      "score": 0.0
+    },
+    {
+      "id": "C40976572",
+      "display_name": "Gauge (firearms)",
+      "level": 2,
+      "score": 0.0
+    },
+    {
+      "id": "C95457728",
+      "display_name": "History",
+      "level": 0,
+      "score": 0.0
+    }
+  ],
+  "topics": [
+    {
+      "id": "T10048",
+      "display_name": "Particle physics theoretical and experimental studies",
+      "score": 0.9997
+    },
+    {
+      "id": "T13650",
+      "display_name": "Computational Physics and Python Applications",
+      "score": 0.9975
+    },
+    {
+      "id": "T10224",
+      "display_name": "Quantum Chromodynamics and Particle Interactions",
+      "score": 0.9968
+    }
+  ],
+  "created_date": null,
+  "updated_date": null,
+  "indexed_in": [],
+  "landing_page_url": "https://doi.org/10.1016/j.physrep.2020.07.006",
+  "pdf_url": null,
+  "retrieved_date": "2025-07-30T14:34:32.709582",
+  "source_database": "OpenAlex"
+}
