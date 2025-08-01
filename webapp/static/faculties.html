@@ -419,6 +419,25 @@
             border-color: var(--primary-color);
         }
 
+        /* Results per page selector */
+        .results-per-page .form-select {
+            min-width: 70px;
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+            font-size: 0.875rem;
+        }
+
+        .results-per-page .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .results-per-page {
+                margin: 0.5rem 0;
+            }
+        }
+
         /* Pagination */
         .pagination-container {
             display: flex;
@@ -715,10 +734,23 @@
             </div>
             
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <small class="text-muted" id="results-info">Loading faculty members...</small>
                 </div>
-                <div class="col-lg-6 text-lg-end">
+                <div class="col-lg-4 text-center">
+                    <!-- Results Per Page Selector -->
+                    <div class="results-per-page d-flex align-items-center justify-content-center">
+                        <label for="per-page-select" class="form-label me-2 mb-0 text-muted small">Show:</label>
+                        <select class="form-select form-select-sm" id="per-page-select" onchange="changeResultsPerPage()" style="width: auto;">
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100" selected>100</option>
+                            <option value="200">200</option>
+                        </select>
+                        <span class="text-muted small ms-2">results</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
                     <div class="view-toggle d-inline-flex">
                         <button class="btn active" id="grid-view" onclick="setView('grid')">
                             <i class="fas fa-th me-1"></i>Grid
@@ -847,11 +879,19 @@
         let filteredData = [];
         let currentPage = 1;
         let currentView = 'grid';
-        const itemsPerPage = 12;
+        let itemsPerPage = 100; // Default items per page
         
         // Sorting variables
         let currentSort = 'name';
         let sortDirection = 'asc';
+
+        // Change results per page
+        function changeResultsPerPage() {
+            const selectElement = document.getElementById('per-page-select');
+            itemsPerPage = parseInt(selectElement.value);
+            currentPage = 1; // Reset to first page
+            displayFaculty(); // Re-display with new page size
+        }
 
         // Load faculty data
         async function loadFaculty() {
