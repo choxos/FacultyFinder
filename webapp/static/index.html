@@ -3,70 +3,543 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FacultyFinder - Academic Faculty Database and Research Network</title>
+    <title>FacultyFinder - Find Academic Collaborators Worldwide</title>
     
     <!-- Meta Tags -->
-    <meta name="description" content="A comprehensive faculty database to help researchers, graduate students, and academics discover potential supervisors, collaborators, and faculty members across universities.">
-    <meta name="keywords" content="faculty finder, academic collaboration, research, universities, professors, global, worldwide">
-    <meta name="author" content="FacultyFinder Team">
+    <meta name="description" content="Discover and connect with leading faculty members from top universities worldwide. Find research mentors, collaborators, and academic opportunities with AI-powered matching.">
+    <meta name="keywords" content="faculty finder, academic collaboration, research, universities, professors, mentors, PhD supervisor">
+    <meta name="author" content="FacultyFinder">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS Theme -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
     <link rel="stylesheet" href="/static/css/facultyfinder.css">
-    <link rel="stylesheet" href="/static/css/filter-fixes.css">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004499;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b35;
+            --text-primary: #2c3e50;
+            --text-secondary: #6c757d;
+            --border-color: #e9ecef;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: #fff;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-primary) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+        }
+
+        /* Search Box */
+        .hero-search {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-input-group {
+            position: relative;
+        }
+
+        .search-input {
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border-right: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .search-btn {
+            border: 2px solid var(--primary-color);
+            background: var(--primary-color);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--warning-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .feature-icon.primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .feature-icon.success {
+            background: linear-gradient(135deg, #56ab2f, #a8e6cf);
+            color: white;
+        }
+
+        .feature-icon.warning {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+        }
+
+        .feature-icon.info {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Universities Showcase */
+        .universities-showcase {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .university-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .university-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            background: var(--secondary-color);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-primary {
+            background: var(--accent-color);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta-primary:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        .btn-cta-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #bdc3c7;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-search {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Utility Classes */
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="/">
-                <i class="fas fa-graduation-cap me-2"></i>
-                FacultyFinder
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-graduation-cap me-2"></i>FacultyFinder
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/countries">Countries</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/universities">Universities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/faculties">Faculties</a>
+                        <a class="nav-link" href="/faculties">Faculty</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/ai-assistant">
-                            <i class="fas fa-robot me-1"></i>AI Assistant
-                        </a>
+                        <a class="nav-link" href="/countries">Countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ai-assistant">AI Assistant</a>
                     </li>
                 </ul>
+                
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <button class="btn btn-outline-secondary me-2" id="theme-toggle" type="button" title="Toggle dark/light mode">
+                        <button class="btn btn-link nav-link" id="theme-toggle" title="Toggle theme">
                             <i class="fas fa-moon" id="theme-icon"></i>
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-primary me-2" href="/login">
-                            <i class="fas fa-sign-in-alt me-1"></i>Sign In
-                        </a>
+                        <a class="btn btn-outline-primary me-2" href="/login">Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="/register">
-                            <i class="fas fa-user-plus me-1"></i>Sign Up
-                        </a>
+                        <a class="btn btn-primary" href="/register">Get Started</a>
                     </li>
                 </ul>
             </div>
@@ -74,196 +547,56 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero-section">
+    <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center min-vh-75">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <div class="badge bg-light text-primary mb-3 fs-6 px-3 py-2">
-                            <i class="fas fa-graduation-cap me-2"></i>Academic Research Network
-                        </div>
-                        <h1 class="display-4 fw-bold text-white mb-4">
-                            Discover Faculty & 
-                            <span class="text-warning">Research Collaborators</span>
+                        <h1 class="hero-title">
+                            Find Your Perfect
+                            <span class="text-gradient">Academic Match</span>
                         </h1>
-                        <p class="lead mb-4 text-light fs-5">
-                            A comprehensive database to help researchers find potential supervisors, 
-                            collaborators, and faculty members across universities. Explore detailed 
-                            academic profiles and research interests to identify meaningful connections.
+                        <p class="hero-subtitle">
+                            Connect with leading faculty members worldwide. Discover research mentors, 
+                            collaboration partners, and academic opportunities with AI-powered matching.
                         </p>
                         
-                        <!-- Value Proposition Points -->
-                        <div class="value-points mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-university text-warning me-3"></i>
-                                <span class="text-light">Browse faculty from multiple universities</span>
-                            </div>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-search text-warning me-3"></i>
-                                <span class="text-light">Search by research areas and expertise</span>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <i class="fas fa-robot text-warning me-3"></i>
-                                <span class="text-light">AI-assisted profile matching</span>
-                            </div>
-                        </div>
-                        
-                        <!-- CTA Buttons -->
-                        <div class="hero-cta">
-                            <a href="/faculties" class="btn btn-warning btn-lg me-3 mb-3 px-4 py-3">
-                                <i class="fas fa-search me-2"></i>Browse Faculty
-                            </a>
-                            <a href="/ai-assistant" class="btn btn-outline-light btn-lg mb-3 px-4 py-3">
-                                <i class="fas fa-upload me-2"></i>Upload CV
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-stats-card bg-white rounded-4 shadow-lg p-4">
-                        <h3 class="text-dark mb-4 text-center">Database Overview</h3>
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="stat-item text-center">
-                                    <div class="stat-number h2 fw-bold text-primary mb-1" id="hero-stat-professors">281</div>
-                                    <div class="stat-label text-muted small">Faculty Profiles</div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="stat-item text-center">
-                                    <div class="stat-number h2 fw-bold text-success mb-1" id="hero-stat-universities">100</div>
-                                    <div class="stat-label text-muted small">Universities</div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="stat-item text-center">
-                                    <div class="stat-number h2 fw-bold text-info mb-1" id="hero-stat-countries">1</div>
-                                    <div class="stat-label text-muted small">Countries</div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="stat-item text-center">
-                                    <div class="stat-number h2 fw-bold text-warning mb-1">Free</div>
-                                    <div class="stat-label text-muted small">Access</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Quick Search in Hero -->
-                        <div class="mt-4">
-                            <form action="/faculties" method="GET" class="search-form">
-                                <div class="input-group">
-                                    <input type="text" name="search" class="form-control form-control-lg" 
-                                           placeholder="Search by name or research area...">
-                                    <button class="btn btn-primary btn-lg" type="submit">
-                                        <i class="fas fa-search"></i>
+                        <div class="hero-search">
+                            <h5 class="mb-3 text-dark">Start your search</h5>
+                            <form action="/faculties" method="GET">
+                                <div class="input-group search-input-group">
+                                    <input type="text" name="search" class="form-control search-input" 
+                                           placeholder="Search by name, research area, or university...">
+                                    <button class="btn btn-primary search-btn" type="submit">
+                                        <i class="fas fa-search me-2"></i>Search
                                     </button>
                                 </div>
                             </form>
+                            <p class="text-muted small mt-2 mb-0">
+                                <i class="fas fa-lightbulb me-1"></i>
+                                Try searching for "machine learning", "cancer research", or "McMaster University"
+                            </p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Features Section -->
-    <section class="features-section py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="h3 fw-bold text-dark mb-3">Platform Features</h2>
-                    <p class="lead text-muted">Tools designed to support academic research and collaboration</p>
-                </div>
-            </div>
-            
-            <!-- Key Features -->
-            <div class="row g-4 mb-5">
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
-                        <div class="feature-icon mb-3">
-                            <div class="icon-circle bg-primary-light">
-                                <i class="fas fa-user-graduate fa-2x text-primary"></i>
-                            </div>
-                        </div>
-                        <h5 class="feature-label fw-semibold mb-3">Faculty Profiles</h5>
-                        <p class="feature-description text-muted small mb-0">
-                            Detailed academic profiles including research interests, 
-                            education background, and contact information
-                        </p>
                     </div>
                 </div>
                 
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
-                        <div class="feature-icon mb-3">
-                            <div class="icon-circle bg-success-light">
-                                <i class="fas fa-search fa-2x text-success"></i>
-                            </div>
+                <div class="col-lg-6">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" id="hero-stat-professors">281</div>
+                            <div class="stat-label">Faculty Profiles</div>
                         </div>
-                        <h5 class="feature-label fw-semibold mb-3">Advanced Search</h5>
-                        <p class="feature-description text-muted small mb-0">
-                            Search and filter faculty by research areas, university, 
-                            department, and employment type
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
-                        <div class="feature-icon mb-3">
-                            <div class="icon-circle bg-info-light">
-                                <i class="fas fa-robot fa-2x text-info"></i>
-                            </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="hero-stat-universities">15</div>
+                            <div class="stat-label">Universities</div>
                         </div>
-                        <h5 class="feature-label fw-semibold mb-3">AI Assistant</h5>
-                        <p class="feature-description text-muted small mb-0">
-                            Upload your CV to receive personalized faculty 
-                            recommendations based on your research interests
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 text-center hover-lift">
-                        <div class="feature-icon mb-3">
-                            <div class="icon-circle bg-warning-light">
-                                <i class="fas fa-map-marked-alt fa-2x text-warning"></i>
-                            </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="hero-stat-countries">3</div>
+                            <div class="stat-label">Countries</div>
                         </div>
-                        <h5 class="feature-label fw-semibold mb-3">Geographic View</h5>
-                        <p class="feature-description text-muted small mb-0">
-                            Explore universities by location with integrated 
-                            maps and geographical filtering options
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- About Section -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="about-section bg-white rounded-4 p-5">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
-                                <h3 class="h4 fw-bold mb-3">About FacultyFinder</h3>
-                                <p class="mb-4">
-                                    FacultyFinder is an academic research tool developed to assist graduate students, 
-                                    researchers, and academic professionals in discovering potential supervisors, 
-                                    collaborators, and faculty members. Our database contains verified profiles 
-                                    from universities, with a focus on providing accurate and up-to-date information 
-                                    to support the academic community.
-                                </p>
-                                <p class="mb-0 text-muted">
-                                    Currently featuring faculty profiles from Canadian universities, 
-                                    with plans to expand internationally as the platform grows.
-                                </p>
-                            </div>
-                            <div class="col-lg-4 text-center">
-                                <a href="/universities" class="btn btn-primary btn-lg px-4 py-3">
-                                    <i class="fas fa-university me-2"></i>Browse Universities
-                                </a>
-                            </div>
+                        <div class="stat-item">
+                            <div class="stat-number">AI</div>
+                            <div class="stat-label">Powered</div>
                         </div>
                     </div>
                 </div>
@@ -271,195 +604,203 @@
         </div>
     </section>
 
-    <!-- Top Universities Section -->
-    <div class="container mb-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-header text-center mb-5">
-                    <h2 class="fw-bold">Top Universities by Faculty Count</h2>
-                    <p class="text-muted">Leading institutions with the most faculty members in our database</p>
-                </div>
-                
-                <div class="row" id="top-universities-container">
-                    <!-- Loading placeholder -->
-                    <div class="col-12 text-center">
-                        <div class="loading-spinner"></div>
-                        <p class="mt-2 text-muted">Loading top universities...</p>
-                    </div>
-                </div>
-                
-                <div class="row mt-4">
-                    <div class="col-12 text-center">
-                        <a href="/universities" class="btn btn-primary btn-lg">
-                            <i class="fas fa-arrow-right me-2"></i>View All Universities
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Featured Faculty Section -->
-    <div class="container mb-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-header text-center mb-5">
-                    <h2 class="h3 fw-bold">Featured Faculty</h2>
-                    <p class="text-muted">Recent additions to our faculty database</p>
-                </div>
-                
-                <div class="row" id="featured-faculty-container">
-                    <!-- Loading placeholder -->
-                    <div class="col-12 text-center">
-                        <div class="loading-spinner"></div>
-                        <p class="mt-2 text-muted">Loading featured faculty...</p>
-                    </div>
-                </div>
-                
-                <div class="row mt-4">
-                    <div class="col-12 text-center">
-                        <a href="/faculties" class="btn btn-primary btn-lg">
-                            <i class="fas fa-arrow-right me-2"></i>View All Faculty
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Getting Started Section -->
-    <section class="getting-started py-5 bg-primary text-white">
+    <!-- Features Section -->
+    <section class="features-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="getting-started-content">
-                        <h3 class="h4 fw-bold mb-4">
-                            Get Started with FacultyFinder
-                        </h3>
-                        <p class="mb-4">
-                            Whether you're a graduate student looking for a supervisor, 
-                            a researcher seeking collaborators, or a faculty member 
-                            exploring new partnerships, our platform can help you find 
-                            the right academic connections.
+            <h2 class="section-title">Why Choose FacultyFinder?</h2>
+            <p class="section-subtitle">
+                The most comprehensive platform for academic discovery and collaboration
+            </p>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon primary">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="feature-title">Smart Search</h3>
+                        <p class="feature-description">
+                            Advanced filtering by research areas, university, department, and expertise to find the perfect match.
                         </p>
-                        
-                        <!-- Getting Started Steps -->
-                        <div class="steps mb-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="step-number me-3 bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">
-                                    <span class="small fw-bold">1</span>
-                                </div>
-                                <span>Browse faculty profiles by university or research area</span>
-                            </div>
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="step-number me-3 bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">
-                                    <span class="small fw-bold">2</span>
-                                </div>
-                                <span>Use our AI assistant for personalized recommendations</span>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="step-number me-3 bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">
-                                    <span class="small fw-bold">3</span>
-                                </div>
-                                <span>Connect with faculty members through their profiles</span>
-                            </div>
-                        </div>
-                        
-                        <!-- CTA Buttons -->
-                        <div class="cta-buttons">
-                            <a href="/faculties" class="btn btn-warning btn-lg me-3 mb-3 px-4 py-3">
-                                <i class="fas fa-search me-2"></i>Start Browsing
-                            </a>
-                            <a href="/ai-assistant" class="btn btn-outline-light btn-lg mb-3 px-4 py-3">
-                                <i class="fas fa-upload me-2"></i>Upload CV
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
-                <div class="col-lg-6">
-                    <div class="getting-started-visual text-center">
-                        <div class="stats-card bg-white bg-opacity-10 rounded-4 p-4">
-                            <h5 class="mb-4 text-warning">Quick Stats</h5>
-                            <div class="row g-3">
-                                <div class="col-6">
-                                    <div class="stat-item">
-                                        <div class="h4 fw-bold text-white mb-1" id="cta-stat-professors">281</div>
-                                        <div class="small text-light opacity-75">Faculty Profiles</div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="stat-item">
-                                        <div class="h4 fw-bold text-white mb-1" id="cta-stat-universities">100</div>
-                                        <div class="small text-light opacity-75">Universities</div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="stat-item">
-                                        <div class="h4 fw-bold text-white mb-1">Free</div>
-                                        <div class="small text-light opacity-75">Access</div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="stat-item">
-                                        <div class="h4 fw-bold text-white mb-1">AI</div>
-                                        <div class="small text-light opacity-75">Powered</div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon success">
+                            <i class="fas fa-user-graduate"></i>
                         </div>
+                        <h3 class="feature-title">Verified Profiles</h3>
+                        <p class="feature-description">
+                            Comprehensive faculty profiles with research interests, publications, and contact information.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon warning">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="feature-title">AI Matching</h3>
+                        <p class="feature-description">
+                            Upload your CV and get personalized faculty recommendations based on your research interests.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon info">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="feature-title">Global Network</h3>
+                        <p class="feature-description">
+                            Access faculty from leading universities worldwide with detailed geographic filtering.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Background Pattern -->
-        <div class="position-absolute top-0 end-0 w-50 h-100 opacity-10">
-            <div class="position-absolute top-50 start-50 translate-middle">
-                <i class="fas fa-network-wired fa-10x text-white opacity-20"></i>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Get started in just three simple steps</p>
+            
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Search & Filter</h3>
+                        <p class="feature-description">
+                            Use our advanced search to find faculty by research area, university, or use our AI assistant for personalized matches.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Explore Profiles</h3>
+                        <p class="feature-description">
+                            Browse detailed faculty profiles including research interests, publications, and academic background.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Connect</h3>
+                        <p class="feature-description">
+                            Reach out directly through provided contact information to start meaningful academic collaborations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Showcase -->
+    <section class="universities-showcase">
+        <div class="container">
+            <h2 class="section-title">Top Universities</h2>
+            <p class="section-subtitle">Featuring faculty from leading institutions worldwide</p>
+            
+            <div class="row" id="top-universities-container">
+                <!-- Loading placeholder -->
+                <div class="col-12 text-center">
+                    <div class="loading-spinner"></div>
+                    <p class="mt-3 text-muted">Loading top universities...</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="/universities" class="btn btn-primary btn-lg px-4">
+                    <i class="fas fa-university me-2"></i>View All Universities
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Find Your Academic Match?</h2>
+            <p class="cta-subtitle">
+                Join thousands of researchers discovering meaningful academic connections
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="/faculties" class="btn btn-cta-primary">
+                    <i class="fas fa-search me-2"></i>Start Searching
+                </a>
+                <a href="/ai-assistant" class="btn btn-cta-secondary">
+                    <i class="fas fa-upload me-2"></i>Try AI Assistant
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h5>
-                        <i class="fas fa-graduation-cap me-2"></i>
-                        FacultyFinder
-                    </h5>
-                    <p class="mb-3">
-                        A research tool to help graduate students, researchers, and academic professionals 
-                        discover faculty members and potential collaborators across universities.
-                    </p>
-                    <p class="mb-0">
-                        &copy; 2025 FacultyFinder. All rights reserved.
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap me-2"></i>FacultyFinder
+                    </div>
+                    <p class="footer-description">
+                        Connecting researchers, students, and faculty members worldwide. 
+                        Discover your next academic collaboration with our AI-powered platform.
                     </p>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/faculties" class="text-light text-decoration-none">Faculty Search</a></li>
-                        <li class="mb-2"><a href="/universities" class="text-light text-decoration-none">Universities</a></li>
-                        <li class="mb-2"><a href="/countries" class="text-light text-decoration-none">Countries</a></li>
-                        <li class="mb-2"><a href="/ai-assistant" class="text-light text-decoration-none">AI Assistant</a></li>
-                        <li class="mb-2"><a href="/api/docs" class="text-light text-decoration-none">API Documentation</a></li>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Platform</h6>
+                    <ul class="footer-links">
+                        <li><a href="/faculties">Faculty Search</a></li>
+                        <li><a href="/universities">Universities</a></li>
+                        <li><a href="/countries">Countries</a></li>
+                        <li><a href="/ai-assistant">AI Assistant</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">Connect With Us</h6>
-                    <div class="d-flex gap-3 mb-3">
-                        <a href="#" class="text-muted"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-linkedin fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-researchgate fa-lg"></i></a>
-                    </div>
-                    <p class="small text-muted">
-                        Follow us for updates on new features and academic collaboration opportunities.
-                    </p>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Account</h6>
+                    <ul class="footer-links">
+                        <li><a href="/login">Sign In</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
                 </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Resources</h6>
+                    <ul class="footer-links">
+                        <li><a href="/api/docs">API Docs</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FacultyFinder. All rights reserved. Made with <i class="fas fa-heart text-danger"></i> for the academic community.</p>
             </div>
         </div>
     </footer>
@@ -467,464 +808,155 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JavaScript -->
-    <script src="/static/js/facultyfinder.js"></script>
-    
-    <!-- Homepage Statistics and Animation -->
     <script>
-        // API Base URL
-        const API_BASE = '/api/v1';
-        
-        // Initialize stats elements with 0
-        function initializeStats() {
-            const statElements = ['stat-professors', 'stat-universities', 'stat-countries', 'stat-publications'];
-            statElements.forEach(id => {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.textContent = '0';
-                }
-            });
-        }
-        
-        // Enhanced number animation function
-        function animateNumber(elementId, targetNumber, duration = 2000) {
-            const element = document.getElementById(elementId);
-            if (!element) {
-                console.warn(`Element with ID '${elementId}' not found`);
-                return;
-            }
-            
-            // Ensure targetNumber is valid, default to 0 if not
-            const target = (!targetNumber || isNaN(targetNumber) || targetNumber < 0) ? 0 : parseInt(targetNumber);
-            
-            // Start from current number or 0
-            const currentText = element.textContent.replace(/,/g, '');
-            const startNumber = (!currentText || isNaN(parseInt(currentText))) ? 0 : parseInt(currentText);
-            
-            // If target is the same as current, no animation needed
-            if (startNumber === target) {
-                element.textContent = target.toLocaleString();
-                return;
-            }
-            
-            const startTime = Date.now();
-            
-            function updateNumber() {
-                const elapsed = Date.now() - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function for smooth animation (ease-out cubic)
-                const easeProgress = 1 - Math.pow(1 - progress, 3);
-                
-                const currentNumber = Math.floor(startNumber + (target - startNumber) * easeProgress);
-                
-                // Update the element with formatted number
-                element.textContent = currentNumber.toLocaleString();
-                
-                if (progress < 1) {
-                    requestAnimationFrame(updateNumber);
-                } else {
-                    // Ensure final number is exactly the target
-                    element.textContent = target.toLocaleString();
-                }
-            }
-            
-            requestAnimationFrame(updateNumber);
-        }
-        
-        // Load statistics with enhanced error handling
-        async function loadStats() {
-            try {
-                console.log('Loading statistics...');
-                
-                const response = await fetch(`${API_BASE}/stats`);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                console.log('Stats loaded:', data);
-                
-                // Animate numbers with fallback values and validation
-                setTimeout(() => {
-                    // Update main stats section
-                    animateNumber('stat-professors', data.total_professors || 281);
-                    animateNumber('stat-universities', data.total_universities || 100);
-                    animateNumber('stat-countries', data.countries_count || 1);
-                    animateNumber('stat-publications', data.total_publications || 0);
-                    
-                    // Update hero stats card
-                    animateNumber('hero-stat-professors', data.total_professors || 281);
-                    animateNumber('hero-stat-universities', data.total_universities || 100);
-                    animateNumber('hero-stat-countries', data.countries_count || 1);
-                }, 200); // Small delay to ensure smooth animation start
-                
-            } catch (error) {
-                console.error('Error loading stats:', error);
-                
-                // Use fallback values with animation
-                console.log('Using fallback statistics...');
-                const fallbackStats = {
-                    'stat-professors': 281,
-                    'stat-universities': 100,
-                    'stat-countries': 1,
-                    'stat-publications': 0
-                };
-                
-                const heroFallbackStats = {
-                    'hero-stat-professors': 281,
-                    'hero-stat-universities': 100,
-                    'hero-stat-countries': 1
-                };
-                
-                setTimeout(() => {
-                    // Update main stats
-                    Object.entries(fallbackStats).forEach(([id, value]) => {
-                        animateNumber(id, value, 1500); // Slightly faster for fallback
-                    });
-                    
-                    // Update hero stats
-                    Object.entries(heroFallbackStats).forEach(([id, value]) => {
-                        animateNumber(id, value, 1500);
-                    });
-                }, 200);
-            }
-        }
-        
-        // Load top universities
-        async function loadTopUniversities() {
-            try {
-                const response = await fetch(`${API_BASE}/universities?per_page=6&sort_by=faculty_count`);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                
-                const container = document.getElementById('top-universities-container');
-                if (!container) return;
-                
-                container.innerHTML = '';
-                
-                if (data.universities && data.universities.length > 0) {
-                    data.universities.forEach(university => {
-                        const universityCard = `
-                            <div class="col-lg-6 col-xl-4 mb-4">
-                                <div class="university-card facultyfinder-card p-4 h-100">
-                                    <div class="d-flex justify-content-between align-items-start mb-3">
-                                        <h5 class="mb-1">
-                                            <a href="/university/${university.university_code || university.name}" class="text-decoration-none text-primary fw-bold">
-                                                ${university.name || 'Unknown University'}
-                                            </a>
-                                        </h5>
-                                        ${university.established ? 
-                                            `<span class="badge bg-secondary">Est. ${university.established}</span>` : 
-                                            ''
-                                        }
-                                    </div>
-                                    
-                                    <div class="mb-3">
-                                        <div class="text-muted mb-2">
-                                            <i class="fas fa-map-marker-alt me-2"></i>
-                                            <strong>${university.city || 'Unknown'}</strong>
-                                            ${university.province_state ? `, ${university.province_state}` : ''}
-                                            <br>
-                                            <i class="fas fa-globe me-2"></i>
-                                            <strong>${university.country || 'Unknown'}</strong>
-                                            ${(university.building_number && university.street) || university.full_address ? `
-                                                <a href="https://www.google.com/maps/search/${encodeURIComponent(university.full_address || university.name + ' ' + university.city)}" 
-                                                   target="_blank" class="btn btn-sm btn-outline-primary ms-2 google-maps-btn"
-                                                   title="View on Google Maps">
-                                                    <i class="fas fa-map-marked-alt me-1"></i>Maps
-                                                </a>
-                                            ` : ''}
-                                        </div>
-                                        ${(university.building_number && university.street) ? `
-                                        <div class="text-muted mb-2 address-details">
-                                            <i class="fas fa-home me-2"></i>
-                                            <small>
-                                                <strong>${university.building_number} ${university.street}</strong>
-                                                ${university.postal_code ? `, ${university.postal_code}` : ''}
-                                            </small>
-                                        </div>
-                                        ` : ''}
-                                        
-                                        ${university.type ? `
-                                        <div class="text-muted mb-2">
-                                            <i class="fas fa-building me-2"></i>
-                                            <strong>${university.type}</strong>
-                                        </div>
-                                        ` : ''}
-                                        
-                                        ${university.website ? `
-                                        <div class="text-muted mb-2">
-                                            <i class="fas fa-link me-2"></i>
-                                            <a href="${university.website}" target="_blank" class="text-decoration-none">
-                                                <strong>Official Website</strong>
-                                                <i class="fas fa-external-link-alt ms-1"></i>
-                                            </a>
-                                        </div>
-                                        ` : ''}
-                                    </div>
-                                    
-                                    <div class="mt-auto">
-                                        <div class="row text-center">
-                                            <div class="col-6">
-                                                <div class="stat-item">
-                                                    <div class="stat-number text-primary fw-bold">${university.faculty_count || 0}</div>
-                                                    <div class="stat-label">Faculty</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="stat-item">
-                                                    <div class="stat-number text-success fw-bold">${university.department_count || 0}</div>
-                                                    <div class="stat-label">Departments</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="mt-3">
-                                            <a href="/faculties?university=${encodeURIComponent(university.name || '')}" class="btn btn-outline-primary btn-sm w-100">
-                                                <i class="fas fa-users me-1"></i>View Faculty
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        container.innerHTML += universityCard;
-                    });
-                } else {
-                    container.innerHTML = '<div class="col-12"><p class="text-muted text-center">No universities data available.</p></div>';
-                }
-                
-            } catch (error) {
-                console.error('Error loading top universities:', error);
-                const container = document.getElementById('top-universities-container');
-                if (container) {
-                    container.innerHTML = '<div class="col-12"><p class="text-muted text-center">Unable to load universities at this time.</p></div>';
-                }
-            }
-        }
-        
-        // Load featured faculty
-        async function loadFeaturedFaculty() {
-            try {
-                const response = await fetch(`${API_BASE}/faculties?per_page=6&sort_by=publications`);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                
-                const container = document.getElementById('featured-faculty-container');
-                if (!container) return;
-                
-                container.innerHTML = '';
-                
-                if (data.faculties && data.faculties.length > 0) {
-                    data.faculties.forEach((faculty, index) => {
-                        // Process research areas
-                        const researchAreas = [];
-                        if (faculty.research_interests) {
-                            const areas = faculty.research_interests.split(/[,;]/)
-                                .map(area => area.trim())
-                                .filter(area => area.length > 0 && area.length < 50);
-                            researchAreas.push(...areas.slice(0, 5));
-                        }
-                        
-                        // Generate professor ID
-                        const professorId = faculty.id || `prof-${index}`;
-                        
-                        const facultyCard = `
-                            <div class="col-lg-6 col-xl-4 mb-4">
-                                <div class="faculty-card h-100">
-                                    <div class="card-body">
-                                        <div class="faculty-info">
-                                            <!-- Professor Name and Title -->
-                                            <div class="faculty-header mb-3">
-                                                <h5 class="card-title mb-1">
-                                                    <a href="/professor/${professorId}" class="text-decoration-none professor-link">
-                                                        ${faculty.name || 'Unknown Faculty'}
-                                                    </a>
-                                                </h5>
-                                                <p class="text-muted small mb-0">
-                                                    <i class="fas fa-graduation-cap me-1"></i>
-                                                    <a href="/faculties?position=${encodeURIComponent(faculty.position || '')}" 
-                                                       class="text-decoration-none text-muted hover-primary position-link">
-                                                        ${faculty.position || 'Faculty Member'}${faculty.adjunct ? ' (Part-time)' : (!faculty.full_time ? ' (Part-time)' : '')}
-                                                    </a>
-                                                </p>
-                                            </div>
-                                            
-                                            <!-- University -->
-                                            <div class="faculty-affiliation mb-2">
-                                                <p class="text-muted small mb-1">
-                                                    <i class="fas fa-university me-1"></i>
-                                                    <a href="/faculties?university=${encodeURIComponent(faculty.university_code || faculty.university_name)}" 
-                                                       class="text-decoration-none text-muted hover-primary university-link">
-                                                        ${faculty.university_name || 'Unknown University'}
-                                                    </a>
-                                                    ${faculty.university_full_address ? `
-                                                        <a href="https://www.google.com/maps/search/${encodeURIComponent(faculty.university_full_address)}" 
-                                                           target="_blank" 
-                                                           class="text-decoration-none ms-2 maps-link"
-                                                           title="View ${faculty.university_name || 'University'} on Google Maps">
-                                                            <i class="fas fa-map-marker-alt text-primary"></i>
-                                                        </a>
-                                                    ` : ''}
-                                                </p>
-                                                
-                                                <!-- Department -->
-                                                ${faculty.department ? `
-                                                <p class="text-muted small mb-0">
-                                                    <i class="fas fa-building me-1"></i>
-                                                    <a href="/faculties?department=${encodeURIComponent(faculty.department)}" 
-                                                       class="text-decoration-none text-muted hover-primary department-link" 
-                                                       title="${faculty.department}">
-                                                        ${faculty.department}
-                                                    </a>
-                                                </p>
-                                                ` : ''}
-                                            </div>
-                                            
-                                            <!-- Research Areas -->
-                                            ${researchAreas.length > 0 ? `
-                                            <div class="research-areas mt-2">
-                                                ${researchAreas.slice(0, 3).map(area => 
-                                                    `<span class="badge bg-light text-dark border me-1 mb-1 small-research-badge">
-                                                        ${area}
-                                                    </span>`
-                                                ).join('')}
-                                                ${researchAreas.length > 3 ? 
-                                                    `<span class="badge bg-secondary text-white me-1 mb-1 small-research-badge">
-                                                        +${researchAreas.length - 3} more
-                                                    </span>` : ''
-                                                }
-                                            </div>
-                                            ` : ''}
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Publication Metrics Footer -->
-                                    <div class="card-footer">
-                                        <div class="row text-center g-0">
-                                            <div class="col-4">
-                                                <div class="metric-item">
-                                                    <div class="metric-number text-primary">${faculty.publication_count || faculty.total_publications || 0}</div>
-                                                    <div class="metric-label">Publications</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="metric-item">
-                                                    <div class="metric-number text-success">${faculty.citation_count || 0}</div>
-                                                    <div class="metric-label">Citations</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="metric-item">
-                                                    <div class="metric-number text-warning">${faculty.h_index || 0}</div>
-                                                    <div class="metric-label">H-index</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        container.innerHTML += facultyCard;
-                    });
-                } else {
-                    container.innerHTML = '<div class="col-12"><p class="text-muted text-center">No faculty data available.</p></div>';
-                }
-                
-            } catch (error) {
-                console.error('Error loading featured faculty:', error);
-                const container = document.getElementById('featured-faculty-container');
-                if (container) {
-                    container.innerHTML = '<div class="col-12"><p class="text-muted text-center">Unable to load faculty at this time.</p></div>';
-                }
-            }
-        }
-        
-        // Show error message
-        function showError(containerId, message) {
-            const container = document.getElementById(containerId);
-            if (container) {
-                container.innerHTML = `
-                    <div class="col-12">
-                        <div class="alert alert-danger">
-                            <i class="fas fa-exclamation-triangle me-2"></i>
-                            ${message}
-                        </div>
-                    </div>
-                `;
-            }
-        }
-        
         // Theme toggle functionality
         function initializeTheme() {
             const themeToggle = document.getElementById('theme-toggle');
             const themeIcon = document.getElementById('theme-icon');
-            const html = document.documentElement;
+            const htmlElement = document.documentElement;
             
-            // Check if theme toggle elements exist
-            if (!themeToggle || !themeIcon) {
-                console.log('Theme toggle elements not found, skipping theme initialization');
-                return;
-            }
+            // Check for saved theme or default to light
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
             
-            // Get saved theme or default to light
-            const currentTheme = localStorage.getItem('theme') || 'light';
-            html.setAttribute('data-theme', currentTheme);
-            updateThemeIcon(currentTheme);
-            
-            // Theme toggle click handler
-            themeToggle.addEventListener('click', function() {
-                const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-                html.setAttribute('data-theme', newTheme);
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                htmlElement.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
                 updateThemeIcon(newTheme);
             });
             
             function updateThemeIcon(theme) {
-                if (!themeIcon) return;
-                
-                if (theme === 'dark') {
-                    themeIcon.className = 'fas fa-sun';
-                    if (themeToggle) themeToggle.title = 'Switch to light mode';
-                } else {
-                    themeIcon.className = 'fas fa-moon';
-                    if (themeToggle) themeToggle.title = 'Switch to dark mode';
-                }
+                themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
             }
         }
 
-        // Enhanced page initialization
+        // Load and display statistics
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/v1/stats');
+                if (response.ok) {
+                    const stats = await response.json();
+                    
+                    // Update hero stats
+                    document.getElementById('hero-stat-professors').textContent = stats.total_professors || '281';
+                    document.getElementById('hero-stat-universities').textContent = stats.total_universities || '15';
+                    document.getElementById('hero-stat-countries').textContent = stats.total_countries || '3';
+                } else {
+                    console.log('Using fallback stats');
+                }
+            } catch (error) {
+                console.log('Error loading stats, using defaults:', error);
+            }
+        }
+
+        // Load and display top universities
+        async function loadTopUniversities() {
+            try {
+                const response = await fetch('/api/v1/universities/top?limit=6');
+                if (response.ok) {
+                    const universities = await response.json();
+                    displayUniversities(universities);
+                } else {
+                    displayUniversitiesPlaceholder();
+                }
+            } catch (error) {
+                console.log('Error loading universities:', error);
+                displayUniversitiesPlaceholder();
+            }
+        }
+
+        function displayUniversities(universities) {
+            const container = document.getElementById('top-universities-container');
+            container.innerHTML = '';
+            
+            universities.forEach(university => {
+                const col = document.createElement('div');
+                col.className = 'col-lg-4 col-md-6 mb-4';
+                
+                col.innerHTML = `
+                    <div class="university-card hover-lift">
+                        <div class="university-logo">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h5 class="mb-2">${university.name}</h5>
+                        <p class="text-muted mb-2">${university.location || 'Unknown Location'}</p>
+                        <div class="d-flex justify-content-between text-center">
+                            <div>
+                                <div class="fw-bold text-primary">${university.faculty_count || 0}</div>
+                                <small class="text-muted">Faculty</small>
+                            </div>
+                            <div>
+                                <div class="fw-bold text-success">${university.department_count || 0}</div>
+                                <small class="text-muted">Departments</small>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(col);
+            });
+        }
+
+        function displayUniversitiesPlaceholder() {
+            const container = document.getElementById('top-universities-container');
+            const placeholderUniversities = [
+                { name: 'McMaster University', location: 'Hamilton, ON', faculty_count: 281, department_count: 15 },
+                { name: 'University of Toronto', location: 'Toronto, ON', faculty_count: 156, department_count: 12 },
+                { name: 'University of British Columbia', location: 'Vancouver, BC', faculty_count: 98, department_count: 8 },
+                { name: 'McGill University', location: 'Montreal, QC', faculty_count: 87, department_count: 10 },
+                { name: 'University of Alberta', location: 'Edmonton, AB', faculty_count: 76, department_count: 7 },
+                { name: 'University of Calgary', location: 'Calgary, AB', faculty_count: 65, department_count: 6 }
+            ];
+            
+            displayUniversities(placeholderUniversities);
+        }
+
+        // Smooth scrolling for anchor links
+        function initializeSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Navbar scroll effect
+        function initializeNavbarScroll() {
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                    navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                }
+            });
+        }
+
+        // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Initializing FacultyFinder homepage...');
             
-            // Initialize theme system
             initializeTheme();
+            initializeSmoothScrolling();
+            initializeNavbarScroll();
             
-            // Initialize stats to 0 first
-            initializeStats();
-            
-            // Load data with slight delays for better UX
-            setTimeout(() => loadStats(), 100);
-            setTimeout(() => loadTopUniversities(), 300);
-            setTimeout(() => loadFeaturedFaculty(), 500);
-        });
-        
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
+            // Load data with staggered timing for better UX
+            setTimeout(loadStats, 100);
+            setTimeout(loadTopUniversities, 300);
         });
     </script>
 </body>
