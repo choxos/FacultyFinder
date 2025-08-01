@@ -435,6 +435,7 @@ async def get_universities(
     province: Optional[str] = Query(None, description="Filter by province/state"),
     university_type: Optional[str] = Query(None, description="Filter by university type"),
     sort_by: str = Query("faculty_count", description="Sort by: faculty_count, name, location, year_established"),
+    sort_direction: str = Query("desc", description="Sort direction: asc or desc"),
     page: int = Query(1, ge=1, description="Page number"),
     per_page: int = Query(20, ge=1, le=100, description="Items per page")
 ):
@@ -471,13 +472,14 @@ async def get_universities(
                 where_conditions = ["1=1"]
             
             # Build ORDER BY clause
+            direction = "DESC" if sort_direction.lower() == "desc" else "ASC"
             order_mapping = {
-                "faculty_count": "faculty_count DESC",
-                "name": "u.name ASC",
-                "location": "u.country ASC, u.city ASC",
-                "established": "u.year_established DESC NULLS LAST"
+                "faculty_count": f"faculty_count {direction}",
+                "name": f"u.name {direction}",
+                "location": f"u.country {direction}, u.city {direction}",
+                "established": f"u.year_established {direction} NULLS LAST"
             }
-            order_clause = order_mapping.get(sort_by, "faculty_count DESC")
+            order_clause = order_mapping.get(sort_by, f"faculty_count {direction}")
             
             # Calculate offset
             offset = (page - 1) * per_page
@@ -564,7 +566,8 @@ async def get_faculties(
     department: Optional[str] = Query(None, description="Filter by department"),
     research_area: Optional[str] = Query(None, description="Filter by research area"),
     employment_type: Optional[str] = Query(None, description="Filter by employment type (full-time, part-time, adjunct)"),
-    sort_by: str = Query("name", description="Sort by: name, university, department, publications, recent_publications"),
+    sort_by: str = Query("name", description="Sort by: name, university, department, research_areas, publications, recent_publications"),
+    sort_direction: str = Query("asc", description="Sort direction: asc or desc"),
     page: int = Query(1, ge=1, description="Page number"),
     per_page: int = Query(20, ge=1, le=100, description="Items per page")
 ):
@@ -602,14 +605,16 @@ async def get_faculties(
                 params.append(f"%{employment_type}%")
             
             # Build ORDER BY clause
+            direction = "DESC" if sort_direction.lower() == "desc" else "ASC"
             order_mapping = {
-                "name": "p.name ASC",
-                "university": "u.name ASC",
-                "department": "p.department ASC",
-                "publications": "CAST(0 AS INTEGER) DESC NULLS LAST",
-                "recent_publications": "CAST(0 AS INTEGER) DESC NULLS LAST"
+                "name": f"p.name {direction}",
+                "university": f"u.name {direction}",
+                "department": f"p.department {direction}",
+                "research_areas": f"p.research_areas {direction}",
+                "publications": f"CAST(0 AS INTEGER) {direction} NULLS LAST",
+                "recent_publications": f"CAST(0 AS INTEGER) {direction} NULLS LAST"
             }
-            order_clause = order_mapping.get(sort_by, "p.name ASC")
+            order_clause = order_mapping.get(sort_by, f"p.name {direction}")
             
             # Calculate offset
             offset = (page - 1) * per_page

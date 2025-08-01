@@ -381,6 +381,32 @@
             color: white;
         }
 
+        /* Sortable columns */
+        .sortable-header {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            transition: background-color 0.2s ease;
+        }
+        
+        .sortable-header:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .sort-icon {
+            margin-left: 0.5rem;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+        
+        .sortable-header.active .sort-icon {
+            opacity: 1;
+        }
+        
+        .sortable-header:not(.active):hover .sort-icon {
+            opacity: 0.7;
+        }
+
         /* Loading and Empty States */
         .loading-spinner {
             width: 40px;
@@ -769,16 +795,27 @@
         let universitiesData = [];
         let currentPage = 1;
         const itemsPerPage = 12;
+        
+        // Sorting variables
+        let currentSort = 'faculty_count';
+        let sortDirection = 'desc';
 
         async function loadUniversities() {
             try {
-                const response = await fetch('/api/v1/universities');
+                const params = new URLSearchParams({
+                    sort_by: currentSort,
+                    sort_direction: sortDirection,
+                    per_page: 100 // Load more for client-side filtering and sorting
+                });
+                
+                const response = await fetch(`/api/v1/universities?${params}`);
                 if (response.ok) {
                     const data = await response.json();
                     universitiesData = data.universities || []; // Extract universities array
                     displayUniversities();
                     setupFilters();
                     updateStats();
+                    updateSortIcons();
                 } else {
                     showErrorState();
                 }
@@ -1040,9 +1077,15 @@
             table.innerHTML = `
                 <thead class="table-light">
                     <tr>
-                        <th scope="col">University</th>
-                        <th scope="col">Location</th>
-                        <th scope="col">Faculty Count</th>
+                        <th scope="col" class="sortable-header" onclick="sortUniversities('name')" data-sort="name">
+                            University <i class="fas fa-sort sort-icon"></i>
+                        </th>
+                        <th scope="col" class="sortable-header" onclick="sortUniversities('location')" data-sort="location">
+                            Location <i class="fas fa-sort sort-icon"></i>
+                        </th>
+                        <th scope="col" class="sortable-header" onclick="sortUniversities('faculty_count')" data-sort="faculty_count">
+                            Faculty Count <i class="fas fa-sort sort-icon"></i>
+                        </th>
                         <th scope="col">Departments</th>
                         <th scope="col" width="150">Actions</th>
                     </tr>
@@ -1095,6 +1138,41 @@
             tableContainer.appendChild(table);
             container.innerHTML = '';
             container.appendChild(tableContainer);
+        }
+
+        // Sorting functions
+        function sortUniversities(column) {
+            // Toggle sort direction if clicking the same column
+            if (currentSort === column) {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort = column;
+                sortDirection = column === 'faculty_count' ? 'desc' : 'asc'; // Faculty count defaults to desc
+            }
+            
+            // Reload data with new sorting
+            loadUniversities();
+        }
+        
+        function updateSortIcons() {
+            // Reset all sort icons
+            document.querySelectorAll('.sortable-header').forEach(header => {
+                header.classList.remove('active');
+                const icon = header.querySelector('.sort-icon');
+                if (icon) {
+                    icon.className = 'fas fa-sort sort-icon';
+                }
+            });
+            
+            // Update active sort column
+            const activeHeader = document.querySelector(`[data-sort="${currentSort}"]`);
+            if (activeHeader) {
+                activeHeader.classList.add('active');
+                const icon = activeHeader.querySelector('.sort-icon');
+                if (icon) {
+                    icon.className = sortDirection === 'asc' ? 'fas fa-sort-up sort-icon' : 'fas fa-sort-down sort-icon';
+                }
+            }
         }
 
         function getFilteredData() {
