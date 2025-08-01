@@ -229,6 +229,72 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
+        /* View Toggle */
+        .view-toggle .btn {
+            border: 1px solid var(--border-color);
+            background: white;
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .view-toggle .btn:first-child {
+            border-radius: 8px 0 0 8px;
+            border-right: none;
+        }
+
+        .view-toggle .btn:last-child {
+            border-radius: 0 8px 8px 0;
+            border-left: none;
+        }
+
+        .view-toggle .btn.active,
+        .view-toggle .btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* University Table Styles */
+        .university-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: none;
+        }
+
+        .university-table thead th {
+            background: var(--secondary-color);
+            border: none;
+            font-weight: 600;
+            color: var(--text-primary);
+            padding: 1rem 0.75rem;
+            text-align: left;
+        }
+
+        .university-table tbody tr {
+            border: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .university-table tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+        }
+
+        .university-table tbody td {
+            border: none;
+            padding: 1rem 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        .university-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
         .university-logo {
             width: 60px;
             height: 60px;
@@ -571,6 +637,21 @@
                     </select>
                 </div>
             </div>
+            
+            <!-- View Toggle -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="results-info">
+                    <span id="results-count" class="text-muted">Loading...</span>
+                </div>
+                <div class="view-toggle d-inline-flex">
+                    <button class="btn active" id="grid-view" onclick="setView('grid')">
+                        <i class="fas fa-th me-1"></i>Grid
+                    </button>
+                    <button class="btn" id="list-view" onclick="setView('list')">
+                        <i class="fas fa-list me-1"></i>Table
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- Universities Grid -->
@@ -778,6 +859,9 @@
 
             // Update pagination
             updatePagination(data.length);
+            
+            // Update results count
+            document.getElementById('results-count').textContent = `Showing ${data.length} universities`;
         }
 
         function updatePagination(totalItems) {
@@ -920,6 +1004,131 @@
                     </button>
                 </div>
             `;
+        }
+
+        // View switching functions
+        let currentView = 'grid';
+
+        function setView(view) {
+            currentView = view;
+            
+            // Update button states
+            document.getElementById('grid-view').classList.toggle('active', view === 'grid');
+            document.getElementById('list-view').classList.toggle('active', view === 'list');
+            
+            // Re-display current data with new view
+            const filtered = getFilteredData();
+            const paginatedData = filtered.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+            
+            if (view === 'grid') {
+                displayUniversities(paginatedData);
+            } else {
+                displayListView(paginatedData, document.getElementById('universities-container'));
+                // Update results count for list view
+                document.getElementById('results-count').textContent = `Showing ${paginatedData.length} universities`;
+            }
+        }
+
+        function displayListView(data, container) {
+            const tableContainer = document.createElement('div');
+            tableContainer.className = 'table-responsive';
+            
+            const table = document.createElement('table');
+            table.className = 'table table-hover university-table';
+            
+            // Table header
+            table.innerHTML = `
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">University</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Faculty Count</th>
+                        <th scope="col">Departments</th>
+                        <th scope="col" width="150">Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            `;
+            
+            const tbody = table.querySelector('tbody');
+            
+            data.forEach(university => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="university-logo me-3" style="width: 40px; height: 40px; font-size: 1.2rem;">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">${university.name}</h6>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <i class="fas fa-map-marker-alt me-1 text-primary"></i>
+                        ${university.location || 'Location not specified'}
+                    </td>
+                    <td>
+                        <span class="badge bg-primary">${university.faculty_count || 0}</span>
+                    </td>
+                    <td>
+                        <span class="badge bg-secondary">${university.department_count || 0}</span>
+                    </td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a href="/university/${university.id || university.code}" 
+                               class="btn btn-outline-primary" title="View Details">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="/faculties?university=${encodeURIComponent(university.name)}" 
+                               class="btn btn-outline-secondary" title="Browse Faculty">
+                                <i class="fas fa-users"></i>
+                            </a>
+                        </div>
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+            
+            tableContainer.appendChild(table);
+            container.innerHTML = '';
+            container.appendChild(tableContainer);
+        }
+
+        function getFilteredData() {
+            let filtered = [...universitiesData];
+            
+            // Search filter
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            if (searchTerm) {
+                filtered = filtered.filter(u => 
+                    u.name.toLowerCase().includes(searchTerm) ||
+                    (u.location && u.location.toLowerCase().includes(searchTerm))
+                );
+            }
+            
+            // Country filter
+            const selectedCountry = document.getElementById('country-filter').value;
+            if (selectedCountry) {
+                filtered = filtered.filter(u => u.country === selectedCountry);
+            }
+            
+            // Sort
+            const sortBy = document.getElementById('sort-filter').value;
+            filtered.sort((a, b) => {
+                switch (sortBy) {
+                    case 'faculty_count':
+                        return (b.faculty_count || 0) - (a.faculty_count || 0);
+                    case 'location':
+                        return (a.location || '').localeCompare(b.location || '');
+                    default: // name
+                        return a.name.localeCompare(b.name);
+                }
+            });
+            
+            return filtered;
         }
 
         // Initialize page

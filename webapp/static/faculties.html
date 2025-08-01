@@ -353,6 +353,72 @@
             transform: translateY(-2px);
         }
 
+        /* Faculty Table Styles */
+        .faculty-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: none;
+        }
+
+        .faculty-table thead th {
+            background: var(--secondary-color);
+            border: none;
+            font-weight: 600;
+            color: var(--text-primary);
+            padding: 1rem 0.75rem;
+            text-align: left;
+        }
+
+        .faculty-table tbody tr {
+            border: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .faculty-table tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+        }
+
+        .faculty-table tbody td {
+            border: none;
+            padding: 1rem 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        .faculty-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* View Toggle */
+        .view-toggle .btn {
+            border: 1px solid var(--border-color);
+            background: white;
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .view-toggle .btn:first-child {
+            border-radius: 8px 0 0 8px;
+            border-right: none;
+        }
+
+        .view-toggle .btn:last-child {
+            border-radius: 0 8px 8px 0;
+            border-left: none;
+        }
+
+        .view-toggle .btn.active,
+        .view-toggle .btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
         /* Pagination */
         .pagination-container {
             display: flex;
@@ -867,65 +933,88 @@
         }
 
         function displayListView(data, container) {
-            const list = document.createElement('div');
+            const tableContainer = document.createElement('div');
+            tableContainer.className = 'table-responsive';
+            
+            const table = document.createElement('table');
+            table.className = 'table table-hover faculty-table';
+            
+            // Table header
+            table.innerHTML = `
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col" width="60">Avatar</th>
+                        <th scope="col">Name & Position</th>
+                        <th scope="col">University & Department</th>
+                        <th scope="col">Research Areas</th>
+                        <th scope="col" width="120">Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            `;
+            
+            const tbody = table.querySelector('tbody');
             
             data.forEach(faculty => {
                 const initials = getInitials(faculty.name || `${faculty.first_name} ${faculty.last_name}`);
                 const researchAreas = parseResearchAreas(faculty.research_areas);
                 
-                const item = document.createElement('div');
-                item.className = 'faculty-list-item';
-                
-                item.innerHTML = `
-                    <div class="row align-items-center">
-                        <div class="col-md-1">
-                            <div class="faculty-avatar" style="width: 60px; height: 60px; font-size: 1.2rem;">
-                                ${initials}
-                            </div>
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <div class="faculty-avatar" style="width: 45px; height: 45px; font-size: 1rem;">
+                            ${initials}
                         </div>
-                        <div class="col-md-3">
-                            <h5 class="mb-1">${faculty.name || `${faculty.first_name} ${faculty.last_name}`}</h5>
-                            <p class="text-muted mb-0">${faculty.position || 'Faculty Member'}</p>
+                    </td>
+                    <td>
+                        <div>
+                            <h6 class="mb-1">${faculty.name || `${faculty.first_name} ${faculty.last_name}`}</h6>
+                            <small class="text-muted">${faculty.position || 'Faculty Member'}</small>
                         </div>
-                        <div class="col-md-3">
-                            <p class="mb-1">
+                    </td>
+                    <td>
+                        <div>
+                            <div class="mb-1">
                                 <i class="fas fa-university me-1 text-primary"></i>
-                                ${faculty.university || 'University'}
-                            </p>
+                                <strong>${faculty.university || 'University'}</strong>
+                            </div>
                             ${faculty.department ? `
-                                <p class="text-muted mb-0 small">
-                                    ${truncateText(faculty.department, 40)}
-                                </p>
-                            ` : ''}
+                                <small class="text-muted">${truncateText(faculty.department, 50)}</small>
+                            ` : '<small class="text-muted">Department not specified</small>'}
                         </div>
-                        <div class="col-md-3">
-                            ${researchAreas.length > 0 ? `
-                                <div class="research-areas">
-                                    ${researchAreas.slice(0, 2).map(area => 
-                                        `<span class="research-tag">${area}</span>`
-                                    ).join('')}
-                                    ${researchAreas.length > 2 ? '<span class="research-tag">+' + (researchAreas.length - 2) + '</span>' : ''}
-                                </div>
-                            ` : '<span class="text-muted">No research areas listed</span>'}
-                        </div>
-                        <div class="col-md-2 text-end">
-                            <a href="/professor/${faculty.professor_id || faculty.faculty_id}" class="btn btn-primary btn-sm">
-                                <i class="fas fa-user me-1"></i>View
+                    </td>
+                    <td>
+                        ${researchAreas.length > 0 ? `
+                            <div class="research-areas-list">
+                                ${researchAreas.slice(0, 3).map(area => 
+                                    `<span class="badge bg-light text-dark border me-1 mb-1" style="font-size: 0.75rem;">${area}</span>`
+                                ).join('')}
+                                ${researchAreas.length > 3 ? '<br><span class="badge bg-secondary" style="font-size: 0.75rem;">+' + (researchAreas.length - 3) + ' more</span>' : ''}
+                            </div>
+                        ` : '<span class="text-muted">No research areas listed</span>'}
+                    </td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a href="/professor/${faculty.professor_id || faculty.faculty_id}" 
+                               class="btn btn-outline-primary" title="View Profile">
+                                <i class="fas fa-user"></i>
                             </a>
                             ${faculty.uni_email ? `
-                                <a href="mailto:${faculty.uni_email}" class="btn btn-outline-primary btn-sm ms-1" title="Contact">
+                                <a href="mailto:${faculty.uni_email}" 
+                                   class="btn btn-outline-secondary" title="Contact">
                                     <i class="fas fa-envelope"></i>
                                 </a>
                             ` : ''}
                         </div>
-                    </div>
+                    </td>
                 `;
                 
-                list.appendChild(item);
+                tbody.appendChild(row);
             });
-
+            
+            tableContainer.appendChild(table);
             container.innerHTML = '';
-            container.appendChild(list);
+            container.appendChild(tableContainer);
         }
 
         function setupFilters() {
