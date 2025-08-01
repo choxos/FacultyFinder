@@ -615,7 +615,8 @@
             try {
                 const response = await fetch('/api/v1/universities');
                 if (response.ok) {
-                    universitiesData = await response.json();
+                    const data = await response.json();
+                    universitiesData = data.universities || []; // Extract universities array
                     displayUniversities();
                     setupFilters();
                     updateStats();
@@ -633,7 +634,9 @@
             const loadingState = document.getElementById('loading-state');
             const data = filteredData || universitiesData;
             
-            loadingState.style.display = 'none';
+            if (loadingState) {
+                loadingState.style.display = 'none';
+            }
             
             if (data.length === 0) {
                 container.innerHTML = `
@@ -826,7 +829,9 @@
             const container = document.getElementById('universities-container');
             const loadingState = document.getElementById('loading-state');
             
-            loadingState.style.display = 'none';
+            if (loadingState) {
+                loadingState.style.display = 'none';
+            }
             container.innerHTML = `
                 <div class="empty-state">
                     <i class="fas fa-exclamation-triangle"></i>

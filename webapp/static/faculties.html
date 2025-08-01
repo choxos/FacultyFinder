@@ -682,9 +682,10 @@
         // Load faculty data
         async function loadFaculty() {
             try {
-                const response = await fetch('/api/v1/professors');
+                const response = await fetch('/api/v1/faculties');
                 if (response.ok) {
-                    facultyData = await response.json();
+                    const data = await response.json();
+                    facultyData = data.faculties || []; // Extract faculties array
                     filteredData = [...facultyData];
                     displayFaculty();
                     setupFilters();
@@ -703,7 +704,9 @@
             const container = document.getElementById('faculty-container');
             const loadingState = document.getElementById('loading-state');
             
-            loadingState.style.display = 'none';
+            if (loadingState) {
+                loadingState.style.display = 'none';
+            }
             
             if (filteredData.length === 0) {
                 container.innerHTML = `
