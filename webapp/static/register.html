@@ -977,11 +977,25 @@
 
         // Social registration functions
         function signUpWithGoogle() {
-            showAlert('info', 'Google Sign-Up integration coming soon!');
+            const button = event.target.closest('button');
+            if (button) {
+                button.disabled = true;
+                button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Connecting...';
+            }
+            
+            // Redirect to Google OAuth
+            window.location.href = '/auth/google';
         }
 
         function signUpWithLinkedIn() {
-            showAlert('info', 'LinkedIn Sign-Up integration coming soon!');
+            const button = event.target.closest('button');
+            if (button) {
+                button.disabled = true;
+                button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Connecting...';
+            }
+            
+            // Redirect to LinkedIn OAuth
+            window.location.href = '/auth/linkedin';
         }
 
         // Show alert messages
@@ -999,9 +1013,31 @@
             `;
         }
 
+        // Check for URL parameters (e.g., OAuth errors)
+        function checkUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+            const type = urlParams.get('type') || 'info';
+            const error = urlParams.get('error');
+            const provider = urlParams.get('provider');
+            
+            if (message) {
+                showAlert(type, decodeURIComponent(message));
+            } else if (error) {
+                let errorMessage = 'Registration failed. Please try again.';
+                if (error === 'oauth_failed') {
+                    errorMessage = `Failed to initialize ${provider || 'OAuth'} registration. Please check your connection and try again.`;
+                } else if (error === 'auth_failed') {
+                    errorMessage = `${provider || 'OAuth'} registration was unsuccessful. Please try again.`;
+                }
+                showAlert('error', errorMessage);
+            }
+        }
+
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             initializeTheme();
+            checkUrlParams();
             
             // Focus on first name field
             document.getElementById('first-name').focus();

@@ -788,36 +788,46 @@ async def get_register_page():
     return FileResponse(os.path.join(static_dir, "register.html"))
 
 # OAuth routes
-@app.get("/auth/google")
-async def google_login(request: Request):
-    """Initiate Google OAuth login"""
+@app.get("/auth/{provider}")
+async def oauth_login(request: Request, provider: str):
+    """Initiate OAuth login for specified provider (google or linkedin)"""
     try:
-        if not oauth_config.is_configured:
-            raise HTTPException(status_code=500, detail="OAuth not configured")
+        if provider not in ['google', 'linkedin']:
+            raise HTTPException(status_code=400, detail="Unsupported OAuth provider")
         
-        redirect_uri = request.url_for('oauth_callback')
-        return await oauth.google.authorize_redirect(request, redirect_uri)
-    except Exception as e:
-        logger.error(f"Google OAuth initiation error: {e}")
-        return RedirectResponse(url="/login?error=oauth_failed")
-
-@app.get("/auth/callback")
-async def oauth_callback(request: Request):
-    """Handle OAuth callback from Google"""
-    try:
+        if provider == 'google' and not oauth_config.google_configured:
+            raise HTTPException(status_code=500, detail="Google OAuth not configured")
+        elif provider == 'linkedin' and not oauth_config.linkedin_configured:
+            raise HTTPException(status_code=500, detail="LinkedIn OAuth not configured")
+        
         oauth_handler = get_oauth_handler()
-        auth_result = await oauth_handler.handle_callback(request)
+        return await oauth_handler.get_authorization_url(request, provider)
+        
+    except Exception as e:
+        logger.error(f"{provider.title()} OAuth initiation error: {e}")
+        return RedirectResponse(url=f"/login?error=oauth_failed&provider={provider}")
+
+@app.get("/auth/{provider}/callback")
+async def oauth_callback(request: Request, provider: str):
+    """Handle OAuth callback from specified provider"""
+    try:
+        if provider not in ['google', 'linkedin']:
+            raise HTTPException(status_code=400, detail="Unsupported OAuth provider")
+        
+        oauth_handler = get_oauth_handler()
+        auth_result = await oauth_handler.handle_callback(request, provider)
         
         # Store user info in session
         request.session['user'] = auth_result['user']
         request.session['access_token'] = auth_result['access_token']
+        request.session['provider'] = provider
         
         # Redirect to dashboard or homepage
         return RedirectResponse(url="/?welcome=true")
         
     except Exception as e:
-        logger.error(f"OAuth callback error: {e}")
-        return RedirectResponse(url="/login?error=auth_failed")
+        logger.error(f"{provider.title()} OAuth callback error: {e}")
+        return RedirectResponse(url=f"/login?error=auth_failed&provider={provider}")
 
 @app.get("/auth/logout")
 async def logout(request: Request):
