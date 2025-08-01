@@ -326,6 +326,51 @@
             color: white;
         }
 
+        /* Usage Option Cards */
+        .usage-option-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .usage-option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .usage-option-card.selected {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+        }
+
+        /* API Key Section */
+        #api-key-section .form-control {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+        }
+
+        #api-key-section .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        #api-key-section .form-control.is-valid {
+            border-color: #28a745;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='m2.3 6.73.79-.8 2.65 2.9 2.65-2.9.8.8-3.45 3.8z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right calc(0.375em + 0.1875rem) center;
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+        }
+
+        #api-key-section .form-control.is-invalid {
+            border-color: #dc3545;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m6 3v4M6 9.5h.01'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right calc(0.375em + 0.1875rem) center;
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+        }
+
         /* Chat Section Styles */
         .chat-section {
             background: white;
@@ -1095,8 +1140,116 @@
             </div>
         </div>
 
-        <!-- Pricing Options -->
-        <div class="row mb-4">
+        <!-- AI Usage Options (Hidden initially) -->
+        <div class="row mb-4" id="ai-usage-options" style="display: none;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-key me-2"></i>How would you like to use <span id="selected-ai-name">Claude</span>?
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- Option 1: Own API Key -->
+                            <div class="col-lg-4">
+                                <div class="ai-feature-card usage-option-card h-100" onclick="selectUsageOption('own_key')" id="own-key-option">
+                                    <div class="text-center">
+                                        <div class="feature-icon" style="background: linear-gradient(135deg, #28a745, #20c997);">
+                                            <i class="fas fa-key"></i>
+                                        </div>
+                                        <h5>Use Your Own API Key</h5>
+                                        <div class="display-6 fw-bold text-success mb-2">FREE</div>
+                                        <p class="text-muted">Bring your own API credentials</p>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-2"></i>No additional costs</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Full control over usage</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Direct API access</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Unlimited analyses</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 2: Website's API Key -->
+                            <div class="col-lg-4">
+                                <div class="ai-feature-card usage-option-card h-100" onclick="selectUsageOption('website_key')" id="website-key-option">
+                                    <div class="text-center">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <h5>Use Our Premium Service</h5>
+                                        <div class="text-primary mb-2">
+                                            <small>Starting from</small>
+                                            <div class="display-6 fw-bold">$7</div>
+                                        </div>
+                                        <p class="text-muted">Professional analysis packages</p>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-2"></i>Multiple pricing options</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Premium AI models</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Professional support</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Guaranteed quality</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 3: Expert Manual Review -->
+                            <div class="col-lg-4">
+                                <div class="ai-feature-card usage-option-card h-100" onclick="selectUsageOption('expert_review')" id="expert-review-option">
+                                    <div class="text-center">
+                                        <div class="feature-icon" style="background: linear-gradient(135deg, #6f42c1, #8b5cf6);">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <h5>Expert Manual Review</h5>
+                                        <div class="text-warning mb-2">
+                                            <small>Starting from</small>
+                                            <div class="display-6 fw-bold">$99</div>
+                                        </div>
+                                        <p class="text-muted">Human expert analysis</p>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-2"></i>PhD-level reviewers</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Detailed personal feedback</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Custom recommendations</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Video consultation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- API Key Input Section (Hidden initially) -->
+                        <div id="api-key-section" class="mt-4" style="display: none;">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h6 class="text-primary mb-3">
+                                        <i class="fas fa-shield-alt me-2"></i>Enter Your <span id="api-provider-name">Claude</span> API Key
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <input type="password" class="form-control" id="user-api-key" 
+                                                   placeholder="Enter your API key here..." 
+                                                   onchange="validateAPIKey()">
+                                            <div class="form-text">
+                                                <i class="fas fa-lock me-1"></i>Your API key is stored securely and only used for your analysis
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <a href="#" class="btn btn-outline-primary w-100" id="get-api-key-link" target="_blank">
+                                                <i class="fas fa-external-link-alt me-2"></i>Get API Key
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Options (Hidden initially) -->
+        <div class="row mb-4" id="pricing-options" style="display: none;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -1566,6 +1719,10 @@
             validateForm();
         }
 
+        // Track selected usage option
+        let selectedUsageOption = '';
+        let hasValidAPIKey = false;
+
         // Select AI service
         function selectAI(aiType) {
             // Remove selected class from all cards
@@ -1578,6 +1735,91 @@
             
             selectedAI = aiType;
             document.getElementById('selectedAI').value = aiType;
+            
+            // Update AI name in usage options
+            const aiNames = {
+                'claude': 'Claude (Anthropic)',
+                'gpt': 'ChatGPT (OpenAI)', 
+                'gemini': 'Gemini (Google)',
+                'grok': 'Grok (xAI)'
+            };
+            
+            document.getElementById('selected-ai-name').textContent = aiNames[aiType] || 'AI Assistant';
+            document.getElementById('api-provider-name').textContent = aiNames[aiType] || 'AI Assistant';
+            
+            // Update API key link
+            const apiLinks = {
+                'claude': 'https://console.anthropic.com/',
+                'gpt': 'https://platform.openai.com/api-keys',
+                'gemini': 'https://makersuite.google.com/app/apikey',
+                'grok': 'https://console.x.ai/'
+            };
+            
+            document.getElementById('get-api-key-link').href = apiLinks[aiType] || '#';
+            
+            // Show usage options
+            document.getElementById('ai-usage-options').style.display = 'block';
+            
+            // Reset selections
+            selectedUsageOption = '';
+            document.querySelectorAll('.usage-option-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            document.getElementById('api-key-section').style.display = 'none';
+            document.getElementById('pricing-options').style.display = 'none';
+            
+            validateForm();
+        }
+
+        // Select usage option
+        function selectUsageOption(option) {
+            // Remove selected class from all usage cards
+            document.querySelectorAll('.usage-option-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked card
+            event.currentTarget.classList.add('selected');
+            
+            selectedUsageOption = option;
+            
+            // Show/hide appropriate sections based on selection
+            if (option === 'own_key') {
+                document.getElementById('api-key-section').style.display = 'block';
+                document.getElementById('pricing-options').style.display = 'none';
+            } else if (option === 'website_key') {
+                document.getElementById('api-key-section').style.display = 'none';
+                document.getElementById('pricing-options').style.display = 'block';
+            } else if (option === 'expert_review') {
+                document.getElementById('api-key-section').style.display = 'none';
+                // Show only expert review options in pricing
+                document.getElementById('pricing-options').style.display = 'block';
+                // Hide AI analysis options, show only expert review
+                const aiAnalysisSection = document.querySelector('#pricing-options .card-body h6');
+                if (aiAnalysisSection) {
+                    aiAnalysisSection.parentNode.style.display = option === 'expert_review' ? 'none' : 'block';
+                }
+            }
+            
+            validateForm();
+        }
+
+        // Validate API key
+        function validateAPIKey() {
+            const apiKeyInput = document.getElementById('user-api-key');
+            const apiKey = apiKeyInput.value.trim();
+            
+            // Basic validation - check if API key is provided
+            hasValidAPIKey = apiKey.length > 0;
+            
+            // Add visual feedback
+            if (hasValidAPIKey) {
+                apiKeyInput.classList.remove('is-invalid');
+                apiKeyInput.classList.add('is-valid');
+            } else {
+                apiKeyInput.classList.remove('is-valid');
+                apiKeyInput.classList.add('is-invalid');
+            }
             
             validateForm();
         }
@@ -1631,26 +1873,47 @@
 
         // Validate form
         function validateForm() {
-            const requiredFields = [
+            const basicRequiredFields = [
                 document.getElementById('guestName').value,
                 document.getElementById('guestEmail').value,
                 document.getElementById('guestLevel').value,
                 document.getElementById('broadCategory').value,
                 document.getElementById('narrowField').value,
                 selectedFile !== null,
-                selectedAI !== ''
+                selectedAI !== '',
+                selectedUsageOption !== ''
             ];
             
-            const isValid = requiredFields.every(field => field);
+            let isValid = basicRequiredFields.every(field => field);
+            
+            // Additional validation based on usage option
+            if (selectedUsageOption === 'own_key') {
+                isValid = isValid && hasValidAPIKey;
+            }
+            
             const startBtn = document.getElementById('startAnalysisBtn');
             const helpText = document.getElementById('buttonHelpText');
             
             if (isValid) {
                 startBtn.disabled = false;
-                helpText.textContent = `Ready to start analysis with ${selectedAI.toUpperCase()}`;
+                if (selectedUsageOption === 'own_key') {
+                    helpText.textContent = `Ready to analyze with your ${selectedAI.toUpperCase()} API key`;
+                } else if (selectedUsageOption === 'website_key') {
+                    helpText.textContent = `Ready to start premium analysis with ${selectedAI.toUpperCase()}`;
+                } else if (selectedUsageOption === 'expert_review') {
+                    helpText.textContent = 'Ready to submit for expert manual review';
+                } else {
+                    helpText.textContent = `Ready to start analysis`;
+                }
             } else {
                 startBtn.disabled = true;
-                helpText.textContent = 'Please complete all required fields above';
+                if (selectedUsageOption === '') {
+                    helpText.textContent = 'Please select how you want to use the AI assistant';
+                } else if (selectedUsageOption === 'own_key' && !hasValidAPIKey) {
+                    helpText.textContent = 'Please enter a valid API key';
+                } else {
+                    helpText.textContent = 'Please complete all required fields above';
+                }
             }
         }
 
@@ -1779,14 +2042,10 @@
             }
         });
 
-        // Initialize with default selection
+        // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
-            // Select Claude by default
-            setTimeout(() => {
-                document.querySelector('[onclick="selectAI(\'claude\')"]').click();
-                // Select triple pack by default
-                document.querySelector('[onclick="selectAnalysisOption(\'triple_pack\')"]').click();
-            }, 100);
+            // Initialize form validation
+            validateForm();
         });
     </script>
 
