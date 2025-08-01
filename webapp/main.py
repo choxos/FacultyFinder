@@ -195,6 +195,71 @@ class FacultiesResponse(BaseModel):
     faculties: List[Professor]
     pagination: PaginationInfo
 
+# Admin database management models
+class UniversityCreate(BaseModel):
+    university_code: str
+    name: str
+    country: str
+    province_state: Optional[str] = None
+    city: Optional[str] = None
+    address: Optional[str] = None
+    website: Optional[str] = None
+    university_type: Optional[str] = "Public"
+    languages: Optional[str] = None
+    year_established: Optional[int] = None
+
+class UniversityUpdate(BaseModel):
+    university_code: Optional[str] = None
+    name: Optional[str] = None
+    country: Optional[str] = None
+    province_state: Optional[str] = None
+    city: Optional[str] = None
+    address: Optional[str] = None
+    website: Optional[str] = None
+    university_type: Optional[str] = None
+    languages: Optional[str] = None
+    year_established: Optional[int] = None
+
+class ProfessorCreate(BaseModel):
+    faculty_id: str
+    name: Optional[str] = None
+    first_name: str
+    last_name: str
+    middle_names: Optional[str] = None
+    degrees: Optional[str] = None
+    research_areas: Optional[str] = None
+    university_code: str
+    faculty: Optional[str] = None
+    department: Optional[str] = None
+    position: Optional[str] = None
+    full_time: Optional[bool] = False
+    adjunct: Optional[bool] = False
+    uni_email: Optional[str] = None
+    website: Optional[str] = None
+    google_scholar: Optional[str] = None
+    orcid: Optional[str] = None
+    linkedin: Optional[str] = None
+
+class ProfessorUpdate(BaseModel):
+    faculty_id: Optional[str] = None
+    name: Optional[str] = None
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    middle_names: Optional[str] = None
+    degrees: Optional[str] = None
+    research_areas: Optional[str] = None
+    university_code: Optional[str] = None
+    faculty: Optional[str] = None
+    department: Optional[str] = None
+    position: Optional[str] = None
+    full_time: Optional[bool] = None
+    adjunct: Optional[bool] = None
+    uni_email: Optional[str] = None
+    website: Optional[str] = None
+    google_scholar: Optional[str] = None
+    orcid: Optional[str] = None
+    linkedin: Optional[str] = None
+
 # Database helper functions
 def get_db_connection():
     """Get database connection from pool"""
@@ -1189,7 +1254,7 @@ async def admin_get_universities(
         raise HTTPException(status_code=500, detail="Failed to fetch universities")
 
 @app.post("/api/v1/admin/universities")
-async def admin_create_university(university_data: dict):
+async def admin_create_university(university_data: UniversityCreate):
     """Create new university"""
     try:
         async with get_db_connection() as conn:
@@ -1203,16 +1268,16 @@ async def admin_create_university(university_data: dict):
             
             result = await conn.fetchrow(
                 query,
-                university_data.get('university_code'),
-                university_data.get('name'),
-                university_data.get('country'),
-                university_data.get('province_state'),
-                university_data.get('city'),
-                university_data.get('address'),
-                university_data.get('website'),
-                university_data.get('university_type', 'Public'),
-                university_data.get('languages'),
-                university_data.get('year_established')
+                university_data.university_code,
+                university_data.name,
+                university_data.country,
+                university_data.province_state,
+                university_data.city,
+                university_data.address,
+                university_data.website,
+                university_data.university_type,
+                university_data.languages,
+                university_data.year_established
             )
             
             return {"success": True, "university": dict(result)}
@@ -1222,7 +1287,7 @@ async def admin_create_university(university_data: dict):
         raise HTTPException(status_code=500, detail="Failed to create university")
 
 @app.put("/api/v1/admin/universities/{university_id}")
-async def admin_update_university(university_id: int, university_data: dict):
+async def admin_update_university(university_id: int, university_data: UniversityUpdate):
     """Update university"""
     try:
         async with get_db_connection() as conn:
@@ -1238,16 +1303,16 @@ async def admin_update_university(university_id: int, university_data: dict):
             result = await conn.fetchrow(
                 query,
                 university_id,
-                university_data.get('university_code'),
-                university_data.get('name'),
-                university_data.get('country'),
-                university_data.get('province_state'),
-                university_data.get('city'),
-                university_data.get('address'),
-                university_data.get('website'),
-                university_data.get('university_type'),
-                university_data.get('languages'),
-                university_data.get('year_established')
+                university_data.university_code,
+                university_data.name,
+                university_data.country,
+                university_data.province_state,
+                university_data.city,
+                university_data.address,
+                university_data.website,
+                university_data.university_type,
+                university_data.languages,
+                university_data.year_established
             )
             
             if not result:
@@ -1355,7 +1420,7 @@ async def admin_get_professors(
         raise HTTPException(status_code=500, detail="Failed to fetch professors")
 
 @app.post("/api/v1/admin/professors")
-async def admin_create_professor(professor_data: dict):
+async def admin_create_professor(professor_data: ProfessorCreate):
     """Create new professor"""
     try:
         async with get_db_connection() as conn:
@@ -1368,26 +1433,32 @@ async def admin_create_professor(professor_data: dict):
             RETURNING *
             """
             
+            # Build full name if not provided
+            full_name = professor_data.name
+            if not full_name:
+                name_parts = [professor_data.first_name, professor_data.middle_names, professor_data.last_name]
+                full_name = ' '.join(part for part in name_parts if part)
+            
             result = await conn.fetchrow(
                 query,
-                professor_data.get('faculty_id'),
-                professor_data.get('name'),
-                professor_data.get('first_name'),
-                professor_data.get('last_name'),
-                professor_data.get('middle_names'),
-                professor_data.get('degrees'),
-                professor_data.get('research_areas'),
-                professor_data.get('university_code'),
-                professor_data.get('faculty'),
-                professor_data.get('department'),
-                professor_data.get('position'),
-                professor_data.get('full_time', False),
-                professor_data.get('adjunct', False),
-                professor_data.get('uni_email'),
-                professor_data.get('website'),
-                professor_data.get('google_scholar'),
-                professor_data.get('orcid'),
-                professor_data.get('linkedin')
+                professor_data.faculty_id,
+                full_name,
+                professor_data.first_name,
+                professor_data.last_name,
+                professor_data.middle_names,
+                professor_data.degrees,
+                professor_data.research_areas,
+                professor_data.university_code,
+                professor_data.faculty,
+                professor_data.department,
+                professor_data.position,
+                professor_data.full_time,
+                professor_data.adjunct,
+                professor_data.uni_email,
+                professor_data.website,
+                professor_data.google_scholar,
+                professor_data.orcid,
+                professor_data.linkedin
             )
             
             return {"success": True, "professor": dict(result)}
@@ -1397,7 +1468,7 @@ async def admin_create_professor(professor_data: dict):
         raise HTTPException(status_code=500, detail="Failed to create professor")
 
 @app.put("/api/v1/admin/professors/{professor_id}")
-async def admin_update_professor(professor_id: int, professor_data: dict):
+async def admin_update_professor(professor_id: int, professor_data: ProfessorUpdate):
     """Update professor"""
     try:
         async with get_db_connection() as conn:
@@ -1412,27 +1483,33 @@ async def admin_update_professor(professor_id: int, professor_data: dict):
             RETURNING *
             """
             
+            # Build full name if individual name parts are provided but name is not
+            full_name = professor_data.name
+            if not full_name and (professor_data.first_name or professor_data.last_name):
+                name_parts = [professor_data.first_name, professor_data.middle_names, professor_data.last_name]
+                full_name = ' '.join(part for part in name_parts if part)
+            
             result = await conn.fetchrow(
                 query,
                 professor_id,
-                professor_data.get('faculty_id'),
-                professor_data.get('name'),
-                professor_data.get('first_name'),
-                professor_data.get('last_name'),
-                professor_data.get('middle_names'),
-                professor_data.get('degrees'),
-                professor_data.get('research_areas'),
-                professor_data.get('university_code'),
-                professor_data.get('faculty'),
-                professor_data.get('department'),
-                professor_data.get('position'),
-                professor_data.get('full_time'),
-                professor_data.get('adjunct'),
-                professor_data.get('uni_email'),
-                professor_data.get('website'),
-                professor_data.get('google_scholar'),
-                professor_data.get('orcid'),
-                professor_data.get('linkedin')
+                professor_data.faculty_id,
+                full_name,
+                professor_data.first_name,
+                professor_data.last_name,
+                professor_data.middle_names,
+                professor_data.degrees,
+                professor_data.research_areas,
+                professor_data.university_code,
+                professor_data.faculty,
+                professor_data.department,
+                professor_data.position,
+                professor_data.full_time,
+                professor_data.adjunct,
+                professor_data.uni_email,
+                professor_data.website,
+                professor_data.google_scholar,
+                professor_data.orcid,
+                professor_data.linkedin
             )
             
             if not result:
