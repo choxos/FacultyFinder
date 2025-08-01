@@ -86,6 +86,12 @@
             align-items: center;
             justify-content: center;
             padding: 2rem 0;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .login-card {
@@ -93,6 +99,21 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
             overflow: hidden;
+            transition: all 0.3s ease;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+        
+        .login-card:hover {
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        
+        .login-card {
             max-width: 900px;
             width: 100%;
         }
@@ -203,10 +224,36 @@
         .input-group .form-control {
             border-left: none;
             border-radius: 0 10px 10px 0;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+        
+        .input-group .form-control:focus {
+            background: white;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+            transform: translateY(-1px);
         }
 
         .input-group:focus-within .input-group-text {
             border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-1px);
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .input-group:nth-child(1) { animation-delay: 0.3s; }
+        .input-group:nth-child(2) { animation-delay: 0.4s; }
+        .input-group:nth-child(3) { animation-delay: 0.5s; }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .btn-login {
@@ -218,6 +265,10 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: slideInFromBottom 0.8s ease-out 0.6s both;
+            transition: all 0.3s ease;
             width: 100%;
         }
 
@@ -225,6 +276,38 @@
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+        }
+        
+        .btn-login:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+        }
+        
+        .btn-login.loading {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+        
+        .btn-login.loading::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            margin: auto;
+            border: 2px solid transparent;
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes slideInFromBottom {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .divider {
