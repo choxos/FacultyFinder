@@ -1082,13 +1082,95 @@
             </div>
         </div>
 
-        <!-- AI Service Selection -->
+        <!-- Choose Your Plan -->
         <div class="row mb-4">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0">
-                            <i class="fas fa-robot me-2"></i>Choose Your AI Assistant
+                            <i class="fas fa-tags me-2"></i>Choose Your Plan
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- Option 1: Free with Own API Key -->
+                            <div class="col-lg-4">
+                                <div class="ai-feature-card usage-option-card h-100" onclick="selectPlan('free')" id="free-plan-option">
+                                    <div class="text-center">
+                                        <div class="feature-icon" style="background: linear-gradient(135deg, #28a745, #20c997);">
+                                            <i class="fas fa-key"></i>
+                                        </div>
+                                        <h5>Free Analysis</h5>
+                                        <div class="display-6 fw-bold text-success mb-2">FREE</div>
+                                        <p class="text-muted">Use your own API key</p>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-2"></i>Choose any AI model</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>No additional costs</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Unlimited analyses</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Full control over usage</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 2: Paid AI Analysis -->
+                            <div class="col-lg-4">
+                                <div class="ai-feature-card usage-option-card h-100" onclick="selectPlan('paid')" id="paid-plan-option">
+                                    <div class="text-center">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <h5>Premium AI Analysis</h5>
+                                        <div class="text-primary mb-2">
+                                            <small>Starting from</small>
+                                            <div class="display-6 fw-bold">$7</div>
+                                        </div>
+                                        <p class="text-muted">All 4 AI models included</p>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-2"></i>Claude + ChatGPT + Gemini + Grok</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Professional support</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Multiple pricing options</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Guaranteed quality</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 3: Expert Manual Review -->
+                            <div class="col-lg-4">
+                                <div class="ai-feature-card usage-option-card h-100" onclick="selectPlan('expert')" id="expert-plan-option">
+                                    <div class="text-center">
+                                        <div class="feature-icon" style="background: linear-gradient(135deg, #6f42c1, #8b5cf6);">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <h5>Expert Manual Review</h5>
+                                        <div class="text-warning mb-2">
+                                            <small>Starting from</small>
+                                            <div class="display-6 fw-bold">$99</div>
+                                        </div>
+                                        <p class="text-muted">Human expert analysis</p>
+                                        <ul class="list-unstyled small text-start">
+                                            <li><i class="fas fa-check text-success me-2"></i>PhD-level reviewers</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Detailed personal feedback</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Custom recommendations</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Video consultation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Model Selection (Free Plan Only - Hidden initially) -->
+        <div class="row mb-4" id="ai-model-selection" style="display: none;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-robot me-2"></i>Choose Your AI Model
                         </h5>
                     </div>
                     <div class="card-body">
@@ -1134,113 +1216,35 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" id="selectedAI" value="claude">
+                        <input type="hidden" id="selectedAI" value="">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- AI Usage Options (Hidden initially) -->
-        <div class="row mb-4" id="ai-usage-options" style="display: none;">
+        <!-- API Key Input Section (Free Plan Only - Hidden initially) -->
+        <div class="row mb-4" id="api-key-section" style="display: none;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0">
-                            <i class="fas fa-key me-2"></i>How would you like to use <span id="selected-ai-name">Claude</span>?
+                            <i class="fas fa-shield-alt me-2"></i>Enter Your <span id="api-provider-name">AI</span> API Key
                         </h5>
                     </div>
                     <div class="card-body">
-                        <div class="row g-4">
-                            <!-- Option 1: Own API Key -->
-                            <div class="col-lg-4">
-                                <div class="ai-feature-card usage-option-card h-100" onclick="selectUsageOption('own_key')" id="own-key-option">
-                                    <div class="text-center">
-                                        <div class="feature-icon" style="background: linear-gradient(135deg, #28a745, #20c997);">
-                                            <i class="fas fa-key"></i>
-                                        </div>
-                                        <h5>Use Your Own API Key</h5>
-                                        <div class="display-6 fw-bold text-success mb-2">FREE</div>
-                                        <p class="text-muted">Bring your own API credentials</p>
-                                        <ul class="list-unstyled small text-start">
-                                            <li><i class="fas fa-check text-success me-2"></i>No additional costs</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Full control over usage</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Direct API access</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Unlimited analyses</li>
-                                        </ul>
-                                    </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <input type="password" class="form-control" id="user-api-key" 
+                                       placeholder="Enter your API key here..." 
+                                       onchange="validateAPIKey()">
+                                <div class="form-text">
+                                    <i class="fas fa-lock me-1"></i>Your API key is stored securely and only used for your analysis
                                 </div>
                             </div>
-
-                            <!-- Option 2: Website's API Key -->
                             <div class="col-lg-4">
-                                <div class="ai-feature-card usage-option-card h-100" onclick="selectUsageOption('website_key')" id="website-key-option">
-                                    <div class="text-center">
-                                        <div class="feature-icon">
-                                            <i class="fas fa-credit-card"></i>
-                                        </div>
-                                        <h5>Use Our Premium Service</h5>
-                                        <div class="text-primary mb-2">
-                                            <small>Starting from</small>
-                                            <div class="display-6 fw-bold">$7</div>
-                                        </div>
-                                        <p class="text-muted">Professional analysis packages</p>
-                                        <ul class="list-unstyled small text-start">
-                                            <li><i class="fas fa-check text-success me-2"></i>Multiple pricing options</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Premium AI models</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Professional support</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Guaranteed quality</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Option 3: Expert Manual Review -->
-                            <div class="col-lg-4">
-                                <div class="ai-feature-card usage-option-card h-100" onclick="selectUsageOption('expert_review')" id="expert-review-option">
-                                    <div class="text-center">
-                                        <div class="feature-icon" style="background: linear-gradient(135deg, #6f42c1, #8b5cf6);">
-                                            <i class="fas fa-user-graduate"></i>
-                                        </div>
-                                        <h5>Expert Manual Review</h5>
-                                        <div class="text-warning mb-2">
-                                            <small>Starting from</small>
-                                            <div class="display-6 fw-bold">$99</div>
-                                        </div>
-                                        <p class="text-muted">Human expert analysis</p>
-                                        <ul class="list-unstyled small text-start">
-                                            <li><i class="fas fa-check text-success me-2"></i>PhD-level reviewers</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Detailed personal feedback</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Custom recommendations</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Video consultation</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- API Key Input Section (Hidden initially) -->
-                        <div id="api-key-section" class="mt-4" style="display: none;">
-                            <div class="card bg-light">
-                                <div class="card-body">
-                                    <h6 class="text-primary mb-3">
-                                        <i class="fas fa-shield-alt me-2"></i>Enter Your <span id="api-provider-name">Claude</span> API Key
-                                    </h6>
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <input type="password" class="form-control" id="user-api-key" 
-                                                   placeholder="Enter your API key here..." 
-                                                   onchange="validateAPIKey()">
-                                            <div class="form-text">
-                                                <i class="fas fa-lock me-1"></i>Your API key is stored securely and only used for your analysis
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <a href="#" class="btn btn-outline-primary w-100" id="get-api-key-link" target="_blank">
-                                                <i class="fas fa-external-link-alt me-2"></i>Get API Key
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="#" class="btn btn-outline-primary w-100" id="get-api-key-link" target="_blank">
+                                    <i class="fas fa-external-link-alt me-2"></i>Get API Key
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1719,11 +1723,73 @@
             validateForm();
         }
 
-        // Track selected usage option
-        let selectedUsageOption = '';
+        // Track selected plan and AI
+        let selectedPlan = '';
         let hasValidAPIKey = false;
 
-        // Select AI service
+        // Select plan (free, paid, expert)
+        function selectPlan(plan) {
+            // Remove selected class from all plan cards
+            document.querySelectorAll('.usage-option-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked card
+            event.currentTarget.classList.add('selected');
+            
+            selectedPlan = plan;
+            
+            // Reset AI selection when changing plans
+            selectedAI = '';
+            document.getElementById('selectedAI').value = '';
+            document.querySelectorAll('.ai-service-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Show/hide appropriate sections based on plan
+            if (plan === 'free') {
+                // Show AI model selection for free plan
+                document.getElementById('ai-model-selection').style.display = 'block';
+                document.getElementById('api-key-section').style.display = 'none';
+                document.getElementById('pricing-options').style.display = 'none';
+            } else if (plan === 'paid') {
+                // Hide AI selection, show pricing for paid plan
+                document.getElementById('ai-model-selection').style.display = 'none';
+                document.getElementById('api-key-section').style.display = 'none';
+                document.getElementById('pricing-options').style.display = 'block';
+                // Show only AI analysis options, hide expert review
+                const aiAnalysisSection = document.querySelector('#pricing-options .card-body h6');
+                if (aiAnalysisSection) {
+                    const nextElement = aiAnalysisSection.nextElementSibling;
+                    if (nextElement) {
+                        nextElement.style.display = 'block';
+                    }
+                }
+                // Auto-set AI to 'all' for paid plans
+                selectedAI = 'all_models';
+                document.getElementById('selectedAI').value = 'all_models';
+            } else if (plan === 'expert') {
+                // Hide AI selection, show expert pricing
+                document.getElementById('ai-model-selection').style.display = 'none';
+                document.getElementById('api-key-section').style.display = 'none';
+                document.getElementById('pricing-options').style.display = 'block';
+                // Hide AI analysis options, show only expert review
+                const aiAnalysisSection = document.querySelector('#pricing-options .card-body h6');
+                if (aiAnalysisSection) {
+                    const nextElement = aiAnalysisSection.nextElementSibling;
+                    if (nextElement) {
+                        nextElement.style.display = 'none';
+                    }
+                }
+                // Auto-set to expert review
+                selectedAI = 'expert_review';
+                document.getElementById('selectedAI').value = 'expert_review';
+            }
+            
+            validateForm();
+        }
+
+        // Select AI service (only for free plan)
         function selectAI(aiType) {
             // Remove selected class from all cards
             document.querySelectorAll('.ai-service-card').forEach(card => {
@@ -1736,7 +1802,7 @@
             selectedAI = aiType;
             document.getElementById('selectedAI').value = aiType;
             
-            // Update AI name in usage options
+            // Update AI name in API key section
             const aiNames = {
                 'claude': 'Claude (Anthropic)',
                 'gpt': 'ChatGPT (OpenAI)', 
@@ -1744,7 +1810,6 @@
                 'grok': 'Grok (xAI)'
             };
             
-            document.getElementById('selected-ai-name').textContent = aiNames[aiType] || 'AI Assistant';
             document.getElementById('api-provider-name').textContent = aiNames[aiType] || 'AI Assistant';
             
             // Update API key link
@@ -1757,49 +1822,8 @@
             
             document.getElementById('get-api-key-link').href = apiLinks[aiType] || '#';
             
-            // Show usage options
-            document.getElementById('ai-usage-options').style.display = 'block';
-            
-            // Reset selections
-            selectedUsageOption = '';
-            document.querySelectorAll('.usage-option-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-            document.getElementById('api-key-section').style.display = 'none';
-            document.getElementById('pricing-options').style.display = 'none';
-            
-            validateForm();
-        }
-
-        // Select usage option
-        function selectUsageOption(option) {
-            // Remove selected class from all usage cards
-            document.querySelectorAll('.usage-option-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-            
-            // Add selected class to clicked card
-            event.currentTarget.classList.add('selected');
-            
-            selectedUsageOption = option;
-            
-            // Show/hide appropriate sections based on selection
-            if (option === 'own_key') {
-                document.getElementById('api-key-section').style.display = 'block';
-                document.getElementById('pricing-options').style.display = 'none';
-            } else if (option === 'website_key') {
-                document.getElementById('api-key-section').style.display = 'none';
-                document.getElementById('pricing-options').style.display = 'block';
-            } else if (option === 'expert_review') {
-                document.getElementById('api-key-section').style.display = 'none';
-                // Show only expert review options in pricing
-                document.getElementById('pricing-options').style.display = 'block';
-                // Hide AI analysis options, show only expert review
-                const aiAnalysisSection = document.querySelector('#pricing-options .card-body h6');
-                if (aiAnalysisSection) {
-                    aiAnalysisSection.parentNode.style.display = option === 'expert_review' ? 'none' : 'block';
-                }
-            }
+            // Show API key section for free plan
+            document.getElementById('api-key-section').style.display = 'block';
             
             validateForm();
         }
@@ -1880,15 +1904,18 @@
                 document.getElementById('broadCategory').value,
                 document.getElementById('narrowField').value,
                 selectedFile !== null,
-                selectedAI !== '',
-                selectedUsageOption !== ''
+                selectedPlan !== ''
             ];
             
             let isValid = basicRequiredFields.every(field => field);
             
-            // Additional validation based on usage option
-            if (selectedUsageOption === 'own_key') {
-                isValid = isValid && hasValidAPIKey;
+            // Additional validation based on plan
+            if (selectedPlan === 'free') {
+                // For free plan, need AI selection and valid API key
+                isValid = isValid && selectedAI !== '' && hasValidAPIKey;
+            } else if (selectedPlan === 'paid' || selectedPlan === 'expert') {
+                // For paid/expert plans, AI is auto-set, no additional validation needed
+                isValid = isValid && selectedAI !== '';
             }
             
             const startBtn = document.getElementById('startAnalysisBtn');
@@ -1896,20 +1923,23 @@
             
             if (isValid) {
                 startBtn.disabled = false;
-                if (selectedUsageOption === 'own_key') {
-                    helpText.textContent = `Ready to analyze with your ${selectedAI.toUpperCase()} API key`;
-                } else if (selectedUsageOption === 'website_key') {
-                    helpText.textContent = `Ready to start premium analysis with ${selectedAI.toUpperCase()}`;
-                } else if (selectedUsageOption === 'expert_review') {
+                if (selectedPlan === 'free') {
+                    const aiName = selectedAI.toUpperCase();
+                    helpText.textContent = `Ready to analyze with your ${aiName} API key`;
+                } else if (selectedPlan === 'paid') {
+                    helpText.textContent = 'Ready to start premium AI analysis with all 4 models';
+                } else if (selectedPlan === 'expert') {
                     helpText.textContent = 'Ready to submit for expert manual review';
                 } else {
-                    helpText.textContent = `Ready to start analysis`;
+                    helpText.textContent = 'Ready to start analysis';
                 }
             } else {
                 startBtn.disabled = true;
-                if (selectedUsageOption === '') {
-                    helpText.textContent = 'Please select how you want to use the AI assistant';
-                } else if (selectedUsageOption === 'own_key' && !hasValidAPIKey) {
+                if (selectedPlan === '') {
+                    helpText.textContent = 'Please choose your analysis plan';
+                } else if (selectedPlan === 'free' && selectedAI === '') {
+                    helpText.textContent = 'Please select an AI model';
+                } else if (selectedPlan === 'free' && !hasValidAPIKey) {
                     helpText.textContent = 'Please enter a valid API key';
                 } else {
                     helpText.textContent = 'Please complete all required fields above';
