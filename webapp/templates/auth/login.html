@@ -16,7 +16,7 @@
                     </div>
 
                     <!-- Login Form -->
-                    <form method="POST" action="{{ url_for('login') }}">
+                    <form method="POST" action="/login">
                         <!-- Username/Email -->
                         <div class="mb-3">
                             <label for="username_or_email" class="form-label">Username or Email</label>
@@ -61,7 +61,7 @@
                     
                     <!-- Google OAuth Button -->
                     <div class="d-grid mb-4">
-                        <a href="{{ url_for('google_login') }}" class="btn btn-outline-danger btn-lg">
+                        <a href="/auth/google" class="btn btn-outline-danger btn-lg">
                             <i class="fab fa-google me-2"></i>Sign in with Google
                         </a>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="text-center">
                         <p class="mb-0">
                             Don't have an account? 
-                            <a href="{{ url_for('register') }}" class="btn btn-outline-primary">
+                            <a href="/register" class="btn btn-outline-primary">
                                 <i class="fas fa-user-plus me-1"></i>Create Account
                             </a>
                         </p>
