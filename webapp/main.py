@@ -983,10 +983,7 @@ async def get_login_page(request: Request):
     if current_user and current_user.is_authenticated:
         return RedirectResponse(url="/dashboard", status_code=302)
     
-    return templates.TemplateResponse("auth/login.html", {
-        "request": request,
-        "current_user": current_user
-    })
+    return FileResponse(os.path.join(static_dir, "login.html"))
 
 @app.post("/login")
 async def login_user(
@@ -1005,22 +1002,18 @@ async def login_user(
             """, username_or_email)
         
         if not user_data:
-            return templates.TemplateResponse("auth/login.html", {
-                "request": request,
-                "error": "Invalid username/email or password",
-                "username_or_email": username_or_email,
-                "current_user": None
-            })
+            return JSONResponse(
+                status_code=400,
+                content={"error": "Invalid username/email or password"}
+            )
         
         # Verify password (using simple SHA256 for now - should use bcrypt in production)
         password_hash = hashlib.sha256(password.encode()).hexdigest()
         if user_data['password_hash'] != password_hash:
-            return templates.TemplateResponse("auth/login.html", {
-                "request": request,
-                "error": "Invalid username/email or password",
-                "username_or_email": username_or_email,
-                "current_user": None
-            })
+            return JSONResponse(
+                status_code=400,
+                content={"error": "Invalid username/email or password"}
+            )
         
         # Update last login
         async with get_db_connection() as conn:
@@ -1033,21 +1026,25 @@ async def login_user(
         # Store user in session
         request.session['user'] = dict(user_data)
         
-        # Check if user is admin and redirect accordingly
+        # Return JSON response for AJAX login
         user = User(dict(user_data))
         if user.is_admin():
-            return RedirectResponse(url="/admin/dashboard", status_code=302)
+            return JSONResponse(
+                status_code=200,
+                content={"success": True, "redirect": "/admin/dashboard"}
+            )
         else:
-            return RedirectResponse(url="/dashboard", status_code=302)
+            return JSONResponse(
+                status_code=200,
+                content={"success": True, "redirect": "/dashboard"}
+            )
                 
     except Exception as e:
         logger.error(f"Login error: {e}")
-        return templates.TemplateResponse("auth/login.html", {
-            "request": request,
-            "error": "Login failed. Please try again.",
-            "username_or_email": username_or_email,
-            "current_user": None
-        })
+        return JSONResponse(
+            status_code=500,
+            content={"error": "Login failed. Please try again."}
+        )
 
 @app.get("/register", response_class=HTMLResponse)
 async def get_register_page(request: Request):
@@ -1056,10 +1053,83 @@ async def get_register_page(request: Request):
     if current_user and current_user.is_authenticated:
         return RedirectResponse(url="/dashboard", status_code=302)
     
-    return templates.TemplateResponse("auth/register.html", {
-        "request": request,
-        "current_user": current_user
-    })
+    return FileResponse(os.path.join(static_dir, "register.html"))
+
+@app.post("/register")
+async def register_user(
+    request: Request,
+    email: str = Form(...),
+    password: str = Form(...),
+    firstName: str = Form(...),
+    lastName: str = Form(...),
+    confirmPassword: str = Form(...),
+    terms: Optional[str] = Form(None),
+    institution: Optional[str] = Form(None),
+    role: Optional[str] = Form(None),
+    newsletter: Optional[str] = Form(None)
+):
+    """Handle user registration"""
+    try:
+        # Validate password confirmation
+        if password != confirmPassword:
+            return JSONResponse(
+                status_code=400,
+                content={"error": "Passwords do not match"}
+            )
+        
+        # Check if terms are accepted
+        if not terms:
+            return JSONResponse(
+                status_code=400,
+                content={"error": "You must accept the terms of service"}
+            )
+        
+        # Check if user already exists
+        async with get_db_connection() as conn:
+            existing_user = await conn.fetchrow(
+                "SELECT * FROM users WHERE email = $1", email
+            )
+            
+            if existing_user:
+                return JSONResponse(
+                    status_code=400,
+                    content={"error": "An account with this email already exists"}
+                )
+            
+            # Create password hash
+            password_hash = hashlib.sha256(password.encode()).hexdigest()
+            
+            # Insert new user
+            user = await conn.fetchrow("""
+                INSERT INTO users (
+                    username, email, password_hash, first_name, last_name,
+                    is_active, email_verified
+                ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+                RETURNING *
+            """, 
+            email,  # Use email as username for now
+            email,
+            password_hash,
+            firstName,
+            lastName,
+            True,
+            False  # Email verification needed
+            )
+            
+            # Store user in session
+            request.session['user'] = dict(user)
+            
+            return JSONResponse(
+                status_code=200,
+                content={"success": True, "redirect": "/dashboard"}
+            )
+                
+    except Exception as e:
+        logger.error(f"Registration error: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"error": "Registration failed. Please try again."}
+        )
 
 @app.get("/dashboard", response_class=HTMLResponse)
 async def dashboard(request: Request, user: User = Depends(require_auth)):

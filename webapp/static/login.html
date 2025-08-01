@@ -756,20 +756,39 @@
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Signing In...';
             submitBtn.disabled = true;
             
-            // Simulate login process (replace with actual API call)
-            setTimeout(() => {
+            // Create form data for FastAPI
+            const apiFormData = new FormData();
+            apiFormData.append('username_or_email', email);
+            apiFormData.append('password', password);
+            if (remember) {
+                apiFormData.append('remember', 'on');
+            }
+            
+            // Make actual API call to FastAPI backend
+            fetch('/login', {
+                method: 'POST',
+                body: apiFormData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert('success', 'Login successful! Redirecting...');
+                    setTimeout(() => {
+                        window.location.href = data.redirect || '/dashboard';
+                    }, 1000);
+                } else {
+                    showAlert('error', data.error || 'Login failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Login error:', error);
+                showAlert('error', 'Login failed. Please try again.');
+            })
+            .finally(() => {
                 // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-                
-                // For demo purposes, show success message
-                showAlert('success', 'Login successful! Redirecting to dashboard...');
-                
-                // Redirect after short delay
-                setTimeout(() => {
-                    window.location.href = '/dashboard';
-                }, 1500);
-            }, 2000);
+            });
         }
 
         // Social login functions

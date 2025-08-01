@@ -951,28 +951,43 @@
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creating Account...';
             submitBtn.disabled = true;
             
-            // Simulate registration process (replace with actual API call)
-            setTimeout(() => {
+            // Make actual API call to FastAPI backend
+            fetch('/register', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert('success', 'Account created successfully! Welcome to FacultyFinder.');
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Reset password strength indicator
+                    if (document.getElementById('strength-fill')) {
+                        document.getElementById('strength-fill').style.width = '0%';
+                        document.getElementById('strength-fill').className = 'strength-fill';
+                        document.getElementById('strength-text').textContent = 'Enter a password';
+                    }
+                    
+                    // Redirect to dashboard after delay
+                    setTimeout(() => {
+                        window.location.href = data.redirect || '/dashboard';
+                    }, 1500);
+                } else {
+                    showAlert('error', data.error || 'Registration failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Registration error:', error);
+                showAlert('error', 'Registration failed. Please try again.');
+            })
+            .finally(() => {
                 // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-                
-                // For demo purposes, show success message
-                showAlert('success', 'Account created successfully! Please check your email to verify your account.');
-                
-                // Reset form
-                form.reset();
-                
-                // Reset password strength indicator
-                document.getElementById('strength-fill').style.width = '0%';
-                document.getElementById('strength-fill').className = 'strength-fill';
-                document.getElementById('strength-text').textContent = 'Enter a password';
-                
-                // Redirect after delay
-                setTimeout(() => {
-                    window.location.href = '/login?message=Account created successfully. Please sign in.&type=success';
-                }, 2000);
-            }, 2000);
+            });
         }
 
         // Social registration functions
