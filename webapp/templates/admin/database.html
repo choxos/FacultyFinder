@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management - Admin - FacultyFinder</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004499;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b35;
+            --text-primary: #2c3e50;
+            --text-secondary: #6c757d;
+            --border-color: #e9ecef;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: #f8f9fa;
+            padding-top: 76px;
+        }
+
+        /* Navigation styling */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95) !important;
+        }
+
+        .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1976d2 !important;
+        }
+
+        /* Admin content styling */
+        .admin-container {
+            min-height: calc(100vh - 76px);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem 0;
+        }
+
+        .admin-content {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+
+        .admin-header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .admin-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            pointer-events: none;
+        }
+
+        .stats-card i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Tab styling */
+        .nav-tabs {
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .nav-tabs .nav-link {
+            border: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            margin-right: 0.5rem;
+            border-radius: 10px 10px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tabs .nav-link:hover {
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--primary-color);
+        }
+
+        .nav-tabs .nav-link.active {
+            background: var(--primary-color);
+            color: white;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Filters and controls */
+        .controls-section {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .data-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .table th {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            font-weight: 600;
+            padding: 1rem;
+            white-space: nowrap;
+        }
+
+        .table td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table tbody tr:hover {
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-sm {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        /* Modal styling */
+        .modal-content {
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .modal-header {
+            background: var(--primary-color);
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+
+        /* Form styling */
+        .form-label {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+        }
+
+        .floating-theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+
+        .loading-spinner {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .badge-type {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .type-public { background: #e3f2fd; color: #1976d2; }
+        .type-private { background: #fff8e1; color: #f57c00; }
+        .type-community { background: #f3e5f5; color: #7b1fa2; }
+
+        .text-truncate-table {
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .admin-content {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            
+            .stats-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .text-truncate-table {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-graduation-cap text-primary me-2"></i>
+                FacultyFinder Admin
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">
+                            <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/ai-requests">
+                            <i class="fas fa-robot me-1"></i>AI Requests
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/admin/database">
+                            <i class="fas fa-database me-1"></i>Database
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-arrow-left me-1"></i>Back to Site
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin fa-2x text-primary"></i>
+            <p class="mt-2">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-container">
+        <div class="container">
+            <div class="admin-content">
+                <!-- Header -->
+                <div class="admin-header">
+                    <h1 class="admin-title">
+                        <i class="fas fa-database me-2"></i>
+                        Database Management
+                    </h1>
+                    <p class="text-muted">Manage universities, professors, and countries data with real-time updates</p>
+                </div>
+
+                <!-- Statistics Cards -->
+                <div class="stats-cards" id="statsCards">
+                    <div class="stats-card">
+                        <i class="fas fa-university"></i>
+                        <div class="stats-number" id="totalUniversities">0</div>
+                        <div class="stats-label">Universities</div>
+                    </div>
+                    <div class="stats-card">
+                        <i class="fas fa-user-graduate"></i>
+                        <div class="stats-number" id="totalProfessors">0</div>
+                        <div class="stats-label">Professors</div>
+                    </div>
+                    <div class="stats-card">
+                        <i class="fas fa-globe"></i>
+                        <div class="stats-number" id="totalCountries">0</div>
+                        <div class="stats-label">Countries</div>
+                    </div>
+                    <div class="stats-card">
+                        <i class="fas fa-plus-circle"></i>
+                        <div class="stats-number" id="recentAdditions">0</div>
+                        <div class="stats-label">Recent Additions (30d)</div>
+                    </div>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <ul class="nav nav-tabs" id="managementTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="universities-tab" data-bs-toggle="tab" data-bs-target="#universities" type="button" role="tab">
+                            <i class="fas fa-university me-2"></i>Universities
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="professors-tab" data-bs-toggle="tab" data-bs-target="#professors" type="button" role="tab">
+                            <i class="fas fa-user-graduate me-2"></i>Professors
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="countries-tab" data-bs-toggle="tab" data-bs-target="#countries" type="button" role="tab">
+                            <i class="fas fa-globe me-2"></i>Countries
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="managementTabContent">
+                    
+                    <!-- Universities Tab -->
+                    <div class="tab-pane fade show active" id="universities" role="tabpanel">
+                        <!-- Controls -->
+                        <div class="controls-section">
+                            <div class="row align-items-end">
+                                <div class="col-md-3">
+                                    <label for="universityCountryFilter" class="form-label">Country</label>
+                                    <select class="form-select" id="universityCountryFilter" onchange="loadUniversities()">
+                                        <option value="">All Countries</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="universityProvinceFilter" class="form-label">Province/State</label>
+                                    <input type="text" class="form-control" id="universityProvinceFilter" placeholder="Filter by province..." onkeyup="debounceLoadUniversities()">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="universitySearchFilter" class="form-label">Search</label>
+                                    <input type="text" class="form-control" id="universitySearchFilter" placeholder="Search universities..." onkeyup="debounceLoadUniversities()">
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary w-100" onclick="openUniversityModal()">
+                                        <i class="fas fa-plus me-1"></i>Add University
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Universities Table -->
+                        <div class="data-table">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Name</th>
+                                            <th>Country</th>
+                                            <th>Province/State</th>
+                                            <th>Type</th>
+                                            <th>Website</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="universitiesTableBody">
+                                        <!-- Content populated by JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3" id="universitiesPagination"></div>
+                    </div>
+
+                    <!-- Professors Tab -->
+                    <div class="tab-pane fade" id="professors" role="tabpanel">
+                        <!-- Controls -->
+                        <div class="controls-section">
+                            <div class="row align-items-end">
+                                <div class="col-md-3">
+                                    <label for="professorUniversityFilter" class="form-label">University</label>
+                                    <select class="form-select" id="professorUniversityFilter" onchange="loadProfessors()">
+                                        <option value="">All Universities</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="professorDepartmentFilter" class="form-label">Department</label>
+                                    <input type="text" class="form-control" id="professorDepartmentFilter" placeholder="Filter by department..." onkeyup="debounceLoadProfessors()">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="professorSearchFilter" class="form-label">Search</label>
+                                    <input type="text" class="form-control" id="professorSearchFilter" placeholder="Search professors..." onkeyup="debounceLoadProfessors()">
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary w-100" onclick="openProfessorModal()">
+                                        <i class="fas fa-plus me-1"></i>Add Professor
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professors Table -->
+                        <div class="data-table">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Faculty ID</th>
+                                            <th>Name</th>
+                                            <th>University</th>
+                                            <th>Department</th>
+                                            <th>Position</th>
+                                            <th>Email</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="professorsTableBody">
+                                        <!-- Content populated by JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3" id="professorsPagination"></div>
+                    </div>
+
+                    <!-- Countries Tab -->
+                    <div class="tab-pane fade" id="countries" role="tabpanel">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="data-table">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Country</th>
+                                                    <th>Universities Count</th>
+                                                    <th>Provinces/States Count</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="countriesTableBody">
+                                                <!-- Content populated by JavaScript -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- University Modal -->
+    <div class="modal fade" id="universityModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="universityModalTitle">Add University</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="universityForm">
+                        <input type="hidden" id="universityId">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="universityCode" class="form-label">University Code *</label>
+                                    <input type="text" class="form-control" id="universityCode" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="universityType" class="form-label">Type</label>
+                                    <select class="form-select" id="universityType">
+                                        <option value="Public">Public</option>
+                                        <option value="Private">Private</option>
+                                        <option value="Community">Community</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="universityName" class="form-label">University Name *</label>
+                            <input type="text" class="form-control" id="universityName" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="universityCountry" class="form-label">Country *</label>
+                                    <input type="text" class="form-control" id="universityCountry" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="universityProvince" class="form-label">Province/State</label>
+                                    <input type="text" class="form-control" id="universityProvince">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="universityCity" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="universityCity">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="universityWebsite" class="form-label">Website</label>
+                                    <input type="url" class="form-control" id="universityWebsite">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="universityYear" class="form-label">Year Established</label>
+                                    <input type="number" class="form-control" id="universityYear" min="1000" max="2030">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="universityLanguages" class="form-label">Languages</label>
+                                    <input type="text" class="form-control" id="universityLanguages" placeholder="e.g., English, French">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="universityAddress" class="form-label">Address</label>
+                            <textarea class="form-control" id="universityAddress" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="saveUniversity()">Save University</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professor Modal -->
+    <div class="modal fade" id="professorModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="professorModalTitle">Add Professor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="professorForm">
+                        <input type="hidden" id="professorId">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="professorFacultyId" class="form-label">Faculty ID *</label>
+                                    <input type="text" class="form-control" id="professorFacultyId" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="professorUniversity" class="form-label">University *</label>
+                                    <select class="form-select" id="professorUniversity" required>
+                                        <option value="">Select University</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="professorFirstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="professorFirstName" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="professorMiddleName" class="form-label">Middle Names</label>
+                                    <input type="text" class="form-control" id="professorMiddleName">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="professorLastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="professorLastName" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="professorFaculty" class="form-label">Faculty</label>
+                                    <input type="text" class="form-control" id="professorFaculty">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="professorDepartment" class="form-label">Department</label>
+                                    <input type="text" class="form-control" id="professorDepartment">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="professorPosition" class="form-label">Position</label>
+                                    <input type="text" class="form-control" id="professorPosition">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="professorFullTime">
+                                        <label class="form-check-label" for="professorFullTime">Full Time</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="professorAdjunct">
+                                        <label class="form-check-label" for="professorAdjunct">Adjunct</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="professorEmail" class="form-label">University Email</label>
+                                    <input type="email" class="form-control" id="professorEmail">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="professorWebsite" class="form-label">Website</label>
+                                    <input type="url" class="form-control" id="professorWebsite">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="professorDegrees" class="form-label">Degrees</label>
+                            <textarea class="form-control" id="professorDegrees" rows="2" placeholder="e.g., PhD, MSc, MD"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="professorResearchAreas" class="form-label">Research Areas</label>
+                            <textarea class="form-control" id="professorResearchAreas" rows="3" placeholder="Separate multiple areas with semicolons"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="professorGoogleScholar" class="form-label">Google Scholar</label>
+                                    <input type="text" class="form-control" id="professorGoogleScholar">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="professorOrcid" class="form-label">ORCID</label>
+                                    <input type="text" class="form-control" id="professorOrcid">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="professorLinkedIn" class="form-label">LinkedIn</label>
+                                    <input type="text" class="form-control" id="professorLinkedIn">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="saveProfessor()">Save Professor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="floating-theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Global variables
+        let currentUniversityPage = 0;
+        let currentProfessorPage = 0;
+        let currentLimit = 50;
+        let editingUniversity = null;
+        let editingProfessor = null;
+        
+        // Debounce timers
+        let universitySearchTimer;
+        let professorSearchTimer;
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStats();
+            loadUniversities();
+            loadCountries();
+            loadUniversityOptions();
+            loadProfessorUniversityOptions();
+            
+            // Tab change event
+            document.getElementById('managementTabs').addEventListener('shown.bs.tab', function (e) {
+                if (e.target.getAttribute('data-bs-target') === '#professors') {
+                    loadProfessors();
+                }
+            });
+        });
+
+        // Load statistics
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/v1/admin/database/stats');
+                const stats = await response.json();
+                
+                document.getElementById('totalUniversities').textContent = stats.universities || 0;
+                document.getElementById('totalProfessors').textContent = stats.professors || 0;
+                document.getElementById('totalCountries').textContent = stats.countries || 0;
+                
+                const recentTotal = (stats.recent_additions?.universities || 0) + (stats.recent_additions?.professors || 0);
+                document.getElementById('recentAdditions').textContent = recentTotal;
+                
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                showNotification('Failed to load statistics', 'error');
+            }
+        }
+
+        // Universities management
+        async function loadUniversities() {
+            showLoading(true);
+            
+            try {
+                const params = new URLSearchParams({
+                    limit: currentLimit,
+                    offset: currentUniversityPage * currentLimit
+                });
+                
+                const country = document.getElementById('universityCountryFilter').value;
+                const province = document.getElementById('universityProvinceFilter').value;
+                const search = document.getElementById('universitySearchFilter').value;
+                
+                if (country) params.append('country', country);
+                if (province) params.append('province_state', province);
+                if (search) params.append('search', search);
+                
+                const response = await fetch(`/api/v1/admin/universities?${params}`);
+                const data = await response.json();
+                
+                displayUniversities(data.universities);
+                
+            } catch (error) {
+                console.error('Error loading universities:', error);
+                showNotification('Failed to load universities', 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        function displayUniversities(universities) {
+            const tableBody = document.getElementById('universitiesTableBody');
+            
+            if (universities.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="7" class="text-center text-muted py-4">
+                            <i class="fas fa-university fa-2x mb-2"></i>
+                            <div>No universities found</div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            tableBody.innerHTML = universities.map(uni => `
+                <tr>
+                    <td><code class="text-primary">${uni.university_code}</code></td>
+                    <td class="text-truncate-table" title="${uni.name}">${uni.name}</td>
+                    <td>${uni.country || 'N/A'}</td>
+                    <td>${uni.province_state || 'N/A'}</td>
+                    <td><span class="badge-type type-${(uni.university_type || 'public').toLowerCase()}">${uni.university_type || 'Public'}</span></td>
+                    <td>
+                        ${uni.website ? `<a href="${uni.website}" target="_blank" class="text-primary"><i class="fas fa-external-link-alt"></i></a>` : 'N/A'}
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-sm btn-outline-primary" onclick="editUniversity(${uni.id})" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deleteUniversity(${uni.id}, '${uni.name}')" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function debounceLoadUniversities() {
+            clearTimeout(universitySearchTimer);
+            universitySearchTimer = setTimeout(() => {
+                currentUniversityPage = 0;
+                loadUniversities();
+            }, 500);
+        }
+
+        function openUniversityModal(university = null) {
+            editingUniversity = university;
+            const modal = new bootstrap.Modal(document.getElementById('universityModal'));
+            
+            if (university) {
+                document.getElementById('universityModalTitle').textContent = 'Edit University';
+                document.getElementById('universityId').value = university.id;
+                document.getElementById('universityCode').value = university.university_code;
+                document.getElementById('universityName').value = university.name;
+                document.getElementById('universityCountry').value = university.country || '';
+                document.getElementById('universityProvince').value = university.province_state || '';
+                document.getElementById('universityCity').value = university.city || '';
+                document.getElementById('universityWebsite').value = university.website || '';
+                document.getElementById('universityYear').value = university.year_established || '';
+                document.getElementById('universityLanguages').value = university.languages || '';
+                document.getElementById('universityAddress').value = university.address || '';
+                document.getElementById('universityType').value = university.university_type || 'Public';
+            } else {
+                document.getElementById('universityModalTitle').textContent = 'Add University';
+                document.getElementById('universityForm').reset();
+                document.getElementById('universityId').value = '';
+            }
+            
+            modal.show();
+        }
+
+        async function saveUniversity() {
+            const form = document.getElementById('universityForm');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            const universityData = {
+                university_code: document.getElementById('universityCode').value,
+                name: document.getElementById('universityName').value,
+                country: document.getElementById('universityCountry').value,
+                province_state: document.getElementById('universityProvince').value,
+                city: document.getElementById('universityCity').value,
+                website: document.getElementById('universityWebsite').value,
+                year_established: document.getElementById('universityYear').value ? parseInt(document.getElementById('universityYear').value) : null,
+                languages: document.getElementById('universityLanguages').value,
+                address: document.getElementById('universityAddress').value,
+                university_type: document.getElementById('universityType').value
+            };
+            
+            try {
+                const universityId = document.getElementById('universityId').value;
+                const url = universityId ? `/api/v1/admin/universities/${universityId}` : '/api/v1/admin/universities';
+                const method = universityId ? 'PUT' : 'POST';
+                
+                const response = await fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(universityData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification(`University ${universityId ? 'updated' : 'created'} successfully`, 'success');
+                    bootstrap.Modal.getInstance(document.getElementById('universityModal')).hide();
+                    loadUniversities();
+                    loadStats();
+                    loadUniversityOptions();
+                    loadProfessorUniversityOptions();
+                } else {
+                    showNotification('Failed to save university', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error saving university:', error);
+                showNotification('Failed to save university', 'error');
+            }
+        }
+
+        async function editUniversity(id) {
+            try {
+                const response = await fetch(`/api/v1/admin/universities?limit=1000`);
+                const data = await response.json();
+                const university = data.universities.find(u => u.id === id);
+                
+                if (university) {
+                    openUniversityModal(university);
+                } else {
+                    showNotification('University not found', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error loading university:', error);
+                showNotification('Failed to load university', 'error');
+            }
+        }
+
+        async function deleteUniversity(id, name) {
+            if (!confirm(`Are you sure you want to delete "${name}"? This action cannot be undone.`)) {
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/v1/admin/universities/${id}`, {
+                    method: 'DELETE'
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification('University deleted successfully', 'success');
+                    loadUniversities();
+                    loadStats();
+                } else {
+                    showNotification(result.detail || 'Failed to delete university', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error deleting university:', error);
+                showNotification('Failed to delete university', 'error');
+            }
+        }
+
+        // Professors management
+        async function loadProfessors() {
+            showLoading(true);
+            
+            try {
+                const params = new URLSearchParams({
+                    limit: currentLimit,
+                    offset: currentProfessorPage * currentLimit
+                });
+                
+                const university = document.getElementById('professorUniversityFilter').value;
+                const department = document.getElementById('professorDepartmentFilter').value;
+                const search = document.getElementById('professorSearchFilter').value;
+                
+                if (university) params.append('university_code', university);
+                if (department) params.append('department', department);
+                if (search) params.append('search', search);
+                
+                const response = await fetch(`/api/v1/admin/professors?${params}`);
+                const data = await response.json();
+                
+                displayProfessors(data.professors);
+                
+            } catch (error) {
+                console.error('Error loading professors:', error);
+                showNotification('Failed to load professors', 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        function displayProfessors(professors) {
+            const tableBody = document.getElementById('professorsTableBody');
+            
+            if (professors.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="7" class="text-center text-muted py-4">
+                            <i class="fas fa-user-graduate fa-2x mb-2"></i>
+                            <div>No professors found</div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            tableBody.innerHTML = professors.map(prof => `
+                <tr>
+                    <td><code class="text-primary">${prof.faculty_id || 'N/A'}</code></td>
+                    <td class="text-truncate-table" title="${prof.name}">${prof.name}</td>
+                    <td class="text-truncate-table" title="${prof.university_name || 'N/A'}">${prof.university_name || 'N/A'}</td>
+                    <td class="text-truncate-table" title="${prof.department || 'N/A'}">${prof.department || 'N/A'}</td>
+                    <td class="text-truncate-table" title="${prof.position || 'N/A'}">${prof.position || 'N/A'}</td>
+                    <td>${prof.uni_email ? `<a href="mailto:${prof.uni_email}" class="text-primary">${prof.uni_email}</a>` : 'N/A'}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-sm btn-outline-primary" onclick="editProfessor(${prof.id})" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deleteProfessor(${prof.id}, '${prof.name}')" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function debounceLoadProfessors() {
+            clearTimeout(professorSearchTimer);
+            professorSearchTimer = setTimeout(() => {
+                currentProfessorPage = 0;
+                loadProfessors();
+            }, 500);
+        }
+
+        function openProfessorModal(professor = null) {
+            editingProfessor = professor;
+            const modal = new bootstrap.Modal(document.getElementById('professorModal'));
+            
+            if (professor) {
+                document.getElementById('professorModalTitle').textContent = 'Edit Professor';
+                document.getElementById('professorId').value = professor.id;
+                document.getElementById('professorFacultyId').value = professor.faculty_id || '';
+                document.getElementById('professorFirstName').value = professor.first_name || '';
+                document.getElementById('professorMiddleName').value = professor.middle_names || '';
+                document.getElementById('professorLastName').value = professor.last_name || '';
+                document.getElementById('professorFaculty').value = professor.faculty || '';
+                document.getElementById('professorDepartment').value = professor.department || '';
+                document.getElementById('professorPosition').value = professor.position || '';
+                document.getElementById('professorFullTime').checked = professor.full_time || false;
+                document.getElementById('professorAdjunct').checked = professor.adjunct || false;
+                document.getElementById('professorEmail').value = professor.uni_email || '';
+                document.getElementById('professorWebsite').value = professor.website || '';
+                document.getElementById('professorDegrees').value = professor.degrees || '';
+                document.getElementById('professorResearchAreas').value = professor.research_areas || '';
+                document.getElementById('professorGoogleScholar').value = professor.google_scholar || '';
+                document.getElementById('professorOrcid').value = professor.orcid || '';
+                document.getElementById('professorLinkedIn').value = professor.linkedin || '';
+                document.getElementById('professorUniversity').value = professor.university_code || '';
+            } else {
+                document.getElementById('professorModalTitle').textContent = 'Add Professor';
+                document.getElementById('professorForm').reset();
+                document.getElementById('professorId').value = '';
+            }
+            
+            modal.show();
+        }
+
+        async function saveProfessor() {
+            const form = document.getElementById('professorForm');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            // Build full name
+            const firstName = document.getElementById('professorFirstName').value;
+            const middleName = document.getElementById('professorMiddleName').value;
+            const lastName = document.getElementById('professorLastName').value;
+            const fullName = [firstName, middleName, lastName].filter(n => n).join(' ');
+            
+            const professorData = {
+                faculty_id: document.getElementById('professorFacultyId').value,
+                name: fullName,
+                first_name: firstName,
+                last_name: lastName,
+                middle_names: middleName,
+                faculty: document.getElementById('professorFaculty').value,
+                department: document.getElementById('professorDepartment').value,
+                position: document.getElementById('professorPosition').value,
+                full_time: document.getElementById('professorFullTime').checked,
+                adjunct: document.getElementById('professorAdjunct').checked,
+                uni_email: document.getElementById('professorEmail').value,
+                website: document.getElementById('professorWebsite').value,
+                degrees: document.getElementById('professorDegrees').value,
+                research_areas: document.getElementById('professorResearchAreas').value,
+                google_scholar: document.getElementById('professorGoogleScholar').value,
+                orcid: document.getElementById('professorOrcid').value,
+                linkedin: document.getElementById('professorLinkedIn').value,
+                university_code: document.getElementById('professorUniversity').value
+            };
+            
+            try {
+                const professorId = document.getElementById('professorId').value;
+                const url = professorId ? `/api/v1/admin/professors/${professorId}` : '/api/v1/admin/professors';
+                const method = professorId ? 'PUT' : 'POST';
+                
+                const response = await fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(professorData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification(`Professor ${professorId ? 'updated' : 'created'} successfully`, 'success');
+                    bootstrap.Modal.getInstance(document.getElementById('professorModal')).hide();
+                    loadProfessors();
+                    loadStats();
+                } else {
+                    showNotification('Failed to save professor', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error saving professor:', error);
+                showNotification('Failed to save professor', 'error');
+            }
+        }
+
+        async function editProfessor(id) {
+            try {
+                const response = await fetch(`/api/v1/admin/professors?limit=10000`);
+                const data = await response.json();
+                const professor = data.professors.find(p => p.id === id);
+                
+                if (professor) {
+                    openProfessorModal(professor);
+                } else {
+                    showNotification('Professor not found', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error loading professor:', error);
+                showNotification('Failed to load professor', 'error');
+            }
+        }
+
+        async function deleteProfessor(id, name) {
+            if (!confirm(`Are you sure you want to delete "${name}"? This action cannot be undone.`)) {
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/v1/admin/professors/${id}`, {
+                    method: 'DELETE'
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification('Professor deleted successfully', 'success');
+                    loadProfessors();
+                    loadStats();
+                } else {
+                    showNotification('Failed to delete professor', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error deleting professor:', error);
+                showNotification('Failed to delete professor', 'error');
+            }
+        }
+
+        // Countries management
+        async function loadCountries() {
+            try {
+                const response = await fetch('/api/v1/admin/countries');
+                const data = await response.json();
+                
+                displayCountries(data.countries);
+                
+                // Also populate country filter
+                const countryFilter = document.getElementById('universityCountryFilter');
+                countryFilter.innerHTML = '<option value="">All Countries</option>';
+                data.countries.forEach(country => {
+                    countryFilter.innerHTML += `<option value="${country.country}">${country.country}</option>`;
+                });
+                
+            } catch (error) {
+                console.error('Error loading countries:', error);
+                showNotification('Failed to load countries', 'error');
+            }
+        }
+
+        function displayCountries(countries) {
+            const tableBody = document.getElementById('countriesTableBody');
+            
+            if (countries.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="4" class="text-center text-muted py-4">
+                            <i class="fas fa-globe fa-2x mb-2"></i>
+                            <div>No countries found</div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            tableBody.innerHTML = countries.map(country => `
+                <tr>
+                    <td><strong>${country.country}</strong></td>
+                    <td><span class="badge bg-primary">${country.university_count}</span></td>
+                    <td><span class="badge bg-info">${country.province_count}</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary" onclick="filterByCountry('${country.country}')" title="View Universities">
+                            <i class="fas fa-eye"></i> View Universities
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function filterByCountry(country) {
+            // Switch to universities tab and filter by country
+            const universitiesTab = document.getElementById('universities-tab');
+            universitiesTab.click();
+            
+            setTimeout(() => {
+                document.getElementById('universityCountryFilter').value = country;
+                loadUniversities();
+            }, 100);
+        }
+
+        // Load university options for dropdowns
+        async function loadUniversityOptions() {
+            try {
+                const response = await fetch('/api/v1/admin/universities?limit=1000');
+                const data = await response.json();
+                
+                const professorFilter = document.getElementById('professorUniversityFilter');
+                professorFilter.innerHTML = '<option value="">All Universities</option>';
+                
+                data.universities.forEach(uni => {
+                    professorFilter.innerHTML += `<option value="${uni.university_code}">${uni.name}</option>`;
+                });
+                
+            } catch (error) {
+                console.error('Error loading university options:', error);
+            }
+        }
+
+        async function loadProfessorUniversityOptions() {
+            try {
+                const response = await fetch('/api/v1/admin/universities?limit=1000');
+                const data = await response.json();
+                
+                const professorUniversity = document.getElementById('professorUniversity');
+                professorUniversity.innerHTML = '<option value="">Select University</option>';
+                
+                data.universities.forEach(uni => {
+                    professorUniversity.innerHTML += `<option value="${uni.university_code}">${uni.name}</option>`;
+                });
+                
+            } catch (error) {
+                console.error('Error loading professor university options:', error);
+            }
+        }
+
+        // Utility functions
+        function showLoading(show) {
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.style.display = show ? 'flex' : 'none';
+        }
+
+        function showNotification(message, type = 'info') {
+            const alertType = type === 'success' ? 'Success' : type === 'error' ? 'Error' : 'Info';
+            alert(`${alertType}: ${message}`);
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            const icon = document.querySelector('.floating-theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    </script>
+</body>
+</html> 

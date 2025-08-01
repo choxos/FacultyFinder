@@ -884,6 +884,11 @@ async def admin_ai_requests():
     """Admin AI requests management page"""
     return FileResponse("webapp/templates/admin/ai_requests.html")
 
+@app.get("/admin/database", response_class=HTMLResponse)
+async def admin_database():
+    """Admin database management page"""
+    return FileResponse("webapp/templates/admin/database.html")
+
 @app.get("/api/v1/admin/ai-requests")
 async def admin_get_ai_requests(
     status: Optional[str] = None,
@@ -1117,6 +1122,424 @@ async def admin_ai_requests_stats():
     except Exception as e:
         logger.error(f"Error fetching AI requests stats: {e}")
         raise HTTPException(status_code=500, detail="Failed to fetch AI requests stats")
+
+# Database Management API Routes
+@app.get("/api/v1/admin/universities")
+async def admin_get_universities(
+    country: Optional[str] = None,
+    province_state: Optional[str] = None,
+    search: Optional[str] = None,
+    limit: int = 100,
+    offset: int = 0
+):
+    """Get universities for admin management"""
+    try:
+        async with get_db_connection() as conn:
+            where_conditions = []
+            params = []
+            
+            base_query = """
+            SELECT 
+                id, university_code, name, country, province_state, city, 
+                address, website, university_type, languages, year_established,
+                created_at, updated_at
+            FROM universities
+            """
+            
+            # Add filters
+            if country:
+                where_conditions.append(f"country ILIKE ${len(params)+1}")
+                params.append(f"%{country}%")
+            
+            if province_state:
+                where_conditions.append(f"province_state ILIKE ${len(params)+1}")
+                params.append(f"%{province_state}%")
+            
+            if search:
+                where_conditions.append(f"(name ILIKE ${len(params)+1} OR university_code ILIKE ${len(params)+1})")
+                params.append(f"%{search}%")
+                
+            if where_conditions:
+                base_query += " WHERE " + " AND ".join(where_conditions)
+            
+            base_query += f" ORDER BY name LIMIT ${len(params)+1} OFFSET ${len(params)+2}"
+            params.extend([limit, offset])
+            
+            universities = await conn.fetch(base_query, *params)
+            
+            # Count total
+            count_query = "SELECT COUNT(*) FROM universities"
+            if where_conditions:
+                count_query += " WHERE " + " AND ".join(where_conditions)
+            
+            total_count = await conn.fetchval(count_query, *params[:-2])
+            
+            return {
+                "universities": [dict(u) for u in universities],
+                "pagination": {
+                    "total": total_count,
+                    "limit": limit,
+                    "offset": offset,
+                    "has_more": offset + limit < total_count
+                }
+            }
+            
+    except Exception as e:
+        logger.error(f"Error fetching universities: {e}")
+        raise HTTPException(status_code=500, detail="Failed to fetch universities")
+
+@app.post("/api/v1/admin/universities")
+async def admin_create_university(university_data: dict):
+    """Create new university"""
+    try:
+        async with get_db_connection() as conn:
+            query = """
+            INSERT INTO universities 
+            (university_code, name, country, province_state, city, address, website, 
+             university_type, languages, year_established)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+            RETURNING *
+            """
+            
+            result = await conn.fetchrow(
+                query,
+                university_data.get('university_code'),
+                university_data.get('name'),
+                university_data.get('country'),
+                university_data.get('province_state'),
+                university_data.get('city'),
+                university_data.get('address'),
+                university_data.get('website'),
+                university_data.get('university_type', 'Public'),
+                university_data.get('languages'),
+                university_data.get('year_established')
+            )
+            
+            return {"success": True, "university": dict(result)}
+            
+    except Exception as e:
+        logger.error(f"Error creating university: {e}")
+        raise HTTPException(status_code=500, detail="Failed to create university")
+
+@app.put("/api/v1/admin/universities/{university_id}")
+async def admin_update_university(university_id: int, university_data: dict):
+    """Update university"""
+    try:
+        async with get_db_connection() as conn:
+            query = """
+            UPDATE universities SET
+                university_code = $2, name = $3, country = $4, province_state = $5,
+                city = $6, address = $7, website = $8, university_type = $9,
+                languages = $10, year_established = $11, updated_at = CURRENT_TIMESTAMP
+            WHERE id = $1
+            RETURNING *
+            """
+            
+            result = await conn.fetchrow(
+                query,
+                university_id,
+                university_data.get('university_code'),
+                university_data.get('name'),
+                university_data.get('country'),
+                university_data.get('province_state'),
+                university_data.get('city'),
+                university_data.get('address'),
+                university_data.get('website'),
+                university_data.get('university_type'),
+                university_data.get('languages'),
+                university_data.get('year_established')
+            )
+            
+            if not result:
+                raise HTTPException(status_code=404, detail="University not found")
+            
+            return {"success": True, "university": dict(result)}
+            
+    except Exception as e:
+        logger.error(f"Error updating university: {e}")
+        raise HTTPException(status_code=500, detail="Failed to update university")
+
+@app.delete("/api/v1/admin/universities/{university_id}")
+async def admin_delete_university(university_id: int):
+    """Delete university"""
+    try:
+        async with get_db_connection() as conn:
+            # Check if university has professors
+            prof_count = await conn.fetchval(
+                "SELECT COUNT(*) FROM professors WHERE university_code = (SELECT university_code FROM universities WHERE id = $1)",
+                university_id
+            )
+            
+            if prof_count > 0:
+                raise HTTPException(
+                    status_code=400, 
+                    detail=f"Cannot delete university: {prof_count} professors are associated with it"
+                )
+            
+            result = await conn.fetchrow("DELETE FROM universities WHERE id = $1 RETURNING *", university_id)
+            
+            if not result:
+                raise HTTPException(status_code=404, detail="University not found")
+            
+            return {"success": True, "message": "University deleted successfully"}
+            
+    except Exception as e:
+        logger.error(f"Error deleting university: {e}")
+        raise HTTPException(status_code=500, detail="Failed to delete university")
+
+@app.get("/api/v1/admin/professors")
+async def admin_get_professors(
+    university_code: Optional[str] = None,
+    department: Optional[str] = None,
+    search: Optional[str] = None,
+    limit: int = 100,
+    offset: int = 0
+):
+    """Get professors for admin management"""
+    try:
+        async with get_db_connection() as conn:
+            where_conditions = []
+            params = []
+            
+            base_query = """
+            SELECT 
+                p.id, p.faculty_id, p.name, p.first_name, p.last_name, p.middle_names,
+                p.degrees, p.research_areas, p.university_code, p.faculty, p.department,
+                p.position, p.full_time, p.adjunct, p.uni_email, p.website,
+                p.google_scholar, p.orcid, p.linkedin, p.created_at, p.updated_at,
+                u.name as university_name
+            FROM professors p
+            LEFT JOIN universities u ON p.university_code = u.university_code
+            """
+            
+            # Add filters
+            if university_code:
+                where_conditions.append(f"p.university_code = ${len(params)+1}")
+                params.append(university_code)
+            
+            if department:
+                where_conditions.append(f"p.department ILIKE ${len(params)+1}")
+                params.append(f"%{department}%")
+            
+            if search:
+                where_conditions.append(f"(p.name ILIKE ${len(params)+1} OR p.faculty_id ILIKE ${len(params)+1} OR p.research_areas ILIKE ${len(params)+1})")
+                params.append(f"%{search}%")
+                
+            if where_conditions:
+                base_query += " WHERE " + " AND ".join(where_conditions)
+            
+            base_query += f" ORDER BY p.name LIMIT ${len(params)+1} OFFSET ${len(params)+2}"
+            params.extend([limit, offset])
+            
+            professors = await conn.fetch(base_query, *params)
+            
+            # Count total
+            count_query = "SELECT COUNT(*) FROM professors p"
+            if where_conditions:
+                count_query += " WHERE " + " AND ".join(where_conditions)
+            
+            total_count = await conn.fetchval(count_query, *params[:-2])
+            
+            return {
+                "professors": [dict(p) for p in professors],
+                "pagination": {
+                    "total": total_count,
+                    "limit": limit,
+                    "offset": offset,
+                    "has_more": offset + limit < total_count
+                }
+            }
+            
+    except Exception as e:
+        logger.error(f"Error fetching professors: {e}")
+        raise HTTPException(status_code=500, detail="Failed to fetch professors")
+
+@app.post("/api/v1/admin/professors")
+async def admin_create_professor(professor_data: dict):
+    """Create new professor"""
+    try:
+        async with get_db_connection() as conn:
+            query = """
+            INSERT INTO professors 
+            (faculty_id, name, first_name, last_name, middle_names, degrees, research_areas,
+             university_code, faculty, department, position, full_time, adjunct, uni_email,
+             website, google_scholar, orcid, linkedin)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
+            RETURNING *
+            """
+            
+            result = await conn.fetchrow(
+                query,
+                professor_data.get('faculty_id'),
+                professor_data.get('name'),
+                professor_data.get('first_name'),
+                professor_data.get('last_name'),
+                professor_data.get('middle_names'),
+                professor_data.get('degrees'),
+                professor_data.get('research_areas'),
+                professor_data.get('university_code'),
+                professor_data.get('faculty'),
+                professor_data.get('department'),
+                professor_data.get('position'),
+                professor_data.get('full_time', False),
+                professor_data.get('adjunct', False),
+                professor_data.get('uni_email'),
+                professor_data.get('website'),
+                professor_data.get('google_scholar'),
+                professor_data.get('orcid'),
+                professor_data.get('linkedin')
+            )
+            
+            return {"success": True, "professor": dict(result)}
+            
+    except Exception as e:
+        logger.error(f"Error creating professor: {e}")
+        raise HTTPException(status_code=500, detail="Failed to create professor")
+
+@app.put("/api/v1/admin/professors/{professor_id}")
+async def admin_update_professor(professor_id: int, professor_data: dict):
+    """Update professor"""
+    try:
+        async with get_db_connection() as conn:
+            query = """
+            UPDATE professors SET
+                faculty_id = $2, name = $3, first_name = $4, last_name = $5, middle_names = $6,
+                degrees = $7, research_areas = $8, university_code = $9, faculty = $10,
+                department = $11, position = $12, full_time = $13, adjunct = $14,
+                uni_email = $15, website = $16, google_scholar = $17, orcid = $18,
+                linkedin = $19, updated_at = CURRENT_TIMESTAMP
+            WHERE id = $1
+            RETURNING *
+            """
+            
+            result = await conn.fetchrow(
+                query,
+                professor_id,
+                professor_data.get('faculty_id'),
+                professor_data.get('name'),
+                professor_data.get('first_name'),
+                professor_data.get('last_name'),
+                professor_data.get('middle_names'),
+                professor_data.get('degrees'),
+                professor_data.get('research_areas'),
+                professor_data.get('university_code'),
+                professor_data.get('faculty'),
+                professor_data.get('department'),
+                professor_data.get('position'),
+                professor_data.get('full_time'),
+                professor_data.get('adjunct'),
+                professor_data.get('uni_email'),
+                professor_data.get('website'),
+                professor_data.get('google_scholar'),
+                professor_data.get('orcid'),
+                professor_data.get('linkedin')
+            )
+            
+            if not result:
+                raise HTTPException(status_code=404, detail="Professor not found")
+            
+            return {"success": True, "professor": dict(result)}
+            
+    except Exception as e:
+        logger.error(f"Error updating professor: {e}")
+        raise HTTPException(status_code=500, detail="Failed to update professor")
+
+@app.delete("/api/v1/admin/professors/{professor_id}")
+async def admin_delete_professor(professor_id: int):
+    """Delete professor"""
+    try:
+        async with get_db_connection() as conn:
+            result = await conn.fetchrow("DELETE FROM professors WHERE id = $1 RETURNING *", professor_id)
+            
+            if not result:
+                raise HTTPException(status_code=404, detail="Professor not found")
+            
+            return {"success": True, "message": "Professor deleted successfully"}
+            
+    except Exception as e:
+        logger.error(f"Error deleting professor: {e}")
+        raise HTTPException(status_code=500, detail="Failed to delete professor")
+
+@app.get("/api/v1/admin/countries")
+async def admin_get_countries():
+    """Get countries list derived from universities"""
+    try:
+        async with get_db_connection() as conn:
+            countries = await conn.fetch("""
+                SELECT 
+                    country,
+                    COUNT(*) as university_count,
+                    COUNT(DISTINCT province_state) as province_count
+                FROM universities 
+                WHERE country IS NOT NULL AND country != ''
+                GROUP BY country
+                ORDER BY country
+            """)
+            
+            return {"countries": [dict(c) for c in countries]}
+            
+    except Exception as e:
+        logger.error(f"Error fetching countries: {e}")
+        raise HTTPException(status_code=500, detail="Failed to fetch countries")
+
+@app.get("/api/v1/admin/database/stats")
+async def admin_database_stats():
+    """Get database statistics for admin dashboard"""
+    try:
+        async with get_db_connection() as conn:
+            stats = {}
+            
+            # Basic counts
+            stats['universities'] = await conn.fetchval("SELECT COUNT(*) FROM universities") or 0
+            stats['professors'] = await conn.fetchval("SELECT COUNT(*) FROM professors") or 0
+            stats['countries'] = await conn.fetchval("SELECT COUNT(DISTINCT country) FROM universities WHERE country IS NOT NULL") or 0
+            
+            # Universities by country
+            country_stats = await conn.fetch("""
+                SELECT country, COUNT(*) as count 
+                FROM universities 
+                WHERE country IS NOT NULL AND country != ''
+                GROUP BY country 
+                ORDER BY count DESC 
+                LIMIT 10
+            """)
+            stats['universities_by_country'] = {row['country']: row['count'] for row in country_stats}
+            
+            # Professors by university
+            university_stats = await conn.fetch("""
+                SELECT u.name, COUNT(p.id) as professor_count
+                FROM universities u
+                LEFT JOIN professors p ON u.university_code = p.university_code
+                GROUP BY u.id, u.name
+                ORDER BY professor_count DESC
+                LIMIT 10
+            """)
+            stats['professors_by_university'] = [
+                {"university": row['name'], "count": row['professor_count']} 
+                for row in university_stats
+            ]
+            
+            # Recent additions
+            recent_universities = await conn.fetchval("""
+                SELECT COUNT(*) FROM universities 
+                WHERE created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days'
+            """) or 0
+            
+            recent_professors = await conn.fetchval("""
+                SELECT COUNT(*) FROM professors 
+                WHERE created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days'
+            """) or 0
+            
+            stats['recent_additions'] = {
+                'universities': recent_universities,
+                'professors': recent_professors
+            }
+            
+            return stats
+            
+    except Exception as e:
+        logger.error(f"Error fetching database stats: {e}")
+        raise HTTPException(status_code=500, detail="Failed to fetch database stats")
 
 # Favicon route to prevent 404 errors
 @app.get("/favicon.ico")
