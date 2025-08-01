@@ -918,7 +918,7 @@
                             </div>
                         </div>
                         <div class="university-actions">
-                            <a href="/university/${university.id || university.code}" class="btn btn-view">
+                            <a href="/university/${university.university_code || university.code}" class="btn btn-view">
                                 <i class="fas fa-eye me-1"></i>View Details
                             </a>
                             <a href="/faculties?university=${encodeURIComponent(university.name)}" class="btn btn-faculty">
@@ -1160,7 +1160,7 @@
                     </td>
                     <td>
                         <div class="btn-group btn-group-sm">
-                            <a href="/university/${university.id || university.code}" 
+                            <a href="/university/${university.university_code || university.code}" 
                                class="btn btn-outline-primary" title="View Details">
                                 <i class="fas fa-eye"></i>
                             </a>
