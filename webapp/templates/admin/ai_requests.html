@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Requests Management - Admin - FacultyFinder</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004499;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b35;
+            --text-primary: #2c3e50;
+            --text-secondary: #6c757d;
+            --border-color: #e9ecef;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: #f8f9fa;
+            padding-top: 76px;
+        }
+
+        /* Navigation styling */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95) !important;
+        }
+
+        .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1976d2 !important;
+        }
+
+        /* Admin content styling */
+        .admin-container {
+            min-height: calc(100vh - 76px);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem 0;
+        }
+
+        .admin-content {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+
+        .admin-header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .admin-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            pointer-events: none;
+        }
+
+        .stats-card i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .filters-section {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .requests-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .table th {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        .table td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table tbody tr:hover {
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-processing {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .payment-type-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+
+        .payment-regular {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .payment-crypto {
+            background: #fff8e1;
+            color: #f57c00;
+        }
+
+        .ai-provider-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: white;
+        }
+
+        .provider-claude {
+            background: #ff6b35;
+        }
+
+        .provider-gpt {
+            background: #10a37f;
+        }
+
+        .provider-gemini {
+            background: #4285f4;
+        }
+
+        .provider-grok {
+            background: #1da1f2;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-sm {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+
+        .loading-spinner {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .floating-theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .admin-content {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            
+            .stats-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .table-responsive {
+                font-size: 0.9rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-graduation-cap text-primary me-2"></i>
+                FacultyFinder Admin
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">
+                            <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/admin/ai-requests">
+                            <i class="fas fa-robot me-1"></i>AI Requests
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-arrow-left me-1"></i>Back to Site
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin fa-2x text-primary"></i>
+            <p class="mt-2">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-container">
+        <div class="container">
+            <div class="admin-content">
+                <!-- Header -->
+                <div class="admin-header">
+                    <h1 class="admin-title">
+                        <i class="fas fa-robot me-2"></i>
+                        AI Assistant Requests Management
+                    </h1>
+                    <p class="text-muted">Monitor and manage all AI assistant analysis requests and payments</p>
+                </div>
+
+                <!-- Statistics Cards -->
+                <div class="stats-cards" id="statsCards">
+                    <div class="stats-card">
+                        <i class="fas fa-robot"></i>
+                        <div class="stats-number" id="totalSessions">0</div>
+                        <div class="stats-label">Total Sessions</div>
+                    </div>
+                    <div class="stats-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <div class="stats-number" id="totalRevenue">$0</div>
+                        <div class="stats-label">Total Revenue (CAD)</div>
+                    </div>
+                    <div class="stats-card">
+                        <i class="fas fa-clock"></i>
+                        <div class="stats-number" id="recentSessions">0</div>
+                        <div class="stats-label">Recent Sessions (30d)</div>
+                    </div>
+                    <div class="stats-card">
+                        <i class="fas fa-percentage"></i>
+                        <div class="stats-number" id="completionRate">0%</div>
+                        <div class="stats-label">Completion Rate</div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters-section">
+                    <h5 class="mb-3">
+                        <i class="fas fa-filter me-2"></i>Filters
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="statusFilter" class="form-label">Status</label>
+                            <select class="form-select" id="statusFilter" onchange="applyFilters()">
+                                <option value="">All Statuses</option>
+                                <option value="pending">Pending</option>
+                                <option value="completed">Completed</option>
+                                <option value="failed">Failed</option>
+                                <option value="processing">Processing</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="serviceTypeFilter" class="form-label">Service Type</label>
+                            <select class="form-select" id="serviceTypeFilter" onchange="applyFilters()">
+                                <option value="">All Services</option>
+                                <option value="ai_analysis">AI Analysis</option>
+                                <option value="manual_review">Manual Review</option>
+                                <option value="subscription">Subscription</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="providerFilter" class="form-label">AI Provider</label>
+                            <select class="form-select" id="providerFilter" onchange="applyFilters()">
+                                <option value="">All Providers</option>
+                                <option value="claude">Claude</option>
+                                <option value="gpt">ChatGPT</option>
+                                <option value="gemini">Gemini</option>
+                                <option value="grok">Grok</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="refreshBtn" class="form-label">&nbsp;</label>
+                            <button class="btn btn-primary w-100" onclick="loadRequests()">
+                                <i class="fas fa-sync-alt me-1"></i>Refresh
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Requests Table -->
+                <div class="requests-table">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Session ID</th>
+                                    <th>User</th>
+                                    <th>AI Provider</th>
+                                    <th>Service Type</th>
+                                    <th>Payment</th>
+                                    <th>Status</th>
+                                    <th>Created At</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="requestsTableBody">
+                                <!-- Table content will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container" id="paginationContainer">
+                    <!-- Pagination will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="floating-theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Global variables
+        let currentPage = 0;
+        let currentLimit = 50;
+        let currentFilters = {};
+        let allRequests = [];
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStats();
+            loadRequests();
+        });
+
+        // Load statistics
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/v1/admin/ai-requests/stats');
+                const stats = await response.json();
+                
+                // Update stats cards
+                document.getElementById('totalSessions').textContent = stats.total_sessions || 0;
+                document.getElementById('totalRevenue').textContent = `$${stats.revenue?.total_cad || 0}`;
+                document.getElementById('recentSessions').textContent = stats.recent_activity?.sessions_last_30_days || 0;
+                
+                // Calculate completion rate
+                const total = stats.total_sessions || 0;
+                const completed = stats.by_status?.completed || 0;
+                const completionRate = total > 0 ? Math.round((completed / total) * 100) : 0;
+                document.getElementById('completionRate').textContent = `${completionRate}%`;
+                
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                showNotification('Failed to load statistics', 'error');
+            }
+        }
+
+        // Load AI requests
+        async function loadRequests() {
+            showLoading(true);
+            
+            try {
+                const params = new URLSearchParams({
+                    limit: currentLimit,
+                    offset: currentPage * currentLimit,
+                    ...currentFilters
+                });
+                
+                const response = await fetch(`/api/v1/admin/ai-requests?${params}`);
+                const data = await response.json();
+                
+                allRequests = data.requests;
+                displayRequests(data.requests);
+                displayPagination(data.pagination);
+                
+            } catch (error) {
+                console.error('Error loading requests:', error);
+                showNotification('Failed to load AI requests', 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        // Display requests in table
+        function displayRequests(requests) {
+            const tableBody = document.getElementById('requestsTableBody');
+            
+            if (requests.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="8" class="text-center text-muted py-4">
+                            <i class="fas fa-robot fa-2x mb-2"></i>
+                            <div>No AI requests found</div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            tableBody.innerHTML = requests.map(req => `
+                <tr>
+                    <td>
+                        <code class="text-primary">${req.session_id || 'N/A'}</code>
+                    </td>
+                    <td>
+                        <div class="fw-bold">${req.user.name}</div>
+                        <small class="text-muted">${req.user.email || req.user_ip || 'Anonymous'}</small>
+                    </td>
+                    <td>
+                        <span class="ai-provider-badge provider-${req.ai_provider || 'unknown'}">
+                            ${(req.ai_provider || 'Unknown').toUpperCase()}
+                        </span>
+                    </td>
+                    <td>
+                        ${req.payment.service_type ? `
+                            <span class="badge bg-info">${req.payment.service_type.replace('_', ' ').toUpperCase()}</span>
+                        ` : '<span class="text-muted">Not specified</span>'}
+                    </td>
+                    <td>
+                        ${formatPaymentInfo(req.payment)}
+                    </td>
+                    <td>
+                        ${formatStatus(req.payment.status || req.ai_payment_status || 'unknown')}
+                    </td>
+                    <td>
+                        <span title="${new Date(req.created_at).toLocaleString()}">
+                            ${formatRelativeTime(req.created_at)}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-sm btn-outline-primary" onclick="viewDetails('${req.id}')" title="View Details">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-success" onclick="updateStatus('${req.id}', 'completed')" title="Mark Completed">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="updateStatus('${req.id}', 'failed')" title="Mark Failed">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Format payment information
+        function formatPaymentInfo(payment) {
+            if (!payment.type) {
+                return '<span class="text-muted">No payment info</span>';
+            }
+            
+            const typeClass = payment.type === 'crypto' ? 'payment-crypto' : 'payment-regular';
+            const typeIcon = payment.type === 'crypto' ? 'bitcoin' : 'credit-card';
+            
+            let amount = '';
+            if (payment.type === 'crypto') {
+                amount = `${payment.amount || '0'} ${payment.currency || ''} (${payment.fiat_amount ? (payment.fiat_amount / 100).toFixed(2) : '0'} CAD)`;
+            } else {
+                amount = `${payment.amount ? (payment.amount / 100).toFixed(2) : '0'} ${payment.currency || 'CAD'}`;
+            }
+            
+            return `
+                <div>
+                    <span class="payment-type-badge ${typeClass}">
+                        <i class="fas fa-${typeIcon} me-1"></i>${payment.type.toUpperCase()}
+                    </span>
+                </div>
+                <small class="text-muted">${amount}</small>
+            `;
+        }
+
+        // Format status badge
+        function formatStatus(status) {
+            const statusClass = {
+                'pending': 'status-pending',
+                'completed': 'status-completed',
+                'failed': 'status-failed',
+                'processing': 'status-processing',
+                'confirming': 'status-processing'
+            }[status] || 'status-pending';
+            
+            return `<span class="status-badge ${statusClass}">${status}</span>`;
+        }
+
+        // Format relative time
+        function formatRelativeTime(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffMins = Math.floor(diffMs / 60000);
+            const diffHours = Math.floor(diffMins / 60);
+            const diffDays = Math.floor(diffHours / 24);
+            
+            if (diffMins < 1) return 'Just now';
+            if (diffMins < 60) return `${diffMins}m ago`;
+            if (diffHours < 24) return `${diffHours}h ago`;
+            if (diffDays < 7) return `${diffDays}d ago`;
+            
+            return date.toLocaleDateString();
+        }
+
+        // Apply filters
+        function applyFilters() {
+            const statusFilter = document.getElementById('statusFilter').value;
+            const serviceTypeFilter = document.getElementById('serviceTypeFilter').value;
+            const providerFilter = document.getElementById('providerFilter').value;
+            
+            currentFilters = {};
+            if (statusFilter) currentFilters.status = statusFilter;
+            if (serviceTypeFilter) currentFilters.service_type = serviceTypeFilter;
+            if (providerFilter) currentFilters.provider = providerFilter;
+            
+            currentPage = 0; // Reset to first page
+            loadRequests();
+        }
+
+        // Update request status
+        async function updateStatus(requestId, newStatus) {
+            if (!confirm(`Are you sure you want to update this request status to "${newStatus}"?`)) {
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/v1/admin/ai-requests/${requestId}/update-status`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ status: newStatus })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification(`Status updated to ${newStatus}`, 'success');
+                    loadRequests(); // Reload the table
+                    loadStats(); // Reload stats
+                } else {
+                    showNotification('Failed to update status', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error updating status:', error);
+                showNotification('Failed to update status', 'error');
+            }
+        }
+
+        // View request details (placeholder)
+        function viewDetails(requestId) {
+            const request = allRequests.find(r => r.id == requestId);
+            if (!request) {
+                showNotification('Request not found', 'error');
+                return;
+            }
+            
+            // Create a detailed view modal or redirect
+            alert(`Request Details:\n\nSession ID: ${request.session_id}\nUser: ${request.user.name}\nAI Provider: ${request.ai_provider}\nStatus: ${request.ai_payment_status}\nCreated: ${new Date(request.created_at).toLocaleString()}`);
+        }
+
+        // Display pagination
+        function displayPagination(pagination) {
+            const container = document.getElementById('paginationContainer');
+            
+            if (pagination.total <= pagination.limit) {
+                container.innerHTML = '';
+                return;
+            }
+            
+            const totalPages = Math.ceil(pagination.total / pagination.limit);
+            const currentPageNum = Math.floor(pagination.offset / pagination.limit);
+            
+            let paginationHTML = '<nav aria-label="Requests pagination"><ul class="pagination">';
+            
+            // Previous button
+            if (currentPageNum > 0) {
+                paginationHTML += `<li class="page-item"><button class="page-link" onclick="changePage(${currentPageNum - 1})">Previous</button></li>`;
+            }
+            
+            // Page numbers
+            const startPage = Math.max(0, currentPageNum - 2);
+            const endPage = Math.min(totalPages - 1, currentPageNum + 2);
+            
+            for (let i = startPage; i <= endPage; i++) {
+                const isActive = i === currentPageNum ? 'active' : '';
+                paginationHTML += `<li class="page-item ${isActive}"><button class="page-link" onclick="changePage(${i})">${i + 1}</button></li>`;
+            }
+            
+            // Next button
+            if (currentPageNum < totalPages - 1) {
+                paginationHTML += `<li class="page-item"><button class="page-link" onclick="changePage(${currentPageNum + 1})">Next</button></li>`;
+            }
+            
+            paginationHTML += '</ul></nav>';
+            
+            container.innerHTML = paginationHTML;
+        }
+
+        // Change page
+        function changePage(page) {
+            currentPage = page;
+            loadRequests();
+        }
+
+        // Show loading overlay
+        function showLoading(show) {
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.style.display = show ? 'flex' : 'none';
+        }
+
+        // Show notification
+        function showNotification(message, type = 'info') {
+            // Simple alert for now - could be enhanced with a proper notification system
+            const alertType = type === 'success' ? 'Success' : type === 'error' ? 'Error' : 'Info';
+            alert(`${alertType}: ${message}`);
+        }
+
+        // Theme toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            const icon = document.querySelector('.floating-theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    </script>
+</body>
+</html> 

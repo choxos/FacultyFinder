@@ -873,6 +873,251 @@ async def internal_error_handler(request: Request, exc: Exception):
         content={"detail": "Internal server error", "status_code": 500}
     )
 
+# Admin routes
+@app.get("/admin", response_class=HTMLResponse)
+async def admin_dashboard():
+    """Admin dashboard"""
+    return FileResponse("webapp/templates/admin/dashboard.html")
+
+@app.get("/admin/ai-requests", response_class=HTMLResponse)
+async def admin_ai_requests():
+    """Admin AI requests management page"""
+    return FileResponse("webapp/templates/admin/ai_requests.html")
+
+@app.get("/api/v1/admin/ai-requests")
+async def admin_get_ai_requests(
+    status: Optional[str] = None,
+    service_type: Optional[str] = None,
+    provider: Optional[str] = None,
+    limit: int = 50,
+    offset: int = 0
+):
+    """Get AI requests for admin management"""
+    try:
+        async with get_db_connection() as conn:
+            # Base query combining ai_sessions, user_payments, and crypto_payments
+            where_conditions = []
+            params = []
+            param_count = 0
+            
+            base_query = """
+            SELECT DISTINCT
+                ai.id as ai_session_id,
+                ai.session_id,
+                ai.user_ip,
+                ai.ai_provider,
+                ai.payment_status as ai_payment_status,
+                ai.created_at as session_created_at,
+                ai.updated_at as session_updated_at,
+                
+                -- Regular payments
+                up.id as payment_id,
+                up.amount as payment_amount,
+                up.currency as payment_currency,
+                up.service_type as payment_service_type,
+                up.service_details as payment_service_details,
+                up.status as payment_status,
+                up.completed_at as payment_completed_at,
+                up.payment_method as payment_method,
+                
+                -- Crypto payments
+                cp.id as crypto_payment_id,
+                cp.amount_requested as crypto_amount,
+                cp.fiat_amount as crypto_fiat_amount,
+                cp.status as crypto_status,
+                cp.service_type as crypto_service_type,
+                cp.completed_at as crypto_completed_at,
+                cc.symbol as crypto_currency,
+                cpp.display_name as crypto_provider,
+                
+                -- User info (if available)
+                u.email as user_email,
+                u.first_name,
+                u.last_name
+                
+            FROM ai_sessions ai
+            LEFT JOIN user_payments up ON ai.payment_session_id = up.payment_intent_id
+            LEFT JOIN crypto_payments cp ON ai.payment_session_id = cp.payment_id
+            LEFT JOIN crypto_currencies cc ON cp.currency_id = cc.id
+            LEFT JOIN crypto_payment_providers cpp ON cp.provider_id = cpp.id
+            LEFT JOIN users u ON (up.user_id = u.id OR cp.user_id = u.id)
+            """
+            
+            # Add filters
+            if status:
+                where_conditions.append(f"(ai.payment_status = ${len(params)+1} OR up.status = ${len(params)+1} OR cp.status = ${len(params)+1})")
+                params.append(status)
+            
+            if service_type:
+                where_conditions.append(f"(up.service_type = ${len(params)+1} OR cp.service_type = ${len(params)+1})")
+                params.append(service_type)
+            
+            if provider:
+                where_conditions.append(f"(ai.ai_provider = ${len(params)+1} OR cpp.name = ${len(params)+1})")
+                params.append(provider)
+                
+            if where_conditions:
+                base_query += " WHERE " + " AND ".join(where_conditions)
+            
+            base_query += f" ORDER BY ai.created_at DESC LIMIT ${len(params)+1} OFFSET ${len(params)+2}"
+            params.extend([limit, offset])
+            
+            requests = await conn.fetch(base_query, *params)
+            
+            # Count total for pagination
+            count_query = """
+            SELECT COUNT(DISTINCT ai.id)
+            FROM ai_sessions ai
+            LEFT JOIN user_payments up ON ai.payment_session_id = up.payment_intent_id
+            LEFT JOIN crypto_payments cp ON ai.payment_session_id = cp.payment_id
+            LEFT JOIN crypto_currencies cc ON cp.currency_id = cc.id
+            LEFT JOIN crypto_payment_providers cpp ON cp.provider_id = cpp.id
+            LEFT JOIN users u ON (up.user_id = u.id OR cp.user_id = u.id)
+            """
+            
+            if where_conditions:
+                count_query += " WHERE " + " AND ".join(where_conditions)
+            
+            total_count = await conn.fetchval(count_query, *params[:-2])  # Exclude limit and offset
+            
+            # Format results
+            results = []
+            for req in requests:
+                # Determine primary payment info
+                payment_info = {}
+                if req['payment_id']:
+                    payment_info = {
+                        'type': 'regular',
+                        'amount': req['payment_amount'],
+                        'currency': req['payment_currency'],
+                        'status': req['payment_status'],
+                        'method': req['payment_method'],
+                        'service_type': req['payment_service_type'],
+                        'completed_at': req['payment_completed_at'].isoformat() if req['payment_completed_at'] else None
+                    }
+                elif req['crypto_payment_id']:
+                    payment_info = {
+                        'type': 'crypto',
+                        'amount': float(req['crypto_amount']) if req['crypto_amount'] else None,
+                        'fiat_amount': req['crypto_fiat_amount'],
+                        'currency': req['crypto_currency'],
+                        'status': req['crypto_status'],
+                        'provider': req['crypto_provider'],
+                        'service_type': req['crypto_service_type'],
+                        'completed_at': req['crypto_completed_at'].isoformat() if req['crypto_completed_at'] else None
+                    }
+                
+                user_info = {
+                    'email': req['user_email'],
+                    'name': f"{req['first_name'] or ''} {req['last_name'] or ''}".strip() or 'Anonymous'
+                }
+                
+                results.append({
+                    'id': req['ai_session_id'],
+                    'session_id': req['session_id'],
+                    'user_ip': req['user_ip'],
+                    'ai_provider': req['ai_provider'],
+                    'ai_payment_status': req['ai_payment_status'],
+                    'created_at': req['session_created_at'].isoformat(),
+                    'updated_at': req['session_updated_at'].isoformat() if req['session_updated_at'] else None,
+                    'user': user_info,
+                    'payment': payment_info
+                })
+            
+            return {
+                "requests": results,
+                "pagination": {
+                    "total": total_count,
+                    "limit": limit,
+                    "offset": offset,
+                    "has_more": offset + limit < total_count
+                }
+            }
+            
+    except Exception as e:
+        logger.error(f"Error fetching AI requests: {e}")
+        raise HTTPException(status_code=500, detail="Failed to fetch AI requests")
+
+@app.post("/api/v1/admin/ai-requests/{request_id}/update-status")
+async def admin_update_request_status(request_id: int, status: str):
+    """Update AI request status"""
+    try:
+        async with get_db_connection() as conn:
+            # Update ai_sessions status
+            await conn.execute(
+                "UPDATE ai_sessions SET payment_status = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2",
+                status, request_id
+            )
+            
+            return {"success": True, "message": f"Request {request_id} status updated to {status}"}
+            
+    except Exception as e:
+        logger.error(f"Error updating request status: {e}")
+        raise HTTPException(status_code=500, detail="Failed to update request status")
+
+@app.get("/api/v1/admin/ai-requests/stats")
+async def admin_ai_requests_stats():
+    """Get AI requests statistics for admin dashboard"""
+    try:
+        async with get_db_connection() as conn:
+            # Get overall stats
+            stats = {}
+            
+            # Total AI sessions
+            stats['total_sessions'] = await conn.fetchval("SELECT COUNT(*) FROM ai_sessions")
+            
+            # Sessions by status
+            session_statuses = await conn.fetch("""
+                SELECT payment_status, COUNT(*) as count 
+                FROM ai_sessions 
+                WHERE payment_status IS NOT NULL 
+                GROUP BY payment_status
+            """)
+            stats['by_status'] = {row['payment_status']: row['count'] for row in session_statuses}
+            
+            # Sessions by AI provider
+            ai_providers = await conn.fetch("""
+                SELECT ai_provider, COUNT(*) as count 
+                FROM ai_sessions 
+                WHERE ai_provider IS NOT NULL 
+                GROUP BY ai_provider
+            """)
+            stats['by_ai_provider'] = {row['ai_provider']: row['count'] for row in ai_providers}
+            
+            # Revenue stats (combining regular and crypto payments)
+            regular_revenue = await conn.fetchval("""
+                SELECT COALESCE(SUM(amount), 0) FROM user_payments 
+                WHERE status = 'completed' AND service_type IN ('ai_analysis', 'manual_review')
+            """) or 0
+            
+            crypto_revenue = await conn.fetchval("""
+                SELECT COALESCE(SUM(fiat_amount), 0) FROM crypto_payments 
+                WHERE status = 'completed' AND service_type IN ('ai_analysis', 'manual_review')
+            """) or 0
+            
+            stats['revenue'] = {
+                'total_cents': regular_revenue + crypto_revenue,
+                'total_cad': round((regular_revenue + crypto_revenue) / 100, 2),
+                'regular_cad': round(regular_revenue / 100, 2),
+                'crypto_cad': round(crypto_revenue / 100, 2)
+            }
+            
+            # Recent activity (last 30 days)
+            recent_sessions = await conn.fetchval("""
+                SELECT COUNT(*) FROM ai_sessions 
+                WHERE created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days'
+            """) or 0
+            
+            stats['recent_activity'] = {
+                'sessions_last_30_days': recent_sessions
+            }
+            
+            return stats
+            
+    except Exception as e:
+        logger.error(f"Error fetching AI requests stats: {e}")
+        raise HTTPException(status_code=500, detail="Failed to fetch AI requests stats")
+
 # Favicon route to prevent 404 errors
 @app.get("/favicon.ico")
 async def get_favicon():
