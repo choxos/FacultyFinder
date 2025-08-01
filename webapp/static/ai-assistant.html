@@ -298,6 +298,33 @@
             margin: 0 auto 1.5rem;
         }
 
+        /* Ensure horizontal layout for pricing options */
+        #pricing-options .row {
+            display: flex !important;
+            flex-wrap: wrap !important;
+        }
+
+        #pricing-options .col-lg-3,
+        #pricing-options .col-lg-4 {
+            flex: 0 0 auto !important;
+            width: auto !important;
+        }
+
+        /* Specific column widths for different layouts */
+        #pricing-options .ai-feature-card {
+            width: 100%;
+            max-width: none;
+        }
+
+        @media (min-width: 992px) {
+            #pricing-options .col-lg-3 {
+                width: 25% !important;
+            }
+            #pricing-options .col-lg-4 {
+                width: 33.33333% !important;
+            }
+        }
+
         .ai-feature-card.compact {
             padding: 1.5rem;
             min-height: 180px;
@@ -1264,13 +1291,13 @@
                     <div class="card-body">
                         <!-- AI Analysis Options -->
                         <h6 class="text-primary mb-3"><i class="fas fa-robot me-2"></i>AI Analysis Options</h6>
-                        <div class="row g-4 mb-4">
+                        <div class="row g-4 mb-4" style="display: flex !important; flex-wrap: wrap !important;">
                             <!-- Single Analysis -->
-                            <div class="col-lg-3 col-md-6">
-                                <div class="ai-feature-card h-100" onclick="selectAnalysisOption('single')">
+                            <div class="col-lg-3 col-md-6" style="flex: 0 0 25%; max-width: 25%;">
+                                <div class="ai-feature-card h-100" onclick="selectAnalysisOption('single')" id="single-analysis-card">
                                     <div class="text-center">
-                                        <div class="feature-icon">
-                                            <i class="fas fa-file-search"></i>
+                                        <div class="feature-icon" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;">
+                                            <i class="fas fa-file-search" style="color: white !important; font-size: 2rem !important;"></i>
                                         </div>
                                         <h5>Single Analysis</h5>
                                         <div class="display-6 fw-bold text-primary mb-2">$7</div>
@@ -1286,7 +1313,7 @@
                             </div>
 
                             <!-- 3-Pack Bundle -->
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-3 col-md-6" style="flex: 0 0 25%; max-width: 25%;">
                                 <div class="ai-feature-card h-100" onclick="selectAnalysisOption('triple_pack')">
                                     <div class="text-center">
                                         <div class="feature-icon">
@@ -1309,7 +1336,7 @@
                             </div>
 
                             <!-- 5-Pack Bundle -->
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-3 col-md-6" style="flex: 0 0 25%; max-width: 25%;">
                                 <div class="ai-feature-card h-100" onclick="selectAnalysisOption('five_pack')">
                                     <div class="text-center">
                                         <div class="feature-icon">
@@ -1332,7 +1359,7 @@
                             </div>
 
                             <!-- Monthly Unlimited -->
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-3 col-md-6" style="flex: 0 0 25%; max-width: 25%;">
                                 <div class="ai-feature-card h-100" onclick="selectAnalysisOption('monthly_unlimited')">
                                     <div class="text-center">
                                         <div class="feature-icon">
