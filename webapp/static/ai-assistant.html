@@ -1289,9 +1289,10 @@
                         </h5>
                     </div>
                     <div class="card-body">
-                        <!-- AI Analysis Options -->
-                        <h6 class="text-primary mb-3"><i class="fas fa-robot me-2"></i>AI Analysis Options</h6>
-                        <div class="row g-4 mb-4" style="display: flex !important; flex-wrap: wrap !important;">
+                        <!-- AI Analysis Options Section -->
+                        <div id="ai-analysis-section" style="display: none;">
+                            <h6 class="text-primary mb-3"><i class="fas fa-robot me-2"></i>AI Analysis Options</h6>
+                            <div class="row g-4 mb-4" style="display: flex !important; flex-wrap: wrap !important;">
                             <!-- Single Analysis -->
                             <div class="col-lg-3 col-md-6" style="flex: 0 0 25%; max-width: 25%;">
                                 <div class="ai-feature-card h-100" onclick="selectAnalysisOption('single')" id="single-analysis-card">
@@ -1381,9 +1382,11 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
 
-                        <!-- Expert Review Tiers -->
-                        <h6 class="text-warning mb-3"><i class="fas fa-user-graduate me-2"></i>Expert Manual Review</h6>
+                        <!-- Expert Manual Review Section -->
+                        <div id="expert-review-section" style="display: none;">
+                            <h6 class="text-warning mb-3"><i class="fas fa-user-graduate me-2"></i>Expert Manual Review</h6>
                         <div class="row g-4 mb-4">
                             <!-- Basic Expert Review -->
                             <div class="col-lg-4">
@@ -1477,6 +1480,7 @@
                                     <div class="badge bg-danger fs-6">50% OFF</div>
                                 </div>
                             </div>
+                        </div>
                         </div>
 
                         <!-- Money-back Guarantee -->
@@ -1822,19 +1826,17 @@
                 document.getElementById('ai-model-selection').style.display = 'block';
                 document.getElementById('api-key-section').style.display = 'none';
                 document.getElementById('pricing-options').style.display = 'none';
+                // Hide both pricing sections
+                document.getElementById('ai-analysis-section').style.display = 'none';
+                document.getElementById('expert-review-section').style.display = 'none';
             } else if (plan === 'paid') {
                 // Hide AI selection, show pricing for paid plan
                 document.getElementById('ai-model-selection').style.display = 'none';
                 document.getElementById('api-key-section').style.display = 'none';
                 document.getElementById('pricing-options').style.display = 'block';
                 // Show only AI analysis options, hide expert review
-                const aiAnalysisSection = document.querySelector('#pricing-options .card-body h6');
-                if (aiAnalysisSection) {
-                    const nextElement = aiAnalysisSection.nextElementSibling;
-                    if (nextElement) {
-                        nextElement.style.display = 'block';
-                    }
-                }
+                document.getElementById('ai-analysis-section').style.display = 'block';
+                document.getElementById('expert-review-section').style.display = 'none';
                 // Auto-set AI to 'all' for paid plans
                 selectedAI = 'all_models';
                 document.getElementById('selectedAI').value = 'all_models';
@@ -1844,13 +1846,8 @@
                 document.getElementById('api-key-section').style.display = 'none';
                 document.getElementById('pricing-options').style.display = 'block';
                 // Hide AI analysis options, show only expert review
-                const aiAnalysisSection = document.querySelector('#pricing-options .card-body h6');
-                if (aiAnalysisSection) {
-                    const nextElement = aiAnalysisSection.nextElementSibling;
-                    if (nextElement) {
-                        nextElement.style.display = 'none';
-                    }
-                }
+                document.getElementById('ai-analysis-section').style.display = 'none';
+                document.getElementById('expert-review-section').style.display = 'block';
                 // Auto-set to expert review
                 selectedAI = 'expert_review';
                 document.getElementById('selectedAI').value = 'expert_review';
