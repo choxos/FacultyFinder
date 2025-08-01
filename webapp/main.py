@@ -123,6 +123,22 @@ app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET", "yo
 static_dir = "webapp/static" if os.path.exists("webapp/static") else "static"
 app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
+# PWA Routes
+@app.get("/manifest.json")
+async def get_manifest():
+    """Serve PWA manifest"""
+    return FileResponse(os.path.join(static_dir, "manifest.json"), media_type="application/json")
+
+@app.get("/sw.js")
+async def get_service_worker():
+    """Serve service worker"""
+    return FileResponse(os.path.join(static_dir, "sw.js"), media_type="application/javascript")
+
+@app.get("/browserconfig.xml")
+async def get_browserconfig():
+    """Serve browserconfig for Windows"""
+    return FileResponse(os.path.join(static_dir, "browserconfig.xml"), media_type="application/xml")
+
 # Initialize templates
 templates = Jinja2Templates(directory="webapp/templates")
 

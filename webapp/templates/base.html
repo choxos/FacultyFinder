@@ -330,9 +330,136 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JS -->
-            <script src="/static/js/facultyfinder.js"></script>
-    
-    {% block extra_js %}{% endblock %}
+            <!-- Custom JS -->
+        <script src="/static/js/facultyfinder.js"></script>
+        
+        <!-- PWA Service Worker Registration -->
+        <script>
+            // Register Service Worker for PWA functionality
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/static/sw.js')
+                        .then(function(registration) {
+                            console.log('ServiceWorker registration successful:', registration.scope);
+                            
+                            // Check for updates
+                            registration.addEventListener('updatefound', function() {
+                                const newWorker = registration.installing;
+                                newWorker.addEventListener('statechange', function() {
+                                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                        // New content is available, show update prompt
+                                        if (confirm('New version available! Refresh to update?')) {
+                                            window.location.reload();
+                                        }
+                                    }
+                                });
+                            });
+                        })
+                        .catch(function(error) {
+                            console.log('ServiceWorker registration failed:', error);
+                        });
+                });
+            }
+            
+            // PWA Install Prompt
+            let deferredPrompt;
+            let installButton = null;
+            
+            window.addEventListener('beforeinstallprompt', function(e) {
+                console.log('PWA install prompt available');
+                e.preventDefault();
+                deferredPrompt = e;
+                
+                // Show custom install button if it exists
+                if (installButton) {
+                    installButton.style.display = 'block';
+                }
+                
+                // Or show a subtle notification
+                showPWAInstallNotification();
+            });
+            
+            // Handle PWA installation
+            function installPWA() {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then(function(choiceResult) {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('User accepted PWA install');
+                        } else {
+                            console.log('User dismissed PWA install');
+                        }
+                        deferredPrompt = null;
+                    });
+                }
+            }
+            
+            // Show install notification
+            function showPWAInstallNotification() {
+                // Only show if not already installed
+                if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) {
+                    return; // Already installed
+                }
+                
+                // Create install notification
+                const notification = document.createElement('div');
+                notification.innerHTML = `
+                    <div class="alert alert-info alert-dismissible fade show position-fixed" 
+                         style="top: 20px; right: 20px; z-index: 9999; max-width: 300px;">
+                        <strong><i class="fas fa-mobile-alt me-2"></i>Install App</strong><br>
+                        Add FacultyFinder to your home screen for quick access!
+                        <button class="btn btn-sm btn-primary mt-2 me-2" onclick="installPWA()">
+                            <i class="fas fa-download me-1"></i>Install
+                        </button>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification.firstElementChild);
+                
+                // Auto-hide after 10 seconds
+                setTimeout(() => {
+                    const alert = document.querySelector('.alert');
+                    if (alert) {
+                        alert.remove();
+                    }
+                }, 10000);
+            }
+            
+            // Detect if app is installed
+            window.addEventListener('appinstalled', function(e) {
+                console.log('PWA was installed successfully');
+                // Hide install button if it exists
+                if (installButton) {
+                    installButton.style.display = 'none';
+                }
+            });
+            
+            // Handle iOS Safari "Add to Home Screen"
+            function isIOSSafari() {
+                return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            }
+            
+            if (isIOSSafari() && !window.navigator.standalone) {
+                // Show iOS-specific install instruction
+                setTimeout(function() {
+                    if (!localStorage.getItem('ios-install-dismissed')) {
+                        const iosNotification = document.createElement('div');
+                        iosNotification.innerHTML = `
+                            <div class="alert alert-info alert-dismissible fade show position-fixed" 
+                                 style="bottom: 20px; left: 20px; right: 20px; z-index: 9999;">
+                                <strong><i class="fas fa-mobile-alt me-2"></i>Install on iOS</strong><br>
+                                Tap <i class="fas fa-share"></i> in Safari, then "Add to Home Screen"
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" 
+                                        onclick="localStorage.setItem('ios-install-dismissed', 'true')"></button>
+                            </div>
+                        `;
+                        document.body.appendChild(iosNotification.firstElementChild);
+                    }
+                }, 3000);
+            }
+        </script>
+      
+      {% block extra_js %}{% endblock %}
 </body>
 </html> 
