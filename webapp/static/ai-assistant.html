@@ -1301,13 +1301,15 @@
                         <div class="row g-3 mb-3">
                             <!-- Credit Card Payment -->
                             <div class="col-md-6">
-                                <div class="card payment-method-card h-100" onclick="selectPaymentMethod('credit_card')">
-                                    <div class="card-body text-center">
-                                        <i class="fas fa-credit-card fa-2x text-primary mb-3"></i>
-                                        <h6>Credit/Debit Card</h6>
-                                        <p class="text-muted small mb-3">Secure payment via Stripe</p>
-                                        <div class="payment-features">
-                                            <ul class="list-unstyled small text-start">
+                                <div class="ai-feature-card payment-method-card" onclick="selectPaymentMethod('credit_card')">
+                                    <div class="text-center">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <h5>Credit/Debit Card</h5>
+                                        <p class="text-muted mb-3">Secure payment via Stripe</p>
+                                        <div class="payment-features text-start">
+                                            <ul class="list-unstyled small">
                                                 <li><i class="fas fa-check text-success me-1"></i> Instant processing</li>
                                                 <li><i class="fas fa-check text-success me-1"></i> SSL secured</li>
                                                 <li><i class="fas fa-check text-success me-1"></i> All major cards accepted</li>
@@ -1320,13 +1322,15 @@
 
                             <!-- Cryptocurrency Payment -->
                             <div class="col-md-6">
-                                <div class="card payment-method-card h-100" onclick="selectPaymentMethod('cryptocurrency')">
-                                    <div class="card-body text-center">
-                                        <i class="fab fa-bitcoin fa-2x text-warning mb-3"></i>
-                                        <h6>Cryptocurrency</h6>
-                                        <p class="text-muted small mb-3">Pay with Bitcoin, Ethereum, and more</p>
-                                        <div class="payment-features">
-                                            <ul class="list-unstyled small text-start">
+                                <div class="ai-feature-card payment-method-card" onclick="selectPaymentMethod('cryptocurrency')">
+                                    <div class="text-center">
+                                        <div class="feature-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
+                                            <i class="fab fa-bitcoin"></i>
+                                        </div>
+                                        <h5>Cryptocurrency</h5>
+                                        <p class="text-muted mb-3">Pay with Bitcoin, Ethereum, and more</p>
+                                        <div class="payment-features text-start">
+                                            <ul class="list-unstyled small">
                                                 <li><i class="fas fa-check text-success me-1"></i> Lower transaction fees</li>
                                                 <li><i class="fas fa-check text-success me-1"></i> Anonymous payments</li>
                                                 <li><i class="fas fa-check text-success me-1"></i> 50+ cryptocurrencies</li>
@@ -1338,22 +1342,11 @@
                             </div>
                         </div>
 
-                        <!-- Payment Options for Credit Card -->
+                        <!-- Stripe Payment Info -->
                         <div id="creditCardOptions" class="mb-3" style="display: none;">
-                            <h6 class="text-primary">Credit Card Details</h6>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label class="form-label small">Card Number</label>
-                                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="form-label small">Expiry</label>
-                                    <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
-                                </div>
-                                <div class="col-md-3">
-                                    <label class="form-label small">CVV</label>
-                                    <input type="text" class="form-control" placeholder="123" maxlength="4">
-                                </div>
+                            <div class="alert alert-info">
+                                <i class="fas fa-shield-alt me-2"></i>
+                                <strong>Secure Payment:</strong> You will be redirected to Stripe's secure payment page to complete your transaction. No card details are stored on our servers.
                             </div>
                         </div>
 
@@ -1389,11 +1382,11 @@
         <!-- Analysis Button -->
         <div class="row mb-4">
             <div class="col-12 text-center">
-                <button type="button" id="startAnalysisBtn" class="start-analysis-btn" onclick="startAnalysis()" disabled>
-                    <span class="spinner">
+                <button type="button" id="startAnalysisBtn" class="btn btn-lg btn-primary" onclick="startAnalysis()" disabled>
+                    <span class="spinner me-2" style="display: none;">
                         <i class="fas fa-spinner fa-spin"></i>
                     </span>
-                    <i class="fas fa-magic me-2"></i>
+                    <i class="fas fa-brain me-2"></i>
                     <span class="btn-text">Start Faculty Matching Analysis</span>
                 </button>
                 <p class="text-muted mt-2 small">
@@ -1664,13 +1657,24 @@
         // Start analysis
         function startAnalysis() {
             const startBtn = document.getElementById('startAnalysisBtn');
-            startBtn.classList.add('loading');
+            const spinner = startBtn.querySelector('.spinner');
+            const btnText = startBtn.querySelector('.btn-text');
+            const btnIcon = startBtn.querySelector('i.fas.fa-brain');
+            
+            // Show loading state
+            spinner.style.display = 'inline-block';
+            btnIcon.style.display = 'none';
+            btnText.textContent = 'Analyzing...';
             startBtn.disabled = true;
             
             // Simulate analysis process
             setTimeout(() => {
                 displayMockResults();
-                startBtn.classList.remove('loading');
+                
+                // Reset button state
+                spinner.style.display = 'none';
+                btnIcon.style.display = 'inline';
+                btnText.textContent = 'Start Faculty Matching Analysis';
                 startBtn.disabled = false;
             }, 3000);
         }
