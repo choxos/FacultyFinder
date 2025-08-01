@@ -6,452 +6,854 @@
     <title>Countries - FacultyFinder</title>
     
     <!-- Meta Tags -->
-    <meta name="description" content="Discover academic talent across countries worldwide. Explore faculty networks and university systems globally.">
-    <meta name="keywords" content="countries, global faculty network, universities by country, academic institutions worldwide">
+    <meta name="description" content="Explore academic institutions and faculty members by country. Discover research opportunities and collaborations worldwide.">
+    <meta name="keywords" content="countries, global universities, international research, academic institutions by country">
+    <meta name="author" content="FacultyFinder">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS Theme -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
     <link rel="stylesheet" href="/static/css/facultyfinder.css">
-    <link rel="stylesheet" href="/static/css/filter-fixes.css">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004499;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b35;
+            --text-primary: #2c3e50;
+            --text-secondary: #6c757d;
+            --border-color: #e9ecef;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: #f8f9fa;
+            padding-top: 80px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-primary) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+
+        /* Header Section */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Search Filters */
+        .search-filters {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .search-input {
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        /* Country Cards */
+        .country-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .country-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .country-flag {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .country-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .country-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .country-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-explore {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-explore:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .btn-universities {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-universities:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Map Section */
+        .map-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-placeholder {
+            height: 400px;
+            background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            border: 2px dashed var(--border-color);
+        }
+
+        /* Stats Overview */
+        .stats-overview {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 3rem 0;
+            margin: 3rem 0;
+            border-radius: 15px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .overview-stat {
+            text-align: center;
+        }
+
+        .overview-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--warning-color);
+        }
+
+        .overview-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Loading and Empty States */
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.5;
+        }
+
+        /* Floating Theme Toggle */
+        .floating-theme-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating-theme-toggle:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 102, 204, 0.4);
+            background: var(--primary-dark);
+        }
+
+        /* Dark theme styles */
+        [data-theme="dark"] .floating-theme-toggle {
+            background: #ffc107;
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        [data-theme="dark"] .floating-theme-toggle:hover {
+            background: #e0a800;
+            box-shadow: 0 12px 25px rgba(255, 193, 7, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #bdc3c7;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .page-subtitle {
+                font-size: 1rem;
+            }
+
+            .search-filters, .map-section {
+                padding: 1.5rem;
+            }
+
+            .country-stats {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .country-actions {
+                flex-direction: column;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .overview-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="/">
-                <i class="fas fa-graduation-cap me-2"></i>
-                FacultyFinder
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-graduation-cap me-2"></i>FacultyFinder
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/countries">Countries</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/universities">Universities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/faculties">Faculties</a>
+                        <a class="nav-link" href="/faculties">Faculty</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/ai-assistant">
-                            <i class="fas fa-robot me-1"></i>AI Assistant
-                        </a>
+                        <a class="nav-link active" href="/countries">Countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ai-assistant">AI Assistant</a>
                     </li>
                 </ul>
+                
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="btn btn-outline-primary me-2" href="/login">
-                            <i class="fas fa-sign-in-alt me-1"></i>Sign In
-                        </a>
+                        <a class="btn btn-outline-primary me-2" href="/login">Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="/register">
-                            <i class="fas fa-user-plus me-1"></i>Sign Up
-                        </a>
+                        <a class="btn btn-primary" href="/register">Get Started</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="page-title">Countries</h1>
+                    <p class="page-subtitle">
+                        Explore academic institutions and faculty members by country. Discover research opportunities and collaborations worldwide.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="d-flex justify-content-lg-end justify-content-center gap-3">
+                        <div class="text-center">
+                            <div class="h3 fw-bold text-warning mb-0" id="total-countries">Loading...</div>
+                            <small class="opacity-75">Countries</small>
+                        </div>
+                        <div class="text-center">
+                            <div class="h3 fw-bold text-warning mb-0" id="total-universities">Loading...</div>
+                            <small class="opacity-75">Universities</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-12">
-                <!-- Hero Section -->
-                <div class="hero-section text-center mb-5">
-                    <h1 class="display-4 fw-bold text-primary">Global Faculty Network</h1>
-                    <p class="lead text-muted">Discover academic talent across countries worldwide</p>
+    <div class="container">
+        <!-- Search Filters -->
+        <div class="search-filters">
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-8">
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-end-0">
+                            <i class="fas fa-search text-muted"></i>
+                        </span>
+                        <input type="text" id="search-input" class="form-control search-input border-start-0" 
+                               placeholder="Search countries by name...">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <select id="sort-filter" class="form-select search-input">
+                        <option value="name">Sort by Name</option>
+                        <option value="university_count">Sort by Universities</option>
+                        <option value="faculty_count">Sort by Faculty</option>
+                    </select>
                 </div>
             </div>
         </div>
 
-        <!-- Results Summary -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <div class="results-summary p-3 bg-light rounded">
-                    <h3 class="mb-0" id="results-header">
-                        <i class="fas fa-globe me-2 text-success"></i>
-                        <span id="results-text">Loading countries...</span>
-                    </h3>
-                    <p class="text-muted mb-0" id="results-description" style="display: none;">
-                        Explore faculty networks across different countries
-                    </p>
+        <!-- Global Stats Overview -->
+        <div class="stats-overview">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h3 class="mb-3">Global Academic Network</h3>
+                    <p class="opacity-75">Connecting researchers across continents</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="overview-stat">
+                        <div class="overview-number" id="global-countries">0</div>
+                        <div class="overview-label">Countries</div>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="overview-number" id="global-universities">0</div>
+                        <div class="overview-label">Universities</div>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="overview-number" id="global-faculty">0</div>
+                        <div class="overview-label">Faculty Members</div>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="overview-number" id="global-continents">4</div>
+                        <div class="overview-label">Continents</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Map Section -->
+        <div class="map-section">
+            <h3 class="mb-3">
+                <i class="fas fa-globe me-2 text-primary"></i>
+                Interactive World Map
+            </h3>
+            <div class="map-placeholder">
+                <div class="text-center">
+                    <i class="fas fa-map fa-3x mb-3"></i>
+                    <h4>Interactive Map Coming Soon</h4>
+                    <p>Click on countries below to explore their academic institutions</p>
                 </div>
             </div>
         </div>
 
         <!-- Countries Grid -->
-        <div class="row" id="countries-container">
-            <!-- Loading indicator -->
-            <div class="col-12 text-center p-5" id="loading-indicator">
+        <div id="countries-container">
+            <!-- Loading state -->
+            <div class="text-center py-5" id="loading-state">
                 <div class="loading-spinner"></div>
                 <p class="mt-3 text-muted">Loading countries...</p>
-            </div>
-        </div>
-
-        <!-- Empty State (initially hidden) -->
-        <div class="row" id="empty-state" style="display: none;">
-            <div class="col-12">
-                <div class="empty-state text-center py-5">
-                    <i class="fas fa-globe fa-4x text-muted mb-3"></i>
-                    <h3 class="text-muted">No Countries Found</h3>
-                    <p class="text-muted">No countries with faculty data are available at the moment.</p>
-                    <a href="/universities" class="btn btn-primary">
-                        <i class="fas fa-university me-2"></i>Browse Universities
-                    </a>
-                </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h5>
-                        <i class="fas fa-graduation-cap me-2"></i>
-                        FacultyFinder
-                    </h5>
-                    <p class="mb-3">
-                        Connecting researchers with their ideal academic collaborators worldwide through AI-powered matching and comprehensive faculty profiles.
-                    </p>
-                    <p class="mb-0">
-                        &copy; 2025 FacultyFinder. All rights reserved.
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap me-2"></i>FacultyFinder
+                    </div>
+                    <p class="footer-description">
+                        Connecting researchers, students, and faculty members worldwide. 
+                        Discover your next academic collaboration with our AI-powered platform.
                     </p>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/faculties" class="text-light text-decoration-none">Faculty Search</a></li>
-                        <li class="mb-2"><a href="/universities" class="text-light text-decoration-none">Universities</a></li>
-                        <li class="mb-2"><a href="/countries" class="text-light text-decoration-none">Countries</a></li>
-                        <li class="mb-2"><a href="/ai-assistant" class="text-light text-decoration-none">AI Assistant</a></li>
-                        <li class="mb-2"><a href="/api/docs" class="text-light text-decoration-none">API Documentation</a></li>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Platform</h6>
+                    <ul class="footer-links">
+                        <li><a href="/faculties">Faculty Search</a></li>
+                        <li><a href="/universities">Universities</a></li>
+                        <li><a href="/countries">Countries</a></li>
+                        <li><a href="/ai-assistant">AI Assistant</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">Connect With Us</h6>
-                    <div class="d-flex gap-3 mb-3">
-                        <a href="#" class="text-muted"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-linkedin fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-researchgate fa-lg"></i></a>
-                    </div>
-                    <p class="small text-muted">
-                        Follow us for updates on new features and academic collaboration opportunities.
-                    </p>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Account</h6>
+                    <ul class="footer-links">
+                        <li><a href="/login">Sign In</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
                 </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Resources</h6>
+                    <ul class="footer-links">
+                        <li><a href="/api/docs">API Docs</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FacultyFinder. All rights reserved. Made with <i class="fas fa-heart text-danger"></i> for the academic community.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating Theme Toggle -->
+    <button class="floating-theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JavaScript -->
-    <script src="/static/js/facultyfinder.js"></script>
-
-    <!-- Countries specific JavaScript -->
     <script>
-        // Global variables
-        let allCountries = [];
-        
-        // API Base URL
-        const API_BASE = '/api/v1';
-        
-        // Country code to flag emoji mapping
-        const countryFlags = {
-            'Canada': '🇨🇦',
-            'United States': '🇺🇸',
-            'United Kingdom': '🇬🇧',
-            'Australia': '🇦🇺',
-            'Germany': '🇩🇪',
-            'France': '🇫🇷',
-            'Netherlands': '🇳🇱',
-            'Switzerland': '🇨🇭',
-            'Sweden': '🇸🇪',
-            'Denmark': '🇩🇰',
-            'Norway': '🇳🇴',
-            'Finland': '🇫🇮',
-            'Belgium': '🇧🇪',
-            'Italy': '🇮🇹',
-            'Spain': '🇪🇸',
-            'Japan': '🇯🇵',
-            'South Korea': '🇰🇷',
-            'China': '🇨🇳',
-            'Singapore': '🇸🇬',
-            'New Zealand': '🇳🇿',
-            'Israel': '🇮🇱',
-            'Ireland': '🇮🇪',
-            'Austria': '🇦🇹',
-            'Czech Republic': '🇨🇿',
-            'Poland': '🇵🇱',
-            'Portugal': '🇵🇹',
-            'Brazil': '🇧🇷',
-            'Mexico': '🇲🇽',
-            'India': '🇮🇳',
-            'South Africa': '🇿🇦'
-        };
-        
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            loadCountries();
-        });
-        
+        // Theme toggle functionality
+        function initializeTheme() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const htmlElement = document.documentElement;
+            
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+            
+            function updateThemeIcon(theme) {
+                themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+            }
+        }
+
+        // Countries data
+        let countriesData = [];
+
         // Load countries data
         async function loadCountries() {
             try {
-                showLoading();
-                
-                const response = await fetch(`${API_BASE}/countries`);
-                const data = await response.json();
-                
-                allCountries = data;
-                displayCountries(data);
-                updateResultsInfo(data.length);
-                
+                const response = await fetch('/api/v1/countries');
+                if (response.ok) {
+                    countriesData = await response.json();
+                    displayCountries();
+                    updateGlobalStats();
+                } else {
+                    showErrorState();
+                }
             } catch (error) {
                 console.error('Error loading countries:', error);
-                showError('Failed to load countries. Please try again.');
+                showErrorState();
             }
         }
-        
-        // Display countries
-        function displayCountries(countries) {
+
+        function displayCountries(filteredData = null) {
             const container = document.getElementById('countries-container');
-            const loadingIndicator = document.getElementById('loading-indicator');
-            const emptyState = document.getElementById('empty-state');
+            const loadingState = document.getElementById('loading-state');
+            const data = filteredData || countriesData;
             
-            // Hide loading indicator
-            loadingIndicator.style.display = 'none';
+            loadingState.style.display = 'none';
             
-            if (countries.length === 0) {
-                emptyState.style.display = 'block';
+            if (data.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-globe"></i>
+                        <h3>No countries found</h3>
+                        <p>Try adjusting your search criteria.</p>
+                    </div>
+                `;
                 return;
             }
-            
-            // Clear container
-            container.innerHTML = '';
-            
-            // Create country cards
-            countries.forEach(country => {
-                const countryCard = createCountryCard(country);
-                container.appendChild(countryCard);
-            });
-            
-            // Add smooth hover animations
-            setTimeout(() => {
-                addHoverAnimations();
-            }, 100);
-        }
-        
-        // Create country card element
-        function createCountryCard(country) {
-            const colDiv = document.createElement('div');
-            colDiv.className = 'col-md-6 mb-4';
-            
-            const flag = countryFlags[country.country] || '🏳️';
-            const countryCode = generateCountryCode(country.country);
-            
-            colDiv.innerHTML = `
-                <div class="country-card h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">
-                            <span class="flag-emoji me-2" style="font-size: 1.5rem;">${flag}</span>
-                            <a href="/country/${countryCode}" class="text-decoration-none">
-                                ${country.country}
-                            </a>
-                        </h5>
-                        <div class="country-stats mt-3">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="country-stat-item">
-                                        <div class="country-stat-number text-primary fw-bold">${country.faculty_count || 0}</div>
-                                        <div class="country-stat-label small text-muted">Faculty</div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="country-stat-item">
-                                        <div class="country-stat-number text-info fw-bold">${country.university_count || 0}</div>
-                                        <div class="country-stat-label small text-muted">Universities</div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="country-stat-item">
-                                        <div class="country-stat-number text-warning fw-bold">${country.department_count || 0}</div>
-                                        <div class="country-stat-label small text-muted">Departments</div>
-                                    </div>
-                                </div>
+
+            const grid = document.createElement('div');
+            grid.className = 'row g-4';
+
+            data.forEach(country => {
+                const col = document.createElement('div');
+                col.className = 'col-lg-4 col-md-6';
+                
+                const countryFlag = getCountryFlag(country.country);
+                
+                col.innerHTML = `
+                    <div class="country-card">
+                        <div class="country-flag">
+                            ${countryFlag}
+                        </div>
+                        <h3 class="country-name">${country.country}</h3>
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">${country.university_count || 0}</div>
+                                <div class="stat-label">Universities</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">${country.faculty_count || 0}</div>
+                                <div class="stat-label">Faculty</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="d-grid">
-                            <a href="/country/${countryCode}" class="btn btn-outline-success">
-                                <i class="fas fa-eye me-2"></i>View Details
+                        <div class="country-actions">
+                            <a href="/universities?country=${encodeURIComponent(country.country)}" class="btn-explore">
+                                <i class="fas fa-university me-1"></i>Explore Universities
+                            </a>
+                            <a href="/faculties?country=${encodeURIComponent(country.country)}" class="btn-universities">
+                                <i class="fas fa-users"></i>
                             </a>
                         </div>
                     </div>
-                </div>
-            `;
-            
-            return colDiv;
-        }
-        
-        // Generate country code from country name
-        function generateCountryCode(countryName) {
-            return countryName.toLowerCase()
-                .replace(/\s+/g, '-')
-                .replace(/[^a-z0-9-]/g, '');
-        }
-        
-        // Add hover animations to country cards
-        function addHoverAnimations() {
-            const countryCards = document.querySelectorAll('.country-card');
-            countryCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-8px)';
-                    this.style.transition = 'all 0.3s ease';
-                });
+                `;
                 
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
+                grid.appendChild(col);
             });
+
+            container.innerHTML = '';
+            container.appendChild(grid);
         }
-        
-        // Update results info
-        function updateResultsInfo(count) {
-            const resultsText = document.getElementById('results-text');
-            const resultsDescription = document.getElementById('results-description');
-            
-            if (count > 0) {
-                resultsText.textContent = `${count} ${count === 1 ? 'Country' : 'Countries'} Found`;
-                resultsDescription.style.display = 'block';
-            } else {
-                resultsText.textContent = 'No Countries Found';
-                resultsDescription.style.display = 'none';
+
+        function setupFilters() {
+            const searchInput = document.getElementById('search-input');
+            const sortFilter = document.getElementById('sort-filter');
+
+            function applyFilters() {
+                let filtered = [...countriesData];
+
+                // Search filter
+                const searchTerm = searchInput.value.toLowerCase();
+                if (searchTerm) {
+                    filtered = filtered.filter(country => 
+                        country.country.toLowerCase().includes(searchTerm)
+                    );
+                }
+
+                // Sort
+                const sortBy = sortFilter.value;
+                filtered.sort((a, b) => {
+                    switch (sortBy) {
+                        case 'university_count':
+                            return (b.university_count || 0) - (a.university_count || 0);
+                        case 'faculty_count':
+                            return (b.faculty_count || 0) - (a.faculty_count || 0);
+                        default: // name
+                            return a.country.localeCompare(b.country);
+                    }
+                });
+
+                displayCountries(filtered);
             }
+
+            searchInput.addEventListener('input', applyFilters);
+            sortFilter.addEventListener('change', applyFilters);
         }
-        
-        // Show loading indicator
-        function showLoading() {
-            const loadingIndicator = document.getElementById('loading-indicator');
-            const emptyState = document.getElementById('empty-state');
-            
-            loadingIndicator.style.display = 'block';
-            emptyState.style.display = 'none';
-            
-            const resultsText = document.getElementById('results-text');
-            resultsText.textContent = 'Loading countries...';
+
+        function updateGlobalStats() {
+            const totalCountries = countriesData.length;
+            const totalUniversities = countriesData.reduce((sum, c) => sum + (c.university_count || 0), 0);
+            const totalFaculty = countriesData.reduce((sum, c) => sum + (c.faculty_count || 0), 0);
+
+            // Update header stats
+            document.getElementById('total-countries').textContent = totalCountries;
+            document.getElementById('total-universities').textContent = totalUniversities;
+
+            // Update global stats
+            document.getElementById('global-countries').textContent = totalCountries;
+            document.getElementById('global-universities').textContent = totalUniversities;
+            document.getElementById('global-faculty').textContent = totalFaculty;
         }
-        
-        // Show error message
-        function showError(message) {
+
+        function showErrorState() {
             const container = document.getElementById('countries-container');
-            const loadingIndicator = document.getElementById('loading-indicator');
+            const loadingState = document.getElementById('loading-state');
             
-            loadingIndicator.style.display = 'none';
-            
+            loadingState.style.display = 'none';
             container.innerHTML = `
-                <div class="col-12">
-                    <div class="alert alert-danger">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
-                        ${message}
-                    </div>
+                <div class="empty-state">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Unable to load countries</h3>
+                    <p>Please try refreshing the page or contact support if the problem persists.</p>
+                    <button class="btn btn-primary" onclick="loadCountries()">
+                        <i class="fas fa-redo me-1"></i>Try Again
+                    </button>
                 </div>
             `;
-            
-            const resultsText = document.getElementById('results-text');
-            resultsText.textContent = 'Error loading countries';
         }
-    </script>
 
-    <style>
-        body {
-            padding-top: 76px;
+        function getCountryFlag(countryName) {
+            // Simple country flag/icon mapping
+            const flagMap = {
+                'Canada': '🇨🇦',
+                'United States': '🇺🇸',
+                'United Kingdom': '🇬🇧',
+                'Australia': '🇦🇺',
+                'Germany': '🇩🇪',
+                'France': '🇫🇷',
+                'Netherlands': '🇳🇱',
+                'Sweden': '🇸🇪',
+                'Norway': '🇳🇴',
+                'Denmark': '🇩🇰',
+                'Japan': '🇯🇵',
+                'China': '🇨🇳',
+                'India': '🇮🇳',
+                'Brazil': '🇧🇷'
+            };
+            
+            return flagMap[countryName] || '<i class="fas fa-globe"></i>';
         }
-        
-        .country-card {
-            border-radius: 10px;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .country-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-        
-        .country-stat-item {
-            padding: 0.5rem 0;
-        }
-        
-        .country-stat-number {
-            font-size: 1.5rem;
-            line-height: 1;
-            margin-bottom: 0.25rem;
-        }
-        
-        .country-stat-label {
-            font-size: 0.875rem;
-            opacity: 0.8;
-        }
-        
-        .results-summary {
-            background: var(--ff-bg-secondary) !important;
-            border: 1px solid var(--ff-border-color);
-        }
-        
-        .flag-emoji {
-            display: inline-block;
-            font-size: 1.5rem;
-        }
-        
-        .loading-spinner {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid var(--ff-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .hero-section h1 {
-            background: linear-gradient(135deg, var(--ff-primary) 0%, var(--ff-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .empty-state {
-            padding: 3rem 1rem;
-        }
-        
-        .btn-outline-success:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-    </style>
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            loadCountries();
+            
+            // Set up filters after a short delay
+            setTimeout(setupFilters, 500);
+        });
+    </script>
 </body>
 </html> 

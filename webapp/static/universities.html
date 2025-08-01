@@ -6,739 +6,844 @@
     <title>Universities - FacultyFinder</title>
     
     <!-- Meta Tags -->
-    <meta name="description" content="Browse universities worldwide with faculty data. Search and filter by country, location, and more.">
-    <meta name="keywords" content="universities, higher education, faculty, academic institutions, global universities">
+    <meta name="description" content="Browse universities and explore faculty profiles from leading institutions worldwide. Find your ideal academic collaboration opportunities.">
+    <meta name="keywords" content="universities, faculty, academic institutions, research, higher education">
+    <meta name="author" content="FacultyFinder">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS Theme -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
     <link rel="stylesheet" href="/static/css/facultyfinder.css">
-    <link rel="stylesheet" href="/static/css/filter-fixes.css">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004499;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b35;
+            --text-primary: #2c3e50;
+            --text-secondary: #6c757d;
+            --border-color: #e9ecef;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: #f8f9fa;
+            padding-top: 80px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-primary) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+
+        /* Header Section */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        /* Search and Filters */
+        .search-filters {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .search-input {
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .filter-select {
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        /* University Cards */
+        .university-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .university-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .university-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .university-location {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .university-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .university-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-view {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-view:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-faculty {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-faculty:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Loading and Empty States */
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Pagination */
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .pagination .page-link {
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            margin: 0 0.2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .pagination .page-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .pagination .page-item.active .page-link {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Floating Theme Toggle */
+        .floating-theme-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating-theme-toggle:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 102, 204, 0.4);
+            background: var(--primary-dark);
+        }
+
+        /* Dark theme styles */
+        [data-theme="dark"] .floating-theme-toggle {
+            background: #ffc107;
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        [data-theme="dark"] .floating-theme-toggle:hover {
+            background: #e0a800;
+            box-shadow: 0 12px 25px rgba(255, 193, 7, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            color: #bdc3c7;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .page-subtitle {
+                font-size: 1rem;
+            }
+
+            .search-filters {
+                padding: 1.5rem;
+            }
+
+            .university-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .university-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="/">
-                <i class="fas fa-graduation-cap me-2"></i>
-                FacultyFinder
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-graduation-cap me-2"></i>FacultyFinder
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/countries">Countries</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/universities">Universities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/faculties">Faculties</a>
+                        <a class="nav-link" href="/faculties">Faculty</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/ai-assistant">
-                            <i class="fas fa-robot me-1"></i>AI Assistant
-                        </a>
+                        <a class="nav-link" href="/countries">Countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ai-assistant">AI Assistant</a>
                     </li>
                 </ul>
+                
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="btn btn-outline-primary me-2" href="/login">
-                            <i class="fas fa-sign-in-alt me-1"></i>Sign In
-                        </a>
+                        <a class="btn btn-outline-primary me-2" href="/login">Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="/register">
-                            <i class="fas fa-user-plus me-1"></i>Sign Up
-                        </a>
+                        <a class="btn btn-primary" href="/register">Get Started</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="page-title">Universities</h1>
+                    <p class="page-subtitle">
+                        Explore leading academic institutions and discover faculty members from universities worldwide.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="d-flex justify-content-lg-end justify-content-center gap-3">
+                        <div class="text-center">
+                            <div class="h3 fw-bold text-warning mb-0" id="total-universities">Loading...</div>
+                            <small class="opacity-75">Universities</small>
+                        </div>
+                        <div class="text-center">
+                            <div class="h3 fw-bold text-warning mb-0" id="total-faculty">Loading...</div>
+                            <small class="opacity-75">Faculty Members</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <div class="container">
-        <!-- Page Header -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <h1 class="mb-3">
-                    <i class="fas fa-university text-primary me-3"></i>
-                    Universities Worldwide
-                </h1>
-                <p class="lead text-muted">
-                    Explore universities from around the world. Discover institutions with leading faculty in your field of research.
-                </p>
-            </div>
-        </div>
-        
         <!-- Search and Filters -->
         <div class="search-filters">
-            <form id="university-search-form">
-                <div class="row">
-                    <div class="col-lg-4 mb-3">
-                        <label class="filter-label">Search Universities</label>
-                        <input type="text" class="form-control" name="search" id="searchInput"
-                               placeholder="University name, city, or keywords...">
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-3">
-                        <label class="filter-label">Country</label>
-                        <select class="form-select" name="country" id="countrySelect">
-                            <option value="">All Countries</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-3">
-                        <label class="filter-label">State/Province/Region</label>
-                        <select class="form-select" name="province" id="provinceSelect">
-                            <option value="">All Regions</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-2 col-md-6 mb-3">
-                        <label class="filter-label">University Type</label>
-                        <select class="form-select" name="university_type" id="universityTypeSelect">
-                            <option value="">All Types</option>
-                            <option value="Public">Public</option>
-                            <option value="Private">Private</option>
-                            <option value="Research">Research University</option>
-                            <option value="Liberal Arts">Liberal Arts</option>
-                            <option value="Technical">Technical Institute</option>
-                        </select>
+            <div class="row g-3">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-end-0">
+                            <i class="fas fa-search text-muted"></i>
+                        </span>
+                        <input type="text" id="search-input" class="form-control search-input border-start-0" 
+                               placeholder="Search universities by name or location...">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 mb-3">
-                        <label class="filter-label">Language of Instruction</label>
-                        <select class="form-select" name="language" id="languageSelect">
-                            <option value="">All Languages</option>
-                            <option value="English">English</option>
-                            <option value="French">French</option>
-                            <option value="Spanish">Spanish</option>
-                            <option value="German">German</option>
-                            <option value="Mandarin">Mandarin</option>
-                            <option value="Arabic">Arabic</option>
-                            <option value="Portuguese">Portuguese</option>
-                            <option value="Russian">Russian</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <label class="filter-label">Sort By</label>
-                        <select class="form-select" name="sort_by" id="sortSelect">
-                            <option value="faculty_count">Faculty Count</option>
-                            <option value="name">Name</option>
-                            <option value="location">Location</option>
-                            <option value="established">Year Established</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-3 mb-3 d-flex align-items-end">
-                        <button type="submit" class="btn btn-primary me-2">
-                            <i class="fas fa-search me-2"></i>Search
-                        </button>
-                        <button type="button" class="btn btn-outline-secondary" onclick="resetFilters()">
-                            <i class="fas fa-refresh me-2"></i>Reset
-                        </button>
-                    </div>
-                    <div class="col-lg-3 mb-3 d-flex align-items-end">
-                        <div class="d-flex align-items-center">
-                            <label class="small text-muted me-2">Per page:</label>
-                            <select class="form-select form-select-sm" style="width: auto;" id="perPageSelect" onchange="searchUniversities()">
-                                <option value="12">12</option>
-                                <option value="24" selected>24</option>
-                                <option value="36">36</option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="col-lg-3">
+                    <select id="country-filter" class="form-select filter-select">
+                        <option value="">All Countries</option>
+                    </select>
                 </div>
-            </form>
-        </div>
-        
-        <!-- Results Header -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h4 class="mb-2">University Directory</h4>
-                        <div id="results-info" class="text-muted">
-                            Loading universities...
-                        </div>
-                    </div>
-                    <div class="view-toggles">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-outline-primary active" data-view="grid" onclick="toggleView('grid')" title="Grid View">
-                                <i class="fas fa-th"></i>
-                            </button>
-                            <button type="button" class="btn btn-outline-primary" data-view="list" onclick="toggleView('list')" title="List View">
-                                <i class="fas fa-list"></i>
-                            </button>
-                        </div>
-                    </div>
+                <div class="col-lg-3">
+                    <select id="sort-filter" class="form-select filter-select">
+                        <option value="name">Sort by Name</option>
+                        <option value="faculty_count">Sort by Faculty Count</option>
+                        <option value="location">Sort by Location</option>
+                    </select>
                 </div>
             </div>
         </div>
-        
+
         <!-- Universities Grid -->
-        <div id="universities-grid" class="row">
-            <!-- Loading indicator -->
-            <div class="col-12 text-center p-5">
+        <div id="universities-container">
+            <!-- Loading state -->
+            <div class="text-center py-5" id="loading-state">
                 <div class="loading-spinner"></div>
                 <p class="mt-3 text-muted">Loading universities...</p>
             </div>
         </div>
-        
-        <!-- Universities Table (Hidden by default) -->
-        <div id="universities-table" class="table-responsive" style="display: none;">
-            <table class="table table-hover table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col" class="sortable" data-sort="name">
-                            University Name
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable" data-sort="country">
-                            Country
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable" data-sort="city">
-                            City
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable" data-sort="type">
-                            Type
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable text-center" data-sort="faculty_count">
-                            Faculty
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable text-center" data-sort="department_count">
-                            Departments
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col" class="sortable text-center" data-sort="year">
-                            Established
-                            <i class="fas fa-sort ms-1"></i>
-                        </th>
-                        <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    <!-- University table rows will be populated here -->
-                </tbody>
-            </table>
-        </div>
-        
+
         <!-- Pagination -->
-        <div id="pagination-container"></div>
+        <div class="pagination-container" id="pagination-container" style="display: none;">
+            <nav aria-label="Universities pagination">
+                <ul class="pagination" id="pagination">
+                </ul>
+            </nav>
+        </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h5>
-                        <i class="fas fa-graduation-cap me-2"></i>
-                        FacultyFinder
-                    </h5>
-                    <p class="mb-3">
-                        Connecting researchers with their ideal academic collaborators worldwide through AI-powered matching and comprehensive faculty profiles.
-                    </p>
-                    <p class="mb-0">
-                        &copy; 2025 FacultyFinder. All rights reserved.
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap me-2"></i>FacultyFinder
+                    </div>
+                    <p class="footer-description">
+                        Connecting researchers, students, and faculty members worldwide. 
+                        Discover your next academic collaboration with our AI-powered platform.
                     </p>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/faculties" class="text-light text-decoration-none">Faculty Search</a></li>
-                        <li class="mb-2"><a href="/universities" class="text-light text-decoration-none">Universities</a></li>
-                        <li class="mb-2"><a href="/countries" class="text-light text-decoration-none">Countries</a></li>
-                        <li class="mb-2"><a href="/ai-assistant" class="text-light text-decoration-none">AI Assistant</a></li>
-                        <li class="mb-2"><a href="/api/docs" class="text-light text-decoration-none">API Documentation</a></li>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Platform</h6>
+                    <ul class="footer-links">
+                        <li><a href="/faculties">Faculty Search</a></li>
+                        <li><a href="/universities">Universities</a></li>
+                        <li><a href="/countries">Countries</a></li>
+                        <li><a href="/ai-assistant">AI Assistant</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">Connect With Us</h6>
-                    <div class="d-flex gap-3 mb-3">
-                        <a href="#" class="text-muted"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-linkedin fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
-                        <a href="#" class="text-muted"><i class="fab fa-researchgate fa-lg"></i></a>
-                    </div>
-                    <p class="small text-muted">
-                        Follow us for updates on new features and academic collaboration opportunities.
-                    </p>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Account</h6>
+                    <ul class="footer-links">
+                        <li><a href="/login">Sign In</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
                 </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Resources</h6>
+                    <ul class="footer-links">
+                        <li><a href="/api/docs">API Docs</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FacultyFinder. All rights reserved. Made with <i class="fas fa-heart text-danger"></i> for the academic community.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating Theme Toggle -->
+    <button class="floating-theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JavaScript -->
-    <script src="/static/js/facultyfinder.js"></script>
-    
-    <!-- Custom JavaScript -->
     <script>
-        // Global variables
-        let currentView = 'grid';
-        let currentPage = 1;
-        let currentFilters = {
-            search: '',
-            country: '',
-            province: '',
-            university_type: '',
-            language: '',
-            sort_by: 'faculty_count'
-        };
-        let allUniversities = [];
-        let countries = [];
-        let provincesByCountry = {};
-        
-        // API Base URL
-        const API_BASE = '/api/v1';
-        
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            loadCountries();
-            loadUniversities();
+        // Theme toggle functionality
+        function initializeTheme() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const htmlElement = document.documentElement;
             
-            // Add event listeners
-            document.getElementById('university-search-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                searchUniversities();
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
             });
             
-            // Add change listeners for dynamic filtering
-            document.getElementById('countrySelect').addEventListener('change', updateProvinces);
-        });
-        
-        // Load countries for filter
-        async function loadCountries() {
-            try {
-                const response = await fetch(`${API_BASE}/countries`);
-                const data = await response.json();
-                
-                const countrySelect = document.getElementById('countrySelect');
-                data.forEach(country => {
-                    const option = document.createElement('option');
-                    option.value = country.country;
-                    option.textContent = country.country;
-                    countrySelect.appendChild(option);
-                });
-                
-            } catch (error) {
-                console.error('Error loading countries:', error);
+            function updateThemeIcon(theme) {
+                themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
             }
         }
-        
-        // Update provinces based on selected country
-        function updateProvinces() {
-            const countrySelect = document.getElementById('countrySelect');
-            const provinceSelect = document.getElementById('provinceSelect');
-            const selectedCountry = countrySelect.value;
-            
-            // Clear current options
-            provinceSelect.innerHTML = '<option value="">All Regions</option>';
-            
-            // For now, add some common provinces/states for major countries
-            const provincesByCountry = {
-                'Canada': ['Ontario', 'Quebec', 'British Columbia', 'Alberta', 'Saskatchewan', 'Manitoba', 'Nova Scotia', 'New Brunswick', 'Newfoundland and Labrador', 'Prince Edward Island'],
-                'United States': ['California', 'New York', 'Texas', 'Florida', 'Illinois', 'Pennsylvania', 'Ohio', 'Georgia', 'North Carolina', 'Michigan'],
-                'United Kingdom': ['England', 'Scotland', 'Wales', 'Northern Ireland'],
-                'Australia': ['New South Wales', 'Victoria', 'Queensland', 'Western Australia', 'South Australia', 'Tasmania', 'Australian Capital Territory', 'Northern Territory'],
-                'Germany': ['Bavaria', 'Baden-Württemberg', 'North Rhine-Westphalia', 'Lower Saxony', 'Hesse', 'Saxony', 'Rhineland-Palatinate', 'Schleswig-Holstein'],
-                'France': ['Île-de-France', 'Provence-Alpes-Côte d\'Azur', 'Auvergne-Rhône-Alpes', 'Nouvelle-Aquitaine', 'Occitanie', 'Hauts-de-France', 'Grand Est', 'Pays de la Loire']
-            };
-            
-            if (selectedCountry && provincesByCountry[selectedCountry]) {
-                provincesByCountry[selectedCountry].forEach(province => {
-                    const option = document.createElement('option');
-                    option.value = province;
-                    option.textContent = province;
-                    provinceSelect.appendChild(option);
-                });
-            }
-        }
-        
-        // Search universities
-        function searchUniversities() {
-            // Get filter values
-            currentFilters.search = document.getElementById('searchInput').value;
-            currentFilters.country = document.getElementById('countrySelect').value;
-            currentFilters.province = document.getElementById('provinceSelect').value;
-            currentFilters.university_type = document.getElementById('universityTypeSelect').value;
-            currentFilters.language = document.getElementById('languageSelect').value;
-            currentFilters.sort_by = document.getElementById('sortSelect').value;
-            
-            currentPage = 1;
-            loadUniversities(currentPage);
-        }
-        
-        // Load universities
-        async function loadUniversities(page = 1) {
+
+        // Load universities data
+        let universitiesData = [];
+        let currentPage = 1;
+        const itemsPerPage = 12;
+
+        async function loadUniversities() {
             try {
-                showLoading();
-                
-                const perPage = document.getElementById('perPageSelect').value;
-                const params = new URLSearchParams({
-                    page: page,
-                    per_page: perPage,
-                    ...currentFilters
-                });
-                
-                // Remove empty parameters
-                for (let [key, value] of [...params.entries()]) {
-                    if (!value) {
-                        params.delete(key);
-                    }
+                const response = await fetch('/api/v1/universities');
+                if (response.ok) {
+                    universitiesData = await response.json();
+                    displayUniversities();
+                    setupFilters();
+                    updateStats();
+                } else {
+                    showErrorState();
                 }
-                
-                const response = await fetch(`${API_BASE}/universities?${params}`);
-                const data = await response.json();
-                
-                allUniversities = data.universities;
-                displayUniversities(data.universities);
-                displayPagination(data.pagination);
-                updateResultsInfo(data.pagination);
-                
             } catch (error) {
                 console.error('Error loading universities:', error);
-                showError('Failed to load universities. Please try again.');
+                showErrorState();
             }
         }
-        
-        // Display universities in grid view
-        function displayUniversities(universities) {
-            const container = document.getElementById('universities-grid');
+
+        function displayUniversities(filteredData = null) {
+            const container = document.getElementById('universities-container');
+            const loadingState = document.getElementById('loading-state');
+            const data = filteredData || universitiesData;
             
-            if (universities.length === 0) {
+            loadingState.style.display = 'none';
+            
+            if (data.length === 0) {
                 container.innerHTML = `
-                    <div class="col-12">
-                        <div class="empty-state text-center p-5">
-                            <i class="fas fa-university fa-4x text-muted mb-3"></i>
-                            <h4>No universities found</h4>
-                            <p class="text-muted">Try adjusting your search filters or criteria.</p>
-                        </div>
+                    <div class="empty-state">
+                        <i class="fas fa-university"></i>
+                        <h3>No universities found</h3>
+                        <p>Try adjusting your search criteria or filters.</p>
                     </div>
                 `;
                 return;
             }
-            
+
+            // Pagination
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const paginatedData = data.slice(startIndex, endIndex);
+
+            const grid = document.createElement('div');
+            grid.className = 'row g-4';
+
+            paginatedData.forEach(university => {
+                const col = document.createElement('div');
+                col.className = 'col-lg-4 col-md-6';
+                
+                col.innerHTML = `
+                    <div class="university-card">
+                        <div class="university-logo">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3 class="university-name">${university.name}</h3>
+                        <p class="university-location">
+                            <i class="fas fa-map-marker-alt me-1"></i>
+                            ${university.location || 'Location not specified'}
+                        </p>
+                        <div class="university-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">${university.faculty_count || 0}</div>
+                                <div class="stat-label">Faculty</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">${university.department_count || 0}</div>
+                                <div class="stat-label">Departments</div>
+                            </div>
+                        </div>
+                        <div class="university-actions">
+                            <a href="/university/${university.id || university.code}" class="btn btn-view">
+                                <i class="fas fa-eye me-1"></i>View Details
+                            </a>
+                            <a href="/faculties?university=${encodeURIComponent(university.name)}" class="btn btn-faculty">
+                                <i class="fas fa-users me-1"></i>Browse Faculty
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                grid.appendChild(col);
+            });
+
             container.innerHTML = '';
-            universities.forEach(university => {
-                const universityCard = `
-                    <div class="col-lg-6 col-xl-4 mb-4">
-                        <div class="university-card facultyfinder-card p-4 h-100">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h5 class="mb-1">
-                                    <a href="/university/${university.university_code}" class="text-decoration-none text-primary fw-bold">
-                                        ${university.name}
-                                    </a>
-                                </h5>
-                                ${university.established ? 
-                                    `<span class="badge bg-secondary">Est. ${university.established}</span>` : 
-                                    ''
-                                }
-                            </div>
-                            
-                            <div class="mb-3">
-                                <div class="text-muted mb-2">
-                                    <i class="fas fa-map-marker-alt me-2"></i>
-                                    <strong>${university.city || 'Unknown'}</strong>
-                                    ${university.province_state ? `, ${university.province_state}` : ''}
-                                    <br>
-                                    <i class="fas fa-globe me-2"></i>
-                                    <strong>${university.country}</strong>
-                                    ${(university.building_number && university.street) || university.full_address ? `
-                                        <a href="https://www.google.com/maps/search/${encodeURIComponent(university.full_address || university.name + ' ' + university.city)}" 
-                                           target="_blank" class="btn btn-sm btn-outline-primary ms-2 google-maps-btn"
-                                           title="View on Google Maps">
-                                            <i class="fas fa-map-marked-alt me-1"></i>Maps
-                                        </a>
-                                    ` : ''}
-                                </div>
-                                ${(university.building_number && university.street) ? `
-                                <div class="text-muted mb-2 address-details">
-                                    <i class="fas fa-home me-2"></i>
-                                    <small>
-                                        <strong>${university.building_number} ${university.street}</strong>
-                                        ${university.postal_code ? `, ${university.postal_code}` : ''}
-                                    </small>
-                                </div>
-                                ` : ''}
-                                
-                                ${university.type ? `
-                                <div class="text-muted mb-2">
-                                    <i class="fas fa-building me-2"></i>
-                                    <strong>${university.type}</strong>
-                                </div>
-                                ` : ''}
-                                
-                                ${university.language ? `
-                                <div class="text-muted mb-2">
-                                    <i class="fas fa-language me-2"></i>
-                                    <strong>${university.language}</strong>
-                                </div>
-                                ` : ''}
-                                
-                                ${university.website ? `
-                                <div class="text-muted mb-2">
-                                    <i class="fas fa-link me-2"></i>
-                                    <a href="${university.website}" target="_blank" class="text-decoration-none">
-                                        <strong>Official Website</strong>
-                                        <i class="fas fa-external-link-alt ms-1"></i>
-                                    </a>
-                                </div>
-                                ` : ''}
-                            </div>
-                            
-                            <div class="mt-auto">
-                                <div class="row text-center">
-                                    <div class="col-6">
-                                        <div class="stat-item">
-                                            <div class="stat-number text-primary fw-bold">${university.faculty_count || 0}</div>
-                                            <div class="stat-label">Faculty</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="stat-item">
-                                            <div class="stat-number text-success fw-bold">${university.department_count || 0}</div>
-                                            <div class="stat-label">Departments</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                container.innerHTML += universityCard;
-            });
-            
-            // Update table view if active
-            if (currentView === 'list') {
-                displayUniversitiesTable(universities);
-            }
+            container.appendChild(grid);
+
+            // Update pagination
+            updatePagination(data.length);
         }
-        
-        // Display universities in table view
-        function displayUniversitiesTable(universities) {
-            const tbody = document.getElementById('table-body');
-            tbody.innerHTML = '';
-            
-            universities.forEach(university => {
-                const row = `
-                    <tr data-university-id="${university.university_code}">
-                        <td data-sort-value="${university.name}">
-                            <div class="fw-bold">
-                                <a href="/university/${university.university_code}" class="text-decoration-none text-primary">
-                                    ${university.name}
-                                </a>
-                            </div>
-                        </td>
-                        <td data-sort-value="${university.country}">
-                            <div class="fw-semibold">${university.country}</div>
-                            ${university.province_state ? `<small class="text-muted">${university.province_state}</small>` : ''}
-                        </td>
-                        <td data-sort-value="${university.city || ''}">
-                            <div>${university.city || 'Unknown'}</div>
-                            ${(university.building_number && university.street) || university.full_address ? `
-                                <a href="https://www.google.com/maps/search/${encodeURIComponent(university.full_address || university.name + ' ' + university.city)}" 
-                                   target="_blank" class="btn btn-sm btn-outline-secondary" title="View on Google Maps">
-                                    <i class="fas fa-map-marked-alt"></i>
-                                </a>
-                            ` : ''}
-                            ${(university.building_number && university.street) ? `
-                                <br><small class="text-muted">${university.building_number} ${university.street}</small>
-                            ` : ''}
-                        </td>
-                        <td data-sort-value="${university.type || ''}">
-                            <span class="badge bg-secondary">${university.type || 'N/A'}</span>
-                        </td>
-                        <td class="text-center" data-sort-value="${university.faculty_count || 0}">
-                            <span class="fw-bold text-primary">${university.faculty_count || 0}</span>
-                        </td>
-                        <td class="text-center" data-sort-value="${university.department_count || 0}">
-                            <span class="fw-bold text-success">${university.department_count || 0}</span>
-                        </td>
-                        <td class="text-center" data-sort-value="${university.established || 0}">
-                            ${university.established ? 
-                                `<span class="badge bg-secondary">${university.established}</span>` : 
-                                '<span class="text-muted">Unknown</span>'
-                            }
-                        </td>
-                        <td>
-                            <div class="btn-group btn-group-sm">
-                                <a href="/university/${university.university_code}" 
-                                   class="btn btn-outline-primary btn-sm" title="View Profile">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                ${university.website ? `
-                                    <a href="${university.website}" target="_blank" 
-                                       class="btn btn-outline-secondary btn-sm" title="Official Website">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                ` : ''}
-                                <a href="/faculties?university=${encodeURIComponent(university.name)}" 
-                                   class="btn btn-outline-success btn-sm" title="View Faculty">
-                                    <i class="fas fa-users"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                `;
-                tbody.innerHTML += row;
-            });
-        }
-        
-        // Toggle between grid and list view
-        function toggleView(view) {
-            currentView = view;
-            
-            const gridContainer = document.getElementById('universities-grid');
-            const tableContainer = document.getElementById('universities-table');
-            const viewButtons = document.querySelectorAll('[data-view]');
-            
-            // Update active button
-            viewButtons.forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-view') === view) {
-                    btn.classList.add('active');
-                }
-            });
-            
-            // Toggle views
-            if (view === 'grid') {
-                gridContainer.style.display = 'flex';
-                gridContainer.className = 'row';
-                tableContainer.style.display = 'none';
-            } else if (view === 'list') {
-                gridContainer.style.display = 'none';
-                tableContainer.style.display = 'block';
-                displayUniversitiesTable(allUniversities);
-            }
-        }
-        
-        // Show university details
-        function showUniversityDetails(universityCode) {
-            window.location.href = `/university/${universityCode}`;
-        }
-        
-        // Reset filters
-        function resetFilters() {
-            document.getElementById('university-search-form').reset();
-            currentFilters = {
-                search: '',
-                country: '',
-                province: '',
-                university_type: '',
-                language: '',
-                sort_by: 'faculty_count'
-            };
-            currentPage = 1;
-            loadUniversities(currentPage);
-        }
-        
-        // Display pagination
-        function displayPagination(pagination) {
-            const container = document.getElementById('pagination-container');
-            
-            if (pagination.total_pages <= 1) {
-                container.innerHTML = '';
+
+        function updatePagination(totalItems) {
+            const paginationContainer = document.getElementById('pagination-container');
+            const pagination = document.getElementById('pagination');
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+            if (totalPages <= 1) {
+                paginationContainer.style.display = 'none';
                 return;
             }
-            
-            let paginationHTML = '<nav aria-label="Universities pagination"><ul class="pagination justify-content-center">';
-            
+
+            paginationContainer.style.display = 'block';
+            pagination.innerHTML = '';
+
             // Previous button
-            if (pagination.page > 1) {
-                paginationHTML += `
-                    <li class="page-item">
-                        <a class="page-link" href="#" onclick="changePage(${pagination.page - 1})">Previous</a>
-                    </li>
-                `;
+            const prevItem = document.createElement('li');
+            prevItem.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+            prevItem.innerHTML = '<a class="page-link" href="#" aria-label="Previous"><i class="fas fa-chevron-left"></i></a>';
+            if (currentPage > 1) {
+                prevItem.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentPage--;
+                    displayUniversities();
+                });
             }
-            
+            pagination.appendChild(prevItem);
+
             // Page numbers
-            const startPage = Math.max(1, pagination.page - 2);
-            const endPage = Math.min(pagination.total_pages, pagination.page + 2);
-            
-            for (let i = startPage; i <= endPage; i++) {
-                paginationHTML += `
-                    <li class="page-item ${i === pagination.page ? 'active' : ''}">
-                        <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
-                    </li>
-                `;
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+                    const item = document.createElement('li');
+                    item.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                    item.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                    item.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        currentPage = i;
+                        displayUniversities();
+                    });
+                    pagination.appendChild(item);
+                } else if (i === currentPage - 3 || i === currentPage + 3) {
+                    const item = document.createElement('li');
+                    item.className = 'page-item disabled';
+                    item.innerHTML = '<span class="page-link">...</span>';
+                    pagination.appendChild(item);
+                }
             }
-            
+
             // Next button
-            if (pagination.page < pagination.total_pages) {
-                paginationHTML += `
-                    <li class="page-item">
-                        <a class="page-link" href="#" onclick="changePage(${pagination.page + 1})">Next</a>
-                    </li>
-                `;
+            const nextItem = document.createElement('li');
+            nextItem.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+            nextItem.innerHTML = '<a class="page-link" href="#" aria-label="Next"><i class="fas fa-chevron-right"></i></a>';
+            if (currentPage < totalPages) {
+                nextItem.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentPage++;
+                    displayUniversities();
+                });
             }
+            pagination.appendChild(nextItem);
+        }
+
+        function setupFilters() {
+            const searchInput = document.getElementById('search-input');
+            const countryFilter = document.getElementById('country-filter');
+            const sortFilter = document.getElementById('sort-filter');
+
+            // Populate country filter
+            const countries = [...new Set(universitiesData.map(u => u.country).filter(Boolean))].sort();
+            countries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country;
+                option.textContent = country;
+                countryFilter.appendChild(option);
+            });
+
+            // Filter functionality
+            function applyFilters() {
+                let filtered = [...universitiesData];
+
+                // Search filter
+                const searchTerm = searchInput.value.toLowerCase();
+                if (searchTerm) {
+                    filtered = filtered.filter(u => 
+                        u.name.toLowerCase().includes(searchTerm) ||
+                        (u.location && u.location.toLowerCase().includes(searchTerm))
+                    );
+                }
+
+                // Country filter
+                const selectedCountry = countryFilter.value;
+                if (selectedCountry) {
+                    filtered = filtered.filter(u => u.country === selectedCountry);
+                }
+
+                // Sort
+                const sortBy = sortFilter.value;
+                filtered.sort((a, b) => {
+                    switch (sortBy) {
+                        case 'faculty_count':
+                            return (b.faculty_count || 0) - (a.faculty_count || 0);
+                        case 'location':
+                            return (a.location || '').localeCompare(b.location || '');
+                        default: // name
+                            return a.name.localeCompare(b.name);
+                    }
+                });
+
+                currentPage = 1;
+                displayUniversities(filtered);
+            }
+
+            searchInput.addEventListener('input', applyFilters);
+            countryFilter.addEventListener('change', applyFilters);
+            sortFilter.addEventListener('change', applyFilters);
+        }
+
+        function updateStats() {
+            const totalUniversities = universitiesData.length;
+            const totalFaculty = universitiesData.reduce((sum, u) => sum + (u.faculty_count || 0), 0);
+
+            document.getElementById('total-universities').textContent = totalUniversities;
+            document.getElementById('total-faculty').textContent = totalFaculty;
+        }
+
+        function showErrorState() {
+            const container = document.getElementById('universities-container');
+            const loadingState = document.getElementById('loading-state');
             
-            paginationHTML += '</ul></nav>';
-            container.innerHTML = paginationHTML;
-        }
-        
-        // Change page
-        function changePage(page) {
-            currentPage = page;
-            loadUniversities(page);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        
-        // Update results info
-        function updateResultsInfo(pagination) {
-            const info = document.getElementById('results-info');
-            const start = ((pagination.page - 1) * pagination.per_page) + 1;
-            const end = Math.min(pagination.page * pagination.per_page, pagination.total_count);
-            
-            info.innerHTML = `
-                Showing ${start}-${end} of ${pagination.total_count} universities
-                <span class="text-primary fw-bold">(Page ${pagination.page} of ${pagination.total_pages})</span>
-            `;
-        }
-        
-        // Show loading indicator
-        function showLoading() {
-            const container = document.getElementById('universities-grid');
+            loadingState.style.display = 'none';
             container.innerHTML = `
-                <div class="col-12 text-center p-5">
-                    <div class="loading-spinner"></div>
-                    <p class="mt-3 text-muted">Loading universities...</p>
+                <div class="empty-state">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Unable to load universities</h3>
+                    <p>Please try refreshing the page or contact support if the problem persists.</p>
+                    <button class="btn btn-primary" onclick="loadUniversities()">
+                        <i class="fas fa-redo me-1"></i>Try Again
+                    </button>
                 </div>
             `;
-            
-            const info = document.getElementById('results-info');
-            info.innerHTML = 'Loading universities...';
         }
-        
-        // Show error message
-        function showError(message) {
-            const container = document.getElementById('universities-grid');
-            container.innerHTML = `
-                <div class="col-12">
-                    <div class="alert alert-danger">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
-                        ${message}
-                    </div>
-                </div>
-            `;
-            
-            const info = document.getElementById('results-info');
-            info.innerHTML = 'Error loading data';
-        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            loadUniversities();
+        });
     </script>
 </body>
 </html> 
