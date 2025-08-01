@@ -659,7 +659,7 @@ async def get_universities(
                 GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state,
                          u.address, u.building_number, u.street, u.postal_code, u.website, 
                          u.university_type, u.languages, u.year_established
-                HAVING COUNT(p.id) >= 0
+                HAVING COUNT(p.id) > 0
                 ORDER BY {order_clause}
                 LIMIT {per_page + 1} OFFSET {offset}
             """
@@ -682,7 +682,7 @@ async def get_universities(
                     LEFT JOIN professors p ON p.university_code = u.university_code
                     WHERE {' AND '.join(where_conditions)}
                     GROUP BY u.id
-                    HAVING COUNT(p.id) >= 0
+                    HAVING COUNT(p.id) > 0
                 ) subquery
             """
             
