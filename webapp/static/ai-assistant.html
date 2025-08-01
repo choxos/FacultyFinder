@@ -1535,11 +1535,12 @@
                                             <i class="fab fa-bitcoin"></i>
                                         </div>
                                         <h5>Cryptocurrency</h5>
-                                        <p class="text-muted mb-3">Pay with Bitcoin, Ethereum, and more</p>
+                                        <p class="text-muted mb-3">Pay with Bitcoin, Ethereum, Stablecoins, and more</p>
                                         <div class="payment-features text-start">
                                             <ul class="list-unstyled small">
                                                 <li><i class="fas fa-check text-success me-1"></i> Lower transaction fees</li>
                                                 <li><i class="fas fa-check text-success me-1"></i> Anonymous payments</li>
+                                                <li><i class="fas fa-check text-success me-1"></i> Stable price with stablecoins</li>
                                                 <li><i class="fas fa-check text-success me-1"></i> 50+ cryptocurrencies</li>
                                                 <li><i class="fas fa-check text-success me-1"></i> Instant confirmation</li>
                                             </ul>
@@ -1560,6 +1561,10 @@
                         <!-- Payment Options for Cryptocurrency -->
                         <div id="cryptoOptions" class="mb-3" style="display: none;">
                             <h6 class="text-warning">Cryptocurrency Payment</h6>
+                            <div class="alert alert-info mb-3">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <strong>Stablecoins Recommended:</strong> For price stability, consider using stablecoins (USDT, USDC, DAI) which maintain a 1:1 value with USD, eliminating price volatility during payment processing.
+                            </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label class="form-label small">Payment Provider</label>
@@ -1571,10 +1576,25 @@
                                 <div class="col-md-6">
                                     <label class="form-label small">Preferred Currency</label>
                                     <select class="form-select">
-                                        <option value="btc">Bitcoin (BTC)</option>
-                                        <option value="eth">Ethereum (ETH)</option>
-                                        <option value="ltc">Litecoin (LTC)</option>
-                                        <option value="ada">Cardano (ADA)</option>
+                                        <option value="" disabled selected>Select cryptocurrency</option>
+                                        <optgroup label="Major Cryptocurrencies">
+                                            <option value="btc">Bitcoin (BTC)</option>
+                                            <option value="eth">Ethereum (ETH)</option>
+                                            <option value="ltc">Litecoin (LTC)</option>
+                                            <option value="ada">Cardano (ADA)</option>
+                                            <option value="bnb">Binance Coin (BNB)</option>
+                                            <option value="xrp">Ripple (XRP)</option>
+                                            <option value="matic">Polygon (MATIC)</option>
+                                            <option value="avax">Avalanche (AVAX)</option>
+                                        </optgroup>
+                                        <optgroup label="Stablecoins">
+                                            <option value="usdt">Tether (USDT)</option>
+                                            <option value="usdc">USD Coin (USDC)</option>
+                                            <option value="dai">Dai (DAI)</option>
+                                            <option value="busd">Binance USD (BUSD)</option>
+                                            <option value="tusd">TrueUSD (TUSD)</option>
+                                            <option value="frax">Frax (FRAX)</option>
+                                        </optgroup>
                                     </select>
                                 </div>
                             </div>
