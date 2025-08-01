@@ -219,6 +219,290 @@
             margin: 0 auto 1.5rem;
         }
 
+        .ai-feature-card.compact {
+            padding: 1.5rem;
+            min-height: 180px;
+        }
+
+        .feature-icon.small {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .ai-tech-badge {
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .ai-feature-card.selected .ai-tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        /* Chat Section Styles */
+        .chat-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+
+        .ai-message, .user-message {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .user-message {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .user-message .message-avatar {
+            background: var(--accent-color);
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+
+        .message-content {
+            flex: 1;
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-message .message-content {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .message-suggestions {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .suggestion-btn {
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .suggestion-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .chat-input-container {
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Analysis Options Styles */
+        .analysis-options {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .analysis-option-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .analysis-option-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.1);
+        }
+
+        .analysis-option-card h5 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .analysis-option-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Results Section Enhanced Styles */
+        .metric-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.1);
+        }
+
+        .metric-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .ai-insights {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        .insight-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .insight-card h6 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .analytics-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.25rem;
+        }
+
+        .analytics-card h6 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .result-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .result-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 102, 204, 0.1);
+        }
+
+        .result-card .match-score {
+            background: linear-gradient(135deg, var(--success-color), #20c997);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .ai-analysis-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .research-compatibility {
+            background: #f8f9ff;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .compatibility-meter {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+
+        .compatibility-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--warning-color), var(--success-color));
+            border-radius: 4px;
+            transition: width 0.8s ease;
+        }
+
         .feature-title {
             font-size: 1.3rem;
             font-weight: 600;
@@ -511,20 +795,24 @@
         <!-- AI Features Section -->
         <div class="feature-section">
             <div class="text-center mb-4">
-                <h3 class="fw-bold">How Our AI Assistant Works</h3>
-                <p class="text-muted">Advanced machine learning algorithms to find your ideal academic collaborators</p>
+                <h3 class="fw-bold">Comprehensive AI-Powered Academic Tools</h3>
+                <p class="text-muted">Advanced machine learning algorithms for complete academic collaboration analysis</p>
             </div>
             
-            <div class="row g-4">
+            <!-- Primary AI Features -->
+            <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <div class="ai-feature-card" onclick="selectFeature(this, 'cv-analysis')">
                         <div class="feature-icon">
                             <i class="fas fa-file-alt"></i>
                         </div>
-                        <h4 class="feature-title">CV Analysis</h4>
+                        <h4 class="feature-title">AI CV Analysis</h4>
                         <p class="feature-description">
-                            Upload your CV and our AI will extract your research interests, skills, and academic background automatically.
+                            Deep learning NLP models extract research interests, methodologies, and collaboration patterns from your CV automatically.
                         </p>
+                        <div class="ai-tech-badge">
+                            <i class="fas fa-robot me-1"></i>Natural Language Processing
+                        </div>
                     </div>
                 </div>
                 
@@ -533,24 +821,183 @@
                         <div class="feature-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h4 class="feature-title">Smart Matching</h4>
+                        <h4 class="feature-title">Neural Matching</h4>
                         <p class="feature-description">
-                            Advanced algorithms analyze compatibility based on research areas, collaboration history, and academic fit.
+                            Transformer-based models analyze semantic similarity and research compatibility using vector embeddings.
                         </p>
+                        <div class="ai-tech-badge">
+                            <i class="fas fa-project-diagram me-1"></i>Neural Networks
+                        </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-4">
-                    <div class="ai-feature-card" onclick="selectFeature(this, 'personalized-results')">
+                    <div class="ai-feature-card" onclick="selectFeature(this, 'publication-analysis')">
                         <div class="feature-icon">
-                            <i class="fas fa-user-check"></i>
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <h4 class="feature-title">Personalized Results</h4>
+                        <h4 class="feature-title">Publication Intelligence</h4>
                         <p class="feature-description">
-                            Get ranked recommendations with match scores and explanations for each potential collaboration.
+                            AI analyzes citation networks, research impact, and publication trends to predict collaboration success.
+                        </p>
+                        <div class="ai-tech-badge">
+                            <i class="fas fa-sitemap me-1"></i>Graph Neural Networks
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced AI Features -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3">
+                    <div class="ai-feature-card compact" onclick="selectFeature(this, 'network-analysis')">
+                        <div class="feature-icon small">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h5 class="feature-title">Network Analysis</h5>
+                        <p class="feature-description small">
+                            AI maps collaboration networks and identifies influential researchers using graph algorithms.
                         </p>
                     </div>
                 </div>
+                
+                <div class="col-lg-3">
+                    <div class="ai-feature-card compact" onclick="selectFeature(this, 'trend-prediction')">
+                        <div class="feature-icon small">
+                            <i class="fas fa-crystal-ball"></i>
+                        </div>
+                        <h5 class="feature-title">Research Trends</h5>
+                        <p class="feature-description small">
+                            Machine learning models predict emerging research areas and funding opportunities.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <div class="ai-feature-card compact" onclick="selectFeature(this, 'geographic-ai')">
+                        <div class="feature-icon small">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h5 class="feature-title">Geographic Intelligence</h5>
+                        <p class="feature-description small">
+                            AI considers location factors, visa requirements, and regional research strengths.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <div class="ai-feature-card compact" onclick="selectFeature(this, 'real-time-chat')">
+                        <div class="feature-icon small">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h5 class="feature-title">AI Research Assistant</h5>
+                        <p class="feature-description small">
+                            Conversational AI chatbot answers specific questions about faculty and research.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Chat Assistant Section -->
+        <div class="chat-section" id="chat-section" style="display: none;">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">AI Research Assistant</h3>
+                <p class="text-muted">Ask our AI specific questions about faculty, research areas, or collaborations</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="ai-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI research assistant. I can help you find faculty members, analyze research trends, or answer questions about academic collaborations. What would you like to know?</p>
+                            <div class="message-suggestions">
+                                <button class="suggestion-btn" onclick="sendSuggestion('Find experts in machine learning')">Find ML experts</button>
+                                <button class="suggestion-btn" onclick="sendSuggestion('Show trending research areas')">Trending topics</button>
+                                <button class="suggestion-btn" onclick="sendSuggestion('Compare research impact metrics')">Impact analysis</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="chat-input" placeholder="Ask about faculty, research areas, collaborations..." onkeypress="handleChatKeyPress(event)">
+                        <button class="btn btn-primary" onclick="sendChatMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Analysis Options -->
+        <div class="analysis-options" id="analysis-options" style="display: none;">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">Advanced AI Analysis Options</h3>
+                <p class="text-muted">Customize your analysis with specific AI-powered criteria</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="analysis-option-card">
+                        <h5><i class="fas fa-microscope me-2 text-primary"></i>Research Impact Analysis</h5>
+                        <p>AI analyzes h-index, citation patterns, and publication impact using bibliometric algorithms.</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="impact-analysis" checked>
+                            <label class="form-check-label" for="impact-analysis">
+                                Include impact metrics in matching
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="analysis-option-card">
+                        <h5><i class="fas fa-users me-2 text-success"></i>Collaboration Network</h5>
+                        <p>Graph neural networks map existing collaborations and predict successful partnerships.</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="network-analysis" checked>
+                            <label class="form-check-label" for="network-analysis">
+                                Analyze collaboration networks
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="analysis-option-card">
+                        <h5><i class="fas fa-chart-area me-2 text-warning"></i>Research Trend Alignment</h5>
+                        <p>ML models identify emerging research trends and predict future research directions.</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="trend-analysis" checked>
+                            <label class="form-check-label" for="trend-analysis">
+                                Consider research trends
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="analysis-option-card">
+                        <h5><i class="fas fa-map-marked-alt me-2 text-info"></i>Geographic Optimization</h5>
+                        <p>AI considers visa requirements, time zones, and regional research funding patterns.</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="geographic-analysis">
+                            <label class="form-check-label" for="geographic-analysis">
+                                Include geographic factors
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" onclick="proceedToUpload()">
+                    <i class="fas fa-arrow-right me-2"></i>Proceed to CV Upload
+                </button>
             </div>
         </div>
 
@@ -655,12 +1102,99 @@
         <!-- Results Section -->
         <div class="results-section" id="results-section">
             <div class="text-center mb-4">
-                <h3 class="fw-bold">Your AI-Powered Recommendations</h3>
-                <p class="text-muted">Here are faculty members who match your research profile</p>
+                <h3 class="fw-bold">Comprehensive AI Analysis Results</h3>
+                <p class="text-muted">Multi-layered AI analysis reveals optimal academic collaborations</p>
+            </div>
+
+            <!-- AI Analysis Summary -->
+            <div class="analysis-summary" id="analysis-summary">
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-brain text-primary"></i>
+                            </div>
+                            <div class="metric-value" id="ai-confidence">94%</div>
+                            <div class="metric-label">AI Confidence</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-users text-success"></i>
+                            </div>
+                            <div class="metric-value" id="matches-found">847</div>
+                            <div class="metric-label">Faculty Analyzed</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-chart-line text-warning"></i>
+                            </div>
+                            <div class="metric-value" id="research-areas">12</div>
+                            <div class="metric-label">Research Areas</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-globe text-info"></i>
+                            </div>
+                            <div class="metric-value" id="universities-covered">15</div>
+                            <div class="metric-label">Universities</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Insights -->
+            <div class="ai-insights mb-4">
+                <h4 class="fw-bold mb-3"><i class="fas fa-lightbulb me-2 text-warning"></i>AI Insights</h4>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="insight-card">
+                            <h6><i class="fas fa-trending-up me-2"></i>Research Trend Analysis</h6>
+                            <p class="small">Your research aligns with emerging trends in AI-driven healthcare solutions, showing 89% growth in recent publications.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="insight-card">
+                            <h6><i class="fas fa-network-wired me-2"></i>Collaboration Network</h6>
+                            <p class="small">Optimal network connections identified with researchers who have complementary skills and strong citation cross-references.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
+            <!-- Faculty Recommendations -->
             <div id="results-container">
                 <!-- Results will be populated here -->
+            </div>
+
+            <!-- Advanced Analytics -->
+            <div class="advanced-analytics mt-4">
+                <h4 class="fw-bold mb-3"><i class="fas fa-chart-bar me-2 text-primary"></i>Advanced Analytics</h4>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="analytics-card">
+                            <h6>Publication Impact Prediction</h6>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-success" style="width: 87%"></div>
+                            </div>
+                            <small class="text-muted">87% predicted success rate for joint publications</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="analytics-card">
+                            <h6>Geographic Compatibility</h6>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-info" style="width: 76%"></div>
+                            </div>
+                            <small class="text-muted">76% location-based collaboration feasibility</small>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="text-center mt-4">
@@ -668,7 +1202,10 @@
                     <i class="fas fa-redo me-2"></i>Analyze Another CV
                 </button>
                 <button class="btn btn-outline-primary btn-lg ms-2" onclick="exportResults()">
-                    <i class="fas fa-download me-2"></i>Export Results
+                    <i class="fas fa-download me-2"></i>Export Full Report
+                </button>
+                <button class="btn btn-outline-secondary btn-lg ms-2" onclick="showDetailedAnalysis()">
+                    <i class="fas fa-microscope me-2"></i>Detailed Analysis
                 </button>
             </div>
         </div>
@@ -777,7 +1314,66 @@
             // Add selected class to clicked card
             element.classList.add('selected');
             
-            // Scroll to upload section
+            // Handle different feature types
+            switch(featureType) {
+                case 'real-time-chat':
+                    showChatSection();
+                    break;
+                case 'cv-analysis':
+                case 'smart-matching':
+                case 'publication-analysis':
+                    showAnalysisOptions();
+                    break;
+                case 'network-analysis':
+                case 'trend-prediction':
+                case 'geographic-ai':
+                    showAdvancedFeatureInfo(featureType);
+                    break;
+                default:
+                    scrollToUpload();
+            }
+        }
+
+        function showChatSection() {
+            document.getElementById('chat-section').style.display = 'block';
+            document.getElementById('analysis-options').style.display = 'none';
+            document.getElementById('upload-section').style.display = 'none';
+            
+            document.getElementById('chat-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function showAnalysisOptions() {
+            document.getElementById('analysis-options').style.display = 'block';
+            document.getElementById('chat-section').style.display = 'none';
+            document.getElementById('upload-section').style.display = 'none';
+            
+            document.getElementById('analysis-options').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function showAdvancedFeatureInfo(featureType) {
+            const featureDescriptions = {
+                'network-analysis': 'AI maps collaboration networks using graph neural networks to identify influential researchers and predict successful partnerships.',
+                'trend-prediction': 'Machine learning models analyze publication patterns and funding data to predict emerging research areas and opportunities.',
+                'geographic-ai': 'AI considers location factors, visa requirements, time zones, and regional research strengths for optimal collaboration planning.'
+            };
+            
+            alert(`${featureDescriptions[featureType]}\n\nThis feature works in combination with CV analysis. Please select CV Analysis to proceed.`);
+        }
+
+        function proceedToUpload() {
+            document.getElementById('analysis-options').style.display = 'none';
+            document.getElementById('upload-section').style.display = 'block';
+            
+            document.getElementById('upload-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToUpload() {
             document.getElementById('upload-section').scrollIntoView({
                 behavior: 'smooth'
             });
@@ -835,69 +1431,164 @@
             activateStep();
         }
 
-        // Show analysis results
+        // Show enhanced AI analysis results
         function showResults() {
             document.getElementById('progress-section').style.display = 'none';
             document.getElementById('results-section').style.display = 'block';
             
-            // Generate mock results
+            // Animate metrics
+            animateMetrics();
+            
+            // Generate enhanced mock results with AI analysis
             const mockResults = [
                 {
                     name: "Dr. Sarah Johnson",
                     university: "McMaster University",
-                    department: "Computer Science",
+                    department: "Health Evidence & Impact",
                     matchScore: 95,
-                    researchAreas: ["Machine Learning", "AI in Healthcare", "Data Mining"],
-                    reason: "Strong overlap in machine learning research and published papers in similar domains"
+                    hIndex: 34,
+                    researchAreas: ["Machine Learning", "AI in Healthcare", "Clinical Decision Support", "Medical Data Mining"],
+                    reason: "Neural network analysis shows 94% semantic similarity in research methodologies. Citation network analysis reveals 23 shared references and strong co-authorship potential. Publication trend alignment: 89%."
                 },
                 {
                     name: "Prof. Michael Chen",
                     university: "University of Toronto",
-                    department: "Engineering",
+                    department: "Computer Science",
                     matchScore: 87,
-                    researchAreas: ["Robotics", "Computer Vision", "Autonomous Systems"],
-                    reason: "Complementary research interests and collaboration potential in AI applications"
+                    hIndex: 42,
+                    researchAreas: ["Computer Vision", "Robotics", "Deep Learning", "Autonomous Systems"],
+                    reason: "Graph neural network mapping identifies complementary expertise with high collaboration success probability (83%). Geographic proximity optimization score: 92%. Research trajectory alignment indicates optimal 6-month collaboration window."
                 },
                 {
                     name: "Dr. Emily Rodriguez",
-                    university: "McGill University",
-                    department: "Mathematics",
+                    university: "McGill University", 
+                    department: "Mathematics & Statistics",
                     matchScore: 82,
-                    researchAreas: ["Statistical Learning", "Optimization", "Applied Mathematics"],
-                    reason: "Mathematical foundations that align with your research methodologies"
+                    hIndex: 28,
+                    researchAreas: ["Statistical Learning", "Bayesian Methods", "Optimization", "Applied Mathematics"],
+                    reason: "Mathematical foundation compatibility detected through embedding analysis. Predictive modeling suggests 78% joint publication success rate. Network influence analysis shows potential for +25% citation boost through collaboration."
+                },
+                {
+                    name: "Dr. Alex Thompson",
+                    university: "University of British Columbia",
+                    department: "Biomedical Engineering",
+                    matchScore: 79,
+                    hIndex: 31,
+                    researchAreas: ["Biomedical AI", "Signal Processing", "Medical Imaging", "Neural Interfaces"],
+                    reason: "Cross-disciplinary AI analysis reveals emerging collaboration opportunities. Trend prediction models indicate this partnership aligns with 3 high-growth research areas. Network analysis shows optimal timing for collaboration."
                 }
             ];
             
             displayResults(mockResults);
+            
+            // Scroll to results
+            document.getElementById('results-section').scrollIntoView({
+                behavior: 'smooth'
+            });
         }
 
-        // Display results
+        function animateMetrics() {
+            // Animate the metrics with counting effect
+            const metrics = [
+                { id: 'ai-confidence', target: 94, suffix: '%' },
+                { id: 'matches-found', target: 847, suffix: '' },
+                { id: 'research-areas', target: 12, suffix: '' },
+                { id: 'universities-covered', target: 15, suffix: '' }
+            ];
+
+            metrics.forEach(metric => {
+                const element = document.getElementById(metric.id);
+                if (element) {
+                    animateCount(element, 0, metric.target, metric.suffix, 2000);
+                }
+            });
+        }
+
+        function animateCount(element, start, end, suffix, duration) {
+            const range = end - start;
+            const stepTime = Math.abs(Math.floor(duration / range));
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += 1;
+                element.textContent = current + suffix;
+                if (current === end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Display enhanced results with AI analysis
         function displayResults(results) {
             const container = document.getElementById('results-container');
-            container.innerHTML = '';
+            container.innerHTML = '<h4 class="fw-bold mb-3"><i class="fas fa-users me-2 text-primary"></i>Top Faculty Matches</h4>';
             
             results.forEach((result, index) => {
                 const resultCard = document.createElement('div');
                 resultCard.className = 'result-card';
                 resultCard.innerHTML = `
+                    <div class="ai-analysis-badge">AI Analyzed</div>
                     <div class="d-flex justify-content-between align-items-start mb-3">
                         <div>
                             <h5 class="mb-1">${result.name}</h5>
                             <p class="text-muted mb-0">${result.department}, ${result.university}</p>
+                            <small class="text-success"><i class="fas fa-medal me-1"></i>H-index: ${result.hIndex || Math.floor(Math.random() * 50) + 20}</small>
                         </div>
                         <span class="match-score">${result.matchScore}% Match</span>
                     </div>
-                    <div class="mb-3">
-                        <strong>Research Areas:</strong>
-                        ${result.researchAreas.map(area => `<span class="badge bg-primary me-1">${area}</span>`).join('')}
+                    
+                    <div class="research-compatibility">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small class="fw-bold">Research Compatibility</small>
+                            <small class="text-muted">${result.matchScore}%</small>
+                        </div>
+                        <div class="compatibility-meter">
+                            <div class="compatibility-fill" style="width: ${result.matchScore}%"></div>
+                        </div>
                     </div>
-                    <p class="mb-3"><strong>Why this match:</strong> ${result.reason}</p>
-                    <div class="d-flex gap-2">
+                    
+                    <div class="mb-3">
+                        <strong>Research Areas:</strong><br>
+                        ${result.researchAreas.map(area => `<span class="badge bg-primary me-1 mb-1">${area}</span>`).join('')}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <strong><i class="fas fa-brain me-1"></i>AI Analysis:</strong>
+                        <p class="mb-2">${result.reason}</p>
+                        <div class="row g-2 text-center">
+                            <div class="col-4">
+                                <div class="small">
+                                    <div class="fw-bold text-primary">${Math.floor(Math.random() * 30) + 70}%</div>
+                                    <div class="text-muted small">Citation Overlap</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="small">
+                                    <div class="fw-bold text-success">${Math.floor(Math.random() * 20) + 80}%</div>
+                                    <div class="text-muted small">Method Compatibility</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="small">
+                                    <div class="fw-bold text-warning">${Math.floor(Math.random() * 25) + 75}%</div>
+                                    <div class="text-muted small">Network Strength</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2 flex-wrap">
                         <button class="btn btn-primary btn-sm" onclick="viewProfile('${result.name}')">
                             <i class="fas fa-user me-1"></i>View Profile
                         </button>
                         <button class="btn btn-outline-primary btn-sm" onclick="contactFaculty('${result.name}')">
                             <i class="fas fa-envelope me-1"></i>Contact
+                        </button>
+                        <button class="btn btn-outline-success btn-sm" onclick="analyzeTogether('${result.name}')">
+                            <i class="fas fa-chart-line me-1"></i>Collaboration Potential
+                        </button>
+                        <button class="btn btn-outline-info btn-sm" onclick="showPublications('${result.name}')">
+                            <i class="fas fa-file-alt me-1"></i>Publications
                         </button>
                     </div>
                 `;
@@ -938,6 +1629,99 @@
         // Contact faculty
         function contactFaculty(name) {
             alert(`Opening contact form for ${name} - This will open the contact interface.`);
+        }
+
+        // Additional AI analysis functions
+        function analyzeTogether(name) {
+            alert(`AI Collaboration Analysis for ${name}:\n\n• Predicted joint publication success: 89%\n• Complementary skill overlap: 76%\n• Network influence boost: +23%\n• Optimal collaboration timeline: 6-12 months\n\nThis analysis uses machine learning models trained on successful academic partnerships.`);
+        }
+
+        function showPublications(name) {
+            alert(`AI Publication Analysis for ${name}:\n\n• Recent publications: 23 in last 2 years\n• Citation growth rate: +34% annually\n• Co-authorship network: 45 active collaborators\n• Research impact prediction: High growth\n\nDetailed publication analysis available in full report.`);
+        }
+
+        function showDetailedAnalysis() {
+            alert(`Comprehensive AI Analysis Report:\n\n🧠 Neural Network Analysis:\n• Semantic similarity scoring using transformer models\n• Research area embedding comparison\n• Citation network graph analysis\n\n📊 Predictive Analytics:\n• Collaboration success probability modeling\n• Publication impact forecasting\n• Career trajectory alignment\n\n🌐 Network Intelligence:\n• Academic influence mapping\n• Collaboration pathway optimization\n• Geographic compatibility scoring\n\nFull PDF report generation available.`);
+        }
+
+        // Chat functionality
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            
+            if (message) {
+                addMessageToChat('user', message);
+                input.value = '';
+                
+                // Simulate AI response
+                setTimeout(() => {
+                    const aiResponse = generateAIResponse(message);
+                    addMessageToChat('ai', aiResponse);
+                }, 1000);
+            }
+        }
+
+        function sendSuggestion(suggestion) {
+            addMessageToChat('user', suggestion);
+            
+            setTimeout(() => {
+                const aiResponse = generateAIResponse(suggestion);
+                addMessageToChat('ai', aiResponse);
+            }, 1000);
+        }
+
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        function addMessageToChat(sender, message) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = sender === 'user' ? 'user-message' : 'ai-message';
+            
+            const avatar = sender === 'user' ? '<i class="fas fa-user"></i>' : '<i class="fas fa-robot"></i>';
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">
+                    ${avatar}
+                </div>
+                <div class="message-content">
+                    <p>${message}</p>
+                </div>
+            `;
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function generateAIResponse(userMessage) {
+            const responses = {
+                'find experts in machine learning': 'I found 147 machine learning experts in our database. Top matches include Dr. Sarah Johnson (McMaster) with 95% compatibility in AI healthcare applications, Prof. Michael Chen (UofT) specializing in computer vision, and Dr. Emily Rodriguez (McGill) with expertise in statistical learning. Would you like detailed analysis of any specific researcher?',
+                'show trending research areas': 'Current trending research areas based on AI analysis:\n\n🔥 Top Growing Fields:\n• AI in Healthcare (+89% publications)\n• Quantum Machine Learning (+76% growth)\n• Sustainable AI Systems (+68% interest)\n• Federated Learning (+54% adoption)\n\nThese trends are identified using NLP analysis of recent publications and funding patterns.',
+                'compare research impact metrics': 'I can analyze research impact using multiple AI-powered metrics:\n\n📈 Available Analyses:\n• H-index trajectory prediction\n• Citation network influence\n• Collaboration impact scoring\n• Publication trend analysis\n• Future impact forecasting\n\nWhich specific researchers would you like me to compare?'
+            };
+            
+            const lowerMessage = userMessage.toLowerCase();
+            
+            // Check for exact matches first
+            for (const [key, response] of Object.entries(responses)) {
+                if (lowerMessage.includes(key.toLowerCase())) {
+                    return response;
+                }
+            }
+            
+            // Generate contextual response based on keywords
+            if (lowerMessage.includes('find') || lowerMessage.includes('search')) {
+                return `I can help you find faculty members using advanced AI search. Our neural matching system analyzes research compatibility, citation networks, and collaboration potential. What specific research area or criteria are you looking for?`;
+            } else if (lowerMessage.includes('trend') || lowerMessage.includes('emerging')) {
+                return `Our AI trend analysis monitors 50,000+ academic publications daily. We track emerging research areas, funding patterns, and collaboration networks. Current hot topics include AI safety, quantum computing applications, and sustainable technology. What specific field interests you?`;
+            } else if (lowerMessage.includes('collaboration') || lowerMessage.includes('partner')) {
+                return `AI collaboration analysis considers multiple factors: research compatibility (semantic similarity), publication impact prediction, geographic feasibility, and network effects. I can analyze potential partnerships and predict success rates. Who are you considering collaborating with?`;
+            } else {
+                return `I understand you're asking about "${userMessage}". Our AI system can help with faculty search, research trend analysis, collaboration predictions, and academic network mapping. Could you be more specific about what you'd like to explore?`;
+            }
         }
 
         // Drag and drop functionality
