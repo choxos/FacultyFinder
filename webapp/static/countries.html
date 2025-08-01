@@ -50,32 +50,111 @@
             line-height: 1.6;
             color: var(--text-primary);
             background-color: #f8f9fa;
-            padding-top: 80px;
+            padding-top: 76px; /* Accommodate fixed navbar height */
+        }
+        
+        @media (max-width: 991.98px) {
+            body {
+                padding-top: 70px; /* Smaller padding for mobile */
+            }
         }
 
-        /* Navigation */
+        /* Enhanced Navigation Styling */
         .navbar {
-            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            animation: fadeInDown 0.6s ease-out;
         }
-
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color) !important;
-        }
-
-        .nav-link {
+        
+        .navbar-nav .nav-link {
+            font-size: 0.9rem;
             font-weight: 500;
-            color: var(--text-primary) !important;
-            transition: color 0.3s ease;
+            padding: 0.75rem 1rem !important;
+            margin: 0 0.2rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            color: #495057 !important;
         }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-color) !important;
+        
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+            color: #007bff !important;
+            transform: translateY(-1px);
+        }
+        
+        .navbar-nav .nav-link.active {
+            background-color: #e3f2fd;
+            color: #1976d2 !important;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+        }
+        
+        .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1976d2 !important;
+        }
+        
+        .navbar-brand:hover {
+            color: #1565c0 !important;
+        }
+        
+        .navbar-nav .nav-link i {
+            font-size: 0.85rem;
+            margin-right: 0.4rem;
+        }
+        
+        /* Dropdown improvements */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 0.5rem 0;
+        }
+        
+        .dropdown-item {
+            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+        
+        /* Button styling */
+        .navbar .btn {
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 991.98px) {
+            .navbar-nav .nav-link {
+                font-size: 0.95rem;
+                padding: 0.6rem 1rem !important;
+                margin: 0.1rem 0;
+            }
+            
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Subtle animation for navbar */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Header Section */
