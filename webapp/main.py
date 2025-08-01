@@ -7,16 +7,18 @@ High-performance API for academic faculty discovery
 import os
 import logging
 import time
+import hashlib
 from typing import List, Dict, Optional, Any
 from contextlib import asynccontextmanager
 
 # FastAPI imports
-from fastapi import FastAPI, HTTPException, Query, Path, Request, status, Depends, Cookie, Response
+from fastapi import FastAPI, HTTPException, Query, Path, Request, status, Depends, Cookie, Response, Form
 from fastapi.responses import HTMLResponse, JSONResponse, FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from starlette.middleware.sessions import SessionMiddleware
+from fastapi.templating import Jinja2Templates
 
 # Database imports
 import asyncpg
@@ -120,6 +122,131 @@ app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET", "yo
 # Mount static files
 static_dir = "webapp/static" if os.path.exists("webapp/static") else "static"
 app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
+# Initialize templates
+templates = Jinja2Templates(directory="webapp/templates")
+
+# User Model with Granular Admin Permissions
+class User:
+    def __init__(self, user_data: dict):
+        self.id = user_data.get('id')
+        self.username = user_data.get('username', '')
+        self.email = user_data.get('email', '')
+        self.first_name = user_data.get('first_name', '')
+        self.last_name = user_data.get('last_name', '')
+        self.role = user_data.get('role', 'user')
+        self.is_active = user_data.get('is_active', True)
+        self.name = user_data.get('name', '')  # OAuth name
+        self.picture = user_data.get('picture', '')
+        self.is_admin_flag = user_data.get('is_admin', False)  # PostgreSQL
+        
+        # Admin Permissions
+        self.can_manage_ai_requests = user_data.get('can_manage_ai_requests', False)
+        self.can_manage_database = user_data.get('can_manage_database', False)
+        self.can_manage_users = user_data.get('can_manage_users', False)
+        self.is_superuser = user_data.get('is_superuser', False)
+        
+    @property
+    def is_authenticated(self):
+        return self.id is not None
+    
+    def is_admin(self):
+        # Check if user has any admin permissions
+        return (
+            self.role == 'admin' or 
+            self.is_admin_flag or 
+            self.can_manage_ai_requests or 
+            self.can_manage_database or 
+            self.can_manage_users or 
+            self.is_superuser
+        )
+    
+    def has_permission(self, permission: str) -> bool:
+        """Check if user has a specific admin permission"""
+        if self.is_superuser:
+            return True
+            
+        permission_map = {
+            'ai_requests': self.can_manage_ai_requests,
+            'database': self.can_manage_database,
+            'users': self.can_manage_users,
+            'admin': self.is_admin()
+        }
+        
+        return permission_map.get(permission, False)
+    
+    def get_admin_permissions(self) -> list:
+        """Get list of admin permissions this user has"""
+        permissions = []
+        if self.is_superuser:
+            return ['ai_requests', 'database', 'users', 'superuser']
+        
+        if self.can_manage_ai_requests:
+            permissions.append('ai_requests')
+        if self.can_manage_database:
+            permissions.append('database')
+        if self.can_manage_users:
+            permissions.append('users')
+            
+        return permissions
+    
+    @property
+    def full_name(self):
+        if self.name:  # OAuth name
+            return self.name
+        if self.first_name and self.last_name:
+            return f"{self.first_name} {self.last_name}"
+        return self.username or self.email
+    
+    def get_full_name(self):
+        return self.full_name
+
+# Authentication Dependencies
+async def get_current_user(request: Request) -> Optional[User]:
+    """Get current user from session"""
+    user_data = request.session.get('user')
+    if user_data:
+        return User(user_data)
+    return None
+
+async def require_auth(request: Request) -> User:
+    """Require authentication - redirect to login if not authenticated"""
+    user = await get_current_user(request)
+    if not user or not user.is_authenticated:
+        raise HTTPException(
+            status_code=302,
+            detail="Authentication required",
+            headers={"Location": "/login"}
+        )
+    return user
+
+async def require_admin(request: Request) -> User:
+    """Require any admin role"""
+    user = await require_auth(request)
+    if not user.is_admin():
+        raise HTTPException(status_code=403, detail="Admin access required")
+    return user
+
+async def require_ai_requests_permission(request: Request) -> User:
+    """Require AI requests management permission"""
+    user = await require_auth(request)
+    if not user.has_permission('ai_requests'):
+        raise HTTPException(status_code=403, detail="AI requests management permission required")
+    return user
+
+async def require_database_permission(request: Request) -> User:
+    """Require database management permission"""
+    user = await require_auth(request)
+    if not user.has_permission('database'):
+        raise HTTPException(status_code=403, detail="Database management permission required")
+    return user
+
+async def require_users_permission(request: Request) -> User:
+    """Require user management permission"""
+    user = await require_auth(request)
+    if not user.has_permission('users'):
+        raise HTTPException(status_code=403, detail="User management permission required")
+    return user
 
 # Pydantic models
 class StatsResponse(BaseModel):
@@ -261,7 +388,7 @@ class ProfessorUpdate(BaseModel):
     linkedin: Optional[str] = None
 
 # Database helper functions
-def get_db_connection():
+async def get_db_connection():
     """Get database connection from pool"""
     if not db_pool:
         raise HTTPException(status_code=500, detail="Database pool not initialized")
@@ -311,7 +438,7 @@ async def get_top_universities(limit: int = 8) -> List[University]:
 # Routes
 
 @app.get("/", response_class=HTMLResponse)
-async def homepage():
+async def homepage(request: Request):
     """Serve the homepage"""
     try:
         with open("webapp/static/index.html", "r") as f:
@@ -342,7 +469,7 @@ async def homepage():
         """)
 
 @app.get("/universities", response_class=HTMLResponse)
-async def universities_page():
+async def universities_page(request: Request):
     """Serve the universities page"""
     try:
         with open("webapp/static/universities.html", "r") as f:
@@ -361,7 +488,7 @@ async def universities_page():
         """)
 
 @app.get("/faculties", response_class=HTMLResponse)
-async def faculties_page():
+async def faculties_page(request: Request):
     """Serve the faculties page"""
     try:
         with open("webapp/static/faculties.html", "r") as f:
@@ -380,7 +507,7 @@ async def faculties_page():
         """)
 
 @app.get("/countries", response_class=HTMLResponse)
-async def countries_page():
+async def countries_page(request: Request):
     """Serve the countries page"""
     try:
         with open("webapp/static/countries.html", "r") as f:
@@ -399,7 +526,7 @@ async def countries_page():
         """)
 
 @app.get("/ai-assistant", response_class=HTMLResponse)
-async def ai_assistant_page():
+async def ai_assistant_page(request: Request):
     """Serve the AI assistant page"""
     try:
         with open("webapp/static/ai-assistant.html", "r") as f:
@@ -420,7 +547,7 @@ async def ai_assistant_page():
 # API Routes
 
 @app.get("/api/v1/stats", response_model=StatsResponse)
-async def get_stats():
+async def get_stats(request: Request):
     """Get summary statistics"""
     try:
         return await get_summary_statistics()
@@ -430,6 +557,7 @@ async def get_stats():
 
 @app.get("/api/v1/universities", response_model=UniversitiesResponse)
 async def get_universities(
+    request: Request,
     search: Optional[str] = Query(None, description="Search term for university name or location"),
     country: Optional[str] = Query(None, description="Filter by country"),
     province: Optional[str] = Query(None, description="Filter by province/state"),
@@ -561,6 +689,7 @@ async def get_universities(
 
 @app.get("/api/v1/faculties", response_model=FacultiesResponse)
 async def get_faculties(
+    request: Request,
     search: Optional[str] = Query(None, description="Search term for professor name or research areas"),
     university: Optional[str] = Query(None, description="Filter by university code"),
     department: Optional[str] = Query(None, description="Filter by department"),
@@ -701,7 +830,7 @@ async def get_faculties(
         raise HTTPException(status_code=500, detail="Failed to retrieve faculties")
 
 @app.get("/api/v1/countries", response_model=List[Country])
-async def get_countries():
+async def get_countries(request: Request):
     """Get countries with university and faculty counts"""
     try:
         async with get_db_connection() as conn:
@@ -725,7 +854,7 @@ async def get_countries():
         raise HTTPException(status_code=500, detail="Failed to retrieve countries")
 
 @app.get("/api/v1/professor/{professor_id}")
-async def get_professor(professor_id: str = Path(..., description="Professor ID (e.g., CA-ON-002-00001) or sequence number")):
+async def get_professor(request: Request, professor_id: str = Path(..., description="Professor ID (e.g., CA-ON-002-00001) or sequence number")):
     """Get individual professor details"""
     try:
         async with get_db_connection() as conn:
@@ -797,13 +926,13 @@ async def get_professor(professor_id: str = Path(..., description="Professor ID 
 
 # Professor detail route
 @app.get("/professor/{professor_id}")
-async def get_professor_page(professor_id: str):
+async def get_professor_page(request: Request, professor_id: str):
     """Serve professor detail page"""
     return FileResponse(os.path.join(static_dir, "professor.html"))
 
 # University API endpoint
 @app.get("/api/v1/university/{university_code}", response_model=University)
-async def get_university_by_code(university_code: str):
+async def get_university_by_code(request: Request, university_code: str):
     """Get university details by university code"""
     try:
         async with get_db_connection() as conn:
@@ -842,20 +971,111 @@ async def get_university_by_code(university_code: str):
 
 # University profile page route
 @app.get("/university/{university_code}")
-async def get_university_page(university_code: str):
+async def get_university_page(request: Request, university_code: str):
     """Serve university profile page"""
     return FileResponse(os.path.join(static_dir, "university.html"))
 
 # Authentication routes
-@app.get("/login")
-async def get_login_page():
+@app.get("/login", response_class=HTMLResponse)
+async def get_login_page(request: Request):
     """Serve login page"""
-    return FileResponse(os.path.join(static_dir, "login.html"))
+    current_user = await get_current_user(request)
+    if current_user and current_user.is_authenticated:
+        return RedirectResponse(url="/dashboard", status_code=302)
+    
+    return templates.TemplateResponse("auth/login.html", {
+        "request": request,
+        "current_user": current_user
+    })
 
-@app.get("/register")
-async def get_register_page():
+@app.post("/login")
+async def login_user(
+    request: Request,
+    username_or_email: str = Form(...),
+    password: str = Form(...),
+    remember: Optional[str] = Form(None)
+):
+    """Handle user login"""
+    try:
+        # Find user by username or email using PostgreSQL
+        async with get_db_connection() as conn:
+            user_data = await conn.fetchrow("""
+                SELECT * FROM users 
+                WHERE (username = $1 OR email = $1) AND is_active = TRUE
+            """, username_or_email)
+        
+        if not user_data:
+            return templates.TemplateResponse("auth/login.html", {
+                "request": request,
+                "error": "Invalid username/email or password",
+                "username_or_email": username_or_email,
+                "current_user": None
+            })
+        
+        # Verify password (using simple SHA256 for now - should use bcrypt in production)
+        password_hash = hashlib.sha256(password.encode()).hexdigest()
+        if user_data['password_hash'] != password_hash:
+            return templates.TemplateResponse("auth/login.html", {
+                "request": request,
+                "error": "Invalid username/email or password",
+                "username_or_email": username_or_email,
+                "current_user": None
+            })
+        
+        # Update last login
+        async with get_db_connection() as conn:
+            await conn.execute("""
+                UPDATE users 
+                SET last_login = CURRENT_TIMESTAMP, login_count = login_count + 1
+                WHERE id = $1
+            """, user_data['id'])
+        
+        # Store user in session
+        request.session['user'] = dict(user_data)
+        
+        # Check if user is admin and redirect accordingly
+        user = User(dict(user_data))
+        if user.is_admin():
+            return RedirectResponse(url="/admin/dashboard", status_code=302)
+        else:
+            return RedirectResponse(url="/dashboard", status_code=302)
+                
+    except Exception as e:
+        logger.error(f"Login error: {e}")
+        return templates.TemplateResponse("auth/login.html", {
+            "request": request,
+            "error": "Login failed. Please try again.",
+            "username_or_email": username_or_email,
+            "current_user": None
+        })
+
+@app.get("/register", response_class=HTMLResponse)
+async def get_register_page(request: Request):
     """Serve registration page"""
-    return FileResponse(os.path.join(static_dir, "register.html"))
+    current_user = await get_current_user(request)
+    if current_user and current_user.is_authenticated:
+        return RedirectResponse(url="/dashboard", status_code=302)
+    
+    return templates.TemplateResponse("auth/register.html", {
+        "request": request,
+        "current_user": current_user
+    })
+
+@app.get("/dashboard", response_class=HTMLResponse)
+async def dashboard(request: Request, user: User = Depends(require_auth)):
+    """User dashboard"""
+    return templates.TemplateResponse("user/dashboard.html", {
+        "request": request,
+        "current_user": user
+    })
+
+@app.get("/profile", response_class=HTMLResponse)
+async def profile(request: Request, user: User = Depends(require_auth)):
+    """User profile page"""
+    return templates.TemplateResponse("user/profile.html", {
+        "request": request,
+        "current_user": user
+    })
 
 # OAuth routes
 @app.get("/auth/{provider}")
@@ -903,18 +1123,23 @@ async def oauth_callback(request: Request, provider: str):
 async def logout(request: Request):
     """Logout user and clear session"""
     request.session.clear()
-    return RedirectResponse(url="/?logout=true")
+    return RedirectResponse(url="/login?logout=true", status_code=302)
+
+@app.get("/logout")
+async def logout_alias(request: Request):
+    """Logout alias for convenience"""
+    return await logout(request)
 
 @app.get("/auth/user")
-async def get_current_user(request: Request):
+async def get_current_user_endpoint(request: Request) -> User:
     """Get current authenticated user info"""
-    user = request.session.get('user')
-    if not user:
+    user = await get_current_user(request)
+    if not user or not user.is_authenticated:
         raise HTTPException(status_code=401, detail="Not authenticated")
     return user
 
 @app.get("/health")
-async def health_check():
+async def health_check(request: Request):
     """Health check endpoint"""
     try:
         async with get_db_connection() as conn:
@@ -945,22 +1170,84 @@ async def internal_error_handler(request: Request, exc: Exception):
 
 # Admin routes
 @app.get("/admin", response_class=HTMLResponse)
-async def admin_dashboard():
+async def admin_redirect(request: Request):
+    """Redirect /admin to /admin/dashboard"""
+    return RedirectResponse(url="/admin/dashboard", status_code=302)
+
+@app.get("/admin/dashboard", response_class=HTMLResponse)
+async def admin_dashboard(request: Request, user: User = Depends(require_admin)):
     """Admin dashboard"""
-    return FileResponse("webapp/templates/admin/dashboard.html")
+    try:
+        # Get dashboard statistics using PostgreSQL
+        try:
+            async with get_db_connection() as conn:
+                users_count = await conn.fetchval("SELECT COUNT(*) FROM users")
+                professors_count = await conn.fetchval("SELECT COUNT(*) FROM professors")
+                universities_count = await conn.fetchval("SELECT COUNT(*) FROM universities")
+                
+                database_stats = {
+                    "users": {"count": users_count or 0},
+                    "professors": {"count": professors_count or 0},
+                    "universities": {"count": universities_count or 0},
+                    "user_search_history": {"count": 0}  # Placeholder
+                }
+        except Exception as e:
+            logger.error(f"Error getting database stats: {e}")
+            database_stats = {
+                "users": {"count": 0},
+                "professors": {"count": 0},
+                "universities": {"count": 0},
+                "user_search_history": {"count": 0}
+            }
+            
+            # Get recent notifications (mock for now)
+            notifications = []
+            
+            # System stats (mock for now)
+            system_stats = {
+                "cpu_percent": 25.3,
+                "memory": {"percent": 42.1},
+                "disk": {"percent": 67.8},
+                "uptime": {"days": 5}
+            }
+            
+            stats = {
+                "database": database_stats,
+                "system": system_stats,
+                "revenue": None,  # Not implemented yet
+                "users": None     # Not implemented yet
+            }
+            
+        return templates.TemplateResponse("admin/dashboard.html", {
+            "request": request,
+            "current_user": user,
+            "stats": stats,
+            "notifications": notifications
+        })
+    except Exception as e:
+        logger.error(f"Admin dashboard error: {e}")
+        raise HTTPException(status_code=500, detail="Failed to load admin dashboard")
 
 @app.get("/admin/ai-requests", response_class=HTMLResponse)
-async def admin_ai_requests():
+async def admin_ai_requests(request: Request, user: User = Depends(require_ai_requests_permission)):
     """Admin AI requests management page"""
-    return FileResponse("webapp/templates/admin/ai_requests.html")
+    return templates.TemplateResponse("admin/ai_requests.html", {
+        "request": request,
+        "current_user": user
+    })
 
 @app.get("/admin/database", response_class=HTMLResponse)
-async def admin_database():
+async def admin_database(request: Request, user: User = Depends(require_database_permission)):
     """Admin database management page"""
-    return FileResponse("webapp/templates/admin/database.html")
+    return templates.TemplateResponse("admin/database.html", {
+        "request": request,
+        "current_user": user
+    })
 
 @app.get("/api/v1/admin/ai-requests")
 async def admin_get_ai_requests(
+    request: Request,
+    user: User = Depends(require_ai_requests_permission),
     status: Optional[str] = None,
     service_type: Optional[str] = None,
     provider: Optional[str] = None,
@@ -1114,7 +1401,7 @@ async def admin_get_ai_requests(
         raise HTTPException(status_code=500, detail="Failed to fetch AI requests")
 
 @app.post("/api/v1/admin/ai-requests/{request_id}/update-status")
-async def admin_update_request_status(request_id: int, status: str):
+async def admin_update_request_status(request: Request, request_id: int, status: str, user: User = Depends(require_ai_requests_permission)):
     """Update AI request status"""
     try:
         async with get_db_connection() as conn:
@@ -1131,7 +1418,7 @@ async def admin_update_request_status(request_id: int, status: str):
         raise HTTPException(status_code=500, detail="Failed to update request status")
 
 @app.get("/api/v1/admin/ai-requests/stats")
-async def admin_ai_requests_stats():
+async def admin_ai_requests_stats(request: Request, user: User = Depends(require_ai_requests_permission)):
     """Get AI requests statistics for admin dashboard"""
     try:
         async with get_db_connection() as conn:
@@ -1196,6 +1483,8 @@ async def admin_ai_requests_stats():
 # Database Management API Routes
 @app.get("/api/v1/admin/universities")
 async def admin_get_universities(
+    request: Request,
+    user: User = Depends(require_database_permission),
     country: Optional[str] = None,
     province_state: Optional[str] = None,
     search: Optional[str] = None,
@@ -1259,7 +1548,7 @@ async def admin_get_universities(
         raise HTTPException(status_code=500, detail="Failed to fetch universities")
 
 @app.post("/api/v1/admin/universities")
-async def admin_create_university(university_data: UniversityCreate):
+async def admin_create_university(request: Request, university_data: UniversityCreate, user: User = Depends(require_database_permission)):
     """Create new university"""
     try:
         async with get_db_connection() as conn:
@@ -1292,7 +1581,7 @@ async def admin_create_university(university_data: UniversityCreate):
         raise HTTPException(status_code=500, detail="Failed to create university")
 
 @app.put("/api/v1/admin/universities/{university_id}")
-async def admin_update_university(university_id: int, university_data: UniversityUpdate):
+async def admin_update_university(request: Request, university_id: int, university_data: UniversityUpdate, user: User = Depends(require_database_permission)):
     """Update university"""
     try:
         async with get_db_connection() as conn:
@@ -1330,7 +1619,7 @@ async def admin_update_university(university_id: int, university_data: Universit
         raise HTTPException(status_code=500, detail="Failed to update university")
 
 @app.delete("/api/v1/admin/universities/{university_id}")
-async def admin_delete_university(university_id: int):
+async def admin_delete_university(request: Request, university_id: int, user: User = Depends(require_database_permission)):
     """Delete university"""
     try:
         async with get_db_connection() as conn:
@@ -1359,6 +1648,8 @@ async def admin_delete_university(university_id: int):
 
 @app.get("/api/v1/admin/professors")
 async def admin_get_professors(
+    request: Request,
+    user: User = Depends(require_database_permission),
     university_code: Optional[str] = None,
     department: Optional[str] = None,
     search: Optional[str] = None,
@@ -1425,7 +1716,7 @@ async def admin_get_professors(
         raise HTTPException(status_code=500, detail="Failed to fetch professors")
 
 @app.post("/api/v1/admin/professors")
-async def admin_create_professor(professor_data: ProfessorCreate):
+async def admin_create_professor(request: Request, professor_data: ProfessorCreate, user: User = Depends(require_database_permission)):
     """Create new professor"""
     try:
         async with get_db_connection() as conn:
@@ -1473,7 +1764,7 @@ async def admin_create_professor(professor_data: ProfessorCreate):
         raise HTTPException(status_code=500, detail="Failed to create professor")
 
 @app.put("/api/v1/admin/professors/{professor_id}")
-async def admin_update_professor(professor_id: int, professor_data: ProfessorUpdate):
+async def admin_update_professor(request: Request, professor_id: int, professor_data: ProfessorUpdate, user: User = Depends(require_database_permission)):
     """Update professor"""
     try:
         async with get_db_connection() as conn:
@@ -1527,7 +1818,7 @@ async def admin_update_professor(professor_id: int, professor_data: ProfessorUpd
         raise HTTPException(status_code=500, detail="Failed to update professor")
 
 @app.delete("/api/v1/admin/professors/{professor_id}")
-async def admin_delete_professor(professor_id: int):
+async def admin_delete_professor(request: Request, professor_id: int, user: User = Depends(require_database_permission)):
     """Delete professor"""
     try:
         async with get_db_connection() as conn:
@@ -1543,7 +1834,7 @@ async def admin_delete_professor(professor_id: int):
         raise HTTPException(status_code=500, detail="Failed to delete professor")
 
 @app.get("/api/v1/admin/countries")
-async def admin_get_countries():
+async def admin_get_countries(request: Request, user: User = Depends(require_database_permission)):
     """Get countries list derived from universities"""
     try:
         async with get_db_connection() as conn:
@@ -1565,7 +1856,7 @@ async def admin_get_countries():
         raise HTTPException(status_code=500, detail="Failed to fetch countries")
 
 @app.get("/api/v1/admin/database/stats")
-async def admin_database_stats():
+async def admin_database_stats(request: Request, user: User = Depends(require_database_permission)):
     """Get database statistics for admin dashboard"""
     try:
         async with get_db_connection() as conn:
@@ -1625,7 +1916,7 @@ async def admin_database_stats():
 
 # Favicon route to prevent 404 errors
 @app.get("/favicon.ico")
-async def get_favicon():
+async def get_favicon(request: Request):
     """Return 204 No Content for favicon to prevent 404 errors"""
     return Response(status_code=204)
 

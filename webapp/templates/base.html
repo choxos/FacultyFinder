@@ -240,8 +240,18 @@
                                 {% if current_user.is_admin() %}
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="/admin/dashboard">
-                                        <i class="fas fa-cogs me-2"></i>Admin Panel
+                                        <i class="fas fa-tachometer-alt me-2"></i>Admin Dashboard
                                     </a></li>
+                                    {% if current_user.has_permission('ai_requests') %}
+                                    <li><a class="dropdown-item" href="/admin/ai-requests">
+                                        <i class="fas fa-robot me-2"></i>AI Requests
+                                    </a></li>
+                                    {% endif %}
+                                    {% if current_user.has_permission('database') %}
+                                    <li><a class="dropdown-item" href="/admin/database">
+                                        <i class="fas fa-database me-2"></i>Database
+                                    </a></li>
+                                    {% endif %}
                                 {% endif %}
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="{{ url_for('logout') }}">
