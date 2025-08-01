@@ -437,12 +437,18 @@ async def get_top_universities(limit: int = 8) -> List[University]:
     """Get top universities by faculty count"""
     async with get_db_connection() as conn:
         query = """
-            SELECT u.id, u.name, u.country, u.city, u.university_code, COALESCE(u.province_state, '') as province, u.year_established,
-                   COUNT(p.id) as faculty_count
+            SELECT u.id, u.name, u.country, u.city, u.university_code, 
+                   COALESCE(u.province_state, '') as province, 
+                   COALESCE(u.province_state, '') as province_state,
+                   u.year_established as established,
+                   COALESCE(u.website, '') as website,
+                   COALESCE(u.university_type, '') as type,
+                   COUNT(p.id) as faculty_count,
+                   COUNT(DISTINCT COALESCE(p.department, 'Unknown')) as department_count
             FROM universities u
             LEFT JOIN professors p ON p.university_code = u.university_code
             WHERE u.name IS NOT NULL
-            GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state, u.year_established
+            GROUP BY u.id, u.name, u.country, u.city, u.university_code, u.province_state, u.year_established, u.website, u.university_type
             HAVING COUNT(p.id) > 0
             ORDER BY COUNT(p.id) DESC
             LIMIT $1
@@ -868,6 +874,15 @@ async def get_countries(request: Request):
     except Exception as e:
         logger.error(f"Error getting countries: {e}")
         raise HTTPException(status_code=500, detail="Failed to retrieve countries")
+
+@app.get("/api/v1/universities/top", response_model=List[University])
+async def get_top_universities_api(request: Request, limit: int = Query(6, ge=1, le=20, description="Number of top universities to return")):
+    """Get top universities by faculty count"""
+    try:
+        return await get_top_universities(limit)
+    except Exception as e:
+        logger.error(f"Error getting top universities: {e}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve top universities")
 
 @app.get("/api/v1/professor/{professor_id}")
 async def get_professor(request: Request, professor_id: str = Path(..., description="Professor ID (e.g., CA-ON-002-00001) or sequence number")):
