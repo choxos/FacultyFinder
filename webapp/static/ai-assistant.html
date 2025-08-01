@@ -157,6 +157,55 @@
             }
         }
 
+        /* Pricing section animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Pricing section transitions */
+        #ai-analysis-section,
+        #expert-review-section {
+            transition: all 0.3s ease-in-out;
+        }
+
+        #ai-analysis-section:not(.show):not(.hide),
+        #expert-review-section:not(.show):not(.hide) {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        #ai-analysis-section.show,
+        #expert-review-section.show {
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 0.4s ease-out;
+        }
+
+        #ai-analysis-section.hide,
+        #expert-review-section.hide {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeOut 0.3s ease-in;
+        }
+
         /* Header Section */
         .page-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -1801,6 +1850,28 @@
         let selectedPlan = '';
         let hasValidAPIKey = false;
 
+        // Helper functions for smooth section transitions
+        function showSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = 'block';
+                section.classList.remove('hide');
+                section.classList.add('show');
+            }
+        }
+
+        function hideSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section && section.style.display === 'block') {
+                section.classList.remove('show');
+                section.classList.add('hide');
+                setTimeout(() => {
+                    section.style.display = 'none';
+                    section.classList.remove('hide');
+                }, 300);
+            }
+        }
+
         // Select plan (free, paid, expert)
         function selectPlan(plan) {
             // Remove selected class from all plan cards
@@ -1826,17 +1897,21 @@
                 document.getElementById('ai-model-selection').style.display = 'block';
                 document.getElementById('api-key-section').style.display = 'none';
                 document.getElementById('pricing-options').style.display = 'none';
-                // Hide both pricing sections
-                document.getElementById('ai-analysis-section').style.display = 'none';
-                document.getElementById('expert-review-section').style.display = 'none';
+                // Hide both pricing sections with animation
+                hideSection('ai-analysis-section');
+                hideSection('expert-review-section');
             } else if (plan === 'paid') {
                 // Hide AI selection, show pricing for paid plan
                 document.getElementById('ai-model-selection').style.display = 'none';
                 document.getElementById('api-key-section').style.display = 'none';
                 document.getElementById('pricing-options').style.display = 'block';
-                // Show only AI analysis options, hide expert review
-                document.getElementById('ai-analysis-section').style.display = 'block';
-                document.getElementById('expert-review-section').style.display = 'none';
+                
+                // Animate transition to AI analysis options
+                hideSection('expert-review-section');
+                setTimeout(() => {
+                    showSection('ai-analysis-section');
+                }, 200);
+                
                 // Auto-set AI to 'all' for paid plans
                 selectedAI = 'all_models';
                 document.getElementById('selectedAI').value = 'all_models';
@@ -1845,9 +1920,13 @@
                 document.getElementById('ai-model-selection').style.display = 'none';
                 document.getElementById('api-key-section').style.display = 'none';
                 document.getElementById('pricing-options').style.display = 'block';
-                // Hide AI analysis options, show only expert review
-                document.getElementById('ai-analysis-section').style.display = 'none';
-                document.getElementById('expert-review-section').style.display = 'block';
+                
+                // Animate transition to expert review options
+                hideSection('ai-analysis-section');
+                setTimeout(() => {
+                    showSection('expert-review-section');
+                }, 200);
+                
                 // Auto-set to expert review
                 selectedAI = 'expert_review';
                 document.getElementById('selectedAI').value = 'expert_review';
