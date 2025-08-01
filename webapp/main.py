@@ -1131,12 +1131,21 @@ async def logout_alias(request: Request):
     return await logout(request)
 
 @app.get("/auth/user")
-async def get_current_user_endpoint(request: Request) -> User:
+async def get_current_user_endpoint(request: Request):
     """Get current authenticated user info"""
     user = await get_current_user(request)
     if not user or not user.is_authenticated:
         raise HTTPException(status_code=401, detail="Not authenticated")
-    return user
+    
+    # Return user data as dictionary instead of User object
+    return {
+        "id": user.id,
+        "username": user.username,
+        "email": user.email,
+        "full_name": user.full_name,
+        "is_admin": user.is_admin(),
+        "permissions": user.get_admin_permissions()
+    }
 
 @app.get("/health")
 async def health_check(request: Request):
