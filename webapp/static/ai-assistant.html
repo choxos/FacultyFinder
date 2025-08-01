@@ -1360,35 +1360,40 @@
                         <div class="row g-4 mb-4">
                             <!-- Basic Expert Review -->
                             <div class="col-lg-4">
-                                <div class="ai-feature-card h-100" onclick="selectAnalysisOption('expert_basic')">
-                                    <div class="text-center">
+                                <div class="ai-feature-card h-100 d-flex flex-column" onclick="selectAnalysisOption('expert_basic')">
+                                    <div class="text-center flex-grow-1">
                                         <div class="feature-icon" style="background: linear-gradient(135deg, #ffc107, #fd7e14);">
                                             <i class="fas fa-user-check"></i>
                                         </div>
                                         <h5>Basic Expert Review</h5>
                                         <div class="display-6 fw-bold text-warning mb-2">$99</div>
                                         <p class="text-muted small">CAD one-time</p>
-                                        <ul class="list-unstyled small text-start">
+                                        <ul class="list-unstyled small text-start mb-4">
                                             <li><i class="fas fa-check text-success me-2"></i>Expert manual review</li>
                                             <li><i class="fas fa-check text-success me-2"></i>Detailed analysis report</li>
                                             <li><i class="fas fa-check text-success me-2"></i>Faculty recommendations</li>
                                             <li><i class="fas fa-check text-success me-2"></i>3-5 day delivery</li>
                                         </ul>
                                     </div>
+                                    <div class="mt-auto text-center">
+                                        <button class="btn btn-warning w-100" onclick="event.stopPropagation(); selectAnalysisOption('expert_basic');">
+                                            Order Expert Review
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Premium Expert Review -->
                             <div class="col-lg-4">
-                                <div class="ai-feature-card h-100" onclick="selectAnalysisOption('expert_premium')">
-                                    <div class="text-center">
+                                <div class="ai-feature-card h-100 d-flex flex-column" onclick="selectAnalysisOption('expert_premium')">
+                                    <div class="text-center flex-grow-1">
                                         <div class="feature-icon" style="background: linear-gradient(135deg, #ffc107, #fd7e14);">
                                             <i class="fas fa-star"></i>
                                         </div>
                                         <h5>Premium Expert Review</h5>
                                         <div class="display-6 fw-bold text-warning mb-2">$299</div>
                                         <p class="text-muted small">CAD one-time</p>
-                                        <ul class="list-unstyled small text-start">
+                                        <ul class="list-unstyled small text-start mb-4">
                                             <li><i class="fas fa-check text-success me-2"></i>Premium expert review</li>
                                             <li><i class="fas fa-check text-success me-2"></i>Comprehensive analysis</li>
                                             <li><i class="fas fa-check text-success me-2"></i>Top 10 faculty matches</li>
@@ -1396,20 +1401,25 @@
                                             <li><i class="fas fa-check text-success me-2"></i>48-hour delivery</li>
                                         </ul>
                                     </div>
+                                    <div class="mt-auto text-center">
+                                        <button class="btn btn-warning w-100" onclick="event.stopPropagation(); selectAnalysisOption('expert_premium');">
+                                            Order Premium Review
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- VIP Package -->
                             <div class="col-lg-4">
-                                <div class="ai-feature-card h-100" onclick="selectAnalysisOption('expert_vip')">
-                                    <div class="text-center">
+                                <div class="ai-feature-card h-100 d-flex flex-column" onclick="selectAnalysisOption('expert_vip')">
+                                    <div class="text-center flex-grow-1">
                                         <div class="feature-icon" style="background: linear-gradient(135deg, #ffc107, #fd7e14);">
                                             <i class="fas fa-crown"></i>
                                         </div>
                                         <h5>VIP Package</h5>
                                         <div class="display-6 fw-bold text-warning mb-2">$999</div>
                                         <p class="text-muted small">CAD one-time</p>
-                                        <ul class="list-unstyled small text-start">
+                                        <ul class="list-unstyled small text-start mb-4">
                                             <li><i class="fas fa-check text-success me-2"></i>VIP expert consultation</li>
                                             <li><i class="fas fa-check text-success me-2"></i>Deep-dive career analysis</li>
                                             <li><i class="fas fa-check text-success me-2"></i>Personalized strategy</li>
@@ -1417,6 +1427,11 @@
                                             <li><i class="fas fa-check text-success me-2"></i>24-hour priority delivery</li>
                                             <li><i class="fas fa-check text-success me-2"></i>30-min video consultation</li>
                                         </ul>
+                                    </div>
+                                    <div class="mt-auto text-center">
+                                        <button class="btn btn-warning w-100" onclick="event.stopPropagation(); selectAnalysisOption('expert_vip');">
+                                            Order VIP Package
+                                        </button>
                                     </div>
                                 </div>
                             </div>
