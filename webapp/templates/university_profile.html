@@ -5,24 +5,25 @@
 {% block extra_css %}
 <style>
 .university-hero {
-    background: linear-gradient(135deg, var(--ff-primary-color) 0%, var(--ff-secondary-color) 100%);
+    background: linear-gradient(135deg, var(--ff-primary-800) 0%, var(--ff-primary-600) 100%);
     color: white;
     padding: 4rem 0;
     margin-bottom: 2rem;
 }
 
 .stat-card {
-    background: white;
+    background: var(--ff-bg-primary);
     border-radius: 15px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--ff-shadow);
     transition: transform 0.3s ease;
-    border: none;
+    border: 1px solid var(--ff-border-color);
 }
 
 .stat-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--ff-shadow-lg, 0 10px 25px rgba(0,0,0,0.15));
 }
 
 .stat-number {
@@ -32,16 +33,21 @@
 }
 
 .department-card {
-    background: white;
+    background: var(--ff-bg-primary);
     border-radius: 10px;
     padding: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    border-left: 4px solid var(--ff-primary-color);
+    box-shadow: var(--ff-shadow);
+    border-left: 4px solid var(--ff-primary);
+    transition: transform 0.2s ease;
+}
+
+.department-card:hover {
+    transform: translateY(-2px);
 }
 
 .research-area-tag {
-    background: var(--ff-accent-color);
+    background: var(--ff-accent);
     color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
@@ -51,15 +57,37 @@
 }
 
 .faculty-card {
-    background: white;
+    background: var(--ff-bg-secondary);
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: var(--ff-shadow);
     transition: transform 0.2s ease;
+    border: 1px solid var(--ff-border-color);
 }
 
 .faculty-card:hover {
     transform: translateY(-2px);
+}
+
+.contact-info-card {
+    background: var(--ff-bg-secondary);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--ff-shadow);
+    border: 1px solid var(--ff-border-color);
+}
+
+.btn-hero {
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 </style>
 {% endblock %}
@@ -112,7 +140,7 @@
             <div class="col-lg-4 text-lg-end">
                 <div class="d-flex flex-column gap-2">
                     {% if university.website %}
-                    <a href="{{ university.website }}" target="_blank" class="btn btn-light btn-lg">
+                    <a href="{{ university.website }}" target="_blank" class="btn btn-light btn-lg btn-hero">
                         <i class="fas fa-globe me-2"></i>Official Website
                     </a>
                     {% endif %}
@@ -123,7 +151,7 @@
                         {% set maps_query = university.name + ", " + university.city + ", " + university.province_state + ", " + university.country %}
                     {% endif %}
                     <a href="https://www.google.com/maps/search/{{ maps_query | urlencode }}" 
-                       target="_blank" class="btn btn-outline-light btn-lg">
+                       target="_blank" class="btn btn-outline-light btn-lg btn-hero">
                         <i class="fas fa-map-marker-alt me-2"></i>View on Maps
                     </a>
                 </div>
@@ -231,20 +259,22 @@
     <!-- Recent Faculty -->
     <div class="row mb-5">
         <div class="col-12">
-            <h3 class="fw-bold mb-4">Recent Faculty Profiles</h3>
+            <h3 class="fw-bold mb-4">Featured Faculty Members</h3>
             {% if recent_faculty %}
                 <div class="row g-4">
                     {% for faculty in recent_faculty %}
-                        <div class="faculty-card mb-3">
-                            <h6 class="mb-1">{{ faculty.name }}</h6>
-                            <p class="text-muted small mb-1">{{ faculty.position or 'Faculty Member' }}</p>
-                            <p class="text-muted small mb-0">{{ faculty.department or 'Various Departments' }}</p>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="faculty-card">
+                                <h6 class="mb-1">{{ faculty.name }}</h6>
+                                <p class="text-muted small mb-1">{{ faculty.position or 'Faculty Member' }}</p>
+                                <p class="text-muted small mb-0">{{ faculty.department or 'Various Departments' }}</p>
+                            </div>
                         </div>
                     {% endfor %}
                 </div>
                 
                 <div class="text-center mt-4">
-                    <a href="{{ url_for('faculties') }}?university={{ university.name }}" class="btn btn-primary">
+                    <a href="/faculties?university={{ university.university_code }}" class="btn btn-primary btn-lg">
                         <i class="fas fa-users me-2"></i>View All Faculty
                     </a>
                 </div>
@@ -255,28 +285,32 @@
     </div>
 
     <!-- Contact Information -->
-    {% if university.address %}
+    {% if university.address or university.website %}
     <div class="row mb-5">
         <div class="col-12">
             <h3 class="fw-bold mb-4">Contact Information</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-3">
-                        <i class="fas fa-map-marker-alt me-2 text-primary"></i>
-                        <strong>Address:</strong><br>
-                        {{ university.address }}<br>
-                        {{ university.city }}, {{ university.province_state }}<br>
-                        {{ university.country }}
-                    </p>
-                </div>
-                
-                <div class="col-md-6">
+            <div class="contact-info-card">
+                <div class="row">
+                    {% if university.address %}
+                    <div class="col-md-6">
+                        <p class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                            <strong>Address:</strong><br>
+                            {{ university.address }}<br>
+                            {{ university.city }}, {{ university.province_state }}<br>
+                            {{ university.country }}
+                        </p>
+                    </div>
+                    {% endif %}
+                    
                     {% if university.website %}
-                    <p class="mb-2">
-                        <i class="fas fa-globe me-2 text-primary"></i>
-                        <strong>Website:</strong> 
-                        <a href="{{ university.website }}" target="_blank">{{ university.website }}</a>
-                    </p>
+                    <div class="col-md-6">
+                        <p class="mb-2">
+                            <i class="fas fa-globe me-2 text-primary"></i>
+                            <strong>Website:</strong> 
+                            <a href="{{ university.website }}" target="_blank" class="text-decoration-none">{{ university.website }}</a>
+                        </p>
+                    </div>
                     {% endif %}
                 </div>
             </div>

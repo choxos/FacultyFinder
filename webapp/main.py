@@ -1001,10 +1001,125 @@ async def get_university_by_code(request: Request, university_code: str):
         raise HTTPException(status_code=500, detail="Failed to retrieve university")
 
 # University profile page route
-@app.get("/university/{university_code}")
+@app.get("/university/{university_code}", response_class=HTMLResponse)
 async def get_university_page(request: Request, university_code: str):
-    """Serve university profile page"""
-    return FileResponse(os.path.join(static_dir, "university.html"))
+    """Serve university profile page with data from database"""
+    try:
+        # Get current user (optional)
+        current_user = await get_current_user(request)
+        
+        async with get_db_connection() as conn:
+            # Get university details
+            university_query = """
+                SELECT u.id, u.name, u.country, u.city, u.university_code, 
+                       COALESCE(u.province_state, '') as province_state, u.year_established,
+                       COALESCE(u.website, '') as website, 
+                       COALESCE(u.university_type, 'Public') as university_type,
+                       COALESCE(u.address, '') as address,
+                       COALESCE(u.languages, '') as languages
+                FROM universities u
+                WHERE u.university_code = $1 OR u.name = $1
+                LIMIT 1
+            """
+            
+            university_row = await conn.fetchrow(university_query, university_code)
+            
+            if not university_row:
+                # Return 404 page or redirect to universities list
+                return templates.TemplateResponse("404.html", {
+                    "request": request,
+                    "current_user": current_user,
+                    "message": "University not found"
+                }, status_code=404)
+            
+            university = dict(university_row)
+            
+            # Get faculty statistics
+            faculty_stats_query = """
+                SELECT 
+                    COUNT(*) as total_faculty,
+                    COUNT(DISTINCT department) as unique_departments,
+                    COUNT(CASE WHEN full_time = true THEN 1 END) as full_time_faculty,
+                    COUNT(CASE WHEN adjunct = true THEN 1 END) as adjunct_faculty
+                FROM professors p
+                WHERE p.university_code = $1
+            """
+            
+            faculty_stats_row = await conn.fetchrow(faculty_stats_query, university['university_code'])
+            faculty_stats = dict(faculty_stats_row) if faculty_stats_row else {
+                'total_faculty': 0, 'unique_departments': 0, 
+                'full_time_faculty': 0, 'adjunct_faculty': 0
+            }
+            
+            # Get publication statistics (placeholder for now)
+            publication_stats = {
+                'total_publications': 0,
+                'recent_publications': 0
+            }
+            
+            # Get departments with faculty counts
+            departments_query = """
+                SELECT department, COUNT(*) as faculty_count
+                FROM professors p
+                WHERE p.university_code = $1 AND department IS NOT NULL AND department != ''
+                GROUP BY department
+                ORDER BY faculty_count DESC, department
+                LIMIT 20
+            """
+            
+            departments_rows = await conn.fetch(departments_query, university['university_code'])
+            departments = [dict(row) for row in departments_rows]
+            
+            # Get research areas with faculty counts
+            research_areas_query = """
+                SELECT TRIM(UNNEST(STRING_TO_ARRAY(research_areas, ','))) as research_areas, 
+                       COUNT(*) as faculty_count
+                FROM professors p
+                WHERE p.university_code = $1 AND research_areas IS NOT NULL AND research_areas != ''
+                GROUP BY TRIM(UNNEST(STRING_TO_ARRAY(research_areas, ',')))
+                HAVING TRIM(UNNEST(STRING_TO_ARRAY(research_areas, ','))) != ''
+                ORDER BY faculty_count DESC
+                LIMIT 15
+            """
+            
+            research_areas_rows = await conn.fetch(research_areas_query, university['university_code'])
+            research_areas = [dict(row) for row in research_areas_rows]
+            
+            # Get recent faculty (sample)
+            recent_faculty_query = """
+                SELECT name, position, department
+                FROM professors p
+                WHERE p.university_code = $1
+                ORDER BY id DESC
+                LIMIT 6
+            """
+            
+            recent_faculty_rows = await conn.fetch(recent_faculty_query, university['university_code'])
+            recent_faculty = [dict(row) for row in recent_faculty_rows]
+            
+            return templates.TemplateResponse("university_profile.html", {
+                "request": request,
+                "current_user": current_user,
+                "university": university,
+                "faculty_stats": faculty_stats,
+                "publication_stats": publication_stats,
+                "departments": departments,
+                "research_areas": research_areas,
+                "recent_faculty": recent_faculty
+            })
+            
+    except Exception as e:
+        logger.error(f"Error loading university page: {e}")
+        # Get current user for error page too
+        try:
+            current_user = await get_current_user(request)
+        except:
+            current_user = None
+        return templates.TemplateResponse("404.html", {
+            "request": request,
+            "current_user": current_user,
+            "message": "Error loading university information"
+        }, status_code=500)
 
 # Authentication routes
 @app.get("/login", response_class=HTMLResponse)
