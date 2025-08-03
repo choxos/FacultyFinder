@@ -153,7 +153,7 @@ def get_base_template_context():
     }
 
 # Google Analytics configuration endpoint for static files
-@app.get("/static/js/ga-config.js", response_class=HTMLResponse)
+@app.get("/api/v1/ga-config.js", response_class=HTMLResponse)
 async def google_analytics_config():
     """Serve Google Analytics configuration as JavaScript for static HTML files"""
     config_js = f"""
