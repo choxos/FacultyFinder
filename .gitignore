@@ -446,4 +446,126 @@ install*.py
 clean_*.sh
 rebuild_*.sh
 migrat*.sh
-commit_*.sh 
+commit_*.sh
+
+# Test and Debug Files
+*test*
+*debug*
+*Test*
+*Debug*
+test_*.py
+debug_*.py
+*_test.py
+*_debug.py
+test_*.sh
+debug_*.sh
+*_test.sh
+*_debug.sh
+test.*
+debug.*
+*test.html
+*debug.html
+
+# Fix and Temporary Scripts
+fix_*.py
+fix_*.sh
+*_fix.py
+*_fix.sh
+fix.*
+temp_*.py
+temp_*.sh
+*_temp.py
+*_temp.sh
+temporary_*
+*_temporary*
+old_*
+*_old*
+
+# Individual Search Scripts
+search_*.sh
+*_search.sh
+search_*.py
+*_search.py
+
+# Multiple Requirements Files (keep only main one)
+requirements_*.txt
+!requirements.txt
+
+# Service Files
+*.service
+*.socket
+*.timer
+
+# Report and Analysis Files
+*report*.html
+*analysis*.html
+*validation*.html
+*_report.*
+*_analysis.*
+*_validation.*
+report_*
+analysis_*
+validation_*
+
+# Personal/Individual Files
+*Ahmad*
+*_personal*
+*personal_*
+*individual_*
+*_individual*
+
+# Emergency and Quick Fix Files
+emergency_*
+*_emergency*
+quick_*
+*_quick*
+hotfix_*
+*_hotfix*
+
+# Migration and Transfer Scripts
+migrate_*
+*_migrate*
+transfer_*
+*_transfer*
+update_*
+*_update*
+
+# VPS and Server Files
+vps_*
+*_vps*
+server_*
+*_server*
+
+# Business and Investor Documents
+*investor*
+*business*
+*financial*
+*package*
+Investor*
+Business*
+Financial*
+Package*
+
+# API Reference and Documentation
+*API*.html
+*api*.html
+*_API.*
+*_api.*
+API_*
+api_*
+
+# Demo and Example Files
+demo_*
+*_demo*
+example_*
+*_example*
+sample_*
+*_sample*
+
+# Status and Check Files
+status_*
+*_status*
+check_*
+*_check*
+verify_*
+*_verify* 
