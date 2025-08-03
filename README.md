@@ -1,204 +1,265 @@
-# FacultyFinder 🎓
+# FacultyFinder
 
 **Discover Your Ideal Academic Collaborators Worldwide**
 
-FacultyFinder is an advanced platform designed to help prospective graduate students, researchers, and institutions connect with faculty members who align with their academic goals and research interests across universities worldwide.
+FacultyFinder is a comprehensive platform that helps researchers discover and connect with faculty members across universities globally. Our AI-powered matching system and extensive academic database make finding the perfect research collaborators easier than ever.
 
-## ✨ Features
+## 🌟 Features
 
-### 🔍 **Smart Faculty Discovery**
-- **Advanced Search & Filtering**: Find faculty by research areas, universities, departments, publications, and more
-- **AI-Powered Matching**: Upload your CV for personalized faculty recommendations using cutting-edge AI
-- **Global Coverage**: Access faculty information from top universities worldwide
-- **Professional Interface**: Modern, responsive design optimized for academic research
-
-### 📊 **Comprehensive Faculty Profiles**
-- **Academic Background**: Detailed information on degrees, positions, and career progression
-- **Research Areas**: Categorized research interests with clickable filtering
-- **Publication Metrics**: Citation counts, H-index, i10-index, and publication records
-- **Collaboration Networks**: Visual representation of academic partnerships
-- **Contact Information**: Direct access to faculty email, office locations, and websites
-
-### 🏛️ **University Information**
-- **Global Database**: Universities from 25+ countries with detailed profiles
-- **Department Insights**: Faculty counts, research strengths, and academic programs
-- **Location Integration**: Interactive maps and geographic filtering
-- **Institutional Details**: University types, languages of instruction, establishment dates
-
-### 🤖 **AI Assistant**
-- **CV Analysis**: Upload PDF/DOCX files for intelligent faculty matching
-- **Multiple AI Models**: Choose between Claude, Gemini, ChatGPT, and Grok
-- **Flexible Pricing**: Use your own API keys or pay-per-use options
-- **Expert Review**: Optional manual CV review by academic professionals
+- **Global Faculty Database**: Access profiles from universities worldwide
+- **Advanced Search & Filtering**: Find faculty by expertise, location, and research areas
+- **University Profiles**: Comprehensive information about academic institutions
+- **Publication Tracking**: Integration with academic databases (PubMed, OpenAlex)
+- **Analytics Dashboard**: Track engagement and platform usage
+- **Modern UI**: Responsive design with dark/light theme support
+- **Admin Panel**: Comprehensive management tools
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8+
-- SQLite3 (development) or PostgreSQL (production)
-- Modern web browser
+
+- Python 3.9+
+- PostgreSQL (or SQLite for development)
+- Node.js (for front-end assets)
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/facultyfinder/FacultyFinder.git
-cd FacultyFinder
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/FacultyFinder.git
+   cd FacultyFinder
+   ```
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+2. **Set up virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\\Scripts\\activate
+   ```
 
-# Install dependencies
-pip install -r requirements.txt
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# Initialize database
-cd scripts
-python data_loader.py
+4. **Configure environment variables**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
 
-# Run the application
-cd ../webapp
-python app.py
+5. **Run the application**
+   ```bash
+   python -m uvicorn webapp.main:app --reload --host 0.0.0.0 --port 8000
+   ```
+
+## ⚙️ Configuration
+
+### Environment Variables
+
+Create a `.env` file with the following variables:
+
+```env
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_NAME=facultyfinder
+
+# Security
+SECRET_KEY=your-secret-key-here
+
+# Google OAuth (Optional)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=http://localhost:8000/auth/callback
+
+# Google Analytics (Optional)
+GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+GOOGLE_ANALYTICS_ENABLED=true
+
+# Email Configuration (Optional)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
 ```
 
-Visit `http://localhost:8080` to access FacultyFinder!
+### Google Analytics Setup
 
-## 📁 Project Structure
+FacultyFinder includes comprehensive Google Analytics (GA4) tracking:
+
+1. **Create a GA4 Property**
+   - Go to [Google Analytics](https://analytics.google.com/)
+   - Create a new GA4 property
+   - Get your `G-XXXXXXXXXX` tracking ID
+
+2. **Configure Tracking**
+   ```env
+   GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+   GOOGLE_ANALYTICS_ENABLED=true
+   ```
+
+3. **Tracked Events**
+   - Page views by type (homepage, faculty profiles, university profiles)
+   - Faculty profile views
+   - University profile views
+   - Search queries and results
+   - User engagement metrics
+
+4. **Custom Events**
+   ```javascript
+   // Track custom events
+   window.FacultyFinderAnalytics.trackFacultyView('CA-ON-002-00001', 'CA-ON-002');
+   window.FacultyFinderAnalytics.trackSearch('machine learning', 'faculty', 25);
+   ```
+
+## 📊 Database Schema
+
+The application uses PostgreSQL with the following main tables:
+
+- `universities`: University information
+- `faculties`: Faculty member profiles
+- `publications`: Academic publications
+- `users`: User accounts and authentication
+- `admin_permissions`: Role-based access control
+
+## 🔧 Development
+
+### Project Structure
 
 ```
 FacultyFinder/
-├── webapp/                 # Flask web application
-│   ├── app.py             # Main application file
-│   ├── templates/         # Jinja2 templates
-│   ├── static/           # CSS, JS, and assets
-│   └── wsgi.py           # WSGI entry point
-├── database/              # Database schema and setup
-├── scripts/              # Data loading and maintenance
-├── data/                 # Raw data files and exports
-└── docs/                 # Documentation and guides
+├── webapp/
+│   ├── main.py              # FastAPI application
+│   ├── config.py            # Configuration management
+│   ├── oauth.py             # Authentication
+│   ├── static/              # Static files (CSS, JS, HTML)
+│   └── templates/           # Jinja2 templates
+├── data/                    # Data files and imports
+├── scripts/                 # Utility scripts
+└── database/                # Database schemas
 ```
 
-## 🎨 Technology Stack
+### Key Components
 
-- **Backend**: Flask (Python), SQLite/PostgreSQL
-- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 5
-- **AI Integration**: OpenAI, Anthropic Claude, Google Gemini, xAI Grok
-- **Data Sources**: PubMed, ORCID, Scimago Journal Rankings
-- **Deployment**: Gunicorn, Nginx, Systemd
-- **Theming**: Custom CSS with dark mode support
+- **FastAPI Backend**: High-performance async API
+- **Jinja2 Templates**: Server-side rendering for admin pages
+- **Static HTML + JS**: Client-side rendering for main pages
+- **Bootstrap 5**: Modern responsive UI framework
+- **Custom CSS Themes**: Light/dark mode support
 
-## 🌐 API Access
+### Adding New Features
 
-FacultyFinder provides a comprehensive REST API for developers:
+1. **API Endpoints**: Add to `webapp/main.py`
+2. **Database Changes**: Update schema files in `database/`
+3. **Frontend Pages**: Add to `webapp/static/`
+4. **Admin Features**: Add templates to `webapp/templates/admin/`
 
-```python
-import requests
+## 🔒 Security
 
-# Search faculty
-response = requests.get(
-    "https://api.facultyfinder.io/v1/faculties",
-    params={"search": "machine learning", "country": "Canada"}
-)
+The application includes several security features:
 
-faculty = response.json()
-```
+- **Environment-based configuration**: Sensitive data in environment variables
+- **OAuth integration**: Google OAuth for authentication
+- **Role-based permissions**: Granular admin access control
+- **Input validation**: Pydantic models for API validation
+- **CORS protection**: Configurable cross-origin requests
 
-Visit `/api` for complete documentation.
+## 📈 Analytics & Monitoring
+
+### Google Analytics Integration
+
+- **Automatic tracking**: Page views, user interactions
+- **Custom events**: Faculty views, searches, downloads
+- **Performance metrics**: Page load times, user engagement
+- **Privacy-compliant**: IP anonymization, no personal data
+
+### Admin Dashboard
+
+- **System statistics**: Users, faculty, publications
+- **Database management**: Direct database operations
+- **User management**: Role assignment and permissions
+- **Analytics overview**: Usage metrics and trends
 
 ## 🚀 Deployment
 
-FacultyFinder offers multiple deployment approaches based on your needs:
+### Production Deployment
 
-### 📋 **Choose Your Deployment Path:**
+1. **Environment Setup**
+   ```bash
+   # Set production environment variables
+   export DB_HOST=your-production-db
+   export GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+   export SECRET_KEY=your-production-secret
+   ```
 
-| Goal | Guide | Time | Best For |
-|------|-------|------|----------|
-| **Quick Demo** | `QUICK_START_DEPLOYMENT.md` | 15 min | Testing, demos |
-| **Production Site** | `DEPLOYMENT_GUIDE_RESTRUCTURED.md` | 3-6 hours | Live websites |
-| **Technical Reference** | `DEPLOYMENT_INDEX.md` | - | Choose your path |
+2. **Database Migration**
+   ```bash
+   # Run database setup scripts
+   python scripts/setup_database.py
+   ```
 
-### ⚡ **Quick Start (15 Minutes)**
-Get a working website running immediately:
-```bash
-sudo apt update && apt install -y python3 python3-venv git
-git clone https://github.com/yourusername/FacultyFinder.git /var/www/ff
-cd /var/www/ff && python3 -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-# Follow QUICK_START_DEPLOYMENT.md for complete steps
+3. **Start Application**
+   ```bash
+   # Production server with multiple workers
+   uvicorn webapp.main:app --host 0.0.0.0 --port 8000 --workers 4
+   ```
+
+### Docker Deployment
+
+```dockerfile
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+EXPOSE 8000
+CMD ["uvicorn", "webapp.main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-### 🏗️ **Production Deployment (Progressive Phases)**
-Build a complete production system:
-- **Phase 1**: Basic working website (30 min)
-- **Phase 2**: PostgreSQL + authentication (60 min)  
-- **Phase 3**: Domain + SSL + production setup (90 min)
-- **Phase 4**: Advanced features (payments, AI, etc.)
+## 📄 API Documentation
 
-### 🔧 **Technology Stack:**
-- **Backend**: Flask with Gunicorn WSGI server
-- **Database**: SQLite (development) / PostgreSQL (production)
-- **Frontend**: Bootstrap 5 with responsive design
-- **Reverse Proxy**: Nginx for production
-- **SSL**: Let's Encrypt (free certificates)
-- **Process Management**: Systemd service
+Once running, visit:
+- **Interactive API Docs**: `http://localhost:8000/api/docs`
+- **ReDoc Documentation**: `http://localhost:8000/api/redoc`
 
-*Note: Detailed deployment guides with server configurations are available separately for security reasons.*
+### Key API Endpoints
 
-## 📊 Data & Privacy
-
-### Data Sources
-- **Universities**: Official institutional websites and directories
-- **Publications**: PubMed, ORCID, and other academic databases
-- **Journal Rankings**: Scimago Journal & Country Rank
-
-### Privacy Commitment
-- Only publicly available academic information is displayed
-- Faculty can request profile updates or removal
-- No personal data collection without consent
-- GDPR and academic privacy standards compliance
+```
+GET  /api/v1/faculties              # Search faculty
+GET  /api/v1/universities           # List universities
+GET  /api/v1/professor/{id}         # Faculty profile
+GET  /api/v1/university/{code}      # University profile
+POST /api/v1/search                 # Advanced search
+```
 
 ## 🤝 Contributing
 
-We welcome contributions from the academic and developer communities!
-
-### Ways to Contribute
-- **University Data**: Help expand our global coverage
-- **Feature Development**: Implement new functionality
-- **Bug Reports**: Identify and report issues
-- **Documentation**: Improve guides and tutorials
-
-### Development Setup
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
-## 📞 Support & Contact
-
-- **Documentation**: [Visit our docs](https://facultyfinder.io/docs)
-- **Issues**: [GitHub Issues](https://github.com/facultyfinder/FacultyFinder/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/facultyfinder/FacultyFinder/discussions)
-- **Email**: support@facultyfinder.io
-
-## 📄 License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🌟 Acknowledgments
+## 🆘 Support
 
-- **Academic Community**: For providing open access to research data
-- **University Partners**: For supporting global academic collaboration
-- **Open Source Libraries**: For enabling rapid development
-- **Contributors**: For their valuable contributions and feedback
+For support, questions, or suggestions:
+
+- **Email**: support@facultyfinder.io
+- **GitHub Issues**: [Create an issue](https://github.com/yourusername/FacultyFinder/issues)
+- **Documentation**: [Full documentation](https://docs.facultyfinder.io)
+
+## 🙏 Acknowledgments
+
+- Faculty data sourced from university websites and academic databases
+- Publication data from PubMed, OpenAlex, and OpenCitations
+- Built with FastAPI, Bootstrap, and modern web technologies
 
 ---
 
-<div align="center">
-<p><strong>Connecting researchers worldwide through intelligent faculty discovery</strong></p>
-<p>
-  <a href="https://facultyfinder.io">Website</a> •
-  <a href="https://facultyfinder.io/api">API</a> •
-  <a href="https://facultyfinder.io/about">About</a> •
-  <a href="https://facultyfinder.io/contact">Contact</a>
-</p>
-</div>
+**FacultyFinder** - Connecting researchers worldwide 🌍

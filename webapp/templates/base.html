@@ -32,17 +32,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics_id }}"></script>
     <script src="/static/js/google-analytics.js"></script>
     {% endif %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics_id }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ google_analytics_id }}', {
-            page_title: document.title,
-            page_location: window.location.href
-        });
-    </script>
-    {% endif %}
     
     <!-- Fixed navbar padding -->
     <style>
