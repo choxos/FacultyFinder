@@ -142,6 +142,16 @@ async def get_browserconfig():
 # Initialize templates
 templates = Jinja2Templates(directory="webapp/templates")
 
+# Google Analytics configuration
+GOOGLE_ANALYTICS_ID = os.getenv('GOOGLE_ANALYTICS_ID')
+GOOGLE_ANALYTICS_ENABLED = os.getenv('GOOGLE_ANALYTICS_ENABLED', 'true').lower() == 'true'
+
+def get_base_template_context():
+    """Get common template context for all pages"""
+    return {
+        "google_analytics_id": GOOGLE_ANALYTICS_ID if GOOGLE_ANALYTICS_ENABLED else None
+    }
+
 # User Model with Granular Admin Permissions
 class User:
     def __init__(self, user_data: dict):
@@ -1244,18 +1254,22 @@ async def register_user(
 @app.get("/dashboard", response_class=HTMLResponse)
 async def dashboard(request: Request, user: User = Depends(require_auth)):
     """User dashboard"""
-    return templates.TemplateResponse("user/dashboard.html", {
+    context = get_base_template_context()
+    context.update({
         "request": request,
         "current_user": user
     })
+    return templates.TemplateResponse("user/dashboard.html", context)
 
 @app.get("/profile", response_class=HTMLResponse)
 async def profile(request: Request, user: User = Depends(require_auth)):
     """User profile page"""
-    return templates.TemplateResponse("user/profile.html", {
+    context = get_base_template_context()
+    context.update({
         "request": request,
         "current_user": user
     })
+    return templates.TemplateResponse("user/profile.html", context)
 
 # OAuth routes
 @app.get("/auth/{provider}")
@@ -1407,12 +1421,14 @@ async def admin_dashboard(request: Request, user: User = Depends(require_admin))
                 "users": None     # Not implemented yet
             }
             
-        return templates.TemplateResponse("admin/dashboard.html", {
+        context = get_base_template_context()
+        context.update({
             "request": request,
             "current_user": user,
             "stats": stats,
             "notifications": notifications
         })
+        return templates.TemplateResponse("admin/dashboard.html", context)
     except Exception as e:
         logger.error(f"Admin dashboard error: {e}")
         raise HTTPException(status_code=500, detail="Failed to load admin dashboard")
@@ -1420,18 +1436,22 @@ async def admin_dashboard(request: Request, user: User = Depends(require_admin))
 @app.get("/admin/ai-requests", response_class=HTMLResponse)
 async def admin_ai_requests(request: Request, user: User = Depends(require_ai_requests_permission)):
     """Admin AI requests management page"""
-    return templates.TemplateResponse("admin/ai_requests.html", {
+    context = get_base_template_context()
+    context.update({
         "request": request,
         "current_user": user
     })
+    return templates.TemplateResponse("admin/ai_requests.html", context)
 
 @app.get("/admin/database", response_class=HTMLResponse)
 async def admin_database(request: Request, user: User = Depends(require_database_permission)):
     """Admin database management page"""
-    return templates.TemplateResponse("admin/database.html", {
+    context = get_base_template_context()
+    context.update({
         "request": request,
         "current_user": user
     })
+    return templates.TemplateResponse("admin/database.html", context)
 
 @app.get("/api/v1/admin/ai-requests")
 async def admin_get_ai_requests(

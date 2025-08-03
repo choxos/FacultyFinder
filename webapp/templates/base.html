@@ -23,6 +23,27 @@
     <link rel="stylesheet" href="/static/css/themes/facultyfinder-theme.css">
     <link rel="stylesheet" href="/static/css/facultyfinder.css">
     
+    <!-- Google Analytics (GA4) -->
+    {% if google_analytics_id %}
+    <script>
+        // Set Google Analytics ID for client-side scripts
+        window.GOOGLE_ANALYTICS_ID = '{{ google_analytics_id }}';
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics_id }}"></script>
+    <script src="/static/js/google-analytics.js"></script>
+    {% endif %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ google_analytics_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ google_analytics_id }}', {
+            page_title: document.title,
+            page_location: window.location.href
+        });
+    </script>
+    {% endif %}
+    
     <!-- Fixed navbar padding -->
     <style>
         body {
