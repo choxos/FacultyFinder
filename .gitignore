@@ -180,6 +180,12 @@ facultyfinder_dev.db
 *install*.md
 *CONFIG*.md
 *config*.md
+*INSTRUCTIONS*.md
+*instructions*.md
+*WALKTHROUGH*.md
+*walkthrough*.md
+*TUTORIAL*.md
+*tutorial*.md
 
 # Authentication and Security Guides
 *AUTH*.md
@@ -190,6 +196,10 @@ facultyfinder_dev.db
 *security*.md
 *OAUTH*.md
 *oauth*.md
+*PERMISSIONS*.md
+*permissions*.md
+*ACCESS*.md
+*access*.md
 
 # Payment and Business Sensitive Files
 *CRYPTO*.md
@@ -200,11 +210,51 @@ facultyfinder_dev.db
 *email*.md
 *SMTP*.md
 *smtp*.md
+*BILLING*.md
+*billing*.md
+*STRIPE*.md
+*stripe*.md
+*PRICING*.md
+*pricing*.md
 
 # Migration and Data Files
 *MIGRATION*.md
 *migration*.md
 DATA_MIGRATION_GUIDE.md
+*DATABASE*.md
+*database*.md
+
+# Development and Deployment Process Files
+*VPS*.md
+*vps*.md
+*SERVER*.md
+*server*.md
+*PRODUCTION*.md
+*production*.md
+*STAGING*.md
+*staging*.md
+*EMERGENCY*.md
+*emergency*.md
+*FIX*.md
+*fix*.md
+*OPTIMIZATION*.md
+*optimization*.md
+*PERFORMANCE*.md
+*performance*.md
+
+# Integration and API Documentation
+*INTEGRATION*.md
+*integration*.md
+*API_KEY*.md
+*api_key*.md
+*PUBMED*.md
+*pubmed*.md
+*OPENALEX*.md
+*openalex*.md
+*SCOPUS*.md
+*scopus*.md
+*GOOGLE_MAPS*.md
+*google_maps*.md
 
 # Business and Investment Documents
 startup_investor_package/
@@ -216,8 +266,102 @@ business_plan/
 *investment_memo*
 *founder_profile*
 *market_analysis*
+*INVESTOR*.md
+*investor*.md
+*BUSINESS*.md
+*business*.md
+*FINANCIAL*.md
+*financial*.md
+*REVENUE*.md
+*revenue*.md
+*MARKETING*.md
+*marketing*.md
 
-# Specific Guide Files (explicit exclusions)
+# Workflow and Process Documentation
+*WORKFLOW*.md
+*workflow*.md
+*PROCESS*.md
+*process*.md
+*CHECKLIST*.md
+*checklist*.md
+*SUMMARY*.md
+*summary*.md
+*REDESIGN*.md
+*redesign*.md
+*UPDATE*.md
+*update*.md
+*FACULTY*.md
+*faculty*.md
+*UNIVERSITY*.md
+*university*.md
+*PROFESSOR*.md
+*professor*.md
+*STUDENT*.md
+*student*.md
+
+# Technical Implementation Guides
+*FASTAPI*.md
+*fastapi*.md
+*FLASK*.md
+*flask*.md
+*POSTGRESQL*.md
+*postgresql*.md
+*MYSQL*.md
+*mysql*.md
+*MONGODB*.md
+*mongodb*.md
+*REDIS*.md
+*redis*.md
+*NGINX*.md
+*nginx*.md
+*APACHE*.md
+*apache*.md
+*DOCKER*.md
+*docker*.md
+*KUBERNETES*.md
+*kubernetes*.md
+*AWS*.md
+*aws*.md
+*AZURE*.md
+*azure*.md
+*GCP*.md
+*gcp*.md
+
+# Research and Data Collection Documentation
+*RESEARCH*.md
+*research*.md
+*DATA_COLLECTION*.md
+*data_collection*.md
+*SCRAPING*.md
+*scraping*.md
+*CRAWLING*.md
+*crawling*.md
+*EXTRACTION*.md
+*extraction*.md
+*ANALYSIS*.md
+*analysis*.md
+*STATISTICS*.md
+*statistics*.md
+*METRICS*.md
+*metrics*.md
+*CITATION*.md
+*citation*.md
+*PUBLICATION*.md
+*publication*.md
+
+# Communication and External Services
+*COMMUNICATION*.md
+*communication*.md
+*NOTIFICATION*.md
+*notification*.md
+*SLACK*.md
+*slack*.md
+*DISCORD*.md
+*discord*.md
+*TEAMS*.md
+*teams*.md
+
+# Specific Problematic Files (explicit exclusions)
 SERVER_DEPLOYMENT_GUIDE.md
 DEPLOYMENT_GUIDE.md
 DEPLOYMENT_GUIDE_RESTRUCTURED.md
@@ -238,6 +382,21 @@ PERFORMANCE_OPTIMIZATION_GUIDE.md
 SECURITY_SETUP.md
 FacultyFinder_guide.md
 QUICK_DEPLOYMENT.md
+EMPLOYMENT_TYPE_CLARIFICATION.md
+FACULTY_UPDATE_WORKFLOW.md
+HOMEPAGE_REDESIGN_SUMMARY.md
+NCBI_BLOCKING_SOLUTION.md
+PRICING_RECOMMENDATIONS.md
+PROFESSIONAL_HOMEPAGE_REDESIGN.md
+PROFESSOR_ID_OPTIMIZATION_SUMMARY.md
+STRIPE_INTEGRATION.md
+vps_emergency_install.md
+vps_quick_fix.md
+
+# Only allow specific safe README files
+!README.md
+!*/README.md
+!**/README.md
 
 # Backup and Temporary Files
 *.bak
@@ -263,4 +422,28 @@ Desktop.ini
 passwords.txt
 credentials.txt
 tokens.txt
-api_keys.txt 
+api_keys.txt
+keys.txt
+secrets.txt
+config.txt
+setup.txt
+install.txt
+deploy.txt
+
+# Deployment Scripts with Sensitive Info
+deploy*.sh
+deploy*.py
+setup*.sh
+setup*.py
+install*.sh
+install*.py
+*_deploy.sh
+*_deploy.py
+*_setup.sh
+*_setup.py
+*_install.sh
+*_install.py
+clean_*.sh
+rebuild_*.sh
+migrat*.sh
+commit_*.sh 
