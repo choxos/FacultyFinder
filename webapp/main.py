@@ -152,6 +152,19 @@ def get_base_template_context():
         "google_analytics_id": GOOGLE_ANALYTICS_ID if GOOGLE_ANALYTICS_ENABLED else None
     }
 
+# Google Analytics configuration endpoint for static files
+@app.get("/static/js/ga-config.js", response_class=HTMLResponse)
+async def google_analytics_config():
+    """Serve Google Analytics configuration as JavaScript for static HTML files"""
+    config_js = f"""
+// Google Analytics Configuration (dynamically served)
+window.GOOGLE_ANALYTICS_CONFIG = {{
+    trackingId: '{GOOGLE_ANALYTICS_ID or 'G-XXXXXXXXXX'}',
+    enabled: {str(GOOGLE_ANALYTICS_ENABLED).lower()}
+}};\n\n// For backwards compatibility\nwindow.GOOGLE_ANALYTICS_ID = '{GOOGLE_ANALYTICS_ID or ''}';\nwindow.GOOGLE_ANALYTICS_ENABLED = {str(GOOGLE_ANALYTICS_ENABLED).lower()};\n\nconsole.log('Google Analytics config loaded:', window.GOOGLE_ANALYTICS_CONFIG);
+"""
+    return HTMLResponse(content=config_js, media_type="application/javascript")
+
 # User Model with Granular Admin Permissions
 class User:
     def __init__(self, user_data: dict):

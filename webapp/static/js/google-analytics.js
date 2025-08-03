@@ -3,13 +3,15 @@
  * This script initializes Google Analytics (GA4) tracking
  */
 
-// Configuration
+// Configuration - will be loaded from server-side endpoint
 const GOOGLE_ANALYTICS_CONFIG = {
-    // This will be replaced with actual tracking ID in production
-    // Set via environment variable GOOGLE_ANALYTICS_ID
-    trackingId: window.GOOGLE_ANALYTICS_ID || 'G-XXXXXXXXXX',
+    // This will be loaded from /static/js/ga-config.js
+    trackingId: window.GOOGLE_ANALYTICS_CONFIG?.trackingId || window.GOOGLE_ANALYTICS_ID || 'G-XXXXXXXXXX',
     
-    // Only track in production (not localhost)
+    // Check if enabled from server config, default to not on localhost
+    enabled: window.GOOGLE_ANALYTICS_CONFIG?.enabled !== false,
+    
+    // Only track in production (not localhost) unless explicitly enabled
     enableOnLocalhost: false,
     
     // Additional configuration
@@ -31,6 +33,12 @@ function initializeGoogleAnalytics() {
                        window.location.hostname.includes('192.168.') ||
                        window.location.hostname.includes('local');
     
+    // Check if Google Analytics is disabled
+    if (!GOOGLE_ANALYTICS_CONFIG.enabled) {
+        console.log('Google Analytics disabled via server configuration');
+        return;
+    }
+    
     if (isLocalhost && !GOOGLE_ANALYTICS_CONFIG.enableOnLocalhost) {
         console.log('Google Analytics disabled on localhost');
         return;
@@ -38,7 +46,8 @@ function initializeGoogleAnalytics() {
     
     // Check if tracking ID is set and valid
     if (!GOOGLE_ANALYTICS_CONFIG.trackingId || 
-        GOOGLE_ANALYTICS_CONFIG.trackingId === 'G-XXXXXXXXXX') {
+        GOOGLE_ANALYTICS_CONFIG.trackingId === 'G-XXXXXXXXXX' ||
+        GOOGLE_ANALYTICS_CONFIG.trackingId === '') {
         console.log('Google Analytics tracking ID not configured');
         return;
     }
@@ -47,6 +56,14 @@ function initializeGoogleAnalytics() {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    
+    // Load the gtag script with the actual tracking ID if available
+    if (GOOGLE_ANALYTICS_CONFIG.trackingId !== 'G-XXXXXXXXXX') {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_CONFIG.trackingId}`;
+        document.head.appendChild(script);
+    }
     
     // Configure tracking
     gtag('config', GOOGLE_ANALYTICS_CONFIG.trackingId, {
