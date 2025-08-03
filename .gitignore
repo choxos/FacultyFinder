@@ -103,6 +103,7 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
 .venv
 env/
 venv/
@@ -131,11 +132,135 @@ dmypy.json
 # macOS
 .DS_Store
 
-# Deployment guides and sensitive configuration files
+# =============================================================================
+# FacultyFinder Specific - SENSITIVE FILES (DO NOT COMMIT TO PUBLIC REPO)
+# =============================================================================
+
+# Environment and Configuration Files
+*.env
+*.env.*
+config.ini
+secrets.json
+*.secret
+*.secrets
+config.py
+webapp/config.py
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+database/
+*/database/
+facultyfinder_dev.db
+**/facultyfinder_dev.db
+
+# Server Configuration Files
+*.conf
+*nginx*.conf
+*apache*.conf
+*.htaccess
+
+# SSL/TLS Certificates and Keys
+*.key
+*.pem
+*.crt
+*.cert
+*.p12
+*.pfx
+
+# Deployment and Setup Guide Files
+*GUIDE*.md
+*guide*.md
+*SETUP*.md
+*setup*.md
+*DEPLOY*.md
+*deploy*.md
+*INSTALL*.md
+*install*.md
+*CONFIG*.md
+*config*.md
+
+# Authentication and Security Guides
+*AUTH*.md
+*auth*.md
+*ADMIN*.md
+*admin*.md
+*SECURITY*.md
+*security*.md
+*OAUTH*.md
+*oauth*.md
+
+# Payment and Business Sensitive Files
+*CRYPTO*.md
+*crypto*.md
+*PAYMENT*.md
+*payment*.md
+*EMAIL*.md
+*email*.md
+*SMTP*.md
+*smtp*.md
+
+# Migration and Data Files
+*MIGRATION*.md
+*migration*.md
+DATA_MIGRATION_GUIDE.md
+
+# Business and Investment Documents
+startup_investor_package/
+investor_package/
+business_plan/
+*pitch_deck*
+*financial_projections*
+*executive_summary*
+*investment_memo*
+*founder_profile*
+*market_analysis*
+
+# Specific Guide Files (explicit exclusions)
 SERVER_DEPLOYMENT_GUIDE.md
 DEPLOYMENT_GUIDE.md
-*_DEPLOYMENT_*.md
-*deployment*.md
-*.secret
-config.ini
-secrets.json 
+DEPLOYMENT_GUIDE_RESTRUCTURED.md
+VPS_PUBMED_DEPLOYMENT_GUIDE.md
+COMPREHENSIVE_DEPLOYMENT_CHECKLIST.md
+GOOGLE_OAUTH_SETUP_GUIDE.md
+ADMIN_DATABASE_MANAGEMENT_GUIDE.md
+ADMIN_AUTHENTICATION_SETUP.md
+GRANULAR_ADMIN_PERMISSIONS_GUIDE.md
+AI_INTEGRATION_GUIDE.md
+CITATION_ANALYSIS_GUIDE.md
+PUBMED_INTEGRATION_GUIDE.md
+OPENALEX_OPENCITATIONS_GUIDE.md
+UNIVERSITY_DATA_COLLECTION_GUIDE.md
+PUBLICATION_SYSTEM_SETUP.md
+PROFILE_DISCOVERY_GUIDE.md
+PERFORMANCE_OPTIMIZATION_GUIDE.md
+SECURITY_SETUP.md
+FacultyFinder_guide.md
+QUICK_DEPLOYMENT.md
+
+# Backup and Temporary Files
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+.#*
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Generated Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Additional Security
+passwords.txt
+credentials.txt
+tokens.txt
+api_keys.txt 
